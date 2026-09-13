@@ -1,0 +1,235 @@
+{
+  "main": {
+    "id": "64d801f1024887ec",
+    "type": "split",
+    "children": [
+      {
+        "id": "709051741abaf65b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "45ad682e2a1be8c1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/D - Core Java Concepts/37 - Java IO and NIO Packages 🧀.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "37 - Java IO and NIO Packages 🧀"
+            }
+          },
+          {
+            "id": "49ae66e06b37ee26",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/IO Package/3A - why the data is being sent in chucks in streams ?.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "3A - why the data is being sent in chucks in streams ?"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "07cb11ff8e3382ed",
+    "type": "split",
+    "children": [
+      {
+        "id": "650367ae930b5784",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3535a2e099904c39",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "df09098cb9dbceda",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "50c3b74710e9b368",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 329.50590896606445
+  },
+  "right": {
+    "id": "318802b81bf4bc9f",
+    "type": "split",
+    "children": [
+      {
+        "id": "e2c5e9c58e915360",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "339aa979f959d46b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "d2e19e4d03873cc2",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "6082b43992715d32",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "bc068059449cfe13",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "49ae66e06b37ee26",
+  "lastOpenFiles": [
+    "4 - Images/Pasted image 20260913125138.png",
+    "4 - Images/Pasted image 20260913125105.png",
+    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/D - Core Java Concepts/37 - Java IO and NIO Packages 🧀.md",
+    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/IO Package/Untitled 2.md",
+    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/IO Package/2A - what was the problem streams solved?.md",
+    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/IO Package/Untitled.md",
+    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/IO Package/3A - why the data is being sent in chucks in streams ?.md",
+    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/IO Package/42 - Reading & Writing Files.md",
+    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/IO Package/43 - Streams(IO).md",
+    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/IO Package/1A - What is a Resource.md",
+    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/25 - Writing Efficient IO & Serialization Code.md",
+    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/IO Package/40 - Java NIO.md",
+    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/Threads",
+    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/IO Package",
+    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/Threads/Race Conditions.md",
+    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/Threads/Threads (computer science).md",
+    "Pasted image 20260913125138.png",
+    "Pasted image 20260913125105.png",
+    "2 - Core-concepts/Computer science.md",
+    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/IO Package/41 - IO , NIO , NIO.2.md",
+    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/R - Computer science",
+    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/IO Package/39 - How to use IO.md",
+    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/IO Package/38 - What is IO.md",
+    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/IO Package/37 - Console IO.md",
+    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/36 - Core Classes & Methods You Keep Seeing.md",
+    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/35 - Userinput.md",
+    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/34 - try - catch - throw - throws.md",
+    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/32 - Exception.md",
+    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/33 - Custom Exception.md",
+    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/D - Core Java Concepts/37.5 - Java NIO 🧀.md",
+    "4 - Images/Pasted image 20260912124946.png",
+    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/M - CS50/C programming language/4 - Headers in C.md",
+    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/M - CS50/C programming language/3 - C Compilation & Interaction Commands.md",
+    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/M - CS50/C programming language",
+    "4 - Images/Pasted image 20260911222808.png",
+    "4 - Images/Pasted image 20260911222738.png",
+    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/M - CS50",
+    "4 - Images/Pasted image 20260911194601.png",
+    "4 - Images/Pasted image 20260911194408.png",
+    "4 - Images/Pasted image 20260911194033.png",
+    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/D - Git/Git Remembrance",
+    "4 - Images/Untitled.base",
+    "1 - Notes/L - Language/1 - English",
+    "1 - Notes/L - Language",
+    "4 - Images/Pasted image 20260910213421.png",
+    "1 - Notes/G - MinndSet/Brain and Functions/Andrew Huberman"
+  ]
+}
