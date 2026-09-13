@@ -1,0 +1,8 @@
+*Do not make yourself numb and remember after you learned you may
+find a job by asking for it in LinkedIn and believe me you are not old you will be good one-day and all happens by working like hell I am Alireza and i am telling you , you are just a 
+normal man like others , you don't need to be great at anything just live you'r life and try
+you'r best to be the best programmer , success gets time the average age to be successful is 41.5 and - **Business Founders:** Research indicates that people aged 35 and older are more likely to found successful companies, with the average founder's age being about 41.9. so don' t be upset you are not dead yet , this was the reason you got sad most of the times and you numbed yourself .... I SEE YOUNG PEOPLE GOT RICH ... The truth is, the "young millionaires" you see on social media are usually not rich. They are often part of a scam.
+They create a fake image of wealth to sell you a dream—specifically, a course or program that promises to make you rich. However, their actual income comes from selling that program to people like you, not from the "secret" they are selling. It's a pyramid-like structure where the only people who truly get wealthy are those at the very top.*
+
+Its the time to forgive all of those who hated me and who hurt me because in the end the one who is losing is me from now on i will just focus on my own life and my family i need to do my best for me and my family i need to realize my brother doesn't need me he can take care of him self but i need my help so i need to help me , i need to help the future Alireza i want to make him happy. 
+[[Mind-Set]]

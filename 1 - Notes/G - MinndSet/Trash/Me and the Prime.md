@@ -1,0 +1,19 @@
+
+#####  {Prime} *I am the prime , i wake up at 5:00 in the morning i wash my face , brush my teeth and i brush my hair then i drink a cup of tea or coffee after that i start to work ....
+
+##### {weak}*I am Alireza i don't have a job right now tell me about your job 
+
+##### {Prime} *Before finding a job i used to wake up at five then after all i did i turned on the PC and i started to work sooner than i scheduled it made me feel like a beast sometimes i couldn't wake up soon but i knew i need to keep going on the plan .... anyways .... i turned on the PC and i started to work at 7 or 8 i ate my breakfast and i got the work again .... i used to workout in my resting time , after i found a job i was a little bit complicated but i kept going i used to work on weekends , my own project making games ..... after i came back from the work i rested and then i moved to the gym the hell was not finished yet ... after gym i went back to home i took a shower and when it was about eight or nine i went to sleep ... some weekends i took my family out ..... i don't eat sugar , i drink water a lot i workout at home or gym mostly in gym .... i feel the survival will be my own project not working for someone else  , at first i started working for someone else after a while i tried to find a way to get my degree in Networking , i started my YouTube Channel in Farsi and also English (yes two channels ) then i created my third channel when i become more popular as a blogger after one year i created my own game and introduced it in my third channel i have two jobs now YouTube (i teach and i sell courses  + Blogger ) and i am a developer games or back-end after getting enough money i will buy lands as much as i can .... One thing i truly believe is that i will never stop seeking for the best i can get for me
+
+###### {weak} *Do you numb your-self ? 
+
+###### {Prime}  I used to but i don't now i feel the only way out is content creation and being a blogger and famous that is money .... I have a good life , a good job , a lovely family but that is not enough .... we need to move out 
+
+###### {weak} *When did you win in the battle you had with ... "You know who" ... ?
+
+
+###### {Prime} *As soon as i found a job - as soon as i created a good body - it started ... i was using that money ... i used to save 1/4 of it as money , 2/4 as gold and , half of the remaining for me and the last remaining on risky investments mostly i used to save it too or i used to bought Digital currency with it some times i used it to Promote my Instagram or YouTube the main source of money where always be saved "3/4" and the 1/4 remaining were divided into two parts one would be payed for what i need and one for what  i wanna risk on it so ... back to the "You know who bitch" when she looked at me young , Jacked , talking fantasy and classy , having a grate job , good manners and respected , the bitch started to feel jealous ... at the early months of the job i bought a lot of stuff i mean something around 6 or 12 month i let my-self to enjoy the money and get more professional at the job ... i made the bitch crazy so it was never about the money it is about what i am and what she is ... being great is not about the money i used to try for two jobs but i would never let her win ...   focus on your goals and carrier , have bigger goals you have time for that farm but till 40 you have , we have time to be a millionaire but for now just focus on your own road of racing her pimp is making good money , he will have that house , he is better than you now but it is on you ... when you get a job you will start with low payment but believe you start moving , as the time passes you will find ways to get more money .. you will have more experience and you will find a way to make profit out of the income and make more income by more experience 
+
+
+
+Tags : [[Mind-Set]]
