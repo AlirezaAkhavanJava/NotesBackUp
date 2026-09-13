@@ -1,4 +1,3 @@
-![[Pasted image 20260910211454.png]]
 
 
 **Memory** is the brain's capacity to encode, store, and retrieve information — turning experiences into a form that can be preserved over time and recalled later.
