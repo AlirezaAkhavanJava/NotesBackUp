@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/IO Package/47 - How to use NIO.md",
+                "file": "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/IO Package/1A - What is a Resource.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "47 - How to use NIO"
+              "title": "1A - What is a Resource"
             }
           },
           {
@@ -197,10 +197,14 @@
       "bases:Create new base": false
     }
   },
-  "active": "eef1269efe363b9a",
+  "active": "3535a2e099904c39",
   "lastOpenFiles": [
-    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/D - Core Java Concepts/37 - Java IO and NIO Packages 🧀.md",
+    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/IO Package/50 - Problems and Solutions.md",
+    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/Untitled",
+    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/IO Package/48 - File.md",
     "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/IO Package/47 - How to use NIO.md",
+    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/IO Package/49 - Most Used Helper Classes in Java IO.md",
+    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/D - Core Java Concepts/37 - Java IO and NIO Packages 🧀.md",
     "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/IO Package/46 - Byte Streams vs Character Streams.md",
     "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/IO Package/45 - Character Stream.md",
     "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/IO Package/44 - Byte Stream.md",
@@ -230,10 +234,6 @@
     "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/IO Package/39 - How to use IO.md",
     "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/IO Package/38 - What is IO.md",
     "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/IO Package/37 - Console IO.md",
-    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/36 - Core Classes & Methods You Keep Seeing.md",
-    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/35 - Userinput.md",
-    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/34 - try - catch - throw - throws.md",
-    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/32 - Exception.md",
     "4 - Images/Pasted image 20260912124946.png",
     "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/M - CS50/C programming language",
     "4 - Images/Pasted image 20260911222808.png",
@@ -243,7 +243,6 @@
     "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/D - Git/Git Remembrance",
     "4 - Images/Untitled.base",
     "1 - Notes/L - Language/1 - English",
-    "1 - Notes/L - Language",
-    "1 - Notes/G - MinndSet/Brain and Functions/Andrew Huberman"
+    "1 - Notes/L - Language"
   ]
 }
