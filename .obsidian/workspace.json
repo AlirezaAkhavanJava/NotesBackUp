@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/D - Git/Git Remembrance/14 - Orphan Branches in Git.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "14 - Orphan Branches in Git"
             }
           }
         ],
@@ -183,10 +183,19 @@
       "bases:Create new base": false
     }
   },
-  "active": "30dfbfa6f17595a4",
+  "active": "3535a2e099904c39",
   "lastOpenFiles": [
-    "README.md.md",
+    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/D - Git/Git Remembrance/14 - Orphan Branches in Git.md",
+    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/D - Git/Git Remembrance/15 - Working with Branches on GitHub and the GitHub CLI.md",
+    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/D - Git/Git Remembrance/13 - Git Disaster Recovery Guide.md",
+    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/D - Git/Git Remembrance/0 - Git 65.md",
+    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/D - Git/Git Remembrance/1 - Need for a VCS.md",
+    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/D - Git/Git Remembrance/12 - Git Branches & Remotes.md",
+    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/D - Git/Git Remembrance/11 - Anatomy of Branches.md",
+    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/D - Git/Git Remembrance/10 - Branch.md",
+    "4 - Images/Pasted image 20260915182844.png",
     "README.md",
+    "README.md.md",
     "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/D - Git/Git Remembrance/9 - Hashing.md",
     "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/G - DataBases/4 - CS50/SQLITE3/43 - Natural Join.md",
     "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/G - DataBases/4 - CS50/SQLITE3/42 - OUTER JOINs.md",
@@ -203,14 +212,6 @@
     "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/Threads/68 - Thread State in Java.md",
     "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/Threads/67 - Race Conditions.md",
     "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/Threads/66 - Thread Priority and Sleep in Java.md",
-    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/Threads/65 - Thread Class — Methods Reference (with Examples).md",
-    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/Threads/64 - CPU Scheduler, Time Sharing, Cores, and Threads.md",
-    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/Threads/63 - Working with Threads.md",
-    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/Threads/62 - Runnable.md",
-    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/Threads/61 - Parallelism.md",
-    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/Threads/60 - Concurrency.md",
-    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/Threads/59 - Process and Thread.md",
-    "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/Threads/58 - Java Thread Lifecycle.md",
     "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/A - Programming/Q - Java Rememberance/Untitled",
     "4 - Images/Pasted image 20260910211409.png",
     "4 - Images/Pasted image 20260910211420.png",
@@ -226,7 +227,6 @@
     "4 - Images/Pasted image 20260911222808.png",
     "4 - Images/Pasted image 20260911222738.png",
     "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/M - CS50",
-    "4 - Images/Pasted image 20260911194601.png",
     "1 - Notes/A -Computer & Programming & Networking & CyberSecurity/D - Git/Git Remembrance",
     "4 - Images/Untitled.base",
     "1 - Notes/L - Language/1 - English",
