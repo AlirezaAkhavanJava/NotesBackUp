@@ -1,1 +1,0 @@
-Day 0 : Feeling bad , i feel like a bus has hit me , my allergy is killing me , i feel bad , i need a nap , i need to restart my head 
