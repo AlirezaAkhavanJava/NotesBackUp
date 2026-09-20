@@ -1,4 +1,4 @@
-
+ 
 The important relationship is:
 
 > **`JOIN` creates the rows you want to analyze; `GROUP BY` groups those joined rows so aggregate functions can calculate something per group.**
