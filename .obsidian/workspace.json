@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "57276f8f28d73ca7",
+        "id": "1a19b644e7810fba",
         "type": "tabs",
         "children": [
           {
-            "id": "e8e399bda09183d7",
+            "id": "442cc1461c7a632a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/3 - Git/Git Remembrance/33 - Merging from a Remote in Git.md",
-                "mode": "preview",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "33 - Merging from a Remote in Git"
+              "title": "New tab"
             }
           }
         ]
@@ -168,35 +164,37 @@
       "bases:Create new base": false
     }
   },
-  "active": "e8e399bda09183d7",
+  "active": "3535a2e099904c39",
   "lastOpenFiles": [
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/3 - Git/Git Remembrance/32 - Viewing Remote Info with git log.md",
+    "4 - Images/Pasted image 20260921204917.png",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/C - Networking/49 - DNS (Part 2).md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/C - Networking/48 - DNS.md",
+    "4 - Images/Pasted image 20260921204749.png",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/C - Networking/47 - ICMP — Internet Control Message Protocol.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/C - Networking/46 - UDP — User Datagram Protocol.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/C - Networking/45 - TCP — Transmission Control Protocol.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/C - Networking/44 - Transmission Media Types.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/C - Networking/43 - ARP (Address Resolution Protocol).md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/C - Networking/42 - Socket in Networking.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/C - Networking/41 - Port.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/C - Networking/40 - Protocol in Networking.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/C - Networking/39 - Dual-Stack — Complete Definition.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/C - Networking/38 - NAT.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/C - Networking/37 - IP Addresses (Complete Definition & Reference).md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/C - Networking/Commands/3 - IP Hacking Tools, IP Hiding & IP Changing — Explained.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/C - Networking/Commands/2 - Checking IP Addresses on Linux (Complete Guide).md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/C - Networking/Commands/1 - Free Ports checking.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/C - Networking/36 - Throughput.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/C - Networking/Commands",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/C - Networking/35 - Web server.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/C - Networking/34 - WEB.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/C - Networking/0 - Internet Fundamental.md",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/3 - Git/Git Remembrance/33 - Merging from a Remote in Git.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/3 - Git/Git Remembrance/32 - Viewing Remote Info with git log.md",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/3 - Git/Git Remembrance/31 - git fetch in Git.md",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/3 - Git/Git Remembrance/30 - Adding a Remote.md",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/3 - Git/Git Remembrance/28 - Origin vs Upstream in Git.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/3 - Git/Git Remembrance/27 - How to undo changes.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/3 - Git/Git Remembrance/0 - Git 65.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/3 - Git/Git Remembrance/26 - Rebasing Personal Branch vs Public Branch.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/3 - Git/Git Remembrance/25 - Reason to Rebase.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/2 - Database/4 - SQLITE3/Week 2/23 - CHECK.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/2 - Database/4 - SQLITE3/Week 2/22 - SQL Date Functions.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/2 - Database/4 - SQLITE3/Week 2/21 - DEFAULT Constraint in SQLite.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/2 - Database/4 - SQLITE3/Week 2/20 - ALTER TABLE.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/2 - Database/4 - SQLITE3/Week 2/19 - Column Constraint.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/2 - Database/4 - SQLITE3/Week 2/18 - Types of Primaty Key.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/2 - Database/4 - SQLITE3/Week 2/17 - SQLite Table Constraints.md",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/9 - Nvim",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/2 - Database/4 - SQLITE3/Week 2/16 - ReadProblem.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/2 - Database/4 - SQLITE3/Week 1/9 - Where 🍕.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/2 - Database/4 - SQLITE3/Week 1/10 - Case sensitive.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/2 - Database/4 - SQLITE3/Week 1/8 - SQLite config 🍕.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/2 - Database/4 - SQLITE3/Week 1/7 - HOW TO MAKE SQLITE SHOW NULLS INSTEAD OF A BLANK PLACE 🍕.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/2 - Database/4 - SQLITE3/Week 1/6 - FUNCTIONS 🍕.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/2 - Database/4 - SQLITE3/Week 1/5 - MODE 🍕.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/2 - Database/4 - SQLITE3/Week 1/2 - SQLite commands 🍕.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/2 - Database/4 - SQLITE3/Week 1/4- SQLite daily commands.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/2 - Database/4 - SQLITE3/Week 1/3 - SQLite shell commands.md",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/G - JDK , JVM and internals",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/F - Ai tools/Prompt Engineering",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/F - Ai tools",
@@ -205,7 +203,6 @@
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/1 - Java/Java/3 - Java Threads/Adv",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/1 - Java/Java/2 - Functional Programming/Stream api",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/1 - Java/Java/1 - Collections/Stream",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/1 - Java/Spring & Spring Boot/F3 - Spring Security/research and deep learning",
     "4 - Images/Screenshot From 2026-09-17 16-46-40.png",
     "4 - Images/Screenshot From 2026-09-17 16-46-40 1.png",
     "Screenshot From 2026-09-17 16-46-40 1.png",
@@ -213,8 +210,6 @@
     "4 - Images/Pasted image 20260917005714.png",
     "Pasted image 20260917005714.png",
     "1734702748422.jpeg",
-    "4 - Images/Pasted image 20260915182844.png",
-    "4 - Images/Pasted image 20260910211409.png",
-    "4 - Images/Pasted image 20260910211420.png"
+    "4 - Images/Pasted image 20260915182844.png"
   ]
 }
