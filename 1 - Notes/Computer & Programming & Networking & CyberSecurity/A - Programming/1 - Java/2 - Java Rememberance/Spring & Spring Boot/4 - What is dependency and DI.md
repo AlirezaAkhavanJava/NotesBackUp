@@ -128,6 +128,60 @@ Concise, but harder to test (can't easily construct the object with mocks) and h
 4. It creates those objects first (recursively, if they have their own dependencies), then **injects** them in — literally calling your constructor/setter/field with the object reference
 5. The finished, fully-wired object goes into the container's bean map (as we discussed — just a heap object)
 
+---
+`@Required` is a setter-injection annotation that tells Spring "this property must be set" — if it isn't, Spring fails fast at startup instead of letting you hit a `NullPointerException` later at runtime.
+
+## Important: it's deprecated
+
+`@Required` has been **deprecated since Spring 5.1** in favor of constructor injection (where required dependencies are just constructor parameters — no annotation needed) and `@Autowired(required = true)` on setters. You'll still see it in older codebases and tutorials, so it's worth knowing, but don't use it in new Spring Boot code.
+
+## How it worked
+
+```java
+@Component
+public class CustomerService {
+
+    private CustomerRepository customerRepository;
+
+    @Required
+    public void setCustomerRepository(CustomerRepository customerRepository) {
+        this.customerRepository = customerRepository;
+    }
+}
+```
+
+It only makes sense on a **setter method**, and it needed a special bean post-processor (`RequiredAnnotationBeanPostProcessor`) registered to actually be enforced — in plain XML config you had to declare it yourself; with component scanning / `AnnotationConfigApplicationContext` it was auto-registered.
+
+If the property was never set (no matching bean, or nobody called the setter manually), the context would fail to start with a `BeanInitializationException`.
+
+## Why it fell out of favor
+
+1. It only worked with **setter injection**, which itself is discouraged now.
+2. **Constructor injection already gives you this for free** — a required dependency is just a constructor parameter, and Java won't let you construct the object without it:
+
+```java
+@Service
+public class CustomerService {
+
+    private final CustomerRepository customerRepository;
+
+    // constructor injection — implicitly "required", no annotation needed
+    public CustomerService(CustomerRepository customerRepository) {
+        this.customerRepository = customerRepository;
+    }
+}
+```
+
+With a single constructor, you don't even need `@Autowired` on it in modern Spring Boot.
+
+## Practical takeaway
+
+|Old style|Modern equivalent|
+|---|---|
+|`@Required` on setter|Constructor injection (required by default)|
+|`@Autowired(required = false)` on setter|`@Autowired(required = false)` still valid, or `Optional<T>` constructor param|
+
+So: if you're writing new Spring Boot code, just use constructor injection for required dependencies and you get `@Required`'s guarantee automatically, with better testability and immutability (`final` fields) as a bonus.
 
 
 [[0 - Spring + Spring Boot]]
