@@ -11,10 +11,14 @@
             "id": "442cc1461c7a632a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/26 - @PropertySource.md",
+                "mode": "preview",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "26 - @PropertySource"
             }
           }
         ]
@@ -166,6 +170,9 @@
   },
   "active": "3535a2e099904c39",
   "lastOpenFiles": [
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/7 - C programming language/5 - C compiler error.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/7 - C programming language/3 - C Compilation & Interaction Commands.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/7 - C programming language/4 - Headers in C.md",
     "4 - Images/Pasted image 20260921204917.png",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/C - Networking/49 - DNS (Part 2).md",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/C - Networking/48 - DNS.md",
@@ -192,8 +199,6 @@
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/3 - Git/Git Remembrance/33 - Merging from a Remote in Git.md",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/3 - Git/Git Remembrance/32 - Viewing Remote Info with git log.md",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/3 - Git/Git Remembrance/31 - git fetch in Git.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/3 - Git/Git Remembrance/30 - Adding a Remote.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/3 - Git/Git Remembrance/28 - Origin vs Upstream in Git.md",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/9 - Nvim",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/G - JDK , JVM and internals",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/F - Ai tools/Prompt Engineering",
