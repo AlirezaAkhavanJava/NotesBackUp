@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 4/54 - Application Layers.md",
+                "file": "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/3 - Git/Git Remembrance/12 - Git Branches & Remotes.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "54 - Application Layers"
+              "title": "12 - Git Branches & Remotes"
             }
           }
         ]
@@ -170,6 +170,22 @@
   },
   "active": "c00891283c3f6b9f",
   "lastOpenFiles": [
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 4/69 - Global Exception Handling with @ControllerAdvice and @ExceptionHandler.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 4/68 - ResponseEntity.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 4/67 - Mapper design.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 4/65 - Mapper.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 4/66 - Mapper, DTO,Entity.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 4/64 - Validation annotation.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 4/63 - Client and Host Sides.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 4/62 - DTO.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 4/60 -  Spring stereotype annotations.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 4/61 - Repository.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 4/59 - JpaRepository interface.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 4/58 - @Enumerated.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 4/57 - @Column.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 4/@Id & @GeneratedValue.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 4/56 - @Entity and @Table Annotations in JPA.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 4/55 - Creating Entities in Spring Boot.md",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 4/54 - Application Layers.md",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 2/2 - Virtual Address Space.md",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 4",
@@ -181,22 +197,6 @@
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 1/120 - Java Nested & Inner Classes.md",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 1/119 - Java Reflection API.md",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 1/118 - Java Time API.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 1/117 - Java Reflection.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 1/116 - Module 2.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 1/115- Modules.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 1/114 - Java 26.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 1/113 - Java 25.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 1/112 - JDK 21.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 1/111 - Java 17.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 1/110 - record.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 1/109 - Sealed Class.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 1/107 - LVTI.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 1/93 - Record Class.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 1/53 - Finally().md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 1/52 - Try-With-Resources.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 1/36 - Core Classes & Methods You Keep Seeing.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 1/35 - Userinput.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 1/34 - try - catch - throw - throws.md",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 2",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 1",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 3",
