@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "188833772754e709",
+        "id": "33897a8a45776a9a",
         "type": "tabs",
         "children": [
           {
-            "id": "c00891283c3f6b9f",
+            "id": "800f71d0c392b5fd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/3 - Git/Git Remembrance/12 - Git Branches & Remotes.md",
+                "file": "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 2/16 - How the JVM Separates Memory.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "12 - Git Branches & Remotes"
+              "title": "16 - How the JVM Separates Memory"
             }
           }
         ]
@@ -168,35 +168,35 @@
       "bases:Create new base": false
     }
   },
-  "active": "c00891283c3f6b9f",
+  "active": "800f71d0c392b5fd",
   "lastOpenFiles": [
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 2/5 - Fixed-Size Array Indexed by Slot Number.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 2/16 - How the JVM Separates Memory.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 2/4 - Stack vs Stack Frame in Java.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 2/15 - StackOverflowError vs OutOfMemoryError.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 2/3 - Operand Stack in Java.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 2/14 - Local Variable Array — Slot Size and Array Size.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 2/6 -  Inside a Stack Frame.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 2/8 - The Local Variable Array.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 2/9 - Array Confusion.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 2/7 - Data Types in the Local Variable Array.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 2/13 - Stack Memory Management.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 2/12 - Methods With Return Types.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 2/11 - The Operand Stack.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 2/10 - Reference Types.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/1 - Java/Java/0 - JRE, JVM, and JDK 🦭.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 4/73 - @ControllerAdvice.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 4/72 - Exception Handlers in Spring Boot — Complete Definition.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 4/71 - ErrorDto.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 4/70 - Handling Exceptions in Spring Boot.md",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 4/69 - Global Exception Handling with @ControllerAdvice and @ExceptionHandler.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/3 - Git/Git Remembrance/12 - Git Branches & Remotes.md",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 4/68 - ResponseEntity.md",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 4/67 - Mapper design.md",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 4/65 - Mapper.md",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 4/66 - Mapper, DTO,Entity.md",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 4/64 - Validation annotation.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 4/63 - Client and Host Sides.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 4/62 - DTO.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 4/60 -  Spring stereotype annotations.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 4/61 - Repository.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 4/59 - JpaRepository interface.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 4/58 - @Enumerated.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 4/57 - @Column.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 4/@Id & @GeneratedValue.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 4/56 - @Entity and @Table Annotations in JPA.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 4/55 - Creating Entities in Spring Boot.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 4/54 - Application Layers.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 2/2 - Virtual Address Space.md",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 4",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 2/1 -  Java Compilation and JVM Internals.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 1/1 - JVM memory.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/1 - Java/Java/0 - JRE, JVM, and JDK 🦭.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 1/122 - JDBC.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 1/121 - Java Regular Expressions — Pattern and Matcher.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 1/120 - Java Nested & Inner Classes.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 1/119 - Java Reflection API.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 1/118 - Java Time API.md",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 2",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 1",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 3",
