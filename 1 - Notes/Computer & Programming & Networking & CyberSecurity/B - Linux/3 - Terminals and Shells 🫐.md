@@ -56,4 +56,4 @@ So, when you open a terminal:
     
 
 
-##### Tags : [[1 - SQL 🥞]]
+##### Tags : [[1 - SQL 🦬]]

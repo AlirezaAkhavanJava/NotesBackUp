@@ -49,4 +49,4 @@ A **CLI (Command-Line Interface)** is a way to interact with a computer **by typ
 CLI is like **talking directly to your computer in its language**. GUI is more like **using a remote control with buttons**.
 
 
-##### Tags : [[1 - SQL 🥞]]
+##### Tags : [[1 - SQL 🦬]]

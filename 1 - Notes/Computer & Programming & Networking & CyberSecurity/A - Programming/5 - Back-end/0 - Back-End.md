@@ -56,6 +56,6 @@ In summary, the back-end is the backbone of an application, ensuring data manage
 [[0 - Git 🍋‍🟩]]
 [[1 - ORM 🍪]]
 [[18 - JDBC 🍩]]
-[[1 - SQL 🥞]]
+[[1 - SQL 🦬]]
 [[1 - HTTP]]
 [[2 - Tags/Linux|Linux]]

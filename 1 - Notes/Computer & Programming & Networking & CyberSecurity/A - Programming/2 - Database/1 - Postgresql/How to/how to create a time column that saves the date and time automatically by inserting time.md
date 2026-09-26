@@ -43,4 +43,4 @@ created_at TIMESTAMPTZ DEFAULT NOW()
 
 
 
-#### Tags : [[1 - SQL 🥞]]
+#### Tags : [[1 - SQL 🦬]]

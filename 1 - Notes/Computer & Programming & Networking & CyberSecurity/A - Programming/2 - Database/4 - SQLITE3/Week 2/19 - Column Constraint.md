@@ -63,5 +63,5 @@ Column
 **Definition:** A column constraint is a rule attached to a specific column that controls the values permitted in that column.
 
 
-[[1 - SQL 🥞]]
+[[1 - SQL 🦬]]
 [[1 - WHAT IS SQLITE3 🍕]]

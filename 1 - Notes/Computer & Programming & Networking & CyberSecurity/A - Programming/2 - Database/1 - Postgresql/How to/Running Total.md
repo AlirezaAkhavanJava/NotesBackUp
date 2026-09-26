@@ -14,4 +14,4 @@ FROM employees;
 ```
 
 
-[[1 - SQL 🥞]]
+[[1 - SQL 🦬]]

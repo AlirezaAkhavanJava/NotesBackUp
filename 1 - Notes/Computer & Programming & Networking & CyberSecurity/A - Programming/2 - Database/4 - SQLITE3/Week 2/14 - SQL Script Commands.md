@@ -114,4 +114,4 @@ SOURCE /path/to/schema.sql;    -- MySQL
 Would you like an example for a specific database (PostgreSQL, SQL Server, Oracle) or a specific domain (e-commerce, blog, school)?
 
 [[1 - WHAT IS SQLITE3 🍕]]
-[[1 - SQL 🥞]]
+[[1 - SQL 🦬]]

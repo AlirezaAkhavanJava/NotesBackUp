@@ -355,4 +355,4 @@ Query with SQL
 
 
 [[1 - WHAT IS SQLITE3 🍕]]
-[[1 - SQL 🥞]]
+[[1 - SQL 🦬]]

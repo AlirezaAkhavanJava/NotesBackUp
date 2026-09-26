@@ -118,4 +118,4 @@ CREATE TABLE new_tbl AS SELECT * FROM old_tbl WHERE 1=0;
 That’s it – you now have a table with **exactly the same column names and types**, ready for data or further modifications.
 
 
-##### [[1 - SQL 🥞]]
+##### [[1 - SQL 🦬]]

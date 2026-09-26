@@ -68,4 +68,4 @@ SHOW search_path;
 
 
 
-##### Tags : [[1 - SQL 🥞]]
+##### Tags : [[1 - SQL 🦬]]

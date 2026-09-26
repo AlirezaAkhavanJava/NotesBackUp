@@ -76,4 +76,4 @@ Hello World
 ---
 
 
-##### Tags : [[1 - SQL 🥞]]
+##### Tags : [[1 - SQL 🦬]]

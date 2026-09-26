@@ -17,4 +17,4 @@ The **`**DISTINCT ON**`** clause in ****PostgreSQL**** allows us to retrieve
 
 
 
-[[1 - SQL 🥞]]
+[[1 - SQL 🦬]]

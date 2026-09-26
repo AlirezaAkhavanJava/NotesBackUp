@@ -250,4 +250,4 @@ MongoCollection<Document> collection = database.getCollection("users");
 
 ---
 
-### Tags : [[0 - Spring Framework]][[1 - SQL 🥞]]
+### Tags : [[0 - Spring Framework]][[1 - SQL 🦬]]

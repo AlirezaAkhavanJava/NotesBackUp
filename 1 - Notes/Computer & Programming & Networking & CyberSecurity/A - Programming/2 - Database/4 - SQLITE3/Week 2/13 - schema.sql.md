@@ -205,4 +205,4 @@ So you can export the current schema into a reusable `schema.sql` file.
 
 
 [[1 - WHAT IS SQLITE3 🍕]]
-[[1 - SQL 🥞]]
+[[1 - SQL 🦬]]

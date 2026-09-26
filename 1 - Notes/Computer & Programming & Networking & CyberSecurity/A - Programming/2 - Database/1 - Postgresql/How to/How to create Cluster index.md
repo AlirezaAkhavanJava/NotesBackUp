@@ -66,4 +66,4 @@ CLUSTER students USING idx_student_id;
 
 But note: `CLUSTER` is a one-time operation that needs maintenance, while the index provides ongoing benefits.
 
-[[1 - SQL 🥞]]
+[[1 - SQL 🦬]]

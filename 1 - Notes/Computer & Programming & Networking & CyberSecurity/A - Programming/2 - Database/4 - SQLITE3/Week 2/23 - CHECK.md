@@ -124,4 +124,4 @@ INSERT / UPDATE
 **Definition:** `CHECK` is a constraint that prevents SQLite from storing a row when a specified condition evaluates to false.
 
 
-[[1 - SQL 🥞]]
+[[1 - SQL 🦬]]

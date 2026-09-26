@@ -88,4 +88,4 @@ CREATE TABLE reservations (
 
 ---
 
-[[1 - SQL 🥞]]
+[[1 - SQL 🦬]]

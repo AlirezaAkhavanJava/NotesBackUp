@@ -142,4 +142,4 @@ deleted_at
 One important detail: **`CURRENT_TIMESTAMP` is UTC**, not your machine's local timezone.
 
 
-[[1 - SQL 🥞]]
+[[1 - SQL 🦬]]

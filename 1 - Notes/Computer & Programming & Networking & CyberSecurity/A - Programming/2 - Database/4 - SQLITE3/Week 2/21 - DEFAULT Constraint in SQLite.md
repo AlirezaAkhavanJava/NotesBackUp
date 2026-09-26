@@ -90,5 +90,5 @@ CREATE TABLE accounts (
 **Definition:** `DEFAULT` provides an automatic value for a column when an `INSERT` does not explicitly supply one.
 
 
-[[1 - SQL 🥞]]
+[[1 - SQL 🦬]]
 [[1 - WHAT IS SQLITE3 🍕]]

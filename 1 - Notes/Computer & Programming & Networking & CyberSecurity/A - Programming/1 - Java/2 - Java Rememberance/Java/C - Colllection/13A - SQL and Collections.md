@@ -501,4 +501,4 @@ List<Record> results = DSL.using(connection)
 
 
 [[Java]]
-[[1 - SQL 🥞]]
+[[1 - SQL 🦬]]

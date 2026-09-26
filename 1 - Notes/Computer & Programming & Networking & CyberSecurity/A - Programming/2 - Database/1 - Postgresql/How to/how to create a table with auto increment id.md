@@ -59,4 +59,4 @@ SELECT * FROM users;
 ```
 
 
-#### Tags : [[1 - SQL 🥞]]
+#### Tags : [[1 - SQL 🦬]]

@@ -219,4 +219,4 @@ END $$;
 Use this guide to **write safe, idempotent, production-grade DDL**.
 
 
-[[1 - SQL 🥞]]
+[[1 - SQL 🦬]]
