@@ -81,9 +81,9 @@ When you pass `-Xmx4g`, the JVM **reserves** 4 GB of *virtual* address space for
 Virtual Address Space (64-bit = huge)
 ┌──────────────────────────────────────────────┐
 │  0x0000000000000000                          │
-│  ...                                          │
+│  ...                                         │
 │  ┌──────────────────────────────┐            │
-│  │  Heap reservation (4 GB)     │  ← -Xmx     │
+│  │  Heap reservation (4 GB)     │  ← -Xmx    │
 │  └──────────────────────────────┘            │
 │  ┌──────────────────────────────┐            │
 │  │  Metaspace reservation       │  ← -XX:MaxMetaspaceSize
@@ -91,14 +91,14 @@ Virtual Address Space (64-bit = huge)
 │  ┌──────────────────────────────┐            │
 │  │  Code Cache reservation      │            │
 │  └──────────────────────────────┘            │
-│  ...                                          │
+│  ...                                         │
 │  ┌──────────────────────────────┐            │
-│  │  Thread 1 stack (1 MB)       │  ← -Xss     │
+│  │  Thread 1 stack (1 MB)       │  ← -Xss    │
 │  └──────────────────────────────┘            │
 │  ┌──────────────────────────────┐            │
 │  │  Thread 2 stack (1 MB)       │            │
 │  └──────────────────────────────┘            │
-│  ...                                          │
+│  ...                                         │
 │  0xFFFFFFFFFFFFFFFF                          │
 └──────────────────────────────────────────────┘
 ```
@@ -114,11 +114,11 @@ The heap is typically **one contiguous virtual address reservation** (though not
 ```
 Heap reservation (e.g., 4 GB virtual)
 ┌──────────────────────────────────────────────────────┐
-│  Young Generation          │   Old Generation         │
-│  ┌────────┬──────┬──────┐  │   ┌──────────────────┐   │
-│  │  Eden  │ S0   │ S1   │  │   │  Tenured / Old   │   │
-│  └────────┴──────┴──────┘  │   └──────────────────┘   │
-│                                                       │
+│  Young Generation          │   Old Generation        │
+│  ┌────────┬──────┬──────┐  │   ┌──────────────────┐  │
+│  │  Eden  │ S0   │ S1   │  │   │  Tenured / Old   │  │
+│  └────────┴──────┴──────┘  │   └──────────────────┘  │
+│                                                      │
 │  ← grows/shrinks within reservation →                │
 └──────────────────────────────────────────────────────┘
 ```
