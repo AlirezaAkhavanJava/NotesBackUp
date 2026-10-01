@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "6d21d545e3ac4798",
+        "id": "492dc9118867608c",
         "type": "tabs",
         "children": [
           {
-            "id": "11e71c2eee947a46",
+            "id": "543dd75f8c1316d1",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/1 - Java/Java/4 - Strings and Methods in Java ✧.md",
+                "mode": "preview",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "4 - Strings and Methods in Java ✧"
             }
           }
         ]
@@ -76,7 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 303.6923713684082
+    "width": 423.8668098449707
   },
   "right": {
     "id": "318802b81bf4bc9f",
@@ -164,53 +168,54 @@
       "bases:Create new base": false
     }
   },
-  "active": "11e71c2eee947a46",
+  "active": "543dd75f8c1316d1",
   "lastOpenFiles": [
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 3",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 2/28 - Engine.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 2/27 - JNI — Java Native Interface.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 2/26 - JIT compiler.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 2/25 - JVM Interpreter.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/1 - Java/Java/3 - Type Casting in Java ✧.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/0 - All-in-One/0 - variables.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/0 - All-in-One",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/1 - Java/Java/1 - Lifecycle of a Java Application ✧.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/1 - Java/Java/2 - Variables and Scopes in Java ✧.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/1 - Java/Java/0 - JRE, JVM, and JDK ✧.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 6/16 - REST API Endpoint Rules.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 6/15 - Designing Production-Grade RESTful APIs in Spring Boot.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 6/2 - REST ☆.md",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/F - Ai tools/Prompt Engineering/1 - Ask for teaching.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 2/24 - GC is part of the Execution Engine.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 2/23 - memory leak.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 2/22 - PC Register and Native Method Stack.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 2/21 - Mark and Sweep.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 2/20 - Types of Garbage Collectors in the JVM.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 2/19 - How the Local Variable Array and Garbage Collection Actually Work Together.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 2/18 - Local Variable Arrays.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 2/16 - How the JVM Separates Memory.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 2/17 - JVM Memory Model.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 2/6 -  Inside a Stack Frame.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 2/7 - Data Types in the Local Variable Array.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 2/8 - The Local Variable Array.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 2/12 - Methods With Return Types.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 2/9 - Array Confusion.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 2/13 - Stack Memory Management.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 2/14 - Local Variable Array — Slot Size and Array Size.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 2/15 - StackOverflowError vs OutOfMemoryError.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 5/13 - Making a Bean Available to Only One Profile.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 5/12 - ways to set the Active profile in Spring boot.md",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 5/11 - Spring Profiles (@Profile) — Full Tutorial.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 6/14 - The Four Sub-Constraints of the Uniform Interface.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 6/13 - Uniform Interface in REST.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 6/12 - Code on Demand in REST.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 6/11 - Layered System in REST.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 6/10 - Cacheability in REST.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 6/9 - Stateless REST.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 6/8 - Scaleable REST.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 6/6 - session.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 6/7 - Scaleablity.md",
+    "Pasted image 20261001092324.png",
+    "Pasted image 20261001092418.png",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 6/5 - Stateful vs stateless.md",
+    "4 - Images/Pasted image 20261001091357.png",
+    "Pasted image 20261001091332.png",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 6/3 - Spring-Boot api's ☆.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 6/4 - Seperation ☆.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 6/1 - APi ☆.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 6/0 - Contract ☆.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 5/9 - @PropertySource.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 6",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 5/7 - What goes in Git.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 5/6 - Environment Class.md",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/G - Real World Applications/Java",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/G - Real World Applications/Untitled.canvas",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/G - Real World Applications/Git problems",
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Java/Pack 3",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/11 - Angular and GUI tools/3 - NodeJS",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/11 - Angular and GUI tools/2 - TypeScript",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/11 - Angular and GUI tools/1 - Angular",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/11 - Angular and GUI tools",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 5/7 - What goes in git",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/G - Real World Applications/Pack 2",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/G - Real World Applications/Pack 1",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/1 - Java/2 - Java Rememberance/Spring & Spring Boot/Part 5",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/10 - Kafka",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/A - Programming/3 - Git/Pack 3/Untitled",
     "4 - Images/Pasted image 20260921204917.png",
     "4 - Images/Pasted image 20260921204749.png",
     "4 - Images/Screenshot From 2026-09-17 16-46-40.png",
     "4 - Images/Screenshot From 2026-09-17 16-46-40 1.png",
     "Screenshot From 2026-09-17 16-46-40 1.png",
-    "Screenshot From 2026-09-17 16-46-40.png",
-    "4 - Images/Pasted image 20260917005714.png",
-    "Pasted image 20260917005714.png",
-    "1734702748422.jpeg",
-    "4 - Images/Pasted image 20260915182844.png"
+    "Screenshot From 2026-09-17 16-46-40.png"
   ]
 }

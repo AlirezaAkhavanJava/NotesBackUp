@@ -112,7 +112,8 @@ class Example {
 - **Instance Variables** → live as long as the object exists.
     
 - **Static Variables** → live until JVM shutdown.
-    
+
+>Java has **static fields**, not static local variables. you can't put static keyword inside a block
 
 ---
 
