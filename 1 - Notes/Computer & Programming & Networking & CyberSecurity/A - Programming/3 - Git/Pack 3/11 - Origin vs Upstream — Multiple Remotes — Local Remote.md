@@ -163,4 +163,4 @@ This is exactly how GitHub/GitLab store your repos server-side — every remote 
 
 
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

@@ -246,5 +246,5 @@ You chose **merge**, which is the safe default. Nothing was lost, and the remote
 The key takeaway: **`non-fast-forward` means "you'd have to throw away remote commits to push" — Git protects you until you decide how to reconcile (merge, rebase, or force).**
 
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]
 [[22 - Git Branches 🍧]]

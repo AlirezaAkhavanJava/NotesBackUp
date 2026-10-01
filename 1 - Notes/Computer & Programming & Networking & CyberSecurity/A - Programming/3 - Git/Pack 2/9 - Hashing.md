@@ -66,4 +66,4 @@ A commit hash **can** be identical across devices. Clone a repo and every commit
 That's it. Blobs, trees, and commits are all just objects — the commit isn't special, it's just a bigger structure.
 
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

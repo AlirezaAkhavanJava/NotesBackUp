@@ -34,4 +34,4 @@ Here's a quick reference for the most used `git stash` subcommands:
 
 
 
-###### Tags : [[0 - Git 🍋‍🟩]]
+###### Tags : [[0 - Git]]

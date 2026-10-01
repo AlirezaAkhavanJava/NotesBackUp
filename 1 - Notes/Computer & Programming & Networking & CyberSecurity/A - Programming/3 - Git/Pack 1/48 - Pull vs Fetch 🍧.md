@@ -80,4 +80,4 @@ Now `git pull` will **never create merge commits** — cleaner history!
 ---
 
 
-##### Tags : [[0 - Git 🍋‍🟩]]
+##### Tags : [[0 - Git]]

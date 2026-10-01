@@ -652,4 +652,4 @@ Merge keeps the _real order of creation_, not replayed order.
 ---
 
 
-### Tags : [[0 - Git 🍋‍🟩]]
+### Tags : [[0 - Git]]

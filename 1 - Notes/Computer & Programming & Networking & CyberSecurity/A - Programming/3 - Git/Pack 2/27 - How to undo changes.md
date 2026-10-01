@@ -168,4 +168,4 @@ In short: **`git reset` repositions your branch to an earlier point and decides 
 
 
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

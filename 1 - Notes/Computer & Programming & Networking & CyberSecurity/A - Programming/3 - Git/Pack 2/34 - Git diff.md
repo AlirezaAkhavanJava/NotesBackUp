@@ -233,4 +233,4 @@ So the easiest definition to remember is:
 > **`git diff` lets you inspect what changed between Git states.**
 
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

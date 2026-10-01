@@ -727,4 +727,4 @@ And the most important lesson is: **`git pull` did not fail because something is
 
 
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

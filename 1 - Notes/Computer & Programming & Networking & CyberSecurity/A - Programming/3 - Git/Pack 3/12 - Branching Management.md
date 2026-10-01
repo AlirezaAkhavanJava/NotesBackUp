@@ -202,4 +202,4 @@ git switch -c rescue-branch    # turns your detached work into a real, safe bran
 
 
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

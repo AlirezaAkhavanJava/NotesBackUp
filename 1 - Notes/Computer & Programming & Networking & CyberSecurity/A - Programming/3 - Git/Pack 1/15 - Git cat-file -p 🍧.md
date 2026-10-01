@@ -82,4 +82,4 @@ In the context of the `git cat-file` command, the **`-p`** and **`-t`** options 
 
 
 
-##### *Tags : [[0 - Git 🍋‍🟩]]
+##### *Tags : [[0 - Git]]

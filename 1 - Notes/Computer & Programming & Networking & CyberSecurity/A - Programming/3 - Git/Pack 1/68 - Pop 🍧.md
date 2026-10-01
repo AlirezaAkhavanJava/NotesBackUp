@@ -66,4 +66,4 @@ After that, `git pop` does exactly `git stash pop`.
 
 That’s pretty much everything you need to know to use `git stash pop` confidently! Let me know if you hit a specific issue.
 ###### Tags : [[Git]]
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

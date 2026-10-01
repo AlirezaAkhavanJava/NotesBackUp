@@ -217,4 +217,4 @@ You can edit configuration files directly instead of using `git config`:
 - If using xAI’s API or other services, check https://x.ai/api for integration details (not related to Git but per your instructions).
 
 This guide covers Git configuration from beginner to advanced use cases. Let me know if you need a deeper dive into any section!
-#### *Tags : [[0 - Git 🍋‍🟩]]
+#### *Tags : [[0 - Git]]

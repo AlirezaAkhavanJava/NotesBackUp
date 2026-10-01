@@ -69,4 +69,4 @@ In the context of `git config`, a **section** and a **key** refer to the structu
 - **Key**: A specific setting within a section (e.g., `user.name`, `core.editor`) that holds a value.  
     Together, they form the structure of Git’s configuration system, stored in files like `.gitconfig` or `.git/config`.
 
-_Tags_: [[0 - Git 🍋‍🟩]]
+_Tags_: [[0 - Git]]

@@ -64,4 +64,4 @@ It’s like hitting "Save Draft" in an email instead of sending a half-written m
 
 In short: **The stash = Git’s emergency "pause button" for your work-in-progress.** Super handy once you get used to it! Let me know if you want a cheat sheet or common workflows.
 
-###### Tags : [[0 - Git 🍋‍🟩]]
+###### Tags : [[0 - Git]]

@@ -63,4 +63,4 @@ git config [--local|--global|--system] --remove-section <section>
 
 **`--remove-section` deletes the entire section**, unlike `--unset`, which removes only one key.
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

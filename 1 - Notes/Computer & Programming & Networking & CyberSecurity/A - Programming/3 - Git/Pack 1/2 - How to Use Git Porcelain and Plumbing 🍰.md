@@ -401,4 +401,4 @@ Plumbing commands are low-level, designed for scripting or advanced tasks, manip
 - **Documentation**: For more details, use `git help <command>` or check the [official Git documentation](https://git-scm.com/docs).
 
 
-#### *Tags : [[0 - Git 🍋‍🟩]]
+#### *Tags : [[0 - Git]]

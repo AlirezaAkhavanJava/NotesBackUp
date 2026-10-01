@@ -411,4 +411,4 @@ git reset --hard <hash>              # forcibly return to it
 
 
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

@@ -135,4 +135,4 @@ git fetch upstream && git checkout main && git merge upstream/main && git push
 ---
 
 
-##### Tags : [[0 - Git 🍋‍🟩]]
+##### Tags : [[0 - Git]]

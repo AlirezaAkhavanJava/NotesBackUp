@@ -35,4 +35,4 @@ GitHub makes Git "social" and scalable for teams, but you don't need GitHub to u
 Pricing: Free for basics; paid plans (e.g., Pro, Team, Enterprise) for advanced features like unlimited private repos or security tools. Start free—it's beginner-friendly!
 
 
-##### Tags : [[0 - Git 🍋‍🟩]]
+##### Tags : [[0 - Git]]

@@ -66,4 +66,4 @@ It's kinda weird to just name tags any old thing. We're developers, we like stru
 
 
 
-###### Tags : [[0 - Git 🍋‍🟩]]
+###### Tags : [[0 - Git]]

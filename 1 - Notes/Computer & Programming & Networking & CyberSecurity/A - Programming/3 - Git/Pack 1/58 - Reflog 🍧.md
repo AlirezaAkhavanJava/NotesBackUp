@@ -151,4 +151,4 @@ git gc --prune=now
 ## Summary
 
 **`git reflog` is Git's undo history.** It remembers everything you've done, so even when you think you've lost work permanently, `git reflog` can usually help you recover it. It's one of the most valuable tools for recovering from mistakes in Git.
-##### Tags : [[0 - Git 🍋‍🟩]]
+##### Tags : [[0 - Git]]

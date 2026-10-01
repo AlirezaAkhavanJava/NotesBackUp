@@ -218,4 +218,4 @@ Safer than `--force`, because it won’t overwrite others’ work accidentally.
 ---
 
 
-### Tags : [[0 - Git 🍋‍🟩]]
+### Tags : [[0 - Git]]

@@ -106,4 +106,4 @@ When you run `git commit`:
 
 
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

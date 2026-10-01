@@ -49,4 +49,4 @@ Stage this hunk [y,n,q,a,d,s,e,?]?
 - Combine with `git commit` right after to lock in a focused change set.
 
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

@@ -76,4 +76,4 @@ git push          # pushes to origin/feature/login
 - **Upstream** = a *link* that tells Git **which remote branch** your local branch should sync with.  
 
 Use branches to organize code; set an upstream to make `push`/`pull` painless.
-##### Tags : [[0 - Git 🍋‍🟩]]
+##### Tags : [[0 - Git]]

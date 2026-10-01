@@ -196,4 +196,4 @@ git merge --no-ff feature
 
 
 
-### Tags : [[0 - Git 🍋‍🟩]]
+### Tags : [[0 - Git]]

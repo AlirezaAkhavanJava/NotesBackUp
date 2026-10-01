@@ -98,4 +98,4 @@ git reset --hard HEAD@{1}   # Or the specific hash
 
 
 
-##### Tags : [[0 - Git 🍋‍🟩]]
+##### Tags : [[0 - Git]]

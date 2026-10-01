@@ -71,4 +71,4 @@ Not = “checkout the same branch many times”
 
 
 
-###### Tags : [[0 - Git 🍋‍🟩]]
+###### Tags : [[0 - Git]]

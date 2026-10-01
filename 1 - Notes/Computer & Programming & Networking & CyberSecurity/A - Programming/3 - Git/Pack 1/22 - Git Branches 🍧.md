@@ -208,4 +208,4 @@ git stash pop    # Re-apply your stashed changes
 
 Mastering these concepts will make you highly proficient with Git and enable you to handle almost any version control scenario you encounter.
 
-### Tags : [[0 - Git 🍋‍🟩]]
+### Tags : [[0 - Git]]

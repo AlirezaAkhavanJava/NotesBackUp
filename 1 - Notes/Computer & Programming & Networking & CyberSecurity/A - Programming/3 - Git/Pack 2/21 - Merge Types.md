@@ -60,4 +60,4 @@ Most everyday merges are one of these:
 
 The key distinction: **fast-forward / three-way / squash** describe the resulting history, while **ort / recursive / octopus / ours / subtree** describe the strategy Git uses to combine content.
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

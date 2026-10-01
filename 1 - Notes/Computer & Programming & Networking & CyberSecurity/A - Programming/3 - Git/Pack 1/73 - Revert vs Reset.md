@@ -67,4 +67,4 @@ git reset --hard HEAD~1
 
 
 
-###### Tags : [[0 - Git 🍋‍🟩]]
+###### Tags : [[0 - Git]]

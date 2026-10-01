@@ -59,4 +59,4 @@ git diff --word-diff
 
 
 
-##### Tags : [[0 - Git 🍋‍🟩]]
+##### Tags : [[0 - Git]]

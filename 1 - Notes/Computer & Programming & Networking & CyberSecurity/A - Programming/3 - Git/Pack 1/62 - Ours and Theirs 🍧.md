@@ -96,4 +96,4 @@ It doesn’t matter what the branches are named.
 
 
 
-##### Tags : [[0 - Git 🍋‍🟩]]
+##### Tags : [[0 - Git]]

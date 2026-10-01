@@ -100,4 +100,4 @@ git remote set-url origin <url>  # change a remote's URL
 - Both are **arbitrary names**; the distinction is purely by convention in fork-based collaboration.
 
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

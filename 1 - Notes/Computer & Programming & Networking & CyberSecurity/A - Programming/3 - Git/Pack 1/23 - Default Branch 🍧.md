@@ -274,4 +274,4 @@ git push origin --delete old-name
 git fetch --prune
 ```
 
-### Tags : [[0 - Git 🍋‍🟩]]
+### Tags : [[0 - Git]]

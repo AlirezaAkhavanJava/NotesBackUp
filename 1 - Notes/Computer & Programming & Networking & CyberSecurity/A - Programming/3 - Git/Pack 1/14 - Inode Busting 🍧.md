@@ -51,4 +51,4 @@ Suppose you have a repository with 10,000 files:
 
 
 
-##### *Tags : [[0 - Git 🍋‍🟩]]
+##### *Tags : [[0 - Git]]

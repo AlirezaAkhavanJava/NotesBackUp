@@ -64,4 +64,4 @@ Plumbing commands are rarely used directly by end-users but are essential for cr
 
 Porcelain commands are the polished, user-friendly interface for Git, ideal for managing repositories in typical development workflows. Plumbing commands are the raw, low-level building blocks used for advanced scripting or by porcelain commands internally. Understanding the distinction helps developers choose the right tool for their task, whether it’s routine version control or building custom Git functionality.
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

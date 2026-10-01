@@ -85,4 +85,4 @@ The > and < operators are part of Unix-like shell environments (e.g., Bash, Zsh)
 - **Why They Matter**: These operators enhance Git workflows by saving or feeding data, but heavy use in large repositories can strain file system inodes, causing performance issues.
 
 
-##### *Tags : [[0 - Git 🍋‍🟩]]
+##### *Tags : [[0 - Git]]

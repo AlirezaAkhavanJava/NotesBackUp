@@ -282,4 +282,4 @@ git log -p -2
 |View specific commit|`git show <hash>`|
 
 
-### Tags : [[0 - Git 🍋‍🟩]]
+### Tags : [[0 - Git]]

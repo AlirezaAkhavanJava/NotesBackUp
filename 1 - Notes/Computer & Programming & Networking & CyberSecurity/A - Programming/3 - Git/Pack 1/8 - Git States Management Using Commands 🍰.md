@@ -144,4 +144,4 @@ This document outlines the Git commands used to manage the different states of f
 
 
 
-##### *Tags : [[0 - Git 🍋‍🟩]]
+##### *Tags : [[0 - Git]]

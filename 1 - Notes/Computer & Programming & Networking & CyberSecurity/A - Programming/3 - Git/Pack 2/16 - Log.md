@@ -96,4 +96,4 @@ If you find yourself using the same set of `git log` flags repeatedly, you can c
 
 
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

@@ -251,4 +251,4 @@ And that's the real moment when a developer thinks:
 
 
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

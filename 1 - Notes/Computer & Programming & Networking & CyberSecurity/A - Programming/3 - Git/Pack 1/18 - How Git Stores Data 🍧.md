@@ -304,4 +304,4 @@ Git is a:
 Everything else is an illusion built on top.
 
 
-##### *Tags : [[0 - Git 🍋‍🟩]]
+##### *Tags : [[0 - Git]]

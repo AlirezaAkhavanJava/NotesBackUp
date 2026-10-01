@@ -86,4 +86,4 @@ In short:
 
 
 
-##### Tags : [[0 - Git 🍋‍🟩]]
+##### Tags : [[0 - Git]]

@@ -115,4 +115,4 @@ When you fork someone's repository on a platform like GitHub, you get a copy of 
 
 Then the original owner can review your changes. If they like them, they can merge the changes straight from your fork into their repository.
 
-##### Tags : [[0 - Git 🍋‍🟩]]
+##### Tags : [[0 - Git]]

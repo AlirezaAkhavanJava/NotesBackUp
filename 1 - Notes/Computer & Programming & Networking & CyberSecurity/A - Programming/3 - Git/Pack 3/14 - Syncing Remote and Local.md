@@ -215,4 +215,4 @@ git config --global push.autoSetupRemote true  # auto-set tracking on first push
 
 
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

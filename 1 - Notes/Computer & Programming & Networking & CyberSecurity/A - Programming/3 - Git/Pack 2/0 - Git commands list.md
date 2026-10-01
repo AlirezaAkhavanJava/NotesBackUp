@@ -1,5 +1,5 @@
 
-Here's the full table — ordered from absolute basics to pro-level mastery. Nothing skipped.
+
 
 |#|Category|Topic|What to Know|
 |---|---|---|---|
@@ -73,4 +73,4 @@ Here's the full table — ordered from absolute basics to pro-level mastery. Not
 
 
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

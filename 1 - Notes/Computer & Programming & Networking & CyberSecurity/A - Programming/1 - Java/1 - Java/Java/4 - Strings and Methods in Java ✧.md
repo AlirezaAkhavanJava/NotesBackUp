@@ -47,7 +47,7 @@ s.split(",");           // split into array
 
 - Mutable (can be modified).
     
-- ==**Thread-safe** → synchronized methods.==
+- **Thread-safe** → synchronized methods.
     
 - Slower than `StringBuilder`.
     
@@ -111,7 +111,7 @@ sb.reverse();
 
 - `String` → when data is constant/immutable.
     
-- ==`StringBuffer` → when multiple threads modify string.==
+- `StringBuffer` → when multiple threads modify string.
     
 - `StringBuilder` → when single-threaded string modifications.
     

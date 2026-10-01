@@ -56,4 +56,4 @@ If you need a deeper dive into a specific aspect (e.g., how Git computes hashes 
 
 
 
-##### *Tags : [[0 - Git 🍋‍🟩]]
+##### *Tags : [[0 - Git]]

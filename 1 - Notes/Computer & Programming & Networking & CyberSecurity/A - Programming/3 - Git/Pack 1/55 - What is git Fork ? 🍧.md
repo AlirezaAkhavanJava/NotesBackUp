@@ -82,4 +82,4 @@ Let's walk through the classic open-source contribution:
 
 In essence, a **fork is your own personal sandbox and gateway to contributing to any public project** without needing special permission from the start.
 
-##### Tags : [[0 - Git 🍋‍🟩]]
+##### Tags : [[0 - Git]]

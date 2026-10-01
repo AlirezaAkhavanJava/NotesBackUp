@@ -86,4 +86,4 @@ git push origin --delete feature/login-page
 ```
 
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

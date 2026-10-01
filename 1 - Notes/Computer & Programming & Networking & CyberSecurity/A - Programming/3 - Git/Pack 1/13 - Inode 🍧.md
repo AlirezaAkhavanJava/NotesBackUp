@@ -98,4 +98,4 @@ To alleviate inode-related pain points in Git and other development tasks:
 
 
 
-##### *Tags : [[0 - Git 🍋‍🟩]]
+##### *Tags : [[0 - Git]]

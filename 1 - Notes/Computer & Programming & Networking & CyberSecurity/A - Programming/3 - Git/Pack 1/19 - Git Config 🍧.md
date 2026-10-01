@@ -146,4 +146,4 @@ A `.gitconfig` file might look like this:
 For more details, check the official Git documentation: https://git-scm.com/docs/git-config
 
 
-##### *Tags : [[0 - Git 🍋‍🟩]]
+##### *Tags : [[0 - Git]]

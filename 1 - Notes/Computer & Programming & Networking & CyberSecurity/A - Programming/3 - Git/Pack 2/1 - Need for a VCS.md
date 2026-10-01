@@ -70,4 +70,4 @@ Git is a **Distributed VCS**, but it specifically solved problems that even _ear
 
 
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

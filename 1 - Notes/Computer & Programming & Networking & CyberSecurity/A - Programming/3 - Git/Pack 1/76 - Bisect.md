@@ -109,4 +109,4 @@ Got a specific bug you’re hunting right now? Paste the details and I’ll give
 
 
 
-##### Tags : [[0 - Git 🍋‍🟩]]
+##### Tags : [[0 - Git]]

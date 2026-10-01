@@ -440,4 +440,4 @@ This comprehensive understanding of Git's internal file structure helps with:
 - **Optimizing** repository performance
 - **Customizing** Git behavior for specific workflows
 
-### Tags : [[0 - Git 🍋‍🟩]]
+### Tags : [[0 - Git]]

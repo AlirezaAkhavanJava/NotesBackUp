@@ -66,4 +66,4 @@ Meaning:
 
 One caveat: GitHub's commit search is based on GitHub's indexed commit data and the author/committer metadata. If you made commits locally but haven't pushed them to GitHub, **GitHub can't see them**. The damn thing isn't psychic.
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

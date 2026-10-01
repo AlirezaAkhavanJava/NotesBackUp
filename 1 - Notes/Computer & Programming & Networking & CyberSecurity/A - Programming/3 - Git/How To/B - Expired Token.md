@@ -81,4 +81,4 @@ https://<username>:<new_token>@github.com
 
 Git will now automatically use this new token for **all your GitHub repos** that use HTTPS.
 
-##### [[0 - Git 🍋‍🟩]]
+##### [[0 - Git]]

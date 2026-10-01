@@ -699,4 +699,4 @@ The simplest mental model is:
 > **Merge joins two histories. Rebase takes one history's changes and rebuilds them on top of another history.**
 
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

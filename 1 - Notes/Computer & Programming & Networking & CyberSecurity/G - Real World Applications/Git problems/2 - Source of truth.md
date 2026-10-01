@@ -38,4 +38,4 @@ Because Git is distributed, **no clone is inherently more true than another**. E
 **Short version:** in programming, the SoT is the authoritative code/data/config/schema store; in Git, it is the commit graph reachable from the agreed canonical ref/remote — not your working directory or local edits.
 
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

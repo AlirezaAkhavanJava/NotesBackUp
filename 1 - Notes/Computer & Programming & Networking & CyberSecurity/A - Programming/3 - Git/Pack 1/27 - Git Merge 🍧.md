@@ -498,4 +498,4 @@ Conflict markers: `<<<<<<< HEAD` … `=======` … `>>>>>>> feature`
 ---
 
 
-### Tags : [[0 - Git 🍋‍🟩]]
+### Tags : [[0 - Git]]

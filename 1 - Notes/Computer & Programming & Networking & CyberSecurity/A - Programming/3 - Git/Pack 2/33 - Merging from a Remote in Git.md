@@ -161,4 +161,4 @@ git push origin main
 - Use `--no-ff` to always create a merge commit; `--ff-only` to refuse merges that need one
 
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

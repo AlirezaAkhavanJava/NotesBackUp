@@ -126,4 +126,4 @@ Then decide: rebase, merge, or review first.
 
 
 
-##### Tags : [[0 - Git 🍋‍🟩]]
+##### Tags : [[0 - Git]]

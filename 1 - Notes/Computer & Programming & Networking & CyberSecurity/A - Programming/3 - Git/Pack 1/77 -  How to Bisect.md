@@ -135,4 +135,4 @@ git bisect run ./test-script.sh
 
 
 
-##### Tags : [[0 - Git 🍋‍🟩]]
+##### Tags : [[0 - Git]]

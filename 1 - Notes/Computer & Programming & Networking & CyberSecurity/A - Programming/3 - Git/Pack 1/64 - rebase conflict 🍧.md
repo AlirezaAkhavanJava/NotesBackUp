@@ -118,4 +118,4 @@ git push --force-with-lease
 
 
 
-#### Tags : [[0 - Git 🍋‍🟩]]
+#### Tags : [[0 - Git]]

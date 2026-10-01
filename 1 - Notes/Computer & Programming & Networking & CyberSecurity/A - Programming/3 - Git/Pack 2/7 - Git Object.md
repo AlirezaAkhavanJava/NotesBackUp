@@ -80,4 +80,4 @@ Later, `git gc` bundles many loose objects into compressed **packfiles** for eff
 
 
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

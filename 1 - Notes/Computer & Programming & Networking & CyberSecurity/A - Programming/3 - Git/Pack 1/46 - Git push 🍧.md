@@ -61,4 +61,4 @@ git push            # Push!
 
 
 
-##### Tags : [[0 - Git 🍋‍🟩]]
+##### Tags : [[0 - Git]]

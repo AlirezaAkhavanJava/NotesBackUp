@@ -184,4 +184,4 @@ git push -u origin new-name                    # push new name, set tracking
 
 
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

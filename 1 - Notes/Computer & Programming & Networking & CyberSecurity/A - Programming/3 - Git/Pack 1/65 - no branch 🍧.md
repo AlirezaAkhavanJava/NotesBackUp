@@ -76,4 +76,4 @@ git branch -a
 
 and I’ll tell you exactly what’s happening.
 
-###### Tags : [[0 - Git 🍋‍🟩]]
+###### Tags : [[0 - Git]]

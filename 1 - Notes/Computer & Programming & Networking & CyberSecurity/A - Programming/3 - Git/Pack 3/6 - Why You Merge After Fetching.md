@@ -91,4 +91,4 @@ You wouldn't want your mailbox to auto-open and act on every letter the second i
 
 
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

@@ -81,4 +81,4 @@ git remote set-url origin git@github.com:AlirezaAkhavanJava/webflyx.git
 Want to go through **SSH key setup on Debian** next so you can switch `webflyx` from HTTPS to SSH and stop typing your GitHub password/token every push?
 
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

@@ -30,4 +30,4 @@ Git objects are the core data structures Git uses to store and manage a reposito
   - `git ls-tree <tree-hash>`: List a tree’s contents.
   - `git show <commit-hash>`: View commit details.
 
-##### *Tags : [[0 - Git 🍋‍🟩]]
+##### *Tags : [[0 - Git]]

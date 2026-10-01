@@ -35,4 +35,4 @@ pull  = check the mailbox AND open + act on every letter immediately
 
 
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

@@ -228,4 +228,4 @@ That final commit is your **merge commit**.
 ---
 
 
-### Tags : [[0 - Git 🍋‍🟩]]
+### Tags : [[0 - Git]]

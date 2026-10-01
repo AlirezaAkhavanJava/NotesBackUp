@@ -126,4 +126,4 @@ Nothing to recover — `fetch` is non-destructive. It only adds/updates remote-t
 
 
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

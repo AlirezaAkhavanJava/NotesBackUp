@@ -149,4 +149,4 @@ git log origin/main..HEAD --oneline
 ---
 
 
-##### Tags : [[0 - Git 🍋‍🟩]]
+##### Tags : [[0 - Git]]

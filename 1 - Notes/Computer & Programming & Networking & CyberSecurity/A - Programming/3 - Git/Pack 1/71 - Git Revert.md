@@ -113,4 +113,4 @@ git commit -m "Revert ... with adjustments"
 ```
 
 That’s pretty much everything you need for day-to-day use of `git revert`. Let me know if you have a specific scenario (like reverting a merge, a range, or dealing with conflicts) and I can walk you through it!
-###### Tags : [[0 - Git 🍋‍🟩]]
+###### Tags : [[0 - Git]]

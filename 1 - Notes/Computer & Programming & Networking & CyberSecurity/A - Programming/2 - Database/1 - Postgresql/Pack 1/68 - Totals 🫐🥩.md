@@ -14,4 +14,4 @@
 > Running → everyone so far.  
 > Rolling → just the recent few.
 
-##### Tags : [[0 - Git 🍋‍🟩]]
+##### Tags : [[0 - Git]]

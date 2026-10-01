@@ -45,4 +45,4 @@ git rebase --abort
 ✅ Rule of thumb: `--abort` is **always tied to the command that’s in progress**, it’s not a standalone Git command.
 
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

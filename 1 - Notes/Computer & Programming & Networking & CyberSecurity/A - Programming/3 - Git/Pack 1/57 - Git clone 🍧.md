@@ -114,4 +114,4 @@ git remote -v
 
 
 
-##### Tags : [[0 - Git 🍋‍🟩]]
+##### Tags : [[0 - Git]]

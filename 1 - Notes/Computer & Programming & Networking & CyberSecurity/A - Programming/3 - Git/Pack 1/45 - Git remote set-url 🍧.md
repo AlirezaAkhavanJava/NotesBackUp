@@ -33,4 +33,4 @@ git remote -v
 
 It will show the updated URLs for fetch and push.
 
-##### Tags : [[0 - Git 🍋‍🟩]]
+##### Tags : [[0 - Git]]

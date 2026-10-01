@@ -121,4 +121,4 @@ git worktree move old-path new-path
 Try it now: open a terminal and run `git worktree add ../myproject-temp some-branch` — you’ll never go back to stashing again! 🚀
 
 
-##### Tags : [[0 - Git 🍋‍🟩]]
+##### Tags : [[0 - Git]]

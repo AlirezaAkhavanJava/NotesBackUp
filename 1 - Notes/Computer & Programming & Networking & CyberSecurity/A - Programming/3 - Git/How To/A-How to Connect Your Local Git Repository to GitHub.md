@@ -180,4 +180,4 @@ git push origin main
 
 This guide ensures you can connect any local Git repository to GitHub, using either HTTPS or SSH, while addressing errors like those you encountered (e.g., remote exists, 403 errors, typos). Let me know if you need clarification or further assistance!
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

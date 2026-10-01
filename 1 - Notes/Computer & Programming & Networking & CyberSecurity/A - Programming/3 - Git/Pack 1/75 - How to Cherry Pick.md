@@ -85,4 +85,4 @@ git cherry-pick --abort
 ---
 
 
-##### tags : [[0 - Git 🍋‍🟩]]
+##### tags : [[0 - Git]]

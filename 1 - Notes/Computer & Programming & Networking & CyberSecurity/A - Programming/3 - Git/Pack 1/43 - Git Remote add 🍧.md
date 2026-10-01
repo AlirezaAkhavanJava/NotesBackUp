@@ -113,4 +113,4 @@ git merge upstream/main
 
 ---
 
-##### Tags : [[0 - Git 🍋‍🟩]]
+##### Tags : [[0 - Git]]

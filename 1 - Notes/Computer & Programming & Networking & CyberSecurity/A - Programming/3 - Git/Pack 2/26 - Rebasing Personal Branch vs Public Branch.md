@@ -257,4 +257,4 @@ If it prints `main` → **stop**, don't rebase.
 
 So to answer you directly: **yes.** "Rebase my feature branch onto main" means *my feature branch gets rewritten; main does not.* You've got the model exactly right.
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

@@ -237,4 +237,4 @@ git reset --hard origin/main
 
 
 
-### Tags : [[0 - Git 🍋‍🟩]]
+### Tags : [[0 - Git]]

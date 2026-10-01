@@ -46,5 +46,5 @@ git bisect run scripts/bisect.sh
 Git will now **automatically test commits** and tell you which commit introduced `SCANNING` in `scan.sh`.
 
 
-###### Tags : [[0 - Git 🍋‍🟩]]
+###### Tags : [[0 - Git]]
 

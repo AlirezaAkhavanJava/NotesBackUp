@@ -94,4 +94,4 @@ git remote set-url upstream https://github.com/original/repo.git
 ---
 
 
-##### Tags : [[0 - Git 🍋‍🟩]]
+##### Tags : [[0 - Git]]

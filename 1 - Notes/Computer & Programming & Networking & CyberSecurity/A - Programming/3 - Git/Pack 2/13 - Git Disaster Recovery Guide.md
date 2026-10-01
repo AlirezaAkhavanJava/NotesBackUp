@@ -745,4 +745,4 @@ git undo         # uncommit but keep changes
 
 You will still screw up. Everyone does. What matters is that you now know the reflog exists, you know `--force-with-lease`, and you know to *stop* instead of typing more commands in a panic. That's already better than most professional developers.
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

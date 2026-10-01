@@ -100,4 +100,4 @@ git fetch upstream               # ← this actually gets the data
 4. Reference it in `push`, `pull`, `fetch`, `merge`, `rebase` by name
 
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

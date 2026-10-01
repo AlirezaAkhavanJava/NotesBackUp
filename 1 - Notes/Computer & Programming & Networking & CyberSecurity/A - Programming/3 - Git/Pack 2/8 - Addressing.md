@@ -194,4 +194,4 @@ Every arrow in this diagram is just **a SHA-1 hash pointing to another object**.
 
 
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

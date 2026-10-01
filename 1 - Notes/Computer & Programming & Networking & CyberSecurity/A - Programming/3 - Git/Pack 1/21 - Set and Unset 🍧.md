@@ -116,4 +116,4 @@ The `unset` operation removes a specific key or its value from the configuration
 For more details, refer to the Git documentation: https://git-scm.com/docs/git-config.
 
 
-##### *Tags : [[0 - Git 🍋‍🟩]]
+##### *Tags : [[0 - Git]]

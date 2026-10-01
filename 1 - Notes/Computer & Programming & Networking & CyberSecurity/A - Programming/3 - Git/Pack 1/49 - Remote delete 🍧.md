@@ -121,4 +121,4 @@ git push origin --delete branch-name
 
 Let me know which one you meant!
 
-##### Tags : [[0 - Git 🍋‍🟩]]
+##### Tags : [[0 - Git]]

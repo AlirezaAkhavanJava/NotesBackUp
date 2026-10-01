@@ -180,4 +180,4 @@ git push origin main
 ```
 
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

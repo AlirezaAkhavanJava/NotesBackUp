@@ -94,4 +94,4 @@ git stash-apply "login form"
 | `git stash apply` + `git log -1 stash` | Yes       | No                | Yes (manually)              | Yes                |
 
 **Best practice**: Always stash with a clear message (`git stash push -m "your message"`) — it makes `git stash list` much more useful and prevents confusion later.
-##### Tags : [[0 - Git 🍋‍🟩]]
+##### Tags : [[0 - Git]]

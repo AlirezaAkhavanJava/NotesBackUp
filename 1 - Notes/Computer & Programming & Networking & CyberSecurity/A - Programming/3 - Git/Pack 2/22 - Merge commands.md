@@ -184,4 +184,4 @@ The main distinction: **fast-forward / three-way / squash** describe the resulti
 
 
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

@@ -185,6 +185,6 @@ git switch --orphan <name>
 Use it for content that should live in the repository but not in the main history — most commonly generated site output, standalone documentation, or project templates. Treat it as a fully separate line of development, and remember that though the history is disconnected, the repository and its object database are still shared.
 
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]
 [[10 - Branch]]
 [[22 - Git Branches 🍧]]

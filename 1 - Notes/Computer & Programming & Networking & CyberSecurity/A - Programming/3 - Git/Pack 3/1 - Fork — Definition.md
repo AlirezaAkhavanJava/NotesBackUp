@@ -71,4 +71,4 @@ This `origin` + `upstream` naming pattern is a strong convention across the Git/
 Since you're on GitHub already (`AlirezaAkhavanJava`), want to walk through **actually forking and contributing to a small test repo** hands-on, so this workflow clicks?
 
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

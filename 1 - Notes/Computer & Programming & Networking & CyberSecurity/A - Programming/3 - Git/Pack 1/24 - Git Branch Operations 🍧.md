@@ -359,4 +359,4 @@ git rebase origin/main
 
 These concepts form the foundation of effective Git workflow management, helping you navigate, understand, and manipulate your repository's history with precision.
 
-### Tags : [[0 - Git 🍋‍🟩]]
+### Tags : [[0 - Git]]

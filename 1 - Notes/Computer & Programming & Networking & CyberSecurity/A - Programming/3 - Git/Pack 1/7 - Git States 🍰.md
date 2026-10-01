@@ -77,4 +77,4 @@ Untracked files:
 ## Summary
 
 Understanding Git states and the `git status` command is essential for effective version control. The states (**untracked**, **modified**, **staged**, **committed**, and **pushed**) represent the lifecycle of file changes, while `git status` provides a clear overview of the repository's current state, guiding you through the next steps in your Git workflow.
-###### Tags : [[0 - Git 🍋‍🟩]]
+###### Tags : [[0 - Git]]

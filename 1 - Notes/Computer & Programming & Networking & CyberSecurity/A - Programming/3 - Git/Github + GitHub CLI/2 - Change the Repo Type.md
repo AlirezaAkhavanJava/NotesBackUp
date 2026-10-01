@@ -38,4 +38,4 @@ gh repo edit AlirezaAkhavanJava/BackToFuture --visibility private
 That's all. **Public → Private**, repository stays intact, commits stay intact, files stay intact. Only its visibility changes.
 
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

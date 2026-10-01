@@ -116,4 +116,4 @@ git config --get <key>
 These commands cover all common ways to retrieve Git configurations. Let me know if you need examples for a specific use case!
 
 
-##### *Tags : [[0 - Git 🍋‍🟩]]
+##### *Tags : [[0 - Git]]

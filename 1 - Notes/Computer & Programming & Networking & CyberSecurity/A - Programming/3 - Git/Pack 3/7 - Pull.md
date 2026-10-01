@@ -117,4 +117,4 @@ After git pull --rebase:
 
 
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

@@ -191,4 +191,4 @@ Working directory: same as B
 
 
 
-### Tags : [[0 - Git 🍋‍🟩]]
+### Tags : [[0 - Git]]

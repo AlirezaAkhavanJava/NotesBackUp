@@ -1275,4 +1275,4 @@ origin/main
 
 Once you can read that output, **Git branching becomes dramatically easier to reason about**.
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

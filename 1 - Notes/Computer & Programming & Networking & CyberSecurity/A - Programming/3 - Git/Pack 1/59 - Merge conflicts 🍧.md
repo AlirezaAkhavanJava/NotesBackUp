@@ -100,4 +100,4 @@ public String getName() {
 
 
 
-##### Tags : [[0 - Git 🍋‍🟩]]
+##### Tags : [[0 - Git]]

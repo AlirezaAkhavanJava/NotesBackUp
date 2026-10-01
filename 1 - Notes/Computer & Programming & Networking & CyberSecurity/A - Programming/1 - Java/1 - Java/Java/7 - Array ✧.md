@@ -1,5 +1,5 @@
 
-Date : 2025-09-04
+
 
 
 This document explains **arrays** and **multi-dimensional arrays** in Java with examples.

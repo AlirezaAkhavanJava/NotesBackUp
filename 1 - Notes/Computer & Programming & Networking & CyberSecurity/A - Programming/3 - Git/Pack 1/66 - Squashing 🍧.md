@@ -101,4 +101,4 @@ git push --force-with-lease     # update the remote branch safely
 
 
 
-###### Tags : [[0 - Git 🍋‍🟩]]
+###### Tags : [[0 - Git]]

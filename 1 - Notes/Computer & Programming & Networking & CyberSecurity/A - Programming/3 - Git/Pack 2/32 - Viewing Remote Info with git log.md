@@ -121,4 +121,4 @@ git ls-remote origin
 
 
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

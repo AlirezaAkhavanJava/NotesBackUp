@@ -200,4 +200,4 @@ git config --global rebase.autoStash true # auto-stash uncommitted changes befor
 Want to go hands-on now and actually simulate a merge conflict in `webflyx` (edit the same line on two branches) so you practice resolving one safely before it happens for real?
 
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

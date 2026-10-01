@@ -110,4 +110,4 @@ MERGE STRATEGY (what we set)          REBASE STRATEGY
 
 
 
-##### Tags : [[0 - Git 🍋‍🟩]]
+##### Tags : [[0 - Git]]

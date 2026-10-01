@@ -56,4 +56,4 @@ It’s useful to:
 ---
 
 
-##### Tags : [[0 - Git 🍋‍🟩]]
+##### Tags : [[0 - Git]]

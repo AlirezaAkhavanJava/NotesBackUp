@@ -176,4 +176,4 @@ git push --force-with-lease
 
 
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

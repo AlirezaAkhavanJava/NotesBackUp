@@ -53,7 +53,7 @@ In summary, the back-end is the backbone of an application, ensuring data manage
 [[1 - Spring Security 🍌]]
 [[1 - Junit 5 🥭]]
 [[1 - Stream api]]
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]
 [[1 - ORM 🍪]]
 [[18 - JDBC 🍩]]
 [[1 - SQL 🦬]]

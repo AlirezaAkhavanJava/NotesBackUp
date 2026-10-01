@@ -90,4 +90,4 @@ That’s it — deleting worktrees is safe and fast once you know these commands
 
 Got a bunch of old worktrees cluttering your drive right now? Paste the output of `git worktree list` and I’ll tell you exactly which commands to run! 🧹
 
-###### Tags : [[0 - Git 🍋‍🟩]]
+###### Tags : [[0 - Git]]

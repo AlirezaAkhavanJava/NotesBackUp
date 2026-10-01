@@ -109,4 +109,4 @@ git worktree add -b hotfix-from-1.2 ../fix-123 v1.2.3   # branch from tag
 Tags are forever (unless force-pushed), so treat them as immutable history markers.
 
 
-##### Tags : [[0 - Git 🍋‍🟩]]
+##### Tags : [[0 - Git]]

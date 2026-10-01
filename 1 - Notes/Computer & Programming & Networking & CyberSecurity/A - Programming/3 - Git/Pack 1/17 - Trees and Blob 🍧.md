@@ -124,4 +124,4 @@ git cat-file -p <tree_hash>     # see blobs/trees inside
 
 ---
 
-##### *Tags : [[0 - Git 🍋‍🟩]]
+##### *Tags : [[0 - Git]]

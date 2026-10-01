@@ -1,4 +1,4 @@
-##### Tags : [[0 - Git 🍋‍🟩]]
+##### Tags : [[0 - Git]]
 
 A **Git repository** is a directory storing a project's files and Git's version control data (in `.git/`), tracking changes and enabling collaboration. It can be local (on your machine) or remote (e.g., GitHub).
 

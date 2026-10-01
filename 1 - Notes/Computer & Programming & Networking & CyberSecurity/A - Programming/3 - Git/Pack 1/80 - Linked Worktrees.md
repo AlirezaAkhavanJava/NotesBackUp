@@ -99,4 +99,4 @@ You can almost think of a linked worktree as just another branch in the same rep
 
 
 
-###### Tags : [[0 - Git 🍋‍🟩]]
+###### Tags : [[0 - Git]]

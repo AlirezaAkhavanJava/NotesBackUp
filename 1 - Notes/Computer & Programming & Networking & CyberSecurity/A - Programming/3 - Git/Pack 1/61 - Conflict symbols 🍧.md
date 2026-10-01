@@ -102,4 +102,4 @@ jayson,gross,htmz,contributor
 
 
 
-##### Tags : [[0 - Git 🍋‍🟩]]
+##### Tags : [[0 - Git]]

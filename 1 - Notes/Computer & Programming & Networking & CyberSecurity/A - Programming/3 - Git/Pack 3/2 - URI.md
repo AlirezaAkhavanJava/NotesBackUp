@@ -61,4 +61,4 @@ Git's own documentation (`git help clone`, `git remote add`) literally uses the 
 > URI is the general "what is this resource" identifier; URL is a URI that also tells you "and here's how to reach it" — and Git repository addresses are always URLs, since Git needs to know the protocol to fetch/push data.
 
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

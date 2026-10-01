@@ -273,4 +273,4 @@ And one very important rule:
 
 
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

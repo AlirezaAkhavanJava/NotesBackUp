@@ -98,4 +98,4 @@ In short: `git cherry-pick` is perfect when you want surgical precision with com
 
 
 
-###### Tags : [[0 - Git 🍋‍🟩]]
+###### Tags : [[0 - Git]]

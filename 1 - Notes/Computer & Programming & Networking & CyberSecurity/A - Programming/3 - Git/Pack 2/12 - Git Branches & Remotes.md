@@ -276,4 +276,4 @@ Pull Request = ask to merge your branch into main
 That's it — you're now more competent than 90% of devs who just memorize `git push` and pray.
 
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

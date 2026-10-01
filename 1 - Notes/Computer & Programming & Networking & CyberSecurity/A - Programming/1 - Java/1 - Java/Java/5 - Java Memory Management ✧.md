@@ -77,12 +77,12 @@ System.out.println(s1 == s2); // true (same reference from pool)
 
 - **String literal** → stored in pool.
     
-- **`new String("Hello")`** → ==creates new object in heap (not pooled).==
+- **`new String("Hello")`** → creates new object in heap (not pooled).
     
 
 ### Interning
 
-- ==`intern()` method forces a string into the pool.==
+- `intern()` method forces a string into the pool.
     
 
 ```java

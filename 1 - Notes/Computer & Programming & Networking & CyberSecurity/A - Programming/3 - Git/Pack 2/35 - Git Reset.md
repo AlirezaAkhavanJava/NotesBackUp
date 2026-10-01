@@ -43,4 +43,4 @@ git reset
 ```
 
 
-[[0 - Git 65]]
+[[0 - Git commands list]]

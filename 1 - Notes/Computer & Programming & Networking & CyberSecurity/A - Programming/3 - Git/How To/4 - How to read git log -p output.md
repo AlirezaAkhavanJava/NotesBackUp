@@ -424,4 +424,4 @@ git log --oneline -p
 
 This gives you the compact commit history **plus the patches**, making it much easier to follow commit-by-commit.
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

@@ -144,4 +144,4 @@ Working dir: D changes present
 ```
 
 
-### Tags : [[0 - Git 🍋‍🟩]]
+### Tags : [[0 - Git]]

@@ -583,4 +583,4 @@ git log
 all behave the way they do.
 
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

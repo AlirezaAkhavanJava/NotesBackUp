@@ -40,4 +40,4 @@ gh repo delete AlirezaAkhavanJava/RepoName
 
 It makes it much harder to accidentally send the wrong repository into the fucking void.
 
-[[0 - Git 🍋‍🟩]]
+[[0 - Git]]

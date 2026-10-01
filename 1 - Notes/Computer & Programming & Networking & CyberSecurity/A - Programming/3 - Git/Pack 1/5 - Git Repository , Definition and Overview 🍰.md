@@ -88,4 +88,4 @@ git config --local <key> <value>
 - For more details, run `git help` or check [Git documentation](https://git-scm.com/docs).
 
 This guide provides a clear understanding of what a Git repository is, its structure, and how it’s used in version control. Let me know if you need further details or specific examples!
-#### *Tags [[0 - Git 🍋‍🟩]]
+#### *Tags [[0 - Git]]

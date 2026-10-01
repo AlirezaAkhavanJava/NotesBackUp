@@ -86,4 +86,4 @@ CI/CD stands for **Continuous Integration** and **Continuous Deployment/Delivery
 
 ---
 
-###### Tags : [[0 - Git 🍋‍🟩]]
+###### Tags : [[0 - Git]]
