@@ -279,4 +279,4 @@ Want to actually scaffold this full project structure as real files — a workin
 
 
 [[Java]]
-[[0 - Spring Framework]]
+[[Spring Framework]]

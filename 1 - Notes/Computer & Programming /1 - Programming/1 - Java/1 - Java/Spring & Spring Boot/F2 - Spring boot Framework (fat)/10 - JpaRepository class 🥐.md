@@ -195,4 +195,4 @@ Page<User> findAll(Pageable pageable);
 ```
 
 
-##### Tags : [[0 - Spring Framework]]
+##### Tags : [[Spring Framework]]

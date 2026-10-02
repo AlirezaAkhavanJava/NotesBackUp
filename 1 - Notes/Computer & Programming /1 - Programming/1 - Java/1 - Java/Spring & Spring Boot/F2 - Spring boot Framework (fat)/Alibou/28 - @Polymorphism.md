@@ -226,4 +226,4 @@ Otherwise, leave it alone. Hibernate defaults exist for a reason.
 
 Hibernate lets you turn polymorphism off because sometimes abstraction is expensive and SQL does not care about your object model.
 
-###### Tags : [[0 - Spring Framework]]
+###### Tags : [[Spring Framework]]

@@ -398,4 +398,4 @@ This detailed guide explains every key aspect of Spring Data JPA, including Hibe
 
 
 
-##### *Tags : [[0 - Spring Framework]]
+##### *Tags : [[Spring Framework]]

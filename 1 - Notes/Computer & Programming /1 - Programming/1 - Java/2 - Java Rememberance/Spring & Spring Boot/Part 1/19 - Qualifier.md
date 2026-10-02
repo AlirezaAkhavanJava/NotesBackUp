@@ -92,6 +92,6 @@ Then plain `@Autowired` (no qualifier) resolves to that one automatically — `@
 - **Multiple implementations, no natural default** → `@Qualifier` everywhere, be explicit.
 
 
-[[0 - Spring Framework]]
+[[Spring Framework]]
 [[Java]]
 [[0 - Spring + Spring Boot]]

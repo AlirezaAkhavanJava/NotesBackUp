@@ -193,4 +193,4 @@ Default request: `/users` → page 0, 15 items, sorted by `createdAt DESC`
 
 
 
-##### Tags : [[0 - Spring Framework]]
+##### Tags : [[Spring Framework]]

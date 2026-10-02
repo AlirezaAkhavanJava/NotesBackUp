@@ -117,4 +117,4 @@ The `<context:component-scan base-package="com.Arcade"/>` element tells Spring t
 
 
 
-##### *Tags : [[0 - Spring Framework]]
+##### *Tags : [[Spring Framework]]

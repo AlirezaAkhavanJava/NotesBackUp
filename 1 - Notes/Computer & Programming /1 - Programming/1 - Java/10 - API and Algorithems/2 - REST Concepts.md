@@ -102,4 +102,4 @@ Status codes indicate the result of an HTTP request.
     }
     ```
 
-[[0 - Spring Framework]]
+[[Spring Framework]]

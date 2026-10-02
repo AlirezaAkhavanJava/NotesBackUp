@@ -368,4 +368,4 @@ When you call `playGame()`, it prints "Ready? Go!" then "Playing!". Magic!
 
 
 
-##### *Tags : [[0 - Spring Framework]]
+##### *Tags : [[Spring Framework]]

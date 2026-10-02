@@ -80,4 +80,4 @@ Here’s the **safe rule set** for using `rm`:
 
 
 
-##### Tags : [[2 - Tags/Linux|Linux]]
+##### Tags : [[2 - Tags/Pro/CS/Linux|Linux]]

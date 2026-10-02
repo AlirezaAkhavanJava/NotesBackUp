@@ -274,5 +274,5 @@ How many times does `"creating A"` print, and why? Now change `@Configuration` t
 
 
 [[Java]]
-[[0 - Spring Framework]]
+[[Spring Framework]]
 [[0 - Spring + Spring Boot]]

@@ -520,4 +520,4 @@ If Lombok doesn't suit your needs, consider:
 - [Lombok Features Documentation](https://projectlombok.org/features/)
 - [GitHub Repository](https://github.com/projectlombok/lombok)
 - [Lombok Maven Repository](https://mvnrepository.com/artifact/org.projectlombok/lombok)
-##### *Tags : [[0 - Spring Framework]]
+##### *Tags : [[Spring Framework]]

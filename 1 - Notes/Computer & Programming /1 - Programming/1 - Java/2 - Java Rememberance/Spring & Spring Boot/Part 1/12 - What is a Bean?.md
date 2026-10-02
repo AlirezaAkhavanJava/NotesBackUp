@@ -257,7 +257,7 @@ Want to go through `BeanPostProcessor` next (it's how Spring itself implements f
 
 
 [[Java]]
-[[0 - Spring Framework]]
+[[Spring Framework]]
 [[0 - Spring + Spring Boot]]
 [[7.1 - Bean LifeCycle]]
 [[8 - Bean 🍩]]

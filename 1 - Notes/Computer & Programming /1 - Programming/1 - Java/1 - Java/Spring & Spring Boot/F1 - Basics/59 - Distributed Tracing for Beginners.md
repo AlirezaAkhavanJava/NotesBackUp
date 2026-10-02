@@ -128,4 +128,4 @@ That's it! You now have superpowers to see inside your app! 🦸‍♂️
 
 Just add those few lines of code and you get free pizza tracking! 🍕➡️👀
 
-[[0 - Spring Framework]]
+[[Spring Framework]]

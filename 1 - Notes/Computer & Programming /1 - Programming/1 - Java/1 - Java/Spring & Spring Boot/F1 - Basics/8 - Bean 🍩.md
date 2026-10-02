@@ -1,6 +1,6 @@
 Date : 2025-08-24
 Concept : Spring boot beans
-Tags : [[0 - Spring Framework]]
+Tags : [[Spring Framework]]
 
 ### What is a Bean ? 
 

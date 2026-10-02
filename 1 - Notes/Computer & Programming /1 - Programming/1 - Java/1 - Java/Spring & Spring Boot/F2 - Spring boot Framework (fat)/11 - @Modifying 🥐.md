@@ -60,4 +60,4 @@ public interface UserRepository extends CrudRepository<User, Long> {
 
 
 
-##### Tags : [[0 - Spring Framework]]
+##### Tags : [[Spring Framework]]

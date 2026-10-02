@@ -197,4 +197,4 @@ public class GameConfig {
 - Use `@Bean` for explicit control over bean creation, especially for complex initialization or third-party objects, and ensure the enclosing class is annotated with `@Configuration` for proper Spring processing.
 
 
-##### *Tags : [[0 - Spring Framework]]
+##### *Tags : [[Spring Framework]]

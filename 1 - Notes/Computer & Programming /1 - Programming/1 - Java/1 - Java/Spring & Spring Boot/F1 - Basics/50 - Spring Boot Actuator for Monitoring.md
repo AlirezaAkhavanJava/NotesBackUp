@@ -624,4 +624,4 @@ Use a browser or cURL to access Actuator endpoints.
 Spring Boot Actuator provides essential tools for monitoring application health and performance through endpoints like `/actuator/health` and `/actuator/metrics`. By customizing health checks and integrating with Prometheus, you can gain deep insights into your application’s behavior. The Todo application demonstrates these capabilities, and advanced features like custom metrics and security enhance production readiness. Explore the Actuator and Prometheus documentation for further customization and monitoring strategies.
 
 
-[[0 - Spring Framework]]
+[[Spring Framework]]

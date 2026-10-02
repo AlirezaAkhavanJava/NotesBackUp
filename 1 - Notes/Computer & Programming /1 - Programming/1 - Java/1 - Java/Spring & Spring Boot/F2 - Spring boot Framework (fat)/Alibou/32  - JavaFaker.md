@@ -118,4 +118,4 @@ new Faker(new Locale("zh", "CN")); // Chinese
 **Use `net.datafaker:datafaker`** (the modern maintained fork) instead of the older `com.github.javafaker:javafaker` which is no longer actively developed.
 
 That's the quick-start guide to **JavaFaker**!
-###### Tags : [[0 - Spring Framework]]
+###### Tags : [[Spring Framework]]

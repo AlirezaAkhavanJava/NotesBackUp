@@ -47,4 +47,4 @@
 Use **HTTP** for traditional web requests.  
 Use **WebSocket** when you need **real-time, two-way communication** with low latency.
 
-[[Read Projects]]
+[[Real Projects]]

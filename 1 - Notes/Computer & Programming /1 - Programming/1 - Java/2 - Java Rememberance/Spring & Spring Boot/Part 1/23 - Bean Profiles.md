@@ -117,5 +117,5 @@ If you define beans only under `@Profile("dev")` and `@Profile("prod")`, but for
 
 
 [[Java]]
-[[0 - Spring Framework]]
+[[Spring Framework]]
 [[0 - Spring + Spring Boot]]

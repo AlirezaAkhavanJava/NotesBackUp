@@ -44,4 +44,4 @@ public class Person {
 💡 **Key point:** `@Embeddable` classes **cannot have their own primary key**. They exist only as part of an entity.
 
 
-###### [[0 - Spring Framework]]
+###### [[Spring Framework]]

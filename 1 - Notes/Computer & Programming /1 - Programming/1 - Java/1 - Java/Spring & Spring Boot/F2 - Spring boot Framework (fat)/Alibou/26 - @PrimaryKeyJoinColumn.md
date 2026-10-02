@@ -74,4 +74,4 @@ major
 
 Hibernate didn’t invent this to annoy you. It just looks that way.
 
-##### Tags : [[0 - Spring Framework]]
+##### Tags : [[Spring Framework]]

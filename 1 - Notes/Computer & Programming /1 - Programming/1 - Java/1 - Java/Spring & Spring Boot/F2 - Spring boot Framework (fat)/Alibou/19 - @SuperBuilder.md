@@ -178,4 +178,4 @@ Works across inheritance. This alone justifies `@SuperBuilder`.
 
 That’s it. Anything else you’ve heard was someone learning this the hard way.
 
-###### Tags : [[0 - Spring Framework]]
+###### Tags : [[Spring Framework]]

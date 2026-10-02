@@ -114,6 +114,6 @@ Both are examples of the broader design principle Spring is built around: **sepa
 
 
 [[0 - Spring + Spring Boot]]
-[[0 - Spring Framework]]
+[[Spring Framework]]
 [[Java]]
 

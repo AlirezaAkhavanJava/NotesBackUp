@@ -1,6 +1,6 @@
 **Date**: 2025-08-24  
 **Course**: Java Language Fundamentals  
-[[0 - Spring Framework]]
+[[Spring Framework]]
 
 ## Introduction
 

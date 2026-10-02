@@ -286,4 +286,4 @@ username
 
 Hibernate gives you options. None are perfect. Databases don’t understand inheritance and never will.
 
-###### Tags : [[0 - Spring Framework]]
+###### Tags : [[Spring Framework]]

@@ -374,4 +374,4 @@ Optional<User> findByIdWithOrders(Long id);
 The key to avoiding `LazyInitializationException` is understanding transaction boundaries and fetching strategies. Always fetch the data you need within the same transaction boundary where you access it.
 
 
-#### Tags : [[0 - Spring Framework]]
+#### Tags : [[Spring Framework]]

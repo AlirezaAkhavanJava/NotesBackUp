@@ -104,4 +104,4 @@ public class Students {
     
 - Gives more control over ID generation than `IDENTITY`.
 
-##### Tags : [[0 - Spring Framework]]
+##### Tags : [[Spring Framework]]

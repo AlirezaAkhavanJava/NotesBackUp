@@ -388,4 +388,4 @@ class UserServiceTest {
 
 Pageable makes it easy to implement efficient, scalable pagination in Spring Data JPA applications while maintaining clean, readable code.
 
-#### Tags : [[0 - Spring Framework]]
+#### Tags : [[Spring Framework]]

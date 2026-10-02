@@ -469,5 +469,5 @@ You now have the full stack: `@RestController` + `@RequestMapping` for routing, 
 
 
 [[Java]]
-[[0 - Spring Framework]]
+[[Spring Framework]]
 [[32 - Exception]]

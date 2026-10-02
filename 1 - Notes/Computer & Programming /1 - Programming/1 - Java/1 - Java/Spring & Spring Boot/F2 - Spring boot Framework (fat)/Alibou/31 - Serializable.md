@@ -150,4 +150,4 @@ If your ID changes, your entity’s identity changes. That’s illegal in JPA la
 
 It’s annoying. It’s mandatory. It saves you from invisible bugs later.
 
-###### Tags : [[0 - Spring Framework]]
+###### Tags : [[Spring Framework]]

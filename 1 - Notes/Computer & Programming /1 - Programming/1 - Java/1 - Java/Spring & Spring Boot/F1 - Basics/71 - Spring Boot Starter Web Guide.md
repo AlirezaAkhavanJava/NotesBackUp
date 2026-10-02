@@ -162,4 +162,4 @@ This guide provides a complete path from beginner to advanced usage of Spring Bo
 
 
 
-##### *Tags : [[0 - Spring Framework]]
+##### *Tags : [[Spring Framework]]

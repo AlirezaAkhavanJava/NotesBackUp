@@ -384,4 +384,4 @@ A colleague calls `userRepository.findById(1L).get().toString()` in a log statem
 
 [[Java]]
 [[0 - Spring + Spring Boot]]
-[[0 - Spring Framework]]
+[[Spring Framework]]

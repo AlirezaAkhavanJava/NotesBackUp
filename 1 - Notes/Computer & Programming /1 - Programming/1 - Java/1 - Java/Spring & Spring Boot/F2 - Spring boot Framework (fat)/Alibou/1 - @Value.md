@@ -179,4 +179,4 @@ public class InfoService {
 |Resource|`@Value("classpath:file.txt")`|
 
 
-###### Tags : [[0 - Spring Framework]]
+###### Tags : [[Spring Framework]]

@@ -466,4 +466,4 @@ Remember that reactive programming isn't always the right choice - evaluate your
 - [Reactive Streams Specification](https://www.reactive-streams.org/)
 - [ReactiveX Documentation](http://reactivex.io/)
 
-[[0 - Spring Framework]]
+[[Spring Framework]]

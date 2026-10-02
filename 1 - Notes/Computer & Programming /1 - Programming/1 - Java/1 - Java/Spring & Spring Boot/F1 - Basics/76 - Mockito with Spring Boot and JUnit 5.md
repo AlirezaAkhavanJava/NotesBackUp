@@ -701,4 +701,4 @@ class UserControllerIntegrationTest {
 
 You’ve mastered testing Spring Boot apps with Mockito and JUnit 5, from basic service tests to advanced controller and exception handling. Practice by expanding the user API with more endpoints and tests. This combination ensures fast, reliable, and maintainable tests!
 
-### Tags : [[0 - Spring Framework]]
+### Tags : [[Spring Framework]]

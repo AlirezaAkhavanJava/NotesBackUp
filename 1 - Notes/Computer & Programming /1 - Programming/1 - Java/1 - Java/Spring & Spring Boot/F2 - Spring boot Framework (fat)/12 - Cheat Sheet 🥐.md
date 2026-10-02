@@ -59,4 +59,4 @@ public interface UserRepository extends JpaRepository<User, Long> {
 - JPQL is **entity-focused**, SQL (`nativeQuery = true`) is **table-focused**.
     
 
-##### Tags  : [[0 - Spring Framework]]
+##### Tags  : [[Spring Framework]]

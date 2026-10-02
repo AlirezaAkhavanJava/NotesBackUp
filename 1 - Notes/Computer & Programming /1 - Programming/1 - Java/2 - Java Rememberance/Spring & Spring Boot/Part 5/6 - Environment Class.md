@@ -164,4 +164,4 @@ public class ReportService {
 **Best practice:** prefer `@ConfigurationProperties` over injecting `Environment` everywhere — it's type-safe, validated (add `@Validated` + JSR-303 annotations), and testable. Use the raw `Environment` only when you genuinely need dynamic or unknown-at-compile-time keys.
 
 
-[[0 - Spring Framework]]
+[[Spring Framework]]

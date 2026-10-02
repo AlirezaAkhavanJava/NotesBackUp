@@ -273,6 +273,6 @@ MyBatis Mapper
 - The DTO Mapper should not contain business logic or database calls.
 
 [[Java]]
-[[0 - Spring Framework]]
+[[Spring Framework]]
 [[9 - Mapper]]
 [[65 - Mapper]]

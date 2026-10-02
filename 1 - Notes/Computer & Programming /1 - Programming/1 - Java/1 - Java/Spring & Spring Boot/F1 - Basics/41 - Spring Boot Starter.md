@@ -2,7 +2,7 @@
 Date : 2025-08-24
 Concept : Spring boot starter and components
 Course : [Tulesko](https://www.youtube.com/watch?v=-Fe0zk-F4OA&t=29s)
-Tags : [[0 - Spring Framework]]
+Tags : [[Spring Framework]]
 
 ### Ways to Create a Spring Container
 

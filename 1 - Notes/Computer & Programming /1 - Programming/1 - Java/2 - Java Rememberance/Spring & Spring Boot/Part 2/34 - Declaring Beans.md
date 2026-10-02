@@ -416,5 +416,5 @@ public class MetricsConfig {}
 Every declaration style ultimately produces a `BeanDefinition`. The differences are about **when** and **how** that definition is registered, and what conditions apply. Mastering beans means understanding the container’s lifecycle, the role of `BeanFactoryPostProcessor` and `BeanPostProcessor`, and the trade-offs between explicit Java config, annotation scanning, and programmatic registration. With this mental model, you can debug bean creation issues, write robust auto-configurations, and design flexible Spring applications.
 
 
-[[0 - Spring Framework]]
+[[Spring Framework]]
 [[Java]]

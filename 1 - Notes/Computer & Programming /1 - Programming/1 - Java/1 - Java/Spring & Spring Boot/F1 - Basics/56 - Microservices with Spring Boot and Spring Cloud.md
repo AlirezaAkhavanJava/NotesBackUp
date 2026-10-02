@@ -955,4 +955,4 @@ Run each service in a separate terminal:
 Spring Boot and Spring Cloud simplify microservices development with tools like Config Server and Eureka. The Todo application is split into Todo Service and User Service, using centralized configuration and service discovery. REST communication enables loose coupling, while advanced features like circuit breakers enhance resilience. Explore Spring Cloud’s additional tools (e.g., Gateway, Sleuth) for production-ready microservices.
 
 
-[[0 - Spring Framework]]
+[[Spring Framework]]

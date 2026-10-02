@@ -258,4 +258,4 @@ Following these patterns keeps your persistence layer clean, testable, and perfo
 
 
 [[Java]]
-[[0 - Spring Framework]]
+[[Spring Framework]]

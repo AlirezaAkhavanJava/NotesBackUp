@@ -267,4 +267,4 @@ Not something to worry about on a learning project, but worth recognizing when y
 
 [[Java]]
 [[Networking]]
-[[0 - Spring Framework]]
+[[Spring Framework]]

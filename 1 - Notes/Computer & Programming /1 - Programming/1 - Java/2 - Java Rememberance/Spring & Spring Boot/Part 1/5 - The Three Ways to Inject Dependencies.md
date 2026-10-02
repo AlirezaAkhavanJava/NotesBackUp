@@ -384,7 +384,7 @@ Every one of these "magic" Spring Boot features reduces to the same handful of i
 
 
 [[0 - Spring + Spring Boot]]
-[[0 - Spring Framework]]
+[[Spring Framework]]
 [[Java]]
 [[11 - IoC & DI 🍩]]
 [[12 - DI & AutoWired 🍩]]

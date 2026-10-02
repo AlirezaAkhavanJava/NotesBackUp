@@ -74,4 +74,4 @@ BeanFactory is a lightweight, basic IoC container with lazy initialization, suit
 
 
 
-##### *Tags : [[0 - Spring Framework]]
+##### *Tags : [[Spring Framework]]

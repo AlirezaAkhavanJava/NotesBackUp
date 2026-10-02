@@ -320,4 +320,4 @@ curl -X POST http://localhost:8080/api/users -H "Content-Type: application/json"
 ### Summary
 This guide demonstrates how to create a basic REST API in Spring Boot with CRUD operations for a `User` resource. You can extend it by adding more features like validation, security, or advanced error handling based on your needs. For further details, refer to the [Spring Boot documentation](https://spring.io/projects/spring-boot) or explore Spring Data JPA for more complex database operations.
 
-[[0 - Spring Framework]]
+[[Spring Framework]]

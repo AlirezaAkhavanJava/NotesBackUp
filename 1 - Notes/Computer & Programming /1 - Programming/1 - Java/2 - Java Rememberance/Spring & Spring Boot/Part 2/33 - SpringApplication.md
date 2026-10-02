@@ -1327,6 +1327,6 @@ That's the foundation for understanding why Spring Boot can give you a fully fun
 2. **Suppose you add PostgreSQL + Spring Data JPA dependencies but don't manually define a `DataSource`. Explain the chain from the dependency being added to Spring Boot deciding whether to create a `DataSource`, including the role of conditional auto-configuration.**
 
 
-[[0 - Spring Framework]]
+[[Spring Framework]]
 [[Java]]
 [[A - @SpringBootApplication]]

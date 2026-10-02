@@ -674,4 +674,4 @@ INSERT INTO post_tag (post_id, tag_id) VALUES (1, 1);
 Advanced Spring Data JPA and Hibernate features like relationships, transactions, and custom queries enable robust data management for complex applications. The Blog application demonstrates `@OneToMany` and `@ManyToMany` relationships, transactional saves, and dynamic queries with JPQL and Specifications. By leveraging Hibernate’s ORM and Spring Data’s abstractions, you can build scalable applications with minimal boilerplate. Explore the Spring Data JPA and Hibernate documentation for further details on performance tuning and advanced querying.
 
 
-[[0 - Spring Framework]]
+[[Spring Framework]]

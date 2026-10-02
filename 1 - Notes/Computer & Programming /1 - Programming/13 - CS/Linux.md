@@ -41,4 +41,4 @@ The Linux command line is a text-based interface used to interact with the opera
 - `shutdown -h now` --> Shuts down the system immediately.
 
 ```
-[[Computer & Programming & Networking & CyberSecurity]]
+[[Computer & Programming]]

@@ -159,4 +159,4 @@ class GamersRepositoryTest { ... }
 > *— Future You, November 10, 2025*
 
 
-##### Tags : [[0 - Spring Framework]]
+##### Tags : [[Spring Framework]]

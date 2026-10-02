@@ -242,4 +242,4 @@ When designing a new endpoint, ask in order:
 
 
 [[Java]]
-[[0 - Spring Framework]]
+[[Spring Framework]]

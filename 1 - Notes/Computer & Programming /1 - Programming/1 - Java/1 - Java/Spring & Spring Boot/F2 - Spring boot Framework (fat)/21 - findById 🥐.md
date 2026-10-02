@@ -43,4 +43,4 @@ Gamers gamer = gamersRepository.findById(5L)
 
 
 
-##### Tags : [[0 - Spring Framework]]
+##### Tags : [[Spring Framework]]

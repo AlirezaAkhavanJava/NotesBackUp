@@ -32,4 +32,4 @@ Try opening one and typing `whoami` — it’ll tell you your username!
 
 These days, when we say "terminal", we really mean "terminal _emulator_". A terminal emulator is a program that emulates a physical terminal. It's a program that lets you type commands into a window on your computer.
 
-##### Tags : [[2 - Tags/Linux|Linux]]
+##### Tags : [[2 - Tags/Pro/CS/Linux|Linux]]

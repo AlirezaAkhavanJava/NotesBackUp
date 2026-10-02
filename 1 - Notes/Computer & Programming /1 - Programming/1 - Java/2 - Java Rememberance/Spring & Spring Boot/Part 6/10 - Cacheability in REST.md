@@ -358,4 +358,4 @@ Three layers of protection: freshness (no request), validation (tiny request), a
 - **`@Cacheable` is server-side method caching — a different thing.** Use both for maximum effect.
 
 
-[[0 - Spring Framework]]
+[[Spring Framework]]

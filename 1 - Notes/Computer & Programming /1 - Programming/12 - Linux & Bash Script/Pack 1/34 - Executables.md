@@ -180,4 +180,4 @@ So, in a nutshell: **An executable is any file with the 'execute' permission set
 
 
 
-##### Tags : [[2 - Tags/Linux|Linux]]
+##### Tags : [[2 - Tags/Pro/CS/Linux|Linux]]

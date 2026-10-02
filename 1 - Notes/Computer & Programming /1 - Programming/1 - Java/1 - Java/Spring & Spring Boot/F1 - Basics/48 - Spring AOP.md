@@ -673,4 +673,4 @@ Spring creates a proxy for `TodoService` to intercept calls and apply the `Loggi
 Spring AOP enables modularizing cross-cutting concerns like logging, exception handling, and transaction management. Starting with basic `@Before` and `@AfterReturning` advice, you can progress to advanced features like `@Around`, custom pointcuts, and annotations. The Todo application demonstrates logging method execution and profiling with AOP. Explore the Spring AOP documentation and experiment with custom aspects to master this powerful paradigm. 
 
 
-[[0 - Spring Framework]]
+[[Spring Framework]]

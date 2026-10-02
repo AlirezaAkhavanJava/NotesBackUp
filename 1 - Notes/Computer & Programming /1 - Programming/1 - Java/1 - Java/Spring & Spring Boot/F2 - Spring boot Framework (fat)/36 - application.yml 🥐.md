@@ -228,4 +228,4 @@ Result: `"Welcome to UltimateArcade!"`
 
 
 
-##### Tags : [[0 - Spring Framework]]
+##### Tags : [[Spring Framework]]

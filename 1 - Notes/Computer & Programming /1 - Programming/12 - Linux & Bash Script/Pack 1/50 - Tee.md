@@ -68,4 +68,4 @@ make 2>&1 | tee build.log
 Captures both stdout and stderr to a log file **while showing progress live**.
 
 
-##### Tags : [[2 - Tags/Linux|Linux]]
+##### Tags : [[2 - Tags/Pro/CS/Linux|Linux]]

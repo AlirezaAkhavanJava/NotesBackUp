@@ -1,7 +1,7 @@
 
 **Date**: 2025-08-24  
 **Course**: Java Language Fundamentals  
-**Tags**:  [[0 - Spring Framework]]
+**Tags**:  [[Spring Framework]]
 
 ## Introduction
 

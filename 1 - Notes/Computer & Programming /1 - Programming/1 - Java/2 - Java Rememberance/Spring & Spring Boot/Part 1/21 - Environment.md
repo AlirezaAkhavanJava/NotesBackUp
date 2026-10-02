@@ -110,6 +110,6 @@ Roughly, from highest to lowest priority:
 - Inject `Environment` only when you need to check things dynamically at runtime; for simple config values, prefer `@Value("${my.property}")` or `@ConfigurationProperties`.
 
 
-[[0 - Spring Framework]]
+[[Spring Framework]]
 [[0 - Spring + Spring Boot]]
 [[Java]]

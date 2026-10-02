@@ -124,4 +124,4 @@ Open your **terminal** → type `python` → hit Enter → you're in a **REPL**!
 
 So when you changed your shell to Zsh, your terminal **stays the same**, but now it will start **Zsh instead of Bash** when you open it.
 
-##### Tags : [[2 - Tags/Linux|Linux]]
+##### Tags : [[2 - Tags/Pro/CS/Linux|Linux]]

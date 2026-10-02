@@ -196,4 +196,4 @@ For the query above, a sample response might be:
 For more details on xAI's API services, visit https://x.ai/api.
 
 
-##### *Tags : [[0 - Spring Framework]]
+##### *Tags : [[Spring Framework]]

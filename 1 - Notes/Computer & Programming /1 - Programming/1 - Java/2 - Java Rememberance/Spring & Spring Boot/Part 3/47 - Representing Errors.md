@@ -293,5 +293,5 @@ One class. Every error path in your entire API — not-found, conflict, validati
 
 
 [[Java]]
-[[0 - Spring Framework]]
+[[Spring Framework]]
 [[1 - HTTP]]

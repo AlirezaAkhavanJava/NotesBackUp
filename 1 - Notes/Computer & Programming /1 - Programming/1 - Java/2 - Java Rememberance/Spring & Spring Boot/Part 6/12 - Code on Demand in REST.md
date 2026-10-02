@@ -293,4 +293,4 @@ You've now covered all six REST constraints. The full set:
 
 
 
-[[0 - Spring Framework]]
+[[Spring Framework]]

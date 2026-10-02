@@ -407,4 +407,4 @@ Email: ethan@example.com
 
 ✅ That’s the **end-to-end flow with an object** bound to a Thymeleaf form.
 
-##### Tags : [[0 - Spring Framework]]
+##### Tags : [[Spring Framework]]

@@ -44,4 +44,4 @@ It’s basically the framework saying: _“If you do things my way, I’ll take 
 2. **Consistency** → Standardized naming and structure across projects.
 3. **Flexibility** → You can still override defaults if needed.
 
-[[0 - Spring Framework]]
+[[Spring Framework]]

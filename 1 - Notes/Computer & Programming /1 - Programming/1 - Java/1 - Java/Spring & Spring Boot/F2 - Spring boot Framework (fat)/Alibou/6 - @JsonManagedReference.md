@@ -199,4 +199,4 @@ If your brain is in _potato mode_, remember:
 
 
 
-###### Tags [[0 - Spring Framework]]
+###### Tags [[Spring Framework]]

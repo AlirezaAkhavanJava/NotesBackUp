@@ -125,4 +125,4 @@ Queues are often implemented as linked lists or priority heaps for efficiency.
 This framework ensures fair resource allocation, responsiveness, and throughput. For deeper dives, refer to OS textbooks like "Operating System Concepts" by Silberschatz.
 
 
-[[Computer & Programming & Networking & CyberSecurity]]
+[[Computer & Programming]]

@@ -144,4 +144,4 @@ This turns two many-to-many into two one-to-many relationships.
 
 This approach works seamlessly in Spring Boot with Spring Data JPA and Hibernate.
 
-###### Tags : [[0 - Spring Framework]]
+###### Tags : [[Spring Framework]]

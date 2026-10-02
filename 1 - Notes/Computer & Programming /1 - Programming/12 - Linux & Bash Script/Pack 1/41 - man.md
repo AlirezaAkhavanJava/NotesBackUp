@@ -52,4 +52,4 @@ man -k copy # searches man pages for “copy”
 
 
 
-##### Tags : [[2 - Tags/Linux|Linux]]
+##### Tags : [[2 - Tags/Pro/CS/Linux|Linux]]

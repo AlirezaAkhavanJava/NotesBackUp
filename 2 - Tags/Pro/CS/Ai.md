@@ -134,3 +134,7 @@ The developer remains responsible for:
     
 
 **AI can accelerate the work. The developer provides the engineering judgment.**
+
+
+
+[[Computer & Programming]]

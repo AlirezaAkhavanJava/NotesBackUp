@@ -750,4 +750,4 @@ spring.batch.jdbc.table-prefix=BATCH_
 
 This comprehensive guide covers Spring Batch from basic concepts to advanced features. Spring Batch provides a robust framework for building enterprise-grade batch processing applications with features for error handling, scalability, and monitoring.
 
-[[0 - Spring Framework]]
+[[Spring Framework]]

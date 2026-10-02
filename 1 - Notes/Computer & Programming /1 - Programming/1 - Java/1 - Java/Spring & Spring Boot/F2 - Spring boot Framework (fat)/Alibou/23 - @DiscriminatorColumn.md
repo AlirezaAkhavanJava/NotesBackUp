@@ -103,4 +103,4 @@ public class Manager extends Employee {
 
 Let me know if you want examples for JOINED strategy or how to handle it with Spring Data JPA repositories!
 
-###### Tags : [[0 - Spring Framework]]
+###### Tags : [[Spring Framework]]

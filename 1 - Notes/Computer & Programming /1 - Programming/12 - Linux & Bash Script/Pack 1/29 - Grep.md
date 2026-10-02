@@ -185,4 +185,4 @@ history | grep "ssh"
 ### Summary
 
 `grep` is an indispensable tool for any Linux user. Start with the basic options like `-i`, `-n`, and `-v`, and then gradually incorporate recursion (`-r`) and regular expressions to unlock its full potential for searching and filtering text.
-##### Tags : [[2 - Tags/Linux|Linux]]
+##### Tags : [[2 - Tags/Pro/CS/Linux|Linux]]

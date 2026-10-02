@@ -100,4 +100,4 @@ Make sure you have:
 This includes Mockito and Spring Test.
 
 
-##### Tags : [[0 - Spring Framework]]
+##### Tags : [[Spring Framework]]

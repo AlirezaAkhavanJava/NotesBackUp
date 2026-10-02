@@ -1,4 +1,4 @@
-# Spring Framework: Basics to Advanced
+
 
 ## What is the Spring Framework?
 
@@ -412,4 +412,10 @@ public class DemoApplication {
 The Spring Framework provides a powerful and flexible platform for building Java applications. Its core principles—IoC, DI, and AOP—enable modular, testable, and maintainable code. From basic dependency injection to advanced microservices with Spring Cloud, Spring caters to a wide range of use cases. Start with the official Spring documentation and _Spring in Action_ to dive deeper.
 
 
-[[Java]][[0 - Back-End]]
+[[Java]]
+[[Hibernate & JDBC]]
+[[Docker]]
+[[Maven]]
+[[Gradle]]
+[[PostgreSQL]]
+[[Networking]]

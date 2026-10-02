@@ -331,4 +331,4 @@ If you have `@OneToMany` and `@ManyToOne`, and you set only one side, the in-mem
 The entity is the **foundation** of your persistence layer. Every decision you make here propagates to the repository, service, DTO, and controller. Get the entity right, and the rest of the application falls into place. Get it wrong, and you'll fight the framework at every layer.
 
 
-[[0 - Spring Framework]]
+[[Spring Framework]]

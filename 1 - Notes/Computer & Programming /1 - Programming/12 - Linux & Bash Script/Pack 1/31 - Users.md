@@ -410,4 +410,4 @@ If you're like most people these days, you're the only user on your machine. It 
 
 The `sudo` keyword lets you run a command as a "superuser". It's short for ["superuser do"](https://www.linux.com/training-tutorials/linux-101-introduction-sudo/). To use it, you'll need a password with superuser privileges, which you should already have if you're the only user of your machine.
 
-##### Tags : [[2 - Tags/Linux|Linux]]
+##### Tags : [[2 - Tags/Pro/CS/Linux|Linux]]

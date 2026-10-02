@@ -460,4 +460,4 @@ public class MyServiceTest {
 
 This guide provides a comprehensive overview of SLF4J, from basic setup and usage to advanced features like markers, MDC, and asynchronous logging. It includes detailed Logback configuration, performance tips, testing strategies, and best practices for effective logging in Java and Spring Boot applications.
 
-##### _Tags: [[0 - Spring Framework]]
+##### _Tags: [[Spring Framework]]

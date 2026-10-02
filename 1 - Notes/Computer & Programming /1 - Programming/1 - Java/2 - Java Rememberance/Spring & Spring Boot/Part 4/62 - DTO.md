@@ -629,4 +629,4 @@ That's the architectural reason behind the pattern.
 
 
 [[Java]]
-[[0 - Spring Framework]]
+[[Spring Framework]]

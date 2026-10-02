@@ -202,4 +202,4 @@ That’s when you need `@Entity + @Inheritance`.
 
 
 
-###### Tags : [[0 - Spring Framework]]
+###### Tags : [[Spring Framework]]

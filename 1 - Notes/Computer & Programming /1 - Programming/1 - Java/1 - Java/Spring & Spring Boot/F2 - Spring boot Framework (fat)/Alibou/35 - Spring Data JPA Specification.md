@@ -145,4 +145,4 @@ So **you write conditions in Java code**, not strings, and Spring Data does the 
 If your application has **search or filter features** where users can combine many conditions — use **Specification**.  
 It’s one of the cleanest, most modern ways to handle dynamic queries in Spring Data JPA today.
 
-###### Tags : [[0 - Spring Framework]]
+###### Tags : [[Spring Framework]]

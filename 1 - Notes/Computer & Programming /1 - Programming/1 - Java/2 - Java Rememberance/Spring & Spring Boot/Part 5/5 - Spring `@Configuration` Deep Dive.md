@@ -292,4 +292,4 @@ This is the point from your earlier question: nothing here becomes a bean except
 |Turn on JPA repository scanning|`@EnableJpaRepositories`|
 
 
-[[0 - Spring Framework]]
+[[Spring Framework]]

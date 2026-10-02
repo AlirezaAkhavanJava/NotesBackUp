@@ -253,5 +253,5 @@ When you hit a mysterious runtime error that smells like a version conflict:
 
 
 [[Java]]
-[[1 - Maven ✧]]
-[[0 - Spring Framework]]
+[[Maven]]
+[[Spring Framework]]

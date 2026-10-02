@@ -225,4 +225,4 @@ SPRING_PROFILES_ACTIVE=prod
 
 
 
-[[0 - Spring Framework]]
+[[Spring Framework]]

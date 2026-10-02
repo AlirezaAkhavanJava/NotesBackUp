@@ -108,4 +108,4 @@ Create: `RUN_JAR.md`
 **Done!**  
 You now know how to run **any** Spring Boot JAR file.
 
-##### Tags : [[0 - Spring Framework]]
+##### Tags : [[Spring Framework]]

@@ -298,6 +298,6 @@ Now `./mvnw clean verify` — compiles, tests, checks formatting, generates a co
 
 
 
-[[1 - Maven ✧]]
+[[Maven]]
 [[Java]]
-[[0 - Spring Framework]]
+[[Spring Framework]]

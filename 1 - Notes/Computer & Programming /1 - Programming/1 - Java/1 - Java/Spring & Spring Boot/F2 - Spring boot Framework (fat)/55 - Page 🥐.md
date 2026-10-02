@@ -156,4 +156,4 @@ Page<User> findActiveUsers(Pageable pageable);
 [https://docs.spring.io/spring-data/jpa/reference/repositories/paging-and-sorting.html](https://docs.spring.io/spring-data/jpa/reference/repositories/paging-and-sorting.html)
 
 Let me know if you want a **working GitHub example** or **DTO mapping with Page**!
-#### Tags : [[0 - Spring Framework]]
+#### Tags : [[Spring Framework]]

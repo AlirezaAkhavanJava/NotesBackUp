@@ -57,4 +57,4 @@ public class Truck extends Vehicle {
 
 Spring Data JPA repositories work seamlessly with these hierarchies, allowing polymorphic queries on the root entity repository (e.g., finding all `Vehicle` instances returns `Car` and `Truck` as well).
 
-##### Tags : [[0 - Spring Framework]]
+##### Tags : [[Spring Framework]]

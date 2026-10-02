@@ -496,4 +496,4 @@ That distinction is the key to understanding JPA identity rather than just memor
 
 
 [[Java]]
-[[0 - Spring Framework]]
+[[Spring Framework]]

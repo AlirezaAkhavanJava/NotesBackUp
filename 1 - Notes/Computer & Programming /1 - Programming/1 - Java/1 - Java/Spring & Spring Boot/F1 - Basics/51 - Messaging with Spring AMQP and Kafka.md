@@ -695,4 +695,4 @@ public class TodoEventListener {
 
 Spring AMQP and Spring Kafka enable asynchronous messaging for decoupled, event-driven systems. The Todo application demonstrates sending `Todo` creation events to a RabbitMQ queue and processing them asynchronously with `@RabbitListener`. Spring AMQP simplifies RabbitMQ integration, while Spring Kafka offers similar functionality for Kafka. Explore advanced features like error handling and retries, and refer to the Spring AMQP and Kafka documentation for deeper insights.
 
-[[0 - Spring Framework]]
+[[Spring Framework]]

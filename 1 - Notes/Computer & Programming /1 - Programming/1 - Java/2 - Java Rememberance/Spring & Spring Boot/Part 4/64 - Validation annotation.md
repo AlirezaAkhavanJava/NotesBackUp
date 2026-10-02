@@ -845,4 +845,4 @@ Those three are complementary. You don't replace one with another.
 
 
 [[Java]]
-[[0 - Spring Framework]]
+[[Spring Framework]]

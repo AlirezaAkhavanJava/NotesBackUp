@@ -1,5 +1,5 @@
 **Date**: 2025-08-24  
-**Tags**: [[0 - Spring Framework]]
+**Tags**: [[Spring Framework]]
 
 ## What is Apache Tomcat?
 

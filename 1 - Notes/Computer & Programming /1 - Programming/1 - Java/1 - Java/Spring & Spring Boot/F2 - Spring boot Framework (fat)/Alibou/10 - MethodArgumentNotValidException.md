@@ -168,4 +168,4 @@ Then return a **list of `ApiError`** instead of a map. Makes your API cleaner.
 
 
 
-###### Tags : [[0 - Spring Framework]]
+###### Tags : [[Spring Framework]]

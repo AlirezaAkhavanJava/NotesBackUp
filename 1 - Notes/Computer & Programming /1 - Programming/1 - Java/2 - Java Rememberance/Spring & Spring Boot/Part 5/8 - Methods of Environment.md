@@ -48,4 +48,4 @@ While you typically inject the `Environment` interface, the actual object in the
 While these methods give you full programmatic control, it's generally recommended to rely on higher-level abstractions like `@Value` or `@ConfigurationProperties` for reading properties. Directly interacting with the `Environment` is most useful when you need to perform dynamic lookups or conditionally manipulate property sources during application startup.
 
 
-[[0 - Spring Framework]]
+[[Spring Framework]]

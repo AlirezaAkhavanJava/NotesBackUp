@@ -400,4 +400,4 @@ That's the core idea.
 
 
 [[Java]]
-[[0 - Spring Framework]]
+[[Spring Framework]]

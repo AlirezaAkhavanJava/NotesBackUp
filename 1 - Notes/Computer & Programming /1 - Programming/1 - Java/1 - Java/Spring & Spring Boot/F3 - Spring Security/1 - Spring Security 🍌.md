@@ -86,4 +86,4 @@ In short:
 **Spring Security = the industry-standard way to add login, roles, permissions, and protection against attacks to any Spring application.**
 
 
-##### Tags : [[0 - Spring Framework]]
+##### Tags : [[Spring Framework]]

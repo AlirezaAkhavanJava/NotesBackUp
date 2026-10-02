@@ -208,6 +208,6 @@ Every piece here — `@RestController`, `@Service`, `@Repository` — is a Sprin
 
 
 [[0 - Spring + Spring Boot]]
-[[0 - Spring Framework]]
+[[Spring Framework]]
 [[Java]]
 

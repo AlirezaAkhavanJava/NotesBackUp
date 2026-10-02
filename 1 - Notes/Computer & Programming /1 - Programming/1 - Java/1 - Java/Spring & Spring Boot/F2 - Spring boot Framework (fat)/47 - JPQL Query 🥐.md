@@ -232,4 +232,4 @@ Hibernate handles the translation.
 
 
 
-###### [[0 - Spring Framework]]
+###### [[Spring Framework]]

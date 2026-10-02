@@ -1,7 +1,7 @@
 Date : {{Date}}
 Concept : Spring with no boot 
 Course : [Link](https://www.youtube.com/watch?v=-Fe0zk-F4OA&t=2994s)
-Tags : [[0 - Spring Framework]]
+Tags : [[Spring Framework]]
 
 
 

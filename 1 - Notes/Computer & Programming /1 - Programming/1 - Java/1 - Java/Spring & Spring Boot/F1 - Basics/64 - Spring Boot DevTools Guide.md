@@ -125,4 +125,4 @@ This guide covers everything from setting up Spring Boot DevTools to using autom
 
 
 
-##### *Tags : [[0 - Spring Framework]]
+##### *Tags : [[Spring Framework]]

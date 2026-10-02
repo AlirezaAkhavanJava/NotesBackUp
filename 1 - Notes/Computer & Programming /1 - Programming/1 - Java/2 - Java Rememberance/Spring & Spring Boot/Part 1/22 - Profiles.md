@@ -360,5 +360,5 @@ The senior-level discipline here: **use `@Profile` on beans sparingly, for genui
 
 
 [[Java]]
-[[0 - Spring Framework]]
+[[Spring Framework]]
 [[0 - Spring + Spring Boot]]

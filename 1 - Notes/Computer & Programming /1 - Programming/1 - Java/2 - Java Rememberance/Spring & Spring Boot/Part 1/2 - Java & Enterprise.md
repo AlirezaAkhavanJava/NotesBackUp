@@ -36,5 +36,5 @@ Spring Boot is built on top of the **Spring Framework**, and it's designed to el
 
 
 [[0 - Spring + Spring Boot]]
-[[0 - Spring Framework]]
+[[Spring Framework]]
 [[Java]]

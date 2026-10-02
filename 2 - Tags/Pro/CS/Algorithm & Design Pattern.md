@@ -46,3 +46,7 @@
 ---
 
 [[Java]]
+[[Spring Framework]]
+[[Java-Script]]
+[[C]]
+[[Python]]

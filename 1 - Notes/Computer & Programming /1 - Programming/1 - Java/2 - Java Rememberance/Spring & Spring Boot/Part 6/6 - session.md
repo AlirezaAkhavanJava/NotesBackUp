@@ -123,4 +123,4 @@ So:
 And this is why sessions are relevant when learning REST's **stateless constraint**.
 
 
-[[0 - Spring Framework]]
+[[Spring Framework]]

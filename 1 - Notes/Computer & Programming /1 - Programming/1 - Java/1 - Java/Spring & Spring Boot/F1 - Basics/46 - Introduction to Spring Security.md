@@ -552,4 +552,4 @@ Authorization: Basic YWRtaW46YWRtaW5wYXNz
 Spring Security simplifies securing APIs with basic authentication and role-based access control. By configuring `SecurityFilterChain` and `@PreAuthorize`, you can protect endpoints like the Todo API, ensuring only authorized users (e.g., `ROLE_USER`, `ROLE_ADMIN`) access specific operations. Testing with Postman verifies authentication and authorization behavior. Explore advanced features like database-backed authentication and CSRF protection, and refer to the Spring Security documentation for deeper insights.
 
 
-##### Tags :  [[0 - Spring Framework]]
+##### Tags :  [[Spring Framework]]

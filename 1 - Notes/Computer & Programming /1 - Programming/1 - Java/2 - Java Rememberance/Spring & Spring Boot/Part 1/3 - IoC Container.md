@@ -120,7 +120,7 @@ So: **no separate "container memory" exists in hardware terms.** The container i
 Want to see this proven experimentally — e.g., printing `System.identityHashCode()` of a bean to confirm it's a normal heap object, or looking at what a CGLIB proxy class actually looks like?
 
 [[0 - Spring + Spring Boot]]
-[[0 - Spring Framework]]
+[[Spring Framework]]
 [[Java]]
 [[11 - IoC & DI 🍩]]
 [[12 - DI & AutoWired 🍩]]

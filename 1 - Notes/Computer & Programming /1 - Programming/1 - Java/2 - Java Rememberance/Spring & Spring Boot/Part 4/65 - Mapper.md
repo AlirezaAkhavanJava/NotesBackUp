@@ -284,4 +284,4 @@ In short: **a Mapper in Spring Boot is a translation component. A MyBatis Mapper
 
 
 [[Java]]
-[[0 - Spring Framework]]
+[[Spring Framework]]

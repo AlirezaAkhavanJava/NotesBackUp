@@ -143,4 +143,4 @@ chmod +t /shared/directory
 5. **Test permissions** before applying recursively
 
 This covers the essentials of file permissions using `chmod` and `ls -l`!
-##### Tags : [[2 - Tags/Linux|Linux]]
+##### Tags : [[2 - Tags/Pro/CS/Linux|Linux]]

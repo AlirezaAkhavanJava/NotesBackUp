@@ -67,4 +67,4 @@ Here’s how to copy **multiple files at once** with `cp`:
 
 
 
-##### Tags : [[2 - Tags/Linux|Linux]]
+##### Tags : [[2 - Tags/Pro/CS/Linux|Linux]]

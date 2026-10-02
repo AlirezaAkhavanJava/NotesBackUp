@@ -254,4 +254,4 @@ mvn spotless:apply
 
 
 [[Java]]
-[[0 - Spring Framework]]
+[[Spring Framework]]

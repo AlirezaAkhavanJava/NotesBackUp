@@ -63,4 +63,4 @@ If you dig deeper into Spring Boot architecture, you'll hear the term **Domain-D
 
 
 [[Java]]
-[[0 - Spring Framework]]
+[[Spring Framework]]

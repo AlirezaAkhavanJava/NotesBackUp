@@ -374,4 +374,4 @@ If you were half-asleep:
 DTOs = API.  
 Use DTOs to protect entities, avoid recursion, and shape clean data.**
 
-###### Tags : [[0 - Spring Framework]]
+###### Tags : [[Spring Framework]]

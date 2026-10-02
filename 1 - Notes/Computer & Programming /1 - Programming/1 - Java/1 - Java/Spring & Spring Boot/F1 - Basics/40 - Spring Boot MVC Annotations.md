@@ -331,4 +331,4 @@ Organize your project with folders:
 
 ## Tags
 
-[[0 - Spring Framework]]
+[[Spring Framework]]

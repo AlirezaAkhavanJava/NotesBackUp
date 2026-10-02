@@ -274,4 +274,4 @@ For your Spring/JPA projects, **use `EnumType.STRING` by default**. `ORDINAL` is
 
 
 [[Java]]
-[[0 - Spring Framework]]
+[[Spring Framework]]

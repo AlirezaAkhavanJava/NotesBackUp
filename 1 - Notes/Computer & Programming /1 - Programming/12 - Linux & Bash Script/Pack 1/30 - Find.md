@@ -273,4 +273,4 @@ The `find` command is incredibly powerful for:
 
 Start with simple searches and gradually incorporate more complex criteria and actions. The `-exec` option is particularly powerful for automating file management tasks. Always test with `-print` first before using destructive operations like `-delete`!
 
-##### Tags : [[2 - Tags/Linux|Linux]]
+##### Tags : [[2 - Tags/Pro/CS/Linux|Linux]]

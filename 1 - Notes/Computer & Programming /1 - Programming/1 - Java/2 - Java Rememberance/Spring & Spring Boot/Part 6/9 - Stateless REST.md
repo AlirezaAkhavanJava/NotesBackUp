@@ -645,4 +645,4 @@ COMPLETELY FINE
 
 > **REST does not mean "the server has no state"; it means "the server does not remember client conversational state between requests."**
 
-[[0 - Spring Framework]]
+[[Spring Framework]]

@@ -115,4 +115,4 @@ $ sudo bash
 This separation is fundamental to Linux's multi-user design and security model, preventing everyday users from accidentally damaging the system.
 
 
-##### Tags : [[2 - Tags/Linux|Linux]]
+##### Tags : [[2 - Tags/Pro/CS/Linux|Linux]]

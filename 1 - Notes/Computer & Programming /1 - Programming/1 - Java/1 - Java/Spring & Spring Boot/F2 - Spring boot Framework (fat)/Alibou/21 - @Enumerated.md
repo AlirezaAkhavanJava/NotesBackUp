@@ -62,4 +62,4 @@ public class Task {
 ✅ **Tip:** Always prefer `EnumType.STRING` for production apps unless you have a very strong reason to save space with `ORDINAL`.
 
 
-###### Tags : [[0 - Spring Framework]]
+###### Tags : [[Spring Framework]]

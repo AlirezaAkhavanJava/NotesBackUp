@@ -712,4 +712,4 @@ public class TodoApplication {
 Kafka and RabbitMQ are powerful messaging systems for building scalable, event-driven applications. Kafka is ideal for high-throughput streaming, while RabbitMQ excels in reliable task queuing. The practice application demonstrates Spring AMQP with RabbitMQ, sending and processing `Todo` creation events asynchronously. Explore Kafka for streaming use cases and leverage Spring’s abstractions for seamless integration.
 
 
-[[0 - Spring Framework]]
+[[Spring Framework]]

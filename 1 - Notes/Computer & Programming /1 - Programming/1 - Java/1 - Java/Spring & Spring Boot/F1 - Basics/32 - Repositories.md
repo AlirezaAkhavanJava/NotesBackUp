@@ -248,4 +248,4 @@ A well-structured project is key to maintainability. A typical Spring Boot proje
 
 ## Tags
 
-[[0 - Spring Framework]]
+[[Spring Framework]]

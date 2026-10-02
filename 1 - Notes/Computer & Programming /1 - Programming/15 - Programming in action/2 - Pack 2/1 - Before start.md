@@ -217,6 +217,6 @@ This connects directly to your previous question. **Before coding**, decide your
 The analysis phase is not about predicting every problem — it's about **making the irreversible decisions early**. Package structure, Java version, starter selection, and native image viability are all difficult to change later. Jackson 3 migration, test infrastructure, and observability are easier to add incrementally. Spend your analysis time on the irreversible decisions, and let the reversible ones be guided by Spring Boot's defaults.
 
 
-[[0 - Spring Framework]]
+[[Spring Framework]]
 [[Java]]
 [[3 - DataBase 🍂]]

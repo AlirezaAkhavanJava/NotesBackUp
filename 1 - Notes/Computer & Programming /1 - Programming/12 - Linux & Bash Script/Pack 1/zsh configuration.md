@@ -49,4 +49,4 @@ export PROMPT="%n@%m:%d%# "
 
 ---
 
-[[2 - Tags/Linux|Linux]]
+[[2 - Tags/Pro/CS/Linux|Linux]]

@@ -141,4 +141,4 @@ This is the idiomatic way Spring Boot exposes optional features — a meta-annot
 - Prefer it over `@ComponentScan` when you need precision and don't want unintended beans picked up.
 
 [[Java]]
-[[0 - Spring Framework]]
+[[Spring Framework]]

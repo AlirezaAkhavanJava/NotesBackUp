@@ -198,4 +198,4 @@ That's the cleaner architecture to carry forward.
 
 
 [[Java]]
-[[0 - Spring Framework]]
+[[Spring Framework]]

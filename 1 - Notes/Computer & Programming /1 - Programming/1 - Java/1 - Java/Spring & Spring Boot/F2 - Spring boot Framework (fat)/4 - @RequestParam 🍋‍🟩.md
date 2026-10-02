@@ -110,4 +110,4 @@ URL: /products/electronics                   ?sort=price&limit=10
                  category                        sort=price, limit=10
 
 ```
-##### Tags : [[0 - Spring Framework]]
+##### Tags : [[Spring Framework]]

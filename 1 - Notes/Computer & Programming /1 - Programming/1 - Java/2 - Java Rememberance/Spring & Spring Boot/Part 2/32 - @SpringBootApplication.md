@@ -36,5 +36,5 @@ Because `@ComponentScan` scans the current package downward, it's a convention i
 
 
 
-[[0 - Spring Framework]]
+[[Spring Framework]]
 [[Java]]

@@ -32,4 +32,4 @@ Database: blogDB
 
 This structure makes MongoDB ideal for handling unstructured/semi-structured data, scalability, and rapid development in modern applications.
 
-###### Tags : [[1 - MongoDB 🍂]]
+[[MongoDB]]

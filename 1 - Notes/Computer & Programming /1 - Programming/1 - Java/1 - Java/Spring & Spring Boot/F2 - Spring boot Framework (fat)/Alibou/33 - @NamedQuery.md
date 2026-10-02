@@ -238,4 +238,4 @@ Here are the most practical **real-world scenarios** where you **should** use `@
 
 Otherwise, stick with **method name queries** or simple `@Query` annotations on the repository for most CRUD operations.
 
-##### Tags : [[0 - Spring Framework]]
+##### Tags : [[Spring Framework]]

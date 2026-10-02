@@ -196,4 +196,4 @@ HTTP responses include status codes to indicate the outcome of a request. Common
 - **Content Negotiation**: Spring Boot supports JSON, XML, etc., based on `Accept` headers or configuration.
 - **Error Handling**: Use `@ControllerAdvice` to handle exceptions globally and return consistent HTTP error responses.
 
-[[0 - Spring Framework]]
+[[Spring Framework]]

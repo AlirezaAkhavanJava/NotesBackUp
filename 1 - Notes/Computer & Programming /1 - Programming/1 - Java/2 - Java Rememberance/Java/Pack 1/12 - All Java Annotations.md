@@ -528,6 +528,6 @@ No standard annotations; use JUnit's.
 - **Retention rule of thumb:** `SOURCE` for compiler hints, `CLASS` for bytecode tools, `RUNTIME` for reflection-driven frameworks.
 
 [[Java]]
-[[0 - Spring Framework]]
+[[Spring Framework]]
 [[1 - Junit 5 🥭]]
 [[2 - Mokito 🍫]]

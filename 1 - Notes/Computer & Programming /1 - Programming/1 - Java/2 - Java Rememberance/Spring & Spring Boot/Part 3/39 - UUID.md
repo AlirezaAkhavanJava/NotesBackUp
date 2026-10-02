@@ -194,4 +194,4 @@ Not all UUIDs are generated the same way. You'll see this mentioned in docs:
 
 
 [[Java]]
-[[0 - Spring Framework]]
+[[Spring Framework]]

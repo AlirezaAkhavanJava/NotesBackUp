@@ -98,4 +98,4 @@ join table.author_id → author.id
 
 That’s it. No extra magic, no hidden behavior.
 
-###### Tags : [[0 - Spring Framework]]
+###### Tags : [[Spring Framework]]

@@ -1,7 +1,7 @@
 Date: 2025-08-24  
 Concept: Spring Controllers and Their Types  
 Course: Java Language Fundamentals  
-Tags:  [[0 - Spring Framework]]
+Tags:  [[Spring Framework]]
 
 # Terms
 

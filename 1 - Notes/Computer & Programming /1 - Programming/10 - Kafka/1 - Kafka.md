@@ -39,4 +39,4 @@ In summary, Spring Kafka acts as a powerful abstraction layer. It transforms the
 
 
 
-[[0 - Spring Framework]]
+[[Spring Framework]]

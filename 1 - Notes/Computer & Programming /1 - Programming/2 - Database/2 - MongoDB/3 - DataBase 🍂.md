@@ -75,4 +75,4 @@ show dbs
 
 
 
-###### Tags : [[1 - MongoDB 🍂]]
+[[MongoDB]]

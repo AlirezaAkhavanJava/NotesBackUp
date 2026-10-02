@@ -89,4 +89,4 @@ That’s it. Nothing mystical. Just a clean way to avoid mixing your DB models w
 ---
 
 
-###### Tags : [[0 - Spring Framework]]
+###### Tags : [[Spring Framework]]

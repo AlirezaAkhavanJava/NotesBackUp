@@ -124,5 +124,5 @@ Bean
 **The annotation is on the method because `@Bean` is describing the object-producing method, not the object itself.**
 
 
-[[0 - Spring Framework]]
+[[Spring Framework]]
 [[0 - Spring + Spring Boot]]

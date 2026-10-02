@@ -83,4 +83,4 @@ If your entity has relationships (like `@OneToMany`), you can also use `@Builder
 
 
 
-##### Tags : [[0 - Spring Framework]]
+##### Tags : [[Spring Framework]]

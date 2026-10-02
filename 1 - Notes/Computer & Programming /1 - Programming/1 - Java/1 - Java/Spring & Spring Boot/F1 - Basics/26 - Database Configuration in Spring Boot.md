@@ -388,4 +388,4 @@ spring.datasource.driver-class-name=org.postgresql.Driver
 ✅ With this setup, you can easily run **H2 locally** for testing and switch to **PostgreSQL in production** without changing your code.
 
 
-##### *Tags : [[0 - Spring Framework]]
+##### *Tags : [[Spring Framework]]

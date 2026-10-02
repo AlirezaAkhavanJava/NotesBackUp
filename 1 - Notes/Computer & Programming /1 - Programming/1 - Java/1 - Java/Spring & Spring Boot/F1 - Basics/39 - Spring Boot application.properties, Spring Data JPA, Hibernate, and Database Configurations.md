@@ -533,4 +533,4 @@ CREATE TABLE IF NOT EXISTS users (
     - [H2 Database](https://www.h2database.com/)
 
 
-[[0 - Spring Framework]]
+[[Spring Framework]]

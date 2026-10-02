@@ -198,4 +198,4 @@ Because you'll soon encounter **request DTOs, response DTOs, command DTOs, query
 
 
 [[Java]]
-[[0 - Spring Framework]]
+[[Spring Framework]]

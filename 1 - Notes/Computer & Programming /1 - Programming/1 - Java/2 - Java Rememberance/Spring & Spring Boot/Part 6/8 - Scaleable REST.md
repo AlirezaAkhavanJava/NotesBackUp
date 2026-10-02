@@ -103,4 +103,4 @@ Because the state lives entirely inside the Redis cluster, your Spring Boot appl
 
 
 
-[[0 - Spring Framework]]
+[[Spring Framework]]

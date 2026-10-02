@@ -35,4 +35,4 @@ Nothing is “automatically called” — Spring just _routes_ the incoming requ
 - `@GetMapping` = specific for GET requests.
     
 - Neither one “auto-calls” — they respond to requests coming to their mapped URL.
-##### [[0 - Spring Framework]]
+##### [[Spring Framework]]

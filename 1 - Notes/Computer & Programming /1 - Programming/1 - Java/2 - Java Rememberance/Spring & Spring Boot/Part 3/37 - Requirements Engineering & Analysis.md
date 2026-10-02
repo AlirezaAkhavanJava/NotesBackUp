@@ -204,4 +204,4 @@ When you start a new app, work through these in order:
 
 
 [[Java]]
-[[0 - Spring Framework]]
+[[Spring Framework]]

@@ -79,4 +79,4 @@ Basically, `wc` is your **quick stats tool for files or streams**.
 
 
 
-##### Tags : [[2 - Tags/Linux|Linux]]
+##### Tags : [[2 - Tags/Pro/CS/Linux|Linux]]

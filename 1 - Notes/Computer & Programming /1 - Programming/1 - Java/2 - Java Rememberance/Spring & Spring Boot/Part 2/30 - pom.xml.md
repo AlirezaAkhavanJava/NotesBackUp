@@ -616,5 +616,5 @@ Maven lifecycle order: **validate → compile → test → package → verify �
 Master this file and you control everything about how your Spring Boot app builds, runs, and ships.
 
 [[Java]]
-[[0 - Spring Framework]]
-[[1 - Maven ✧]]
+[[Spring Framework]]
+[[Maven]]

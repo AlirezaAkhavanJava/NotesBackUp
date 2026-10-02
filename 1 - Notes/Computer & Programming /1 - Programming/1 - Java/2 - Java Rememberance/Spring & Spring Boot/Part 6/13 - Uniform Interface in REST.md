@@ -475,4 +475,4 @@ You've now covered all six REST constraints:
 
 
 
-[[0 - Spring Framework]]
+[[Spring Framework]]

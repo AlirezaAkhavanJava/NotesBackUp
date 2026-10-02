@@ -231,4 +231,4 @@ Client subscribes → gets initial list immediately.
 
 
 
-[[Read Projects]]
+[[Real Projects]]

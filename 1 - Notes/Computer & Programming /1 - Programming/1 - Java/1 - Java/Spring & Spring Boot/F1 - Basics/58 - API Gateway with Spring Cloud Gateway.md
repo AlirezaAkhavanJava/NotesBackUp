@@ -573,4 +573,4 @@ Run this to get a token (e.g., `eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMSJ9...`).
 
 Spring Cloud Gateway provides a robust solution for routing and filtering requests in a microservices architecture. The practice application sets up a gateway to route requests to Todo Service and User Service, integrating with Eureka for service discovery and applying a JWT validation filter for security. Advanced features like rate-limiting and circuit breakers enhance resilience and scalability. Explore Spring Cloud Gateway’s documentation for further customization and integration options.
 
-[[0 - Spring Framework]]
+[[Spring Framework]]

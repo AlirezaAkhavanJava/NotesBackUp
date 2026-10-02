@@ -206,4 +206,4 @@ Don't add `@Repository` just because you've seen it on repository examples. **Sp
 
 
 [[Java]]
-[[0 - Spring Framework]]
+[[Spring Framework]]

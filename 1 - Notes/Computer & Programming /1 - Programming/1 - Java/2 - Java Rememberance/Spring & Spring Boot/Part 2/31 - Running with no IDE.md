@@ -108,4 +108,4 @@ That gives you a much more IDE-like workflow while staying entirely inside LazyV
 
 [[Java]]
 [[Vim]]
-[[1 - Maven ✧]]
+[[Maven]]

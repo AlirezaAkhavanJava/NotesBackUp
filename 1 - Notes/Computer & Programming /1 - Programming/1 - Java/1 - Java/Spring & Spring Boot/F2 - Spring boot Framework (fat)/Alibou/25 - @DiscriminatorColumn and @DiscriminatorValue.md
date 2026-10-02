@@ -103,4 +103,4 @@ When it sees **animal_type = "CAT"** → it creates a **Cat** object.
 
 
 
-##### Tags : [[0 - Spring Framework]]
+##### Tags : [[Spring Framework]]

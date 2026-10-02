@@ -59,4 +59,4 @@ Erases your shell history.
 `history` is like a **time machine for your terminal**—you can see everything you did and even repeat it without retyping.
 
 
-##### Tag : [[2 - Tags/Linux|Linux]]
+##### Tag : [[2 - Tags/Pro/CS/Linux|Linux]]

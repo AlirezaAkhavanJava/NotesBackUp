@@ -185,5 +185,5 @@ So: if you're writing new Spring Boot code, just use constructor injection for r
 
 
 [[0 - Spring + Spring Boot]]
-[[0 - Spring Framework]]
+[[Spring Framework]]
 [[Java]]

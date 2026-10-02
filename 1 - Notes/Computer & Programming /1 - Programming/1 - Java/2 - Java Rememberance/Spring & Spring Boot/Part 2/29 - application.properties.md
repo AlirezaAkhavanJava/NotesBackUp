@@ -518,4 +518,4 @@ app.feature.enabled=true
 Master these and you'll configure 95% of Spring Boot apps without ever touching Java config.
 
 [[Java]]
-[[0 - Spring Framework]]
+[[Spring Framework]]

@@ -183,4 +183,4 @@ Each box here is something we've already built the _inside_ of, in earlier tutor
 
 
 [[Java]]
-[[0 - Spring Framework]]
+[[Spring Framework]]

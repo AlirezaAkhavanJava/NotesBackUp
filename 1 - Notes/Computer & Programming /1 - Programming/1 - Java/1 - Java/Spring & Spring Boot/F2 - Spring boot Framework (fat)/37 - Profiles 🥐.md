@@ -398,4 +398,4 @@ docs/spring-boot-3-profiles.md
 
 And never see that error again!
 
-##### Tags : [[0 - Spring Framework]]
+##### Tags : [[Spring Framework]]

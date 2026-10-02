@@ -75,4 +75,4 @@ public interface StudentRepository extends JpaRepository<Student, Long> {
 
 
 
-###### Tags : [[0 - Spring Framework]]
+###### Tags : [[Spring Framework]]

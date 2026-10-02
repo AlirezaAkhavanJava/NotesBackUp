@@ -62,4 +62,4 @@ chown user:group file.txt
 
 
 
-##### [[Computer & Programming & Networking & CyberSecurity]] [[1 - Docker 🧋]]
+[[Computer & Programming]]

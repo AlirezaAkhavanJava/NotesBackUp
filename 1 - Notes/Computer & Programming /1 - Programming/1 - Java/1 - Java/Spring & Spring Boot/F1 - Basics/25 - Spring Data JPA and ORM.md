@@ -363,4 +363,4 @@ public class User {
 - JPA Specification: [Jakarta Persistence](https://jakarta.ee/specifications/persistence/)
 - Hibernate Documentation: [Hibernate ORM](https://hibernate.org/orm/documentation/)
 
-[[0 - Spring Framework]]
+[[Spring Framework]]

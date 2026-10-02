@@ -73,4 +73,4 @@ In most Spring Boot apps using Spring Data JPA + Hibernate, you interact via rep
 
 This understanding is crucial for avoiding issues like `LazyInitializationException` (detached entities) or unexpected INSERTs/UPDATEs.
 
-###### Tags : [[0 - Spring Framework]]
+###### Tags : [[Spring Framework]]

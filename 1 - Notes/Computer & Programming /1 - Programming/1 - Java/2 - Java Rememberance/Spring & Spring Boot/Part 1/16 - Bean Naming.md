@@ -271,5 +271,5 @@ Two questions in one: **(a)** what is the default bean name Spring would generat
 
 
 [[Java]]
-[[0 - Spring Framework]]
+[[Spring Framework]]
 [[0 - Spring + Spring Boot]]

@@ -632,4 +632,4 @@ Test Class Structure:
 MockMvc bridges the gap between pure unit tests and full integration tests, providing the right balance of isolation and realism for testing Spring MVC applications efficiently.
 
 
-##### Tags : [[0 - Spring Framework]]
+##### Tags : [[Spring Framework]]

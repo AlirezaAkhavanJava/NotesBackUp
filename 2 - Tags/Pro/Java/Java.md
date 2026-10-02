@@ -56,7 +56,11 @@ In summary, Java is a versatile, cross-platform language with robust features, w
 
 
 
-[[FrameWorks]]
-[[E - Java OOP Concepts 🧀]]
-[[C - Anonymous Inner Classes 🧀]]
-[[0 - Back-End]]
+[[Data-base]]
+[[Spring Framework]]
+[[Rest-API]]
+[[Docker]]
+[[Maven]]
+[[Hibernate & JDBC]]
+[[Networking]]
+[[API]]

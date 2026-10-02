@@ -88,4 +88,4 @@ You get:
 If your application has **complex relationships**, **strict data integrity**, or **heavy transactional requirements**, a relational database (PostgreSQL, MySQL, etc.) with JPA is usually a safer and more appropriate choice.
 
 
-##### Tags : [[1 - MongoDB 🍂]][[0 - Spring Framework]]
+##### Tags : [[1 - MongoDB 🍂]][[Spring Framework]]

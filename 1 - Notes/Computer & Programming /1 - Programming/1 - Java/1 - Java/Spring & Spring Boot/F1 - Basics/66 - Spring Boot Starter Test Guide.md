@@ -254,4 +254,4 @@ class UserRepositoryTest {
 ---
 
 This guide covers Spring Boot Starter Test in depth, from setting up dependencies to unit, integration, web, and data layer testing, along with advanced features and best practices.
-##### *Tags : [[0 - Spring Framework]]
+##### *Tags : [[Spring Framework]]

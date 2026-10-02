@@ -309,4 +309,4 @@ One command, three containers, wired together exactly as designed in our High-Le
 
 [[1 - Docker 🧋]]
 [[Java]]
-[[0 - Spring Framework]]
+[[Spring Framework]]

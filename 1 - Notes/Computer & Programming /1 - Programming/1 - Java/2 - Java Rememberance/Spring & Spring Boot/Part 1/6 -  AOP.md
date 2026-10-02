@@ -166,5 +166,5 @@ This is also _why_ `@Transactional` doesn't work if you call a method on `this` 
 
 
 [[0 - Spring + Spring Boot]]
-[[0 - Spring Framework]]
+[[Spring Framework]]
 [[Java]]

@@ -139,4 +139,4 @@ Your **home directory** is your personal workspace in Linux — it’s where all
     ```
 
 
-##### Tags : [[2 - Tags/Linux|Linux]]
+##### Tags : [[2 - Tags/Pro/CS/Linux|Linux]]

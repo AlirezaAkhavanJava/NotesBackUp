@@ -181,4 +181,4 @@ Basically: **concepts, not things**.
 
 Hibernate calls it elegant. SQL calls it columns.
 
-##### Tags : [[0 - Spring Framework]]
+##### Tags : [[Spring Framework]]

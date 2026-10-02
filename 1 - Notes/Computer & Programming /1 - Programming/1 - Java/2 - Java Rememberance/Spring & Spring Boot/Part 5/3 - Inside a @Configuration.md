@@ -49,4 +49,4 @@ If you used `@Component` (or plain `@Configuration(proxyBeanMethods = false)`) i
 - Anything else in the class is just normal Java, not managed by Spring.
 
 
-[[0 - Spring Framework]]
+[[Spring Framework]]

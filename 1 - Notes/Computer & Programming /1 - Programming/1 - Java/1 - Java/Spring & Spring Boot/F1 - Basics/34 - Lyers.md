@@ -103,4 +103,4 @@ In **Spring Boot**, applications are typically structured into **layers** to kee
 
 ---
 
-[[0 - Spring Framework]]
+[[Spring Framework]]

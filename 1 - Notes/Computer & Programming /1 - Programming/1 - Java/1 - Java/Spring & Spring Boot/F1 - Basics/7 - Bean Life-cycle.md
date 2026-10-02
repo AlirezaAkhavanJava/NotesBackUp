@@ -100,4 +100,4 @@ Spring Boot’s trick is not changing this lifecycle, but **removing the boilerp
 
 Once you see beans as living organisms with rituals, Spring stops feeling mystical and starts feeling engineered.
 
-##### Tags : [[0 - Spring Framework]]
+##### Tags : [[Spring Framework]]

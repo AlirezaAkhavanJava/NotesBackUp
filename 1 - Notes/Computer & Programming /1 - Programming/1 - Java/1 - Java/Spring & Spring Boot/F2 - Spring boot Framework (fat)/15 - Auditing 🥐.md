@@ -199,4 +199,4 @@ return Optional.ofNullable(SecurityContextHolder.getContext().getAuthentication(
 
 
 
-##### [[0 - Spring Framework]]
+##### [[Spring Framework]]

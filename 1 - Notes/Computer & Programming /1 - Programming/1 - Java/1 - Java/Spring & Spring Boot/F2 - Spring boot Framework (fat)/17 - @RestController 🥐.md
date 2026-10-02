@@ -43,4 +43,4 @@ public class HelloController {
     
 - Every method’s return value goes directly in the HTTP response body (no `@ResponseBody` needed).
 
-##### Tags : [[0 - Spring Framework]]
+##### Tags : [[Spring Framework]]

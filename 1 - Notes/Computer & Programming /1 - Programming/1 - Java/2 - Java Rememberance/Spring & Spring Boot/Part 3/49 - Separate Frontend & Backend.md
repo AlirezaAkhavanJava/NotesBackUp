@@ -267,4 +267,4 @@ library-app/
 
 [[Java]]
 [[1 - Docker 🧋]]
-[[0 - Spring Framework]]
+[[Spring Framework]]

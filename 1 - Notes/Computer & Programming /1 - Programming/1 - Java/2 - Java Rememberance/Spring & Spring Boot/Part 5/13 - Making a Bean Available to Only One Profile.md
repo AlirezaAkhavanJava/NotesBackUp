@@ -267,4 +267,4 @@ SPRING_PROFILES_ACTIVE=prod java -jar library-app.jar
 
 
 
-[[0 - Spring Framework]]
+[[Spring Framework]]

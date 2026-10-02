@@ -653,4 +653,4 @@ You've now learned how to:
 
 You're ready to deploy applications to production! 🚀
 
-[[0 - Spring Framework]]
+[[Spring Framework]]

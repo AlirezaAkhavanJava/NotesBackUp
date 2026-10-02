@@ -271,5 +271,5 @@ When CPU accesses memory:
 
 
 
-[[Computer & Programming & Networking & CyberSecurity]]
+[[Computer & Programming]]
 

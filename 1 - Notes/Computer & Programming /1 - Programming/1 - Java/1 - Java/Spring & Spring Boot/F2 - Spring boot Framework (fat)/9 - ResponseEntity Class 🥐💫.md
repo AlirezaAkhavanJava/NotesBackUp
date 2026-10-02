@@ -533,4 +533,4 @@ public ResponseEntity<Void> deleteUser(@PathVariable Long id) {
 
 If you want, I can rewrite your **entire `UserController` with all 4 CRUD methods using `ResponseEntity`** in a clean, professional style. This will be like a “goat mode” API example. Do you want me to do that?
 
-##### Tags : [[0 - Spring Framework]]
+##### Tags : [[Spring Framework]]

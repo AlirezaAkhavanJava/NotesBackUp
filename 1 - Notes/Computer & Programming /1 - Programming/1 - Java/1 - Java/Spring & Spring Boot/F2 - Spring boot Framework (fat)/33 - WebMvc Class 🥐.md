@@ -216,4 +216,4 @@ public class CustomWebMvcConfig implements WebMvcConfigurer {
 The `WebMvc` configuration system provides a flexible way to customize Spring MVC behavior while leveraging Spring's powerful auto-configuration capabilities.
 
 
-##### Tags : [[0 - Spring Framework]]
+##### Tags : [[Spring Framework]]

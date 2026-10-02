@@ -651,4 +651,4 @@ public class OAuth2AuthenticationEventListener {
 
 This comprehensive guide covers advanced Spring Security with OAuth2, from basic setup to reactive implementations and security best practices. Remember to always follow security best practices and keep your dependencies updated.
 
-[[0 - Spring Framework]]
+[[Spring Framework]]

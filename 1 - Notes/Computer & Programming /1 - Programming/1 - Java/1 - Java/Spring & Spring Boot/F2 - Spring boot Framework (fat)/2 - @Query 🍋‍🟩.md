@@ -113,4 +113,4 @@ public interface UserRepository extends JpaRepository<User, Long> {
 | Entity-based          | JPQL uses **entity names & fields** |
 
 
-##### Tags : [[0 - Spring Framework]]
+##### Tags : [[Spring Framework]]

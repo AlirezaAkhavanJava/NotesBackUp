@@ -53,4 +53,4 @@ When you run this, Spring Boot:
 `@SpringBootApplication` = **The starting point + auto-config + scanning for beans**.
 
 
-#### Tags : [[0 - Spring Framework]]
+#### Tags : [[Spring Framework]]

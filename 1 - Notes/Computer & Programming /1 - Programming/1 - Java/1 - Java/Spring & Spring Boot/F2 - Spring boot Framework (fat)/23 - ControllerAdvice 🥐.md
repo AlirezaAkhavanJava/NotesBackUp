@@ -142,4 +142,4 @@ You’ll get:
 
 
 
-##### Tags : [[0 - Spring Framework]]
+##### Tags : [[Spring Framework]]

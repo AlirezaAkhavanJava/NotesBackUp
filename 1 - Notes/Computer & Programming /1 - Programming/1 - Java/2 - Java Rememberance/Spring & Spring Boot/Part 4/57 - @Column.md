@@ -326,4 +326,4 @@ That's the hierarchy I'd keep in your head while learning JPA.
 
 
 [[Java]]
-[[0 - Spring Framework]]
+[[Spring Framework]]

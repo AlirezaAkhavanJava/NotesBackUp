@@ -185,4 +185,4 @@ UserService userService = context.getBean(UserService.class);
 
 The core Spring concepts—IoC, DI, and the ApplicationContext—enable modular, testable, and maintainable Java applications. By refactoring a manual DI application to use Spring’s `@Configuration`, `@Bean`, and `@Component`, you experience firsthand how Spring simplifies dependency management. Continue exploring _Spring in Action_ (Ch. 1–2) and the Spring Core Guide to deepen your understanding, and experiment with additional features like bean scopes and lifecycle methods.
 
-[[0 - Spring Framework]]
+[[Spring Framework]]

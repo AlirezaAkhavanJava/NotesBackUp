@@ -50,4 +50,4 @@ Think of flags as **little switches you flip** to make a command do exactly what
 
 
 
-##### Tags : [[2 - Tags/Linux|Linux]]
+##### Tags : [[2 - Tags/Pro/CS/Linux|Linux]]

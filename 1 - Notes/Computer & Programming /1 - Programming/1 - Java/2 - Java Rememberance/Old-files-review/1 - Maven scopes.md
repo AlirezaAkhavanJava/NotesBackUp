@@ -318,5 +318,5 @@ provided = compilation + runtime environment, but don't package
 For a **Spring Boot project**, you'll mostly encounter **`compile`**, **`runtime`**, and **`test`**. `provided` appears occasionally, while `system` should almost never be necessary.
 
 
-[[0 - Spring Framework]]
-[[1 - Maven ✧]]
+[[Spring Framework]]
+[[Maven]]

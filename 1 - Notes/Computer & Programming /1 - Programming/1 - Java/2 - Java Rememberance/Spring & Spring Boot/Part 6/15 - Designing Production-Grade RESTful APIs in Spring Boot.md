@@ -377,4 +377,4 @@ MapStruct is the production-standard mapper: it generates type-safe mapping code
 The thread running through all of this is **intentionality**: every decision — which verb, which status code, which header — is a deliberate contract with the client. Production APIs are not just code; they are interfaces that must be predictable, evolvable, and safe.
 
 
-[[0 - Spring Framework]]
+[[Spring Framework]]

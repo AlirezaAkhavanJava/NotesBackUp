@@ -216,4 +216,4 @@ public Page<UserDto> search(@RequestParam Map<String, String> params) {
 **Bottom line (2025 best practice):**  
 Use **Specifications** whenever you need **dynamic, composable, type-safe queries** — especially for search, filtering, and reporting features. It’s one of the most powerful and modern ways to write flexible queries in Spring Data JPA.
 
-###### Tags : [[0 - Spring Framework]]
+###### Tags : [[Spring Framework]]

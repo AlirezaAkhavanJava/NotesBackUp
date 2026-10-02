@@ -273,4 +273,4 @@ Add that dependency, run your app, and visit `http://localhost:8080/swagger-ui.h
 
 [[Java]]
 [[Networking]]
-[[0 - Spring Framework]]
+[[Spring Framework]]

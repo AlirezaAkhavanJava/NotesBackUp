@@ -266,4 +266,4 @@ Using the enum (not a magic number like `404`) is itself a clean-code habit — 
 
 [[Java]]
 [[Networking]]
-[[0 - Spring Framework]]
+[[Spring Framework]]

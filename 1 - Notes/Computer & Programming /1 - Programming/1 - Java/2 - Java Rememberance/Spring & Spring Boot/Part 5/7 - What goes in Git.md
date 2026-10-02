@@ -166,4 +166,4 @@ bfg --replace-text passwords.txt
 
 [[Java]]
 [[0 - Git]]
-[[0 - Spring Framework]]
+[[Spring Framework]]

@@ -515,4 +515,4 @@ mvn spring-boot:run
 Spring MVC with Thymeleaf enables building robust server-side rendered web applications. The Todo application demonstrates form handling, validation, and database integration using Spring Data JPA. By leveraging `@Controller`, `@ModelAttribute`, `@Valid`, and Thymeleaf templates, you can create dynamic, user-friendly web interfaces. Explore advanced features like custom validators and pagination, and refer to the Spring MVC and Thymeleaf documentation for deeper insights.
 
 
-[[0 - Spring Framework]]
+[[Spring Framework]]

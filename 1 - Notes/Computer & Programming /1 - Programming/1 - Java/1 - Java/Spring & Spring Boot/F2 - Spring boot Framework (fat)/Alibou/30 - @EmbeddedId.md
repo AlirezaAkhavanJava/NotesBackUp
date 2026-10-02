@@ -174,4 +174,4 @@ Use `@IdClass` only if a legacy schema forces it.
 
 Hibernate supports it. Databases allow it. Everyone quietly regrets it later.
 
-##### Tags : [[0 - Spring Framework]]
+##### Tags : [[Spring Framework]]

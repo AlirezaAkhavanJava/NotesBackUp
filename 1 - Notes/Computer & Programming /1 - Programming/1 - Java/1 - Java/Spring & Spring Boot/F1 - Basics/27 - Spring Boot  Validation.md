@@ -436,4 +436,4 @@ public class UserValidationTest {
 
 This guide covers Spring Boot Starter Validation comprehensively, from basic annotations to advanced custom validations, groups, and best practices, empowering you to build robust, validated applications.
 
-##### _Tags: [[0 - Spring Framework]]_
+##### _Tags: [[Spring Framework]]_

@@ -28,4 +28,4 @@ Key points:
 ⚡ Tip: Use `@ResponseBody` when you **only want raw data**, not HTML pages.
 
 
-##### Tags : [[0 - Spring Framework]]
+##### Tags : [[Spring Framework]]

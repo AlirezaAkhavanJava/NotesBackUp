@@ -102,4 +102,4 @@ So your mental model is basically:
 And there's a third major thing worth adding: **Maven standardizes the entire build lifecycle** — `validate → compile → test → package → verify → install → deploy`. That's what makes Maven much more than just a dependency manager.
 
 
-[[1 - Maven ✧]]
+[[Maven]]

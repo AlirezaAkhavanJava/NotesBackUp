@@ -784,4 +784,4 @@ If you remember only one sentence:
 
 > **Design the URL around nouns/resources, and let HTTP methods describe the action.**
 
-[[0 - Spring Framework]]
+[[Spring Framework]]

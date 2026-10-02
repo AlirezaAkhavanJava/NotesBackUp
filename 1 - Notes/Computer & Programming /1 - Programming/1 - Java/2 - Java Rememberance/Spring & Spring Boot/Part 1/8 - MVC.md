@@ -99,5 +99,5 @@ MVC is a **layered design pattern** that splits an app into **Model** (data/logi
 
 
 [[0 - Spring + Spring Boot]]
-[[0 - Spring Framework]]
+[[Spring Framework]]
 [[Java]]

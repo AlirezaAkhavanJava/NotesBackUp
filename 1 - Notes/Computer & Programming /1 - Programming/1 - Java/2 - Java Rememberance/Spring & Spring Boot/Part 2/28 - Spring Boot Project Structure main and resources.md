@@ -201,5 +201,5 @@ Maven/Gradle copies everything in `resources/` into the classpath root. So:
 5. **Don't put production-only and test-only files in the same folder** — use `test/resources` for test configs.
 
 
-[[0 - Spring Framework]]
+[[Spring Framework]]
 [[Java]]
