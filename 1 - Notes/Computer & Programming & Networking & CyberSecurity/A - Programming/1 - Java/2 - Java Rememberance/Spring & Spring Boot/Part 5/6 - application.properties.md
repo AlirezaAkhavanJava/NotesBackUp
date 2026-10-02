@@ -266,4 +266,4 @@ This is also exactly why environment variables work as overrides without any ext
 
 [[Java]]
 [[0 - Spring Framework]]
-[[2 - PostgreSQL 👻]]
+[[2 - PostgreSQL Confiuration ✧]]

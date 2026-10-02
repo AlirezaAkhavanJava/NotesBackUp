@@ -1,5 +1,5 @@
 
-**Convention over Configuration (CoC)** is a software design principle that reduces the need for explicit configuration by relying on sensible defaults (conventions).
+**Convention over Configuration (CoC)** is a software design principle that reduces the need for explicit configuration -> by relying on sensible defaults (conventions).
 
 Instead of forcing developers to specify every single detail, the framework assumes "standard" choices and only requires configuration when you deviate from those standards.
 

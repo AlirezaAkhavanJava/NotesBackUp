@@ -358,5 +358,5 @@ Spring Initializr lets you pick either when generating a project. **Maven is the
 
 
 [[Java]]
-[[1 - Maven 👻]]
+[[1 - Maven ✧]]
 [[0 - Spring Framework]]

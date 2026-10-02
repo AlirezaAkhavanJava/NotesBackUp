@@ -340,5 +340,5 @@ library-app/
 
 
 [[Java]]
-[[1 - Maven 👻]]
+[[1 - Maven ✧]]
 [[0 - Spring Framework]]

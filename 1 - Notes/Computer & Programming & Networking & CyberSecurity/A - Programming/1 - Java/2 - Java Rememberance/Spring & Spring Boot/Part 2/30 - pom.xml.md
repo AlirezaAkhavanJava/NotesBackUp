@@ -617,4 +617,4 @@ Master this file and you control everything about how your Spring Boot app build
 
 [[Java]]
 [[0 - Spring Framework]]
-[[1 - Maven 👻]]
+[[1 - Maven ✧]]
