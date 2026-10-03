@@ -632,4 +632,4 @@ public class TaskProcessingSystem {
 - CopyOnWriteArrayList: [CopyOnWriteArrayList API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/CopyOnWriteArrayList.html)
 - Java Concurrency in Practice: [Java Concurrency in Practice](https://jcip.net/)
 
-###### Tags : [[44 - Threads 🧀]]
+###### Tags : [[Threads]]

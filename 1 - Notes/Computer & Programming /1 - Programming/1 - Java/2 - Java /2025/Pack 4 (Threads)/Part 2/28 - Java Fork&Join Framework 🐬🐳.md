@@ -98,4 +98,4 @@ public class SumTask extends RecursiveTask<Long> {
 - Oracle Documentation: [java.util.concurrent](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/package-summary.html)
 
 
-##### Tags : [[44 - Threads 🧀]] 
+##### Tags : [[Threads]] 

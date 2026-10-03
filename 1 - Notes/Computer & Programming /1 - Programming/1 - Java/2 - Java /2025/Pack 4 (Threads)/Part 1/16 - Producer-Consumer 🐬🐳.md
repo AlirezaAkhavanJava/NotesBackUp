@@ -487,4 +487,4 @@ public class TaskProcessingSystem {
 - ReentrantLock: [ReentrantLock API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/locks/ReentrantLock.html)
 - Java Concurrency in Practice: [Java Concurrency in Practice](https://jcip.net/)
 
-[[44 - Threads 🧀]]
+[[Threads]]

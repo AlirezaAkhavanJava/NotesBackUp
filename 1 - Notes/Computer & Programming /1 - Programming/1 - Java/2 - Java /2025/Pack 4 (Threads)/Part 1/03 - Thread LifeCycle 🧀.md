@@ -412,4 +412,4 @@ public class TaskManager {
 - Java Concurrency: [java.util.concurrent](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/package-summary.html)
 - Java Concurrency in Practice: [Java Concurrency in Practice](https://jcip.net/)
 
-[[44 - Threads 🧀]]
+[[Threads]]

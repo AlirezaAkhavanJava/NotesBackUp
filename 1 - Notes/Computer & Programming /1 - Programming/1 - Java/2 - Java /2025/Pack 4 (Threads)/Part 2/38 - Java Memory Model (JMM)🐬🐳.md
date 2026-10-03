@@ -1,7 +1,7 @@
 **Date**: 2025-08-24  
 **Concept**: Java Memory Model and Threading  
 **Course**: Java Programming Fundamentals  
-**Tags**: [[44 - Threads 🧀]]
+**Tags**: [[Threads]]
 
 ---
 

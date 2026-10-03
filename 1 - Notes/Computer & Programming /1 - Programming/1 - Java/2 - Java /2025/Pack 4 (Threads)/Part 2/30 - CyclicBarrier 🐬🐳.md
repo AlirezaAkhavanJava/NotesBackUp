@@ -130,4 +130,4 @@ public class CyclicBarrierExample {
 `CyclicBarrier` lets a fixed number of threads wait for each other at a barrier and can be reused across multiple phases; handle interrupts/timeouts carefully because they break the barrier.
 
 
-##### *Tags : [[44 - Threads 🧀]]
+##### *Tags : [[Threads]]

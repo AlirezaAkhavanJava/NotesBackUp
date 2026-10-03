@@ -326,4 +326,4 @@ executor.submit(() -> System.out.println("Virtual thread task"));
 
 
 ##### Course : [YouTube](https://www.youtube.com/watch?v=1HSdq9zvym4&t=2104s)
-##### *Tags : [[44 - Threads 🧀]]
+##### *Tags : [[Threads]]

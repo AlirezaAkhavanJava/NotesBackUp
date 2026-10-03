@@ -473,4 +473,4 @@ Project Reactor simplifies reactive programming in Java with `Mono` and `Flux`, 
 - [Project Reactor Documentation](https://projectreactor.io/)
 - [Spring WebFlux](https://spring.io/reactive)
 
-[[44 - Threads 🧀]]
+[[Threads]]

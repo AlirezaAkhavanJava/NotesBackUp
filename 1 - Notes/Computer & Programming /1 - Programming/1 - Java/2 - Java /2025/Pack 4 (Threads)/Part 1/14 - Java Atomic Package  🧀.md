@@ -657,7 +657,7 @@ public class MetricsService {
 - Java 8+ Features: [Java 8 Documentation](https://docs.oracle.com/javase/8/docs/technotes/guides/language/enhancements.html)
 
 
-[[44 - Threads 🧀]]
+[[Threads]]
 
 [^1]: غیر قابل تقسیم
 	

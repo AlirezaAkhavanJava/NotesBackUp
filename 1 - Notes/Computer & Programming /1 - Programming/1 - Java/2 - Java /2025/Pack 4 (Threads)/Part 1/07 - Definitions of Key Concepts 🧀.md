@@ -77,4 +77,4 @@ The OS and CPU collaborate to manage these concepts through a workflow involving
 In Java, this workflow is similar: The JVM manages threads within its process, but the OS schedules them on the CPU. 
 
 
-[[44 - Threads 🧀]]
+[[Threads]]

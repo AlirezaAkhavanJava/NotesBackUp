@@ -164,4 +164,4 @@ Always use `try-finally` to release.
 - **Intermediate:** Used for DB connections, mutual exclusion, producer-consumer problems.
     
 - **Advanced:** Fairness, timeouts, custom thread limiting, avoiding deadlocks.
-#### Tags : [[44 - Threads 🧀]]
+#### Tags : [[Threads]]

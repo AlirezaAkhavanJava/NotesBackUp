@@ -103,4 +103,4 @@ Task 2: 2
 If you’d like a deeper dive into specific aspects (e.g., thread synchronization, process management, or performance considerations), let me know!
 
 
-#### Tags: [[44 - Threads 🧀]]
+#### Tags: [[Threads]]

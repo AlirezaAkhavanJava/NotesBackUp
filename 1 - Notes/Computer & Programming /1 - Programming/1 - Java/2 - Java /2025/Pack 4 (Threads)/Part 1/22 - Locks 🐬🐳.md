@@ -569,4 +569,4 @@ public class ResourceManager {
 - Java Concurrency: [Java Concurrency in Practice](https://jcip.net/)
 - StampedLock Guide: [Java 8 StampedLock](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/locks/StampedLock.html)
 
-[[44 - Threads 🧀]]
+[[Threads]]

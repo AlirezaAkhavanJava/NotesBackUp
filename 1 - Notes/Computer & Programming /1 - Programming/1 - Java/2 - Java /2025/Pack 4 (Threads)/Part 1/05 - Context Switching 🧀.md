@@ -236,4 +236,4 @@ public class InterCoreCommunicationExample {
 
 > ✅ Important: logical cores share **execution units**, so two threads on the same physical core aren’t fully parallel — performance gain is usually **20–30%** for CPU-bound tasks, more for I/O-bound or mixed workloads.
 
-[[44 - Threads 🧀]]
+[[Threads]]

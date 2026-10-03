@@ -134,4 +134,4 @@ ORM frameworks (like **Hibernate**) use this mapping to automatically:
 ✅ Fetch objects as query results
 
 
-##### [[25 - Spring Data JPA and ORM]]
+[[Spring Framework]]

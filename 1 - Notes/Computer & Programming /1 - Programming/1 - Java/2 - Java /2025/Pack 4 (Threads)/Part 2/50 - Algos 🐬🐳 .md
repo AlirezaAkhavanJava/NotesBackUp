@@ -108,4 +108,4 @@ This uses a thread pool to execute tasks in a fair, rotating manner, mimicking R
 - **Threads and Gantt Charts**: Scheduling algorithms manage threads in the **RUNNABLE** state, and Gantt charts visualize their execution timeline.
 - **Practical Use**: These algorithms are used in operating systems and Java’s threading mechanisms (e.g., `ExecutorService`) to manage concurrent tasks efficiently.
 
-[[44 - Threads 🧀]]
+[[Threads]]

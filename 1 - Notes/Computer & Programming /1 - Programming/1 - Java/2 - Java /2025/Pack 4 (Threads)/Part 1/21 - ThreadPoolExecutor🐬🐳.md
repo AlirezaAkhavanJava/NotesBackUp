@@ -515,4 +515,4 @@ public class ApiProcessor {
 - CompletableFuture: [CompletableFuture API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/CompletableFuture.html)
 - Java Concurrency in Practice: [Java Concurrency in Practice](https://jcip.net/)
 
-[[44 - Threads 🧀]]
+[[Threads]]

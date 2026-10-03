@@ -146,4 +146,4 @@ public class Main {
 - Use `wait` in a **loop** (checking a condition) to handle **spurious wakeups** (where a thread wakes up without being notified).
 - These methods are low-level and can be error-prone. In modern Java, higher-level concurrency utilities like `java.util.concurrent` classes (e.g., `Lock`, `Condition`, `BlockingQueue`) are often preferred for thread coordination.
 
-[[44 - Threads 🧀]]
+[[Threads]]

@@ -134,4 +134,4 @@ service.submit(() -> System.out.println("Virtual thread task"));
 - Using executors is **safer, more efficient, and scalable** for real applications.
 
 
-##### *Tags : [[44 - Threads 🧀]]
+##### *Tags : [[Threads]]

@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "04cec0aa5d5eb6cc",
+        "id": "5e195b4840df4557",
         "type": "tabs",
         "children": [
           {
-            "id": "4b7685327e7aeb7a",
+            "id": "ce039d240d0bca07",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/1 - Junit 5 🥭.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "1 - Junit 5 🥭"
             }
           }
         ]
@@ -76,7 +80,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 341.50517654418945
+    "width": 341.50517654418945,
+    "collapsed": true
   },
   "right": {
     "id": "318802b81bf4bc9f",
@@ -164,8 +169,18 @@
       "bases:Create new base": false
     }
   },
-  "active": "4b7685327e7aeb7a",
+  "active": "ce039d240d0bca07",
   "lastOpenFiles": [
+    "2 - Tags/Pro/CS/Linux.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/2 - MongoDB/1 - MongoDB 🍂.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/ADV Pack 3 (Spring Security)/1 - Spring Security 🍌.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/6 - Hibernate/1 - ORM 🍪.md",
+    "2 - Tags/Pro/Java/Spring Framework.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/Pack 1/1 - SQL 🦬.md",
+    "2 - Tags/Concepts/Threads.md",
+    "2 - Tags/Pro/FrameWork",
+    "2 - Tags/Concepts",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/ADV Pack 1/56 - Untitled.md",
     "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3/04 - The web history (compelete).md",
     "4 - Images/lo.jpeg",
     "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3/03 - Web terms.md",
@@ -186,13 +201,6 @@
     "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 2/11 - Layer 6.md",
     "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 2/10 - Layer 5.md",
     "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 2/09 - Layer 4.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 2/08 - Layer 3.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 2/03 - OSI Model — Definition.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 2/04 - Layers.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 2/07 - Layer 2.md",
-    "1 - Notes/Computer & Programming /1 - Programming/16 - AI/1 - Prompt Engineering/2 - Ask fot teaching (network).md",
-    "1 - Notes/Computer & Programming /1 - Programming/16 - AI/1 - Prompt Engineering/1 - Ask for teaching.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 2/06 - Layer 1 Problems.md",
     "1 - Notes/Computer & Programming /1 - Programming/18 - Go",
     "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 2",
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 4",
@@ -200,8 +208,6 @@
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 6",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 5",
     "1 - Notes/Computer & Programming /1 - Programming/15 - Programming in action/4 - Pack 4 (commands)",
-    "1 - Notes/Computer & Programming /1 - Programming/17 - React",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2025/Pack 6 (Functional programming)/Stream api",
     "Pasted image 20261001092324.png",
     "Pasted image 20261001092418.png",
     "4 - Images/Pasted image 20261001091357.png",

@@ -298,4 +298,4 @@ So: **join = wait for one thread**; **CountDownLatch = wait for N threads**
 
 
 
-##### *Tags : [[44 - Threads 🧀]]
+##### *Tags : [[Threads]]

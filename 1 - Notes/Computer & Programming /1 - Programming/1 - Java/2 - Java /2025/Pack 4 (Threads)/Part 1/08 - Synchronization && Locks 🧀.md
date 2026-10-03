@@ -159,4 +159,4 @@ The `java.util.concurrent.locks` package (introduced in Java 5) provides explici
 - **Locks** (`ReentrantLock`, `ReadWriteLock`) provide explicit, flexible control with advanced features like fairness, timeouts, and read/write separation, ideal for complex concurrency needs.
 - Both mechanisms tie into the thread lifecycle by influencing states like **BLOCKED**, **WAITING**, and **TIMED_WAITING**, ensuring safe multithreaded execution.
 
-[[44 - Threads 🧀]]
+[[Threads]]

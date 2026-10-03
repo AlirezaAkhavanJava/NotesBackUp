@@ -62,4 +62,4 @@ if (lock.tryLock()) {
 - **Non-blocking lock:** thread doesn’t wait → can skip work or retry later.
     
 
-##### Tags : [[44 - Threads 🧀]]
+##### Tags : [[Threads]]

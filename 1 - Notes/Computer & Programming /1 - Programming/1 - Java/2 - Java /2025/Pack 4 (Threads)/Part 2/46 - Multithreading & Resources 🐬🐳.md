@@ -139,4 +139,4 @@ Spell checking: Word Word Word
 - **Resources**: Threads use CPU time, shared memory (heap), private memory (stack), file/I-O resources, and synchronization objects. In your example, Word’s threads share the document data and use CPU and file resources, while the music app’s threads use CPU and audio resources.
 - In a dual-core system, the OS dynamically schedules threads across cores, so Word and the music app may run on separate cores, but this isn’t strictly one-process-per-core.
 
-[[44 - Threads 🧀]]
+[[Threads]]

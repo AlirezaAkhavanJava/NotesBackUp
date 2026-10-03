@@ -245,4 +245,4 @@ public class RequestHandler {
 - Project Loom: [Project Loom](https://openjdk.org/projects/loom/)
 - Java Concurrency in Practice: [Java Concurrency in Practice](https://jcip.net/)
 
-##### Tags : [[44 - Threads 🧀]]
+##### Tags : [[Threads]]

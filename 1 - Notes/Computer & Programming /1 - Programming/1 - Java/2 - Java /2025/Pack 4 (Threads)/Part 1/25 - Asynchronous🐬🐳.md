@@ -1,7 +1,7 @@
 Date : 2025-09-13
 Concept : Asynchronous Programming
 Course : [Asynchronous Programming in Java: Options to Choose from By Venkat Subramaniam](https://www.youtube.com/watch?v=1zSF1259s6w)
-Tags : [[44 - Threads 🧀]]
+Tags : [[Threads]]
 
 
 This guide explains **asynchronous programming** in Java in a clear, structured way. You’ll learn how to run tasks without blocking your main thread, how Java handles async tasks, and how this works in real-world applications and frameworks like Spring Boot. Examples are included with explanations for easy understanding.

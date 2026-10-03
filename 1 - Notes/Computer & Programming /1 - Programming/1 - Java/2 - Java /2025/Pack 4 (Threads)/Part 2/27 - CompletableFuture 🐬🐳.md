@@ -224,4 +224,4 @@ public class AsyncTaskProcessor {
 - Java Concurrency in Practice: [Java Concurrency in Practice](https://jcip.net/)
 
 
-[[44 - Threads 🧀]]
+[[Threads]]

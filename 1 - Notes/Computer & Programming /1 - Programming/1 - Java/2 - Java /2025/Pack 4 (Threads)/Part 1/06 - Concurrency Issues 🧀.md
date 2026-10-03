@@ -346,4 +346,4 @@ Example:
     
 - But if two threads each hold one lock and wait for the other → you get a **deadlock** (like in my example).
 
-[[44 - Threads 🧀]]
+[[Threads]]
