@@ -68,6 +68,14 @@ String result = (num % 2 == 0) ? "Even" : "Odd";
 System.out.println(result); // Odd
 ```
 
+
+```java
+@GetMapping("/welcome")
+@ResponseBody
+public String welcome(@RequestParam boolean loggedIn) {
+    return loggedIn ? "Welcome back!" : "Please log in.";
+}
+```
 ---
 
 ## 4. Pattern Matching for `switch` (Java 21 Preview)
