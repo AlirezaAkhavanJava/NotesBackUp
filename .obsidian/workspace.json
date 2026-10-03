@@ -11,10 +11,14 @@
             "id": "90ee553d7e9d9d8d",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "README"
             }
           }
         ]
@@ -164,7 +168,7 @@
       "bases:Create new base": false
     }
   },
-  "active": "3535a2e099904c39",
+  "active": "90ee553d7e9d9d8d",
   "lastOpenFiles": [
     "1 - Notes/Computer & Programming /1 - Programming/7 - C programming language/Pack 1/11 - Linking problems.md",
     "1 - Notes/Computer & Programming /1 - Programming/7 - C programming language/Pack 1/12 - Conditional Statements in C.md",
