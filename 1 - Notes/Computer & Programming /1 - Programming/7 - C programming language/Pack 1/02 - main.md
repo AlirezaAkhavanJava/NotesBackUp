@@ -150,4 +150,4 @@ That's a valid, standards-conforming C program. No imports, no classes, no JVM �
 - strings are raw `char *`, not managed `String` objects,
 - and there's a whole startup/teardown layer (`crt0` → `main` → `exit`) around it that the JVM normally hides from you.
 
-[[0 - What C is]]
+[[00 - What C is]]

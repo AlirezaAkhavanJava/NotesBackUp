@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "5e195b4840df4557",
+        "id": "7c7ad9def6319e37",
         "type": "tabs",
         "children": [
           {
-            "id": "ce039d240d0bca07",
+            "id": "90ee553d7e9d9d8d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/1 - Junit 5 🥭.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "1 - Junit 5 🥭"
+              "title": "New tab"
             }
           }
         ]
@@ -80,8 +76,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 341.50517654418945,
-    "collapsed": true
+    "width": 341.50517654418945
   },
   "right": {
     "id": "318802b81bf4bc9f",
@@ -169,8 +164,23 @@
       "bases:Create new base": false
     }
   },
-  "active": "ce039d240d0bca07",
+  "active": "3535a2e099904c39",
   "lastOpenFiles": [
+    "1 - Notes/Computer & Programming /1 - Programming/7 - C programming language/Pack 1/11 - Linking problems.md",
+    "1 - Notes/Computer & Programming /1 - Programming/7 - C programming language/Pack 1/12 - Conditional Statements in C.md",
+    "1 - Notes/Computer & Programming /1 - Programming/7 - C programming language/Pack 1/03 - C Compilation & Interaction Commands.md",
+    "1 - Notes/Computer & Programming /1 - Programming/7 - C programming language/Pack 1/04 - Headers in C.md",
+    "1 - Notes/Computer & Programming /1 - Programming/7 - C programming language/Pack 1/05 - C compiler error.md",
+    "1 - Notes/Computer & Programming /1 - Programming/7 - C programming language/Pack 1/10 - User input.md",
+    "1 - Notes/Computer & Programming /1 - Programming/7 - C programming language/Pack 1/09 - Data-Types.md",
+    "1 - Notes/Computer & Programming /1 - Programming/7 - C programming language/Pack 1/08 - String in depth.md",
+    "1 - Notes/Computer & Programming /1 - Programming/7 - C programming language/Pack 1/07 - String.md",
+    "1 - Notes/Computer & Programming /1 - Programming/7 - C programming language/Pack 1/06 - C Libraries.md",
+    "1 - Notes/Computer & Programming /1 - Programming/7 - C programming language/Pack 1/02 - main.md",
+    "1 - Notes/Computer & Programming /1 - Programming/7 - C programming language/Pack 1/01 - C.md",
+    "1 - Notes/Computer & Programming /1 - Programming/7 - C programming language/Pack 1/00 - What C is.md",
+    "1 - Notes/Computer & Programming /1 - Programming/7 - C programming language/Pack 1",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/1 - Junit 5 🥭.md",
     "2 - Tags/Pro/CS/Linux.md",
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/2 - MongoDB/1 - MongoDB 🍂.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/ADV Pack 3 (Spring Security)/1 - Spring Security 🍌.md",
@@ -186,28 +196,13 @@
     "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3/03 - Web terms.md",
     "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3/00 - World wide web.md",
     "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3/02 - Chicken and egg problem.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3/01 - Internet.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 2/19 - Switch.md",
     "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 2/18 - Computers Were Talking in Different Languages.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 2/17 - Protocol war.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 2/16 - TCP vs OSI.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 2/15 - TCP Layers.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 2/14 - TCP.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 2/13 - A brief history.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 2/01 - What is OSI and how it works.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 2/00 - OSI model.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 2/12 - Layer 7.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 2/11 - Layer 6.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 2/10 - Layer 5.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 2/09 - Layer 4.md",
     "1 - Notes/Computer & Programming /1 - Programming/18 - Go",
     "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 2",
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 4",
     "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 5 (git Stage 2)",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 6",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 5",
-    "1 - Notes/Computer & Programming /1 - Programming/15 - Programming in action/4 - Pack 4 (commands)",
     "Pasted image 20261001092324.png",
     "Pasted image 20261001092418.png",
     "4 - Images/Pasted image 20261001091357.png",

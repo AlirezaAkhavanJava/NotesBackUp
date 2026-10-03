@@ -464,4 +464,4 @@ Ask:
 That mindset becomes extremely powerful once you start dealing with pointers, structs, declarations, macros, and compiler/linker diagnostics.
 
 
-[[0 - What C is]]
+[[00 - What C is]]

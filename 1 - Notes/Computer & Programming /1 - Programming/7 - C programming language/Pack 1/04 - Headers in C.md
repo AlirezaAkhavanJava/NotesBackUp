@@ -315,4 +315,4 @@ Include them with angle brackets:
 
 **Mental model for a Java dev:** a header is a hand-written `interface` file that the compiler never validates against its implementation; the linker does the matching by symbol name, and `#include` is a literal copy-paste, not a smart import. Include guards (`#ifndef`/`#define`/`#endif` or `#pragma once`) are mandatory to prevent duplicate pasting, and the header/source split (`foo.h` / `foo.c`) is how C separates interface from implementation.
 
-[[0 - What C is]]
+[[00 - What C is]]
