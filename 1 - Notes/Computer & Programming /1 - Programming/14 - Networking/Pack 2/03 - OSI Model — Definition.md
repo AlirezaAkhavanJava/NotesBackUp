@@ -1,4 +1,4 @@
-
+[Professor Messer](https://www.youtube.com/watch?v=AYgXr1dynKU)
 
 The **OSI (Open Systems Interconnection) model** is a **conceptual framework that divides network communication between computers into seven logical layers**, with each layer responsible for a specific part of the communication process.
 

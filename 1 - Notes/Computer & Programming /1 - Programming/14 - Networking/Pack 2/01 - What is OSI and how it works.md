@@ -1,3 +1,6 @@
+
+[Video](https://www.youtube.com/watch?v=CRdL1PcherM)
+
 Imagine a world full of different devices, where each device is like a person speaking its own language, and none of them can understand each other. Without a common way for them to communicate, things would get pretty chaotic, right?
 
 Now, imagine the same situation in computer networks. We have different devices and systems, each using a specific protocol to communicate. If every device followed its own rules, modern networks simply wouldn’t work.
