@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "e2c4ccb185c4a1c4",
+        "id": "23cc416d046bd697",
         "type": "tabs",
         "children": [
           {
-            "id": "e32f77e2c94d332b",
+            "id": "1536eec72087e8c9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 3/06 - Propagation.md",
-                "mode": "source",
+                "file": "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 2/04 - Layers.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "06 - Propagation"
+              "title": "04 - Layers"
             }
           }
         ]
@@ -80,7 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 407.3032112121582
+    "width": 341.50517654418945
   },
   "right": {
     "id": "318802b81bf4bc9f",
@@ -168,44 +168,45 @@
       "bases:Create new base": false
     }
   },
-  "active": "e32f77e2c94d332b",
+  "active": "1536eec72087e8c9",
   "lastOpenFiles": [
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 3/12 - How the JVM finds a handler and unwinds the stack.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 3/11 - GC.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 3/10 - try-with-resources and AutoCloseable.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 3/09 - Custom Exceptions.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 3/08 - checked vs unchecked.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 3/07 - exception bubbling (Propagation).md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 3/00 - Java Exceptions.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 3/06 - Propagation.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 3/05 - Stack Unwinding.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 3/01 - Call Stack.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 3/03 - Stack Trace.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 3/04 - Exception Table.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2025/Pack 1/14 - Java Exception Handling 🧀.md",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 2/00 - OSI model.md",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 2/01 - What is OSI and how it works.md",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 2/04 - Layers.md",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 2/03 - OSI Model — Definition.md",
+    "lo.jpeg",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 2/00 - HTTP.md",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 2/02 - WebSocket.md",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 2/01 - HTTPS.md",
+    "1 - Notes/Computer & Programming /1 - Programming/18 - Go",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 2",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 4/1 - View.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 3/19 - Alter.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 4",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 3/18 - Soft Deletion.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 3/17 - Triggers part 2.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 3/16 - Triggers.md",
     "1 - Notes/Computer & Programming /1 - Programming/16 - AI/1 - Prompt Engineering/1 - Ask for teaching.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2025/Pack 1/13 - Modular Java ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2025/Pack 1/12 - Classes and Objects in Java ✧.md",
-    "Youtube.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2025/Pack 1/11 - Basics Interview Questions ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2025/Pack 1/10 - Object-Oriented Programming  ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2025/Pack 1/09 - Loops in Java ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2025/Pack 1/08 - Conditionals in Java ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2025/Pack 1/07 - Array ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2025/Pack 1/06 - Math Operations in Java ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 6/1 - Header, payload, and cookie.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 5/22 - Prod URL's.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 5/21 - URL design.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 3/15 - Text functions in SQLite3.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 3/09 -.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 3/08 - Copying rows from one table into another (with a filter).md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 3/07 - .import.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 3/06 - Removing data.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 3/05 - removing all rows from table.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 3/04 - Importing from a CSV.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 3/03 - Importing Data into SQLite from Different Formats.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 3/02 - INSERT ... SELECT and UPSERT.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 3/01 - Ways to Add Values to a Table in SQLite3.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 3/00 - INSERT INTO.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 5 (git Stage 2)/15 - Preventing merge conflicts.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 5 (git Stage 2)/14 - \"Ours\" and \"theirs\" in a conflict.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 5 (git Stage 2)",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 6",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 5",
     "1 - Notes/Computer & Programming /1 - Programming/15 - Programming in action/4 - Pack 4 (commands)",
     "1 - Notes/Computer & Programming /1 - Programming/17 - React",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2025/Pack 6 (Functional programming)/Stream api",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2025/Pack 6 (Functional programming)",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2025/Pack 5 (Collections)/Stream",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2025/Pack 5 (Collections)",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2025/Pack 4 (Threads)/Part 2",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2025/Pack 4 (Threads)/Part 1",
     "Pasted image 20261001092324.png",
     "Pasted image 20261001092418.png",
     "4 - Images/Pasted image 20261001091357.png",
@@ -215,7 +216,6 @@
     "4 - Images/Pasted image 20260921204749.png",
     "4 - Images/Screenshot From 2026-09-17 16-46-40.png",
     "4 - Images/Screenshot From 2026-09-17 16-46-40 1.png",
-    "Screenshot From 2026-09-17 16-46-40 1.png",
-    "Screenshot From 2026-09-17 16-46-40.png"
+    "Screenshot From 2026-09-17 16-46-40 1.png"
   ]
 }

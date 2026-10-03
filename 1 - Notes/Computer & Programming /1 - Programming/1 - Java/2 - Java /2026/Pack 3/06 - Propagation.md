@@ -1,5 +1,4 @@
 
-
 ## Mental model
 
 Unwinding was the _mechanism_ (popping frames, running cleanup). Propagation is the _contract and path_: which exceptions are allowed to travel up, how far they travel, and what happens to them on the way.
