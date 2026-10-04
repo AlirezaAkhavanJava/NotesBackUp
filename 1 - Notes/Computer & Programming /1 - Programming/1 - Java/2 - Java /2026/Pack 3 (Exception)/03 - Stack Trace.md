@@ -105,5 +105,5 @@ So an easy way to remember it:
 And when you're debugging Java/Spring Boot applications, you'll see stack traces **all the time**. Learning to read them is one of the most important debugging skills.
 
 
-
+[[Exception]]
 [[Java]]

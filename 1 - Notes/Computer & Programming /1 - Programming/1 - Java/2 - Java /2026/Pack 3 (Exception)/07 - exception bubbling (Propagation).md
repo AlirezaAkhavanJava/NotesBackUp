@@ -165,4 +165,5 @@ handle    unwind frame
 And this is exactly why the **exception table** you asked about earlier matters: at each method/frame, the JVM uses the method's exception-handling information to determine whether there is a suitable handler.
 
 
+[[Exception]]
 [[Java]]
