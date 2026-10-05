@@ -1,6 +1,6 @@
  
 
-> never rebase a public branch. Do rebase your own private branch onto the public one.**
+> never rebase a public branch. Do rebase your own private branch onto the public one.
 
 ## Why the direction matters
 
