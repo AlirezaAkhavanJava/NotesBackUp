@@ -205,4 +205,6 @@ I changed a few claims that were inaccurate:
 - The `writeObject` example in the original wrote `age` twice (once by default, once manually), which is confusing, so I replaced it with a realistic transient-field example.
 
 [[Java]]
-
+[[19 - Serialization ✧]]
+[[30 - Serializable]]
+[[Serialization]]
