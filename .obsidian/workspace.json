@@ -4,21 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "4ffc23d890df3d0c",
+        "id": "0dadedab26a4b3df",
         "type": "tabs",
         "children": [
           {
-            "id": "08a70508d912e4a5",
+            "id": "d617cb9af82fb7eb",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 10 (serialization)/00 - Serialization.md",
-                "mode": "preview",
-                "source": false
+                "file": "4 - Images/Pasted image 20261005112049.png"
               },
-              "icon": "lucide-file",
-              "title": "00 - Serialization"
+              "icon": "lucide-image",
+              "title": "Pasted image 20261005112049"
             }
           }
         ]
@@ -168,16 +166,30 @@
       "bases:Create new base": false
     }
   },
-  "active": "08a70508d912e4a5",
+  "active": "3535a2e099904c39",
   "lastOpenFiles": [
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 10 (serialization)/04 -  Is serialized data always deserialized?.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 09 (Java API)/1 - All API's.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 04 (serialization)/12 - The receiver extension vs format vs the data.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 04 (serialization)/11 - Making a class Serializable.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 04 (serialization)/10 - Serialization (adv).md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 04 (serialization)/14 - Serialization in Spring Boot.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 1/0 - Git.md",
+    "2 - Tags/Pro/CS/Git & Github.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 04 (serialization)/13 - What is Jackson.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 04 (serialization)/08 - Jackson how JSON becomes objects and back.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 04 (serialization)/09 -  Byte streams.md",
+    "4 - Images/Pasted image 20261005112049.png",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 04 (serialization)/06 - Flow of it.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 04 (serialization)/07 - The full request flow.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 04 (serialization)/05 - Who needs the data, and what actually travels.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 04 (serialization)/00 - Serialization.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 04 (serialization)/04 -  Is serialized data always deserialized?.md",
     "2 - Tags/Concepts/Serialization.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 10 (serialization)/00 - Serialization.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 10 (serialization)/01 - Why to Seralize.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 10 (serialization)/03 - Can fields go _into_ an existing object?.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 10 (serialization)/02 - Serialization → distributed objects → modern systems.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 04 (serialization)/01 - Why to Seralize.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 04 (serialization)/03 - Can fields go _into_ an existing object?.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 04 (serialization)/02 - Serialization → distributed objects → modern systems.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2025/Pack 1/19 - Serialization ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 10 (serialization)",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 04 (serialization)",
     "4 - Images/1791179066.jpg",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2025/Pack 1/18 - Java Records ✧.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 7/10 - @GeneratedValue strategies.md",
@@ -185,21 +197,8 @@
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 7/08 - Configuring JPA and Flyway in application.properties.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 7/07 - Spring Data JPA + Flyway.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 7/05 - @Table.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 7/06 - JPA and Hibernate Configuration in Spring Boot 4.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 7/04 - @Id and @GeneratedValue.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 7/03 - Telling Spring to read secrets from a local file.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/ADV Pack 2/Alibou/18 - @SuperBuilder.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 6/2 - Methods inside an entity.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 6/2 - @Entity.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 7/02 - Keeping your database password out of Git.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 7/01 - DB config.md",
-    "1 - Notes/Computer & Programming /1 - Programming/16 - AI/1 - Prompt Engineering/3 - Ask for advice.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 7/00 -  Why adding Spring Data JPA crashes your app.md",
-    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 6/05 - Solving Rebase Conflicts in Git.md",
-    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 6/06 - Why \"ours\" and \"theirs\" feel reversed during a rebase conflict.md",
-    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 6/07 - What rebase does.md",
     "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 6",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 9",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 00 (Simple concepts)",
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/Pack 3",
     "4 - Images/1791090768.jpg",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 7",
@@ -215,7 +214,6 @@
     "Pasted image 20261001091332.png",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/G - Real World Applications/Untitled.canvas",
     "4 - Images/Pasted image 20260921204917.png",
-    "4 - Images/Pasted image 20260921204749.png",
-    "4 - Images/Screenshot From 2026-09-17 16-46-40.png"
+    "4 - Images/Pasted image 20260921204749.png"
   ]
 }
