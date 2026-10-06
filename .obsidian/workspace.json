@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "0dadedab26a4b3df",
+        "id": "add16dd8a03b65ce",
         "type": "tabs",
         "children": [
           {
-            "id": "d617cb9af82fb7eb",
+            "id": "7eb48704781c219b",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "4 - Images/Pasted image 20261005112049.png"
+                "file": "2 - Tags/Concepts/Hashing.md",
+                "mode": "preview",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "Pasted image 20261005112049"
+              "icon": "lucide-file",
+              "title": "Hashing"
             }
           }
         ]
@@ -78,7 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 414.49919509887695
+    "width": 406.1977729797363
   },
   "right": {
     "id": "318802b81bf4bc9f",
@@ -166,54 +168,54 @@
       "bases:Create new base": false
     }
   },
-  "active": "3535a2e099904c39",
+  "active": "7eb48704781c219b",
   "lastOpenFiles": [
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 09 (Java API)/1 - All API's.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 04 (serialization)/12 - The receiver extension vs format vs the data.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 04 (serialization)/11 - Making a class Serializable.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 04 (serialization)/10 - Serialization (adv).md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 04 (serialization)/14 - Serialization in Spring Boot.md",
-    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 1/0 - Git.md",
-    "2 - Tags/Pro/CS/Git & Github.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 04 (serialization)/13 - What is Jackson.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 04 (serialization)/08 - Jackson how JSON becomes objects and back.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 04 (serialization)/09 -  Byte streams.md",
-    "4 - Images/Pasted image 20261005112049.png",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 04 (serialization)/06 - Flow of it.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 04 (serialization)/07 - The full request flow.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 04 (serialization)/05 - Who needs the data, and what actually travels.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 04 (serialization)/00 - Serialization.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 04 (serialization)/04 -  Is serialized data always deserialized?.md",
-    "2 - Tags/Concepts/Serialization.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 04 (serialization)/01 - Why to Seralize.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 04 (serialization)/03 - Can fields go _into_ an existing object?.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 04 (serialization)/02 - Serialization → distributed objects → modern systems.md",
+    "2 - Tags/Concepts/Lombok.md",
+    "2 - Tags/Concepts/Hashing.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2025/Pack 1/20 - Java Hashing 🧀.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 10 (Hashing)",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2025/Pack 1/21 - Initializer Block 🧀.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 04 (serialization)/16 - Hashing.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2025/Pack 1/19 - Serialization ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 8/02 - Relation Rules.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 8/01 - Parameters of the Relation Annotations.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 8/00 - Table Relations.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 7/13 - Entities are not Spring beans.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 8",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 5/6 - @RequestParam.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 7/12 - Designing Repository Interfaces.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 7/11 - JPARepository.md",
+    "4 - Images/Screenshot From 2026-10-05 16-36-14.jpg",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 7/12 - does stash works like a stack.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 7/11 - what is git stash and how to work with it ?.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 7/10 - Merge the pull request.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 7/09 - Pull request.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 7/08 - undo a squash.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 7/07 - The squash workflow.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 7/06 - Force push.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 7/05 - Pick and s.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 7/04 - why does rebase squash ?.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 7/03 - How to squash.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 7/02 - Squashing.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 7/01 - Accidental Commit.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 7/00 - git branch -d vs git branch -D.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 7",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 5",
+    "4 - Images/Pasted image 20261005112049.png",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 04 (serialization)",
     "4 - Images/1791179066.jpg",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2025/Pack 1/18 - Java Records ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 7/10 - @GeneratedValue strategies.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 7/09 - application.properties guide.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 7/08 - Configuring JPA and Flyway in application.properties.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 7/07 - Spring Data JPA + Flyway.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 7/05 - @Table.md",
     "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 6",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 00 (Simple concepts)",
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/Pack 3",
     "4 - Images/1791090768.jpg",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 7",
     "1 - Notes/Computer & Programming /1 - Programming/7 - C programming language/Pack 1",
-    "2 - Tags/Pro/FrameWork",
-    "2 - Tags/Concepts",
     "4 - Images/lo.jpeg",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3",
-    "1 - Notes/Computer & Programming /1 - Programming/18 - Go",
     "Pasted image 20261001092324.png",
     "Pasted image 20261001092418.png",
     "4 - Images/Pasted image 20261001091357.png",
     "Pasted image 20261001091332.png",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/G - Real World Applications/Untitled.canvas",
-    "4 - Images/Pasted image 20260921204917.png",
-    "4 - Images/Pasted image 20260921204749.png"
+    "4 - Images/Pasted image 20260921204917.png"
   ]
 }

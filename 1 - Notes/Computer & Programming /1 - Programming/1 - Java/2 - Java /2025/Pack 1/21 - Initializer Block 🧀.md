@@ -1,5 +1,4 @@
-Date : 2025-09-04
-# Java Initializer Blocks – Complete Guide (Up to Java 25)
+
 
 This guide explains **initializer blocks in Java**, including types, usage, order of execution, best practices, and modern features, from beginner to senior level.
 
