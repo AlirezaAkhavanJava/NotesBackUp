@@ -237,4 +237,4 @@ usually through keys and JOINs
 
 And this is exactly what **CS50 SQL Lecture 1 — "Relating"** is getting at: instead of putting everything into one giant table, you **normalize information into separate relations and establish relationships between them** using keys.
 
-[[1 - WHAT IS SQLITE3 🍕]]
+[[SQlite]]

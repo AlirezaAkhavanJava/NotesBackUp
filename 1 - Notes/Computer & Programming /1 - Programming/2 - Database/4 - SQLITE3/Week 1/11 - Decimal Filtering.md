@@ -86,5 +86,4 @@ ROUND()  → controls numeric rounding
 printf() → controls how the number is displayed
 ```
 
-
-[[1 - WHAT IS SQLITE3 🍕]]
+[[SQlite]]

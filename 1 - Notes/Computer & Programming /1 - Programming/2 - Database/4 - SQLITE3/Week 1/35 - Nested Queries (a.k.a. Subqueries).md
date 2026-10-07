@@ -62,6 +62,4 @@ Ask: **"Which table's columns actually show up in my final answer?"**
 - Any table that only supplies a value used inside `WHERE (...)`, never shown → goes **inside**, nested
 
 
-
-
-[[1 - WHAT IS SQLITE3 🍕]]
+[[SQlite]]

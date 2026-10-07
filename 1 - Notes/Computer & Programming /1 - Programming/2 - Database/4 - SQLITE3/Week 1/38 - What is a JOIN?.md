@@ -165,5 +165,4 @@ Try writing: **"List every person, and the title of a movie they starred in — 
 
 Think about which JOIN type that requires before you write it — that's the real skill here. Want to give it a shot and I'll check your answer?
 
-
-[[1 - WHAT IS SQLITE3 🍕]]
+[[SQlite]]

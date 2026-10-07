@@ -105,5 +105,4 @@ SQLite3 Commands
 ```
 
 One important correction: **TCL in SQL terminology usually means Transaction Control Language**, such as `BEGIN`, `COMMIT`, and `ROLLBACK`—not SQLite's `.tables`-style commands.
-
-[[1 - WHAT IS SQLITE3 🍕]]
+[[SQlite]]

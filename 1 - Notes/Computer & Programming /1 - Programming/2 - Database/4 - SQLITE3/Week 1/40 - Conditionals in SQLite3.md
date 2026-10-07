@@ -129,5 +129,4 @@ Try writing: **"Show each movie's title and label it 'Blockbuster' if it has mor
 
 Think about whether you need `WHERE`, `CASE`, or both — then give it a shot and I'll check it.
 
-
-[[1 - WHAT IS SQLITE3 🍕]]
+[[SQlite]]

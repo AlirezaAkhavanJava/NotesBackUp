@@ -148,7 +148,4 @@ SELECT * FROM table_name LIMIT 20; -- peek at actual rows
 SELECT COUNT(*) FROM table_name;  -- how many rows total?
 ```
 
-
-
-
-[[1 - WHAT IS SQLITE3 🍕]]
+[[SQlite]]

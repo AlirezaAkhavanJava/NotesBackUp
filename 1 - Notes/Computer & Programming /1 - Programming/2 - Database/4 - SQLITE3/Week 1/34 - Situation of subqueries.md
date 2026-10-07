@@ -112,5 +112,4 @@ That's the whole "problem it solves" in one sentence, tied to what you just expe
 
 
 
-
-[[1 - WHAT IS SQLITE3 🍕]]
+[[SQlite]]

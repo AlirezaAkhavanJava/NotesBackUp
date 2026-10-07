@@ -56,5 +56,4 @@ sqlite> SELECT * FROM users;
 
 **For your Linux setup, `~/.sqliterc` is exactly what you want.** It is essentially SQLite CLI's personal configuration file.
 
-
-[[1 - WHAT IS SQLITE3 🍕]]
+[[SQlite]]

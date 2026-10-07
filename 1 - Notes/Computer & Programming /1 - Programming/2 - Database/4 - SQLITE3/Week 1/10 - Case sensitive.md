@@ -121,4 +121,4 @@ LIKE    → case-insensitive (ASCII, by default)
 GLOB    → case-sensitive
 ```
 
-[[1 - WHAT IS SQLITE3 🍕]]
+[[SQlite]]

@@ -79,5 +79,4 @@ Bob | 60000
 ### **Performance Note**
 - **UNION** is slower (requires sorting to remove duplicates)
 - **UNION ALL** is faster (no duplicate removal)
-
-[[1 - WHAT IS SQLITE3 🍕]]]
+[[SQlite]]

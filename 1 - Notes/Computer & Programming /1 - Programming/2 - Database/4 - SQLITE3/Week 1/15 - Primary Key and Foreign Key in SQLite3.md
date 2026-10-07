@@ -316,4 +316,4 @@ If you remember only one thing:
 
 And this is the foundation for understanding **JOINs**, normalization, and relational database design.
 
-[[1 - WHAT IS SQLITE3 🍕]]
+[[SQlite]]

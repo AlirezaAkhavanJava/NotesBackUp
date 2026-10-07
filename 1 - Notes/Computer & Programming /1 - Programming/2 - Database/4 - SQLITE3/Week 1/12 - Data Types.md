@@ -295,5 +295,4 @@ BLOB
 ```
 
 That's the core of SQLite's type system.
-
-[[1 - WHAT IS SQLITE3 🍕]]
+[[SQlite]]

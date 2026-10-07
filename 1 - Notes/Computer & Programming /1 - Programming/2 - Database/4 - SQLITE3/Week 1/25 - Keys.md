@@ -76,5 +76,4 @@ All of these exist to solve two core problems:
 
 
 
-
-[[1 - WHAT IS SQLITE3 🍕]]
+[[SQlite]]

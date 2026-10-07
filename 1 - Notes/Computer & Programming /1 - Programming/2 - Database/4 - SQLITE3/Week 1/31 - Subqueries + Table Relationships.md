@@ -82,6 +82,4 @@ Table relationships (via primary/foreign keys) define **how data is connected**.
 > Good approach in one sentence: **map the foreign key path first (on paper if needed), then write the subqueries innermost-out, one per hop** — and if you find yourself needing columns from more than one table in the final output, switch to a JOIN instead.
 
 
-
-
-[[1 - WHAT IS SQLITE3 🍕]]
+[[SQlite]]

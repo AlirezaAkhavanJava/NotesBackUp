@@ -981,4 +981,4 @@ And keep this distinction firmly in your head:
 **That distinction is fundamental.** SQLite is the database engine, `sqlite3` is the CLI you can use to operate it, and SQL is the language you use to manipulate the database.
 
 
-[[1 - WHAT IS SQLITE3 🍕]]
+[[SQlite]]

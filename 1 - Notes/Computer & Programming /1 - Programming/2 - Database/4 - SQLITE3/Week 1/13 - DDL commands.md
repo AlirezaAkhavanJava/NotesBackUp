@@ -179,5 +179,4 @@ DATABASE
 
 DDL is the SQL you use to **build and change this architecture**.
 
-
-[[1 - WHAT IS SQLITE3 🍕]]
+[[SQlite]]

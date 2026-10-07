@@ -124,5 +124,4 @@ SELECT product_id FROM orders_2025;
 - Detect duplicate records across data sources
 - Find shared interests or data overlaps
 
-
-[[1 - WHAT IS SQLITE3 🍕]]
+[[SQlite]]

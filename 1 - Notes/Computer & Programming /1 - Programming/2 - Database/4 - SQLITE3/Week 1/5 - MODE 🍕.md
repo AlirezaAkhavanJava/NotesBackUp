@@ -448,5 +448,4 @@ LIMIT 10;
 ```
 
 That gives you a clean, readable database-console experience while you're learning.
-
-[[1 - WHAT IS SQLITE3 🍕]]
+[[SQlite]]

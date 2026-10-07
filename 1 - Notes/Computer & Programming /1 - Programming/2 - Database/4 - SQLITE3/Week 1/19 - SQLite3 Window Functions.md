@@ -200,5 +200,4 @@ SELECT
 FROM sales
 WINDOW win AS (PARTITION BY region ORDER BY sale_date ROWS UNBOUNDED PRECEDING);
 ```
-
-[[1 - WHAT IS SQLITE3 🍕]]
+[[SQlite]]

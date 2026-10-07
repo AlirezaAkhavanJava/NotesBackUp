@@ -76,4 +76,4 @@ By pulling `people` out into its own table with a primary key, and connecting it
 - **No arbitrary limits** — a movie can have 1 star or 50, no schema changes needed
 - **Consistency** — update a person's name once, it's correct everywhere
 
-[[1 - WHAT IS SQLITE3 🍕]]
+[[SQlite]]

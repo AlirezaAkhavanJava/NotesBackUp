@@ -277,4 +277,4 @@ SQL
 | **TCL**    | Transaction Control Language [[18 - TCL commands]]                      | `BEGIN`, `COMMIT`, `ROLLBACK`, `SAVEPOINT`, `RELEASE` |
 | **PRAGMA** | SQLite-specific database control/configuration [[17 - PRAGMA commands]] | `PRAGMA foreign_keys`, `PRAGMA journal_mode`, etc.    |
 
-[[1 - WHAT IS SQLITE3 🍕]]
+[[SQlite]]

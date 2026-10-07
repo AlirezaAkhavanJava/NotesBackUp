@@ -361,5 +361,4 @@ GROUP BY ...
 determines **the groups those rows belong to**.
 
 
-
-[[1 - WHAT IS SQLITE3 🍕]]
+[[SQlite]]

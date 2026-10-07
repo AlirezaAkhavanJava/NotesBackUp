@@ -136,5 +136,4 @@ WHERE id = (
 
 
 
-
-[[1 - WHAT IS SQLITE3 🍕]]
+[[SQlite]]

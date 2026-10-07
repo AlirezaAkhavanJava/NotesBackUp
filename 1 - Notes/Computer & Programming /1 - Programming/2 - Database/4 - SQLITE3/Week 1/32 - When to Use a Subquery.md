@@ -115,5 +115,4 @@ If there's any chance of multiple matches, you need `IN` instead of `=`, or bett
 > **Rule of thumb:** if you only need a _value_ from another table, subquery. If you need _rows_ (actual columns) from another table alongside your own, JOIN.
 
 
-
-[[1 - WHAT IS SQLITE3 🍕]]
+[[SQlite]]

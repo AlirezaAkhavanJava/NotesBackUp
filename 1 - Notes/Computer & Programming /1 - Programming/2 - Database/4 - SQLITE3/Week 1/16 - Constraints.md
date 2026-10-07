@@ -268,4 +268,4 @@ means:
 
 That's much stronger than merely checking the value in your Java application. Your Java code, another application, a script, or a SQL client all have to obey the same database invariant.
 
-[[1 - WHAT IS SQLITE3 🍕]]
+[[SQlite]]

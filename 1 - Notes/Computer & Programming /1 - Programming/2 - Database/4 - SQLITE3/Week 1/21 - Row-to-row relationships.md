@@ -207,5 +207,4 @@ Then the **constraints** determine whether that relationship is 1:1, 1:N, etc.
 
 If you're studying CS50 SQL, the next important concept after these is **how `JOIN` actually traverses these relationships**.
 
-
-[[1 - WHAT IS SQLITE3 🍕]]
+[[SQlite]]

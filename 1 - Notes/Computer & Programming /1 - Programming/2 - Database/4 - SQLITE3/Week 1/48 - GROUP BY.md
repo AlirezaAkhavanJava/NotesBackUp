@@ -416,4 +416,4 @@ The key idea is:
 > **`GROUP BY` partitions the rows into groups based on equal values, allowing aggregate functions to operate independently on each group.**
 
 
-[[1 - WHAT IS SQLITE3 🍕]]
+[[SQlite]]

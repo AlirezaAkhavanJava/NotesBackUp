@@ -223,5 +223,4 @@ Cardinality  → Constraints + database design
 ```
 
 And the relationship types you just asked about—**1:1, 1:N, and N:M**—are normally represented directly in an ER diagram.
-
-[[1 - WHAT IS SQLITE3 🍕]]
+[[SQlite]]

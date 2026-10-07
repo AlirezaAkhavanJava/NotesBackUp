@@ -1144,5 +1144,4 @@ sqlite3
 
 That's the mental model I would keep while working through CS50's database material.
 
-
-[[1 - WHAT IS SQLITE3 🍕]]
+[[SQlite]]

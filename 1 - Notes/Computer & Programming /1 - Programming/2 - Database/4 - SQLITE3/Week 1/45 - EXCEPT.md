@@ -93,4 +93,7 @@ Bob
 - Records deleted from one table
 - Items in one list but not another
 - Data discrepancies between two sources
-[[1 - WHAT IS SQLITE3 🍕]]
+
+
+
+[[SQlite]]

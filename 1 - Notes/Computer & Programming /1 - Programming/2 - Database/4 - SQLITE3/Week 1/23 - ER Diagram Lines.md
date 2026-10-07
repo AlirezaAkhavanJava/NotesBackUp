@@ -487,5 +487,4 @@ O────O    = 0..1 : 0..1
 The two concepts to master are **cardinality** (how many?) and **optionality/participation** (is zero allowed?). Once those click, ER diagrams become much easier to read.
 
 
-
-[[1 - WHAT IS SQLITE3 🍕]]
+[[SQlite]]

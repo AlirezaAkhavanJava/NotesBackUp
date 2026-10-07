@@ -499,4 +499,4 @@ O = minimum 0
 
 So **`O<` literally means `0..many`**. That's the key to decoding Crow's Foot diagrams.
 
-[[1 - WHAT IS SQLITE3 🍕]]
+[[SQlite]]

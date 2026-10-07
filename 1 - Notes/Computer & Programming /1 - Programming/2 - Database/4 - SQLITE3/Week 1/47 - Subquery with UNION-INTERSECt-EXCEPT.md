@@ -433,4 +433,4 @@ WHERE ...;
 You can nest these derived tables to create explicit logical grouping instead of writing one giant compound expression.
 
 
-[[1 - WHAT IS SQLITE3 🍕]]
+[[SQlite]]

@@ -51,5 +51,4 @@ WHERE publishers.publisher = 'Europa Editions';
 
 If you find yourself reaching for a subquery and then wishing you could also grab one more column from the inner table — that's your signal you actually wanted a JOIN all along.
 
-
-[[1 - WHAT IS SQLITE3 🍕]]
+[[SQlite]]

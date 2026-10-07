@@ -60,5 +60,4 @@ The problem this solves: it removes the need for **manual, multi-step, human-in-
 
 You _could_ rewrite most subqueries as a `JOIN` instead, and often `JOIN`s perform better in SQLite3. Subqueries tend to be more readable when you're filtering based on a single derived value; `JOIN`s tend to be better when you actually need columns _from both tables_ in your final result. We can compare these side-by-side with the movies schema if you want — that's a very common CS50 stumbling point.
 
-
-[[1 - WHAT IS SQLITE3 🍕]]
+[[SQlite]]

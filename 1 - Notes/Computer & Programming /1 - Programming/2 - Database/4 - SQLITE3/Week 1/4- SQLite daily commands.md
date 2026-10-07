@@ -560,4 +560,4 @@ For a **Java developer using SQLite**, the most important ones are:
 
 Those are the commands you will actually use almost every day.
 
-[[1 - WHAT IS SQLITE3 🍕]]
+[[SQlite]]

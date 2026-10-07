@@ -519,4 +519,4 @@ SQLite
 
 That's the distinction I recommend keeping very clear while you're going through CS50.
 
-[[1 - WHAT IS SQLITE3 🍕]]
+[[SQlite]]

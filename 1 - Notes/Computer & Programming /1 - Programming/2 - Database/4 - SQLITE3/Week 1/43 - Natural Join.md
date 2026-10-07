@@ -63,5 +63,4 @@ SELECT * FROM authors JOIN books ON authors.author_id = books.author_id;
 
 
 
-
-[[1 - WHAT IS SQLITE3 🍕]]
+[[SQlite]]

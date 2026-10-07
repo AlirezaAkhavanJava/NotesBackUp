@@ -171,5 +171,4 @@ SELECT ROUND(avg_val, 2);
 
 Want to practice with something concrete from the CS50 `movies.db` — like "what percentage of a movie's votes come from movies released after 2010" or similar, so you can apply the subquery-as-scalar pattern yourself?
 
-
-[[1 - WHAT IS SQLITE3 🍕]]
+[[SQlite]]

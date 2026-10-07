@@ -104,5 +104,4 @@ _(One caveat: if you ever write custom SQLite triggers, there's a separate featu
 
 Want to try converting an if-else you'd write in Java (since you're learning that too) into the equivalent `CASE` statement in SQL? Could be a useful way to cement how the "same logic, different paradigm" translation works.
 
-
-[[1 - WHAT IS SQLITE3 🍕]]
+[[SQlite]]

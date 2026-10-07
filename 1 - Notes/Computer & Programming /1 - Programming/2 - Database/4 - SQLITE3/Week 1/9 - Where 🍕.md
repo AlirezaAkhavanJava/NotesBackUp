@@ -423,5 +423,4 @@ WHERE
 ```
 
 The most important mental model is: **`WHERE` doesn't modify the rows—it decides which rows are allowed to continue through the query.**
-
-[[1 - WHAT IS SQLITE3 🍕]]
+[[SQlite]]

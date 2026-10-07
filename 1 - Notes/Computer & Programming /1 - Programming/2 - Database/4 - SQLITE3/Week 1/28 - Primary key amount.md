@@ -48,5 +48,4 @@ A table like `enrollments` in a school database might even have three or four: `
 
 So your instinct is correct — you just want to remember that "one primary key" doesn't mean "one column." It means one uniqueness rule that identifies the row, even if that rule needs several columns to do its job.
 
-
-[[1 - WHAT IS SQLITE3 🍕]]
+[[SQlite]]

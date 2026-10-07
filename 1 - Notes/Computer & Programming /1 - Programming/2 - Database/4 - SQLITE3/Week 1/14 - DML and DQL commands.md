@@ -198,4 +198,4 @@ DQL → What data do I want to retrieve?
 
 For SQLite3, that's a very useful mental model. One nuance: SQL command classifications aren't completely standardized across all textbooks/databases; some classify `SELECT` under DML rather than DQL, but treating `SELECT` as **DQL** is extremely common and useful for learning.
 
-[[1 - WHAT IS SQLITE3 🍕]]
+[[SQlite]]
