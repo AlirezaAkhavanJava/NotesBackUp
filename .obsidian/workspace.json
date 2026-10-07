@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "57d46a1065541684",
+        "id": "d630c5ca4eaee493",
         "type": "tabs",
         "children": [
           {
-            "id": "576028fb8cc5bd10",
+            "id": "8136590c5ad43d29",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3 (History)/01 - Internet.md",
+                "file": "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 4/01 - What is a Router?.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01 - Internet"
+              "title": "01 - What is a Router?"
             }
           }
         ]
@@ -168,10 +168,23 @@
       "bases:Create new base": false
     }
   },
-  "active": "576028fb8cc5bd10",
+  "active": "8136590c5ad43d29",
   "lastOpenFiles": [
-    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3 (History)/00 - World wide web.md",
+    "4 - Images/Pasted image 20261007191610.png",
+    "Pasted image 20261007191722.png",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 4/01 - What is a Router?.md",
+    "4 - Images/Pasted image 20261007191728.png",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 4/00 - What is a network switch?.md",
+    "Pasted image 20261007191536.png",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 0 (Contents and Roadmap)/00 - Roadmap.md",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 4",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 0 (Contents and Roadmap)/01 - Roadmap (Part 2).md",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3 (History)/34 - Modulation.md",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 0 (Contents and Roadmap)",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3 (History)/33 - Telecommunication.md",
     "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3 (History)/32 - What does \"protocol\" mean?.md",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3 (History)/01 - Internet.md",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3 (History)/00 - World wide web.md",
     "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3 (History)/31 - What were they sending?.md",
     "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3 (History)/30 - Mainframes.md",
     "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3 (History)/29 - First Network.md",
@@ -189,33 +202,19 @@
     "4 - Images/Pasted image 20261007182245.png",
     "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3 (History)/17 - AOL — America Online.md",
     "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3 (History)/16 - Internet Explorer.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3 (History)/15 - Netscape Navigator.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3 (History)/14 - Mosiac.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3 (History)/13 - The first Web browser.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3 (History)/12 - HTML , HTTP , WWW , URL.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3 (History)/11 - DNS — Domain Name System.md",
     "4 - Images/Pasted image 20261007180948.png",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3 (History)/10 - \"Flag Day\" — January 1, 1983.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3 (History)/09 - TCP-IP invention.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3 (History)/08 - The @ symbol and the invention of email.md",
     "4 - Images/Pasted image 20261007180418.png",
     "4 - Images/Pasted image 20261007171439.png",
     "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 8 (Final)",
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 6",
     "4 - Images/Screenshot From 2026-10-07 10-51-16.png",
     "Screenshot From 2026-10-07 10-51-16.jpg",
-    "4 - Images/1791349370.jpg",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 10 (Hashing)",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 8",
-    "4 - Images/Screenshot From 2026-10-05 16-36-14.jpg",
     "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 7",
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 5",
-    "4 - Images/Pasted image 20261005112049.png",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 04 (serialization)",
-    "4 - Images/1791179066.jpg",
     "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 6",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 00 (Simple concepts)",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/Pack 3",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/G - Real World Applications/Untitled.canvas"
   ]
 }
