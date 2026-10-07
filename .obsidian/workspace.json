@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "13c43b1d24a67848",
+        "id": "57d46a1065541684",
         "type": "tabs",
         "children": [
           {
-            "id": "c16150bab2d69020",
+            "id": "576028fb8cc5bd10",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 5/18 - SCAN.md",
-                "mode": "preview",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "18 - SCAN"
+              "title": "New tab"
             }
           }
         ]
@@ -168,34 +164,37 @@
       "bases:Create new base": false
     }
   },
-  "active": "c16150bab2d69020",
+  "active": "3535a2e099904c39",
   "lastOpenFiles": [
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 5/17 - Partial Index in SQLite.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 8 (Final)/11 - conventional tag.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 8 (Final)/10 - Semantic Versioning — SemVer.md",
+    "4 - Images/Pasted image 20261007171439.png",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 8 (Final)/09 - Git Tags.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 8 (Final)/08 - Deleting worktrees.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 8 (Final)/07 - How can you tell if a branch is checked out in a different worktree when running 'git branch'?.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 8 (Final)/06 - Git worktree.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 8 (Final)/05 - Working Tree.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 8 (Final)/04 - bisect run.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 8 (Final)/03 - Git Bisect — Your Actual Investigation.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 8 (Final)/02 - Git Bisect.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 8 (Final)/01 - Cherrypick.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 8 (Final)/00 - Git diff.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 7/17 - Revert vs Reset.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 8 (Final)",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 7/16 - Git revert.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 7/15 - Recovering a dropped stash.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 7/14 - The stuff around git stash apply — briefly.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 7/13 - git stash apply.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 5/22 - How VACUUM Works Internally in SQLite.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 6",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 5/21 - Useful CLI Commands for Database Size, RAM, Disk, and Units.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 5/20 - SQLite auto_vacuum.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 5/19 - Vacuum.md",
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 5/18 - SCAN.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 5/17 - Partial Index in SQLite.md",
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 5/16 - How SQLite Searches a B-Tree Page and Follows Child Pages.md",
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 1/49 - Group By with JOIN.md",
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 1/48 - GROUP BY.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 1/47 - Subquery with UNION-INTERSECt-EXCEPT.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 1/46 - INTERSECT.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 1/45 - EXCEPT.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 1/44 - SET's.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 1/43 - Natural Join.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 1/42 - OUTER JOINs.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 1/41 - If-Else Statements in SQLite3.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 1/40 - Conditionals in SQLite3.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 1/39 - Data Operations.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 1/38 - What is a JOIN?.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 1/37 - Subqueries vs JOINs.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 1/36 - Subquery Rules.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 1/35 - Nested Queries (a.k.a. Subqueries).md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 1/34 - Situation of subqueries.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 1/32 - When to Use a Subquery.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 1/30 - Subquery.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 1/31 - Subqueries + Table Relationships.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 1/29 - SQLite3 internal.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 1/28 - Primary key amount.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 1/27 - Primary key Integer or hash.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 1/26 - CS50's classic IMDB.md",
     "4 - Images/Screenshot From 2026-10-07 10-51-16.png",
     "Screenshot From 2026-10-07 10-51-16.jpg",
     "4 - Images/1791349370.jpg",
@@ -211,11 +210,8 @@
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 00 (Simple concepts)",
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/Pack 3",
     "4 - Images/1791090768.jpg",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 7",
-    "1 - Notes/Computer & Programming /1 - Programming/7 - C programming language/Pack 1",
     "4 - Images/lo.jpeg",
     "Pasted image 20261001092324.png",
-    "Pasted image 20261001092418.png",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/G - Real World Applications/Untitled.canvas"
   ]
 }
