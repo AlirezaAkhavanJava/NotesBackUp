@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 - Tags/Concepts/Hashing.md",
+                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 8/09 - DTO.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Hashing"
+              "title": "09 - DTO"
             }
           }
         ]
@@ -168,16 +168,24 @@
       "bases:Create new base": false
     }
   },
-  "active": "7eb48704781c219b",
+  "active": "3535a2e099904c39",
   "lastOpenFiles": [
-    "2 - Tags/Concepts/Lombok.md",
+    "4 - Images/1791349370.jpg",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 8/08 - JsonManagedReference.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 8/09 - DTO.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 8/07 - Jackson Annotations All.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 8/06 - Jackson Annotations for Recursion and Hiding Fields.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 8/05 - Infinite Recursion in Jackson with Bidirectional Mappings.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 8/04 - JoinColumn Internal.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 8/03 - JoinColumn.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 8/02 - Relation Rules.md",
     "2 - Tags/Concepts/Hashing.md",
+    "2 - Tags/Concepts/Lombok.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2025/Pack 1/20 - Java Hashing 🧀.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 10 (Hashing)",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2025/Pack 1/21 - Initializer Block 🧀.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 04 (serialization)/16 - Hashing.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2025/Pack 1/19 - Serialization ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 8/02 - Relation Rules.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 8/01 - Parameters of the Relation Annotations.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 8/00 - Table Relations.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 7/13 - Entities are not Spring beans.md",
@@ -191,14 +199,6 @@
     "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 7/10 - Merge the pull request.md",
     "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 7/09 - Pull request.md",
     "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 7/08 - undo a squash.md",
-    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 7/07 - The squash workflow.md",
-    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 7/06 - Force push.md",
-    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 7/05 - Pick and s.md",
-    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 7/04 - why does rebase squash ?.md",
-    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 7/03 - How to squash.md",
-    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 7/02 - Squashing.md",
-    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 7/01 - Accidental Commit.md",
-    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 7/00 - git branch -d vs git branch -D.md",
     "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 7",
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 5",
     "4 - Images/Pasted image 20261005112049.png",
