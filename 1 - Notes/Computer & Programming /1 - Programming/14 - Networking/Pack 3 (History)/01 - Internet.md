@@ -1,6 +1,9 @@
 
 ## What is the Internet?
 
+
+[Birth of the Internet](https://www.youtube.com/watch?v=VPToE8vwKew&t=98s)
+
 The **Internet is a global network of interconnected computer networks** that communicate using a common family of protocols, primarily **TCP/IP**.
 
 The simplest mental model is:
