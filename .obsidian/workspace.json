@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "add16dd8a03b65ce",
+        "id": "13c43b1d24a67848",
         "type": "tabs",
         "children": [
           {
-            "id": "7eb48704781c219b",
+            "id": "c16150bab2d69020",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 8/09 - DTO.md",
+                "file": "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 5/03 - CREATE INDEX in SQLite.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "09 - DTO"
+              "title": "03 - CREATE INDEX in SQLite"
             }
           }
         ]
@@ -168,37 +168,40 @@
       "bases:Create new base": false
     }
   },
-  "active": "3535a2e099904c39",
+  "active": "c16150bab2d69020",
   "lastOpenFiles": [
-    "4 - Images/1791349370.jpg",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 8/08 - JsonManagedReference.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 8/09 - DTO.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 8/07 - Jackson Annotations All.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 8/06 - Jackson Annotations for Recursion and Hiding Fields.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 8/05 - Infinite Recursion in Jackson with Bidirectional Mappings.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 8/04 - JoinColumn Internal.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 8/03 - JoinColumn.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 8/02 - Relation Rules.md",
-    "2 - Tags/Concepts/Hashing.md",
-    "2 - Tags/Concepts/Lombok.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2025/Pack 1/20 - Java Hashing 🧀.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 10 (Hashing)",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2025/Pack 1/21 - Initializer Block 🧀.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 04 (serialization)/16 - Hashing.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 10 (Hashing)/17 - What a hash code points to.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 10 (Hashing)/15 - Designing hashCode() for your own classes.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 10 (Hashing)/16 - Ticket.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 10 (Hashing)/00 - Hashing.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 10 (Hashing)/13 - hashCode.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 10 (Hashing)/14 - Hash algorithms- picking the right one for the job.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 0/3 - Spring + Spring Boot.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 10 (Hashing)/01 - Hash Function in Java.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 10 (Hashing)/12 - Labels in Java.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2025/Pack 2/02 - Java Binding 🧀.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2025/Pack 2/03 - Java Pass by Value vs Pass by Reference 🧀.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2025/Pack 2/01 - Method Overloading and Overriding 🧀.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2025/Pack 2/00 - Java Encapsulation ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2025/Pack 1/24 - Interface vs Abstract Class ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 10 (Hashing)/10 - The three rules that make equals() trustworthy.md",
+    "1 - Notes/Computer & Programming /1 - Programming/16 - AI/1 - Prompt Engineering/3 - Ask for advice.md",
+    "1 - Notes/Computer & Programming /1 - Programming/16 - AI/1 - Prompt Engineering/2 - Ask fot teaching (network).md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 10 (Hashing)/11 - The last two rules consistent and non-null.md",
+    "1 - Notes/Computer & Programming /1 - Programming/16 - AI/1 - Prompt Engineering/1 - Ask for teaching.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 10 (Hashing)/09 - Custom.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 10 (Hashing)/08 - Internals.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2025/Pack 1/23 - Types of Java Classes ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2025/Pack 1/22 - Inheritance and Abstraction ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2025/Pack 1/21 - Initializer Block ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2025/Pack 1/20 - Java Hashing ✧.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2025/Pack 1/19 - Serialization ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 8/01 - Parameters of the Relation Annotations.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 8/00 - Table Relations.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 7/13 - Entities are not Spring beans.md",
+    "4 - Images/Screenshot From 2026-10-07 10-51-16.png",
+    "Screenshot From 2026-10-07 10-51-16.jpg",
+    "4 - Images/1791349370.jpg",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 10 (Hashing)",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 8",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 5/6 - @RequestParam.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 7/12 - Designing Repository Interfaces.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 7/11 - JPARepository.md",
     "4 - Images/Screenshot From 2026-10-05 16-36-14.jpg",
-    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 7/12 - does stash works like a stack.md",
-    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 7/11 - what is git stash and how to work with it ?.md",
-    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 7/10 - Merge the pull request.md",
-    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 7/09 - Pull request.md",
-    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 7/08 - undo a squash.md",
     "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 7",
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 5",
     "4 - Images/Pasted image 20261005112049.png",
@@ -213,9 +216,6 @@
     "4 - Images/lo.jpeg",
     "Pasted image 20261001092324.png",
     "Pasted image 20261001092418.png",
-    "4 - Images/Pasted image 20261001091357.png",
-    "Pasted image 20261001091332.png",
-    "1 - Notes/Computer & Programming & Networking & CyberSecurity/G - Real World Applications/Untitled.canvas",
-    "4 - Images/Pasted image 20260921204917.png"
+    "1 - Notes/Computer & Programming & Networking & CyberSecurity/G - Real World Applications/Untitled.canvas"
   ]
 }
