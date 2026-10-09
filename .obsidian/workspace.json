@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "d630c5ca4eaee493",
+        "id": "37967d1fabfc90b6",
         "type": "tabs",
         "children": [
           {
-            "id": "8136590c5ad43d29",
+            "id": "09f1f1ef0effe9bc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 4/01 - What is a Router?.md",
+                "file": "godsplan.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01 - What is a Router?"
+              "title": "godsplan"
             }
           }
         ]
@@ -80,7 +80,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 406.1977729797363
+    "width": 391.5347785949707,
+    "collapsed": true
   },
   "right": {
     "id": "318802b81bf4bc9f",
@@ -168,10 +169,25 @@
       "bases:Create new base": false
     }
   },
-  "active": "8136590c5ad43d29",
+  "active": "09f1f1ef0effe9bc",
   "lastOpenFiles": [
+    "godsplan.md",
+    "GodsPlan.md",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 1 (Fundamentals)/48 - DNS.md",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3 (History)/11 - DNS — Domain Name System.md",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3 (History)/10 - \"Flag Day\" — January 1, 1983.md",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3 (History)/09 - TCP-IP invention.md",
     "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 4/00 - What is a network switch?.md",
     "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 4/01 - What is a Router?.md",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3 (History)/34 - Modulation.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /0 - Practice/Untitled.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /0 - Practice/0 - variables.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /0 - Practice/1 - format.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /0 - Practice/2 - ParseInt.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /0 - Practice/3 - All String related classes p1.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /0 - Practice/4 - All String related classes p2.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /0 - Practice/5 - All Math related classes.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 0/1 - Library , Framework and API.md",
     "4 - Images/Pasted image 20261007191610.png",
     "Pasted image 20261007191722.png",
     "4 - Images/Pasted image 20261007191728.png",
@@ -179,7 +195,6 @@
     "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 0 (Contents and Roadmap)/00 - Roadmap.md",
     "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 4",
     "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 0 (Contents and Roadmap)/01 - Roadmap (Part 2).md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3 (History)/34 - Modulation.md",
     "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 0 (Contents and Roadmap)",
     "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3 (History)/33 - Telecommunication.md",
     "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3 (History)/32 - What does \"protocol\" mean?.md",
@@ -188,20 +203,7 @@
     "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3 (History)/31 - What were they sending?.md",
     "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3 (History)/30 - Mainframes.md",
     "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3 (History)/29 - First Network.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3 (History)/28 - Great Six.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3 (History)/27 - Physical.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3 (History)/26 - wireless networking.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3 (History)/25 - Cloud Computing , CDN , DS.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3 (History)/24 - First Social media and phone.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3 (History)/23 - dynamic websites.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3 (History)/22 - Web 2.0.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3 (History)/21 - hyperlink.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3 (History)/20 - PageRank.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3 (History)/19 - domain-name hierarchy.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3 (History)/18 - Modem.md",
     "4 - Images/Pasted image 20261007182245.png",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3 (History)/17 - AOL — America Online.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - Networking/Pack 3 (History)/16 - Internet Explorer.md",
     "4 - Images/Pasted image 20261007180948.png",
     "4 - Images/Pasted image 20261007180418.png",
     "4 - Images/Pasted image 20261007171439.png",
