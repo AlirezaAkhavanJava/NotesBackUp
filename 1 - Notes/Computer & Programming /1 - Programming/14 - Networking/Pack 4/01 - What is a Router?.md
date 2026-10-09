@@ -1,4 +1,4 @@
-![[Pasted image 20261007191728.png]]
+
 
 
 A **router** is a network device that **connects different IP networks and forwards packets between them**.
