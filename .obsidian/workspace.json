@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "b90b835982be0191",
+        "id": "7115729043a8b9c4",
         "type": "tabs",
         "children": [
           {
-            "id": "774fce9053b69014",
+            "id": "29e728d6cb818e6e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 02 (OOP Concepts)/6 - Reflection.md",
-                "mode": "preview",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "6 - Reflection"
+              "title": "New tab"
             }
           }
         ]
@@ -80,7 +76,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 392.6152534484863
+    "width": 437.20329666137695
   },
   "right": {
     "id": "318802b81bf4bc9f",
@@ -168,34 +164,40 @@
       "bases:Create new base": false
     }
   },
-  "active": "774fce9053b69014",
+  "active": "3535a2e099904c39",
   "lastOpenFiles": [
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 02 (OOP Concepts)/5 - Java Annotations.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 02 (OOP Concepts)/4 - The Object Class and Cloneable.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 02 (OOP Concepts)/3 - The Object Class.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 02 (OOP Concepts)/2 - Abstract classes vs interfaces.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 02 (OOP Concepts)/1 - OOP.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2025/Pack 2/04 - Types of Java Interfaces 🧀.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2025/Pack 2/01 - Method Overloading and Overriding ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2025/Pack 2/00 - Java Encapsulation ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 01 (JVM & Java Internals)/32 - Pass by Value and Pass by Reference.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 00 (Simple concepts)/28 - Interface vs Abstract Class ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 00 (Simple concepts)/27 - Types of Java Classes ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 00 (Simple concepts)/26 - Inheritance and Abstraction ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 00 (Simple concepts)/25 - Initializer Block ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 00 (Simple concepts)/24 - Java Hashing ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 00 (Simple concepts)/23 - Serialization ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 00 (Simple concepts)/22 - Java Records ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 00 (Simple concepts)/21 - Enums ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 00 (Simple concepts)/20 - Method Chaining ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 00 (Simple concepts)/19 - Java Object Lifecycle ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 00 (Simple concepts)/18 - Java Exception Handling ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 00 (Simple concepts)/17 - Modular Java ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 00 (Simple concepts)/16 - Classes and Objects in Java ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 00 (Simple concepts)/15 - Basics Interview Questions ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 00 (Simple concepts)/14 - Object-Oriented Programming  ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 00 (Simple concepts)/13 - Loops in Java ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 00 (Simple concepts)/12 - Conditionals in Java ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2025/Pack 7 (Overall)/Untitled",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 14 (Java Language Features & APIs)/53 - Java 26.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 14 (Java Language Features & APIs)/52 - Java 25.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 14 (Java Language Features & APIs)/51 - JDK 21.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 14 (Java Language Features & APIs)/50 - Java 17.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 14 (Java Language Features & APIs)/49 - Module 2.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 14 (Java Language Features & APIs)/48 - Modules.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 14 (Java Language Features & APIs)/47 - Java Regular Expressions — Pattern and Matcher.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 14 (Java Language Features & APIs)/46 - Java Time API.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 14 (Java Language Features & APIs)/45 - JOptionPane.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 14 (Java Language Features & APIs)/44 - JDBC.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 14 (Java Language Features & APIs)/43 - Writing Efficient IO & Serialization Code.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 14 (Java Language Features & APIs)/42 - Serialization & Deserialization — In Depth.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 14 (Java Language Features & APIs)/41 - Serialization in Java.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 14 (Java Language Features & APIs)/40 - Input & Output Streams in Java — In Depth.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 14 (Java Language Features & APIs)/39 - Byte Stream.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 14 (Java Language Features & APIs)/38 - Java IO.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 14 (Java Language Features & APIs)/37 - Userinput.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 14 (Java Language Features & APIs)/36 - Try-With-Resources.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 14 (Java Language Features & APIs)/35 - Finally().md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 14 (Java Language Features & APIs)/34 - try - catch - throw - throws.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 14 (Java Language Features & APIs)/33 - Custom Exception.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 14 (Java Language Features & APIs)/32 - Exception.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 14 (Java Language Features & APIs)/31 - Runnable, Callable, and Comparator.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 14 (Java Language Features & APIs)/30 - Creating Your Own Method References.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 14 (Java Language Features & APIs)/29 - The method reference operator.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 14 (Func)",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2025/Pack 4 (Threads)/Part 2",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 13 (Java IO Operations)",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 04 (serialization)/Pack 1 ()",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 12 (Modular)",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 11 (Annotation)",
     "4 - Images/Pasted image 20261007191610.png",
     "Pasted image 20261007191722.png",
     "4 - Images/Pasted image 20261007191728.png",
@@ -210,12 +212,6 @@
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 6",
     "4 - Images/Screenshot From 2026-10-07 10-51-16.png",
     "Screenshot From 2026-10-07 10-51-16.jpg",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 10 (Hashing)",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Spring & Spring Boot/Pack 8",
-    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 7",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 5",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /2026/Pack 04 (serialization)",
-    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 6",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/G - Real World Applications/Untitled.canvas"
   ]
 }
