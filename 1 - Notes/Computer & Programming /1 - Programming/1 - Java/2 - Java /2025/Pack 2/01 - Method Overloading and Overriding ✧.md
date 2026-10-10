@@ -1,6 +1,6 @@
-Date : 2025-09-04
 
-# Java Method Overloading and Overriding – Complete Guide (Up to Java 25)
+
+
 
 This guide explains **method overloading and overriding in Java**, including definitions, syntax, rules, examples, best practices, advanced features, and real-world usage, from beginner to senior level.
 
