@@ -4,6 +4,7 @@
 
 Every program needs I/O. A program that cannot read or write data can compute results but cannot save them, receive a request, or show anything to a user.
 
+---
 ## Why I/O needs special treatment
 
 Inside the program, data lives in memory, which is fast and temporary. Outside the program, data lives in places like disks and networks. Those places are much slower than memory and the CPU, and they can fail. A disk can be full, a file can be missing, and a network connection can drop.
@@ -14,6 +15,7 @@ Because of this, Java treats I/O as a separate concern with its own rules:
 - Outside resources such as file handles and sockets are limited, so they must be **closed** when you finish with them.
 - Reading and writing one byte at a time is very slow, so I/O is usually **buffered**, meaning data moves in larger chunks.
 
+---
 ## The central idea: streams
 
 A **stream** is a sequence of data that flows in one direction, read or written in order. You do not need to know whether the data comes from a file, a network socket, or the keyboard. The code reads from the stream the same way.
@@ -25,10 +27,13 @@ Java splits streams into two families based on the unit of data:
 |Byte streams|8-bit bytes|`InputStream`, `OutputStream`|Anything: images, PDFs, zip files, any binary data|
 |Character streams|16-bit chars, decoded with a charset|`Reader`, `Writer`|Text|
 
-The rule is simple: use byte streams for raw data and character streams for text. Text stored as bytes must be decoded with a **charset** such as UTF-8 to become characters. Forgetting this step is the source of most garbled-text bugs.
+The rule is simple: ***use byte streams for raw data and character streams for text***. Text stored as bytes must be decoded with a **charset** such as UTF-8 to become characters. Forgetting this step is the source of most garbled-text bugs.
 
 Each family has concrete classes for each source. For example, `FileInputStream` reads bytes from a file, and `FileReader` reads characters from one.
 
+
+
+---
 ## Wrapping streams: the decorator pattern
 
 A basic stream reads one thing at a time. A **wrapper** (or decorator) adds a feature by holding another stream inside it and delegating to it. `BufferedReader` wraps a `Reader` and adds buffering and the `readLine` method. The same chain can be nested:
