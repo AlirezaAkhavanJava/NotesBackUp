@@ -73,7 +73,7 @@ import java.nio.charset.StandardCharsets;
 
 public class TextIODemo {
     public static void main(String[] args) throws IOException {
-        File file = new File("notes.txt");   // relative path: the current folder
+        File file = new File("notes.txt");// relative path: the current folder
 
         // Output: characters -> UTF-8 bytes -> file, buffered
         try (BufferedWriter writer = new BufferedWriter(

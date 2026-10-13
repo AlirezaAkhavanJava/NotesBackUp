@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Testing)/Part 2 (Mocking)/04 - Mockito with a setUp Method and openMocks.md",
+                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 05 (IO Operations)/Part 00 (Core)/03 - why the data is being sent in chucks in streams ? ✧.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "04 - Mockito with a setUp Method and openMocks"
+              "title": "03 - why the data is being sent in chucks in streams ? ✧"
             }
           }
         ]
@@ -96,6 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 05 (IO Operations)/Part 00 (Core)/03 - why the data is being sent in chucks in streams ? ✧.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,6 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 05 (IO Operations)/Part 00 (Core)/03 - why the data is being sent in chucks in streams ? ✧.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -142,6 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 05 (IO Operations)/Part 00 (Core)/03 - why the data is being sent in chucks in streams ? ✧.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -150,11 +153,12 @@
               "title": "Outline"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 200,
     "collapsed": true
   },
   "left-ribbon": {
@@ -170,8 +174,25 @@
   },
   "active": "76c7db815fc0c1a1",
   "lastOpenFiles": [
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Testing)/Part 2 (Mocking)/03 - @Mock and @InjectMocks.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 05 (IO Operations)/Part 00 (Core)/04 - Console IO.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 05 (IO Operations)/Part 00 (Core)/03 - why the data is being sent in chucks in streams ? ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 05 (IO Operations)/Part 00 (Core)/02 - what was the problem streams solved? ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 05 (IO Operations)/Part 01 (Basic IO learning terms)/10 - To Byte or Not to Byte, That Is the Chunk.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 05 (IO Operations)/Part 01 (Basic IO learning terms)/09 - Everything is Stream.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 05 (IO Operations)/RoadMap/Roadmap.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 05 (IO Operations)/RoadMap",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 05 (IO Operations)/Part 00 (Core)/01 - What is a Resource ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 05 (IO Operations)/Part 00 (Core)/00 - Input and Output (IO) in Java ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 05 (IO Operations)/Part 00 (Core)",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 05 (IO Operations)/Part 01 (Basic IO learning terms)/06 - Node streams & Filter streams.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 05 (IO Operations)/Part 01 (Basic IO learning terms)/05 - Unicode.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 05 (IO Operations)/Part 01 (Basic IO learning terms)/02 - ByteStream hirachy.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 05 (IO Operations)/Part 01 (Basic IO learning terms)/04 - StandardCharsets ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 05 (IO Operations)/Part 01 (Basic IO learning terms)/03 - CharacterStream hirachy.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 05 (IO Operations)/Part 01 (Basic IO learning terms)/01 - ByteStream Characterset ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 05 (IO Operations)/Part 01 (Basic IO learning terms)/00 - A stream ✧.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Testing)/Part 2 (Mocking)/04 - Mockito with a setUp Method and openMocks.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Testing)/Part 2 (Mocking)/03 - @Mock and @InjectMocks.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Testing)/Part 2 (Mocking)/02 - Using Mockito, Step by Step.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Testing)/Part 2 (Mocking)/01 - Mockito.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Testing)/Part 2 (Mocking)/00 - Mocking.md",
@@ -183,32 +204,15 @@
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/40 - UnnecessaryStubbingException.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/39 - Mockito verify.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/38 - Creating Custome matcher.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/37 - Migrating from @Rule to Extensions.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/36 - @ExtendWith.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/35 - @Spy.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/34 - @Mock.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/33 - InjectMocks.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/32 - Argument Matchers.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/31 -  Mockito ArgumentCaptor.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/30 - ArgumentCaptor and any().md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/29 - assertThatThrownBy.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/28 - Core classes and helper utilities.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/27 - AssertJ.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/26 - ArgumetCapture<T>.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/25 - Verify( ).md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/24 - Power Mock.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/23 - Mockito BDD.md",
     "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 3 (Using Docker)",
     "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 2 (Docker internals)",
     "4 - Images/Pasted image 20261011134627.png",
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/5  - Marina DB/Pack 1 (Basics)",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 05 (IO Operations)/Part 1 (Basic IO learning terms)",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 05 (IO Operations)/Part 01 (Basic IO learning terms)",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Testing)",
     "StudentControllerExceptions.jpg",
     "StudentControllerExceptions.svg",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Exception)",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 9 (Validation)",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 1 (Basics)",
     "4 - Images/Pasted image 20261007191610.png",
     "Pasted image 20261007191722.png",
     "4 - Images/Pasted image 20261007191728.png",
