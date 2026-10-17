@@ -82,4 +82,4 @@ So in short:
 
 That's why you suddenly see a login popup and need credentials.
 
-###### Tags : [[1 - Spring Security 🍌]]
+[[Spring Security]]

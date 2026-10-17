@@ -215,4 +215,4 @@ SessionFactory factory = cfg.buildSessionFactory();
 |`addPackage()`|Register a package of mappings|
 
 
-##### Tags : [[1 - ORM 🍪]]
+##### Tags : [[1 - ORM]]

@@ -14,4 +14,4 @@ Front Controller is defined as “**a controller that handles all requests for a
 ![[Pasted image 20251203104408.png]]
 
 DispatcherServlet is **the Front Controller in a Spring web application**. It acts as the entry point for all incoming HTTP requests. When a user makes a request (e.g., student.com/save), the DispatcherServlet receives it first, then decides which controller should handle it (e.g., Controller_1 for /save).
-###### Tags : [[1 - Spring Security 🍌]]
+[[Spring Security]]

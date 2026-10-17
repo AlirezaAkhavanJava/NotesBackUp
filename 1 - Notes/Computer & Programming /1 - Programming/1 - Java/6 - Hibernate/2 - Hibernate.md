@@ -59,4 +59,4 @@ session.close();
 ### 🔹 Summary
 
 > Hibernate is a **powerful ORM framework** that simplifies database operations in Java by mapping objects to tables and automating SQL handling.
-##### Tags : [[1 - ORM 🍪]]
+##### Tags : [[1 - ORM]]

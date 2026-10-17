@@ -61,4 +61,4 @@ Session open → begin Transaction → perform CRUD → commit → close Session
 > It ensures **atomicity**: either all operations succeed, or if you rollback, none are applied.
 
 
-##### Tags : [[1 - ORM 🍪]]
+##### Tags : [[1 - ORM]]

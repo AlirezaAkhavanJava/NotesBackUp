@@ -187,4 +187,4 @@ public ResponseEntity<?> demo(HttpServletRequest request) {
 ```
 
 Use this as your go-to reference whenever you’re working with `HttpServletRequest` in Spring Boot! Let me know what specific scenario you’re trying to solve and I can give you the exact code snippet.
-##### Tags : [[1 - Spring Security 🍌]]
+[[Spring Security]]

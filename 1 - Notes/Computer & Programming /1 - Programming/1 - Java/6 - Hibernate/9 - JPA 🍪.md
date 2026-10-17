@@ -223,4 +223,4 @@ So, your code is JPA-based, but Hibernate runs everything behind the scenes.
 > JPA is the _driving license_ (the rules of driving),  
 > Hibernate is the _car_ (the actual machine that drives).
 
-##### Tags : [[1 - ORM 🍪]]
+##### Tags : [[1 - ORM]]

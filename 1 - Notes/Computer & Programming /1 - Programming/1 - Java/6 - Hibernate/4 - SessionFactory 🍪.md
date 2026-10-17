@@ -134,4 +134,4 @@ factory.close();
 > You use it to **open sessions**, access metadata, manage caches, and finally **close it** when your application shuts down.
 
 
-##### Tags : [[1 - ORM 🍪]]
+##### Tags : [[1 - ORM]]

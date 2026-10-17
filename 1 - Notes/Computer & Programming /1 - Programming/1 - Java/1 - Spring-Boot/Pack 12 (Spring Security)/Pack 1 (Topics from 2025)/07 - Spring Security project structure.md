@@ -123,4 +123,4 @@ This structure scales nicely from a simple learning project to a production-grad
 
 
 
-###### Tags : [[1 - Spring Security 🍌]]
+[[Spring Security]]

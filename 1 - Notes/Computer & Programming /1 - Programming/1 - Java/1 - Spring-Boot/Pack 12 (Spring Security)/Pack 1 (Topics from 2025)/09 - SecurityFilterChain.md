@@ -30,4 +30,4 @@ The fun part is how customizable the whole pipeline is. You can reorder filters,
 
 
 
-###### Tags : [[1 - Spring Security 🍌]]
+[[Spring Security]]

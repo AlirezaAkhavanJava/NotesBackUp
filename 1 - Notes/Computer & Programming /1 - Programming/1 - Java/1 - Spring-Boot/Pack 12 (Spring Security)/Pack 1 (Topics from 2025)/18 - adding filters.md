@@ -138,4 +138,4 @@ public class SecurityConfig {
 
 You **never manually add filters** — you just configure the `HttpSecurity` object, and Spring Security takes care of building the proper filter chain for you.
 
-#### Tags : [[1 - Spring Security 🍌]]
+[[Spring Security]]

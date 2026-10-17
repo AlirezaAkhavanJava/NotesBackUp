@@ -225,4 +225,4 @@ Session session = entityManager.unwrap(Session.class);
 ---
 
 
-##### Tags :[[1 - ORM 🍪]]
+##### Tags :[[1 - ORM]]

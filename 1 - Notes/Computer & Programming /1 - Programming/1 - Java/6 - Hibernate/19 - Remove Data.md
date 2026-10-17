@@ -117,4 +117,4 @@ session.delete(student);  // Also deletes all courses
 
 
 
-##### Tags : [[2 - Hibernate 🍪]]
+##### Tags : [[2 - Hibernate]]

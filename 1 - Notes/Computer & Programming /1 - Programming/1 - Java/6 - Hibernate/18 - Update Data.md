@@ -135,4 +135,4 @@ session.close();
 
 
 
-##### Tags : [[2 - Hibernate 🍪]]
+##### Tags : [[2 - Hibernate]]

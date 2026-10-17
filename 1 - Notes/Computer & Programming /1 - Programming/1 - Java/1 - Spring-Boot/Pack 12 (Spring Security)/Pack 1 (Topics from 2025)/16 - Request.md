@@ -75,4 +75,4 @@ If any check fails → 401/403/Redirect to login
 
 This is why Spring Security is so powerful and secure — it enforces security at every step before your code even runs.
 
-#### Tags : [[1 - Spring Security 🍌]]
+[[Spring Security]]

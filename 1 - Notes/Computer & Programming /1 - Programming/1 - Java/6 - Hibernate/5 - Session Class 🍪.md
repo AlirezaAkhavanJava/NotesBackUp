@@ -227,4 +227,4 @@ Student managed = (Student) session.merge(detached);
 > It acts as a **bridge** between your Java objects and the database.
 
 
-##### [[1 - ORM 🍪]]
+##### [[1 - ORM]]

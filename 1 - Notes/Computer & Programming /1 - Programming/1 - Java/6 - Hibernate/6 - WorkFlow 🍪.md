@@ -122,4 +122,4 @@ Configuration → SessionFactory → Session → Transaction → save(object) �
 
 ---
 
-##### Tags : [[1 - ORM 🍪]]
+##### Tags : [[1 - ORM]]

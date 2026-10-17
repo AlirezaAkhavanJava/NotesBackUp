@@ -125,4 +125,4 @@ public class SecurityConfig {
 ```
 
 
-###### Tags : [[1 - Spring Security 🍌]]
+[[Spring Security]]

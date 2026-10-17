@@ -63,4 +63,4 @@ config.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
 ### 🔹 Summary
 
 > The **dialect** is Hibernate’s way of adapting its SQL generation to the specific database you’re using — it’s how Hibernate stays _database-independent_.
-##### Tags : [[1 - ORM 🍪]]
+##### Tags : [[1 - ORM]]

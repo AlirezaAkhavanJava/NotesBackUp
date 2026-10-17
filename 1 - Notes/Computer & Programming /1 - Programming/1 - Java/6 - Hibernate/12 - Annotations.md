@@ -98,4 +98,4 @@ public class Student {
 
 
 
-##### Tags : [[1 - ORM 🍪]]
+##### Tags : [[1 - ORM]]

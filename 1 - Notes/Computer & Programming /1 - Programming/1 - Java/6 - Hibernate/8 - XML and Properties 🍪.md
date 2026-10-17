@@ -94,4 +94,4 @@ SessionFactory factory = cfg.buildSessionFactory();
 >     
 
 
-##### Tags : [[1 - ORM 🍪]]
+##### Tags : [[1 - ORM]]

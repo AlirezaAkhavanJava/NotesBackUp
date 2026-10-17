@@ -240,4 +240,4 @@ public class Student {
 ---
 
 
-##### Tags : [[2 - Hibernate 🍪]]
+##### Tags : [[2 - Hibernate]]

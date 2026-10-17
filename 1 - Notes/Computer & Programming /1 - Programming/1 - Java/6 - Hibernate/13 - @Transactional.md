@@ -92,4 +92,4 @@ public class StudentService { ... }
 
 
 
-##### Tags : [[1 - ORM 🍪]]
+##### Tags : [[1 - ORM]]

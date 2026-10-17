@@ -100,4 +100,4 @@ If you want, I can make a **diagram showing where the Authentication Filter sits
 
 Do you want me to do that?
 
-###### Tags : [[1 - Spring Security 🍌]]
+[[Spring Security]]

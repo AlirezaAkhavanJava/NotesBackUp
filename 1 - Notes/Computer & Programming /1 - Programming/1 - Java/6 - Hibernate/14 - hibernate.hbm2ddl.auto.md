@@ -60,4 +60,4 @@ spring.jpa.hibernate.ddl-auto=update
 
 > In short: `update` makes Hibernate **automatically adjust the DB schema to match your entities**, without dropping existing data.
 
-##### Tags : [[1 - ORM 🍪]]
+##### Tags : [[1 - ORM]]

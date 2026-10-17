@@ -113,4 +113,4 @@ List<Student> students = session.createQuery(
     
 
 
-##### Tags : [[2 - Hibernate 🍪]]
+##### Tags : [[2 - Hibernate]]
