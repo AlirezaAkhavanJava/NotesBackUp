@@ -101,4 +101,4 @@ public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 
 
 
-##### Tags : [[1 - Spring Security 🍌]]
+[[Spring Security]]

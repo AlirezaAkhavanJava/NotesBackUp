@@ -61,4 +61,4 @@ In short:
 
 Spring Boot HTTP Security = Spring Security configured to protect your HTTP endpoints with authentication, authorization, and web attack mitigations.
 
-###### Tags : [[1 - Spring Security 🍌]]
+[[Spring Security]]

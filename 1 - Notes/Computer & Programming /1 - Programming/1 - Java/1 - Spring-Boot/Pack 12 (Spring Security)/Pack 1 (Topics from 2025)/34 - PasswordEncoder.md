@@ -49,4 +49,4 @@ public PasswordEncoder passwordEncoder() {
 
 Done. Your users’ passwords are now protected like in real banks and big companies.
 
-###### Tags : [[1 - Spring Security 🍌]]
+[[Spring Security]]

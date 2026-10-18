@@ -148,4 +148,4 @@ So if you start the app now, **any page you visit will show a login form** (Spri
 
 ---
 
-##### Tags : [[1 - Spring Security 🍌]]
+[[Spring Security]]

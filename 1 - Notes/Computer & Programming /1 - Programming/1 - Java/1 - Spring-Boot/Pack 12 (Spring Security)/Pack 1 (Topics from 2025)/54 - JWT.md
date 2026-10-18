@@ -88,4 +88,4 @@ SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
 
 
 
-##### Tags : [[1 - Spring Security 🍌]]
+[[Spring Security]]

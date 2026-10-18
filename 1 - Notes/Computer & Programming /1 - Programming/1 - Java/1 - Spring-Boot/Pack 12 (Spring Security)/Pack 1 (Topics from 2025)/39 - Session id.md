@@ -131,4 +131,4 @@ Take it step by step, play with the code above, and it will click very fast!
 
 
 
-#### Tags : [[1 - Spring Security 🍌]]
+[[Spring Security]]

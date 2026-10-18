@@ -138,4 +138,4 @@ public Authentication authenticate(Authentication auth) throws AuthenticationExc
 
 
 
-##### Tags : [[1 - Spring Security 🍌]]
+[[Spring Security]]

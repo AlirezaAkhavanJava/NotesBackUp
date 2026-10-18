@@ -95,4 +95,4 @@ So in short:
 **Session ID = cookie that identifies which session belongs to which user**  
 **Spring Security uses the session to remember who is logged in** — until the session expires or the user logs out.
 
-#### Tags : [[1 - Spring Security 🍌]]
+[[Spring Security]]

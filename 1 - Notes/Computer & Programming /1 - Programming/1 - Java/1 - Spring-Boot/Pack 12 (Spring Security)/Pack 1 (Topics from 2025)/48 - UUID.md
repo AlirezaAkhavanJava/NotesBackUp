@@ -645,4 +645,4 @@ public class UUIDCompression {
 UUIDs are essential for modern distributed applications, providing global uniqueness without centralized coordination.
 
 
-###### Tags : [[1 - Spring Security 🍌]]
+[[Spring Security]]

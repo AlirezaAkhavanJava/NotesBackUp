@@ -362,4 +362,4 @@ public class CustomUserDetailsService implements UserDetailsService {
 
 This interface is the foundation of Spring Security's authentication mechanism and understanding it is crucial for implementing secure authentication in your applications.
 
-##### Tags : [[1 - Spring Security 🍌]]
+[[Spring Security]]

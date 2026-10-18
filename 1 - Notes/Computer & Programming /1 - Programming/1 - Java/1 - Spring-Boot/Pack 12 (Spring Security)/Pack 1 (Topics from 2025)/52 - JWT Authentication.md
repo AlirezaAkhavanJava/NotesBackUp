@@ -545,4 +545,4 @@ curl http://localhost:8080/api/user \
 ```
 
 
-##### Tags : [[1 - Spring Security 🍌]]
+[[Spring Security]]

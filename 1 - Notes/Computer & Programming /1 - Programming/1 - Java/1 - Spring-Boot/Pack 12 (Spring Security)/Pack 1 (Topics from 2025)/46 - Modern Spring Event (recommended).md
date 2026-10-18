@@ -98,4 +98,4 @@ You (Ethan) are building modern Spring + Spring Security projects →
 
 ---
 
-###### Tags : [[1 - Spring Security 🍌]]
+[[Spring Security]]

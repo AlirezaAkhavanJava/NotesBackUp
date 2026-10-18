@@ -298,4 +298,4 @@ public class PasswordMigrationService {
 This comprehensive guide covers the essential aspects of PasswordEncoder in Spring Security, helping you implement secure password handling in your applications.
 
 
-###### Tags : [[1 - Spring Security 🍌]]
+[[Spring Security]]

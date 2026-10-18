@@ -168,4 +168,4 @@ If you want the full block ready to paste:
 
 
 
-##### Tags : [[1 - Spring Security 🍌]]
+[[Spring Security]]

@@ -195,4 +195,4 @@ If you want roles to work, you **must** fix `getAuthorities()`.
 
 
 
-###### Tags : [[1 - Spring Security 🍌]]
+[[Spring Security]]

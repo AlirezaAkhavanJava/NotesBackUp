@@ -108,4 +108,4 @@ If no → request is rejected (likely an attacker), because a malicious site **c
 
 So the token acts as a **shared secret between the server and the real client**—cookies alone can’t prove intent.
 
-#### Tags : [[1 - Spring Security 🍌]]
+[[Spring Security]]

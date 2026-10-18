@@ -363,4 +363,4 @@ It:
 This is the **heart** of username/password authentication in Spring.
 
 
-###### Tags : [[1 - Spring Security 🍌]]
+[[Spring Security]]

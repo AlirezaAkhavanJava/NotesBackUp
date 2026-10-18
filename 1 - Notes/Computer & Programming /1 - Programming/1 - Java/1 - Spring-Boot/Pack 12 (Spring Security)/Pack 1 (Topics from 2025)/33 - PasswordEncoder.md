@@ -111,4 +111,4 @@ public AuthenticationProvider authenticationProvider() {
 💡 **Pro tip:** This setup is the core of username/password login in Spring Security. Using `BCryptPasswordEncoder` is a must for secure password storage.
 
 
-##### tags : [[1 - Spring Security 🍌]]
+[[Spring Security]]

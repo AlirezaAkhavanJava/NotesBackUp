@@ -405,4 +405,4 @@ public void handleLargeOrder(OrderCreatedEvent event) {
 
 This pattern makes your code more modular, testable, and maintainable by reducing direct dependencies between components.
 
-###### Tags : [[1 - Spring Security 🍌]]
+[[Spring Security]]

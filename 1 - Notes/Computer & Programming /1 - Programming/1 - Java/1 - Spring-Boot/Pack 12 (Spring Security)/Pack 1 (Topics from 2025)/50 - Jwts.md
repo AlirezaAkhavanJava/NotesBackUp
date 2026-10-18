@@ -196,4 +196,4 @@ But for now — this `JwtService` above is the one used in real companies today.
 
 
 
-###### Tags : [[1 - Spring Security 🍌]]
+[[Spring Security]]

@@ -141,4 +141,4 @@ For the latest official details, refer to: https://docs.spring.io/spring-securit
 
 This setup provides robust protection out-of-the-box while being flexible for modern SPAs and APIs. If you have a specific code snippet or error, share it for more targeted help!
 
-###### Tags : [[1 - Spring Security 🍌]]
+[[Spring Security]]

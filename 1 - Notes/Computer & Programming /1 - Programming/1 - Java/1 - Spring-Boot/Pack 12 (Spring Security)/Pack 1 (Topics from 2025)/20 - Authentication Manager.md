@@ -149,4 +149,4 @@ If you build custom authentication (JWT, API Key, etc.):
 The AuthenticationManager is essentially the **boss** that coordinates authentication but _does not_ perform checks itself; it delegates to providers.
 
 
-###### Tags : [[1 - Spring Security 🍌]]
+[[Spring Security]]

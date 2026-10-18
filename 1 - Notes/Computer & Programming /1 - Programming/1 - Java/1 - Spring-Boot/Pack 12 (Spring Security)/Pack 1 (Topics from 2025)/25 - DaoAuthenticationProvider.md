@@ -156,4 +156,4 @@ You usually do it when you want to:
 - Create the provider bean manually only if you need custom behavior.
 
 
-##### Tags : [[1 - Spring Security 🍌]]
+[[Spring Security]]

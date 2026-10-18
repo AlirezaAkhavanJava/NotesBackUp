@@ -119,4 +119,4 @@ So yes — you create **one or more** `SecurityFilterChain` beans and configure 
 That's the modern, flexible way to implement security in Spring Boot applications.
 
 
-#### Tags : [[1 - Spring Security 🍌]]
+[[Spring Security]]

@@ -243,4 +243,4 @@ Exactly how Spring expects it.
 
 
 
-##### Tags : [[1 - Spring Security 🍌]]
+[[Spring Security]]

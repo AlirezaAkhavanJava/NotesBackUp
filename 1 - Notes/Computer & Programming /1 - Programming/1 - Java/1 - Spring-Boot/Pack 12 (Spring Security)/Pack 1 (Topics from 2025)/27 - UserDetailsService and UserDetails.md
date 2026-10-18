@@ -201,4 +201,4 @@ Think of it as **`UserDetailsService` = fetcher** and **`UserDetails` = blueprin
 ---
 
 
-###### Tags : [[1 - Spring Security 🍌]]
+[[Spring Security]]

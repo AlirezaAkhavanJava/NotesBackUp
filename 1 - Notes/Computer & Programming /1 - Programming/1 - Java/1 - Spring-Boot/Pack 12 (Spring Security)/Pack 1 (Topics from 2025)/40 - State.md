@@ -91,4 +91,4 @@ Spring Security supports **both** perfectly — you choose based on your app typ
 - Web app with pages → go **stateful** (default).  
 - REST API or SPA → go **stateless** (JWT/OAuth2).
 
-#### Tags [[1 - Spring Security 🍌]]
+[[Spring Security]]

@@ -294,4 +294,4 @@ Because AuthenticationManager doesn't authenticate —
 
 
 
-##### Tags : [[1 - Spring Security 🍌]]
+[[Spring Security]]

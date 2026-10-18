@@ -244,4 +244,4 @@ Authentication Filter = **the entry point**.
 
 
 
-###### Tags : [[1 - Spring Security 🍌]]
+[[Spring Security]]

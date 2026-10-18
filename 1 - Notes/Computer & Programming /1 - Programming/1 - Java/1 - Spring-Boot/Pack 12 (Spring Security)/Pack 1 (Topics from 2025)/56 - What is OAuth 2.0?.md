@@ -266,4 +266,4 @@ When an HTTP request arrives:
 In Spring Boot, this flow is identical to Spring MVC but simplified—no manual servlet registration needed. The embedded server integrates seamlessly, making deployment as a standalone JAR possible.
 
 
-###### Tags : [[1 - Spring Security 🍌]]
+[[Spring Security]]

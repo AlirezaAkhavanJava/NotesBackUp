@@ -423,4 +423,4 @@ class EventPublishingTest {
 The `ApplicationEventPublisher` provides a powerful mechanism for building responsive, maintainable applications with clean separation between business logic and cross-cutting concerns.
 
 
-###### Tags : [[1 - Spring Security 🍌]]
+[[Spring Security]]

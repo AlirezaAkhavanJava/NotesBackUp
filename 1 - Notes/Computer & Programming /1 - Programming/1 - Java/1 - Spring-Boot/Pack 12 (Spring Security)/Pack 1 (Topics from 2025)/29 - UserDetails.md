@@ -176,4 +176,4 @@ public UserDetailsService inMemoryUserDetailsService(PasswordEncoder encoder) {
 
 That’s the complete, up-to-date way to work with `UserDetails` and `UserDetailsService` in modern Spring Security (Spring Boot 3.x / Spring Security 6.x). Let me know if you need JWT, OAuth2, or custom authentication provider examples next!
 
-##### Tags : [[1 - Spring Security 🍌]]
+[[Spring Security]]
