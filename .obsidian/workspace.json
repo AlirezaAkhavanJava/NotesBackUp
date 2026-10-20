@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "c081270279bd8df3",
+        "id": "1ac56eefd9f60065",
         "type": "tabs",
         "children": [
           {
-            "id": "6ba4043d0f6368bb",
+            "id": "84e1cc20b4db1868",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 3/05 - CSRF and CRUD in Spring Boot.md",
+                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 15 (In Action Concepts)/06 - Relationships, Annotations, Fetch Types, and Joins.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "05 - CSRF and CRUD in Spring Boot"
+              "title": "06 - Relationships, Annotations, Fetch Types, and Joins"
             }
           }
         ]
@@ -80,7 +80,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 424.7868232727051
+    "width": 424.7868232727051,
+    "collapsed": true
   },
   "right": {
     "id": "318802b81bf4bc9f",
@@ -172,44 +173,44 @@
       "bases:Create new base": false
     }
   },
-  "active": "6ba4043d0f6368bb",
+  "active": "84e1cc20b4db1868",
   "lastOpenFiles": [
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 3/04 - Session ID.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 3/05 - CSRF and CRUD in Spring Boot.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 3/03 - CSRF (Cross-Site Request Forgery).md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 3/02 - Spring Security Filters.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 3/01 - how it works.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 3/00 - Spring-security.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 2 (Basics)/07 - TLS-HTTPS.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 15 (In Action Concepts)/03 - @ElementCollection.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 15 (In Action Concepts)/06 - Relationships, Annotations, Fetch Types, and Joins.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 15 (In Action Concepts)/00 - @ElementCollection.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 15 (In Action Concepts)/04 - @CollectionTable & @ElementCollection.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 15 (In Action Concepts)/05 - Cascade.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 15 (In Action Concepts)/02 - @CollectionTable.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 15 (In Action Concepts)/01 - @OneToMany and mappedBy.md",
+    "1 - Notes/Computer & Programming /1 - Programming/15 - Programming in action/7 - Pack 7 (Spring-Boot)/0 - Configurations/01 - produces, Resource, and ClassPathResource.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 15 (In Action Concepts)",
+    "1 - Notes/Computer & Programming /1 - Programming/15 - Programming in action/7 - Pack 7 (Spring-Boot)/0 - Configurations/00 - CorsConfig.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 2 (Basics)/09 - Cookies.md",
+    "1 - Notes/Computer & Programming /1 - Programming/15 - Programming in action/7 - Pack 7 (Spring-Boot)/0 - Configurations",
+    "1 - Notes/Computer & Programming /1 - Programming/15 - Programming in action/7 - Pack 7 (Spring-Boot)",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 2 (Basics)/08 - Servlet vs Reactive in Spring Security.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Basic Concepts and defenitions)/01 - ApplicationContext.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Basic Concepts and defenitions)/00 - What is dependency and DI.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Basic Concepts and defenitions)/18 - IoC & DI.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Basic Concepts and defenitions)/02 - Three Ways to DI.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/20 - Spring Boot Project Structure main and resources.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/19 - pom.xml.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/18 - 7- application.properties.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/17 - @SpringBootApplication.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/16 - Spring `@Configuration` Deep Dive.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/15 - @Configuration.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/14 - Inside a @Configuration.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/13 - How to design with @Configuration.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/12 - What goes in Git.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/11 - Methods of Environment.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/10 - How @Configuration Works.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 3",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 2 (Basics)/06 - Cryptography basics.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 2 (Basics)/05 - Spring Security’s PasswordEncoder.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 2 (Basics)/04 - Four Rules for Storing Passwords.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 2 (Basics)/03 - Passwords and Hashing.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 2 (Basics)/02 - How the Web Remembers Who You Are.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 2 (Basics)/01 - Role, Authority, Credentials, and Principal.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 2 (Basics)/00 - Authentication and Authorization.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/Untitled",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 13 (advanced topics)/56 - Untitled.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 1 (Topics from 2025)/59 - HttpSecurity.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 1 (Topics from 2025)/58 - Basic configuration.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 1 (Topics from 2025)/57 - AuthenticationManager.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 1 (Topics from 2025)/56 - What is OAuth 2.0?.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 1 (Topics from 2025)/55 - Function.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 1 (Topics from 2025)/54 - JWT.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 1 (Topics from 2025)/53 - JWT in Spring boot.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 1 (Topics from 2025)/52 - JWT Authentication.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 1 (Topics from 2025)/51 - Jwt AuthenticationFilter.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 1 (Topics from 2025)/50 - Jwts.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 1 (Topics from 2025)/49 - JWT dependencies.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 2 (Basics)",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 1 (Topics from 2025)",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/5 - Loggers/Log4J2/Phase 1",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 05 (IO Operations)/RoadMap",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 05 (IO Operations)/Part 00 (Core)",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Testing)/Part 2 (Mocking)",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Testing)/Part 1 (Basic Testing)",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 3 (Using Docker)",
     "4 - Images/Pasted image 20261011134627.png",
     "StudentControllerExceptions.jpg",
     "StudentControllerExceptions.svg",
