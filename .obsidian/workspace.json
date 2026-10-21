@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 15 (In Action Concepts)/06 - Relationships, Annotations, Fetch Types, and Joins.md",
+                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 15 (In Action Concepts)/12 - Unidirectional vs. Bidirectional Relationships.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "06 - Relationships, Annotations, Fetch Types, and Joins"
+              "title": "12 - Unidirectional vs. Bidirectional Relationships"
             }
           }
         ]
@@ -80,8 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 424.7868232727051,
-    "collapsed": true
+    "width": 424.7868232727051
   },
   "right": {
     "id": "318802b81bf4bc9f",
@@ -175,8 +174,14 @@
   },
   "active": "84e1cc20b4db1868",
   "lastOpenFiles": [
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 15 (In Action Concepts)/03 - @ElementCollection.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 15 (In Action Concepts)/11 - Understanding Fetch Type and Cascade.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 15 (In Action Concepts)/12 - Unidirectional vs. Bidirectional Relationships.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 15 (In Action Concepts)/10 - @JoinColumn and mappedBy.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 15 (In Action Concepts)/09 - Think like this and that.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 15 (In Action Concepts)/08 - @EntityListeners.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 15 (In Action Concepts)/07 - @PrePersist.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 15 (In Action Concepts)/06 - Relationships, Annotations, Fetch Types, and Joins.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 15 (In Action Concepts)/03 - @ElementCollection.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 15 (In Action Concepts)/00 - @ElementCollection.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 15 (In Action Concepts)/04 - @CollectionTable & @ElementCollection.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 15 (In Action Concepts)/05 - Cascade.md",
@@ -198,12 +203,6 @@
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/18 - 7- application.properties.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/17 - @SpringBootApplication.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/16 - Spring `@Configuration` Deep Dive.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/15 - @Configuration.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/14 - Inside a @Configuration.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/13 - How to design with @Configuration.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/12 - What goes in Git.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/11 - Methods of Environment.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/10 - How @Configuration Works.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 3",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/Untitled",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 2 (Basics)",
