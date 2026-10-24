@@ -1,5 +1,6 @@
 {
   "accentColor": "",
-  "cssTheme": "Ebullientworks",
-  "baseFontSize": 16
+  "cssTheme": "",
+  "baseFontSize": 16,
+  "theme": "system"
 }
