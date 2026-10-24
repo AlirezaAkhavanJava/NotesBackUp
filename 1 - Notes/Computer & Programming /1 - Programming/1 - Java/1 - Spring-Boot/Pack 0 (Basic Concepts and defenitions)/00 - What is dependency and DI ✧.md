@@ -25,6 +25,8 @@ This means: "my **project** depends on this external **library**" — a `.jar` f
 
 This is a completely different, **runtime** concept. If `UserService` needs a `UserRepository` to do its job, then `UserRepository` is a **dependency of `UserService`** — not a JAR, but an actual **object instance** that must exist and be given to `UserService` before it can work.
 
+> A class can be a dependency of another class while also having dependencies of its own.
+
 ```java
 public class UserService {
     private UserRepository userRepository; // <- this is a dependency
@@ -32,6 +34,8 @@ public class UserService {
 ```
 
 You're right that it's "a class/object my code needs" — that's exactly it. The word "dependency" is reused because the relationship is conceptually the same ("A depends on B to function"), just at different levels — Maven dependencies are about _code availability_, DI dependencies are about _object relationships at runtime_.
+
+> Dependency Injection (DI) is primarily about how objects receive their dependencies at runtime.
 
 ## What is Dependency Injection (DI), then?
 
@@ -89,6 +93,10 @@ public class UserService {
     }
 }
 ```
+
+> `private` is about encapsulation. It means that only the class itself can directly access the field.
+
+> `final` means that once the reference is assigned, it cannot be reassigned.
 
 Dependencies are `final`, guaranteed non-null once the object exists, easy to test (just call `new UserService(mockRepo)` in a test).
 

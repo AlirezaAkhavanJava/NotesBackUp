@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "04b91cd1d6d3aca8",
+        "id": "ebf70ef34eb9330f",
         "type": "tabs",
         "children": [
           {
-            "id": "6b34ccba0008fb98",
+            "id": "c0cef8d2fe4d4ae3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 3 (Networking and sessions)/18 - CORS with Spring Security – The Proper Way.md",
-                "mode": "preview",
+                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 6 (security)/06 - HttpServletRequest in Java & Spring Boot.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "18 - CORS with Spring Security – The Proper Way"
+              "title": "06 - HttpServletRequest in Java & Spring Boot"
             }
           }
         ]
@@ -80,7 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 424.59782791137695
+    "width": 428.8163032531738
   },
   "right": {
     "id": "318802b81bf4bc9f",
@@ -172,44 +172,44 @@
       "bases:Create new base": false
     }
   },
-  "active": "6b34ccba0008fb98",
+  "active": "c0cef8d2fe4d4ae3",
   "lastOpenFiles": [
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 3 (Networking and sessions)/17 - CORS.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 6 (security)/05 - CsrfToken.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (servlet )/00 - Servlet.md",
+    "2 - Tags/Concepts/Servlet.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (servlet )/09 - Servlet Object.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (servlet )/08 - Spring IoC and Servlet.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (servlet )/07 - CRUD.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (servlet )/06 - ServletRegistrationBean.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (servlet )/05 - @ServletComponentScan.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (servlet )/04 - DispatcherServlet.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (servlet )/03 - HttpServletRequest, HttpServletResponse.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (servlet )/01 - Servlet Container.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (servlet )/02 - HttpServlet.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Basic Concepts and defenitions)/01 - ApplicationContext ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (servlet )",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Basic Concepts and defenitions)/00 - What is dependency and DI ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 6 (security)/06 - HttpServletRequest in Java & Spring Boot.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 6 (security)/04 - Session IDs in Spring Boot, and Why GET Works but POST Gets 403.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 6 (security)/03 - Authorization in Depth.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 6 (security)/02 - Authentication in Depth.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 6 (security)/01 - Maintaining Sessions with Spring Security.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 6 (security)/00 - The Spring Security Filter Chain in Depth.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 6 (security)",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (servlet)/01 - DispatcherServlet.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (servlet)/00 - Servlet.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 4 (Auth)/01 - Authentication and Authorization.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (servlet)",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 4 (Auth)/00 - Basic Auth.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 3 (Networking and sessions)/18 - CORS with Spring Security – The Proper Way.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 3 (Networking and sessions)/16 - How Long Does a Session Live?.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 3 (Networking and sessions)/15 - JWT (JSON Web Token).md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 3 (Networking and sessions)/14 - HTTP in Depth (In Spring).md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 3 (Networking and sessions)/12 - Why You Stay Logged In After Leaving.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 3 (Networking and sessions)/13 - Cookies in Depth.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 3 (Networking and sessions)/11 - Can One User Have Two Sessions? (Yes, and Here’s Why).md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 3 (Networking and sessions)/00 - Universal Basics.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 3 (Networking and sessions)/09 - How a Session ID Is Validated.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 3 (Networking and sessions)/10 - Spring-security.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 3 (Networking and sessions)/08 - Session IDs at Scale.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 3 (Networking and sessions)/07 - How a Session ID Is Created and Where It Goes.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 3 (Networking and sessions)/06 - Session ID.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 3 (Networking and sessions)/05 - CSRF and CRUD in Spring Boot.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 3 (Networking and sessions)/04 - Session ID.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 2 (Basics)/14 - Spring Security Features.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack4",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 2 (Basics)/13 - History of Spring Security, and Spring Boot Networking.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 2 (Basics)/12 - XSS and CSRF.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 2 (Basics)/11 - How Webpages Become Secure.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 2 (Basics)/10 -  The History of Web Security.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 15 (In Action Concepts)/12 - Unidirectional vs. Bidirectional Relationships.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 4 (Project 1 Part 2)/24 - JpaRepository interface.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 15 (In Action Concepts)/11 - Understanding Fetch Type and Cascade.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 15 (In Action Concepts)/10 - @JoinColumn and mappedBy.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 15 (In Action Concepts)/09 - Think like this and that.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 3 (Networking and sessions)/17 - CORS.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 4 (Auth)",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 15 (In Action Concepts)",
     "1 - Notes/Computer & Programming /1 - Programming/15 - Programming in action/7 - Pack 7 (Spring-Boot)/0 - Configurations",
     "1 - Notes/Computer & Programming /1 - Programming/15 - Programming in action/7 - Pack 7 (Spring-Boot)",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 3 (Networking and sessions)",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/Untitled",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 2 (Basics)",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 1 (Topics from 2025)",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/5 - Loggers/Log4J2/Phase 1",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 05 (IO Operations)/RoadMap",
     "4 - Images/Pasted image 20261011134627.png",
     "StudentControllerExceptions.jpg",
     "StudentControllerExceptions.svg",
