@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "16216032fe8a70ba",
+        "id": "9e3208ca0cbbf2b2",
         "type": "tabs",
         "children": [
           {
-            "id": "d2d1f875552a87f2",
+            "id": "a42b0b3e778d37ac",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 3 (Using Docker)/04 - Updating a Docker Image.md",
+                "file": "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/Pack 1 (Syntax commands)/06 - DDL Command.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "04 - Updating a Docker Image"
+              "title": "06 - DDL Command"
             }
           }
         ]
@@ -172,12 +172,27 @@
       "bases:Create new base": false
     }
   },
-  "active": "d2d1f875552a87f2",
+  "active": "a42b0b3e778d37ac",
   "lastOpenFiles": [
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/Pack 1 (Syntax commands)/07 - DML Commands.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/Pack 1 (Syntax commands)/06 - DDL Command.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/Pack 1 (Syntax commands)/05 - Data Types in SQL and PostgreSQL.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/Pack 1 (Syntax commands)/04 - Server, Database, Schema, and Table.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/Pack 3 (PostgreSQL Special)/05 - Database migrations in PostgreSQL.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/Pack 3 (PostgreSQL Special)/04 - The pgAdmin object tree.md",
+    "4 - Images/1792937407.png",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/Pack 3 (PostgreSQL Special)/03 - Converting a value from one data type to another..md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/Pack 3 (PostgreSQL Special)/02 - PostgreSQL’s “special” data types.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/Pack 3 (PostgreSQL Special)/01 - Arrays.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/Pack 3 (PostgreSQL Special)/00 - Working with json and jsonb in PostgreSQL.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/Pack 1 (Syntax commands)/00 - PostgreSQL.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/Pack 1 (Syntax commands)/01 - SQL.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/Pack 1 (Syntax commands)/02 - DBMS.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/Pack 1 (Syntax commands)/03 - SQL and NoSQL Databases.md",
+    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 3 (Using Docker)/04 - Updating a Docker Image.md",
     "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 2 (Docker internals)/04 - How Docker Uses Your Hardware.md",
     "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 3 (Using Docker)/05 - Build a Container Without Starting It.md",
     "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 3 (Using Docker)/03 - Docker Commands (Images and Containers).md",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 3 (Using Docker)/04 - Updating a Docker Image.md",
     "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 3 (Using Docker)/02 - Running a Docker Container on a Port You Choose.md",
     "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 3 (Using Docker)/00 - Basic Commands.md",
     "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 4 (commands and action)/42 - Virtualization.md",
@@ -186,20 +201,6 @@
     "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 4 (commands and action)/39 - docker commit.md",
     "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 4 (commands and action)/38 - docker run modes.md",
     "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 4 (commands and action)/37 - Docker arhitecture.md",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 4 (commands and action)/36 - docker search.md",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 4 (commands and action)/35 - Docker compose.md",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 4 (commands and action)/34 - Docker push.md",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 4 (commands and action)/33 - Docker login.md",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 4 (commands and action)/32 - Docker ports.md",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 4 (commands and action)/31 - Docker Compose file.md",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 4 (commands and action)/30 - Docker configuration.md",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 4 (commands and action)/29 - application.properties configuration.md",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 4 (commands and action)/28 - Docker SandBox.md",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 4 (commands and action)/27 - Docker run.md",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 4 (commands and action)/26 - Port.md",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 4 (commands and action)/25 - Docker Spring Boot application.properties.md",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 4 (commands and action)/24 - Java Docker setup.md",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 4 (commands and action)/23 - Docker Host.md",
     "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 4 (commands and action)",
     "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 9 (Recap)",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 17 (JDBC)",
@@ -219,7 +220,6 @@
     "Pasted image 20261007191722.png",
     "4 - Images/Pasted image 20261007191728.png",
     "Pasted image 20261007191536.png",
-    "4 - Images/Pasted image 20261007182245.png",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/G - Real World Applications/Untitled.canvas"
   ]
 }
