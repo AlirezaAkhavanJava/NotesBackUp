@@ -18,7 +18,7 @@ Each phase can be customized using annotations, interfaces, or configuration met
 ### **Detailed Phases of the Bean Lifecycle**
 
 1. **Bean Definition and Registration**:
-   - **Description**: The Spring container identifies and registers bean definitions based on configuration metadata.
+   - **Description**: The Spring container identifies and registers bean definitions based on [^1]configuration metadata.
    - **How It Works**:
      - For **component scanning** (e.g., `@ComponentScan(basePackages = "com.Arcade")` in a `@Configuration` class), Spring scans the specified packages for classes annotated with `@Component`, `@Service`, `@Repository`, `@Controller`, etc., and registers them as bean definitions.
      - For **explicit `@Bean` methods** in a `@Configuration` class, Spring registers the beans defined by the methods.
@@ -379,3 +379,5 @@ public class GameSession {
 
 
 [[Spring Framework]]
+
+[^1]: Configuration metadata in Spring is the information and instructions you provide to the Spring IoC Container (`ApplicationContext`) to tell it which beans to create, how to configure them, what dependencies they need, and how they should be managed. Spring reads this metadata at runtime to build and configure the application. Configuration metadata can be provided through annotations (`@Component`, `@Service`, `@Autowired`), Java configuration classes (`@Configuration`, `@Bean`), or XML configuration files. For example, when you annotate a class with `@Service`, you provide configuration metadata that tells Spring to detect that class and register it as a bean. In simple terms, configuration metadata is the set of instructions Spring uses to understand how to create, connect, and manage your application's objects.
