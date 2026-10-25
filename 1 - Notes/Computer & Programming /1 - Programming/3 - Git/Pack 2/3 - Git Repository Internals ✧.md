@@ -78,6 +78,74 @@ This is why Git has **three states** for any file's content:
 Working Directory → (git add) → Staging Area/Index → (git commit) → Repository (.git)
 ```
 
+example : 
+
+```bash
+ethan@debian:/mnt/hdd/Home/Programming Files/Git/brandNew$ xxd .git/index       
+00000000: 4449 5243 0000 0002 0000 0003 6add dd63  DIRC........j..c 
+00000010: 2889 63a1 6add dd63 2889 63a1 0000 0801  (.c.j..c(.c.....   
+00000020: 005a 2355 0000 81a4 0000 03e8 0000 03e8  .Z#U............  
+00000030: 0000 0019 ea22 c30b a63f 9054 c7e7 fff5  ....."...?.T....  
+00000040: 3133 c18a 6360 5ab2 0008 6372 6564 2e74  13..c`Z...cred.t   
+00000050: 7874 0000 6add d564 2f36 2786 6add d564  xt..j..d/6'.j..d  
+00000060: 2f36 2786 0000 0801 005a 233c 0000 81a4  /6'......Z#<....   
+00000070: 0000 03e8 0000 03e8 0000 0025 1942 b06e  ...........%.B.n        
+00000080: 4b78 a211 5a5a fd62 de95 55c9 23b0 db02  Kx..ZZ.b..U.#...      
+00000090: 0006 6769 742e 6d64 0000 0000 6add dea7  ..git.md....j...
+000000a0: 324f dd84 6add dea7 2fb0 7a84 0000 0801  2O..j.../.z.....     
+000000b0: 005a 234c 0000 81a4 0000 03e8 0000 03e8  .Z#L............    
+000000c0: 0000 0101 e291 44d7 88ce 7449 d4d0 b54b  ......D...tI...K    
+000000d0: e8ee e20d 8483 3b0a 0012 6973 5472 6565  ......;...isTree      
+000000e0: 2f63 6f6e 7465 6e74 732e 6d64 0000 0000  /contents.md....     
+000000f0: 0000 0000 5452 4545 0000 0012 002d 3120  ....TREE.....-1 
+00000100: 310a 6973 5472 6565 002d 3120 300a 1cc4  1.isTree.-1 0...    
+00000110: e388 b4a8 eefd bef9 cdc9 37fa 6486 8365  ..........7.d..e    
+00000120: fe58                      .X                 
+ethan@debian:/mnt/hdd/Home/Programming Files/Git/brandNew$
+```
+
+by decoding it we get : 
+
+##### Header : 
+```bash 
+Signature:       DIRC
+Version:         2
+Tracked files:   3
+File size:       290 bytes
+```
+
+##### Stored file entries
+
+```bash
+File 1:
+  Name:          cred.txt
+  Size:          25 bytes
+  Permissions:   100644
+  Owner UID:     1000
+  SHA-1:         ea22c30ba63f9054c7e7fff53133c18a63605ab2
+
+File 2:
+  Name:          git.md
+  Size:          37 bytes
+  Permissions:   100644
+  Owner UID:     1000
+  SHA-1:         1942b06e4b78a2115a5afd62de9555c923b0db02
+
+File 3:
+  Name:          isTree/contents.md
+  Size:          257 bytes
+  Permissions:   100644
+  Owner UID:     1000
+  SHA-1:         e29144d788ce7449d4d0b54be8eee20d84833b0a
+```
+
+##### Additional data
+```sh
+Extension:       TREE (cached tree)
+Index checksum:  1cc4e388b4a8eefdbef9cdc937fa64868365fe58
+Checksum valid:  YES
+```
+
 ---
 
 ## 6. Packfiles — Storage Optimization

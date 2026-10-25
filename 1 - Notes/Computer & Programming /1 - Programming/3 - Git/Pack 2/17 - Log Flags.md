@@ -1076,4 +1076,4 @@ It connects directly to what you were just learning about `HEAD`, `refs/heads/ma
 
 
 [[0 - Git]]
-[[0 - Git commands list]]
+[[0 - Git commands list ✧]]
