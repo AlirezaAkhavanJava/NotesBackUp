@@ -1,5 +1,5 @@
 
-# The Spring Boot container, `SpringApplication.run`, and `@SpringBootApplication`
+
 
  **what is the thing that holds and manages your objects, and who creates it?** In Spring, that thing is called the **container**. It creates your objects (called **beans**), wires them together, and manages their lifecycle, so you never write `new UserService(new UserRepository())` yourself.
 
