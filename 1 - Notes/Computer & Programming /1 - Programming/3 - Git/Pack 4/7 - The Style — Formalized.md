@@ -87,4 +87,4 @@ One command, one mental checkpoint, every time — instead of trusting yourself 
 > The style isn't "add an upstream remote" — that's just the prerequisite. The actual discipline is treating your fork's `main` as perpetually stale until proven otherwise, syncing it _before_ every new branch rather than reactively after a conflict forces you to, and keeping `main` itself untouched so that sync is always a trivial, conflict-free fast-forward.
 
 
-[[0 - Git]]
+[[00 - Git]]

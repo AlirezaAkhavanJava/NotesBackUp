@@ -79,4 +79,4 @@ Fixes #42   ← auto-closes the linked issue on merge
 > Issue first for anything non-trivial (confirm the approach before building it), then keep the PR small, tested, synced with upstream, and clearly described — every step is about making it easy for the maintainer to trust and merge your change with minimal effort on their end.
 
 
-[[0 - Git]]
+[[00 - Git]]

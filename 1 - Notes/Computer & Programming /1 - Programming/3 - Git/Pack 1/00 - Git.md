@@ -49,4 +49,4 @@ In short: **Git solved the problem of collaborating on code at scale — reliabl
 - `git push`: Upload changes to a remote repository.
 - `git pull`: Fetch and merge changes from a remote repository.
 
-[[Java]] [[0 - Back-End]]
+[[Git & Github]]

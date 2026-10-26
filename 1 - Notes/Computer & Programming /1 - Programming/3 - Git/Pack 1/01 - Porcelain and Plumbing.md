@@ -1,5 +1,5 @@
 
-> Git commands are divided into two categories: **porcelain** and **plumbing**. These terms describe the level of abstraction and intended use of the commands, with porcelain being user-friendly and plumbing being low-level.
+> Git commands are divided into two categories: **porcelain** and **plumbing**. [^1]These terms describe the level of abstraction and intended use of the commands, with porcelain being user-friendly and plumbing being low-level.
 
 ## Porcelain Commands
 
@@ -64,4 +64,7 @@ Plumbing commands are rarely used directly by end-users but are essential for cr
 
 Porcelain commands are the polished, user-friendly interface for Git, ideal for managing repositories in typical development workflows. Plumbing commands are the raw, low-level building blocks used for advanced scripting or by porcelain commands internally. Understanding the distinction helps developers choose the right tool for their task, whether it’s routine version control or building custom Git functionality.
 
-[[0 - Git]]
+[[Git & Github]]
+
+[^1]: Level of abstraction describes how much technical detail a command hides from you: a high-level command is simpler and handles many operations automatically, while a low-level command gives you more direct control but requires you to manage more details yourself. Intended use describes the specific purpose or situation a command was designed for. In simple terms : 
+	***how much work a command does for us and when we should use it.***

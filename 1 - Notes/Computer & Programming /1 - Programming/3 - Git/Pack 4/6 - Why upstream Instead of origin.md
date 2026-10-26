@@ -87,4 +87,4 @@ Nothing forces you to name it `upstream` specifically — you could call it `ori
 > You don't use `upstream` _instead of_ `origin` — you use `upstream` _in addition to_ `origin`, because `origin` (your fork, writable) is where you push your work, while `upstream` (the original, read-only) is your only way to stay in sync with a project that keeps evolving after you forked it.
 
 
-[[0 - Git]]
+[[00 - Git]]
