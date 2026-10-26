@@ -4,39 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "59db5aa0d1a38862",
+        "id": "930fd689db91c4fe",
         "type": "tabs",
         "children": [
           {
-            "id": "82d6c497a745bb05",
+            "id": "e3fc6969ff52a16b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 1 (Bean Life Cycle)/02 - Bean Instantiation (Constructor Execution).md",
+                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 16 (Recap)/14 - Better getter and setter.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "02 - Bean Instantiation (Constructor Execution)"
-            }
-          },
-          {
-            "id": "c19e64b31f361fed",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 1 (Bean Life Cycle)/04 - Bean Initialization.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "04 - Bean Initialization"
+              "title": "14 - Better getter and setter"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -187,36 +172,36 @@
       "bases:Create new base": false
     }
   },
-  "active": "c19e64b31f361fed",
+  "active": "e3fc6969ff52a16b",
   "lastOpenFiles": [
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Basic Concepts and defenitions)/03 - Bean Life-cycle ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 16 (Recap)/13 - Encapsulation.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 16 (Recap)/14 - Better getter and setter.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 16 (Recap)/10 - The point of polymorphism.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 16 (Recap)/12 - The point of inheritance.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 16 (Recap)/11 - The point of abstraction.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 16 (Recap)/09 - Polymorphism in Java.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 16 (Recap)/08 - Abstraction (the concept) vs. the abstract keyword.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 16 (Recap)/07- Interfaces, Abstract Classes, and Concrete Classes.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 16 (Recap)/00 - Abstract Class vs Interface.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 16 (Recap)/06 -  Java super() in Spring Boot.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 16 (Recap)/05 - this and this().md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 16 (Recap)/04 - No Super for no-args constructor.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 16 (Recap)/03 - Why Super when parameterized.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 16 (Recap)/02 -  Abstract Classes and Interfaces in Spring Boot.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 16 (Recap)/01 - Abstract Classes in Java.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 00 (Simple concepts)/01 - Built-in Enums.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 1 (Bean Life Cycle)/02 - Bean Instantiation (Constructor Execution).md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 00 (Simple concepts)/00 - Object LifeCycle.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 1 (Bean Life Cycle)/04 - Bean Initialization.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Basic Concepts and defenitions)/03 - Bean Life-cycle ✧.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/01 - BFPP.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 1 (Bean Life Cycle)/03 - Aware callbacks.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 1 (Bean Life Cycle)/02 - Bean Instantiation (Constructor Execution).md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 1 (Bean Life Cycle)/00 - Container Starts.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 1 (Bean Life Cycle)/01 - Bean Definition Registration.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/00 - The Spring Boot container.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Basic Concepts and defenitions)/05 - Bean Scopes.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 1 (Bean Life Cycle)",
     "Spring Bean Lifecycle Flow Infographic.png",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Basic Concepts and defenitions)/04 - The Spring Bean Lifecycle.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Basic Concepts and defenitions)/21 - Spring Container.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Basic Concepts and defenitions)/04 - Bean LifeCycle.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Basic Concepts and defenitions)/02 - Three Ways to DI ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Basic Concepts and defenitions)/01 - ApplicationContext ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/29 - ApiKeyAuthenticationFilter.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/28 - AuthenticationProvider.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/27 - SimpleGrantedAuthority.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/26 - Custom UserDetailsService.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/25 - Objects.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/24 - AbstractHttpConfigurer.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/11 - Spring Security (Authentication Filter).md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/12 - Authorization Filter.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/13 - @EnableWebSecurity.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/14 - SecurityFilterChain Method Parameters.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/15 - AuthorizeHttpRequest.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/16 - Customizer Interface.md",
     "4 - Images/1792937407.png",
     "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 4 (commands and action)",
     "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 9 (Recap)",

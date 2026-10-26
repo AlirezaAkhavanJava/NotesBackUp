@@ -1,6 +1,5 @@
 
 
-[[15 - Java Object Lifecycle ✧]]
 
 The core lifecycle of a Java object—**creation, initialization, usage, and garbage collection**—remains consistent in JDK 25. However, modern JDKs like 25 have significantly refined the **performance characteristics** and **safety guarantees** at each stage.
 
