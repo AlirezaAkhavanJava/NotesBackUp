@@ -1,4 +1,4 @@
-
+![[Spring Bean Lifecycle Infographic.png]]
 
 
 Every object that Spring manages (a "bean") goes through a fixed life: Spring reads its definition, creates it, wires in its dependencies, prepares it, hands it to your app, and finally cleans it up when the app shuts down. The picture you shared shows that life from top to bottom.
