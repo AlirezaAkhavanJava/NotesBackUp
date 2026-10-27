@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "29e28df26ce57ef1",
+        "id": "fe928b73b609a141",
         "type": "tabs",
         "children": [
           {
-            "id": "8bdd91d791f6b727",
+            "id": "5ca4849845af271e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 1/06 - Git States.md",
+                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/32 - JWT.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "06 - Git States"
+              "title": "32 - JWT"
             }
           }
         ]
@@ -172,8 +172,18 @@
       "bases:Create new base": false
     }
   },
-  "active": "8bdd91d791f6b727",
+  "active": "5ca4849845af271e",
   "lastOpenFiles": [
+    "JWT Authentication Flow Infographic.png",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/31 - SSO in Spring Security.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/32 - JWT.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/30 - Single Sign-On (SSO) in Spring Security.md",
+    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 3 (Using Docker)/03 - Docker Commands (Images and Containers).md",
+    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 3 (Using Docker)/02 - Running a Docker Container on a Port You Choose.md",
+    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 3 (Using Docker)/01 - Docker file and Compose.md",
+    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 3 (Using Docker)/04 - Updating a Docker Image.md",
+    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 3 (Using Docker)/05 - Build a Container Without Starting It.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 1/06 - Git States.md",
     "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 1/05 - Git Repository.md",
     "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 1/06 - Git Repository.md",
     "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 9 (Recap)/02 - git gc.md",
@@ -190,16 +200,6 @@
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 17 (JDBC)/07 - The Statement methods, explained.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 17 (JDBC)/06 - Statement.md",
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/4 - SQLITE3/Week 2/18 - Types of Primaty Key.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 17 (JDBC)/03 - Connection & DriverManager.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 16 (Recap)/14 - Better getter and setter.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 16 (Recap)/13 - Encapsulation.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 16 (Recap)/10 - The point of polymorphism.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 16 (Recap)/12 - The point of inheritance.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 16 (Recap)/11 - The point of abstraction.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 16 (Recap)/09 - Polymorphism in Java.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 16 (Recap)/08 - Abstraction (the concept) vs. the abstract keyword.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 16 (Recap)/07- Interfaces, Abstract Classes, and Concrete Classes.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 16 (Recap)/00 - Abstract Class vs Interface.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 1 (Bean Life Cycle)",
     "Spring Bean Lifecycle Flow Infographic.png",
     "4 - Images/1792937407.png",
