@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/49 - JwtService.md",
+                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 3 (Honey Pot)/00 - HoneyPot.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "49 - JwtService"
+              "title": "00 - HoneyPot"
             }
           }
         ]
@@ -174,8 +174,11 @@
   },
   "active": "1fd071c242780254",
   "lastOpenFiles": [
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/48 - Claims.md",
+    "2 - Tags/Concepts/HoneyPot.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 3 (Honey Pot)/00 - HoneyPot.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/49 - JwtService.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 3 (Honey Pot)",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/48 - Claims.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/47 - API's.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/46 - The Bearer Header and How It Carries a JWT.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/45 - Building the JWT Filter Chain, File by File.md",
@@ -187,8 +190,8 @@
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/39 - Jwts class.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/38 - Secret key.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/37 - JWT flow.md",
-    "JWT Flow in Spring Security 1.png",
-    "JWT Flow in Spring Security.png",
+    "4 - Images/JWT Flow in Spring Security 1.png",
+    "4 - Images/JWT Flow in Spring Security.png",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/36 - JJWT API's.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 1 (Bean Life Cycle)/00 - Container Starts.md",
     "Spring ApplicationContext Lifecycle Infographic.png",
@@ -201,8 +204,6 @@
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Basic Concepts and defenitions)/04 - The Spring Bean Lifecycle ✧.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 2 (Scopes)/00 - Bean Scopes ✧.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 2 (Scopes)/02 - Where to Use Each Bean Scope.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 2 (Scopes)/01 - @Scope, @RequestScope, @SessionScope.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 1 (Bean Life Cycle)/10 - The Spring Boot container.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 2 (Scopes)",
     "4 - Images/Spring Security Authentication Architecture.png",
     "4 - Images/Spring Bean Scopes Infographic.png",
@@ -219,7 +220,6 @@
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 17 (properties)",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/12 - Java Back-End",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (servlet )",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/G - Real World Applications/Untitled.canvas"
   ]
 }
