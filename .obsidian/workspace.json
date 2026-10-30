@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "3789100166f1852f",
+        "id": "9ec04fbfc68c8c14",
         "type": "tabs",
         "children": [
           {
-            "id": "1fd071c242780254",
+            "id": "0436dfbcaed34ce7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 3 (Honey Pot)/00 - HoneyPot.md",
+                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 4 (Spring)/03 - Configuring spring core application.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "00 - HoneyPot"
+              "title": "03 - Configuring spring core application"
             }
           }
         ]
@@ -172,10 +172,25 @@
       "bases:Create new base": false
     }
   },
-  "active": "1fd071c242780254",
+  "active": "0436dfbcaed34ce7",
   "lastOpenFiles": [
-    "2 - Tags/Concepts/HoneyPot.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 4 (Spring)/08 - Spring Web.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 4 (Spring)/07 - spring-context.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 4 (Spring)/06 - BeanDefinition.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 4 (Spring)/03 - Configuring spring core application.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 4 (Spring)/04 -Jakarta EE.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 4 (Spring)/01 - Spring.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 4 (Spring)/05 - CDI.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 4 (Spring)/02 - Spring Boot.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 4 (Spring)/00 - RoadMap.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Defenitions)/00 - What is dependency and DI ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 4 (Spring)",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Defenitions)/05 - BeanFactory ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Defenitions)/06 - Who Calls new? ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Defenitions)/07 - @Autowired ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Defenitions)/04 - The Spring Bean Lifecycle ✧.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 3 (Honey Pot)/00 - HoneyPot.md",
+    "2 - Tags/Concepts/HoneyPot.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/49 - JwtService.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 3 (Honey Pot)",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/48 - Claims.md",
@@ -187,23 +202,9 @@
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/42 - generateToken().md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/41 - generateKey().md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/40 - Methods of Jwts and What They Hand You.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/39 - Jwts class.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/38 - Secret key.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/37 - JWT flow.md",
     "4 - Images/JWT Flow in Spring Security 1.png",
     "4 - Images/JWT Flow in Spring Security.png",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/36 - JJWT API's.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 1 (Bean Life Cycle)/00 - Container Starts.md",
     "Spring ApplicationContext Lifecycle Infographic.png",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Basic Concepts and defenitions)/03 - Bean Life-cycle ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Basic Concepts and defenitions)/02 - Three Ways to DI ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Basic Concepts and defenitions)/01 - ApplicationContext ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Basic Concepts and defenitions)/00 - What is dependency and DI ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Basic Concepts and defenitions)/06 - @Autowired.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Basic Concepts and defenitions)/05 - BeanFactory.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Basic Concepts and defenitions)/04 - The Spring Bean Lifecycle ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 2 (Scopes)/00 - Bean Scopes ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 2 (Scopes)/02 - Where to Use Each Bean Scope.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 2 (Scopes)",
     "4 - Images/Spring Security Authentication Architecture.png",
     "4 - Images/Spring Bean Scopes Infographic.png",
@@ -219,7 +220,6 @@
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 16 (Recap)",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 17 (properties)",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/12 - Java Back-End",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/G - Real World Applications/Untitled.canvas"
   ]
 }

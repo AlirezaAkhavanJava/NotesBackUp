@@ -2,7 +2,7 @@
 
 `BeanFactory` is the root interface of Spring's **IoC (Inversion of Control) container**. Its job is simple to say: it creates your objects (called **beans**), wires them together, and hands them to you when you ask. Instead of writing `new UserService()` all over your code, you describe what you need and let Spring build it.
 
-You will almost never use `BeanFactory` directly in a Spring Boot app. You will use its bigger sibling, `ApplicationContext`, which builds on `BeanFactory` and adds extra features. But `BeanFactory` is the engine underneath, so understanding it explains how the whole container works.
+You will ***almost never*** use `BeanFactory` directly in a Spring Boot app. You will use its bigger sibling, `ApplicationContext`, which builds on `BeanFactory` and adds extra features. But `BeanFactory` is the engine underneath, so understanding it explains how the whole container works.
 
 ---
 

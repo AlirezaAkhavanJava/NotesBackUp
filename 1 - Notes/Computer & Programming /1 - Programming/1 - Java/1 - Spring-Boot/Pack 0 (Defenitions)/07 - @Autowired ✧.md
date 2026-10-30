@@ -1,5 +1,4 @@
 
-# `@Autowired` in Spring
 
 `@Autowired` is a Spring annotation that tells the **Spring IoC Container**:
 
