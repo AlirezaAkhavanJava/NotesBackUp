@@ -1,7 +1,12 @@
 
-# Java OOP Fundamentals — In Depth
+ 
 
 Object-Oriented Programming (OOP) models software as a set of interacting objects. In Java, the core building blocks are **classes, objects, inheritance, polymorphism, abstraction, and encapsulation**, supported by **constructors, `this`/`super`, access modifiers, `static`, and `final`**.
+
+![[Java OOP Concepts Infographic.png]]
+
+
+
 
 ---
 
@@ -27,8 +32,12 @@ class Person {
 
 A class is a reference type. It defines what objects of that type will look like and how they behave.
 
+---
 ### Object
 An **object** is a runtime instance of a class, created with `new`.
+
+> Objects are created at runtime, whenever the line that creates them executes.
+
 
 ```java
 Person p = new Person();
