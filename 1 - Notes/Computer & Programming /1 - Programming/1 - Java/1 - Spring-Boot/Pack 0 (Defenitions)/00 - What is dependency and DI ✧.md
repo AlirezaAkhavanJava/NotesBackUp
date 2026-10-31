@@ -3,7 +3,7 @@
 > And what does **injecting** mean in Dependency Injection? Does it simply mean providing or putting the required dependency into my code?
 
 
-Good catch noticing that overlap — "dependency" is genuinely used in two related but different senses in the Spring/Maven world, and mixing them up trips up a lot of learners. Let's separate them clearly first, then get into DI itself.
+"dependency" is genuinely used in two related but different senses in the Spring/Maven world, and mixing them up trips up a lot of learners. Let's separate them clearly first, then get into DI itself.
 
 
 ## Two meanings of "dependency"
@@ -191,7 +191,8 @@ With a single constructor, you don't even need `@Autowired` on it in modern Spri
 
 So: if you're writing new Spring Boot code, just use constructor injection for required dependencies and you get `@Required`'s guarantee automatically, with better testability and immutability (`final` fields) as a bonus.
 
+## Summary
 
+A dependency is something that another component needs to function. In Maven, it refers to an external library (JAR) that your project needs, while in Dependency Injection (DI), it refers to an object that a class needs to perform its job. Dependency Injection is a design pattern in which an external component, such as Spring's IoC container, creates the required objects and provides them to the classes that need them, rather than having those classes create their own dependencies. Spring supports three injection methods: constructor, setter, and field injection. Constructor injection is recommended because it makes required dependencies explicit, supports `final` fields, and simplifies testing. The old `@Required` annotation, which was used to mark setter-injected dependencies as mandatory, has been deprecated since Spring 5.1; constructor injection provides this guarantee naturally.
 
 [[Spring Framework]]
-[[Java]]

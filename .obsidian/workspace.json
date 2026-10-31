@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 4 (Spring)/03 - Configuring spring core application.md",
+                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/RoadMap.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "03 - Configuring spring core application"
+              "title": "RoadMap"
             }
           }
         ]
@@ -80,7 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 373.2845039367676
+    "width": 360.8216743469238
   },
   "right": {
     "id": "318802b81bf4bc9f",
@@ -174,20 +174,30 @@
   },
   "active": "0436dfbcaed34ce7",
   "lastOpenFiles": [
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 4 (Spring)/08 - Spring Web.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 4 (Spring)/07 - spring-context.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 4 (Spring)/06 - BeanDefinition.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 4 (Spring)/03 - Configuring spring core application.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 4 (Spring)/04 -Jakarta EE.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 4 (Spring)/01 - Spring.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 4 (Spring)/05 - CDI.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 4 (Spring)/02 - Spring Boot.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 4 (Spring)/00 - RoadMap.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Defenitions)/00 - What is dependency and DI ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 4 (Spring)",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Defenitions)/05 - BeanFactory ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Defenitions)/06 - Who Calls new? ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Defenitions)/11 - PostgreSQL Confiuration.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Defenitions)/10 - Library , Framework and API ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Defenitions)/09 - Component-Scan ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 6 (JPA)/00 - @EntityScan and @EnableJpaRepositories.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 6 (JPA)",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 5 (Exceptions)",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Defenitions)/08 - Configuration Class ✧.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Defenitions)/07 - @Autowired ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Defenitions)/05 - BeanFactory ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Defenitions)/00 - What is dependency and DI ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 4 (Spring)/06 - BeanDefinition.md",
+    "4 - Images/Spring BeanDefinition Creation Flow.png",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 4 (Spring)/10 - DependsOn.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 4 (Spring)/09 - Spring Framework and Jakarta EE.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 4 (Spring)/07 - spring-context.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 4 (Spring)/08 - Spring Web.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 4 (Spring)/05 - Do i need to learn JakartaEE ?.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 4 (Spring)/04 -Jakarta EE.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 4 (Spring)/03 - Configuring spring core application.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 4 (Spring)/02 - Spring Boot.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 4 (Spring)/01 - Spring.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 4 (Spring)/00 - RoadMap.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 4 (Spring)",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Defenitions)/06 - Who Calls new? ✧.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Defenitions)/04 - The Spring Bean Lifecycle ✧.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 3 (Honey Pot)/00 - HoneyPot.md",
     "2 - Tags/Concepts/HoneyPot.md",
@@ -195,13 +205,6 @@
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 3 (Honey Pot)",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/48 - Claims.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/47 - API's.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/46 - The Bearer Header and How It Carries a JWT.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/45 - Building the JWT Filter Chain, File by File.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/44 - The JWT Filter Chain in Spring Security.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/43 - Generating a Valid JWT Secret Key.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/42 - generateToken().md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/41 - generateKey().md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (security)/40 - Methods of Jwts and What They Hand You.md",
     "4 - Images/JWT Flow in Spring Security 1.png",
     "4 - Images/JWT Flow in Spring Security.png",
     "Spring ApplicationContext Lifecycle Infographic.png",
@@ -212,14 +215,11 @@
     "4 - Images/Spring Bean Lifecycle Fantasy Map.png",
     "4 - Images/Spring After-Initialization Processing Infographic.png",
     "4 - Images/JWT Authentication and Spring Security Flow.png",
-    "4 - Images/JWT Authentication Flow Infographic.png",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)/Pack 1 (Bean Life Cycle)",
     "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 4 (commands and action)",
     "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 9 (Recap)",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 17 (JDBC)",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 16 (Recap)",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 17 (properties)",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/G - Real World Applications/Untitled.canvas"
   ]
 }

@@ -2,6 +2,8 @@
 
 A `BeanDefinition` is Spring's **recipe card for a bean**. It is a small object that describes _how_ to make a bean: which class to use, what scope it has, what it depends on, and which methods to call when it starts or stops. It is not the bean itself. It is only the plan.
 
+![[Spring BeanDefinition Creation Flow.png]]
+
 Spring does its work in two separate stages, and `BeanDefinition` is the link between them. First, Spring reads your configuration (`@Component`, `@Bean`, XML) and turns each item into a `BeanDefinition`. Later, Spring reads those definitions and creates the real objects. Because the plan exists _before_ the object, Spring can inspect it, change it, and decide when to build the bean. This is how lazy beans, scopes, `@Primary`, and `@DependsOn` all work.
 
 ---
