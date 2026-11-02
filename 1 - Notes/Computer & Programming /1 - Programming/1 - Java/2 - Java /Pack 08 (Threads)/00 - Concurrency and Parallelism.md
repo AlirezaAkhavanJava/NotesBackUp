@@ -1,509 +1,378 @@
-Date : 2025-08-27
-Tags :  [[Threads]] 
 
+
+**Concurrency** is about _dealing with many things at the same time_. It's a way of structuring your program so several tasks can be "in progress" together, even if only one of them is physically running at any given instant. Think of one cook who starts the rice, then chops vegetables while the rice cooks, then stirs the sauce. One person, many tasks moving forward.
+
+**Parallelism** is about _doing many things at the same time, literally_. Two or more tasks are running at the exact same instant, on different hardware. That's two cooks, each chopping their own vegetables. Concurrency is about **structure** (how you organize work), and parallelism is about **execution** (how work physically runs). You can have one without the other, and the best programs often use both.
+
+To really understand why we need them, we start with the machine.
+
+![[614f7e89-dba1-4874-bcd3-070385fe9b22.png]]
 ---
-## 1. What is Concurrency?
 
+## Part 1: How the hardware works
 
-Concurrency is handling multiple tasks at once, but not necessarily running them simultaneously. It’s like a single chef juggling multiple dishes—switching between tasks. In Java, threads (lightweight units of execution) share a CPU core, with the JVM switching between them to give the illusion of simultaneous progress.
+### The CPU executes one instruction stream per core
 
+A CPU **core** is a tiny worker that does this, billions of times per second:
 
-Concurrency uses context switching: the system ***saves one thread’s state and loads another’s* .** This is ideal for I/O-bound tasks (e.g., waiting for a file or network response), where threads yield time to others.
-![[Pasted image 20251122080952.png]]
+1. **Fetch** the next instruction from memory
+2. **Decode** it (what does it ask for?)
+3. **Execute** it (add numbers, compare, move data)
+4. **Store** the result
 
+One core follows **one stream of instructions** at a time. A 3 GHz core does roughly 3 billion of these cycles every second. That's very fast, and it matters for everything below.
 
-Concurrency can cause issues like race conditions (threads accessing shared data unpredictably) or deadlocks (threads waiting forever). Java provides synchronization tools like `synchronized` blocks or `java.util.concurrent` locks to manage these.
+### Why we got multiple cores
 
-**Example**: A simple Java program with two threads running concurrently, sharing a single core:
+For decades, CPUs got faster by raising the clock speed. Around the mid-2000s that hit a wall: faster clocks made chips too hot and power-hungry. So manufacturers changed strategy: **instead of one faster worker, put several workers on one chip.** That's a multi-core CPU.
 
-```java
-class Counter {
-    private int count = 0;
+The catch: **extra cores do nothing for you unless your program is written to use them.** A single-threaded Java program runs on one core and leaves the others idle. That is the first big reason parallelism exists.
 
-    public void increment() {
-        count++; // Not thread-safe; needs synchronization
-    }
+### The memory hierarchy (the speed gap)
 
-    public int getCount() {
-        return count;
-    }
-}
+The CPU is extremely fast. Memory is much slower. So the hardware has layers:
 
-class MyThread extends Thread {
-    private Counter counter;
-    private String name;
-
-    public MyThread(Counter counter, String name) {
-        this.counter = counter;
-        this.name = name;
-    }
-
-    @Override
-    public void run() {
-        for (int i = 0; i < 1000; i++) {
-            counter.increment();
-            System.out.println(name + ": " + counter.getCount());
-        }
-    }
-}
-
-public class ConcurrencyExample {
-    public static void main(String[] args) {
-        Counter counter = new Counter();
-        MyThread t1 = new MyThread(counter, "Thread-1");
-        MyThread t2 = new MyThread(counter, "Thread-2");
-
-        t1.start();
-        t2.start();
-    }
-}
-```
-
-**Explanation**: Two threads increment a shared counter. Without synchronization, the output is unpredictable due to race conditions.
-
-## 2. What is Parallelism?
-
-
-
-Parallelism is executing multiple tasks truly simultaneously on multiple CPU cores. It’s like multiple chefs cooking different dishes at once. In Java, threads run on separate cores for faster computation.
-
-> Focus is on the performance(speed)
-
-Modern CPUs (multi-core) enable parallelism. The JVM distributes threads across cores automatically if hardware supports it.
-
-
-
-Parallelism excels in CPU-bound tasks (e.g., calculations). Java’s Fork/Join framework splits tasks for parallel execution. Overhead comes from thread creation and inter-core communication.
-
-- **Parallelism** is indeed best for **CPU-bound tasks** like number crunching, simulations, or image processing.
-    
-- The **Fork/Join framework** in Java works by recursively splitting a big problem into smaller subproblems (fork), then combining results (join).
-    
-- **Overhead sources**:
-    
-    - Thread creation (though Fork/Join reuses a pool to reduce this).
-        
-    - Context switching between threads.
-        
-    - Synchronization and inter-core communication (cache coherence, memory barriers).
-
-**Example**: Using `parallelStream` to process a list in parallel:
-
-```java
-import java.util.Arrays;
-import java.util.List;
-
-public class ParallelismExample {
-    public static void main(String[] args) {
-        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-
-        // Parallel processing of numbers
-        numbers.parallelStream()
-               .map(n -> n * n) // Square each number
-               .forEach(System.out::println);
-    }
-}
-```
-
-**Explanation**: The `parallelStream` splits the list across cores, squaring numbers simultaneously.
-
-## 3. Key Differences Between Concurrency and Parallelism
-
-
-- **Concurrency**: Tasks interleaved on one core (like multitasking in a single kitchen).
-- **Parallelism**: Tasks run simultaneously on multiple cores (multiple kitchens).
-
-
-> Concurrency works on single-core systems; parallelism needs multi-core. 
-> 
-> Concurrency focuses on responsiveness; parallelism targets speed
-
-
-Concurrency manages I/O waits (e.g., UI responsiveness); parallelism optimizes CPU-intensive tasks. Concurrency has context-switching costs; parallelism has inter-core communication overhead.
-
-|Aspect|Concurrency|Parallelism|
+|Layer|Approximate access time|Shared with|
 |---|---|---|
-|Execution|Interleaved on one core|Simultaneous on multiple cores|
-|Hardware Need|Single-core OK|Multi-core required|
-|Focus|Responsiveness, handling waits|Speed, compute-intensive|
-|Java Example|Threaded web server|Parallel data processing|
+|Registers|under 1 ns|just that core|
+|L1 cache|about 1 ns|just that core|
+|L2 cache|about 3–5 ns|usually that core|
+|L3 cache|about 10–20 ns|all cores|
+|RAM|about 60–100 ns|everyone|
+|SSD|about 100,000 ns (0.1 ms)|everyone|
+|Network call|about 1,000,000+ ns (1 ms and up)|everyone|
 
-## 4. Concurrency and Parallelism in Modern Programming
+These numbers are rough, but the shape is what matters. A CPU cycle is about 0.3 ns. A network call that takes 1 ms is about **3 million cycles** of waiting.
 
+---
+### Two very important consequences
 
-In modern Java (e.g., Java 21), concurrency and parallelism are built-in for efficient apps. Threads leverage OS and hardware capabilities.
+**Consequence 1: waiting is huge.** When your program asks the database or the network for something, the core would sit [^1]idle for millions of cycles. That's wasted power. It would be much smarter to let the core work on _something else_ while waiting. This is the main reason **concurrency** exists.
 
+**Consequence 2: each core has its own private cache.** Imagine two cores, A and B, both working with a variable `count`:
 
-Java uses thread pools (`ExecutorService`) to reuse threads, reducing overhead. ==Libraries like Project Reactor handle asynchronous concurrency.==
-
-
-
-Java 21’s virtual threads enable massive concurrency (millions of threads) with low overhead. Parallelism uses hardware threads for CPU-bound tasks. Modern apps combine both: concurrency for I/O, parallelism for computation.
-
-**In Java**: Both concurrency (any hardware) and parallelism (multi-core) are supported via `java.util.concurrent`.
-
-**Example**: Using `ExecutorService` for concurrent task execution:
-
-``` java
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-
-public class ExecutorExample {
-    public static void main(String[] args) {
-        ExecutorService executor = Executors.newFixedThreadPool(2);
-
-        Runnable task1 = () -> {
-            for (int i = 0; i < 3; i++) {
-                System.out.println("Task 1: " + i);
-                try {
-                    Thread.sleep(100);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        };
-
-        Runnable task2 = () -> {
-            for (int i = 0; i < 3; i++) {
-                System.out.println("Task 2: " + i);
-                try {
-                    Thread.sleep(100);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        };
-
-        executor.submit(task1);
-        executor.submit(task2);
-        executor.shutdown();
-    }
-}
+```
+Core A: L1 cache holds count = 5
+Core B: L1 cache holds count = 5
+RAM:    count = 5
 ```
 
-**Explanation**: Two tasks run concurrently in a thread pool, sharing CPU resources.
+Core A changes `count` to 6, but it may write that to its own cache first. Core B may keep reading its old copy, `5`, for a while. The hardware has protocols (cache coherence) to sync these copies, but they aren't instant, and compilers and CPUs also **reorder instructions** to run faster. This is why, in Java, one thread can fail to "see" another thread's change. This is the root of the **visibility** problem you'll meet later.
+
+### Hyper-threading (SMT), briefly
+
+One physical core can pretend to be two "logical" cores. When one instruction stream stalls (waiting for memory), the core quickly runs the other. It's not twice as fast, usually only 20–30% more throughput, but it helps use idle moments. When you see "8 cores, 16 threads" on a spec sheet, that's this.
+
+---
+### The operating system and threads
+
+Your computer might run hundreds of programs but only has, say, 8 cores. The **operating system (OS)** solves this.
+
+- A **process** is a running program, with its own private memory.
+- A **thread** is a single stream of execution _inside_ a process. Threads of the same process **share the same heap memory**, but each thread has its **own stack** (local variables and method calls).
+- The **scheduler** decides which thread runs on which core, and for how long.
+
+![[1da170c4-be5f-4c71-a27a-ec5b9256037d.png]]
+
+If there are more threads than cores, the scheduler uses **time slicing**: thread 1 runs for a few milliseconds, then gets paused, thread 2 runs, and so on. Switching is called a **context switch**: the OS saves one thread's state (registers, position in code) and loads another's. It happens so fast that everything _feels_ simultaneous.
+
+Here's the key insight:
+
+|Situation|What happens|
+|---|---|
+|1 core, 3 threads|Time slicing. Only one runs at a time, but all make progress. That's **concurrency without parallelism**.|
+|4 cores, 4 threads|Each thread on its own core, truly simultaneous. That's **parallelism**.|
+|4 cores, 20 threads|Both: 4 run in parallel, and the scheduler rotates through the rest.|
+
+### So, why do we need them? (The two real reasons)
+
+1. **Waiting problem** (I/O: disk, network, database): the CPU is idle for millions of cycles. Fix: **concurrency**, so other work happens during the wait.
+2. **Computing problem** (heavy math, image processing, big data): one core is the bottleneck while others sit idle. Fix: **parallelism**, so the work is split across cores.
+
+Keep these two in mind. Everything in Java maps onto one of them.
 
 ---
 
-## 5. Concurrency and Parallelism in Multiple Apps (e.g., Obsidian, Music Player, Chrome)
+## Part 2: Concurrency vs parallelism, side by side
 
-### Basics
+||Concurrency|Parallelism|
+|---|---|---|
+|Core idea|Many tasks _in progress_|Many tasks _running at the same instant_|
+|Needs multiple cores?|No|Yes|
+|Main goal|Handle waiting well, stay responsive|Finish heavy computation faster|
+|Typical example|A web server handling 1000 requests|Resizing 1000 images on 8 cores|
+|Typical task type|I/O-bound|CPU-bound|
+|Main difficulty|Coordinating shared state|Splitting work and combining results|
 
-When running apps like Obsidian, a music player, and Chrome, the OS manages concurrency (switching between apps) and parallelism (using multiple cores). Each app runs in a separate process with its own threads.
+**How they work together:** a real server does both. Tomcat handles many requests concurrently (a pool of threads), and the OS spreads those threads across cores in parallel. Concurrency is the _design_, and parallelism is what the hardware _gives you_ when the design allows it.
 
-### Intermediate
+---
 
-- **Across Apps (Multitasking)**: The OS interleaves apps (concurrency) or runs them on separate cores (parallelism). For example, Chrome renders a webpage while the music player streams audio.
-- **Within Each App**:
-    - **Obsidian**: Threads for UI (concurrency) and file syncing (possible parallelism).
-    - **Music Player**: Threads for playback (concurrency during buffering) and audio effects (parallelism).
-    - **Chrome**: Each tab in a thread/process hybrid, using concurrency for page loads and parallelism for rendering.
+## Part 3: Java
 
-### Advanced
-
-On a 4-core CPU, the OS might run Chrome on two cores (parallelism), while switching Obsidian and the music player on others (concurrency). Java apps use JVM threads, treated as OS threads.
-
-**Example**: Simulating app threads (e.g., UI and background task):
-
-```java 
-public class AppSimulation {
-    public static void main(String[] args) {
-        Thread uiThread = new Thread(() -> {
-            while (true) {
-                System.out.println("UI thread updating...");
-                try {
-                    Thread.sleep(500);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-
-        Thread backgroundThread = new Thread(() -> {
-            while (true) {
-                System.out.println("Background task processing...");
-                try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-
-        uiThread.start();
-        backgroundThread.start();
-    }
-}
-```
-
-**Explanation**: Simulates an app with a UI thread (responsive) and a background thread (e.g., syncing).
-
-## 6. Daemon Threads vs. Normal Threads
-
-### Basics
-
-- **Normal Threads**: Keep the JVM running until they finish (e.g., main app logic).
-- **Daemon Threads**: Background threads (e.g., garbage collection) that exit when normal threads finish.
-
-### Intermediate
-
-Set daemon status with `thread.setDaemon(true)` before starting. Normal threads are default.
-
-### Advanced
-
-Daemons are for support tasks (e.g., logging). Differences:
-
-- **Lifecycle**: Daemons exit with the app; normal threads keep it alive.
-- **Use Case**: Daemons for monitoring; normal for core logic.
-
-**Example**: A daemon thread for logging:
+### Step 1: Creating a thread
 
 ```java
-public class DaemonExample {
-    public static void main(String[] args) {
-        Thread daemonThread = new Thread(() -> {
-            while (true) {
-                System.out.println("Daemon logging system stats...");
-                try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-
-        daemonThread.setDaemon(true);
-        daemonThread.start();
-
-        // Normal thread
-        Thread normalThread = new Thread(() -> {
-            try {
-                Thread.sleep(3000);
-                System.out.println("Normal thread done!");
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        });
-
-        normalThread.start();
-    }
-}
-```
-
-**Explanation**: The daemon thread stops when the normal thread finishes, as the JVM exits.
-
-## 7. Multithreading, Multiprocessing, Multitasking, and Differences
-
-
-
-- **Multithreading**: Multiple threads in one process, sharing memory (e.g., Java app with UI and background threads).
-- **Multiprocessing**: Multiple processes with isolated memory (e.g., separate apps).
-- **Multitasking**: OS-level handling of multiple tasks (apps or threads) via switching.
-
-
-
-Multithreading is lightweight but risky (shared memory issues). Multiprocessing is safer but heavier. Multitasking is OS-driven.
-
-
-
-|Concept|Scope|Memory|Overhead|Example in Java|
-|---|---|---|---|---|
-|Multithreading|Within process|Shared|Low|Thread pools|
-|Multiprocessing|Separate processes|Isolated|High|`ProcessBuilder`|
-|Multitasking|OS-wide|Varies|Medium|Running apps|
-
-**Example**: Multiprocessing with `ProcessBuilder`:
-
-```java
-import java.io.IOException;
-
-public class MultiprocessingExample {
-    public static void main(String[] args) {
-        try {
-            ProcessBuilder pb = new ProcessBuilder("notepad.exe");
-            Process process = pb.start();
-            System.out.println("Started a new process: Notepad");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-}
-```
-
-**Explanation**: Launches a separate process (Notepad), isolated from the Java app.
-
-## 8. When to Use Threads in Java: Processes/Operations and Examples
-
-
-
-Use threads for independent tasks that shouldn’t block the main flow, like I/O or computations.
-
-
-
-- **I/O-Bound**: Network calls, file reads—threads wait without wasting CPU.
-- **CPU-Bound**: Calculations—use parallelism on multi-core.
-
-
-
-Avoid threads for simple sequential tasks. Use for scalability in servers, GUIs, or data processing.
-
-**Example**: Thread for file reading (I/O-bound):
-
-```java
-import java.io.BufferedReader;
-import java.io.FileReader;
-
-public class FileReadThread {
-    public static void main(String[] args) {
-        Runnable fileTask = () -> {
-            try (BufferedReader reader = new BufferedReader(new FileReader("sample.txt"))) {
-                String line;
-                while ((line = reader.readLine()) != null) {
-                    System.out.println("Read: " + line);
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        };
-
-        Thread thread = new Thread(fileTask);
-        thread.start();
-    }
-}
-```
-
-**Explanation**: Reads a file in a separate thread, keeping the main thread free.
-
-## 9. How Spring Boot Manages Threads
-
-
-
-Spring Boot auto-configures thread pools for tasks like web requests or async methods.
-
-
-
-Use `@Async` for asynchronous methods, backed by `TaskExecutor` (thread pool).
-
-
-
-Customize with `ThreadPoolTaskExecutor`. Spring’s embedded servers (Tomcat/Undertow) manage threads for web requests. Integrates with `java.util.concurrent` for reactive programming. [[8 - Tomcats role , Nginx]]
-
-**Example**: Async method in Spring Boot:
-
-```java
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-import org.springframework.scheduling.annotation.Async;
-import org.springframework.scheduling.annotation.EnableAsync;
-import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
-import java.util.concurrent.Executor;
-
-@SpringBootApplication
-@EnableAsync
-public class AsyncApp {
-    public static void main(String[] args) {
-        SpringApplication.run(AsyncApp.class, args);
-    }
-
-    @Bean
-    public Executor taskExecutor() {
-        ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
-        executor.setCorePoolSize(2);
-        executor.setMaxPoolSize(2);
-        executor.setQueueCapacity(500);
-        executor.setThreadNamePrefix("AsyncThread-");
-        executor.initialize();
-        return executor;
-    }
-
-    @Async
-    public void asyncTask() {
-        System.out.println("Running async task on " + Thread.currentThread().getName());
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
-}
-```
-
-**Explanation**: The `@Async` method runs in a thread pool, configured via `ThreadPoolTaskExecutor`.
-
-## 10. Common Methods, Classes, and Interfaces
-
-### Basics to Advanced
-
-- **Concurrency/Threads**:
-    - **Classes**: `Thread`, `ExecutorService`
-    - **Interfaces**: `Runnable`, `Callable`
-    - **Methods**: `start()`, `run()`, `join()`, `sleep()`
-- **Parallelism**:
-    - **Classes**: `ForkJoinPool`, `Stream` (with `parallel()`)
-    - **Interfaces**: `ForkJoinTask`
-- **Synchronization**:
-    - **Keywords**: `synchronized`
-    - **Classes**: `ReentrantLock` (from `java.util.concurrent.locks`)
-- **Daemon**:
-    - **Method**: `setDaemon(true)` on `Thread`
-- **Multithreading**:
-    - **Classes**: `Executors`, `ThreadPoolExecutor`
-- **Spring Boot**:
-    - **Annotations**: `@Async`, `@EnableAsync`
-    - **Interfaces**: `AsyncTaskExecutor`
-
-**Example**: Using `ReentrantLock` for synchronization:
-
-```java
-import java.util.concurrent.locks.ReentrantLock;
-
-public class LockExample {
-    private int count = 0;
-    private final ReentrantLock lock = new ReentrantLock();
-
-    public void increment() {
-        lock.lock();
-        try {
-            count++;
-        } finally {
-            lock.unlock();
-        }
-    }
-
-    public int getCount() {
-        return count;
-    }
-
-    public static void main(String[] args) {
-        LockExample example = new LockExample();
+public class HelloThreads {
+    public static void main(String[] args) throws InterruptedException {
         Runnable task = () -> {
-            for (int i = 0; i < 1000; i++) {
-                example.increment();
-            }
+            System.out.println("Hello from " + Thread.currentThread().getName());
         };
 
-        Thread t1 = new Thread(task);
-        Thread t2 = new Thread(task);
+        Thread t1 = new Thread(task, "worker-1");
+        Thread t2 = new Thread(task, "worker-2");
+
         t1.start();
         t2.start();
 
-        try {
-            t1.join();
-            t2.join();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        System.out.println("Final count: " + example.getCount());
+        t1.join();
+        t2.join();
+        System.out.println("Main is done");
     }
 }
 ```
 
-**Explanation**: Uses `ReentrantLock` to ensure thread-safe counter increments.
+Line by line:
+
+- `Runnable task = () -> {...}`: a `Runnable` is just "a piece of work to do." The lambda is that work.
+- `new Thread(task, "worker-1")`: creates a thread object. It does **not** run yet.
+- `t1.start()`: asks the OS to create a real thread and run the task. **Always `start()`, never `run()`.** Calling `run()` just runs the code on the current thread, with no concurrency at all.
+- `t1.join()`: makes `main` wait until `t1` finishes.
+
+Run it a few times. The order of the two "Hello" lines can change. **The scheduler decides, not you.** That unpredictability is the root of why concurrency is hard.
+
+### Step 2: The danger, a race condition
+
+```java
+public class Counter {
+    private int count = 0;
+
+    public void increment() {
+        count++;
+    }
+
+    public int get() { return count; }
+}
+```
+
+`count++` looks like one step, but it's actually **three**:
+
+```
+1. READ  count from memory
+2. ADD   1
+3. WRITE the result back
+```
+
+Now two threads at once:
+
+|Step|Thread A|Thread B|count in RAM|
+|---|---|---|---|
+|1|reads 5||5|
+|2||reads 5|5|
+|3|writes 6||6|
+|4||writes 6|6|
+
+Two increments happened, but the count went up by only 1. An update got **lost**. This is a **race condition**. It links back to the hardware: those reads and writes go through separate caches and aren't atomic.
+
+### Step 3: Fixes, from simple to powerful
+
+**`synchronized`: only one thread inside at a time**
+
+```java
+public synchronized void increment() {
+    count++;
+}
+```
+
+A `synchronized` method takes a lock on the object. Thread B must wait until Thread A leaves the method. `synchronized` also fixes **visibility**: when a thread releases the lock, its changes become visible to the next thread that takes it.
+
+**`volatile`: visibility only**
+
+```java
+private volatile boolean running = true;
+```
+
+`volatile` forces every read and write to go to shared memory, not a stale cache copy. It solves **visibility**, but **not** atomicity. `volatile int count` with `count++` is still broken. It's perfect for simple flags like `running`.
+
+**Atomic classes: lock-free and fast**
+
+```java
+private final AtomicInteger count = new AtomicInteger();
+
+public void increment() {
+    count.incrementAndGet();
+}
+```
+
+This uses a CPU instruction called **compare-and-swap (CAS)**: "set the value to 6 _only if_ it is still 5." If another thread changed it first, retry. No lock needed.
+
+**`ReentrantLock`: manual control**
+
+```java
+private final ReentrantLock lock = new ReentrantLock();
+
+public void increment() {
+    lock.lock();
+    try {
+        count++;
+    } finally {
+        lock.unlock();
+    }
+}
+```
+
+More flexible than `synchronized` (timeouts, fairness, try-lock). The `finally` is vital: if you forget to unlock, other threads wait forever.
+
+### The three problems to always remember
+
+|Problem|Meaning|Tool|
+|---|---|---|
+|**Atomicity**|An operation must not be cut in the middle|`synchronized`, `Atomic*`, locks|
+|**Visibility**|One thread's write must be seen by others|`volatile`, `synchronized`|
+|**Ordering**|The CPU/compiler may reorder instructions|`volatile`, `synchronized` (the Java Memory Model's _happens-before_ rules)|
+
+And one more danger: **deadlock**. Thread A holds lock 1 and waits for lock 2, while Thread B holds lock 2 and waits for lock 1. Both wait forever. The usual fix is to always take locks in the same order.
+
+### Step 4: Thread pools (don't create threads by hand)
+
+Creating a thread is expensive (the OS must allocate a stack, about 1 MB by default). So instead we keep a **pool** of reusable threads:
+
+```java
+ExecutorService pool = Executors.newFixedThreadPool(4);
+
+for (int i = 0; i < 10; i++) {
+    int id = i;
+    pool.submit(() -> {
+        System.out.println("Task " + id + " on " + Thread.currentThread().getName());
+    });
+}
+
+pool.shutdown();
+```
+
+- `newFixedThreadPool(4)`: 4 workers.
+- `submit(...)`: puts a task in a queue. A free worker picks it up.
+- `shutdown()`: stops accepting new tasks and lets the pool exit once the queue is done. Forgetting it keeps your program alive.
+
+**How big should the pool be?** Here the hardware lesson pays off:
+
+|Task type|Pool size|Why|
+|---|---|---|
+|**CPU-bound** (math, compression)|about the number of cores (`Runtime.getRuntime().availableProcessors()`)|More threads than cores only adds context-switch overhead|
+|**I/O-bound** (DB, HTTP calls)|Larger, often many times the cores|Most threads are just waiting, so more can overlap|
+
+### Step 5: Concurrency in action: waiting without blocking
+
+`CompletableFuture` lets you start work and combine results without freezing the caller:
+
+```java
+CompletableFuture<String> user  = CompletableFuture.supplyAsync(() -> fetchUser());
+CompletableFuture<String> order = CompletableFuture.supplyAsync(() -> fetchOrders());
+
+String result = user.thenCombine(order, (u, o) -> u + " has " + o).join();
+```
+
+- `supplyAsync(...)`: runs the call on a pool thread and returns immediately.
+- Both calls start right away, so if each takes 200 ms, the total is about 200 ms instead of 400 ms.
+- `thenCombine`: when both finish, merge their results.
+- `join()`: wait for the final answer.
+
+This is the "waiting problem" fixed.
+
+### Step 6: Parallelism in action: splitting computation
+
+```java
+long sum = LongStream.rangeClosed(1, 100_000_000)
+                     .parallel()
+                     .sum();
+```
+
+`.parallel()` splits the range into chunks and processes them on multiple cores using the **ForkJoinPool**. The idea behind it is **fork/join**:
+
+```
+          [1 ... 100M]
+           /         \
+   [1...50M]       [50M...100M]     <- fork (split)
+    /     \          /      \
+  ...     ...      ...      ...
+    \     /          \      /
+   partial sums combine -> total   <- join (merge)
+```
+
+Use it only when:
+
+- the work is **CPU-heavy** (not waiting on I/O),
+- the data is **large** enough to be worth splitting,
+- tasks are **independent** (no shared mutable state).
+
+For tiny lists, splitting costs more than it saves.
+
+### Step 7: Virtual threads (Java 21+)
+
+Normal ("platform") threads map 1:1 to OS threads, so you can only have a few thousand. **Virtual threads** are very cheap, managed by the JVM, and you can have _millions_. When a virtual thread blocks on I/O, the JVM parks it and reuses the real thread for another one.
+
+```java
+try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
+    for (int i = 0; i < 10_000; i++) {
+        executor.submit(() -> callSlowService());
+    }
+}
+```
+
+This gives you concurrency for I/O-heavy code in simple, blocking-style code. It does **not** make CPU-heavy work faster, because you still only have as many cores as you have.
+
+---
+
+## Part 4: How they work together (the big picture)
+
+Imagine a Spring Boot endpoint that gets a request, calls two services, then crunches some data:
+
+```
+Request arrives
+   |
+   v
+Tomcat picks a thread from its pool        <- concurrency (many requests at once)
+   |
+   +--> call service A (200 ms wait)   \
+   +--> call service B (200 ms wait)    >   <- concurrency (overlap the waiting)
+   |                                   /
+   v
+heavy computation split with parallel stream   <- parallelism (use all cores)
+   |
+   v
+Response
+```
+
+- **Concurrency** keeps the app responsive and hides waiting.
+- **Parallelism** uses the extra cores for heavy computing.
+- The scheduler and hardware decide what actually runs in parallel.
+
+Since you already learned Spring: **singleton beans are shared by all request threads at once**, so a singleton with a mutable field (like a plain `int count`) has exactly the race condition from Step 2. Keep singleton beans stateless, or use thread-safe types.
+
+---
+
+## Short summaries of related concepts
+
+- **Amdahl's Law:** parallelism has a ceiling. If 20% of your program can't be parallelized, the best possible speedup is 5x, even with infinite cores.
+- **Thread safety:** code is thread-safe if it behaves correctly when called from many threads at once. Immutable objects are always safe.
+- **Concurrent collections:** `ConcurrentHashMap` and `CopyOnWriteArrayList` are built for multi-threaded use. Plain `HashMap` is **not** safe across threads.
+- **Async vs reactive:** async means "start now, get the result later." Reactive (Spring WebFlux) pushes this further, using few threads and event-driven pipelines.
+- **Blocking vs non-blocking:** a blocking call parks the thread until it's done. Non-blocking returns immediately and notifies you later.
+
+---
+
+## Quick recap
+
+1. Cores run one instruction stream each; multi-core exists because clocks hit a heat wall.
+2. Memory and I/O are far slower than the CPU, so cores would idle. **Concurrency** fills that gap.
+3. Heavy computation needs many cores at once. **Parallelism** provides that.
+4. Threads share heap memory, so you must handle **atomicity, visibility, and ordering**.
+5. In Java: use **thread pools**, `CompletableFuture` for waiting, **parallel streams / ForkJoin** for computing, **virtual threads** for lots of I/O tasks.
+6. Real systems use both together.
 
 
-#### ✅Notes : 
- *Concurrency(guitar solo): One guitarist plays very fast and alternates notes/chords so quickly it _sounds continuous_. Only one note is played at a time, but switching happens so efficiently that the listener perceives flow. This is like a single CPU core switching between tasks.
- 
- *Parallelism (band): Multiple musicians (threads/cores) actually play at the _same time_—drummer, bassist, guitarist, etc.—producing real simultaneous sound. This is like multiple CPU cores running tasks in parallel. *
+
+
+[[Java]]
+
+[^1]: Idle means that a CPU core is not executing useful instructions for your program because it is waiting for an external operation, such as a database query or network response, to complete. The core is available to execute other tasks, but your current thread cannot continue until the required data arrives. Essentially, the CPU is waiting rather than actively processing your program's next instructions.
