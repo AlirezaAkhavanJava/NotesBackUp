@@ -1,4 +1,6 @@
+The Spring Container is the core component of the Spring Framework responsible for creating, configuring, managing, and maintaining the objects (called Beans) used by your application. Instead of manually creating objects with `new`, you tell Spring which objects your application needs, and the container takes responsibility for their creation and management. It also handles Dependency Injection (DI), meaning it provides each object with the other objects it depends on.
 
+Think of the Spring Container as an object manager: you provide configuration (such as `@Component`, `@Configuration`, and `@Bean`), Spring reads that configuration, creates BeanDefinitions describing how beans should be created, and uses those definitions to instantiate and manage the actual beans. The main container interfaces are `BeanFactory` (the fundamental container) and `ApplicationContext` (a more feature-rich container built on top of it).
 ## Core intuition
 
 Think of your Spring application as a big workshop full of tools (objects) that need to work together — a `UserService` needs a `UserRepository`, which needs a `DataSource`, and so on. Someone has to:

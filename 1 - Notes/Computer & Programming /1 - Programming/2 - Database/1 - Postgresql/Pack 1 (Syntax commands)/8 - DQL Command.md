@@ -106,4 +106,4 @@ While not always distinguished as a separate category in standard SQL (as it’s
 
 
 
-##### *Tags : [[01 - SQL]]
+[[PostgreSQL]]

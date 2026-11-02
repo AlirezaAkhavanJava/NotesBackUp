@@ -92,7 +92,7 @@ You do not need to install or start an SQLite server.
 
 Let's create a simple Java class.
 
-```
+```java
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
