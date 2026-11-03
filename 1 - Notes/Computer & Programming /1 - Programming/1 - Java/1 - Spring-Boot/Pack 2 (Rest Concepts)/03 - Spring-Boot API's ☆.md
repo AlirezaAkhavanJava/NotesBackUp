@@ -86,4 +86,4 @@ The framework doesn't enforce REST. It gives you the tools; you decide the style
 Spring Boot is a framework, not a protocol. It can build REST APIs, but it can also build SOAP services, GraphQL APIs, gRPC services, messaging consumers, server-rendered web apps, and plain HTTP endpoints. **Only the parts you deliberately design as REST are REST.** The rest are just APIs — or just HTTP.
 
 
-[[3 - Spring + Spring Boot]]
+[[Spring Framework]]

@@ -1,7 +1,5 @@
 
 
-## The Three Ways to Inject Dependencies
-
 All three achieve the same goal — the container supplying a bean's dependencies instead of the bean creating them itself — but differ in **when** and **how** the container hands them over.
 
 ---
@@ -384,4 +382,4 @@ Every one of these "magic" Spring Boot features reduces to the same handful of i
 
 
 [[Spring Framework]]
-[[Java]]
+

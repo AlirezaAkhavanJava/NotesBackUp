@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "b3b3d1f5330b97a3",
+        "id": "024fada8778485a5",
         "type": "tabs",
         "children": [
           {
-            "id": "10a200a8347dccee",
+            "id": "8a2825c883c643b0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/14 - Inside a @Configuration.md",
+                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Rest Concepts)/05 - Stateless REST.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "14 - Inside a @Configuration"
+              "title": "05 - Stateless REST"
             }
           }
         ]
@@ -172,40 +172,41 @@
       "bases:Create new base": false
     }
   },
-  "active": "10a200a8347dccee",
+  "active": "8a2825c883c643b0",
   "lastOpenFiles": [
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/15 - @Configuration.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/14 - Inside a @Configuration.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/13 - How to design with @Configuration.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/12 - What goes in Git.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/11 - Methods of Environment.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/10 - How @Configuration Works.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/09 - Environment Class.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/08 - @PropertySource.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/07 - @ConfigurationProperties.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/06 - Ways to activate a profile.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/05 - Scoping a bean to one profile.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/04 - Spring Profiles.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/03 - application.properties.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/00 - Declaring Beans.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Rest Concepts)/03 - Spring-Boot API's ☆.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Rest Concepts)/04 - REST's Client-Server Rule.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Rest Concepts)/02 - What is \"REST-API\".md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Rest Concepts)/01 - What Is an API?.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Rest Concepts)/00 - What Is a “Contract” in Software?.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/17 - Component-scan in XML ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/16 - Component-Scan ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/15 - XML configuration ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/14 - Configuration Class ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)  🟌🟌🟌🟌🟌/Pack 8 (Configuraion)",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/01 - SpringApplication.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/00 - Declaring Beans.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/13 - How to design with @Configuration.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/03 - application.properties.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/02 - Running with no IDE.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Defenitions)/18 - Container and  Heap ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/00 - Concurrency and Parallelism.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Defenitions)/05 - Bean Life-cycle ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Defenitions)/04 - What is a Bean ?.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Defenitions)/03 - Convention over Configuration ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Defenitions)/02 - Library , Framework and API ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Defenitions)/01 - Spring vs Spring Boot ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Defenitions)/00 - Java & Enterprise ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Defenitions)/13 - The Three Ways to Inject Dependencies.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Defenitions)/14 - @Autowired ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Defenitions)/- PostgreSQL Confiuration ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Defenitions)/- Container and  Heap ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Defenitions)/12 - What is DI ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Defenitions)/11 - What Is a Dependency?.md",
     "4 - Images/6b9c526f-69b8-4b83-acd1-d6cdfa5e6250.png",
     "2f261d3d-d190-4ea8-b7f0-2e88f1302f9d.png",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/01 - Thread Class Constructors.md",
     "4 - Images/614f7e89-dba1-4874-bcd3-070385fe9b22.png",
     "4 - Images/1da170c4-be5f-4c71-a27a-ec5b9256037d.png",
     "1da170c4-be5f-4c71-a27a-ec5b9256037d.png",
     "614f7e89-dba1-4874-bcd3-070385fe9b22.png",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (Design and implemention)/04 -  DTOs, Mappers and Validation Messages for the Credentials Flow.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (Design and implemention)/01 - Credentials, Password Hashing, and the AuthenticationManager.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (Design and implemention)/03 -  UUID Ids, and Two Complete Security Patterns.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 2 (Concepts)/01 - Role, Authority, Credentials, and Principal ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (Design and implemention)/02 - AuthenticationProvider, and Designing Input Validation.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 4 (security)/11 - Spring Security (Authentication Filter).md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 4 (security)/12 - Authorization Filter.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (Design and implemention)",
     "4 - Images/Java OOP Concepts Infographic.png",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 16 (Learning and Coding)/Pack 1 (OOP)",
@@ -219,7 +220,6 @@
     "4 - Images/JWT Flow in Spring Security.png",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)  🟌🟌🟌🟌🟌/Pack 2 (Scopes)",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)  🟌🟌🟌🟌🟌/Pack 1 (Bean Life Cycle)",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 4 (commands and action)",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/G - Real World Applications/Untitled.canvas"
   ]
 }

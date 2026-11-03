@@ -1,12 +1,17 @@
-![[Spring Bean Lifecycle Flow Infographic.png]]
+Think of a bean's life like an employee's time at a company, with Spring as the HR department managing everything.
 
-A **bean** is just an object that Spring creates and manages for you. Because Spring owns it, the bean doesn't simply appear when you call `new`. It goes through a series of stages: Spring reads its definition, creates it, wires in its dependencies, lets you run setup code, hands it out to the rest of the app, and finally cleans it up when the application shuts down. That journey is the **bean lifecycle**.
+First, Spring **creates** the bean, like hiring someone. It calls the constructor and the person exists, but they have no desk, no laptop and no team yet. Next, Spring **hands them what they need**: it injects the dependencies (the other beans they work with). That's like getting a laptop and a manager.
 
-Knowing the lifecycle matters because it tells you _where_ your code should run. Opening a connection, warming a cache, validating configuration, and releasing resources each belong at a specific moment. Put them at the wrong moment, and you get classic bugs like a `NullPointerException` in a constructor because a dependency hasn't been injected yet.
+Once they're equipped, there's an **onboarding phase**. Spring runs the setup hooks, and `@PostConstruct` is the one you'll use most. This is the right place for "now that I have everything, let me get ready", such as loading a cache or checking a config value. Doing that in the constructor is a common mistake, because with field injection the dependencies haven't arrived yet at that point. During onboarding, Spring may also wrap the bean in a proxy, which is how features like `@Transactional` get added without you writing any extra code.
+
+Then comes the long middle part, where the bean is **in service**, doing its actual job. For the usual singleton, that lasts until the app shuts down.
+
+Finally, when the application closes, Spring **says goodbye**: it runs `@PreDestroy`, which is your chance to close connections, stop threads and clean up before the bean goes away. It's like handing back the laptop on the last day.
+
+In short: **create, equip, onboard, work, clean up.** Once you know which stage you're in, you know where to put your code. Setup that needs dependencies goes in `@PostConstruct`, and cleanup goes in `@PreDestroy`.
 
 ---
 
-## The big picture
 
 Here is the full journey of a singleton bean (the default scope) in order:
 

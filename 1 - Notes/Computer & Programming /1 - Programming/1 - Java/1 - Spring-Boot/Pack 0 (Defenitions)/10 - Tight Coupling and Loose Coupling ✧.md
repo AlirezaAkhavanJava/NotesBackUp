@@ -1,4 +1,4 @@
-# Tight Coupling and Loose Coupling
+
 
 **Coupling** is a measure of how much one class knows about another class and depends on it. Whenever class A uses class B, A is coupled to B. You can't avoid that, because objects have to work together. The real question is _how strongly_ they are tied together, and that is what "tight" and "loose" describe.
 
@@ -228,10 +228,6 @@ You rarely call `getBean` yourself, because injection does it for you. Think of 
 ## The whole story in one breath
 
 Tight coupling means a class creates and knows its concrete helpers, so it's hard to change or test. Loose coupling means the class depends on an interface and has its helpers handed in through the constructor (DI). Doing that by hand gets tedious, so Spring's IoC container, in the form of the `ApplicationContext` (built on `BeanFactory`), creates and wires all your beans for you.
-
-
-
-
 
 
 
