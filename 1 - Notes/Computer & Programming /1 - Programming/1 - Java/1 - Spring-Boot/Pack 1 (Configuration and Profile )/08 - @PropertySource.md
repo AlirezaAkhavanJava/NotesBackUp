@@ -1,44 +1,30 @@
 
-# `@PropertySource` — Full Tutorial
 
-We've used `application.properties` throughout this series without explaining how Spring actually discovers and loads it, or what to do when you need config from _somewhere else_. `@PropertySource` is that mechanism made explicit — worth understanding properly, because it explains a lot of "why does Spring know about this file" that's otherwise invisible.
+`@PropertySource` is an annotation that tells Spring to load an extra properties file and add its keys to the app's settings. You put it on a `@Configuration` class and give it a path, such as `classpath:mail-config.properties`.
+
+You need it because Spring Boot only loads `application.properties` and `application.yml` automatically. Any other file, such as a custom name, a file outside the JAR, or a feature's own settings, has to be loaded explicitly. This note covers how to do that, what goes wrong, and when Boot's newer alternative is the better choice.
 
 ---
 
-## 1. The Core Idea — Property Sources Are Just Ranked Layers
+## Where it sits among your settings
 
-Spring doesn't read `application.properties` because it's magic — it reads it because Spring Boot **auto-configures** it as one of several **property sources**, each of which is just a named collection of key-value pairs, layered with a priority order. `@PropertySource` is how _you_ add another layer to that stack, explicitly.
+Spring doesn't read `application.properties` by magic. It keeps a stack of named **property sources**, each one a set of key-value pairs, and when the same key appears twice, the higher source wins. `@PropertySource` adds one more layer, and it lands near the **bottom**:
 
-Think of it like CSS specificity: multiple sources can define the same property, and Spring resolves conflicts by a strict precedence order — highest wins.
-
-```
-Command-line args              ← highest priority
+```text
+Command-line arguments              ← strongest
 Environment variables
 application-{profile}.properties
 application.properties
-@PropertySource-loaded files    ← what we're covering today
-@Value default values           ← lowest priority
+@PropertySource files               ← weaker than all of the above
 ```
 
-This matters practically: if you're ever confused why a property "isn't taking effect," 9 times out of 10 it's because a higher-priority source is silently overriding the one you edited.
+That has a practical consequence. If a key from your `@PropertySource` file "isn't taking effect," check whether `application.properties`, an environment variable or a command-line argument is overriding it. Nine times out of ten, that's the reason.
+
+(`@Value("${x:default}")` isn't a layer. The text after the colon is only a fallback when no layer has the key.)
 
 ---
 
-## 2. Why `@PropertySource` Exists at All
-
-`application.properties` is auto-loaded by Spring Boot's own conventions — you never had to ask for it. So why would you need `@PropertySource`?
-
-**Because Spring Boot only auto-loads `application.properties`/`application.yml` by convention. Anything outside that convention — a custom-named file, a file in a non-standard location, or config specific to one particular module — needs to be loaded explicitly.**
-
-Common real scenarios:
-
-- Legacy config file with a different name (`db-config.properties`) you don't want to merge into the main file
-- A library or module you're building that ships its own default config, separate from the consuming app's
-- Splitting config by concern (`messages.properties`, `feature-flags.properties`) for organizational clarity, without cramming everything into one file
-
----
-
-## 3. Basic Usage — Loading a Custom Properties File
+## Basic usage
 
 ```properties
 # src/main/resources/mail-config.properties
@@ -50,24 +36,22 @@ mail.from=noreply@library.example.com
 ```java
 @Configuration
 @PropertySource("classpath:mail-config.properties")
-public class MailConfig {
-}
+public class MailConfig {}
 ```
 
-Once this `@Configuration` class is picked up by component scanning (remember — scanning starts from `LibraryApplication.java` and goes downward, from our Maven Structure tutorial), Spring loads `mail-config.properties` into the environment. Now these properties are usable anywhere via `@Value`:
+Line by line:
+
+- `@Configuration` makes this class something Spring processes. Your main class's component scan finds it.
+- `@PropertySource` loads the file into the `Environment`, so its keys are now available everywhere.
+
+Read the values with `@Value`:
 
 ```java
-@Service
-public class NotificationService {
-    @Value("${mail.host}")
-    private String mailHost;
-
-    @Value("${mail.port}")
-    private int mailPort;
-}
+@Value("${mail.host}") private String mailHost;
+@Value("${mail.port}") private int mailPort;
 ```
 
-Or bound into a strongly-typed config object — the more idiomatic Spring Boot pattern:
+Or, better for a group of related settings, bind them to one record:
 
 ```java
 @ConfigurationProperties(prefix = "mail")
@@ -78,208 +62,195 @@ public record MailProperties(String host, int port, String from) {}
 @Configuration
 @PropertySource("classpath:mail-config.properties")
 @EnableConfigurationProperties(MailProperties.class)
-public class MailConfig {
-}
+public class MailConfig {}
 ```
 
-```java
-@Service
-@RequiredArgsConstructor
-public class NotificationService {
-    private final MailProperties mailProperties;
-    // mailProperties.host(), mailProperties.port(), mailProperties.from()
-}
-```
-
-**Why prefer `@ConfigurationProperties` over scattered `@Value`:** type safety (port is genuinely an `int`, not a string you parse manually), IDE autocomplete, and one object to inject instead of five separate `@Value` fields. `@Value` is fine for a one-off; `@ConfigurationProperties` is the right tool once you have a _group_ of related settings — which is almost always the real-world case.
+The two annotations do different jobs. `@PropertySource` _loads the file_, and `@EnableConfigurationProperties` _registers the record_, which then reads from the loaded values. (`@ConfigurationPropertiesScan` on your main class works instead of the second one.)
 
 ---
 
-## 4. `classpath:` vs `file:` — Where the File Actually Lives
+## `classpath:` versus `file:`
 
-The prefix in `@PropertySource` tells Spring **how** to resolve the path — this trips people up if they don't understand Java's classpath concept.
-
-|Prefix|Resolves to|Example use|
+|Prefix|Resolves to|Use it for|
 |---|---|---|
-|`classpath:`|Inside your packaged jar (or `src/main/resources` during dev)|Config bundled with your app|
-|`file:`|An absolute or relative filesystem path, outside the jar|Config that lives on the deployment server, not shipped in the build|
+|`classpath:`|Inside your JAR (`src/main/resources` while developing)|Defaults that ship with the app|
+|`file:`|A path on the machine's disk, outside the JAR|Settings that live on the server|
 
 ```java
-@PropertySource("classpath:mail-config.properties")      // bundled with the app
-@PropertySource("file:/etc/library-app/secrets.properties") // external, on the server
+@PropertySource("classpath:mail-config.properties")
+@PropertySource("file:/etc/library-app/secrets.properties")
 ```
 
-**Why this distinction matters practically:** anything with `classpath:` gets baked into your jar at build time — fine for defaults, wrong for secrets or per-environment values (a database password shouldn't be _inside_ the jar you build once and deploy everywhere). `file:` points outside the jar entirely, letting the same built artifact behave differently depending on what's present on each server — directly connects back to the "configuration, not hardcoding" NFR principle from our Requirements Engineering tutorial, way back at the start of this series.
+Anything under `classpath:` is baked into the JAR at build time. That's fine for defaults and wrong for secrets, because you build the JAR once and deploy it everywhere. `file:` reads from the server at runtime, so the same JAR can behave differently per machine. A relative `file:` path is relative to the folder where you start the app.
 
 ---
 
-## 5. Loading Multiple Files — `@PropertySources`
-
-```java
-@Configuration
-@PropertySources({
-    @PropertySource("classpath:mail-config.properties"),
-    @PropertySource("classpath:feature-flags.properties")
-})
-public class AppConfig {
-}
-```
-
-In modern Java (with repeatable annotations), you can actually skip the wrapper and just repeat `@PropertySource` directly:
+## Several files
 
 ```java
 @Configuration
 @PropertySource("classpath:mail-config.properties")
 @PropertySource("classpath:feature-flags.properties")
-public class AppConfig {
-}
+public class AppConfig {}
 ```
 
-Both are equivalent — the wrapper form is only needed for compatibility with pre-Java 8 annotation processing, which is irrelevant to you on Java 21, but you'll see the wrapped form in older codebases/tutorials.
+You can repeat the annotation directly. The older wrapper form, `@PropertySources({ ... })`, does the same thing, and you'll see it in older code.
 
 ---
 
-## 6. A Sharp Gotcha — `@PropertySource` Does NOT Support `.yml`
+## Gotchas
 
-This is the single most common frustration people hit: **`@PropertySource` only understands `.properties` files by default — not YAML.**
+### 1. It doesn't understand YAML
+
+`@PropertySource` is a plain Spring Framework annotation, and plain Spring only parses `.properties` files. Spring Boot's own `application.yml` support is separate.
 
 ```java
-// ❌ This silently does NOT work — YamlPropertySourceFactory not applied
+// Wrong: the YAML text is read as if it were a .properties file
 @PropertySource("classpath:mail-config.yml")
 ```
 
-Spring Boot's _auto-loading_ of `application.yml` works because Spring Boot itself wires in special YAML-handling logic behind the scenes — but `@PropertySource` is a **plain Spring Framework** annotation (older, more general-purpose than Spring Boot), and plain Spring never learned to parse YAML.
+The file is read as properties, so the keys come out wrong or the load fails. Two fixes:
 
-### The fix — a custom `PropertySourceFactory`
+- Use `.properties` for anything loaded this way.
+- Or add a custom factory:
 
 ```java
 public class YamlPropertySourceFactory implements PropertySourceFactory {
     @Override
-    public PropertySource<?> createPropertySource(String name, EncodedResource resource) throws IOException {
+    public PropertySource<?> createPropertySource(String name, EncodedResource resource) {
         YamlPropertiesFactoryBean factory = new YamlPropertiesFactoryBean();
         factory.setResources(resource.getResource());
-        Properties properties = factory.getObject();
-        return new PropertiesPropertySource(resource.getResource().getFilename(), properties);
+        return new PropertiesPropertySource(
+                resource.getResource().getFilename(), factory.getObject());
     }
 }
+
+@PropertySource(value = "classpath:mail-config.yml",
+                factory = YamlPropertySourceFactory.class)
 ```
+
+In a Boot app, there's a much easier route for YAML. See `spring.config.import` below.
+
+### 2. It loads too late for Boot's own settings
+
+`@PropertySource` is processed while Spring builds your beans, which happens _after_ Boot has already read some settings. So keys such as `server.port`, `logging.*` and `spring.datasource.*` won't take effect from a `@PropertySource` file. Put those in `application.properties` instead.
+
+### 3. A missing file stops the app
+
+By default, a missing file fails startup. That's often what you want, because missing required config should be loud. For a genuinely optional file:
 
 ```java
-@Configuration
-@PropertySource(value = "classpath:mail-config.yml", factory = YamlPropertySourceFactory.class)
-public class MailConfig {
-}
+@PropertySource(value = "classpath:optional-overrides.properties",
+                ignoreResourceNotFound = true)
 ```
 
-**Practical guidance:** unless you specifically need this, just use `.properties` for anything you load via `@PropertySource` — it's the path of least resistance. Reserve `.yml` for your main `application.yml`, which Spring Boot already handles natively without any of this ceremony.
+Use it deliberately. It can hide a real misconfiguration.
+
+### 4. Non-ASCII text can come out garbled
+
+Properties files are read as ISO-8859-1 by default. If your file has accented or non-Latin characters, say so:
+
+```java
+@PropertySource(value = "classpath:messages-config.properties", encoding = "UTF-8")
+```
 
 ---
 
-## 7. Ignoring a Missing File Gracefully
-
-By default, if the file in `@PropertySource` doesn't exist, **Spring Boot fails to start** — a `FileNotFoundException` during context initialization. Sometimes that's exactly what you want (fail fast on missing required config). Sometimes it isn't — e.g., an optional override file that only exists in certain environments:
-
-```java
-@PropertySource(value = "classpath:optional-overrides.properties", ignoreResourceNotFound = true)
-```
-
-Now a missing file is silently skipped rather than crashing the app — use this deliberately, not as a default habit, since silently missing config can also hide real misconfigurations.
-
----
-
-## 8. Property Placeholders — Referencing One Property Inside Another
-
-Properties can reference each other:
+## Properties that reference other properties
 
 ```properties
-# mail-config.properties
 mail.host=smtp.example.com
 mail.port=587
 mail.url=https://${mail.host}:${mail.port}
 ```
 
+`@Value("${mail.url}")` resolves to `https://smtp.example.com:587`. In Spring Boot this just works. In plain Spring with no Boot, you must declare the resolver yourself, as a `static` bean:
+
 ```java
-@Value("${mail.url}")
-private String mailUrl;
-// resolves to: https://smtp.example.com:587
+@Bean
+public static PropertySourcesPlaceholderConfigurer placeholderConfigurer() {
+    return new PropertySourcesPlaceholderConfigurer();
+}
 ```
 
-For this resolution to actually happen, Spring needs a `PropertySourcesPlaceholderConfigurer` bean — Spring Boot registers this automatically for you, so in a Boot app it just works; in plain Spring Framework (no Boot), you'd need to declare it explicitly. Worth knowing this bean exists, since you'll see it mentioned in older Spring (pre-Boot) tutorials as something you had to wire up by hand.
+The reverse is also true. **Any `${...}` in a value is treated as a reference.** To keep literal template text such as a book title placeholder, use a different syntax, like `{bookTitle}`, or Spring will try to resolve it and fail.
 
 ---
 
-## 9. Profile-Specific `@PropertySource`
-
-Combine with `@Profile` to load different files per environment — connects directly to the `application-dev.properties` / `application-prod.properties` pattern from our Maven Project Structure tutorial, but generalized to arbitrary custom files:
+## A different file per profile
 
 ```java
 @Configuration
 @Profile("dev")
 @PropertySource("classpath:mail-config-dev.properties")
-public class DevMailConfig {
-}
+public class DevMailConfig {}
 
 @Configuration
 @Profile("prod")
 @PropertySource("classpath:mail-config-prod.properties")
-public class ProdMailConfig {
-}
+public class ProdMailConfig {}
 ```
 
-Only the config class matching the **active profile** (`spring.profiles.active=dev`) gets instantiated — meaning only its `@PropertySource` actually loads. This is a clean way to keep environment-specific config _files_ fully separate, not just environment-specific _values_ within one file.
+Only the config class matching the active profile is processed, so only its file loads. This is useful for _custom-named_ files. For the standard names, `application-{profile}.properties` already does this with no code.
 
 ---
 
-## 10. `@PropertySource` vs. Just Adding to `application.properties` — When to Actually Use It
+## The Boot alternative: `spring.config.import`
 
-Given that `application.properties` already auto-loads, when do you genuinely reach for `@PropertySource` instead of just adding keys there?
+Since Boot 2.4 you can load an extra file straight from `application.properties`:
+
+```properties
+spring.config.import=classpath:mail-notifications.yml,optional:file:./local.properties
+```
+
+Compared with `@PropertySource`:
+
+||`@PropertySource`|`spring.config.import`|
+|---|---|---|
+|Works with YAML|No (needs a custom factory)|Yes|
+|Loads early enough for `server.*`, `logging.*`|No|Yes|
+|Optional file|`ignoreResourceNotFound = true`|`optional:` prefix|
+|Where you write it|Java annotation|A properties file|
+|Works without Boot|Yes|No|
+
+In a Boot app, `spring.config.import` is usually the better choice. `@PropertySource` still matters when you work in plain Spring or in a shared library that shouldn't depend on Boot.
+
+---
+
+## When to actually use `@PropertySource`
 
 |Situation|Use|
 |---|---|
-|App-wide config, no strong reason to separate|`application.properties`|
-|Config logically tied to one specific module/library, not the whole app|`@PropertySource` on that module's `@Configuration`|
-|Building a reusable library that ships its own defaults for consumers to override|`@PropertySource` — keeps your library self-contained|
-|Legacy file you're migrating gradually, don't want a giant merge|`@PropertySource`, temporarily|
-|Secrets/environment-specific values on the deployment server|`@PropertySource("file:...")` or, more commonly today, environment variables|
+|App-wide settings|`application.properties`|
+|Settings that belong to one module or library|`@PropertySource` on that module's `@Configuration`|
+|A library that ships its own defaults|`@PropertySource`, so the library stays self-contained|
+|A legacy file you're migrating gradually|`@PropertySource` (or `spring.config.import`)|
+|Secrets on a server|Environment variables, or `file:`|
 
-**Honest practical take:** in most everyday Spring Boot apps — including the Library app we've built conceptually throughout this whole series — you'll rarely need `@PropertySource` explicitly. `application.properties` (plus profile-specific variants) covers the vast majority of real needs. `@PropertySource` earns its place specifically in **multi-module projects** (remember the `library-domain`/`library-persistence`/`library-api` split from the Maven Structure tutorial) where each module might reasonably want its own isolated config, or when integrating a legacy/third-party file you don't control the format of.
+Most Spring Boot apps rarely need it explicitly. It earns its place in multi-module projects and when you must load a file you don't control.
 
 ---
 
-## 11. Full Worked Example — Tying It Into the Library App
-
-```
-library-api/src/main/resources/
-├── application.properties          ← main config, auto-loaded
-└── mail-notifications.properties    ← module-specific, needs @PropertySource
-```
+## All together: one feature's settings in its own file
 
 ```properties
 # mail-notifications.properties
 notifications.overdue.enabled=true
 notifications.overdue.mail.from=library-noreply@example.com
-notifications.overdue.mail.subject-template=Reminder: '${bookTitle}' is overdue
+notifications.overdue.mail.subject-template=Reminder: {bookTitle} is overdue
 ```
 
 ```java
 @ConfigurationProperties(prefix = "notifications.overdue")
-public record OverdueNotificationProperties(
-    boolean enabled,
-    Mail mail
-) {
+public record OverdueNotificationProperties(boolean enabled, Mail mail) {
     public record Mail(String from, String subjectTemplate) {}
 }
-```
 
-```java
 @Configuration
 @PropertySource("classpath:mail-notifications.properties")
 @EnableConfigurationProperties(OverdueNotificationProperties.class)
-public class NotificationConfig {
-}
-```
+public class NotificationConfig {}
 
-```java
 @Service
 @RequiredArgsConstructor
 public class OverdueNotificationService {
@@ -287,25 +258,27 @@ public class OverdueNotificationService {
 
     public void notifyIfEnabled(Loan loan) {
         if (!properties.enabled()) return;
-        // build and send using properties.mail().from(), etc.
+        // use properties.mail().from(), etc.
     }
 }
 ```
 
-This keeps the whole "overdue notification" feature's config **physically separate** from the rest of `application.properties` — a deliberate organizational choice, following exactly the same "package-by-feature" instinct from our Project Architecture tutorial, applied to configuration instead of code.
+The feature's settings live in their own file, away from the rest of `application.properties`.
 
 ---
 
-## Quick Summary
+## Related concept in short
 
-1. `@PropertySource` explicitly loads a custom properties file into Spring's environment — needed because Spring Boot only _auto-loads_ `application.properties`/`.yml` by convention, nothing else
-2. Precedence: command-line args > env vars > `application-{profile}.properties` > `application.properties` > `@PropertySource` files > `@Value` defaults
-3. `classpath:` = bundled inside your jar; `file:` = external, read from the deployment server at runtime — critical distinction for secrets/per-environment config
-4. **`@PropertySource` does not support `.yml` out of the box** — needs a custom `PropertySourceFactory`, or just use `.properties` for anything loaded this way
-5. Prefer binding into `@ConfigurationProperties` records over scattering individual `@Value` fields — type-safe, groups related settings
-6. In practice, most Spring Boot apps rarely need this explicitly — it earns its place in multi-module projects or when isolating a specific feature's/library's config
+**`Environment`** is the object that holds all these layers together. `@PropertySource` adds a layer to it, and `@Value`, `@ConfigurationProperties` and `env.getProperty("mail.host")` all read from it.
 
 ---
+
+## Test yourself
+
+1. `mail.port=587` is in your `@PropertySource` file, and `MAIL_PORT=2525` is set as an environment variable. Which value does `@Value("${mail.port}")` get, and why?
+2. You put `server.port=9090` in a `@PropertySource` file, but the app still starts on 8080. Why?
+3. You write `@PropertySource("classpath:config.yml")`. What happens, and what are two ways to fix it?
+
 
 
 

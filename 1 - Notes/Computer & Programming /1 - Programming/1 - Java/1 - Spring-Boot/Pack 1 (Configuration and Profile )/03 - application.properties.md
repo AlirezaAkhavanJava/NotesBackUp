@@ -1,70 +1,55 @@
 
-## The core intuition first
 
-Think of your Spring Boot app as a machine with a bunch of dials on it — "which port do I listen on," "what's the database password," "how verbose should logging be." Hard-coding those values into your Java classes would mean recompiling every time you want to change a dial. `application.properties` (or its YAML sibling) is the **external control panel** for those dials: a plain text file Spring reads at startup and uses to configure beans before your code ever runs.
+`application.properties` is a plain text file of `key=value` lines that Spring Boot reads at startup. It holds the settings that change from one machine to another, such as the port, the database URL and the log level. Spring uses them to configure your beans before your own code runs.
 
-The deeper idea behind this is **externalized configuration** — the practice of keeping "what varies between environments" (dev laptop, staging server, production) completely separate from "what the code does." Same JAR file, different `.properties` file per environment, zero code changes. This is one of the Twelve-Factor App principles, and Spring Boot builds its entire configuration system around it.
+The idea behind it is called **externalized configuration**: keep _what varies between environments_ (your laptop, staging, production) out of _what the code does_. You build one JAR and give it a different settings file per environment, with no recompiling.
 
 ---
 
-## The mental model: a giant `Map<String, String>`
+## The mental model: one big lookup table
 
-Forget Spring for a second. At its heart, `application.properties` is just key-value pairs:
+Forget Spring for a moment. The file is just key-value pairs:
 
 ```properties
 server.port=8081
 app.name=MyStore
 ```
 
-Spring loads this file into an abstraction called the **`Environment`** — essentially a big property lookup table merged from _multiple sources_ (the file, environment variables, command-line args, etc.). Everything downstream — auto-configuration, `@Value`, `@ConfigurationProperties` — is just querying this `Environment` for a key and getting a value back.
-
-Once you hold onto that mental model, everything else is mechanics.
+Spring loads these into an object called the **`Environment`**, a lookup table that merges many sources: this file, OS environment variables, command-line arguments and more. Everything else (auto-configuration, `@Value`, `@ConfigurationProperties`) just asks the `Environment` for a key and gets a value back.
 
 ---
 
-## 1. Where the file lives and how Spring finds it
+## Where Spring looks for the file
 
-By default, Spring Boot looks for `application.properties` in (in order of precedence, highest wins):
+|Location|Priority|
+|---|---|
+|`./config/` next to where you run the app|highest|
+|`./` the current directory||
+|`classpath:/config/`||
+|`classpath:/` (`src/main/resources`)|lowest|
 
-```
-1. /config subdirectory of the current directory
-2. current directory
-3. /config package on the classpath
-4. classpath root (src/main/resources/application.properties)
-```
-
-So `src/main/resources/application.properties` is the conventional home — it gets bundled into the JAR and is always found.
+You'll almost always use `src/main/resources/application.properties`. It's packaged inside the JAR, so it's always found. Files placed outside the JAR override it, which is how you change settings on a server without rebuilding.
 
 ---
 
-## 2. Basic syntax and the properties Spring Boot already understands
+## Keys Boot already understands
 
 ```properties
-# Server
 server.port=8081
-server.servlet.context-path=/api
-
-# Application identity
 spring.application.name=inventory-service
 
-# Database
 spring.datasource.url=jdbc:postgresql://localhost:5432/mydb
 spring.datasource.username=postgres
-spring.datasource.password=secret
-spring.datasource.driver-class-name=org.postgresql.Driver
+spring.datasource.password=${DB_PASSWORD}
 
-# JPA / Hibernate
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
-spring.jpa.properties.hibernate.format_sql=true
 
-# Logging
 logging.level.root=INFO
-logging.level.org.springframework.web=DEBUG
-logging.level.com.example.myapp=TRACE
+logging.level.com.example.myapp=DEBUG
 ```
 
-Why do these specific keys "just work" without you writing any code? This is **Spring Boot auto-configuration**. Internally, Spring Boot ships classes like `DataSourceAutoConfiguration` that are annotated roughly like this (simplified):
+You don't write any code for these to work. Boot ships a class for each prefix that collects the matching keys:
 
 ```java
 @ConfigurationProperties(prefix = "spring.datasource")
@@ -72,198 +57,138 @@ public class DataSourceProperties {
     private String url;
     private String username;
     private String password;
-    // getters/setters
+    // getters and setters
 }
 ```
 
-`@ConfigurationProperties(prefix = "spring.datasource")` tells Spring: "take every key starting with `spring.datasource.` from the `Environment`, strip the prefix, and bind the remainder to this object's fields by name." `spring.datasource.url` → `setUrl(...)`. That's the entire mechanism — no magic, just prefix-matching and reflection-based binding.
+Spring takes every key starting with `spring.datasource.`, strips the prefix, and calls the matching setter. `spring.datasource.url` becomes `setUrl(...)`. That is the whole mechanism, and it's why property names are so predictable: `spring.jpa.*`, `spring.kafka.*` and `server.*` each map to a class like this.
 
-This is _why_ the property names are so predictable once you know a library's prefix: `spring.jpa.*`, `spring.kafka.*`, `server.*` — they're all backed by a `@ConfigurationProperties` class somewhere in that library's source.
+A note on `ddl-auto=update`: it's convenient while learning, but don't use it in production. Use a migration tool such as Flyway there.
 
 ---
 
-## 3. Reading your own custom properties
+## Reading your own properties
 
-### Option A: `@Value` — single value injection
-
-```properties
-app.upload.max-size-mb=25
-app.feature.dark-mode=true
-```
-
-```java
-@Component
-public class UploadService {
-
-    @Value("${app.upload.max-size-mb}")
-    private int maxSizeMb;
-
-    @Value("${app.feature.dark-mode:false}") // ':false' = default if missing
-    private boolean darkModeEnabled;
-}
-```
-
-`${...}` is **property placeholder syntax** — Spring resolves it against the `Environment` at bean-creation time. The `:false` after the colon is a **default value**, used only if the key is absent (not if it's present-but-empty — that's a common gotcha, covered below).
-
-`@Value` is fine for one or two scattered settings, but it doesn't scale — you end up with property keys as string literals sprinkled across your codebase, no compile-time safety, no IDE autocomplete.
-
-### Option B: `@ConfigurationProperties` — the grown-up way
+You have two tools. Here is the same setting both ways.
 
 ```properties
 app.upload.max-size-mb=25
 app.upload.allowed-types=jpg,png,pdf
 app.upload.storage.bucket=my-bucket
-app.upload.storage.region=eu-west-1
 ```
+
+**`@Value`** injects one value:
 
 ```java
-@Component
+@Value("${app.upload.max-size-mb}")
+private int maxSizeMb;
+
+@Value("${app.feature.dark-mode:false}")   // after the colon: default if missing
+private boolean darkMode;
+```
+
+Line by line: `${...}` is placeholder syntax, which Spring resolves against the `Environment`, and the `:false` is the fallback. It's fine for one or two values. With more, you end up with string keys scattered everywhere, no autocomplete and no compile-time checking.
+
+**`@ConfigurationProperties`** binds a whole group to a class:
+
+```java
 @ConfigurationProperties(prefix = "app.upload")
-public class UploadProperties {
+public record UploadProperties(
+        int maxSizeMb,
+        List<String> allowedTypes,
+        Storage storage) {
 
-    private int maxSizeMb;
-    private List<String> allowedTypes;
-    private Storage storage = new Storage();
-
-    // getters and setters required — Spring needs them to bind values
-
-    public static class Storage {
-        private String bucket;
-        private String region;
-        // getters and setters
-    }
+    public record Storage(String bucket, String region) {}
 }
 ```
+
+Register it by putting `@ConfigurationPropertiesScan` on your main class, or `@EnableConfigurationProperties(UploadProperties.class)` on a configuration class. Then inject it like any bean:
 
 ```java
 @Service
 public class UploadService {
     private final UploadProperties props;
-
-    public UploadService(UploadProperties props) { // constructor injection
-        this.props = props;
-    }
+    public UploadService(UploadProperties props) { this.props = props; }
 }
 ```
 
-What just happened, mechanically:
+What Spring does for you:
 
-- Spring sees `@ConfigurationProperties(prefix = "app.upload")` and, at startup, walks every field.
-- For `maxSizeMb`, it looks for `app.upload.max-size-mb` — note the **relaxed binding**: `maxSizeMb` (camelCase in Java) automatically matches `max-size-mb` (kebab-case in properties). Spring normalizes both to the same canonical form internally, so you can write kebab-case, camelCase, or even `MAX_SIZE_MB` (env-var style) and they all bind to the same field.
-- For `allowedTypes` (a `List<String>`), a comma-separated value like `jpg,png,pdf` is automatically split into a list.
-- For `storage`, a **nested object**, it recurses: `app.upload.storage.bucket` → `Storage.bucket`.
+- `maxSizeMb` matches `max-size-mb`. This is **relaxed binding**: camelCase, kebab-case and `MAX_SIZE_MB` all map to the same field. Write kebab-case in the file, since it's the standard.
+- `allowedTypes` is a `List`, so `jpg,png,pdf` is split automatically.
+- `storage` is nested, so `app.upload.storage.bucket` goes into `Storage.bucket`.
+- A bad value (`max-size-mb=abc`) fails at startup with a clear binding error. That's good: you want to find out now, not at 2am.
 
-This is dramatically better than `@Value` for anything beyond a couple of flat values: type-safe, groupable, testable in isolation, and (if you add the `spring-boot-configuration-processor` dependency) gives you **IDE autocomplete** for your own custom keys, exactly like Spring's built-in ones.
+Add `spring-boot-configuration-processor` and your IDE will autocomplete your custom keys too.
 
-To make Spring actually scan for these classes if `@Component` isn't on it, you can alternatively register it via:
-
-```java
-@Configuration
-@EnableConfigurationProperties(UploadProperties.class)
-public class AppConfig { }
-```
-
-This is the _other_ common thing besides `@Bean` you'll see inside a `@Configuration` class — worth connecting back to your earlier question.
+**Which to choose?** Use `@ConfigurationProperties` for anything grouped or reused, and `@Value` for a quick one-off.
 
 ---
 
-## 4. Profiles — different dials for different environments
+## Profiles: different settings per environment
 
-This is where the "externalized configuration" philosophy really pays off.
+Create one extra file per environment:
 
-```
+```text
 src/main/resources/
-├── application.properties          # common/shared settings
-├── application-dev.properties      # dev overrides
-├── application-prod.properties     # prod overrides
+├── application.properties         ← always loaded
+├── application-dev.properties     ← added when profile "dev" is active
+└── application-prod.properties    ← added when profile "prod" is active
 ```
 
 ```properties
-# application.properties (base — always loaded)
-spring.application.name=inventory-service
+# application.properties
 logging.level.root=INFO
-
-# application-dev.properties
-spring.datasource.url=jdbc:h2:mem:testdb
-logging.level.root=DEBUG
 
 # application-prod.properties
 spring.datasource.url=jdbc:postgresql://prod-db:5432/inventory
 logging.level.root=WARN
 ```
 
-You activate a profile via:
-
-```properties
-# in application.properties
-spring.profiles.active=dev
-```
-
-or, more realistically, as an environment variable / launch argument so you never bake "dev" into a file that gets deployed to prod:
+Activate a profile at launch, so "prod" is never baked into a file:
 
 ```bash
 java -jar app.jar --spring.profiles.active=prod
 ```
 
-**Merge order and precedence** (this is the part people get wrong): the base `application.properties` loads first, then the active profile's file loads **on top of it**, overriding any matching keys. Keys only in the base file that aren't overridden stay as-is. It's a layered merge, not a full replacement.
+The profile file is **layered on top** of the base file. Keys it defines override the base, and everything else stays. Nothing gets replaced wholesale.
 
-This connects directly to `@Profile("dev")` from your earlier question — same underlying concept (the active profile), two different mechanisms for reacting to it: `.properties` files swap _values_, `@Profile` on a `@Bean` swaps _which beans exist at all_.
+Profiles also work in the other direction: `@Profile("dev")` on a bean decides whether that _bean exists_. Profile files change _values_, and `@Profile` changes _which beans are created_.
 
 ---
 
-## 5. Precedence: the full resolution order (the part everyone eventually needs)
+## Precedence: who wins when a key appears twice?
 
-Properties don't only come from the file — Spring merges _many_ sources, and understanding the priority order is essential for debugging "why isn't my property taking effect."
-
-From highest to lowest priority (highest wins when the same key appears in multiple places):
+The rule of thumb: **the closer a setting is to the running process, the higher its priority.** From strongest to weakest:
 
 1. Command-line arguments (`--server.port=9090`)
-2. `SPRING_APPLICATION_JSON` (inline JSON env var)
-3. Servlet init parameters
-4. JNDI attributes
-5. Java System properties (`-Dserver.port=9090`)
-6. OS environment variables (`SERVER_PORT=9090`)
-7. Profile-specific `application-{profile}.properties` **outside** the packaged jar
-8. Profile-specific `application-{profile}.properties` **inside** the packaged jar
-9. `application.properties` outside the jar
-10. `application.properties` inside the jar (your `src/main/resources` version)
-11. `@PropertySource` on `@Configuration` classes
-12. Default properties set via `SpringApplication.setDefaultProperties`
+2. Java system properties (`-Dserver.port=9090`)
+3. OS environment variables (`SERVER_PORT=9090`)
+4. Profile files outside the JAR, then inside the JAR
+5. `application.properties` outside the JAR, then inside the JAR
+6. `@PropertySource` and `SpringApplication.setDefaultProperties`
 
-**Why this order exists conceptually:** it's designed so that whatever is "closest to the actual running instance" (a command-line flag you typed right now) always beats whatever is "baked further back" (a value compiled into the jar months ago). This is what lets you do things like override a single property for one Docker container without rebuilding the image — just pass `-e SERVER_PORT=9090` and it beats everything in the file.
+(The full official list has a few more rare entries, such as JNDI and servlet parameters, between these.)
 
-This is also exactly why environment variables work as overrides without any extra code: Spring automatically maps `SERVER_PORT` → `server.port` (uppercase + underscores ↔ lowercase + dots), because containerized environments (Docker, Kubernetes) conventionally configure things via env vars, not files.
+This is why you can change one setting in a Docker container without rebuilding the image: `-e SERVER_PORT=9090` beats the file. Spring maps `SERVER_PORT` to `server.port` on its own (uppercase and underscores become lowercase and dots).
 
 ---
 
-## 6. Gotchas and edge cases
+## Gotchas
 
-- **Default value vs. empty value in `@Value`:** `${app.name:Default}` only kicks in if the key is _missing entirely_. If `application.properties` contains `app.name=` (present but blank), you get an empty string, not `"Default"`.
-- **Type mismatches fail at startup, not silently:** if `app.upload.max-size-mb=abc` and the field is an `int`, Spring Boot fails fast with a clear `ConfigurationPropertiesBindingException` during context startup — this is a _feature_, not an annoyance; you want config errors caught immediately, not at 2am when the upload endpoint is hit in production.
-- **`@ConfigurationProperties` needs setters (or a constructor)** — either JavaBean-style getters/setters, or, since Spring Boot 2.2+, an **immutable, constructor-bound** style:
-    
-    ```java
-    @ConfigurationProperties(prefix = "app.upload")public record UploadProperties(int maxSizeMb, List<String> allowedTypes) {}
-    ```
-    
-    This is the modern idiomatic approach in newer Spring Boot — no mutable setters, thread-safe by construction.
-- **YAML vs `.properties`:** `application.yml` is functionally equivalent but expresses nesting natively instead of via dots:
-    
-    ```yaml
-    app:  upload:    max-size-mb: 25    storage:      bucket: my-bucket
-    ```
-    
-    Same `Environment` underneath — pick one format per project, don't mix both for the same keys (if you do, `.properties` wins over `.yml` in the default precedence).
-- **Multi-document YAML profiles** (Boot 2.4+): you can put multiple profiles in _one_ file using `---` separators instead of separate `application-{profile}.yml` files — handy for small projects, harder to read for large ones.
-- **Secrets don't belong in the file at all:** committing `spring.datasource.password=secret` to git is a classic mistake. The standard fix is to reference an environment variable _from_ the properties file:
-    
-    ```properties
-    spring.datasource.password=${DB_PASSWORD}
-    ```
-    
-    — the `${}` here is resolved against the `Environment`, which includes OS env vars, so the actual secret only ever exists outside your codebase.
+- **Empty is not missing.** `${app.name:Default}` uses the default only if the key is absent. If the file has `app.name=` (blank), you get an empty string.
+- **Never commit secrets.** Reference an environment variable instead: `spring.datasource.password=${DB_PASSWORD}`. The real password then lives only outside your repo.
+- **YAML is the same thing with nesting.** `application.yml` writes `app:` then `upload:` then `max-size-mb: 25` as indented levels. It fills the same `Environment`. Pick one format per project. If a key appears in both, `.properties` wins.
+- **One YAML file can hold several profiles**, separated by `---` (Boot 2.4+). It's handy for small projects and harder to read for big ones.
+
+---
+
+## Related concept in short
+
+**`Environment`** is the merged lookup table described above. You can inject it (`Environment env`) and call `env.getProperty("app.name")`, but `@Value` and `@ConfigurationProperties` are usually nicer.
 
 
-[[Java]]
+
+
+
 [[Spring Framework]]
-[[1 - PostgreSQL Confiuration ✧]]

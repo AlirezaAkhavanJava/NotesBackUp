@@ -327,21 +327,7 @@ This gives you concurrency for I/O-heavy code in simple, blocking-style code. It
 
 Imagine a Spring Boot endpoint that gets a request, calls two services, then crunches some data:
 
-```
-Request arrives
-   |
-   v
-Tomcat picks a thread from its pool        <- concurrency (many requests at once)
-   |
-   +--> call service A (200 ms wait)   \
-   +--> call service B (200 ms wait)    >   <- concurrency (overlap the waiting)
-   |                                   /
-   v
-heavy computation split with parallel stream   <- parallelism (use all cores)
-   |
-   v
-Response
-```
+![[6b9c526f-69b8-4b83-acd1-d6cdfa5e6250.png]]
 
 - **Concurrency** keeps the app responsive and hides waiting.
 - **Parallelism** uses the extra cores for heavy computing.

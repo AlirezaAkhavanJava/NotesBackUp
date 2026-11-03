@@ -1,111 +1,75 @@
 
- If you're using **LazyVim + Maven**, you don't need to manually `javac` every file. Maven/Spring Boot handles compilation and only recompiles what changed.
 
-### 1. Run Spring Boot directly
 
-From your project's root directory:
+With Maven you never compile files by hand. `./mvnw spring-boot:run` compiles whatever needs compiling and then starts your app. You can do all of it from inside LazyVim, with no `javac` and no separate IDE.
+
+---
+
+## 1. Run it
+
+From the project root:
 
 ```bash
 ./mvnw spring-boot:run
 ```
 
-or, if Maven is installed globally:
+If Maven is installed globally, `mvn spring-boot:run` does the same thing. Use `./mvnw` when the project has the wrapper, because it pins the Maven version for you.
 
-```bash
-mvn spring-boot:run
-```
+You don't need `mvn clean package` for day-to-day work. `spring-boot:run` already runs the `compile` phase first, and Maven's compiler plugin detects changes and skips compiling when nothing changed. Use `mvn clean` only when you suspect stale files in `target/`.
 
-This is the simplest approach.
+---
 
-### 2. From LazyVim
-
-Open the project:
+## 2. Run it inside LazyVim
 
 ```bash
 cd /path/to/project
 nvim .
 ```
 
-Then open LazyVim's terminal:
+Open the built-in terminal with `Ctrl + /` and run `./mvnw spring-boot:run` there. The app keeps running in that terminal. Press `Ctrl + /` again to hide it, and `Ctrl + C` inside it to stop the app.
 
-```text
-Ctrl + /
-```
+---
 
-and run:
+## 3. Optional: a keyboard shortcut
 
-```bash
-./mvnw spring-boot:run
-```
-
-Your application stays running in that terminal.
-
-### 3. If you want a keyboard shortcut
-
-You can configure LazyVim to run it with a key such as `<leader>r`.
-
-Create:
-
-```text
-~/.config/nvim/lua/plugins/springboot.lua
-```
+Add this to `~/.config/nvim/lua/config/keymaps.lua`, which is where LazyVim expects your own keymaps:
 
 ```lua
-return {
-  {
-    "LazyVim/LazyVim",
-    keys = {
-      {
-        "<leader>r",
-        function()
-          vim.cmd("split | terminal ./mvnw spring-boot:run")
-      end,
-        desc = "Run Spring Boot",
-      },
-    },
-  },
-}
+vim.keymap.set("n", "<leader>mr", function()
+  vim.cmd("split | terminal ./mvnw spring-boot:run")
+end, { desc = "Run Spring Boot" })
 ```
 
-Then:
+Press `<leader>mr` (Space, then `m`, then `r`) and a split opens running your app. The terminal starts in normal mode, so press `i` if you want to type in it.
 
-```text
-<leader>r
-```
+The command runs in Neovim's current directory, so open `nvim` from the project root.
 
-will open a terminal and execute the Spring Boot application.
+---
 
-### Important distinction
+## 4. Optional: auto-restart with DevTools
 
-If by **"without needing to compile all files"** you mean you don't want to run:
-
-```bash
-mvn clean package
-```
-
-every time — **don't do that**.
-
-Use:
-
-```bash
-./mvnw spring-boot:run
-```
-
-Maven's normal compile phase checks what's needed and compiles the project as necessary.
-
-For development, you can also use **Spring Boot DevTools** so that changes can trigger automatic restarts:
+Add Spring Boot DevTools:
 
 ```xml
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-devtools</artifactId>
     <scope>runtime</scope>
+    <optional>true</optional>
 </dependency>
 ```
 
-That gives you a much more IDE-like workflow while staying entirely inside LazyVim.
+DevTools restarts the app when compiled classes in `target/classes` change. Neovim doesn't compile on save the way an IDE does, so saving a file isn't enough. Keep a second terminal and run this after you save:
+
+```bash
+./mvnw compile
+```
+
+DevTools sees the new classes and restarts the app quickly. Because the restart reloads only your own classes, it is usually much faster than a full `spring-boot:run`.
 
 
-[[Java]]
-[[Vim]]
-[[Maven]]
+
+
+
+
+[[Spring Framework]]
