@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "024fada8778485a5",
+        "id": "0b0cab7e8e79b402",
         "type": "tabs",
         "children": [
           {
-            "id": "8a2825c883c643b0",
+            "id": "6d79540478bc6439",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Rest Concepts)/05 - Stateless REST.md",
-                "mode": "preview",
+                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Networking Concepts in Spring Boot)/15 - Designing Production-Grade RESTful APIs in Spring Boot.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "05 - Stateless REST"
+              "title": "15 - Designing Production-Grade RESTful APIs in Spring Boot"
             }
           }
         ]
@@ -172,35 +172,35 @@
       "bases:Create new base": false
     }
   },
-  "active": "8a2825c883c643b0",
+  "active": "6d79540478bc6439",
   "lastOpenFiles": [
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Rest Concepts)/03 - Spring-Boot API's ☆.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Rest Concepts)/04 - REST's Client-Server Rule.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Rest Concepts)/02 - What is \"REST-API\".md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Rest Concepts)/01 - What Is an API?.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Rest Concepts)/00 - What Is a “Contract” in Software?.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Networking Concepts in Spring Boot)/16 - REST API Endpoint Rules.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Networking Concepts in Spring Boot)/17 -  What is AOP?.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Networking Concepts in Spring Boot)/18 - Data Access Framework.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Networking Concepts in Spring Boot)/15 - Designing Production-Grade RESTful APIs in Spring Boot.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Networking Concepts in Spring Boot)/14 - Zooming in on the Uniform Interface.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Networking Concepts in Spring Boot)/13 - Uniform Interface in REST.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Networking Concepts in Spring Boot)/12 - Code on Demand in REST.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Networking Concepts in Spring Boot)/11 - Cacheability in REST.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Networking Concepts in Spring Boot)/10 - The Layered System.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Networking Concepts in Spring Boot)/02 - What is \"REST-API\".md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Networking Concepts in Spring Boot)/03 - Spring-Boot API's ☆.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Networking Concepts in Spring Boot)/04 - REST's Client-Server Rule.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Networking Concepts in Spring Boot)/05 - Stateless REST.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Networking Concepts in Spring Boot)/06 - What is a Session ?.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Networking Concepts in Spring Boot)/07 - What is Scalability ?.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Networking Concepts in Spring Boot)/08 - REST and Scalability.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Networking Concepts in Spring Boot)/09 - Scaleable REST.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Rest Concepts)/9 - Stateless REST.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/06 - Ways to activate a profile.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Networking Concepts in Spring Boot)/01 - What Is an API?.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Networking Concepts in Spring Boot)/00 - What Is a “Contract” in Software?.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/17 - Component-scan in XML ✧.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/16 - Component-Scan ✧.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/15 - XML configuration ✧.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/14 - Configuration Class ✧.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)  🟌🟌🟌🟌🟌/Pack 8 (Configuraion)",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/01 - SpringApplication.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/00 - Declaring Beans.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/13 - How to design with @Configuration.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/03 - application.properties.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/02 - Running with no IDE.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Defenitions)/05 - Bean Life-cycle ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Defenitions)/04 - What is a Bean ?.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Defenitions)/03 - Convention over Configuration ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Defenitions)/02 - Library , Framework and API ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Defenitions)/01 - Spring vs Spring Boot ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Defenitions)/00 - Java & Enterprise ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Defenitions)/13 - The Three Ways to Inject Dependencies.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Defenitions)/14 - @Autowired ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Defenitions)/- PostgreSQL Confiuration ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Defenitions)/- Container and  Heap ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Defenitions)/12 - What is DI ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Defenitions)/11 - What Is a Dependency?.md",
     "4 - Images/6b9c526f-69b8-4b83-acd1-d6cdfa5e6250.png",
     "2f261d3d-d190-4ea8-b7f0-2e88f1302f9d.png",
     "4 - Images/614f7e89-dba1-4874-bcd3-070385fe9b22.png",

@@ -1,8 +1,5 @@
 
 
-
-## What is AOP?
-
 **AOP (Aspect-Oriented Programming)** is a programming paradigm for handling **cross-cutting concerns** — logic that's needed across many parts of your application but isn't related to the core business logic of any single class.
 
 Classic examples of cross-cutting concerns:
@@ -165,6 +162,3 @@ This is also _why_ `@Transactional` doesn't work if you call a method on `this` 
 
 
 
-[[3 - Spring + Spring Boot]]
-[[Spring Framework]]
-[[Java]]

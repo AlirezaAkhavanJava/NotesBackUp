@@ -101,6 +101,5 @@ public void updateProfile(HttpSession session) {
 
 Because the state lives entirely inside the Redis cluster, your Spring Boot application nodes remain perfectly stateless and ready to scale horizontally at a moment's notice.
 
-
-
 [[Spring Framework]]
+[[Rest-API]]
