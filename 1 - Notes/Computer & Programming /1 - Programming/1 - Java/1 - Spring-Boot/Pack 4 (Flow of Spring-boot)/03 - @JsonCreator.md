@@ -1,4 +1,4 @@
-# `@JsonCreator`, `@JsonAnySetter` / `@JsonAnyGetter`, `@JsonIgnoreProperties`
+
 
 So far we've controlled names, visibility, and format. This topic is about **how Jackson builds your object** from JSON and what happens to keys that don't fit.
 

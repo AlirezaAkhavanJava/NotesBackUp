@@ -1,5 +1,4 @@
 
-# `@Column` vs Bean Validation: Schema Hints vs Runtime Checks
 
 **Definition:** `@Column(nullable = false, length = 50)` is **JPA mapping metadata**. It describes how a field maps to a database column. Bean Validation annotations like `@NotBlank` and `@Size(max = 50)` are **runtime validation rules** that a validator executes against an object. They live on the same field and look similar, but they are two separate systems run by two separate libraries.
 

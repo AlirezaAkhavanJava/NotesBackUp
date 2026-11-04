@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "edd8cd2354ac7311",
+        "id": "79d77c619f7e47b3",
         "type": "tabs",
         "children": [
           {
-            "id": "7c3b6524dee5a576",
+            "id": "90b64beb2ff9ef67",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 3 (getting request)/18 - Prod URL's.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "18 - Prod URL's"
+              "title": "New tab"
             }
           }
         ]
@@ -80,7 +76,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 417.5765571594238
+    "width": 432.6460762023926
   },
   "right": {
     "id": "318802b81bf4bc9f",
@@ -172,34 +168,35 @@
       "bases:Create new base": false
     }
   },
-  "active": "3535a2e099904c39",
+  "active": "90b64beb2ff9ef67",
   "lastOpenFiles": [
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 6 (Flow of Spring-boot)/2 - @Entity.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 3 (getting request)/18 - Prod URL's.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 3 (getting request)/17 - URL design.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 3 (getting request)/16 - Context path.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 3 (getting request)/15 - @RequestMapping.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 3 (getting request)/14 - Designing the structure.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 3 (getting request)/13 - Request vs response.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 3 (getting request)/12 - RequestStatus ?!.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 3 (getting request)/11 - @ResponseStatus.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 3 (getting request)/10 - Server error category (5xx).md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 3 (getting request)/06 - Practical example.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 3 (getting request)/05 - What is URI ?.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Networking Concepts in Spring Boot)/24 - REST Resources (Nouns) & HTTP Verbs.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Networking Concepts in Spring Boot)/25 - HTTP Response (Status) Codes.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Networking Concepts in Spring Boot)/23 - Web Resource Formatting.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Networking Concepts in Spring Boot)/22 - What are MVP and MVVM ?.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Networking Concepts in Spring Boot)/21 - Repository implementation.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Networking Concepts in Spring Boot)/19 - MVC.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Networking Concepts in Spring Boot)/18 - Data Access Framework.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Networking Concepts in Spring Boot)/17 -  What is AOP?.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Networking Concepts in Spring Boot)/16 - REST API Endpoint Rules.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Networking Concepts in Spring Boot)/15 - Designing Production-Grade RESTful APIs in Spring Boot.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 2 (Networking Concepts in Spring Boot)/26 - Designing Good Error Responses.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 3 (getting request)/09 - @RequestBody vs @ResponseBody.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 3 (getting request)/08 - @ResponseBody.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 3 (getting request)/07 - @RequestBody.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Data JPA & Hibernate)/01 - TIP's for JPA.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Data JPA & Hibernate)/02 - POJO , DTO , Entity.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Data JPA & Hibernate)/00 - Persistence.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (advanced topics)/19 - Spring Boot application.properties, Spring Data JPA, Hibernate, and Database Configurations.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (advanced topics)/18 - Database Configuration in Spring Boot.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (advanced topics)/17 - GraphQL.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (advanced topics)/16 - Thymeleaf.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (advanced topics)/02 - Spring Boot Starter.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (advanced topics)/01 - Using Spring Framework without Spring Boot Dependency Injection and XML Configuration.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (advanced topics)/00 - Spring Container and Annotations.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (advanced topics)/54 - API Gateway with Spring Cloud Gateway.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (advanced topics)/41 - Spring AOP.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 7 (Spring Validation)/04 - Validating Usernames and Stopping SQL Injection.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 7 (Spring Validation)/03 - The Validation Annotation Catalog.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 7 (Spring Validation)/02 - ddl-auto.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 7 (Spring Validation)/01 - @Column vs Bean Validation.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 7 (Spring Validation)/00 -  Where Bean Validation Belongs in a Layered Spring Boot App.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 6 (Jakson and Mappings)/09 - DTO.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 5 (Table & Configuring it)/13 - Entities are not Spring beans.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 5 (Table & Configuring it)/12 - Designing Repository Interfaces.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 5 (Table & Configuring it)/11 - JPARepository.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 5 (Table & Configuring it)/10 - @GeneratedValue strategies.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 5 (Table & Configuring it)/09 - application.properties guide.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 5 (Table & Configuring it)/08 - Configuring JPA and Flyway in application.properties.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 5 (Table & Configuring it)/06 - JPA and Hibernate Configuration in Spring Boot 4.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 5 (Table & Configuring it)/05 - What is a Table ?.md",
+    "4 - Images/774eb969-136b-431c-b0cf-df687f29949b.png",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)  🟌🟌🟌🟌🟌/Pack 8 (Configuraion)",
     "4 - Images/6b9c526f-69b8-4b83-acd1-d6cdfa5e6250.png",
     "2f261d3d-d190-4ea8-b7f0-2e88f1302f9d.png",
@@ -207,19 +204,18 @@
     "4 - Images/1da170c4-be5f-4c71-a27a-ec5b9256037d.png",
     "1da170c4-be5f-4c71-a27a-ec5b9256037d.png",
     "614f7e89-dba1-4874-bcd3-070385fe9b22.png",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Security)/Pack 5 (Design and implemention)",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 5 (Design and implemention)",
     "4 - Images/Java OOP Concepts Infographic.png",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 16 (Learning and Coding)/Pack 1 (OOP)",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)  🟌🟌🟌🟌🟌/Pack 7 (Designing and Creating )",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)  🟌🟌🟌🟌🟌/Pack 6 (JPA)",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)  🟌🟌🟌🟌🟌/Pack 5 (Exceptions)",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 17 (Designing and Creating )",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Deep dives)  🟌🟌🟌🟌🟌/Pack 6 (JPA)",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Deep dives)  🟌🟌🟌🟌🟌/Pack 5 (Exceptions)",
     "4 - Images/Spring BeanDefinition Creation Flow.png",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)  🟌🟌🟌🟌🟌/Pack 4 (Spring)",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)  🟌🟌🟌🟌🟌/Pack 3 (Honey Pot)",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Deep dives)  🟌🟌🟌🟌🟌/Pack 4 (Spring)",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Deep dives)  🟌🟌🟌🟌🟌/Pack 3 (Honey Pot)",
     "4 - Images/JWT Flow in Spring Security 1.png",
-    "4 - Images/JWT Flow in Spring Security.png",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)  🟌🟌🟌🟌🟌/Pack 2 (Scopes)",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Deep dives)  🟌🟌🟌🟌🟌/Pack 1 (Bean Life Cycle)",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Deep dives)  🟌🟌🟌🟌🟌/Pack 2 (Scopes)",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Deep dives)  🟌🟌🟌🟌🟌/Pack 1 (Bean Life Cycle)",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/G - Real World Applications/Untitled.canvas"
   ]
 }

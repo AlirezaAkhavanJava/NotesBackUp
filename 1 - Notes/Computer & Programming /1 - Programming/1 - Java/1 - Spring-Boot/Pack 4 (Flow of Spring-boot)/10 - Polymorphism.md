@@ -1,5 +1,5 @@
 
-# Polymorphism (`@JsonTypeInfo`, `@JsonSubTypes`) and custom (de)serializers (`@JacksonComponent`)
+
 
 Everything so far assumed one JSON shape maps to one Java class. This topic covers two situations where that breaks:
 

@@ -1,5 +1,5 @@
 
-# Database Configuration in Spring Boot, and the Types of JDBC URLs
+
 
 ## 1. The scenario
 
@@ -335,32 +335,7 @@ spring.datasource.url=jdbc:postgresql://db-host:5432/library?sslmode=require
 - Profiles and environment variables let one codebase run against different databases without code changes. Precedence: command line > environment > profile file > base file.
 - No URL plus an embedded driver means a silent in-memory database.
 
-```
-                 Add JPA starter
-                       |
-                       v
-           Is a URL configured?
-              /              \
-            NO                YES
-            |                  |
-  Embedded driver on        Prefix matches a
-  classpath?                registered driver?
-     /        \               /          \
-   YES        NO            YES          NO
-    |          |             |            |
- Silent H2   CRASH:          v         CRASH:
- in-memory   "Failed to   Server reachable?   "No suitable
- (data lost) configure"    /        \         driver"
-                         YES        NO
-                          |          |
-                  DB exists +      CRASH:
-                  creds valid?     "Connection
-                   /      \         refused"
-                 YES      NO
-                  |        |
-               APP RUNS   CRASH: "auth failed" /
-                          "database does not exist"
-```
+![[774eb969-136b-431c-b0cf-df687f29949b.png]]
 
 **Takeaway:** The JDBC URL is a precise address, not a hint, so when the database connection fails, read the error to find which part of the address (driver, host, database, or credentials) is wrong.
 

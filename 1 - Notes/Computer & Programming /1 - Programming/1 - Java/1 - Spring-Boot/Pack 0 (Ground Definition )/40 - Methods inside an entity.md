@@ -1,4 +1,4 @@
-# Methods inside an entity: constructors, `equals`/`hashCode`, `toString`, and the Lombok shortcuts
+
 
 ## Mental model: an ID card
 

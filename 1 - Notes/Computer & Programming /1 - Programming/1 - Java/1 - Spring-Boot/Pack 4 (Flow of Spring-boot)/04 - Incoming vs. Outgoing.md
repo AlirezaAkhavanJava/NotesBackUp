@@ -1,5 +1,5 @@
 
-# Incoming vs. Outgoing: Request, Response, and Outgoing Requests
+
 
 I'm reading this as the **direction** of data relative to your application. There are really three things here, and the third is the one people usually miss.
 

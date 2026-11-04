@@ -1,6 +1,6 @@
-# `@Table` and Lombok
+In Spring Boot with JPA, a Table is a database structure that stores data in rows and columns, where each row represents a record and each column represents an attribute of that record. JPA maps Java entity classes (annotated with `@Entity`) to database tables, while the entity's fields typically map to table columns. For example, a `User` entity can be mapped to a `users` table, allowing JPA to translate Java operations into SQL queries that interact with the table.
 
-Everything here is for Spring Boot 4.x (Hibernate 7, Jakarta Persistence 3.2) on JDK 25. Where behaviour differs from older tutorials, I say so.
+---
 
 ## 1. The scenario
 

@@ -1,5 +1,5 @@
 
-# `@Id` and `@GeneratedValue` in Spring Boot + JPA
+
 
 ## 1. The scenario
 
