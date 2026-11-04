@@ -1,787 +1,241 @@
 
-REST endpoint design becomes much easier if you treat the URL as **a description of resources**, not as a description of actions.
 
-## REST API Endpoint Rules
+A REST endpoint is a URL plus an HTTP method. The URL says **which resource** you mean (a task, a user, an order), and the method says **what to do** with it (read, create, replace, delete). If you design every endpoint around that split, your API stays small, predictable and easy for other developers to guess.
 
-### 1. Use nouns, not verbs
-
-The endpoint identifies **what resource you're dealing with**.
-
-```http
-GET    /users
-GET    /users/42
-POST   /users
-PUT    /users/42
-DELETE /users/42
-```
-
-Avoid:
-
-```http
-GET  /getUsers
-POST /createUser
-POST /deleteUser
-POST /updateUser
-```
-
-The HTTP method already describes the operation.
+This note is the hands-on companion to Part 1 of your REST API design note. That note explained the ideas. This one gives you the rules for naming and structuring endpoints, with your `DoItLater` tasks API as the running example. The 20 rules in the original are grouped here into nine, so you can learn them in order without drowning.
 
 ---
 
-### 2. Use HTTP methods correctly
+## The one idea behind every rule
+
+```text
+HTTP method  =  what you want to do
+URL          =  what you want to do it to
+```
+
+`DELETE /tasks/42` already reads as "delete task 42." You don't need `POST /deleteTask/42`, because the verb is in the method. Keep this sentence in mind and most of the rules below follow from it.
+
+---
+
+## 1. Name resources with plural nouns
+
+```http
+GET    /tasks            ✔
+GET    /getTasks         ✘  (a verb in the URL)
+POST   /createTask       ✘
+```
+
+Use **plural**, **lowercase** nouns, with hyphens for multiple words: `/tasks`, `/user-profiles`, `/order-items`. Don't mix styles (`/userProfiles` next to `/order_items`). Consistency matters more than which style you pick.
+
+Plural gives you a clean pattern:
+
+```text
+/tasks        the collection of tasks
+/tasks/42     one task, whose ID is 42
+```
+
+The Java method name is an implementation detail. A controller method called `completeTask()` doesn't mean the URL should be `/completeTask`.
+
+---
+
+## 2. Choose the verb by what you want to do
 
 |Method|Meaning|Example|
 |---|---|---|
-|`GET`|Retrieve|`GET /tasks/42`|
-|`POST`|Create|`POST /tasks`|
-|`PUT`|Replace|`PUT /tasks/42`|
-|`PATCH`|Partially modify|`PATCH /tasks/42`|
-|`DELETE`|Delete|`DELETE /tasks/42`|
+|`GET`|Read|`GET /tasks/42`|
+|`POST`|Create inside a collection|`POST /tasks`|
+|`PUT`|**Replace** the whole resource|`PUT /tasks/42`|
+|`PATCH`|Change **part** of it|`PATCH /tasks/42`|
+|`DELETE`|Remove|`DELETE /tasks/42`|
 
-Mental model:
+**PUT versus PATCH** is the one that confuses people:
 
-```text
-HTTP method = what you want to do
-URL          = what you want to do it to
-```
+- `PUT /tasks/42` sends the **complete** task. Any field you leave out is replaced with nothing or a default.
+- `PATCH /tasks/42` sends **only what changes**, such as `{ "status": "COMPLETED" }`.
 
-So:
-
-```http
-DELETE /tasks/42
-```
-
-means:
-
-> Delete task 42.
-
-You don't need:
-
-```http
-POST /deleteTask/42
-```
+For "mark a task done," PATCH is usually the better fit.
 
 ---
 
-# 3. Use plural resource names
-
-Prefer:
+## 3. Path says _which one_; query says _which ones, and how_
 
 ```http
-/users
-/tasks
-/orders
-/products
-/comments
+GET /tasks/42                         ← this exact task (path)
+GET /tasks?status=COMPLETED           ← tasks matching a condition (query)
 ```
 
-rather than:
+The path **identifies** a resource. The query string **narrows or shapes** a list. So `/tasks?id=42` is the wrong way to fetch one task.
+
+Use the query string for all three of these:
 
 ```http
-/user
-/task
-/order
-/product
-/comment
+GET /tasks?status=COMPLETED&priority=HIGH      filtering
+GET /tasks?page=0&size=20                      pagination
+GET /tasks?sort=dueDate,desc                   sorting
 ```
 
-This gives you a consistent collection/resource model:
+Two practical notes:
 
-```text
-/tasks       → collection of tasks
-/tasks/42    → one particular task
-```
+- **Don't put a state in the path.** `/tasks/completed` and `/tasks/pending` are filters, so write `?status=COMPLETED`.
+- **Match Spring's conventions.** Spring Data reads `page`, `size` and `sort=field,direction` automatically (see the pagination part of your REST API note). Inventing `sort=-dueDate` means writing the parsing yourself.
 
 ---
 
-# 4. Use IDs to identify individual resources
+## 4. Show relationships by nesting, but keep it shallow
 
 ```http
-GET /tasks/42
-GET /users/17
-GET /orders/923
-```
-
-The structure is:
-
-```text
-/collection/{resource-id}
-```
-
-For example:
-
-```http
-GET /tasks/42
-```
-
-means:
-
-```text
-tasks
-  └── task whose ID = 42
-```
-
----
-
-# 5. Collections and individual resources
-
-This distinction is extremely important.
-
-### Collection
-
-```http
-GET /tasks
-```
-
-Means:
-
-> Give me the collection of tasks.
-
-### Individual resource
-
-```http
-GET /tasks/42
-```
-
-Means:
-
-> Give me task 42.
-
-Likewise:
-
-```http
-POST /tasks
-```
-
-creates a new task **inside the collection**.
-
-```http
-DELETE /tasks/42
-```
-
-deletes one resource.
-
----
-
-# 6. Use path parameters for resource identity
-
-Good:
-
-```http
-GET /users/42
-GET /tasks/123
-GET /products/987
-```
-
-Bad:
-
-```http
-GET /users?id=42
-GET /tasks?id=123
-```
-
-Query parameters are generally for **filtering, searching, sorting, pagination, etc.**
-
-Path:
-
-```text
-/tasks/42
-```
-
-means:
-
-> This exact resource.
-
-Query:
-
-```text
-/tasks?status=COMPLETED
-```
-
-means:
-
-> Tasks matching this condition.
-
----
-
-# 7. Use query parameters for filtering
-
-```http
-GET /tasks?status=COMPLETED
-```
-
-```http
-GET /tasks?priority=HIGH
-```
-
-Multiple filters:
-
-```http
-GET /tasks?status=COMPLETED&priority=HIGH
-```
-
-Search:
-
-```http
-GET /users?search=alireza
-```
-
----
-
-# 8. Use query parameters for pagination
-
-For example:
-
-```http
-GET /tasks?page=0&size=20
-```
-
-or:
-
-```http
-GET /tasks?limit=20&offset=40
-```
-
-Don't create endpoints like:
-
-```http
-GET /tasks/page/2
-```
-
-unless you have a specific reason for path-based pagination.
-
----
-
-# 9. Use query parameters for sorting
-
-```http
-GET /tasks?sort=dueDate
-```
-
-Descending:
-
-```http
-GET /tasks?sort=-dueDate
-```
-
-Or explicitly:
-
-```http
-GET /tasks?sort=dueDate&direction=desc
-```
-
-The exact convention is yours; **consistency** matters.
-
----
-
-# 10. Nested resources represent relationships
-
-Suppose a user owns tasks.
-
-You can represent:
-
-```http
-GET /users/42/tasks
-```
-
-Meaning:
-
-> Give me the tasks belonging to user 42.
-
-And:
-
-```http
-GET /users/42/tasks/7
-```
-
-Meaning:
-
-> Give me task 7 belonging to user 42.
-
-Other examples:
-
-```http
+GET /users/42/tasks        tasks that belong to user 42
+GET /users/42/tasks/7      task 7 of user 42
 GET /orders/123/items
 GET /posts/55/comments
-GET /courses/10/students
 ```
+
+Nest when the child belongs to the parent. But deep chains such as `/users/42/orders/123/items/7/reviews/2` are painful to use. A good rule is **one or two levels of nesting**. If a resource has its own unique ID, give it a top-level URL as well, so `GET /reviews/2` is enough.
 
 ---
 
-# 11. Don't nest unnecessarily deeply
+## 5. For actions that aren't plain CRUD
 
-Avoid monsters like:
-
-```http
-/users/42/orders/123/items/7/reviews/2
-```
-
-Deep nesting makes APIs harder to use.
-
-Often this is enough:
-
-```http
-GET /reviews/2
-```
-
-The resource itself can contain its relationships.
-
-A practical rule:
-
-```text
-1–2 levels of nesting → usually fine
-3+ levels             → reconsider the design
-```
-
----
-
-# 12. Actions that aren't CRUD need special treatment
-
-This is where people get confused.
-
-Suppose you want to complete a task.
-
-You could do:
+Say you want to complete a task. The cleanest approach is usually to change the resource:
 
 ```http
 PATCH /tasks/42
+{ "status": "COMPLETED" }
 ```
 
-with:
+But some operations are truly _actions_ with side effects (sending emails, moving things around), and they don't fit "change a field." For those, an **action endpoint** is acceptable:
 
-```json
-{
-  "status": "COMPLETED"
-}
-```
-
-This is usually a clean REST-style design because you're modifying the resource.
-
-But some operations genuinely represent an action:
-
-```text
+```http
 POST /tasks/42/archive
-POST /users/42/activate
 POST /orders/123/cancel
 ```
 
-These are sometimes called **action endpoints**.
-
-Don't blindly force everything into CRUD.
+Don't force everything into CRUD, but don't reach for action endpoints first. Try PATCH, and pick one style and stay consistent.
 
 ---
 
-# 13. Don't put the HTTP method into the URL
-
-Bad:
-
-```http
-GET  /getTasks
-POST /createTask
-POST /updateTask
-POST /deleteTask
-```
-
-Good:
-
-```http
-GET    /tasks
-POST   /tasks
-PUT    /tasks/42
-PATCH  /tasks/42
-DELETE /tasks/42
-```
-
----
-
-# 14. Use consistent naming
-
-Pick a convention and stick to it.
-
-Good:
-
-```text
-/task-items
-/user-profiles
-/order-items
-```
-
-Avoid mixing:
-
-```text
-/userProfiles
-/task-items
-/order_items
-```
-
-For REST APIs, lowercase paths with hyphens are a common convention:
-
-```http
-/api/v1/user-profiles
-/api/v1/order-items
-```
-
----
-
-# 15. Version your API deliberately
-
-A common approach:
-
-```http
-/api/v1/tasks
-/api/v1/users
-```
-
-Then a breaking version:
-
-```http
-/api/v2/tasks
-```
-
-Don't version every tiny change.
-
-For example, adding an optional response field normally shouldn't require:
-
-```text
-v2
-```
-
-Breaking changes are where versioning becomes important.
-
----
-
-# 16. HTTP status codes are part of endpoint design
+## 6. Let the status code say what happened
 
 Don't return `200 OK` for everything.
 
-### Successful retrieval
+|Situation|Code|
+|---|---|
+|Read worked|`200 OK`|
+|Created (add a `Location` header)|`201 Created`|
+|Deleted|`204 No Content`|
+|Bad input|`400 Bad Request`|
+|Not logged in|`401 Unauthorized`|
+|Logged in but not allowed|`403 Forbidden`|
+|It doesn't exist|`404 Not Found`|
 
-```http
-GET /tasks/42
-→ 200 OK
-```
+(The full table, with 409, 412 and 422, is in your REST API note.)
 
-### Successful creation
+### Idempotency, in one idea
 
-```http
-POST /tasks
-→ 201 Created
-```
+An operation is **idempotent** if doing it ten times leaves the same _state_ as doing it once.
 
-### Successful deletion
-
-```http
-DELETE /tasks/42
-→ 204 No Content
-```
-
-### Invalid request
-
-```http
-POST /tasks
-→ 400 Bad Request
-```
-
-### Unauthenticated
-
-```http
-GET /tasks
-→ 401 Unauthorized
-```
-
-### Authenticated but forbidden
-
-```http
-GET /admin/users
-→ 403 Forbidden
-```
-
-### Resource doesn't exist
-
-```http
-GET /tasks/999999
-→ 404 Not Found
-```
+- `GET`, `PUT` and `DELETE` are idempotent. `PUT /users/42` with `{"name":"Alireza"}` ten times still leaves the name as Alireza. Even a second `DELETE` leaves the task deleted. The _response_ may differ (404 instead of 204), but the resulting state is the same.
+- `PATCH` depends on what it does. Setting a status is idempotent, and "add 1 to a counter" isn't.
+- `POST /orders` is not idempotent, because each call can create another order. That is why the REST API note introduced the `Idempotency-Key` header.
 
 ---
 
-# 17. Don't encode state in the URL
+## 7. Keep your API independent of your internals
 
-Avoid:
+Your API is an **interface**, not a mirror of your database or your Java code.
 
-```http
-GET /tasks/completed
-GET /tasks/pending
-GET /tasks/high-priority
+```text
+Database tables:   tbl_usr, tbl_usr_addr, usr_task_rel
+API resources:     /users, /users/42, /users/42/tasks
 ```
 
-Prefer:
-
-```http
-GET /tasks?status=COMPLETED
-GET /tasks?status=PENDING
-GET /tasks?priority=HIGH
-```
-
-Because `completed`, `pending`, and `high-priority` are **properties/filters**, not necessarily separate resource types.
+If your table names change, the API doesn't have to. This is exactly why Spring Boot apps return DTOs instead of entities, as your Entity/DTO/mapper note explained.
 
 ---
 
-# 18. Think about idempotency
-
-This is an important professional-level rule.
-
-An operation is **idempotent** if performing it multiple times has the same intended result as performing it once.
-
-Generally:
-
-```text
-GET     → idempotent
-PUT     → idempotent
-DELETE  → idempotent
-PATCH   → depends on operation
-POST    → generally not idempotent
-```
-
-For example:
+## 8. Version on breaking changes only
 
 ```http
-PUT /users/42
+/api/v1/tasks      →   /api/v2/tasks   (only when you must break clients)
 ```
 
-with:
-
-```json
-{
-  "name": "Alireza"
-}
-```
-
-Calling it once:
-
-```text
-name = Alireza
-```
-
-Calling it 10 times:
-
-```text
-name = Alireza
-```
-
-Same resulting state.
-
-But:
-
-```http
-POST /orders
-```
-
-could create:
-
-```text
-Order #1
-Order #2
-Order #3
-...
-```
+Adding an optional field to a response is **not** a breaking change, so it doesn't need a `v2`. Renaming or removing a field, or changing its meaning, is.
 
 ---
 
-# 19. Don't expose your database structure blindly
+## 9. Think about who is asking (a rule the original missed)
 
-Your REST API is an **interface**, not necessarily a mirror of your database.
+This one matters for your `DoItLater` app, where every task belongs to a user.
 
-Database:
+If you expose `GET /users/{userId}/tasks`, then any logged-in user could change the number in the URL and read someone else's tasks. This flaw is common, and it has a name: _broken access control_. Two safe designs:
 
-```text
-tbl_usr
-tbl_usr_addr
-usr_task_rel
-```
+- **Use the logged-in user.** Expose `GET /tasks`, and have the service return only the current user's tasks. The user comes from the token, through the `Authentication` object (your Authentication and JWT notes cover how it gets into the `SecurityContext`), not from the URL.
+- **If an ID stays in the URL,** check that it matches the authenticated user and return 403 or 404 otherwise.
 
-API:
-
-```http
-/users
-/users/42
-/users/42/tasks
-```
-
-Your database schema can change without necessarily breaking API consumers.
-
-This is one reason DTOs are useful in Spring Boot.
+Some APIs also add a shortcut such as `GET /users/me`. It reads naturally and never takes a user ID from the client.
 
 ---
 
-# 20. Don't make endpoints represent Java methods
+## Putting it together: the `DoItLater` tasks API
 
-This is a common beginner mistake.
+```http
+GET    /api/v1/tasks                         list (current user's tasks)
+GET    /api/v1/tasks/{id}                    one task
+POST   /api/v1/tasks                         create  → 201 + Location
+PUT    /api/v1/tasks/{id}                    replace
+PATCH  /api/v1/tasks/{id}                    change part, e.g. {"status":"COMPLETED"}
+DELETE /api/v1/tasks/{id}                    delete  → 204
 
-Your controller might contain:
+GET    /api/v1/tasks?status=TODO&priority=HIGH      filter
+GET    /api/v1/tasks?page=0&size=20&sort=dueDate,asc   paginate and sort
+POST   /api/v1/tasks/{id}/archive                   action, when it's truly an action
+```
+
+And the Spring controller skeleton that matches it:
 
 ```java
-createTask()
-getTask()
-deleteTask()
-completeTask()
-```
+@RestController
+@RequestMapping("/api/v1/tasks")
+public class TaskController {
 
-But that does **not** mean your API should become:
+    @GetMapping                         // GET /api/v1/tasks?status=...&page=...
+    public Page<TaskResponse> list(@RequestParam(required = false) TaskStatus status,
+                                   Pageable pageable) { ... }
 
-```http
-POST /createTask
-GET  /getTask
-DELETE /deleteTask
-POST /completeTask
-```
+    @GetMapping("/{id}")                // GET /api/v1/tasks/42
+    public TaskResponse get(@PathVariable Long id) { ... }
 
-The Java method is an implementation detail.
+    @PostMapping                        // POST /api/v1/tasks
+    public ResponseEntity<TaskResponse> create(@Valid @RequestBody CreateTaskRequest request) { ... }
 
-The HTTP interface should represent resources.
+    @PatchMapping("/{id}")              // PATCH /api/v1/tasks/42
+    public TaskResponse update(@PathVariable Long id, @RequestBody UpdateTaskRequest request) { ... }
 
----
-
-# A Complete Example
-
-Suppose you're designing your `DoItLater` API.
-
-A clean structure could be:
-
-```http
-GET    /api/v1/tasks
-GET    /api/v1/tasks/{id}
-
-POST   /api/v1/tasks
-
-PUT    /api/v1/tasks/{id}
-PATCH  /api/v1/tasks/{id}
-
-DELETE /api/v1/tasks/{id}
-```
-
-Filtering:
-
-```http
-GET /api/v1/tasks?status=TODO
-GET /api/v1/tasks?priority=HIGH
-GET /api/v1/tasks?dueDate=2026-10-01
-```
-
-Pagination:
-
-```http
-GET /api/v1/tasks?page=0&size=20
-```
-
-Sorting:
-
-```http
-GET /api/v1/tasks?sort=dueDate&direction=asc
-```
-
-User-specific:
-
-```http
-GET /api/v1/users/{userId}/tasks
-```
-
-Action when appropriate:
-
-```http
-POST /api/v1/tasks/{id}/archive
-```
-
----
-
-# The Mental Model
-
-When designing an endpoint, ask these questions **in order**:
-
-```text
-1. What is the RESOURCE?
-        ↓
-2. Is it a collection or one resource?
-        ↓
-3. What HTTP METHOD describes the operation?
-        ↓
-4. Does the resource need an ID?
-        ↓
-5. Are these conditions/filtering?
-        → query parameters
-        ↓
-6. Is this a relationship?
-        → nested resource
-        ↓
-7. Is this genuinely an action that isn't ordinary CRUD?
-        → action endpoint
-```
-
-So:
-
-```text
-"Get all completed tasks"
-
-RESOURCE = tasks
-COLLECTION = yes
-OPERATION = read
-FILTER = status=COMPLETED
-
-                ↓
-
-GET /tasks?status=COMPLETED
-```
-
-While:
-
-```text
-"Delete task 42"
-
-RESOURCE = tasks
-RESOURCE ID = 42
-OPERATION = delete
-
-                ↓
-
-DELETE /tasks/42
-```
-
-And:
-
-```text
-"Change task 42's status to COMPLETED"
-
-RESOURCE = tasks
-RESOURCE ID = 42
-OPERATION = modify
-
-                ↓
-
-PATCH /tasks/42
-```
-
-with:
-
-```json
-{
-  "status": "COMPLETED"
+    @DeleteMapping("/{id}")             // DELETE /api/v1/tasks/42
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void delete(@PathVariable Long id) { ... }
 }
 ```
 
-## The short rulebook
+Each annotation maps one row of the table above to one method. That is the whole connection between the design rules and your Spring Web controllers.
+
+---
+
+## A way to design any endpoint: ask in order
 
 ```text
-URL       → resource
-HTTP verb → operation
-Path ID   → identity
-Query     → filtering / searching / sorting / pagination
-Nesting   → relationship
-Body      → resource representation / modification data
-Status    → result of the operation
+1. What is the RESOURCE?               → the noun (tasks)
+2. One item or the collection?         → /tasks or /tasks/{id}
+3. What do I want to do?               → the HTTP method
+4. Am I narrowing, sorting or paging?  → query parameters
+5. Is it a relationship?               → nest it (1–2 levels)
+6. Is it a real action, not CRUD?      → try PATCH first, then an action endpoint
+7. Whose data is this?                 → derive the user from the token
 ```
 
-If you remember only one sentence:
+Try it: "Get all completed tasks" gives resource = tasks, collection, read, filter by status, so `GET /tasks?status=COMPLETED`. "Mark task 42 completed" gives resource = tasks, item 42, modify, so `PATCH /tasks/42` with `{"status":"COMPLETED"}`.
 
-> **Design the URL around nouns/resources, and let HTTP methods describe the action.**
+
+
 
 [[Spring Framework]]

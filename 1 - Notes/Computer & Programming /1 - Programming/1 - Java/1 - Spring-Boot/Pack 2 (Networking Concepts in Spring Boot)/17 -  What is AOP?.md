@@ -1,41 +1,39 @@
 
 
-**AOP (Aspect-Oriented Programming)** is a programming paradigm for handling **cross-cutting concerns** — logic that's needed across many parts of your application but isn't related to the core business logic of any single class.
+**AOP (Aspect-Oriented Programming)** lets you write logic that many classes need, such as logging, security checks, transactions and timing, in **one place**, and have Spring run it around the methods you choose. Your business classes stay clean, and they never mention the extra logic.
 
-Classic examples of cross-cutting concerns:
+Without it, you would paste the same logging or timing lines into every service method. That is repetitive, and it buries the real business code. This is the idea behind `@Transactional`, `@Cacheable`, `@Async` and `@PreAuthorize`: they are all AOP. It also builds directly on the proxies you met earlier, in your `@Configuration` note (the CGLIB subclass) and your bean lifecycle note (a `BeanPostProcessor` can swap a bean for a wrapper).
 
-- Logging ("log every method call in the service layer")
-- Security checks ("verify the user is authorized before this method runs")
-- Transactions ("wrap this method in a database transaction")
-- Performance monitoring ("measure how long this method takes")
+---
 
-Without AOP, you'd have to manually sprinkle logging/security/transaction code inside every single method — messy, repetitive, and it clutters your actual business logic.
-
-**AOP lets you define that logic once, separately, and have it automatically "woven" into the methods you choose** — without touching the target class's code at all.
-
-## Core vocabulary
+## The vocabulary
 
 |Term|Meaning|
 |---|---|
-|**Aspect**|The class containing the cross-cutting logic (e.g., `LoggingAspect`)|
-|**Advice**|The actual code that runs (e.g., "log before the method executes")|
-|**Join point**|A point during execution where advice _can_ run (in Spring, essentially always a method call)|
-|**Pointcut**|An expression that says _which_ join points (methods) the advice applies to|
-|**Weaving**|The process of linking aspects into the target objects — in Spring, this happens via **proxies**, at runtime|
+|**Aspect**|A class holding the cross-cutting logic (`LoggingAspect`)|
+|**Advice**|The code that runs (for example, "log before the method")|
+|**Join point**|A moment where advice _could_ run. In Spring AOP, this is a method call on a Spring bean|
+|**Pointcut**|An expression that picks _which_ methods get the advice|
+|**Weaving**|Connecting the aspect to the target. Spring does it at runtime, with **proxies**|
 
-## How it connects to what we discussed earlier
+---
 
-Remember when I mentioned Spring sometimes hands you a **CGLIB or JDK dynamic proxy** instead of the raw bean? **This is AOP in action.** When a class has an aspect applied to it (like `@Transactional`), Spring doesn't modify your class's bytecode. Instead:
+## How it works: a proxy stands in front of your bean
 
-1. It creates a **proxy object** that wraps your real bean
-2. The proxy sits in front of your object in the container
-3. When you call a method, you're actually calling the **proxy**, which runs the aspect's logic, then delegates to your real method, then maybe runs more aspect logic after
+Spring doesn't change your class. After it creates a bean, a post-processor checks whether any pointcut matches it. If one does, Spring puts a **proxy** in the container instead of the real object:
 
-This is why the object is "just a heap object" as we said before — the proxy is _also_ just an ordinary heap object, generated dynamically, that implements the same interface (or subclasses your class) and intercepts calls.
+```text
+caller ──► proxy ──► runs advice ──► your real method ──► runs advice ──► back to caller
+```
 
-## How to do it — step by step
+Everything that injects `UserService` receives the proxy, so calls go through it automatically. The proxy is either:
 
-### 1. Add the dependency
+- a **JDK proxy**, which implements the same interface, or
+- a **CGLIB proxy**, which is a subclass of your class. Spring Boot uses CGLIB by default.
+
+---
+
+## Set it up
 
 ```xml
 <dependency>
@@ -44,7 +42,9 @@ This is why the object is "just a heap object" as we said before — the proxy i
 </dependency>
 ```
 
-### 2. Define an Aspect
+Boot then turns AOP on for you. (In plain Spring with no Boot, add `@EnableAspectJAutoProxy` to a configuration class. Newer Boot versions may rename this starter, so check yours.)
+
+### Your first aspect
 
 ```java
 @Aspect
@@ -53,112 +53,160 @@ public class LoggingAspect {
 
     @Before("execution(* com.example.service.*.*(..))")
     public void logBefore(JoinPoint joinPoint) {
-        System.out.println("Calling method: " + joinPoint.getSignature().getName());
+        log.info("Calling {}", joinPoint.getSignature().getName());
     }
 }
 ```
 
-- `@Aspect` — marks this class as an aspect
-- `@Component` — it also needs to be a Spring bean so the container picks it up
-- `@Before(...)` — the **advice type**: run this _before_ the matched method executes
-- `"execution(* com.example.service.*.*(..))"` — the **pointcut expression**: matches any method (`*` return type), in any class in `com.example.service`, any method name, any parameters
+Line by line:
 
-### 3. Pointcut expression syntax (breakdown)
+- `@Aspect` marks the class as an aspect.
+- `@Component` makes it a bean, so Spring finds it. Without this, nothing happens.
+- `@Before` is the advice type: run before the matched method.
+- The string is the **pointcut**: which methods to match.
+- `JoinPoint` gives you details: `getSignature()` (the method), `getArgs()` (the arguments), `getTarget()` (the real object).
 
+---
+
+## Reading a pointcut expression
+
+```text
+execution( return-type  package.Class.method(params) )
 ```
-execution(modifiers-pattern? return-type-pattern declaring-type-pattern? method-name-pattern(param-pattern) throws-pattern?)
-```
 
-Example:
+|Pattern|Matches|
+|---|---|
+|`execution(* com.example.service.*.*(..))`|Any method of any class directly in `service`|
+|`execution(* com.example.service..*.*(..))`|The same, **including sub-packages** (note the `..`)|
+|`execution(public String com.example.service.UserService.getUser(Long))`|Exactly that one method|
+|`@annotation(com.example.LogExecutionTime)`|Any method carrying that annotation|
+
+The first form is a common trap: `service.*` does **not** include `service.impl`. Use `service..*` for sub-packages. The `*` means "anything" and `(..)` means "any parameters".
+
+---
+
+## The five advice types
+
+|Annotation|Runs|Notes|
+|---|---|---|
+|`@Before`|Before the method|Can't stop the call, except by throwing|
+|`@AfterReturning`|After a normal return|Gives you the result (`returning = "result"`)|
+|`@AfterThrowing`|After an exception|Gives you the exception (`throwing = "ex"`)|
+|`@After`|Always, like `finally`|Runs after success _or_ failure|
+|`@Around`|Wraps the whole call|The most powerful. **You** decide whether the real method runs|
+
+### `@Around` in detail
 
 ```java
-execution(public String com.example.service.UserService.getUser(Long))
-```
-
-Matches: public method, returns `String`, in exactly that class, named `getUser`, taking one `Long` parameter.
-
-More commonly you use wildcards:
-
-```java
-execution(* com.example.service.*.*(..))
-```
-
-= any return type, any class in that package, any method name, any parameters.
-
-### 4. The different advice types
-
-```java
-@Aspect
-@Component
-public class DemoAspect {
-
-    @Before("execution(* com.example.service.*.*(..))")
-    public void before(JoinPoint jp) {
-        System.out.println("Before: " + jp.getSignature());
-    }
-
-    @After("execution(* com.example.service.*.*(..))")
-    public void after(JoinPoint jp) {
-        System.out.println("After: " + jp.getSignature());
-    }
-
-    @AfterReturning(pointcut = "execution(* com.example.service.*.*(..))", returning = "result")
-    public void afterReturning(JoinPoint jp, Object result) {
-        System.out.println("Returned: " + result);
-    }
-
-    @AfterThrowing(pointcut = "execution(* com.example.service.*.*(..))", throwing = "ex")
-    public void afterThrowing(JoinPoint jp, Exception ex) {
-        System.out.println("Exception: " + ex.getMessage());
-    }
-
-    @Around("execution(* com.example.service.*.*(..))")
-    public Object around(ProceedingJoinPoint pjp) throws Throwable {
-        long start = System.currentTimeMillis();
-        Object result = pjp.proceed(); // actually calls the real method
-        long time = System.currentTimeMillis() - start;
-        System.out.println("Execution time: " + time + "ms");
-        return result;
+@Around("execution(* com.example.service..*.*(..))")
+public Object timeIt(ProceedingJoinPoint pjp) throws Throwable {
+    long start = System.nanoTime();
+    try {
+        return pjp.proceed();                    // runs the real method
+    } finally {
+        long ms = (System.nanoTime() - start) / 1_000_000;
+        log.info("{} took {} ms", pjp.getSignature().getName(), ms);
     }
 }
 ```
 
-- `@Before` — runs before the method
-- `@After` — runs after (regardless of outcome, like `finally`)
-- `@AfterReturning` — runs after successful return, gives you the result
-- `@AfterThrowing` — runs if an exception is thrown
-- `@Around` — the most powerful: wraps the whole method call; **you** control whether/when the real method (`pjp.proceed()`) actually runs — used for things like timing, retrying, or short-circuiting
+Three rules for `@Around`:
 
-### 5. A reusable named pointcut (cleaner style)
+- You **must call `pjp.proceed()`**, or the real method never runs.
+- You **must return its result**, or the caller gets `null`.
+- Use `try/finally` so the timing still happens when the method throws.
+
+Use it for timing, retrying, caching, or blocking a call.
+
+---
+
+## Cleaner style: named pointcuts and your own annotation
+
+Write a pointcut once and reuse it by name:
 
 ```java
 @Aspect
 @Component
 public class ServiceLoggingAspect {
 
-    @Pointcut("execution(* com.example.service.*.*(..))")
-    public void serviceMethods() {} // just a marker method, no body needed
+    @Pointcut("execution(* com.example.service..*.*(..))")
+    public void serviceMethods() {}              // an empty marker method
 
     @Before("serviceMethods()")
-    public void logBefore(JoinPoint jp) {
-        System.out.println("Entering: " + jp.getSignature().getName());
-    }
+    public void logBefore(JoinPoint jp) { ... }
 
     @AfterReturning(pointcut = "serviceMethods()", returning = "result")
-    public void logAfter(JoinPoint jp, Object result) {
-        System.out.println("Exiting: " + jp.getSignature().getName() + " -> " + result);
-    }
+    public void logAfter(JoinPoint jp, Object result) { ... }
 }
 ```
 
-## What actually happens at runtime
+For anything you apply only to _some_ methods, the best approach is to **target your own annotation** instead of a package pattern. It is explicit, because you can see it on the method:
 
-1. Spring scans and finds `UserService` needs AOP applied (because a pointcut matches its methods)
-2. Instead of registering the raw `UserService` object in the container, it registers a **proxy**
-3. Anywhere `UserService` is injected via `@Autowired`, you actually receive the **proxy**, not the raw object
-4. Calling `userService.getUser(1L)` really calls `proxy.getUser(1L)` → proxy runs `@Before` advice → proxy calls the real `getUser` on the wrapped object → proxy runs `@AfterReturning` advice → returns to caller
+```java
+@Target(ElementType.METHOD)
+@Retention(RetentionPolicy.RUNTIME)
+public @interface LogExecutionTime {}
 
-This is also _why_ `@Transactional` doesn't work if you call a method on `this` from within the same class — you're bypassing the proxy entirely and calling the real object directly, so no advice runs. That's a very common beginner gotcha.
+@Around("@annotation(LogExecutionTime)")
+public Object timeIt(ProceedingJoinPoint pjp) throws Throwable { ... }
+```
+
+```java
+@LogExecutionTime
+public Task findTask(Long id) { ... }
+```
+
+This is how Spring's own annotations work, and how you'd build a custom `@Audited` or `@RateLimited`.
+
+---
+
+## The proxy gotchas (this is where beginners get stuck)
+
+**1. Calling a method on `this` skips the advice.**
+
+```java
+@Service
+public class OrderService {
+    public void placeOrder() {
+        save();                 // calls this.save(), NOT the proxy → no @Transactional
+    }
+
+    @Transactional
+    public void save() { ... }
+}
+```
+
+The call goes from the real object to itself, so it never passes through the proxy. Fixes:
+
+- **Move `save()` into another bean** and inject it (the usual, best fix).
+- Inject the bean into itself with `ObjectProvider`.
+- Use AspectJ weaving (see below).
+
+**2. Only Spring beans are advised.** An object you create with `new` has no proxy. (This is the same reason the IoC note told you to let Spring create objects.)
+
+**3. Visibility and `final` matter.** Put advice on **public** methods. A `private` method is never intercepted. CGLIB can't subclass a `final` class or override a `final` method, so advice on those is skipped. (This is the same rule you saw for `@Configuration` classes.)
+
+**4. Advice order.** `@Around` wraps everything, and the others run inside it. When several aspects match the same method, control the order with `@Order(1)` on the aspect, because the default order is undefined.
+
+---
+
+## Where Spring already uses AOP for you
+
+|Annotation|What the aspect does|
+|---|---|
+|`@Transactional`|Opens a transaction before the method and commits or rolls back after|
+|`@Cacheable`|Returns a stored result instead of running the method|
+|`@Async`|Runs the method on another thread|
+|`@PreAuthorize`|Checks the user's permissions (your Spring Security notes) before the method|
+
+All of them are bound by the proxy rules above, so the `this`-call trap applies to each one.
+
+---
+
+## Related concept in short
+
+**Spring AOP vs AspectJ.** Spring AOP is proxy-based: it only intercepts method calls on Spring beans, and it's simple and enough for almost everything. **AspectJ** is a full AOP language that changes the bytecode itself, at compile time or load time. It can intercept constructors, field access and calls on `this`, but it needs extra build setup. Reach for it only when proxies aren't enough.
 
 
 
+[[Spring Framework]]

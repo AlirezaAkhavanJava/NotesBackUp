@@ -1,81 +1,66 @@
 
 
-## Part 1: The Mental Model — REST as a Resource-Oriented Architecture
+A REST API exposes your application's data as **resources**, such as orders, users and books. Each resource has its own URL, and clients work with it through the standard HTTP verbs (GET, POST, PUT, PATCH, DELETE). The server answers with a status code that says what happened and a body that carries the data, usually JSON.
 
-### 1.1 The Core Intuition: Think "Nouns," Not "Verbs"
+This note covers the design rules (what the URLs, verbs and status codes should look like) and the Spring Boot code that implements them, from a first controller to the things a production API needs: validation, error format, versioning, pagination, retries and security. It builds on your Spring Web note (controllers and `DispatcherServlet`), your Entity/DTO/mapper and MapStruct notes, and your Spring Security and JWT notes, and it points back to them where they apply.
 
-The most common mistake in API design is modeling endpoints as remote procedure calls. You end up with URLs like `/getUserById`, `/createOrder`, `/deleteProduct`. That is not REST; it is RPC over HTTP.
+---
 
-REST models your system as **resources** — any information worth exposing — each uniquely identified by a **URI**. The idea is to design URIs that make logical sense based on your resource set, as if you were designing a browsable website [12†L15-L22]. Clients interact with resources using a small, uniform set of **HTTP verbs** (GET, POST, PUT, PATCH, DELETE) [12†L24-L27].
+## Part 1: Model resources, not actions
 
-**Analogy:** Think of a library. You don't ask the librarian "fetchBookByTitle." You navigate to the shelf (collection URI `/books`), pick a specific book (`/books/978-0-13-468599-1`), read it (GET), replace it (PUT), or remove it (DELETE). The shelf itself is a resource; each book is a resource. The verbs are the same regardless of what you're manipulating.
+The most common design mistake is turning URLs into function calls: `/getUserById`, `/createOrder`, `/deleteProduct`. That's RPC over HTTP. In REST the URL names a **thing** (a noun), and the HTTP verb says what to do with it.
 
-### 1.2 The Uniform Interface and HTTP Semantics
-
-The uniform interface is what makes REST scalable: every resource is manipulated the same way. But the verbs carry **semantic contracts** that production systems must honor:
-
-| Verb | Semantics | Safe? | Idempotent? |
-|------|-----------|-------|-------------|
-| GET | Retrieve a resource | Yes | Yes |
-| POST | Create a new resource (server assigns URI) | No | No |
-| PUT | Replace a resource entirely (client knows URI) | No | Yes |
-| PATCH | Partially modify a resource | No | No* |
-| DELETE | Remove a resource | No | Yes |
-
-*PUT is idempotent: calling it N times with the same body produces the same state as calling it once. GET is safe: it must never cause side effects and must be cacheable [12†L25-L31].
-
-This matters because intermediaries (proxies, CDNs, browsers) rely on these contracts. If your GET endpoint deletes a record, you break the web's caching and prefetching assumptions.
-
-### 1.3 The Collection/Item Rhythm
-
-Resources naturally organize into collections and individual items:
-
-```
-/orders              → collection of orders
-/orders/{id}         → a single order
-/orders/{id}/items   → sub-collection of items within an order
-/orders/{id}/items/{itemId} → a single item
+```text
+GET    /orders          list orders
+POST   /orders          create an order
+GET    /orders/42       read order 42
+PUT    /orders/42       replace order 42
+DELETE /orders/42       delete order 42
 ```
 
-This rhythm is not arbitrary. It maps to how clients reason about your domain. A client listing orders hits the collection; a client viewing one order hits the item. Relationships are expressed by nesting, but only when the child resource genuinely cannot exist outside the parent context. For many-to-many or complex relationships, prefer top-level resources with query parameters.
+Think of a library. You don't ask for "fetchBookByTitle." You go to the shelf (`/books`), pick one book (`/books/978-0-13-468599-1`), and read, replace or remove it.
 
-### 1.4 The Representation: What Travels on the Wire
+### What each verb promises
 
-A resource is a conceptual entity. Its **representation** is what you actually send: JSON, XML, or any registered media type. The same resource can have multiple representations selected via content negotiation (`Accept` header) [12†L32-L36].
+Proxies, CDNs and browsers rely on these promises, so don't break them.
 
-In Spring Boot, the default representation is JSON via Jackson. You should never expose your database entities directly — this is the "zero entity leaks" principle [7†L5-L6]. Entities carry persistence concerns (lazy proxies, bidirectional relationships, column mappings) that do not belong in an API contract. Use Data Transfer Objects (DTOs) as the boundary.
+|Verb|Meaning|Safe?|Idempotent?|
+|---|---|---|---|
+|GET|Read|Yes|Yes|
+|POST|Create (the server picks the URL)|No|No|
+|PUT|Replace the whole resource|No|Yes|
+|PATCH|Change part of it|No|Not guaranteed|
+|DELETE|Remove|No|Yes|
 
-**Why DTOs matter:** An entity might have a `password` field or a `createdBy` relationship that triggers lazy loading. A DTO is a deliberate, minimal contract. Java Records are ideal for DTOs: immutable, concise, and automatically generating `equals`/`hashCode`/`toString` [7†L25-L26].
+- **Safe** means it never changes server state. A GET that deletes something breaks caching and prefetching.
+- **Idempotent** means doing it N times leaves the same state as doing it once. That is why a client can safely retry a PUT or DELETE after a timeout, but not a POST. Part 6 returns to this.
+
+### Collections and items
+
+```text
+/orders                         the collection
+/orders/{id}                    one order
+/orders/{id}/items              the items of one order
+/orders/{id}/items/{itemId}     one item
+```
+
+Nest only when the child can't exist without the parent. Keep three habits: plural nouns, lowercase with hyphens, and no verbs in the path. The **path identifies** the resource and **query parameters modify** the result (`/orders?status=open&page=0`). `/orders?id=42` is wrong, and `/orders/42` is right.
+
+For an action that isn't plain CRUD, such as cancelling an order, treat the action as a sub-resource: `POST /orders/42/cancellation`. Or change a state field with `PATCH /orders/42`.
+
+### Representation: what travels, and why DTOs
+
+The resource is the concept, and the **representation** is the JSON you send for it. Spring Boot produces JSON with Jackson by default.
+
+Never return your JPA entities directly. They carry persistence details (lazy proxies, two-way relationships, a `password` field) that don't belong in a public contract. Return a **DTO** instead. A record is ideal: short, immutable and with `equals` and `toString` for free (see your Entity/DTO/mapper note).
 
 ```java
-// Bad: exposing the entity
-@GetMapping("/users/{id}")
-public User getUser(@PathVariable Long id) { ... }
-
-// Good: exposing a DTO
 public record UserResponse(Long id, String username, String email) {}
-
-@GetMapping("/users/{id}")
-public UserResponse getUser(@PathVariable Long id) {
-    return userService.findById(id)
-        .map(user -> new UserResponse(user.getId(), user.getUsername(), user.getEmail()))
-        .orElseThrow(() -> new UserNotFoundException(id));
-}
 ```
 
 ---
 
-## Part 2: Spring Boot Mechanics — From Annotations to Production Controllers
-
-### 2.1 `@RestController` vs `@Controller`: The View Resolver Bypass
-
-Spring MVC has two controller stereotypes. `@Controller` returns view names resolved by a `ViewResolver` (for server-rendered pages). `@RestController` is a meta-annotation combining `@Controller` and `@ResponseBody`: every method's return value is serialized directly to the HTTP response body [1†L10-L13].
-
-In a REST API, you almost always use `@RestController`. The view resolver is not consulted; Jackson's `HttpMessageConverter` handles JSON serialization [1†L36-L38].
-
-### 2.2 Request Mapping: The Dispatch Contract
-
-`@RequestMapping` is the core annotation that maps HTTP requests to handler methods. It can be placed at class level (a base path) and method level (the specific endpoint) [1†L4-L9]. The specialized variants — `@GetMapping`, `@PostMapping`, `@PutMapping`, `@PatchMapping`, `@DeleteMapping` — are shorthands that pre-set the HTTP method.
+## Part 2: A first controller
 
 ```java
 @RestController
@@ -84,106 +69,117 @@ public class OrderController {
 
     private final OrderService orderService;
 
-    // Constructor injection — not @Autowired on the field
-    public OrderController(OrderService orderService) {
+    public OrderController(OrderService orderService) {   // constructor injection
         this.orderService = orderService;
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<OrderResponse> getOrder(@PathVariable Long id) {
-        return orderService.findById(id)
-            .map(ResponseEntity::ok)
-            .orElseThrow(() -> new OrderNotFoundException(id));
+    public OrderResponse getOrder(@PathVariable Long id) {
+        return orderService.findById(id);   // throws OrderNotFoundException → 404 (Part 4)
     }
 
     @PostMapping
     public ResponseEntity<OrderResponse> createOrder(
             @Valid @RequestBody CreateOrderRequest request,
             UriComponentsBuilder uriBuilder) {
+
         OrderResponse created = orderService.create(request);
         URI location = uriBuilder.path("/api/v1/orders/{id}")
-            .buildAndExpand(created.id()).toUri();
-        return ResponseEntity.created(location).body(created);
+                .buildAndExpand(created.id()).toUri();
+        return ResponseEntity.created(location).body(created);   // 201 + Location header
     }
 }
 ```
 
-**Why constructor injection?** Field injection with `@Autowired` makes testing harder (you must use reflection to set dependencies) and obscures required dependencies. Constructor injection makes dependencies explicit and allows `final` fields [7†L25-L26].
+Line by line:
 
-### 2.3 Parameter Binding: The Four Sources of Input
+- `@RestController` is `@Controller` plus `@ResponseBody`. The return value is written straight to the response body with Jackson, and no view resolver is involved.
+- `@RequestMapping` at class level sets a base path. `@GetMapping`, `@PostMapping`, `@PutMapping`, `@PatchMapping` and `@DeleteMapping` set the verb.
+- The constructor makes the dependency explicit, lets the field be `final`, and needs no `@Autowired` when there is only one constructor (see your `@Autowired` note).
+- The service returns a **DTO**, not an entity. Part 7 explains why.
+- `201 Created` with a `Location` header tells the client where the new resource lives.
 
-Spring MVC binds handler method parameters from four primary sources:
+### Where input comes from
 
-1. **`@PathVariable`** — extracts a segment from the URI template: `/{id}` → `Long id`
-2. **`@RequestParam`** — extracts a query parameter: `?page=0&size=20` → `int page, int size`
-3. **`@RequestBody`** — deserializes the HTTP body (JSON → object) via Jackson
-4. **`@RequestHeader`** — extracts a header value
+|Annotation|Source|Example|
+|---|---|---|
+|`@PathVariable`|A segment of the path|`/orders/42` → `Long id`|
+|`@RequestParam`|A query parameter|`?page=0&size=20`|
+|`@RequestBody`|The JSON body, via Jackson|`CreateOrderRequest`|
+|`@RequestHeader`|A header|`Idempotency-Key`|
 
-**Edge case:** Path variables are part of the resource identifier; query parameters are modifiers (filtering, pagination, sorting). Do not use query parameters to identify resources. `/orders?id=42` is not RESTful; `/orders/42` is.
+### Status codes
 
-### 2.4 HTTP Status Codes: Semantic Precision
+The status code is the main answer to "what happened?" Use the precise one.
 
-Production APIs use HTTP status codes as the primary contract for outcome. The table below summarizes the codes you will use most [18†L23-L27]:
+|Code|Use it when|
+|---|---|
+|200 OK|A GET, PUT or PATCH succeeded and returns a body|
+|201 Created|A POST created something (include `Location`)|
+|202 Accepted|The request was accepted but is still processing|
+|204 No Content|Success with no body (typical for DELETE)|
+|400 Bad Request|Malformed JSON or failed validation|
+|401 Unauthorized|No valid credentials (not logged in)|
+|403 Forbidden|Logged in, but not allowed|
+|404 Not Found|The resource doesn't exist|
+|409 Conflict|A state conflict, such as a duplicate or an optimistic-lock failure|
+|412 Precondition Failed|An `If-Match` check failed|
+|422 Unprocessable Entity|Valid JSON that breaks a business rule|
+|429 Too Many Requests|Rate limit hit (add `Retry-After`)|
+|500 Internal Server Error|An unexpected failure|
 
-| Code | Meaning | When to Use |
-|------|---------|-------------|
-| 200 OK | Success | GET, PUT, PATCH with response body |
-| 201 Created | Resource created | POST; include `Location` header |
-| 202 Accepted | Async processing | Request accepted, not yet complete |
-| 204 No Content | Success, no body | DELETE, or PUT/PATCH with no return body |
-| 400 Bad Request | Malformed syntax / validation failure | Invalid JSON, missing required fields |
-| 401 Unauthorized | Authentication required | Missing or invalid credentials |
-| 403 Forbidden | Authenticated but not authorized | Valid credentials, insufficient permission |
-| 404 Not Found | Resource does not exist | Invalid ID, deleted resource |
-| 409 Conflict | State conflict | Duplicate resource, optimistic locking failure |
-| 422 Unprocessable Entity | Semantically invalid | Valid syntax but business rule violation |
-| 429 Too Many Requests | Rate limit exceeded | Include `Retry-After` header |
-| 500 Internal Server Error | Unexpected server failure | Never expose stack traces |
-
-**Gotcha:** Do not return 200 OK with an error body. This breaks client error handling and monitoring. If you must return a business-level error, use the appropriate 4xx status and a structured error body.
-
-### 2.5 Validation: Fail Fast, Fail Clearly
-
-Validation in Spring Boot is built on Jakarta Bean Validation (JSR-380), with Hibernate Validator as the reference implementation. Since Spring Boot 2.3, `spring-boot-starter-validation` is no longer pulled in automatically by `spring-boot-starter-web` — you must add it explicitly, or your `@Valid` annotations silently do nothing [11†L6-L13].
-
-**How validation actually triggers:** Validation runs only when `@Valid` (from `jakarta.validation`) or Spring's `@Validated` sits directly on the parameter Spring is binding. On a `@RestController` method, annotating a `@RequestBody` parameter with `@Valid` causes Spring's `RequestResponseBodyMethodProcessor` to run the bound object through the configured `Validator` after deserialization [11†L15-L23].
-
-```java
-public record CreateOrderRequest(
-    @NotBlank String customerId,
-    @NotEmpty @Valid List<OrderItemRequest> items
-) {}
-
-public record OrderItemRequest(
-    @NotBlank String sku,
-    @Positive int quantity
-) {}
-```
-
-**The cascading validation trap:** Hibernate Validator does not validate nested objects by default. If `CreateOrderRequest` has a field `Address shippingAddress`, and `Address` itself has `@NotBlank` on `city`, none of those constraints run unless `shippingAddress` is itself annotated `@Valid` inside `CreateOrderRequest` [11†L33-L41]. Miss that one annotation and the outer object reports "valid" while carrying a completely empty inner object. This is one of the most common silent failures in production APIs.
-
-**List element validation:** Validating `List<T>` elements is inconsistent. Per-element constraints on `List<SomeDto>` request-body fields may not fire as expected depending on how the controller method and DTO are structured [11†L45-L52]. Always test list validation explicitly.
-
-When validation fails, Spring throws `MethodArgumentNotValidException`. Left unhandled, it can leak stack traces. You need an explicit `@ExceptionHandler` or a global `@ControllerAdvice` that maps it to a sanitized 400 response with field-level detail [11†L23-L31].
+Spring already returns 405 (wrong verb), 406 (can't produce the requested type) and 415 (unsupported body type) for you. The rule that matters most: **never return 200 with an error in the body.** It breaks client error handling and monitoring.
 
 ---
 
-## Part 3: Cross-Cutting Concerns — Error Handling, Versioning, and HATEOAS
+## Part 3: Validation
 
-### 3.1 Global Exception Handling with `@ControllerAdvice`
+Validation uses Jakarta Bean Validation. The same annotations appeared in your Lombok and validation-messages note, and your `@ConfigurationProperties` note used them for settings. Here they guard the request body.
 
-Without centralized error handling, your clients receive inconsistent error formats, stack traces leak in production, and debugging becomes a nightmare [8†L7-L9]. `@ControllerAdvice` intercepts exceptions across all controllers and lets you return a standardized response.
+Add the dependency, or `@Valid` silently does nothing:
 
-Spring Framework 6 (and Spring Boot 3+) supports **RFC 7807 "Problem Details for HTTP APIs"** via the `ProblemDetail` class. The specification defines a standard error structure with fields: `type`, `title`, `status`, `detail`, and `instance` [13†L23-L28]. This is the production-grade approach: it provides a consistent, extensible error format that clients can parse uniformly.
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-validation</artifactId>
+</dependency>
+```
+
+```java
+public record CreateOrderRequest(
+        @NotBlank String customerId,
+        @NotNull @Valid Address shippingAddress,
+        @NotEmpty List<@Valid OrderItemRequest> items) {}
+
+public record OrderItemRequest(@NotBlank String sku, @Positive int quantity) {}
+```
+
+Line by line:
+
+- `@Valid` on the `@RequestBody` parameter in the controller is what _starts_ validation.
+- **Nested objects need their own `@Valid`.** Without it on `shippingAddress`, the constraints inside `Address` never run, and an empty address passes as valid. This is the most common silent failure.
+- `List<@Valid OrderItemRequest>` validates each element of the list. Test list validation explicitly.
+
+When validation fails, the exception depends on where the constraint is:
+
+- A failed `@RequestBody` throws `MethodArgumentNotValidException`.
+- A failed constraint on a `@PathVariable` or `@RequestParam` throws `HandlerMethodValidationException` in Spring 6.1 and later (or `ConstraintViolationException` with class-level `@Validated`).
+
+Handle both in one place, as the next part shows.
+
+---
+
+## Part 4: One format for every error
+
+Without central handling, every error looks different and clients can't parse them. `@RestControllerAdvice` catches exceptions from all controllers, and `ProblemDetail` gives them a standard shape. It follows RFC 9457 (which replaced RFC 7807) with the fields `type`, `title`, `status`, `detail` and `instance`.
 
 ```java
 @RestControllerAdvice
 public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(OrderNotFoundException.class)
-    public ProblemDetail handleOrderNotFound(OrderNotFoundException ex) {
-        ProblemDetail problem = ProblemDetail.forStatusAndDetail(
-            HttpStatus.NOT_FOUND, ex.getMessage());
+    public ProblemDetail handleNotFound(OrderNotFoundException ex) {
+        ProblemDetail problem = ProblemDetail.forStatusAndDetail(HttpStatus.NOT_FOUND, ex.getMessage());
         problem.setTitle("Order Not Found");
         problem.setType(URI.create("https://api.example.com/problems/order-not-found"));
         return problem;
@@ -191,190 +187,176 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 
     @Override
     protected ResponseEntity<Object> handleMethodArgumentNotValid(
-            MethodArgumentNotValidException ex,
-            HttpHeaders headers, HttpStatusCode status, WebRequest request) {
-        ProblemDetail problem = ProblemDetail.forStatusAndDetail(
-            HttpStatus.BAD_REQUEST, "Validation failed");
-        Map<String, List<String>> errors = ex.getBindingResult()
-            .getFieldErrors().stream()
-            .collect(Collectors.groupingBy(
-                FieldError::getField,
-                Collectors.mapping(FieldError::getDefaultMessage, Collectors.toList())));
-        problem.setProperty("errors", errors);
+            MethodArgumentNotValidException ex, HttpHeaders headers,
+            HttpStatusCode status, WebRequest request) {
+
+        ProblemDetail problem = ProblemDetail.forStatusAndDetail(HttpStatus.BAD_REQUEST, "Validation failed");
+        problem.setProperty("errors", ex.getBindingResult().getFieldErrors().stream()
+                .collect(Collectors.groupingBy(FieldError::getField,
+                        Collectors.mapping(FieldError::getDefaultMessage, Collectors.toList()))));
         return ResponseEntity.badRequest().body(problem);
     }
 }
 ```
 
-**Why extend `ResponseEntityExceptionHandler`?** It already handles all standard Spring MVC exceptions (e.g., `TypeMismatchException`, `HttpMessageNotReadableException`) with RFC 7807 responses. You only override the ones you need to customize [13†L16-L19].
+Extending `ResponseEntityExceptionHandler` gives you ready-made problem-detail responses for the standard Spring MVC exceptions (bad JSON, wrong type, wrong verb). You override only the ones you want to customize. Boot can also produce problem details for those by itself, with one property in `application.properties` (the settings note covered where these live):
 
-### 3.2 API Versioning: Evolving Without Breaking
-
-APIs are contracts that outlive features. When you need to change a response shape or behavior, you must version. Three strategies exist, each with trade-offs:
-
-**URI versioning** (`/api/v1/orders`): The most visible and easiest to route. Clients can bookmark and share versioned URLs. The downside is that URIs are supposed to identify resources, not versions — but pragmatically, this is the most common approach in industry.
-
-**Header versioning** (`X-API-Version: 1`): Keeps URIs clean. Spring MVC supports this via the `headers` condition on `@GetMapping` [9†L23-L28]. The downside is that clients cannot easily discover the version.
-
-**Content negotiation / media type versioning** (`Accept: application/vnd.example.v1+json`): The most "RESTful" approach, using the `Accept` header. Spring MVC does not take media type parameters into account during content negotiation, so you must include the version in the type itself [3†L24-L29]. This is technically elegant but operationally complex.
-
-```java
-// URI versioning — simplest, most common
-@RestController
-@RequestMapping("/api/v1/orders")
-public class OrderControllerV1 { ... }
-
-@RestController
-@RequestMapping("/api/v2/orders")
-public class OrderControllerV2 { ... }
+```properties
+spring.mvc.problemdetails.enabled=true
 ```
 
-**Deprecation and Sunset headers:** RFC 9745 defines the `Deprecation` header as a structured date value, and RFC 8594 defines `Sunset` as the date after which the API will be unavailable. Include a `Link` header with `rel="successor-version"` to point clients to the replacement [9†L30-L34].
-
-### 3.3 HATEOAS: Making APIs Self-Documenting
-
-HATEOAS (Hypertext as the Engine of Application State) is the constraint that distinguishes true REST from HTTP-based RPC. The API should guide the client through the application by returning relevant information about next potential steps with each response [10†L8-L10]. The goal is to decouple client and server, allowing the API to change its URI scheme without breaking clients.
-
-Spring HATEOAS provides `RepresentationModel`, `Link`, and `WebMvcLinkBuilder` to create hypermedia-driven representations [10†L40-L41]. Resources extend `RepresentationModel` to inherit the `add()` method for attaching links [10†L43-L48].
-
-```java
-public class OrderResponse extends RepresentationModel<OrderResponse> {
-    private Long id;
-    private String status;
-    // getters/setters
-}
-
-@GetMapping("/{id}")
-public OrderResponse getOrder(@PathVariable Long id) {
-    OrderResponse order = orderService.findById(id);
-    order.add(linkTo(methodOn(OrderController.class).getOrder(id)).withSelfRel());
-    order.add(linkTo(methodOn(OrderController.class).cancelOrder(id)).withRel("cancel"));
-    return order;
-}
-```
-
-**When to use HATEOAS:** It is ideal for public APIs or complex state machines where clients need discoverability. It can be excessive for simple internal APIs where the client and server are deployed together [4†L26-L27].
+On stack traces: Boot's default error body doesn't include them (`server.error.include-stacktrace=never`), so the real problem is _inconsistent_ errors, not leaked traces. Keep it that way in production.
 
 ---
 
-## Part 4: Production Nuances — Pagination, Idempotency, and Security
+## Part 5: Changing the API without breaking clients
 
-### 4.1 Pagination and Filtering: Handling Large Datasets
+An API is a contract that outlives its features. When a response shape has to change, you version it.
 
-Never return an unbounded collection. Spring Data's `Pageable` interface integrates directly with Spring MVC: the framework derives a `Pageable` instance from request parameters (`page`, `size`, `sort`) using a `PageableHandlerMethodArgumentResolver`. The default is `page=0, size=20`, customizable via `@PageableDefault` [14†L33-L37].
+|Style|Looks like|Trade-off|
+|---|---|---|
+|URI|`/api/v1/orders`|Most visible and common. A URI should identify a resource, not a version, but it's the pragmatic default|
+|Header|`X-API-Version: 1`|Clean URIs, but hard for clients to discover|
+|Media type|`Accept: application/vnd.example.v1+json`|Most "pure" REST, but more work to operate|
+
+Start with URI versioning. When you retire a version, announce it with headers. `Deprecation` (RFC 9745) says it's deprecated, `Sunset` (RFC 8594) says when it stops working, and `Link: <...>; rel="successor-version"` points to the replacement. Newer Spring releases (Framework 7 / Boot 4) add built-in versioning support, so check your version's docs before hand-rolling one.
+
+### HATEOAS: links in the response
+
+HATEOAS means each response also tells the client what it can do next, through links. That lets the server change its URLs without breaking clients, and it suits public APIs and complex state machines. For a simple internal API it's usually extra work.
+
+Spring HATEOAS wraps your DTO instead of changing it, so your records stay records:
+
+```java
+@GetMapping("/{id}")
+public EntityModel<OrderResponse> getOrder(@PathVariable Long id) {
+    OrderResponse order = orderService.findById(id);
+    return EntityModel.of(order,
+            linkTo(methodOn(OrderController.class).getOrder(id)).withSelfRel(),
+            linkTo(methodOn(OrderController.class).cancelOrder(id)).withRel("cancel"));
+}
+```
+
+(It needs `spring-boot-starter-hateoas`.)
+
+---
+
+## Part 6: Production concerns
+
+### Pagination
+
+Never return an unbounded list. Spring Data turns `?page=0&size=20&sort=createdAt,desc` into a `Pageable` for you:
 
 ```java
 @GetMapping
-public Page<OrderResponse> listOrders(
+public Page<OrderResponse> list(
         @PageableDefault(size = 20, sort = "createdAt", direction = Sort.Direction.DESC)
         Pageable pageable) {
     return orderService.findAll(pageable);
 }
 ```
 
-**Response shape:** Spring's `Page<T>` serializes to a JSON object with `content`, `totalElements`, `totalPages`, `number`, and `size`. This is machine-readable but not HATEOAS-friendly. For hypermedia APIs, use `PagedResourcesAssembler` to enrich the response with `next`/`prev` links [14†L41-L43].
+Three things to do:
 
-**Gotcha:** `size` must be capped. A client requesting `size=1000000` will exhaust memory. Configure a maximum in `spring.data.web.pageable.max-page-size`.
+- **Cap the size**, or a client can ask for `size=1000000`:
+    
+    ```properties
+    spring.data.web.pageable.max-page-size=100
+    ```
+    
+- **Don't serialize `Page` directly** in newer Spring Data. Use `@EnableSpringDataWebSupport(pageSerializationMode = PageSerializationMode.VIA_DTO)` for a stable JSON shape.
+- **Whitelist the sort fields.** A client-chosen `sort` parameter can name any property on your entity, including ones you meant to keep private.
 
-### 4.2 Idempotency: Making POST Safe Against Retries
+### Idempotency: making POST safe to retry
 
-POST is not idempotent by HTTP specification. In distributed systems, network failures cause clients to retry, creating duplicate resources (double-charged credit cards, duplicate orders). The **Idempotency-Key** header solves this: the client generates a unique key (typically a UUID) per logical operation and sends it with the request. The server stores the key and the result. If the same key arrives again, the server returns the stored result instead of re-executing [15†L4-L7].
+POST isn't idempotent, so a client that retries after a network timeout can create a duplicate order or charge a card twice. The fix is an `Idempotency-Key` header: the client generates a unique value (a UUID) for each logical operation and sends it with the request.
 
-```java
-@PostMapping("/payments")
-public ResponseEntity<PaymentResponse> createPayment(
-        @RequestHeader("Idempotency-Key") String idempotencyKey,
-        @Valid @RequestBody PaymentRequest request) {
-
-    return idempotencyService.findByKey(idempotencyKey)
-        .map(existing -> ResponseEntity.ok(existing))
-        .orElseGet(() -> {
-            PaymentResponse response = paymentService.process(request);
-            idempotencyService.store(idempotencyKey, response);
-            return ResponseEntity.status(HttpStatus.CREATED).body(response);
-        });
-}
+```text
+1. Client sends  Idempotency-Key: <uuid>
+2. Server tries to INSERT the key (unique constraint on user + key)
+3. Insert fails (key exists)  → return the SAME status and body as the first time
+                                (or 409 if the first request is still running)
+4. Insert succeeds            → do the work, save the response with the key, return it
+5. Same key, different body   → 422
+6. Delete old keys after a TTL (for example 24 hours)
 ```
 
-**Implementation details:** The key should be unique per endpoint and per user to avoid collisions. Store the key with a TTL (e.g., 24 hours) and the full response. Use a database unique constraint on the key to prevent race conditions [15†L35-L39].
+The unique constraint is what makes it safe. A "look it up, then process, then save" version has a race, because two simultaneous retries can both pass the lookup. The header is an IETF draft, widely used by payment APIs.
 
-### 4.3 Security: Stateless Authentication and Authorization
+### Concurrent edits
 
-REST APIs are stateless: each request carries all information needed to process it. This makes JWT (JSON Web Token) authentication the natural fit. The client authenticates once (via `/auth/login`), receives a signed JWT, and includes it in the `Authorization: Bearer <token>` header on subsequent requests.
+Two clients updating the same resource can overwrite each other. Use an `@Version` field on the entity (an optimistic lock) and return **409** on a conflict, or use `ETag` and `If-Match` headers and return **412**.
 
-Spring Security 6 (in Spring Boot 3) uses a Lambda DSL for configuration. The key configuration for a stateless REST API:
+### Stateless security
+
+A REST API keeps no session. Each request carries a token, usually a JWT in `Authorization: Bearer <token>`, as your JWT and Bearer-header notes described. Your security config is a `@Configuration` class that exposes a `SecurityFilterChain` bean (see the `@Configuration` note):
 
 ```java
 @Configuration
-@EnableWebSecurity
 public class SecurityConfig {
 
     @Bean
-    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+    public SecurityFilterChain filterChain(HttpSecurity http,
+                                           JwtAuthenticationFilter jwtFilter) throws Exception {
         http
-            .csrf(csrf -> csrf.disable()) // Stateless API — no CSRF
-            .sessionManagement(session -> 
-                session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+            .csrf(csrf -> csrf.disable())
+            .sessionManagement(s -> s.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/api/v1/auth/**").permitAll()
-                .requestMatchers(HttpMethod.GET, "/api/v1/orders/**").hasRole("USER")
                 .requestMatchers(HttpMethod.DELETE, "/api/v1/orders/**").hasRole("ADMIN")
                 .anyRequest().authenticated())
-            .oauth2ResourceServer(oauth2 -> oauth2.jwt(Customizer.withDefaults()));
+            .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
         return http.build();
     }
 }
 ```
 
-**Why disable CSRF?** CSRF attacks exploit cookie-based session authentication. A stateless JWT API does not use cookies; the token is sent explicitly in the header, so CSRF is not applicable. Disabling it is correct for this architecture [7†L40-L42].
+Line by line:
 
-### 4.4 DTO Mapping and Layer Separation
+- **CSRF is disabled** because attacks like that rely on cookie sessions. A token sent explicitly in a header isn't attached by the browser automatically. Only disable it when you really have no cookie-based login.
+- `STATELESS` tells Spring Security not to create or use a session.
+- `addFilterBefore` plugs in your own JWT filter, from your JWT filter chain lesson. This is the right choice when your own login endpoint issues the tokens.
+- If tokens come from an **external authorization server** instead, use `.oauth2ResourceServer(o -> o.jwt(Customizer.withDefaults()))`. It validates tokens issued elsewhere and does not fit a self-issued login token. Pick one approach.
 
-Keep controllers thin. The controller's job is HTTP concern: parse the request, validate, delegate to the service, and format the response. Business logic belongs in the service layer. The service layer works with domain objects and entities; the controller maps between DTOs and domain objects.
-
-```java
-// Controller — HTTP concern only
-@RestController
-@RequestMapping("/api/v1/orders")
-public class OrderController {
-    private final OrderService orderService;
-    private final OrderMapper orderMapper;
-
-    @PostMapping
-    public ResponseEntity<OrderResponse> create(@Valid @RequestBody CreateOrderRequest request) {
-        Order order = orderMapper.toDomain(request);
-        Order saved = orderService.create(order);
-        OrderResponse response = orderMapper.toResponse(saved);
-        return ResponseEntity.created(URI.create("/api/v1/orders/" + saved.getId()))
-            .body(response);
-    }
-}
-```
-
-MapStruct is the production-standard mapper: it generates type-safe mapping code at compile time, eliminating reflection overhead and runtime errors [17†L4-L10]. It handles nested mappings, custom conversions, and `@MappingTarget` for updates.
-
-**Why this separation matters:** It keeps the API contract independent of the persistence model. You can refactor your JPA entities without changing the API. You can change the API response shape without altering the database schema.
+Also remember **CORS** if a browser front end on another origin calls the API.
 
 ---
 
-## Part 5: Summary — The Production Checklist
+## Part 7: Layers and mapping
 
-| Concern | Production Practice |
-|---------|---------------------|
-| **Resource modeling** | Nouns, not verbs; collection/item rhythm; URI identifies resource, query params modify |
-| **HTTP methods** | Honor safety and idempotency contracts |
-| **Status codes** | Semantic precision; never 200 OK with error body |
-| **DTOs** | Never expose entities; use Java Records; MapStruct for mapping |
-| **Validation** | Add `spring-boot-starter-validation`; cascade `@Valid` on nested objects; handle `MethodArgumentNotValidException` globally |
-| **Error handling** | `@RestControllerAdvice` + RFC 7807 `ProblemDetail`; never leak stack traces |
-| **Versioning** | URI versioning for simplicity; document deprecation with `Deprecation` and `Sunset` headers |
-| **HATEOAS** | Use for public/complex APIs; skip for simple internal APIs |
-| **Pagination** | `Pageable` with capped `size`; never return unbounded collections |
-| **Idempotency** | `Idempotency-Key` header for POST; store result with unique constraint and TTL |
-| **Security** | Stateless JWT; Lambda DSL; disable CSRF only when session-less |
-| **Layering** | Thin controllers; business logic in services; DTO mapping at the boundary |
+Keep controllers thin. A controller parses the request, validates it, calls a service, and shapes the response. Business rules live in the service, and database access lives in the repository (your persistence-layer note).
 
-The thread running through all of this is **intentionality**: every decision — which verb, which status code, which header — is a deliberate contract with the client. Production APIs are not just code; they are interfaces that must be predictable, evolvable, and safe.
+Do the entity-to-DTO mapping **inside the service**, within the transaction, and return a DTO. If you return entities and map them in the controller, lazy relationships get touched after the transaction has closed, and you either hit `LazyInitializationException` or quietly lean on `spring.jpa.open-in-view`, which keeps a database connection open for the whole request. MapStruct (your MapStruct note) is a popular mapper because it generates plain, type-safe mapping code at compile time.
+
+This also keeps your two models independent. You can refactor entities without changing the API, and reshape the API without changing the schema.
+
+---
+
+## Checklist
+
+|Concern|Do this|
+|---|---|
+|Resources|Plural nouns, no verbs; path identifies, query modifies|
+|Verbs|Honor safe and idempotent rules|
+|Status codes|Precise codes; never 200 with an error|
+|DTOs|Return records, never entities; map in the service|
+|Validation|Add the starter; `@Valid` on the body and on nested objects|
+|Errors|`@RestControllerAdvice` with `ProblemDetail`|
+|Versioning|URI by default; announce retirements with `Deprecation` and `Sunset`|
+|Pagination|`Pageable`, capped size, whitelisted sorts|
+|Retries|`Idempotency-Key` with a unique constraint|
+|Concurrency|`@Version` or `ETag`, with 409 or 412|
+|Security|Stateless tokens; CSRF off only with no cookie login; CORS if needed|
+
+---
+
+## Related concept in short
+
+**The Richardson maturity model** rates how "RESTful" an API is: level 0 is one endpoint (RPC), level 1 adds resources, level 2 adds proper verbs and status codes, and level 3 adds hypermedia links (HATEOAS). Most real-world APIs stop at level 2, which is a perfectly good place to be.
+
+
+
+
 
 
 [[Spring Framework]]
