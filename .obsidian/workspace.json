@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "c31f60400d7a47cb",
+        "id": "041e76c1dccc0298",
         "type": "tabs",
         "children": [
           {
-            "id": "a4445f9bfc530f9f",
+            "id": "dbfc0c47497e59b6",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/Pack 1 (Syntax commands)/01 - SQL Queries & Commands/11 - RETURNING.md",
+                "mode": "preview",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "11 - RETURNING"
             }
           }
         ]
@@ -168,8 +172,15 @@
       "bases:Create new base": false
     }
   },
-  "active": "3535a2e099904c39",
+  "active": "dbfc0c47497e59b6",
   "lastOpenFiles": [
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/Pack 1 (Syntax commands)/00 - Database Fundamentals/04 - Data Types in SQL and PostgreSQL.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/Pack 1 (Syntax commands)/00 - Database Fundamentals/00 - PostgreSQL.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/Pack 1 (Syntax commands)/16 - Review Manually/00 - Statics.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 1/32 - Git Rebase 2 🍧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 1/23 - Default Branch 🍧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 1/00 - Git.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Data JPA & Hibernate)/15 - Spring Boot Configuration and Profiles/04 - Profiles.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Data JPA & Hibernate)/15 - Spring Boot Configuration and Profiles/03 - Profiles.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Data JPA & Hibernate)/15 - Spring Boot Configuration and Profiles/02 - application.yml.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Data JPA & Hibernate)/15 - Spring Boot Configuration and Profiles/01 - @Value.md",
@@ -181,7 +192,6 @@
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Data JPA & Hibernate)/17 - Monitoring and Management",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Data JPA & Hibernate)/16 - Packaging and Deployment/00 - Run jar file.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Data JPA & Hibernate)/16 - Packaging and Deployment",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Data JPA & Hibernate)/15 - Spring Boot Configuration and Profiles/04 - Profiles.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Data JPA & Hibernate)/15 - Spring Boot Configuration and Profiles",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Data JPA & Hibernate)/14 - Lombok/02 - Lombok @Builder.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Data JPA & Hibernate)/14 - Lombok/01 - @EqualsAndHashCode.md",
@@ -194,14 +204,8 @@
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Data JPA & Hibernate)/13 - Testing/03 - TestEntityManager.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Data JPA & Hibernate)/13 - Testing/02 - MockitoBean.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Data JPA & Hibernate)/13 - Testing/01 - WebMvc Class.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Data JPA & Hibernate)/13 - Testing/00 - @WebMvcTest.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Data JPA & Hibernate)/13 - Testing",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Data JPA & Hibernate)/12 - Reference and Cheat Sheets/00 - Cheat Sheet.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Data JPA & Hibernate)/12 - Reference and Cheat Sheets",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Data JPA & Hibernate)/11 - Exception Handling/04 - @ResponseStatus.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Data JPA & Hibernate)/11 - Exception Handling/03 - ControllerAdvice.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Data JPA & Hibernate)/11 - Exception Handling/02 - MethodArgumentNotValidException.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Data JPA & Hibernate)/11 - Exception Handling/01 - RestResponseEntityExceptionHandler.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Data JPA & Hibernate)/11 - Exception Handling",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Data JPA & Hibernate)/10 - Spring MVC and REST",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Data JPA & Hibernate)/09 - Auditing and Transactions",
