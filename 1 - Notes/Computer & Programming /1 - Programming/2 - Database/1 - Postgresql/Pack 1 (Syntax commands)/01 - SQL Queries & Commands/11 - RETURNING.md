@@ -76,4 +76,5 @@ RETURNING *;
 
 
 
-###### Tags : [[01 - SQL]]
+
+[[PostgreSQL]]
