@@ -1,5 +1,4 @@
 
-# The `Object` Class and the `equals()` / `hashCode()` / `toString()` Contract
 
 ## Part 1 — The `Object` Class
 

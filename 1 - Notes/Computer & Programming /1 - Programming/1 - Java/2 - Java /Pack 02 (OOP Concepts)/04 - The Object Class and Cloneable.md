@@ -1,5 +1,5 @@
 
-# The `Object` Class and `Cloneable` — Full Methods, `clone()`, and the Cloneable Contract
+
 
 `java.lang.Object` is the root of the Java class hierarchy. Every class inherits its methods, whether you use them or not. This guide covers **all** `Object` methods, then goes deep on `clone()` and the `Cloneable` interface — the most misunderstood part of the API.
 

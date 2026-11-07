@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "846479e1c338c6b8",
+        "id": "67c31e23b22f3256",
         "type": "tabs",
         "children": [
           {
-            "id": "4cfd69ecb53db518",
+            "id": "563fd3d2b7de5af2",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/00 - Java & Enterprise.md",
-                "mode": "preview",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "00 - Java & Enterprise"
+              "title": "New tab"
             }
           }
         ]
@@ -80,7 +76,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 439.1609687805176
+    "width": 361.9164009094238
   },
   "right": {
     "id": "318802b81bf4bc9f",
@@ -172,11 +168,23 @@
       "bases:Create new base": false
     }
   },
-  "active": "4cfd69ecb53db518",
+  "active": "3535a2e099904c39",
   "lastOpenFiles": [
+    "1 - Notes/Computer & Programming /1 - Programming/10 - Programming in action/3 - Pack 3 (Java)/02 - java -cp.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/00 - Java & Enterprise.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Untitled.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Transactions)",
+    "1 - Notes/Computer & Programming /1 - Programming/5 - Cloud",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 01 (JVM & Java Internals)/00 -  Java Compilation and JVM Internals.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 01 (JVM & Java Internals)/08 - Array Confusion.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 02 (OOP Concepts)/04 - The Object Class and Cloneable.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 02 (OOP Concepts)/05 - Java Encapsulation.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 02 (OOP Concepts)/03 - The Object Class.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 02 (OOP Concepts)/02 - Types of Java Interfaces.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 02 (OOP Concepts)/01 - Abstract classes vs interfaces.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 02 (OOP Concepts)/00 - OOP Fundamentals.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 4 (Flow of Spring-boot)/01 - @JasonProperty.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 3 (getting request)/07 - @RequestBody.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/00 - Java & Enterprise.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/14 - @Autowired.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/12 - What is DI.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/10 - Tight Coupling and Loose Coupling.md",
@@ -190,16 +198,6 @@
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/16 - CRUD.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/42 - Proxies and @Transactional in Spring Boot.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/41 - What is RequestHandler ?.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/11 - What Is a Dependency?.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Deep dives)  🟌🟌🟌🟌🟌/Pack 1 (Bean Life Cycle)/01 - Bean Definition Registration.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Deep dives)  🟌🟌🟌🟌🟌/Pack 1 (Bean Life Cycle)/03 - Aware callbacks.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Deep dives)  🟌🟌🟌🟌🟌/Pack 1 (Bean Life Cycle)/02 - Bean Instantiation (Constructor Execution).md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Deep dives)  🟌🟌🟌🟌🟌/Pack 1 (Bean Life Cycle)/00 - Container Starts.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/19 - What is DTO ? (1).md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/19 - What is DTO ? (2).md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/8 - DSA/21 - Stack.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/8 - DSA/00 - Linear Search.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 1 (Topics from 2025)/55 - Function.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 1 (Topics from 2025)/12 - Supporting Concepts",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 1 (Topics from 2025)/11 - Spring Application Events",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 1 (Topics from 2025)/10 - OAuth 2.0",
@@ -208,8 +206,6 @@
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 1 (Topics from 2025)/07 - Session Management",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 1 (Topics from 2025)/06 - User Identity and Credentials",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 1 (Topics from 2025)/05 - Authentication Architecture",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 1 (Topics from 2025)/04 - Security Filters",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 1 (Topics from 2025)/03 - Security Configuration",
     "4 - Images/774eb969-136b-431c-b0cf-df687f29949b.png",
     "4 - Images/6b9c526f-69b8-4b83-acd1-d6cdfa5e6250.png",
     "2f261d3d-d190-4ea8-b7f0-2e88f1302f9d.png",
