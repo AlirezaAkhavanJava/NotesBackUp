@@ -55,8 +55,8 @@ All of these are beans, so they get dependencies through the container (see your
 ```java
 @Component
 public class OrderService {
-    private final PaymentService payment;                       // final: set once
-    public OrderService(PaymentService payment) {                // constructor injection
+    private final PaymentService payment;            // final: set once
+    public OrderService(PaymentService payment) {   // constructor injection
         this.payment = payment;
     }
 }
