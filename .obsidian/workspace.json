@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Deep dives)  🟌🟌🟌🟌🟌/Pack 1 (Bean Life Cycle)/00 - Container Starts ✧.md",
+                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/05 - Bean Life-cycle.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "00 - Container Starts ✧"
+              "title": "05 - Bean Life-cycle"
             }
           }
         ]
@@ -172,16 +172,18 @@
       "bases:Create new base": false
     }
   },
-  "active": "864fd62c95c899de",
+  "active": "3535a2e099904c39",
   "lastOpenFiles": [
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Deep dives)  🟌🟌🟌🟌🟌/Pack 1 (Bean Life Cycle)/11 - BeanFactoryPostProcessor.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Deep dives)  🟌🟌🟌🟌🟌/Pack 1 (Bean Life Cycle)/09 - BFPP.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Deep dives)  🟌🟌🟌🟌🟌/Pack 1 (Bean Life Cycle)/00 - Container Starts ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Deep dives)  🟌🟌🟌🟌🟌/Pack 1 (Bean Life Cycle)/01 - Bean Definition Registration.md",
-    "4 - Images/28a39741-1ff7-4b66-a221-4753b869abc0.png",
-    "4 - Images/36432088-8530-4db2-be5d-056669faa834.png",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/06 - The hooks, one by one.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/05 - Bean Life-cycle.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/04 - What is a Bean ? ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Deep dives)  🟌🟌🟌🟌🟌/Pack 1 (Bean Life Cycle)/11 - BeanFactoryPostProcessor ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Deep dives)  🟌🟌🟌🟌🟌/Pack 1 (Bean Life Cycle)/01 - Bean Definition Registration ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Deep dives)  🟌🟌🟌🟌🟌/Pack 1 (Bean Life Cycle)/02 - What is Bean Instantiation ?.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Deep dives)  🟌🟌🟌🟌🟌/Pack 1 (Bean Life Cycle)/00 - Container Starts ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Deep dives)  🟌🟌🟌🟌🟌/Pack 1 (Bean Life Cycle)/09 - BFPP.md",
+    "4 - Images/28a39741-1ff7-4b66-a221-4753b869abc0.png",
+    "4 - Images/36432088-8530-4db2-be5d-056669faa834.png",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/03 - Convention over Configuration ✧.md",
     "1 - Notes/Computer & Programming /1 - Programming/18 - CI-CD (Jenkins)/05 - Personalizing your Jenkins setup.md",
     "1 - Notes/Computer & Programming /1 - Programming/18 - CI-CD (Jenkins)/04 - Controlling Jenkins, and what a port really is.md",
@@ -203,8 +205,6 @@
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Transactions)",
     "1 - Notes/Computer & Programming /1 - Programming/5 - Cloud",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 01 (JVM & Java Internals)/00 -  Java Compilation and JVM Internals.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 01 (JVM & Java Internals)/08 - Array Confusion.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 02 (OOP Concepts)/04 - The Object Class and Cloneable.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 1 (Topics from 2025)/12 - Supporting Concepts",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 1 (Topics from 2025)/11 - Spring Application Events",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 1 (Topics from 2025)/10 - OAuth 2.0",

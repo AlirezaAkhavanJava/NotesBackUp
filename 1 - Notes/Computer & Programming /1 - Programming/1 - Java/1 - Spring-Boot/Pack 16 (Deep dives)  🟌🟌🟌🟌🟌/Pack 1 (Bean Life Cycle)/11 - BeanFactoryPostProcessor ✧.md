@@ -62,7 +62,7 @@ public class MetadataTweaker implements BeanFactoryPostProcessor {
         BeanDefinition bd = beanFactory.getBeanDefinition("greeter");
 
         bd.setScope(BeanDefinition.SCOPE_PROTOTYPE);   // was singleton
-        bd.setLazyInit(true);                          // don't create at startup
+        bd.setLazyInit(true);                 // don't create at startup
         bd.getPropertyValues().add("message", "Hello from the BFPP"); // setter injection
     }
 }
