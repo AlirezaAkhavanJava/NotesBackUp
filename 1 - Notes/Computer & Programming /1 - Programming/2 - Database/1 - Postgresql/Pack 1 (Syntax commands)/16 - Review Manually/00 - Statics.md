@@ -187,7 +187,7 @@ Static fixed values are hardcoded values in SQL that don’t change unless you e
 
 
 
-#### Tags : [[01 - SQL]]
+#### Tags : [[00 - What is SQL ?]]
 
 ---
 

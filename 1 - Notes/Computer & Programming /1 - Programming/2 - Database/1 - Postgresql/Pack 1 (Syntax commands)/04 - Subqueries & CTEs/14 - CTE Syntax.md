@@ -237,4 +237,4 @@ SELECT * FROM regional_sales;
 
 Let PostgreSQL decide materialization unless you have a specific reason to control it.
 
-##### Tags : [[01 - SQL]]
+##### Tags : [[00 - What is SQL ?]]

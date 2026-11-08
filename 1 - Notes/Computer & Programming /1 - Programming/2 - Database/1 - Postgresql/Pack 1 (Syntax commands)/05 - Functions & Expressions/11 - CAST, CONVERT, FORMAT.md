@@ -204,4 +204,4 @@ I can also make a **super cheat sheet for all PostgreSQL conversion & formatting
 
 Do you want me to do that next?
 
-### Tags : [[01 - SQL]]
+### Tags : [[00 - What is SQL ?]]

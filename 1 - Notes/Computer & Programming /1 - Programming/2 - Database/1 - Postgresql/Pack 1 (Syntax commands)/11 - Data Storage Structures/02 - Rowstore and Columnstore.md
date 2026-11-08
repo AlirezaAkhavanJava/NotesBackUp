@@ -97,4 +97,4 @@ PostgreSQL **natively is a row-store database**, but it can also do columnar sto
 
 
 
-###### Tags : [[01 - SQL]]
+###### Tags : [[00 - What is SQL ?]]

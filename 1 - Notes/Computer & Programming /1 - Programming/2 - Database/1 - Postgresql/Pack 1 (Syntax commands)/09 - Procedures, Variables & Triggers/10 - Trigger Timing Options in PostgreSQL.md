@@ -59,4 +59,4 @@ EXECUTE FUNCTION log_user_updates();
 |**INSTEAD OF**|View|Allow writes to views|
 
 
-###### Tags : [[01 - SQL]]
+###### Tags : [[00 - What is SQL ?]]

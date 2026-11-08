@@ -293,4 +293,4 @@ ORDER BY avg_revenue DESC;
 
 
 
-##### Tags : [[01 - SQL]]
+##### Tags : [[00 - What is SQL ?]]

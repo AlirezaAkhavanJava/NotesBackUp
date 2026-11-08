@@ -203,4 +203,4 @@ So even if multiple app instances run, only **one** will do the job at a time.
 |`pg_advisory_xact_lock(id)`|Auto-released at transaction end|
 
 
-##### Tags : [[01 - SQL]]
+##### Tags : [[00 - What is SQL ?]]

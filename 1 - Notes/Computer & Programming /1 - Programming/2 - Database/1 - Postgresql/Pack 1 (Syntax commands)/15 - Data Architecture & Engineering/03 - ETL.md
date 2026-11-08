@@ -108,4 +108,4 @@ GROUP BY city;
 |Load|Save to warehouse|Ready for analysis|
 
 
-##### Tags : [[01 - SQL]]
+##### Tags : [[00 - What is SQL ?]]

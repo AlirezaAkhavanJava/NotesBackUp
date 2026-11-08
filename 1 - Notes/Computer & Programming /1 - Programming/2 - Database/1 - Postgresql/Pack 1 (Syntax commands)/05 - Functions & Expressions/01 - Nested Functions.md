@@ -273,4 +273,4 @@ SELECT CONCAT('Today is ', TO_CHAR(NOW(),'Day, DD Mon YYYY')) AS today;
 
 
 
-#### Tags : [[01 - SQL]]
+#### Tags : [[00 - What is SQL ?]]

@@ -464,4 +464,4 @@ SUM(col) OVER (ORDER BY date RANGE INTERVAL '6 days' PRECEDING)
 
 > Running = whole history  
 > Rolling = recent window
-### Tags : [[01 - SQL]]
+### Tags : [[00 - What is SQL ?]]

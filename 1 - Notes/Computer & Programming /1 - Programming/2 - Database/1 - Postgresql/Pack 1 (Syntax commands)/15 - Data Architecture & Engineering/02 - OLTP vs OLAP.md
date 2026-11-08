@@ -146,4 +146,4 @@ GROUP BY region;
 So, a **data warehouse** is an **OLAP system**, while your **application database** is **OLTP**.
 
 
-##### Tags : [[01 - SQL]]
+##### Tags : [[00 - What is SQL ?]]

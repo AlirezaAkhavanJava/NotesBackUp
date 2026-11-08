@@ -96,4 +96,4 @@ In PostgreSQL (and databases in general), **Reorganize** and **Rebuild** are ter
 
 
 
-###### tags :[[01 - SQL]]
+###### tags :[[00 - What is SQL ?]]

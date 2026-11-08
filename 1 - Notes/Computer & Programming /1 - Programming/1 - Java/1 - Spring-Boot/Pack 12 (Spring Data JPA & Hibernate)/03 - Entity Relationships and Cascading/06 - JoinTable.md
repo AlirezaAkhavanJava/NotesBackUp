@@ -204,4 +204,4 @@ private Set<Role> roles;
 | One-to-Many with join table | `@JoinTable` on `@ManyToOne` side (rare) |
 
 
-##### Tags : [[01 - SQL]]
+##### Tags : [[00 - What is SQL ?]]

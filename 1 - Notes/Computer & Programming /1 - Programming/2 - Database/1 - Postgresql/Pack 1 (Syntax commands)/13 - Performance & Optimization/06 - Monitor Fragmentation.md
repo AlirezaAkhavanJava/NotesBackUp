@@ -148,4 +148,4 @@ If dead tuples or wasted index space grow, it’s time to vacuum, reindex, or re
 
 
 
-###### Tags : [[01 - SQL]]
+###### Tags : [[00 - What is SQL ?]]

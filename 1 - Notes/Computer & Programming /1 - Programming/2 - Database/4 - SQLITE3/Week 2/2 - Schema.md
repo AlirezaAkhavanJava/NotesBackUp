@@ -498,4 +498,4 @@ And in CS50's MBTA problem, you're essentially learning to go from:
 
 
 [[1 -  SQLITE3]]
-[[01 - SQL]]
+[[00 - What is SQL ?]]

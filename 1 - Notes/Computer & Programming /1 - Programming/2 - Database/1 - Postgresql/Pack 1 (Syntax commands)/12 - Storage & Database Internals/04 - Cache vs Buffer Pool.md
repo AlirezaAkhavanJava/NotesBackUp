@@ -123,4 +123,4 @@ So both layers make I/O faster and safer.
 
 ---
 
-##### Tags : [[01 - SQL]]
+##### Tags : [[00 - What is SQL ?]]

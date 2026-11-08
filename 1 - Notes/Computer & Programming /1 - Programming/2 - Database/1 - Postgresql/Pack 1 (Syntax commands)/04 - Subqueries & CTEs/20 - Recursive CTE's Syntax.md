@@ -287,4 +287,4 @@ ORDER BY path;
 - **Infinite Loops**: Always include proper termination conditions
 
 This syntax allows you to work with hierarchical data, graph traversal, sequential data generation, and many other recursive patterns in PostgreSQL.
-##### Tags : [[01 - SQL]]
+##### Tags : [[00 - What is SQL ?]]

@@ -221,4 +221,4 @@ For **PostgreSQL**, **NOT EXISTS** is generally the safest, fastest, and most NU
 
 
 
-#### Tags : [[01 - SQL]]
+#### Tags : [[00 - What is SQL ?]]

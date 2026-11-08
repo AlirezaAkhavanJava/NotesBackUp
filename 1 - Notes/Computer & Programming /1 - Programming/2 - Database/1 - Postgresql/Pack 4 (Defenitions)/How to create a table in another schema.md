@@ -68,4 +68,4 @@ SHOW search_path;
 
 
 
-##### Tags : [[01 - SQL]]
+##### Tags : [[00 - What is SQL ?]]

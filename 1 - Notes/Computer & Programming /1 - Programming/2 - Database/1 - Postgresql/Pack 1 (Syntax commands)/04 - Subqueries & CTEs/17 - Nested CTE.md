@@ -241,4 +241,4 @@ SELECT * FROM step4_aggregated;
 
 Think of it as **pipeline processing**, not nesting.
 
-##### Tags : [[01 - SQL]]
+##### Tags : [[00 - What is SQL ?]]

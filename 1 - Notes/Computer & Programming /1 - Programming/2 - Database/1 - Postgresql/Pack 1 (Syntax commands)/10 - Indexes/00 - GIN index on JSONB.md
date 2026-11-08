@@ -181,4 +181,4 @@ Execution time: ~1–3 ms
 |Before index|`@>`|~100 ms|Seq Scan|
 |After index|`@>`|~2 ms|Bitmap (GIN)|
 
-##### Tags : [[01 - SQL]]
+##### Tags : [[00 - What is SQL ?]]

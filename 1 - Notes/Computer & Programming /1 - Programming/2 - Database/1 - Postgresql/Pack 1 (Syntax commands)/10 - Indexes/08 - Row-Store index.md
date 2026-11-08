@@ -252,4 +252,4 @@ WHERE user_id = 5;
 
 ---
 
-###### Tags : [[01 - SQL]]
+###### Tags : [[00 - What is SQL ?]]

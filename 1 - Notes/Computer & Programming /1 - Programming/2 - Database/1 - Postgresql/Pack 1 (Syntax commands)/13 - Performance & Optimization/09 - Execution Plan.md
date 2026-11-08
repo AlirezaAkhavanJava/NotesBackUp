@@ -54,4 +54,4 @@ Execution plans are crucial for query tuning—slow queries often show expensive
 
 
 
-###### tags : [[01 - SQL]]
+###### tags : [[00 - What is SQL ?]]

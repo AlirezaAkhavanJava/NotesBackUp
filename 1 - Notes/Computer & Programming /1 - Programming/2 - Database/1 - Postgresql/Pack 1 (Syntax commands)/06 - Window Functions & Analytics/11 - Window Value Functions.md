@@ -264,4 +264,4 @@ WINDOW w AS (PARTITION BY dept ORDER BY emp_id);
 
 
 
-##### Tags : [[01 - SQL]]
+##### Tags : [[00 - What is SQL ?]]

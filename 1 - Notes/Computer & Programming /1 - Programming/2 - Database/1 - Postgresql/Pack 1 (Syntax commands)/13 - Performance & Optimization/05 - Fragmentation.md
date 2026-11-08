@@ -173,4 +173,4 @@ REINDEX CONCURRENTLY idx_users_email;
 Fragmentation in PostgreSQL = **bloat caused by MVCC**.  
 Monitor dead tuples, vacuum regularly, and reindex only when it actually hurts performance.
 
-###### Tags : [[01 - SQL]]
+###### Tags : [[00 - What is SQL ?]]

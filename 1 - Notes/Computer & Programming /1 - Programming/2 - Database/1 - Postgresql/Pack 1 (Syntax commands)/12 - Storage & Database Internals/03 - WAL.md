@@ -150,4 +150,4 @@ In short:
 
 > WAL is PostgreSQL’s **safety net** — it records every change first, so even if your database crashes or power goes out, nothing is lost.
 
-##### Tags : [[01 - SQL]]
+##### Tags : [[00 - What is SQL ?]]

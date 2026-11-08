@@ -231,4 +231,4 @@ Internally, PostgreSQL indexes are **B-trees** by default.
 ---
 
 
-##### Tags: [[01 - SQL]]
+##### Tags: [[00 - What is SQL ?]]

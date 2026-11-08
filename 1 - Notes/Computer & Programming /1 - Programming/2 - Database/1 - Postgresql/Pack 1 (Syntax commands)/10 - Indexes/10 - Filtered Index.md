@@ -169,4 +169,4 @@ A **filtered index in PostgreSQL = partial index**.
 Use it when you know **exactly which rows matter** and want **maximum performance with minimal index cost**.
 
 
-##### Tags : [[01 - SQL]]
+##### Tags : [[00 - What is SQL ?]]

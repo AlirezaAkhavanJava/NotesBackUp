@@ -139,4 +139,4 @@ WHERE <conditions>;
 > “Joining multiple tables means linking two or more tables together in a query so that related data from different tables can be combined into one comprehensive result. This is done by using JOIN clauses with specific conditions that define how the tables relate to each other.”
 
 
-#### Tags : [[01 - SQL]]
+#### Tags : [[00 - What is SQL ?]]

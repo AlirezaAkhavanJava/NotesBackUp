@@ -409,4 +409,4 @@ CREATE RULE problematic_rule AS
 
 Schemas and rules are powerful PostgreSQL features that, when used appropriately, can greatly enhance database organization, security, and functionality.
 
-##### Tags : [[01 - SQL]]
+##### Tags : [[00 - What is SQL ?]]

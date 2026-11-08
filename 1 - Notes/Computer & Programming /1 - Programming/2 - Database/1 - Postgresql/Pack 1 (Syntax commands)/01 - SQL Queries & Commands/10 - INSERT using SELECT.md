@@ -160,4 +160,4 @@ WHERE age > 25;
 Think of `INSERT FROM SELECT` as **copy-paste with filtering and transformation**.
 
 
-#### Tags : [[01 - SQL]]
+#### Tags : [[00 - What is SQL ?]]

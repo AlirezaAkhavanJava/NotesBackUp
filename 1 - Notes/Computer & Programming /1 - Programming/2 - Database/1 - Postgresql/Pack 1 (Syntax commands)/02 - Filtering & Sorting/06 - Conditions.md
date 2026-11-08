@@ -250,4 +250,4 @@ WHERE d.dept_name IS NOT NULL AND e.salary > 50000;
 
 
 
-### Tags : [[01 - SQL]]
+### Tags : [[00 - What is SQL ?]]

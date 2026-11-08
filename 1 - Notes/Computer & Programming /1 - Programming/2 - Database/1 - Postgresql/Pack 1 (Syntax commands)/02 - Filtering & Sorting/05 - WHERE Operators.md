@@ -186,4 +186,4 @@ Think of `WHERE` operators in **levels of filtering power**:
 - Conditional & subqueries → Intermediate
     
 - PostgreSQL extras (regex, arrays, JSON) → Advanced
-#### Tags : [[01 - SQL]]
+#### Tags : [[00 - What is SQL ?]]

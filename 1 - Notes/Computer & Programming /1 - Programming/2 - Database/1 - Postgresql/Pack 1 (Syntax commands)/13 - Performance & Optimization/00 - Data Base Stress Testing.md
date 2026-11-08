@@ -231,4 +231,4 @@ pgbench -c 50 -T 60 mytestdb
 
 
 
-##### Tags : [[01 - SQL]]
+##### Tags : [[00 - What is SQL ?]]

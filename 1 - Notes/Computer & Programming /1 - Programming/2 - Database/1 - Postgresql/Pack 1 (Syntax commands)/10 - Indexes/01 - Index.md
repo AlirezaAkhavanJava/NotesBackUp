@@ -131,4 +131,4 @@ DROP INDEX idx_students_name;
 
 
 
-###### Tags : [[01 - SQL]]
+###### Tags : [[00 - What is SQL ?]]

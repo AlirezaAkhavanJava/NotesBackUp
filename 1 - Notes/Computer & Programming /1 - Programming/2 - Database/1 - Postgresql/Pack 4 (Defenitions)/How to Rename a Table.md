@@ -24,4 +24,4 @@ ALTER TABLE student RENAME TO students_archive;
 
 ---
 
-[[01 - SQL]]
+[[00 - What is SQL ?]]

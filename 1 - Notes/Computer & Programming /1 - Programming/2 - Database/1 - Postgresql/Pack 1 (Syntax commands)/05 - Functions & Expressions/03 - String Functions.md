@@ -209,4 +209,4 @@ SELECT SUBSTRING(email FROM 1 FOR POSITION('@' IN email)-1) AS username FROM use
 ---
 
 
-### Tags : [[01 - SQL]]
+### Tags : [[00 - What is SQL ?]]

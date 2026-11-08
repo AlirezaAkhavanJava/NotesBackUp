@@ -233,4 +233,4 @@ FROM employees e;
 **Master `EXISTS` → you’ve unlocked PostgreSQL’s #1 performance weapon for correlation.**  
 Use it **every time** you need to check **existence**, not value.
 
-##### Tags : [[01 - SQL]]
+##### Tags : [[00 - What is SQL ?]]

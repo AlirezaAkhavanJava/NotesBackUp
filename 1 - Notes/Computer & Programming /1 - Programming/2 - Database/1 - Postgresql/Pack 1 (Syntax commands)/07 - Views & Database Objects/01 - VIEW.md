@@ -29,4 +29,4 @@
 
 - PostgreSQL executes that same query on the current `student` table and returns the top 10 students at that moment.
 
-### Tags : [[01 - SQL]]
+### Tags : [[00 - What is SQL ?]]

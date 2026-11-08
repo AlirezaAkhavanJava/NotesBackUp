@@ -184,4 +184,4 @@ pg_repack -t users mydb
 ---
 
 
-###### Tags : [[01 - SQL]]
+###### Tags : [[00 - What is SQL ?]]

@@ -164,4 +164,4 @@ WHERE title LIKE 'T%';
 ➡️ **Same result**, but CTE is cleaner and can be reused later in the same query.
 
 
-##### Tags : [[01 - SQL]]
+##### Tags : [[00 - What is SQL ?]]

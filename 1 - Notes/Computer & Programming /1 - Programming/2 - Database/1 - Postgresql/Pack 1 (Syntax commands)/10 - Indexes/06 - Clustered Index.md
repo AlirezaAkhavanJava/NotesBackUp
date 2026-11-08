@@ -143,4 +143,4 @@ With Non-Clustered Index:
 
 Choose clustered indexes carefully as they affect physical storage and have significant performance implications for both reads and writes.
 
-###### Tags : [[01 - SQL]]
+###### Tags : [[00 - What is SQL ?]]

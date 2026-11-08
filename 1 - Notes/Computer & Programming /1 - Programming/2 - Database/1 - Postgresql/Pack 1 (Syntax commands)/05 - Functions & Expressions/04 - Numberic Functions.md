@@ -208,4 +208,4 @@ They power **calculations, analytics, and transformations** on numeric data.
 ---
 
 
-### Tags : [[01 - SQL]]
+### Tags : [[00 - What is SQL ?]]

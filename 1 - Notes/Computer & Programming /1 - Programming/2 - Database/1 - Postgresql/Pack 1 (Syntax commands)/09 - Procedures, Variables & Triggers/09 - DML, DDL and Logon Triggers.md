@@ -152,4 +152,4 @@ Logon Trigger        ❌ Not supported at all
 
 
 
-###### Tags : [[01 - SQL]]
+###### Tags : [[00 - What is SQL ?]]

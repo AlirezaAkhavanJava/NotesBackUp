@@ -135,4 +135,4 @@ REFRESH MATERIALIZED VIEW sales_mart;
 
 
 
-##### Tags : [[01 - SQL]]
+##### Tags : [[00 - What is SQL ?]]

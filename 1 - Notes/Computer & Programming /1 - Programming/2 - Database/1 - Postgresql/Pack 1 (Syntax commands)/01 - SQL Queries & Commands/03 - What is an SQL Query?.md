@@ -1,7 +1,4 @@
 
-Date : 2025-08-30
-
-### What is an SQL Query?
 An SQL query is a command, primarily the `SELECT` statement, *used to retrieve data from a database*. It’s the cornerstone of DQL and is classified as a DML (Data Manipulation Language) command in standard SQL because it manipulates data by fetching it. Queries can range from simple data retrieval to complex operations involving joins, aggregations, and subqueries.
 
 An SQL query is a command written in SQL that tells a database to perform an operation, such as retrieving, inserting, updating, or deleting data.
@@ -136,4 +133,4 @@ please provide more details, and I’ll craft a targeted response. For now, the 
 
 
 
-##### *Tags : [[01 - SQL]]
+[[PostgreSQL]]

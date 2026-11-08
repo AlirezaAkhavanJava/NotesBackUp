@@ -80,4 +80,4 @@ SELECT … FROM expensive WHERE …;
 **Merge aggressively when logic overlaps. One well-designed CTE almost always beats many small ones.**
 
 
-###### Tags : [[01 - SQL]]
+###### Tags : [[00 - What is SQL ?]]

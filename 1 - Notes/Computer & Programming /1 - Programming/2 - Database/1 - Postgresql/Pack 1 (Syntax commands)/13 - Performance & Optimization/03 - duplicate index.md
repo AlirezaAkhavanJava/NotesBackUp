@@ -185,4 +185,4 @@ If two indexes answer the same question, one of them **must go**.
 
 
 
-##### Tags : [[01 - SQL]]
+##### Tags : [[00 - What is SQL ?]]

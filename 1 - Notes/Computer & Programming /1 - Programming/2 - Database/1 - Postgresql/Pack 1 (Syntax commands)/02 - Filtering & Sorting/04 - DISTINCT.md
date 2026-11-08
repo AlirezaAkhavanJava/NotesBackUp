@@ -254,4 +254,4 @@ ORDER BY student_count DESC;
 Think of it as a **pipeline**:  
 `WHERE → GROUP BY → HAVING → DISTINCT → ORDER BY`
 
-#### Tags : [[01 - SQL]]
+#### Tags : [[00 - What is SQL ?]]

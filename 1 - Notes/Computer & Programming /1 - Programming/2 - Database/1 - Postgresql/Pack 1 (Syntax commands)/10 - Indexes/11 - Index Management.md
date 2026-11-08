@@ -145,4 +145,4 @@ Index management is **continuous pruning**, not hoarding.
 Unused or wrong indexes **hurt performance more than missing ones**.
 
 
-##### Tags : [[01 - SQL]]
+##### Tags : [[00 - What is SQL ?]]

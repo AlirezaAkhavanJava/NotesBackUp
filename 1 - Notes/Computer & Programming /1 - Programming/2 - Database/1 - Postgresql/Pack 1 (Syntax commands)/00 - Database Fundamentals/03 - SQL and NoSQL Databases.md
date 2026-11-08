@@ -22,6 +22,7 @@ ORDER BY name;
 
 This query retrieves names and ages of users older than 25, sorted alphabetically by name.
 
+---
 ## NoSQL Databases
 
 NoSQL databases are designed for unstructured or semi-structured data, offering flexibility in schema design and scalability for large datasets.
@@ -53,5 +54,5 @@ This MongoDB query retrieves names and ages of users older than 25, sorted alpha
 - **Scalability**: SQL databases scale vertically; NoSQL databases scale horizontally.
 - **Use Cases**: SQL is suited for structured data and complex queries; NoSQL is ideal for unstructured data, big data, and rapid scaling.
 
-[[Data-base]]
+
 [[PostgreSQL]]

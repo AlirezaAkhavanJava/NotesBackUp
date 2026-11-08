@@ -51,4 +51,4 @@ JOIN enrollments e ON s.id = e.student_id;
 - **Joins (columns)** → like combining **two spreadsheets side by side**, matching rows by some rule.
     
 ---
-##### Tags : [[01 - SQL]]
+##### Tags : [[00 - What is SQL ?]]

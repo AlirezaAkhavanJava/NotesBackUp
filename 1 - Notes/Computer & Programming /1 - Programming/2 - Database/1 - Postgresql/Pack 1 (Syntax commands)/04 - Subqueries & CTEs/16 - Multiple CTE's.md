@@ -238,4 +238,4 @@ Think of multiple CTEs as **building blocks** — each transforms or filters dat
 WITH a AS (...), b AS (...), c AS (...) SELECT ... FROM c;
 ```
 
-##### Tags : [[01 - SQL]]
+##### Tags : [[00 - What is SQL ?]]

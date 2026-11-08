@@ -602,4 +602,4 @@ SELECT '2025-10-18' ~ '^\d{4}-\d{2}-\d{2}$' AS looks_like_date;
 ---
 
 
-#### Tags : [[01 - SQL]]
+#### Tags : [[00 - What is SQL ?]]

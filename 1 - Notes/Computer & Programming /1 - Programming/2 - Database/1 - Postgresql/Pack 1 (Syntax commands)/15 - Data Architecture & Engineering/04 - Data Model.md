@@ -104,4 +104,4 @@ customer_dim -- sales_fact -- date_dim
 |OLTP (apps)|Store and manage daily transactions|**Normalized model**|
 |OLAP (analytics)|Analyze historical data quickly|**Denormalized model (star/snowflake)**|
 
-##### Tags : [[01 - SQL]]
+##### Tags : [[00 - What is SQL ?]]

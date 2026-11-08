@@ -153,4 +153,4 @@ There are **only two fundamental types** of CTEs in PostgreSQL:
 
 Everything else (materialization, multiple CTEs, etc.) is a **feature**, not a type.
 
-##### Tags : [[01 - SQL]]
+##### Tags : [[00 - What is SQL ?]]

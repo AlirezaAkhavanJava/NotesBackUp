@@ -246,4 +246,4 @@ Now `POST /employees?name=Ethan&salary=7000` → runs the stored procedure.
 
 
 
-##### Tags : [[01 - SQL]]
+##### Tags : [[00 - What is SQL ?]]

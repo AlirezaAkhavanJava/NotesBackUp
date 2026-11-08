@@ -1,17 +1,17 @@
-> The language 
 
-
-![[Pasted image 20251210135501.png]]
-
-# SQL Definition
-
-## What is SQL?
 
 SQL (Structured Query Language) is a standardized programming language used for managing and manipulating relational databases.
 
 It enables users to perform CRUD operations (Create, Read, Update, Delete) on data, define database structures, set permissions, and execute administrative tasks.
 
 SQL is widely supported by DMS (database management systems) such as MySQL, PostgreSQL, SQLite, Oracle, and Microsoft SQL Server.
+
+
+> The language 
+
+![[Pasted image 20251210135501.png]]
+
+
 
 ## Key Functions of SQL
 

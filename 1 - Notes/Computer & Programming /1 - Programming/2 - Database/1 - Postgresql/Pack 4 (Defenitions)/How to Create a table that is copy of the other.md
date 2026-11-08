@@ -54,4 +54,4 @@ Then edit the SQL to create a new table.
 
 💡 Quick note: `CREATE TABLE new_table AS SELECT *` is the most common for **quick copies with data**.
 
-[[01 - SQL]]
+[[00 - What is SQL ?]]

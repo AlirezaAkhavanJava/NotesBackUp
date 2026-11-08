@@ -120,4 +120,4 @@ CLUSTER students USING idx_students_id;
 
 Resource : https://www.postgresql.fastware.com/pzone/2025-01-understanding-the-mechanics-of-postgresql-b-tree-indexes
 
-###### Tags : [[01 - SQL]]
+###### Tags : [[00 - What is SQL ?]]

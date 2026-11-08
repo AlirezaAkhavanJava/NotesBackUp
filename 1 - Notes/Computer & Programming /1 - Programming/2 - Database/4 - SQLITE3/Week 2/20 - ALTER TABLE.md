@@ -119,5 +119,5 @@ For more complicated structural changes—such as changing a column's datatype, 
 This is commonly called the **table-rebuild pattern**.
 
 
-[[01 - SQL]]
+[[00 - What is SQL ?]]
 [[1 -  SQLITE3]]

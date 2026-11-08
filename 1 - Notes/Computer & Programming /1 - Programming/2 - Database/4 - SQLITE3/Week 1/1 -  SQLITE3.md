@@ -118,5 +118,5 @@ One important distinction:
 
 That distinction becomes useful when you later use SQLite from Java, because Java will typically communicate with SQLite through a **JDBC driver**, rather than through the `sqlite3` shell.
 
-[[01 - SQL]]
+[[00 - What is SQL ?]]
 [[SQlite]]

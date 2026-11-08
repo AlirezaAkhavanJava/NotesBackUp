@@ -222,4 +222,4 @@ ORDER BY s.last_name, s.first_name;
 
 Non-clustered indexes are essential for optimizing read performance but should be created judiciously as they impact write performance and storage.
 
-##### Tags : [[01 - SQL]]
+##### Tags : [[00 - What is SQL ?]]

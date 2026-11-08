@@ -196,4 +196,4 @@ Recursive CTEs are incredibly useful for working with hierarchical data and can 
 👉 Non-recursive CTE = a one-time helper query.  
 👉 Recursive CTE = a looping query that grows its result each step.
 
-##### Tags : [[01 - SQL]]
+##### Tags : [[00 - What is SQL ?]]

@@ -494,4 +494,4 @@ Many beginners confuse it with `JOIN`, which combines columns horizontally.
 
 ---
 
-#### Tags : [[01 - SQL]]
+#### Tags : [[00 - What is SQL ?]]

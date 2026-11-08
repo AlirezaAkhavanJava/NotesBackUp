@@ -132,4 +132,4 @@ For complex views → use **INSTEAD OF triggers**.
 - Breaking changes in base tables break views
     
 
-##### Tags : [[01 - SQL]]
+##### Tags : [[00 - What is SQL ?]]

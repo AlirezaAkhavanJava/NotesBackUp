@@ -143,4 +143,4 @@ FROM students s;
 - **CTE (`WITH`)** → modern replacement for complex subqueries
     
 
-#### [[01 - SQL]]
+#### [[00 - What is SQL ?]]

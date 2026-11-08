@@ -249,4 +249,4 @@ LEFT JOIN LATERAL (SELECT ... WHERE x = e.x) AS l ON true  -- correlated
 **Non-correlated = speed. Correlated = power (with `LATERAL` and indexes).**
 
 
-##### Tags : [[01 - SQL]]
+##### Tags : [[00 - What is SQL ?]]

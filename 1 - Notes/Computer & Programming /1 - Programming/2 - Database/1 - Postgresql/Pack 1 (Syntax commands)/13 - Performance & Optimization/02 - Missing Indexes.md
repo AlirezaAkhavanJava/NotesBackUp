@@ -209,4 +209,4 @@ Sometimes Seq Scan is **correct**.
 
 Missing indexes are discovered through **observation, not automation**.
 
-###### Tags : [[01 - SQL]]
+###### Tags : [[00 - What is SQL ?]]

@@ -240,4 +240,4 @@ FROM employees;
 ---
 
 Do you want me to make a **PostgreSQL “Aggregate vs Analytical Functions Cheat Sheet”** next — with all common functions, short descriptions, and mini examples side by side for instant recall?
-### Tags : [[01 - SQL]]
+### Tags : [[00 - What is SQL ?]]

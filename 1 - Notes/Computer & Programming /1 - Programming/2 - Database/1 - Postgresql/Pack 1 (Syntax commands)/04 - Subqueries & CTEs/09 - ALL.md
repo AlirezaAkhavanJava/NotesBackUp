@@ -195,4 +195,4 @@ WHERE salary > ALL('{80000, 90000}'::int[])  -- salary > 90000
 Use it when you need **“better than everyone”**, not just “better than someone”.
 
 
-##### Tags : [[01 - SQL]]
+##### Tags : [[00 - What is SQL ?]]

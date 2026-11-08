@@ -232,4 +232,4 @@ SELECT * FROM pg_indexes WHERE tablename = 'users';
 
 
 
-###### Tags : [[01 - SQL]]
+###### Tags : [[00 - What is SQL ?]]

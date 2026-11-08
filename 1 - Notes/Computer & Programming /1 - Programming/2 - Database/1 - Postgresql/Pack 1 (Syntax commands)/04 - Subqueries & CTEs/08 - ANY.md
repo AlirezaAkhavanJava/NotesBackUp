@@ -211,4 +211,4 @@ WHERE id = ANY('{1001,1002}'::int[])
 Use it when `IN` isn’t enough.
 
 
-##### Tags : [[01 - SQL]]
+##### Tags : [[00 - What is SQL ?]]

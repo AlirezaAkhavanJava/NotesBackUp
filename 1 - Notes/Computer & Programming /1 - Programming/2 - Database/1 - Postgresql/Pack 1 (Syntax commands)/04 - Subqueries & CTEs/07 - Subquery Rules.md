@@ -124,4 +124,4 @@ WHERE NOT EXISTS (SELECT 1 FROM depts d WHERE d.dept = e.dept AND d.region IS NU
 
 Stick to this table and PostgreSQL will **never** throw a sub-query syntax error.
 
-##### Tags : [[01 - SQL]]
+##### Tags : [[00 - What is SQL ?]]

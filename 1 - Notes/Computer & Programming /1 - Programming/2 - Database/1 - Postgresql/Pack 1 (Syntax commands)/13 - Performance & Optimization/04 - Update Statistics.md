@@ -132,4 +132,4 @@ If PostgreSQL makes bad decisions, **update statistics first**.
 Most “missing index” problems disappear after `ANALYZE`.
 
 
-###### Tags : [[01 - SQL]]
+###### Tags : [[00 - What is SQL ?]]

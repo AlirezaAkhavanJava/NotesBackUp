@@ -28,6 +28,11 @@ For decades, CPUs got faster by raising the clock speed. Around the mid-2000s th
 
 The catch: **extra cores do nothing for you unless your program is written to use them.** A single-threaded Java program runs on one core and leaves the others idle. That is the first big reason parallelism exists.
 
+![[Pasted image 20261108122644.png]]
+
+IBM Power4 CPU : The first commercially available multi-core microprocessor is generally considered to be the IBM POWER4, released in 2001.
+
+---
 ### The memory hierarchy (the speed gap)
 
 The CPU is extremely fast. Memory is much slower. So the hardware has layers:
@@ -59,6 +64,7 @@ RAM:    count = 5
 
 Core A changes `count` to 6, but it may write that to its own cache first. Core B may keep reading its old copy, `5`, for a while. The hardware has protocols (cache coherence) to sync these copies, but they aren't instant, and compilers and CPUs also **reorder instructions** to run faster. This is why, in Java, one thread can fail to "see" another thread's change. This is the root of the **visibility** problem you'll meet later.
 
+---
 ### Hyper-threading (SMT), briefly
 
 One physical core can pretend to be two "logical" cores. When one instruction stream stalls (waiting for memory), the core quickly runs the other. It's not twice as fast, usually only 20–30% more throughput, but it helps use idle moments. When you see "8 cores, 16 threads" on a spec sheet, that's this.

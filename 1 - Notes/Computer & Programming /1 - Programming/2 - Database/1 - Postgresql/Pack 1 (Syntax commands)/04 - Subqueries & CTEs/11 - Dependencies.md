@@ -228,4 +228,4 @@ FROM employees e;
 
 Use this guide to **audit, optimize, and explain** any sub-query performance issue in production.
 
-##### Tags : [[01 - SQL]]
+##### Tags : [[00 - What is SQL ?]]

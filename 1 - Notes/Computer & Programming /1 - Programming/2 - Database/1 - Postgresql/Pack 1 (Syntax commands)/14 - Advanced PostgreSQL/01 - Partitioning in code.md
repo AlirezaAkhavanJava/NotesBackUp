@@ -83,4 +83,4 @@ FOR VALUES FROM ('2025-01-01') TO ('2026-01-01');
 
 
 
-##### Tags : [[01 - SQL]]
+##### Tags : [[00 - What is SQL ?]]
