@@ -383,7 +383,6 @@ For a simple upsert on one unique key, `ON CONFLICT` is shorter and safer under 
 - `RETURNING` works on all three, and data-modifying CTEs can chain them in one statement.
 - In Spring, `save`/`deleteById` are simple, bulk changes need `@Modifying @Query` with `@Transactional`, and PostgreSQL-only features need a native query.
 
-If you want, I can teach **transactions** next (`BEGIN`, isolation levels, locks, deadlocks), or **TRUNCATE** and **VACUUM** in depth.
 
 
 
