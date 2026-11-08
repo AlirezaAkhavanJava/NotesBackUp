@@ -16,14 +16,14 @@ Before we look at the two answers, you need a few HTTP basics, because both are 
 
 A request and a response each have a **start line**, **headers**, and an optional **body**:
 
-```
+```json
 GET /orders HTTP/1.1
 Host: shop.example.com
 Accept: application/json
 Cookie: JSESSIONID=abc123
 ```
 
-```
+```json
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -49,6 +49,7 @@ Content-Type: application/json
 
 Now for the two answers.
 
+---
 ## Answer 1: Sessions and cookies
 
 In this approach, **the server remembers you**.
@@ -60,7 +61,7 @@ Here's the whole flow:
 3. The server creates a **session**: a record in its memory (or a database or Redis) that says "session `abc123` belongs to alice."
 4. The server sends back a response with a `Set-Cookie` header:
 
-```
+```bash
 HTTP/1.1 200 OK
 Set-Cookie: JSESSIONID=abc123; HttpOnly; Secure; SameSite=Lax
 ```

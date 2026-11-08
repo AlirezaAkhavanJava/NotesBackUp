@@ -14,7 +14,7 @@ At the front desk, you show your passport. The clerk checks that you really are 
 
 The clerk then gives you a key card. It opens your room and the gym, but not the staff office or someone else's room. That's **authorization**.
 
-***Notice the order. The hotel can't decide what you may open until it knows who you are. Authentication always comes first, and authorization builds on it.***
+> ***Notice the order. The hotel can't decide what you may open until it knows who you are. Authentication always comes first, and authorization builds on it.***
 
 ---
 ## Authentication: proving who you are
@@ -29,6 +29,7 @@ Using two or more factors together is called **multi-factor authentication (MFA)
 
 When authentication succeeds, the system knows who you are. This verified identity is often called the **principal**.
 
+---
 ## Authorization: deciding what you may do
 
 Authorization happens _after_ the system knows who you are. It checks your permissions against the thing you're trying to do.
@@ -71,6 +72,8 @@ Since you work with Spring Boot, it helps to see where each idea lives.
 
 - **Authentication** is handled by an `AuthenticationManager`, which checks credentials (often through a `UserDetailsService` and a `PasswordEncoder`). If the credentials check out, the result is stored as the current user in the `SecurityContext`.
 - **Authorization** happens after that, when Spring Security compares the user's _granted authorities_ (roles and permissions) against rules like `.requestMatchers("/admin/**").hasRole("ADMIN")` or annotations such as `@PreAuthorize("hasRole('ADMIN')")`.
+
+![[spring-security-framework.jpg]]
 
 Spring Security keeps the two steps separate in its design, just like the concepts themselves.
 

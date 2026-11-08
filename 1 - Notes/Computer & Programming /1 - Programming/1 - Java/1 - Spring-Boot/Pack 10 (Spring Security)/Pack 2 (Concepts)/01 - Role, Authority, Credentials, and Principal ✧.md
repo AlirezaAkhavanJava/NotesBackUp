@@ -50,6 +50,7 @@ An **authority** is a single permission, written as a plain string. It describes
 
 In Spring Security, every authority is represented by a `GrantedAuthority`. A user can hold many of them. When Spring decides whether you may do something, it checks whether you have the right authority.
 
+---
 ## Role: a group of authorities
 
 A **role** is a named bundle of permissions, like `USER`, `MANAGER`, or `ADMIN`. Instead of giving a person ten separate authorities, you give them one role that implies all ten. It's easier to manage and easier to read.

@@ -47,6 +47,7 @@ People mix these up, so keep them apart:
 
 If you encrypt passwords, anyone who steals the key can decrypt every one of them. Hashing has no key to steal.
 
+---
 ## Why a plain hash is not enough
 
 You might think `SHA-256(password)` solves everything. It doesn't, and the reason is important.
@@ -62,6 +63,8 @@ SHA-256 was designed to be quick. A modern graphics card can test **billions** o
 If a thousand users chose `password123`, a thousand rows in your table hold the same hash. An attacker cracks one and gets all of them. Worse, they can use a **rainbow table**: a huge precomputed list of "password → hash" pairs. Looking up a hash in it is nearly instant.
 
 Two ideas fix these two problems: **salting** and **slow hashing**.
+
+---
 
 ## Salting: making every hash unique
 
@@ -97,6 +100,7 @@ The main algorithms:
 
 And the ones to **never** use for passwords: **MD5**, **SHA-1**, and plain **SHA-256**. They're built for speed, which is exactly what you don't want here.
 
+---
 ## What a stored hash looks like
 
 Here is a real bcrypt hash:
