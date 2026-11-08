@@ -457,4 +457,4 @@ So, in one sentence:
 
 
 [[01 - SQL]]
-[[1 - WHAT IS SQLITE3 🍕]]
+[[1 -  SQLITE3]]

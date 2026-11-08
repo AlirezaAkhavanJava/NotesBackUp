@@ -223,4 +223,4 @@ rm database.db
 If you're experimenting with CS50 SQLite databases and simply want a clean start, **deleting/recreating the `.db` file is often the simplest approach**—provided you don't need any existing data.
 
 
-[[1 - WHAT IS SQLITE3 🍕]]
+[[1 -  SQLITE3]]

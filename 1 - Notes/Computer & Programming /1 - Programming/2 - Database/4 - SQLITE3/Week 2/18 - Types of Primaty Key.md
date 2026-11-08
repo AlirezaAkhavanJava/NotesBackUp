@@ -112,4 +112,4 @@ Primary Key
 So **composite** describes the **structure** of the key, while **natural/surrogate** describes the **nature/origin of its value**.
 
 
-[[1 - WHAT IS SQLITE3 🍕]]
+[[1 -  SQLITE3]]

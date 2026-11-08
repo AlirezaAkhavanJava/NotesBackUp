@@ -70,4 +70,4 @@ SELECT * FROM collections WHERE title = 'The Great Gatsby';
 DELETE FROM collections WHERE title = 'The Great Gatsby';
 ```
 
-[[1 - WHAT IS SQLITE3 🍕]]
+[[1 -  SQLITE3]]

@@ -115,4 +115,4 @@ sqlite> .read backup.sql
 Because `.dump` produces a file full of SQL statements, `.read` is the natural counterpart for restoring it.
 
 
-[[1 - WHAT IS SQLITE3 🍕]]
+[[1 -  SQLITE3]]

@@ -497,5 +497,5 @@ And in CS50's MBTA problem, you're essentially learning to go from:
 **real-world transportation system → entities → relationships → relational schema → SQL queries.**
 
 
-[[1 - WHAT IS SQLITE3 🍕]]
+[[1 -  SQLITE3]]
 [[01 - SQL]]

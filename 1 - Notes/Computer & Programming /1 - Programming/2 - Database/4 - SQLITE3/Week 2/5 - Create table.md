@@ -213,4 +213,4 @@ INSERT INTO
 That distinction is fundamental to understanding SQLite and relational databases.
 
 
-[[1 - WHAT IS SQLITE3 🍕]]
+[[1 -  SQLITE3]]

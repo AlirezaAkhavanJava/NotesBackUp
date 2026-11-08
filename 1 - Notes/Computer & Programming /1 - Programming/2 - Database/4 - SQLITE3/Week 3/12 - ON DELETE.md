@@ -346,4 +346,4 @@ A good exercise: take Example 2, change one of the `CASCADE`s to `RESTRICT`, and
 
 
 
-[[1 - WHAT IS SQLITE3 🍕]]
+[[1 -  SQLITE3]]

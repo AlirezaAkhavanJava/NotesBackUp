@@ -1,7 +1,10 @@
 
 
 
-An **API** is a _contract_: a description of what you can call and what you get back. A **library** is a _collection of code_ you call when you need it. A **framework** is a _skeleton_ that calls **your** code at the right moments. These three words live at different levels, which is why they overlap so often. A library or framework always _has_ an API, but an API isn't code you add to your project, it's the rules for using it.
+An **API** is a _contract_: a description of what you can call and what you get back.
+A **library** is a _collection of code_ you call when you need it.
+A **framework** is a _skeleton_ that calls **your** code at the right moments.
+These three words live at different levels, which is why they overlap so often. A library or framework always _has_ an API, but an API isn't code you add to your project, it's the rules for using it.
 
 ---
 

@@ -301,4 +301,4 @@ SQLite's terminology is different: it has a **database schema**, but not Postgre
 That distinction is important when moving from **SQLite → PostgreSQL**.
 
 
-[[1 - WHAT IS SQLITE3 🍕]]
+[[1 -  SQLITE3]]

@@ -27,4 +27,4 @@ You can resolve this by telling SQLite exactly where to find the file:
 - **Permissions**: Ensure the database directory is writable by your user so SQLite can create the `mbtb.db` file if it doesn't already exist.
 
 
-[[1 - WHAT IS SQLITE3 🍕]]
+[[1 -  SQLITE3]]

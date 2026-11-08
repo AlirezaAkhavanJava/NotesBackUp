@@ -140,4 +140,4 @@ sqlite> .read backup.sql
 
 
 
-[[1 - WHAT IS SQLITE3 🍕]]
+[[1 -  SQLITE3]]

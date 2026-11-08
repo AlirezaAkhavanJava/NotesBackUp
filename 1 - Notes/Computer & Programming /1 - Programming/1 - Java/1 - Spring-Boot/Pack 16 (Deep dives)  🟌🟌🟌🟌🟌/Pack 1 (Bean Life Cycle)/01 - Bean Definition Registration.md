@@ -1,4 +1,6 @@
 
+![[36432088-8530-4db2-be5d-056669faa834.png]]
+
 
 After Spring Boot creates the **IoC Container (**`**ApplicationContext**`**)**, Spring needs to discover which classes should be managed as beans. This is where **Component Scanning** comes in. Spring searches specific packages for classes annotated with `@Component`, `@Service`, `@Repository`, `@Controller`, and other component annotations.
 
@@ -20,7 +22,7 @@ public class MyApplication {
 
 The `@SpringBootApplication` annotation includes three important annotations:
 
-```
+```java
 @SpringBootConfiguration
 @EnableAutoConfiguration
 @ComponentScan
@@ -129,27 +131,7 @@ It implements `BeanDefinitionRegistryPostProcessor`, an extension of `BeanFactor
 
 The simplified flow is:
 
-```
-IoC Container Created
-         |
-         v
-Configuration Processing Begins
-         |
-         v
-@ComponentScan Is Processed
-         |
-         v
-Spring Scans Packages
-         |
-         v
-Discovers @Component, @Service, etc.
-         |
-         v
-Registers Bean Definitions
-         |
-         v
-Container Has Metadata About Beans
-```
+![[28a39741-1ff7-4b66-a221-4753b869abc0.png]]
 
 ## 6. The Whole Picture
 
@@ -167,7 +149,7 @@ Spring will use these definitions during the following stages of the lifecycle.
 ---
 ## BeanFactoryPostProcessor 
 
-The `**BeanFactoryPostProcessor**` interface allows Spring to inspect or modify **Bean Definitions before actual bean objects are created**. During this stage, Spring registers Bean Definitions discovered through component scanning and other configuration mechanisms. After registration, Spring invokes `BeanFactoryPostProcessor` implementations to adjust their metadata if necessary. For example, you can change a bean's scope from `singleton` to `prototype`. **Important:** `BeanFactoryPostProcessor` does not create beans or modify actual bean instances; it works with their definitions.
+The **BeanFactoryPostProcessor** interface allows Spring to inspect or modify **Bean Definitions before actual bean objects are created**. During this stage, Spring registers Bean Definitions discovered through component scanning and other configuration mechanisms. After registration, Spring invokes `BeanFactoryPostProcessor` implementations to adjust their metadata if necessary. For example, you can change a bean's scope from `singleton` to `prototype`. **Important:** `BeanFactoryPostProcessor` does not create beans or modify actual bean instances; it works with their definitions.
 
 ## Example :
 
@@ -216,6 +198,16 @@ public class CustomBeanFactoryPostProcessor
 **Result:** Instead of managing one shared `UserService` instance, Spring now creates a new instance whenever that prototype bean is requested from the container.
 
 **Remember:** `BeanFactoryPostProcessor` modifies the **instructions for creating beans**, not the beans themselves. Also, Spring uses its specialized `BeanDefinitionRegistryPostProcessor` extension during this broader stage to register additional definitions, including those discovered through component scanning.
+
+
+### Summery
+
+1. Spring starts the `ApplicationContext` and reads your configuration class (in Boot, the `@SpringBootApplication` class).
+2. `@ComponentScan` scans the packages and finds classes annotated with `@Component`, `@Service`, `@Repository`, `@Controller`, and so on.
+3. For each class found, Spring creates a `BeanDefinition`. This is only metadata (class name, scope, lazy or not, dependencies), and **no object exists yet**.
+4. Each definition is saved in the `BeanDefinitionRegistry`. Note the name: it’s _Registry_, not _Registration_. In practice the `DefaultListableBeanFactory` is the registry.
+5. `BeanFactoryPostProcessor`s run. They can read and modify the definitions before any bean is created.
+6. Then `BeanPostProcessor`s are registered, singleton beans are instantiated, dependencies are injected, and init callbacks run.
 
 ---
 In Spring, Lazy Initialization is a setting that tells the IoC Container not to create a bean immediately during application startup, but to create it only when it is first needed. By default, Spring eagerly creates singleton beans when the application context starts, even if they aren't used right away. However, when you use `@Lazy` or set `lazyInit(true)` in a Bean Definition, Spring delays creating that bean until something requests it. This can reduce startup time and memory usage, but it also means initialization errors might appear later when the bean is first used. Remember: Lazy initialization delays bean creation, not bean definition registration. Also, if a non-lazy singleton depends on a lazy bean, Spring may still create that bean during startup to satisfy the dependency.

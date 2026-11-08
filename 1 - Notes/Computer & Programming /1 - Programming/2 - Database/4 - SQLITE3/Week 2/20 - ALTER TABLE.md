@@ -120,4 +120,4 @@ This is commonly called the **table-rebuild pattern**.
 
 
 [[01 - SQL]]
-[[1 - WHAT IS SQLITE3 🍕]]
+[[1 -  SQLITE3]]

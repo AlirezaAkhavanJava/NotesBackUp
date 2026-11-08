@@ -552,4 +552,4 @@ And the key concept to learn next is **type affinity**, because that's what expl
 
 
 
-[[1 - WHAT IS SQLITE3 🍕]]
+[[1 -  SQLITE3]]

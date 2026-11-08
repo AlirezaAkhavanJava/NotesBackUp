@@ -133,4 +133,4 @@ sqlite3 mydb.db
 **The `.db` file is the SQLite database.**
 
 
-[[1 - WHAT IS SQLITE3 🍕]]
+[[1 -  SQLITE3]]

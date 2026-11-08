@@ -1,6 +1,8 @@
 
 
-Convention over configuration means the framework already knows the usual way to do things, so you only write settings where your project differs. The problem it solves is real: classic Spring apps needed pages of XML or Java config (`web.xml`, a dispatcher config, view resolvers, message converters) before they could print "Hello". Most of that config was identical across projects, so Boot turned the common choices into defaults.
+Convention over configuration means the framework already knows the usual way to do things, so you only write settings where your project differs. 
+
+The problem it solves is real: classic Spring apps needed pages of XML or Java config (`web.xml`, a dispatcher config, view resolvers, message converters) before they could print "Hello". Most of that config was identical across projects, so Boot turned the common choices into defaults.
 
 This tutorial follows one tiny app. You'll see the defaults working, then break each one to see how it behaves and how to fix it.
 

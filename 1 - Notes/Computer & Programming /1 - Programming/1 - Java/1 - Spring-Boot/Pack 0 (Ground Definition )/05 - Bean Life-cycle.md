@@ -1,253 +1,192 @@
-Think of a bean's life like an employee's time at a company, with Spring as the HR department managing everything.
 
-First, Spring **creates** the bean, like hiring someone. It calls the constructor and the person exists, but they have no desk, no laptop and no team yet. Next, Spring **hands them what they need**: it injects the dependencies (the other beans they work with). That's like getting a laptop and a manager.
 
-Once they're equipped, there's an **onboarding phase**. Spring runs the setup hooks, and `@PostConstruct` is the one you'll use most. This is the right place for "now that I have everything, let me get ready", such as loading a cache or checking a config value. Doing that in the constructor is a common mistake, because with field injection the dependencies haven't arrived yet at that point. During onboarding, Spring may also wrap the bean in a proxy, which is how features like `@Transactional` get added without you writing any extra code.
+A bean's lifecycle is the sequence of steps Spring runs for every object it manages: how the object is created, wired with its dependencies, prepared for use, and finally cleaned up when the application shuts down. Because Spring creates the object for you instead of you calling `new`, it also owns every step in between.
 
-Then comes the long middle part, where the bean is **in service**, doing its actual job. For the usual singleton, that lasts until the app shuts down.
-
-Finally, when the application closes, Spring **says goodbye**: it runs `@PreDestroy`, which is your chance to close connections, stop threads and clean up before the bean goes away. It's like handing back the laptop on the last day.
-
-In short: **create, equip, onboard, work, clean up.** Once you know which stage you're in, you know where to put your code. Setup that needs dependencies goes in `@PostConstruct`, and cleanup goes in `@PreDestroy`.
+[^1]It matters because Spring gives you **hook points** along the way. A hook is a place where your code can run at a specific moment, for example right after dependencies are injected, or right before shutdown. Spring's own features (`@Autowired`, `@Transactional`, `@Async`) are built on these same hooks.
 
 ---
 
+## The full order
 
-Here is the full journey of a singleton bean (the default scope) in order:
+**Phase 1: Before any bean object exists**
 
-| #   | Stage                  | What happens                                                                                       | Your hook                                              |
-| --- | ---------------------- | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
-| 0   | Definition loading     | Spring scans `@Component`, `@Bean`, etc. and records _recipes_ (bean definitions), not objects yet | `BeanFactoryPostProcessor`                             |
-| 1   | Instantiation          | Spring calls the constructor                                                                       | Constructor                                            |
-| 2   | Dependency injection   | Fields, setters, and other beans get wired in                                                      | `@Autowired`, setters                                  |
-| 3   | Aware callbacks        | Bean learns its own name, factory, or context                                                      | `BeanNameAware`, `ApplicationContextAware`, etc.       |
-| 4   | Before-init processing | Every `BeanPostProcessor` gets a first look                                                        | `postProcessBeforeInitialization`                      |
-| 5   | Initialization         | Your setup code runs                                                                               | `@PostConstruct`, `afterPropertiesSet()`, `initMethod` |
-| 6   | After-init processing  | Post-processors get a second look (proxies are created here)                                       | `postProcessAfterInitialization`                       |
-| 7   | **Ready to use**       | The bean lives in the container and serves the app                                                 |                                                        |
-| 8   | Destruction            | Context closes, cleanup runs                                                                       | `@PreDestroy`, `destroy()`, `destroyMethod`            |
+1. **Definitions are loaded.** Spring scans `@Component` classes, `@Configuration` classes and `@Bean` methods and turns each into a `BeanDefinition` (class, scope, dependencies, init/destroy method names). This is metadata only, as you saw in the BeanDefinition lesson.
+2. **`BeanFactoryPostProcessor` runs.** It can read and modify the `BeanDefinition`s before any object is created.
 
-Stages 1 to 6 are called **creation and initialization**. Stage 8 is **destruction**. Stage 7 is the long middle where your application actually does its work.
+**Phase 2: Building each bean (repeated per bean)**
+
+3. **Instantiation:** the constructor or `@Bean` factory method is called.
+4. **Dependency injection:** `@Autowired` fields and setters are filled.
+5. **`Aware` callbacks:** `BeanNameAware`, `BeanFactoryAware`, `ApplicationContextAware`.
+6. **`BeanPostProcessor.postProcessBeforeInitialization`**
+7. **Init callbacks**, in this fixed order:
+    1. `@PostConstruct`
+    2. `InitializingBean.afterPropertiesSet()`
+    3. custom `initMethod`
+8. **`BeanPostProcessor.postProcessAfterInitialization`:** proxies are created here.
+
+**Phase 3:** the bean is stored in the container and injected where needed.
+
+**Phase 4: Shutdown**
+
+9. `@PreDestroy`, then `DisposableBean.destroy()`, then custom `destroyMethod`.
 
 ---
 
-## Seeing it run
-
-Reading about the order is one thing. Watching it print is better. Here is a bean that hooks into almost every stage:
+## Watching the order in code
 
 ```java
-import jakarta.annotation.PostConstruct;
-import jakarta.annotation.PreDestroy;
-import org.springframework.beans.factory.BeanNameAware;
-import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.InitializingBean;
-import org.springframework.stereotype.Component;
-
 @Component
 public class DemoBean implements BeanNameAware, InitializingBean, DisposableBean {
 
-    private final OtherService otherService;
-
-    public DemoBean(OtherService otherService) {
-        this.otherService = otherService;
+    public DemoBean() {
         System.out.println("1. Constructor");
+    }
+
+    @Autowired
+    public void setHelper(Helper helper) {
+        System.out.println("2. Dependency injection");
     }
 
     @Override
     public void setBeanName(String name) {
-        System.out.println("3. BeanNameAware: my name is " + name);
+        System.out.println("3. BeanNameAware: " + name);
     }
 
     @PostConstruct
     public void postConstruct() {
-        System.out.println("5. @PostConstruct");
+        System.out.println("4. @PostConstruct");
     }
 
     @Override
     public void afterPropertiesSet() {
-        System.out.println("6. InitializingBean.afterPropertiesSet");
+        System.out.println("5. afterPropertiesSet");
     }
 
     @PreDestroy
     public void preDestroy() {
-        System.out.println("8. @PreDestroy");
+        System.out.println("6. @PreDestroy");
     }
 
     @Override
     public void destroy() {
-        System.out.println("9. DisposableBean.destroy");
+        System.out.println("7. DisposableBean.destroy");
     }
 }
 ```
-
-**Line-by-line walkthrough**
-
-- `implements BeanNameAware, InitializingBean, DisposableBean` opts the bean into three Spring interfaces. Each one is a hook Spring checks for.
-- The **constructor** runs first. Spring has to create the object before it can do anything else. Since this class uses constructor injection, `otherService` is already available here.
-- `setBeanName` is an _Aware_ callback. Spring calls it to tell the bean what name it has in the container (here, `demoBean`).
-- `@PostConstruct` marks a method to run once the bean is fully built and all dependencies are injected. This is the most common place for setup code.
-- `afterPropertiesSet()` does the same job as `@PostConstruct`, but through a Spring interface instead of an annotation. It runs right _after_ `@PostConstruct`.
-- `@PreDestroy` runs when the context is closing, before the bean is thrown away.
-- `destroy()` is the interface version of `@PreDestroy` and runs right _after_ it.
-
-The console output would look like this:
-
-```
-1. Constructor
-2. BeanNameAware: my name is demoBean
-3. @PostConstruct
-4. InitializingBean.afterPropertiesSet
-... application runs ...
-5. @PreDestroy
-6. DisposableBean.destroy
-```
-
-(The numbers are from the table, so 2, 4, and 7 are missing because nothing here prints during them.)
-
----
-
-## Each stage in detail
-
-### Stage 0: Bean definitions (before any object exists)
-
-When the application starts, Spring doesn't create objects right away. It first scans your classes and builds a **bean definition** for each one. A definition is a recipe: the class, the scope, the dependencies, the init and destroy methods.
-
-There's a special hook at this point, `BeanFactoryPostProcessor`, which lets you _modify the recipes_ before any bean is cooked. Spring itself uses it to resolve `${...}` placeholders in your properties. You will rarely write one yourself.
-
-### Stage 1: Instantiation
-
-Spring calls your constructor. At this point the object exists, but it is only a raw shell. If you use **field** or **setter** injection, those dependencies are still `null` here. This is why this fails:
-
-```java
-@Component
-public class BadBean {
-    @Autowired
-    private OtherService otherService;
-
-    public BadBean() {
-        otherService.doSomething(); // NullPointerException!
-    }
-}
-```
-
-With **constructor injection**, dependencies arrive as constructor parameters, so they _are_ available. That is one of several reasons constructor injection is recommended.
-
-### Stage 2: Dependency injection
-
-Spring fills in the rest: `@Autowired` fields, setter methods, `@Value` properties. After this stage, the bean is fully wired.
-
-### Stage 3: Aware callbacks
-
-Sometimes a bean needs to know something about its surroundings. The _Aware_ interfaces let Spring pass that information in:
-
-|Interface|What you receive|
-|---|---|
-|`BeanNameAware`|The bean's name in the container|
-|`BeanFactoryAware`|The `BeanFactory` that created it|
-|`ApplicationContextAware`|The full `ApplicationContext`|
-
-You need these rarely in everyday code. Use them only when a bean truly has to look up other beans programmatically or know its own name.
-
-### Stage 4 and 6: BeanPostProcessor (the interceptors)
-
-A `BeanPostProcessor` is a special bean that gets to look at **every other bean** as it is created. It has two methods:
 
 ```java
 @Component
 public class LoggingPostProcessor implements BeanPostProcessor {
 
     @Override
-    public Object postProcessBeforeInitialization(Object bean, String beanName) {
-        System.out.println("Before init: " + beanName);
+    public Object postProcessBeforeInitialization(Object bean, String name) {
+        if (bean instanceof DemoBean) System.out.println("BPP before init");
         return bean;
     }
 
     @Override
-    public Object postProcessAfterInitialization(Object bean, String beanName) {
-        System.out.println("After init: " + beanName);
+    public Object postProcessAfterInitialization(Object bean, String name) {
+        if (bean instanceof DemoBean) System.out.println("BPP after init");
         return bean;
     }
 }
 ```
 
-**Walkthrough**
+Output:
 
-- Both methods receive the bean and its name, and both _return_ a bean. That return value is important: you can return the same object or **replace it with a different one**, such as a wrapper or proxy.
-- `postProcessBeforeInitialization` runs before your init methods. Spring's own `@PostConstruct` support is itself implemented through a post-processor at this stage.
-- `postProcessAfterInitialization` runs after your init methods. This is where Spring wraps beans in **proxies** for features like `@Transactional`, `@Async`, and AOP. It is also why a transactional bean you inject is often a proxy rather than your actual class.
+```
+1. Constructor
+2. Dependency injection
+3. BeanNameAware: demoBean
+BPP before init
+4. @PostConstruct
+5. afterPropertiesSet
+BPP after init
+... application runs ...
+6. @PreDestroy
+7. DisposableBean.destroy
+```
 
-This one mechanism is behind much of Spring's "magic."
+Both `postProcess...` methods must **return a bean**. If you return `null`, later steps break. Also notice that `@PostConstruct` runs between the two `BeanPostProcessor` calls, because `@PostConstruct` is itself handled by a `BeanPostProcessor` (`CommonAnnotationBeanPostProcessor`).
 
-### Stage 5: Initialization callbacks
+---
 
-You have three ways to say "run this after the bean is ready," and they always run in the same order:
+## Each hook in detail
 
-1. `@PostConstruct`
-2. `afterPropertiesSet()` from `InitializingBean`
-3. A custom init method declared in `@Bean(initMethod = "setup")`
-
-**Which should you use?** `@PostConstruct` for beans you write yourself. It is simple and doesn't tie your class to Spring interfaces. The `initMethod` attribute is handy for third-party classes you can't edit:
+**Constructor.** With constructor injection, dependencies are ready here. With field injection, the field is still `null` inside the constructor, because injection is step 4.
 
 ```java
-@Bean(initMethod = "start", destroyMethod = "shutdown")
+@Component
+public class A {
+    @Autowired private B b;
+
+    public A() {
+        System.out.println(b);   // null! injection has not happened yet
+    }
+}
+```
+
+**`@PostConstruct`.** The place for start-up work that needs injected dependencies: validating config, warming a cache, opening a connection. It is standard Jakarta, so it does not tie your class to Spring.
+
+**`InitializingBean` and `initMethod`.** Same purpose as `@PostConstruct`. `initMethod` is useful for classes you cannot edit:
+
+```java
+@Bean(initMethod = "start", destroyMethod = "stop")
 public ThirdPartyClient client() {
     return new ThirdPartyClient();
 }
 ```
 
-Here, `ThirdPartyClient` has its own `start()` and `shutdown()` methods. You can't add annotations to that class, but you can tell Spring which methods to call.
+**`Aware` interfaces.** Give a bean information about its container (its own name, the `ApplicationContext`). Rarely needed, since you can usually just inject what you need.
 
-### Stage 7: Ready
+**`BeanFactoryPostProcessor`.** Works on blueprints before objects exist. A real example is `PropertySourcesPlaceholderConfigurer`, which replaces `${...}` placeholders inside `BeanDefinition`s with real values.
 
-The bean is registered in the container. Every other bean that depends on it receives this instance (for singletons, always the _same_ one). The bean stays alive until the context shuts down.
+**`BeanPostProcessor`.** Works on real bean objects. It is how `@Autowired`, `@PostConstruct`, `@Transactional` and `@Async` are implemented. The object returned from `postProcessAfterInitialization` is what goes into the container, so it can be a proxy wrapping your original.
 
-### Stage 8: Destruction
-
-When the `ApplicationContext` closes (for example, on `Ctrl+C` or `SIGTERM` in a Spring Boot app, or when you call `context.close()`), Spring destroys singleton beans in this order:
-
-1. `@PreDestroy`
-2. `destroy()` from `DisposableBean`
-3. Custom `destroyMethod`
-
-Use this to close connections, flush buffers, stop thread pools, or release file handles.
+**`@PreDestroy`, `DisposableBean`, `destroyMethod`.** Cleanup: closing pools, flushing buffers, stopping threads. They run when the context closes, which Spring Boot does automatically on normal shutdown.
 
 ---
 
-## How scope changes the story
+## Things that change the picture
 
-The lifecycle above describes a **singleton**. Scope changes it:
+**Scope.**
 
-|Scope|Created|Destruction callbacks|
-|---|---|---|
-|`singleton` (default)|Once, at startup (eagerly)|Yes, on context close|
-|`prototype`|Every time it is requested|**No.** Spring creates it and hands it over, then forgets it|
-|`request` / `session` (web)|Per HTTP request or session|Yes, when that request or session ends|
+|Scope|Lifecycle behavior|
+|---|---|
+|singleton (default)|Full lifecycle, once, normally at startup (unless `@Lazy`)|
+|prototype|Created and initialized, then Spring forgets it. **Destroy callbacks never run**|
+|request / session|Created and destroyed with the request or session|
 
-The prototype row catches people out. If a prototype bean holds a resource that needs closing, Spring will **not** call `@PreDestroy` for you. You must clean it up yourself.
+**Proxies.** Step 8 is where AOP and `@Transactional` wrap your bean. Other beans receive the proxy, not your raw object. This is why a self-invocation inside the same class bypasses `@Transactional`: the call never goes through the proxy. This links to your AOP and proxy notes.
 
----
+**Order between beans.** A bean's dependencies are fully initialized before it is. For ordering that injection does not imply, use `@DependsOn`.
 
-## Common pitfalls
-
-- **Heavy work in the constructor.** Keep constructors simple. Do real setup in `@PostConstruct`, where everything is wired.
-- **Expecting `@PreDestroy` on prototypes.** As above, it won't run.
-- **Calling a `@Transactional` method from `@PostConstruct`.** The proxy that adds transaction behavior is applied in stage 6, _after_ `@PostConstruct`, so the transaction may not be active yet.
-- **Using `@PostConstruct` imports from `javax`.** On Spring Boot 3 and later, the package is `jakarta.annotation`.
-- **Circular dependencies.** If bean A needs B and B needs A, Spring can't finish either one's creation cleanly. Spring Boot now rejects this by default, so redesign instead.
+**Failures.** If a constructor or `@PostConstruct` throws, the context fails to start.
 
 ---
 
-## A related concept in short: lazy initialization
+## A related concept in short: application-level lifecycle
 
-By default, singletons are created **eagerly** at startup, so problems show up immediately. Adding `@Lazy` delays creation until the bean is first needed. That speeds up startup, but errors in that bean now appear later, at runtime, rather than at boot. The lifecycle stages stay the same. Only the _moment_ it begins changes.
+Everything above is per bean. There is also a lifecycle for the whole application, expressed as events: `ContextRefreshedEvent` (all beans created), `ApplicationReadyEvent` (Spring Boot is fully started), and `ContextClosedEvent` (shutdown begins). If your code should run when the _entire_ app is ready rather than one bean, use:
+
+```java
+@EventListener(ApplicationReadyEvent.class)
+public void onReady() { ... }
+```
+
+For control over start and stop order of long-running components, implement `SmartLifecycle`.
 
 ---
 
-## Quick recap
+## Summary
 
-Think of it as: **construct → inject → aware → before-init → init → after-init → use → destroy**. For your own beans, you will mostly use just three tools: constructor injection, `@PostConstruct` for setup, and `@PreDestroy` for cleanup. The rest (`Aware` interfaces, `BeanPostProcessor`) is there for framework-level work and is good to understand even if you rarely write it.
-
-
-
+1. `BeanDefinition`s are loaded, and `BeanFactoryPostProcessor` can edit them.
+2. Per bean: constructor, injection, `Aware`, `BeanPostProcessor` (before), `@PostConstruct` / `afterPropertiesSet` / `initMethod`, `BeanPostProcessor` (after, where proxies appear).
+3. The bean is in use.
+4. Shutdown: `@PreDestroy`, `destroy()`, `destroyMethod`.
+5. Prototype beans never get destroy callbacks.
 
 [[Spring Framework]]
+
+[^1]: Spring provides specific points during its execution process where you can intercept, customize, or execute your own logic. These points are called hook points. For example, you can execute custom logic before a bean is initialized, after it is initialized, or before a request reaches a controller. Instead of modifying Spring's internal code, you use these predefined extension points to influence its behavior.

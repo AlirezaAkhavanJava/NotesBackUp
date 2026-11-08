@@ -346,4 +346,4 @@ WHERE <optional condition>;
 
 
 
-[[1 - WHAT IS SQLITE3 🍕]]
+[[1 -  SQLITE3]]

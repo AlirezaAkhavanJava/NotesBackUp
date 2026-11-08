@@ -88,4 +88,4 @@ TABLE
 **In short:** a table constraint is a database rule attached to the table, especially useful when the rule involves **multiple columns or relationships between columns**.
 
 
-[[1 - WHAT IS SQLITE3 🍕]]
+[[1 -  SQLITE3]]

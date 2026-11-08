@@ -69,4 +69,4 @@ DROP TABLE collections;
 means **"destroy the `collections` table itself."**
 
 
-[[1 - WHAT IS SQLITE3 🍕]]
+[[1 -  SQLITE3]]

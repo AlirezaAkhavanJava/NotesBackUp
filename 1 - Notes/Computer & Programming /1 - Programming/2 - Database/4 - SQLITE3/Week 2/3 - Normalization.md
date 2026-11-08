@@ -354,5 +354,5 @@ Query with SQL
 **Normalization = a set of principles for designing that blueprint so data is organized, consistent, and minimally redundant.**
 
 
-[[1 - WHAT IS SQLITE3 🍕]]
+[[1 -  SQLITE3]]
 [[01 - SQL]]

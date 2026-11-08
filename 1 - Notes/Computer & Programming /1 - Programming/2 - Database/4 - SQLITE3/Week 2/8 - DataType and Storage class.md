@@ -200,4 +200,4 @@ So when studying SQLite, keep these three terms separate:
 This distinction is one of the most important things to understand about **SQLite's type system**.
 
 
-[[1 - WHAT IS SQLITE3 🍕]]
+[[1 -  SQLITE3]]

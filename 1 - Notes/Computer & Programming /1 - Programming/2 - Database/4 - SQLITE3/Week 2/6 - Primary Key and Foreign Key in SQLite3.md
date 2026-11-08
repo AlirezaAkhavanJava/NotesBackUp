@@ -293,4 +293,4 @@ That's the fundamental **PK → FK relationship** you'll use throughout SQLite, 
 
 
 
-[[1 - WHAT IS SQLITE3 🍕]]
+[[1 -  SQLITE3]]

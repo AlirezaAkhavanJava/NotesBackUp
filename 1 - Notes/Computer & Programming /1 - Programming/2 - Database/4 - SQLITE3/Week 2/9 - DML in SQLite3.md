@@ -433,4 +433,4 @@ And the most important distinction:
 * `SELECT` is commonly treated as DQL in stricter SQL terminology, although it is often discussed alongside DML.
 
 
-[[1 - WHAT IS SQLITE3 🍕]]
+[[1 -  SQLITE3]]

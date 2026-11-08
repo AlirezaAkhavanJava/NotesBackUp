@@ -204,5 +204,5 @@ sqlite3 app.db .schema > schema.sql
 So you can export the current schema into a reusable `schema.sql` file.
 
 
-[[1 - WHAT IS SQLITE3 🍕]]
+[[1 -  SQLITE3]]
 [[01 - SQL]]

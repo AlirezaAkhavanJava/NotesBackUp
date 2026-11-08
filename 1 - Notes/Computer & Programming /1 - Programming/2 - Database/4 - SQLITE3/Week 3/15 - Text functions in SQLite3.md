@@ -212,4 +212,4 @@ A good exercise: given the string `'John Smith'`, extract the first name and las
 
 
 
-[[1 - WHAT IS SQLITE3 🍕]]
+[[1 -  SQLITE3]]
