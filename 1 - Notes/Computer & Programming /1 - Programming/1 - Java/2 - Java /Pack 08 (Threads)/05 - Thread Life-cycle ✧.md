@@ -1,4 +1,4 @@
-
+![[Java Thread Life Cycle Infographic.png]]
 
 A thread's **lifecycle** is the sequence of states it moves through from creation to death. Java exposes it as the `Thread.State` enum with six values: `NEW`, `RUNNABLE`, `BLOCKED`, `WAITING`, `TIMED_WAITING` and `TERMINATED`. A thread is always in exactly one of them, and `getState()` tells you which. The **control methods** (`join`, `sleep`, `yield`, `isAlive`) are the tools that move a thread between states or let you observe it.
 
@@ -15,9 +15,9 @@ Your `Thread` class lesson covered the handle-vs-thread idea, `start()` vs `run(
 |`TIMED_WAITING`|Same, but with a timeout|`sleep(ms)`, `join(ms)`, `wait(ms)`|the action happens **or** time runs out|
 |`TERMINATED`|Finished|`run()` returned or threw|nothing. It is permanent|
 
-Three facts the note never stated:
+Three facts :
 
-- **`BLOCKED` and `WAITING` are different things.** `BLOCKED` means "I want a lock someone else holds". `WAITING` means "I'm waiting for another thread to do something". Only `synchronized` entry produces `BLOCKED`. `ReentrantLock` waits show up as `WAITING`, because they use `park()`.
+- **`BLOCKED` and `WAITING` are different things.** `BLOCKED` means "***I want a lock someone else holds***". `WAITING` means "***I'm waiting for another thread to do something***". Only `synchronized` entry produces `BLOCKED`. `ReentrantLock` waits show up as `WAITING`, because they use `park()`.
 - **A thread blocked on socket or file I/O shows as `RUNNABLE`.** The JVM only tracks Java-level waits. If a thread dump shows `RUNNABLE` threads that seem stuck, check whether they are inside a native I/O call.
 - **No thread ever goes back to `NEW`, and `TERMINATED` is final.** That is why `start()` works only once.
 
@@ -72,6 +72,7 @@ What it shows:
 - `joiner` is `WAITING`: it called `join()` with no timeout and is waiting for `sleeper` to finish.
 - The `pause` helper handles the exception the correct way: restore the flag. Use it as your template.
 
+---
 ## 3. `isAlive()`: has it started and not yet died?
 
 `isAlive()` returns `true` from the moment `start()` succeeds until the thread is `TERMINATED`. So it is `false` in `NEW` and in `TERMINATED`, and `true` in the other four states.
@@ -89,6 +90,7 @@ t.isAlive();    // false (TERMINATED)
 
 **Where it is genuinely useful:** after a timed join, to find out whether the thread finished or you just ran out of time (next section).
 
+---
 ## 4. `join()`: wait for another thread to finish
 
 `t.join()` makes the **calling** thread wait until `t` is `TERMINATED`. The caller sits in `WAITING` (or `TIMED_WAITING` for the timed forms).
@@ -116,6 +118,7 @@ Pitfalls:
 - The `InterruptedException` is about **you** being interrupted while waiting, not about the target.
 - Everything the target wrote is visible to you after `join()` returns. This is the visibility guarantee from your `Thread` class lesson.
 
+---
 ## 5. `sleep()`: pause the current thread
 
 `Thread.sleep(ms)` is a **static** method. It always pauses the thread that calls it and puts that thread in `TIMED_WAITING`. There is also `Thread.sleep(Duration)` since Java 19.
@@ -137,6 +140,7 @@ scheduler.scheduleAtFixedRate(() -> System.out.println("tick"), 0, 1, TimeUnit.S
 
 `sleep` is also not `wait`. `Object.wait()` must be called inside `synchronized`, **releases** that lock while waiting, and is woken by `notify()`. `sleep` needs no lock, keeps any it holds, and only ends by timeout or interrupt. `wait`/`notify` is its own lesson.
 
+---
 ## 6. `yield()`: a hint you can ignore
 
 `Thread.yield()` tells the scheduler "I'm willing to give up my current time slice". The scheduler is free to ignore it, and behavior differs across operating systems. It does not make code correct, faster or fairer in any dependable way, and modern code almost never uses it. If you find a loop that spins waiting for a condition, the better tool is `Thread.onSpinWait()` (Java 9+) or, better still, a real wait mechanism.

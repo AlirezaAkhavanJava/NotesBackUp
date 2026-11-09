@@ -79,10 +79,12 @@ You'll see 8 tasks but only 4 thread names (`pool-1-thread-1` to `pool-1-thread-
 
 Pool threads are non-daemon, so **if you never call `shutdown()`, your program never exits.**
 
+
 ### Pool size
 
 For **CPU-bound** work, use about the number of cores (`Runtime.getRuntime().availableProcessors()`). More threads than cores only adds switching. For **blocking** work (database, network), you need more, because most threads are idle waiting. That problem is what virtual threads (section 5) solve.
 
+---
 ## 3. Getting a result: `Callable` and `Future`
 
 `Runnable` returns nothing and cannot throw checked exceptions. `Callable<V>` returns a `V` and may throw. Submitting one gives you a `Future<V>`, which is a handle to a result that doesn't exist yet:
@@ -113,6 +115,7 @@ Calling `get()` right after `submit()` gives you no concurrency, because you jus
 
 For chaining steps without blocking, there is `CompletableFuture`, which deserves its own lesson.
 
+---
 ## 4. Splitting one big job: Fork/Join
 
 This one has a different goal. It is **parallelism**: one large CPU-bound job is split recursively into pieces that run on multiple cores. You write a `RecursiveTask<T>` (returns a result) or `RecursiveAction` (returns nothing):

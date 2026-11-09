@@ -4,6 +4,7 @@
 
 Earlier lessons gave you the pieces: the interrupt flag and daemon threads (`Thread` class lesson), `join` and a stoppable worker (lifecycle lesson), and pools with `ExecutorService` (thread-creation lesson). This lesson answers the next question: **how do those pieces behave when threads live inside a pool, and what silently goes wrong?**
 
+---
 ## 1. Interruption: handling it correctly
 
 The basics are unchanged: `interrupt()` sets a flag, and blocking calls (`sleep`, `wait`, `join`, `BlockingQueue.take()`) throw `InterruptedException` and **clear** that flag. Three things the basics didn't cover:
@@ -28,6 +29,7 @@ String next(BlockingQueue<String> queue) throws InterruptedException {
 
 **Not everything is interruptible.** Waiting to enter a `synchronized` block, or reading from a classic `java.io` socket, ignores `interrupt()`. Only the flag gets set. To stop such a thread you close the resource it is blocked on. NIO channels are the exception: interrupting a thread blocked on one closes the channel.
 
+---
 ## 2. Stopping threads inside a pool
 
 You don't hold the `Thread` objects of a pool, so you can't call `t.interrupt()`. You have two tools:
