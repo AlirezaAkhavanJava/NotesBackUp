@@ -365,6 +365,6 @@ Since you already learned Spring: **singleton beans are shared by all request th
 
 
 
-[[Java]]
+[[Threads]]
 
 [^1]: Idle means that a CPU core is not executing useful instructions for your program because it is waiting for an external operation, such as a database query or network response, to complete. The core is available to execute other tasks, but your current thread cannot continue until the required data arrives. Essentially, the CPU is waiting rather than actively processing your program's next instructions.

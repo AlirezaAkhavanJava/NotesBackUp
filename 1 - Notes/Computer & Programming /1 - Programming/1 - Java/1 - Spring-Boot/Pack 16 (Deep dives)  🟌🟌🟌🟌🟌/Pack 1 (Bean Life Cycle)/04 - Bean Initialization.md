@@ -21,7 +21,7 @@ Before Spring executes initialization callbacks such as `InitializingBean.afterP
 
 The `BeanPostProcessor` interface has two important methods:
 
-```
+```java
 public interface BeanPostProcessor {
 
     Object postProcessBeforeInitialization(

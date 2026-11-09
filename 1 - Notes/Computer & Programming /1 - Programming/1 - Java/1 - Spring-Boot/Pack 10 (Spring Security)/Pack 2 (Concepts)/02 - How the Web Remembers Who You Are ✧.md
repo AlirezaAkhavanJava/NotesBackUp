@@ -10,6 +10,14 @@ Imagine a shop clerk with no memory. You walk up, say "I'm Alice, here's my pass
 
 That would be unusable, so we need a way for each request to _carry proof_ of the earlier login. There are two common answers: **sessions with cookies**, and **tokens**. Both solve the same problem. They differ in _who does the remembering_.
 
+
+>**Sessions + cookies: the server remembers.** After login, the server stores the user's data in memory or a store like Redis, and gives the browser only a session ID in a cookie. On each request, the server looks that ID up.
+
+>**Tokens (JWT): the client remembers.** After login, the server signs a token that contains the proof (username, expiry) and hands it over. The client stores it and sends it back on every request. The server keeps nothing and only verifies the signature, which is why it's called stateless.
+
+
+---
+
 ## A quick tour of HTTP
 
 Before we look at the two answers, you need a few HTTP basics, because both are built from them.
@@ -75,9 +83,13 @@ Cookie: JSESSIONID=abc123
 
 6. The server looks up `abc123`, finds "alice," and knows who you are.
 
+
+
 Think of a coat check. You hand over your coat (log in) and get a numbered ticket (the cookie). The ticket means nothing by itself. The attendant keeps the real information behind the counter. Whoever holds ticket 123 gets coat 123.
 
 The key point is that the cookie holds **only an ID**, not your identity. The real data lives on the server. In Spring Boot, that ID cookie is called `JSESSIONID` by default.
+
+
 
 ### Why people like sessions
 
@@ -89,6 +101,12 @@ The key point is that the cookie holds **only an ID**, not your identity. The re
 
 The server has to _store_ every session. If you run several servers behind a load balancer, they all need to find the same session. You'd use "sticky" routing, or a shared store like Redis. That's one reason Redis shows up so often next to Spring apps.
 
+
+ **Spring Security creates the session, not your app.** After the credentials check succeeds, it stores the `SecurityContext` (which holds the `Authentication` with your `UserDetails` as principal) in the `HttpSession`. It also changes the session ID at this point, which protects against session fixation.
+ 
+**The cookie holds only the session ID.** The response includes `Set-Cookie: JSESSIONID=abc123`, and no user data goes to the browser.
+
+---
 ## Cookie flags: the safety switches
 
 A cookie is a small piece of data, and cookies can be stolen or misused. Three flags, set on the `Set-Cookie` header, protect them. You should use all three on any login cookie.

@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "e08fb6d887b9235b",
+        "id": "27105da753d3a554",
         "type": "tabs",
         "children": [
           {
-            "id": "8c18ba14d7319c2b",
+            "id": "287adcdbf62a6a3a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/03 - Joins & Set Operations/09 - NULL Handling in Joins and Sets.md",
+                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/01 - Creation of Threads.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "09 - NULL Handling in Joins and Sets"
+              "title": "01 - Creation of Threads"
             }
           }
         ]
@@ -80,7 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 400.84892654418945
+    "width": 457.8855171203613
   },
   "right": {
     "id": "318802b81bf4bc9f",
@@ -172,35 +172,36 @@
       "bases:Create new base": false
     }
   },
-  "active": "8c18ba14d7319c2b",
+  "active": "287adcdbf62a6a3a",
   "lastOpenFiles": [
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/03 - Joins & Set Operations/08 -What is INTERSECT ?.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/03 - Joins & Set Operations/07 - What is EXCEPT ?.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/03 - Joins & Set Operations/05 - Types of Anti-Joins.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/03 - Joins & Set Operations/04 - What is Anti-Join ?.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/03 - Joins & Set Operations/06 - What is UNION ?.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/03 - Joins & Set Operations/09 - NULL Handling in Joins and Sets.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/03 - Joins & Set Operations/07 - UNION ALL.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/03 - Joins & Set Operations/03 - Joining multiple tables.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/03 - Joins & Set Operations/02 - Writing Set Operations.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/03 - Joins & Set Operations/01 - JOIN Types and Their Formulas.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/03 - Joins & Set Operations/00 - Joins and Set Operations in PostgreSQL.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/01 - SQL Queries & Commands/00 - DDL Command.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/01 - SQL Queries & Commands/15 - GRANT and REVOKE.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/01 - SQL Queries & Commands/14 - What is COMMENT ?.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/01 - SQL Queries & Commands/13 - What is Database Migrations ?.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/01 - SQL Queries & Commands/12 - Transactional meaning.md",
-    "1 - Notes/Computer & Programming /1 - Programming/10 - Programming in action/8 - Patient-Managment/00 - What is a Module ?.md",
-    "2 - Tags/Concepts/Java Back-End.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/02 - The Thread Class.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/01 - Creation of Threads.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/00 - Types of Threads.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/1 - Confusion/00 - Platform threads and why creating thousands of them hurts.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/1 - Confusion",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/00 - Concurrency and Parallelism.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/04 -  Thread Management.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/03 - Thread Lifecycle and Control Methods.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 2 (Concepts)/02 - How the Web Remembers Who You Are ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 2 (Concepts)/01 - Role, Authority, Credentials, and Principal ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 2 (Concepts)/20 - AuthenticationPrincipal.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 2 (Concepts)/19 - UserDetails and UserDetailsService.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 4 (security)/18 - UserDetailsService.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 2 (Concepts)/18 - Creating a Role.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 2 (Concepts)/00 - Authentication and Authorization ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 2 (Concepts)/04 - Four Rules for Storing Passwords.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 2 (Concepts)/05 - Spring Security’s PasswordEncoder.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 2 (Concepts)/03 - Passwords and Hashing ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/14 - @Autowired ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/12 - The Three Ways to Inject Dependencies ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/12 - What is DI ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/11 - What Is a Dependency ? ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/10 - Tight Coupling and Loose Coupling ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/00 - Java & Enterprise ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/07 - Spring Container ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/08 - BeanFactory ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/09 - Application Context ✧.md",
     "1 - Notes/Computer & Programming /1 - Programming/10 - Programming in action/8 - Patient-Managment",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/03 - Joins & Set Operations/02 - Advanced Joins.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/02 - Filtering & Sorting/07 - Conditions in PostgreSQL.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/02 - Filtering & Sorting/06 - Conditions in PostgreSQL.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/02 - Filtering & Sorting/05 - WHERE Operators.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/02 - Filtering & Sorting/04 - DISTINCT in PostgreSQL.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/02 - Filtering & Sorting/03 - HAVING in PostgreSQL.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/02 - Filtering & Sorting/02 - GROUP BY in PostgreSQL.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/02 - Filtering & Sorting/01 - ORDER BY in PostgreSQL.md",
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/19 - Definitions",
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/18 - PostgreSQL Specials",
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/17 - CLI Commands",
@@ -209,7 +210,6 @@
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/14 - Advanced PostgreSQL",
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/13 - Performance & Optimization",
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/12 - Storage & Database Internals",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/11 - Data Storage Structures",
     "4 - Images/Pasted image 20261108122644.png",
     "Pasted image 20261108122644.png",
     "4 - Images/spring-security-framework.jpg",

@@ -1,7 +1,10 @@
 
 
 
-**Aware callbacks** are part of the Spring Bean Lifecycle that allow a bean to receive information about the Spring container managing it. At this point, the bean has already been instantiated, and Spring has normally injected its dependencies. Now, Spring checks whether the bean implements certain `Aware` interfaces. If it does, Spring automatically invokes their callback methods to provide information such as the bean's name, its `BeanFactory`, or its `ApplicationContext`.
+**Aware callbacks** are part of the Spring Bean Lifecycle that allow a bean to receive information about the Spring container managing it.
+
+At this point, the bean has already been instantiated, and Spring has normally injected its dependencies. 
+Now, Spring checks whether the bean implements certain `Aware` interfaces. If it does, Spring automatically invokes their callback methods to provide information such as the bean's name, its `BeanFactory`, or its `ApplicationContext`.
 
 ## 1. Three Important Aware Interfaces
 

@@ -1,6 +1,8 @@
 
 
-When you run your Spring Boot application, Spring Boot begins its [^2]startup process and creates the **IoC Container**, usually represented by an `ApplicationContext` object. This container is responsible for creating, configuring, managing, and eventually destroying Spring beans. At this stage, Spring is preparing the environment where all your application's beans will live.
+When you run your Spring Boot application, Spring Boot begins its [^2]startup process and creates the **IoC Container**, usually represented by an `ApplicationContext` object. 
+
+This container is responsible for creating, configuring, managing, and eventually destroying Spring beans. At this stage, Spring is preparing the environment where all your application's beans will live.
 
 ![[Spring ApplicationContext Lifecycle Infographic.png]]
 

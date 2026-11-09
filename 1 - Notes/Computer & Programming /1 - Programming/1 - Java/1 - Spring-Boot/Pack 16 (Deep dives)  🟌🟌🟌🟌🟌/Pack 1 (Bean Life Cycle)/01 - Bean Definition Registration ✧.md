@@ -149,7 +149,13 @@ Spring will use these definitions during the following stages of the lifecycle.
 ---
 ## BeanFactoryPostProcessor 
 
-The **BeanFactoryPostProcessor** interface allows Spring to inspect or modify **Bean Definitions before actual bean objects are created**. During this stage, Spring registers Bean Definitions discovered through component scanning and other configuration mechanisms. After registration, Spring invokes `BeanFactoryPostProcessor` implementations to adjust their metadata if necessary. For example, you can change a bean's scope from `singleton` to `prototype`. **Important:** `BeanFactoryPostProcessor` does not create beans or modify actual bean instances; it works with their definitions.
+The **BeanFactoryPostProcessor** interface allows Spring to inspect or modify **Bean Definitions before actual bean objects are created**. 
+
+During this stage, Spring registers Bean Definitions discovered through component scanning and other configuration mechanisms. 
+
+After registration, Spring invokes `BeanFactoryPostProcessor` implementations to adjust their metadata if necessary. For example, you can change a bean's scope from `singleton` to `prototype`. 
+
+**Important:** `BeanFactoryPostProcessor` does not create beans or modify actual bean instances; it works with their definitions.
 
 ## Example :
 

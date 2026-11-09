@@ -12,9 +12,15 @@ Here's the quick map:
 |**Authority**|What specific thing may you do?|`order:delete`|
 |**Role**|What group of permissions do you have?|`ADMIN`|
 
+---
 ## Credentials: your proof
 
-**Credentials** are the secret you present to prove your identity. The most common example is a password. Others include an API key, a JWT token, or a one-time code.
+**Credentials** are the secret you present to prove your identity.
+The most common example is a password. Others include an API key, a JWT token, or a one-time code.
+
+> **Password = proving who you are (once).** The password is how the user proves their identity at login. Spring Security checks it against the stored BCrypt hash and says “yes, this is really Sara.”
+
+ >**JWT = remembering that you proved it (on every later request).** HTTP is stateless. After login, the next request arrives at your server with no memory of the previous one. If you had no token, the user would have to send their password with every single request: `GET /orders`, `POST /orders`, `GET /profile`, and so on. That is slow, because BCrypt is deliberately expensive. It is also unsafe, because the password travels over the network constantly.
 
 Credentials are only used during **authentication**. Once you're verified, the system shouldn't need them again.
 
@@ -23,6 +29,7 @@ Two practical rules follow from this:
 - **Never store passwords in plain text.** Store a hash made with something like BCrypt. In Spring, that's the job of the `PasswordEncoder`.
 - **Spring clears credentials after login.** After successful authentication, Spring Security erases the password from the `Authentication` object, so the secret doesn't linger in memory.
 
+---
 ## Principal: who you are
 
 The **principal** is the identity of the user who has been authenticated. It answers "who is making this request?"
@@ -40,6 +47,7 @@ public String me(@AuthenticationPrincipal UserDetails user) {
 
 Before login, there is no principal. After login, the principal is the verified user. That's why people say "the logged-in principal."
 
+---
 ## Authority: one specific permission
 
 An **authority** is a single permission, written as a plain string. It describes one thing you're allowed to do:

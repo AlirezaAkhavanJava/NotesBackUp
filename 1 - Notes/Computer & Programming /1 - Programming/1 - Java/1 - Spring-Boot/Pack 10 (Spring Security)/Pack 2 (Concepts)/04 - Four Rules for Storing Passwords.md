@@ -21,6 +21,7 @@ The damage spreads beyond your app. People reuse passwords. Alice's `sunflower42
 
 So the rule is simple. Your database should never contain something that _is_ a password. The next rule shows what to store instead.
 
+---
 ## Rule 2: Hashing is one-way
 
 **The benefit:** you can check a password without ever keeping it.
