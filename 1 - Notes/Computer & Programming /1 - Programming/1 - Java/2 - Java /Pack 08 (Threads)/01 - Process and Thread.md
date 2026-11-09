@@ -11,7 +11,7 @@
 ┌─────────────────────────────────────┐
 │            Process                  │  ← e.g. your running Java app (the JVM)
 │  ┌──────────┐  ┌──────────┐         │
-│  │ Thread 1  │  │ Thread 2  │  ...  │  ← share the SAME memory
+│  │ Thread 1 │  │ Thread 2 │  ...    │  ← share the SAME memory
 │  └──────────┘  └──────────┘         │
 │                                     │
 │   Private memory (heap, etc.)       │
@@ -251,4 +251,4 @@ Spring Boot (since Spring Framework 6 / Boot 3.2+) has built-in support for runn
 |Virtual threads (Java 21+)|JVM-managed lightweight threads, not 1:1 with OS threads|massive concurrency with simple, blocking-style code|
 
 
-[[Java]]
+[[Threads]]

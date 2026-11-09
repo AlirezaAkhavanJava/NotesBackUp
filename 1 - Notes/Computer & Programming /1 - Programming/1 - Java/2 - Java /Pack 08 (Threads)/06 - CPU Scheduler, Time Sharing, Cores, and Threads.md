@@ -174,4 +174,4 @@ Core: physically executes the thread's instructions during its allotted time sli
 - **Virtual threads** work by decoupling from this whole traditional OS-scheduling picture for the _blocked/waiting_ case — letting the JVM itself manage huge numbers of lightweight threads, handing off to real OS threads (and thus the real CPU scheduler) only when there's actual work to do.
 
 
-[[Java]]
+[[Threads]]

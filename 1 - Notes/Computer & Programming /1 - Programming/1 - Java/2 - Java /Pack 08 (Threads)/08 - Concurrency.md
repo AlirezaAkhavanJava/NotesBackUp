@@ -1,6 +1,5 @@
 
 
-## Definition
 
 **Concurrency** is the property of a system where multiple tasks make progress **during overlapping periods of time**. It's the general concept; threads (which you just learned) are _one specific mechanism_ Java uses to achieve it.
 

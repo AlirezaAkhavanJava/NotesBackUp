@@ -88,4 +88,5 @@ So, at its core:
 
 > **Threading = using multiple threads to allow different parts of a program to execute concurrently.**
 
-[[Java]]
+
+[[Threads]]
