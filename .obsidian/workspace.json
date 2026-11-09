@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "27105da753d3a554",
+        "id": "471195b355bef043",
         "type": "tabs",
         "children": [
           {
-            "id": "287adcdbf62a6a3a",
+            "id": "7484d7de2a59b876",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/06 - CPU Scheduler, Time Sharing, Cores, and Threads.md",
-                "mode": "preview",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "06 - CPU Scheduler, Time Sharing, Cores, and Threads"
+              "title": "New tab"
             }
           }
         ]
@@ -80,7 +76,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 457.8855171203613
+    "width": 351.7143440246582
   },
   "right": {
     "id": "318802b81bf4bc9f",
@@ -172,8 +168,21 @@
       "bases:Create new base": false
     }
   },
-  "active": "287adcdbf62a6a3a",
+  "active": "7484d7de2a59b876",
   "lastOpenFiles": [
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/01 - SQL Queries & Commands/00 - DDL Command.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/00 - Database Fundamentals/04 - Data Types in PostgreSQL.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/00 - Database Fundamentals/05 - What is a Database ?.md",
+    "4 - Images/730617d7-7a22-4f45-881e-efa9343aa5e6.png",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/01 - SQL Queries & Commands/01 - DML Commands.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/01 - SQL Queries & Commands/02 - DQL Command.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/00 - Database Fundamentals/06 - What is a schema ?.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/01 - SQL Queries & Commands/13 - What is Database Migrations ?.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/01 - SQL Queries & Commands/15 - DCL Commands.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/01 - SQL Queries & Commands/12 - Transactional meaning.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/01 - SQL Queries & Commands/03 - What is an SQL Query?.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/01 - SQL Queries & Commands/04 - What is LIMIT ?.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/06 - CPU Scheduler, Time Sharing, Cores, and Threads.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/05 - Threading.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/04 - Threads (computer science).md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/03 - Thread.md",
@@ -188,18 +197,6 @@
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/62 - Virtual Threads in Java (Project Loom, Java 21+).md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/61 - Virtual Threads theory.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/60 - Java Concurrent Package.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/59 - Collections.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/58 - Java Concurrent Collections.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/57 - Java Exchanger Tutorial.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/56 - Exchanger.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/55 - Cycle Barrier vs CountdownLatch.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/54 - CyclicBarrier.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/53 - Countdown Latch.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/52 - BlockingQueue.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/51 - Producer-Consumer.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/50 - Java Fork&Join Framework.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/49 - CompletableFuture.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/48 - Future Task.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/reorder-threads.sh",
     "4 - Images/Java Thread Life Cycle Infographic.png",
     "Java Thread Lifecycle Infographic.png",
@@ -219,7 +216,6 @@
     "4 - Images/36432088-8530-4db2-be5d-056669faa834.png",
     "4 - Images/774eb969-136b-431c-b0cf-df687f29949b.png",
     "4 - Images/6b9c526f-69b8-4b83-acd1-d6cdfa5e6250.png",
-    "2f261d3d-d190-4ea8-b7f0-2e88f1302f9d.png",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/G - Real World Applications/Untitled.canvas"
   ]
 }

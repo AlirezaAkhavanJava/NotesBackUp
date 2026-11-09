@@ -4,7 +4,9 @@
 
 **DDL** stands for **Data Definition Language**. It is the group of SQL commands that create, change, and remove the _structure_ of your database: tables, columns, constraints, indexes, schemas, views, sequences, types, and so on. The main commands are `CREATE`, `ALTER`, `DROP`, and `TRUNCATE`, plus helpers like `COMMENT`.
 
-Think of a building. DDL is the blueprint work: adding rooms, moving walls, demolishing a floor. The _data_ (the furniture and people inside) is handled by other command groups. DDL matters because every table, rule, and index you rely on exists only because a DDL command made it. A good schema catches bad data before it ever reaches your Java code.
+Think of a building. DDL is the blueprint work: adding rooms, moving walls, demolishing a floor. The _data_ (the furniture and people inside) is handled by other command groups. 
+
+DDL matters because every table, rule, and index you rely on exists only because a DDL command made it. A good schema catches bad data before it ever reaches your Java code.
 
 PostgreSQL has a real advantage here: **DDL is transactional**. Most DDL commands can be wrapped in `BEGIN ... ROLLBACK`, so a failed migration can be undone cleanly. Many other databases can't do that.
 
@@ -21,6 +23,7 @@ PostgreSQL has a real advantage here: **DDL is transactional**. Most DDL command
 |TCL|Transaction Control Language|Transactions|`BEGIN`, `COMMIT`, `ROLLBACK`|
 
 This lesson covers only the first row. I'll mention the others when they touch DDL.
+
 
 ---
 
@@ -40,6 +43,8 @@ CREATE TABLE sales.orders (id serial PRIMARY KEY);
 
 SELECT * FROM sales.orders;
 ```
+
+> PostgreSQL does not support `IF NOT EXISTS` in `CREATE DATABASE`.
 
 Line by line:
 
@@ -78,14 +83,6 @@ CREATE TABLE customers (
 );
 ```
 
-Line by line:
-
-- `id bigint GENERATED ALWAYS AS IDENTITY PRIMARY KEY` is an auto-incrementing number. `PRIMARY KEY` means unique and not null, and it identifies each row.
-- `email varchar(255) NOT NULL UNIQUE` means a value is required and no two rows can share it.
-- `full_name text NOT NULL` means required text of any length.
-- `age int CHECK (age >= 0)` means a rule that rejects negative ages.
-- `status ... DEFAULT 'active'` means if you don't supply a value, `'active'` is used.
-- `created_at timestamptz ... DEFAULT now()` means the current time is filled in automatically.
 
 ### Constraints, in short
 
