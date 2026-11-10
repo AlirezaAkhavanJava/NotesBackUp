@@ -8,17 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "9f526b27cb82c1d4",
+            "id": "c786c1f91ea613c4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/01 - Process and Thread.md",
+                "file": "Read Every Day.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01 - Process and Thread"
+              "title": "Read Every Day"
             }
           }
         ]
@@ -80,7 +80,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 351.7143440246582
+    "width": 351.7143440246582,
+    "collapsed": true
   },
   "right": {
     "id": "318802b81bf4bc9f",
@@ -172,14 +173,16 @@
       "bases:Create new base": false
     }
   },
-  "active": "9f526b27cb82c1d4",
+  "active": "c786c1f91ea613c4",
   "lastOpenFiles": [
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/01 - SQL Queries & Commands/00 - DDL Command.md",
+    "Read Every Day.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/01 - Process and Thread.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/00 - What is a Process? ✧.md",
     "4 - Images/368981e4-63dc-4503-ae32-c290d9edb37f.png",
     "4 - Images/JVM Isolation and Memory Budget Infographic.png",
     "4 - Images/df486a32-18f5-4d6f-b85d-972015e8e72e.png",
     "4 - Images/Processes_ Isolation and Fairness.png",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/01 - Process and Thread.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/17 - Layered Architecture in Spring Boot ✧.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 17 (Designing and Creating )/07 - ProblemDetail.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 17 (Designing and Creating )/00 - How to design Entity, DTO, and Mapper ?.md",
@@ -194,7 +197,6 @@
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/42 - Proxies and @Transactional in Spring Boot.md",
     "1 - Notes/Computer & Programming /1 - Programming/9 - Networking/Pack 3 (History)/00 - World wide web.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/00 - Java & Enterprise ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/01 - SQL Queries & Commands/00 - DDL Command.md",
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/00 - Database Fundamentals/04 - Data Types in PostgreSQL.md",
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/00 - Database Fundamentals/05 - What is a Database ?.md",
     "4 - Images/730617d7-7a22-4f45-881e-efa9343aa5e6.png",
