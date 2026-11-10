@@ -16,9 +16,10 @@ Picture a machine running your IDE, PostgreSQL, your app and a browser at the sa
 
 So the OS wraps each running program in a **process**: a protected box with its own memory, its own resources, and a fair share of CPU time.
 
+![[Processes_ Isolation and Fairness.png]]
 ## Program vs. process
 
-A **program** is just bytes on disk. A **process** is that program while it is running, plus everything the OS tracks about it. Run the same program twice and you get two independent processes, each with its own **PID**.
+A **program** is just bytes on disk. ***A process is that program while it is running, plus everything the OS tracks about it.*** Run the same program twice and you get two independent processes, each with its own **PID**.
 
 Here is the part that matters for Java:
 
@@ -39,6 +40,9 @@ public class Demo {
 ```
 
 Run it twice and you get two different PIDs, because each run is a new process.
+
+
+![[df486a32-18f5-4d6f-b85d-972015e8e72e.png]]
 
 ---
 ## What a process owns
