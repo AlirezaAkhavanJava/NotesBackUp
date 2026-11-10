@@ -47,7 +47,7 @@ Run it twice and you get two different PIDs, because each run is a new process.
 ---
 ## What a process owns
 
-**Private memory.** Each process gets its own virtual address space. The OS maps those addresses to real RAM behind the scenes, so one process has no way to even name another process's memory. That is the isolation from the first section.
+**Private memory.** Each process gets its own virtual address space. The OS maps those addresses to real RAM behind the scenes, so one process has no way to even name another process's memory. That is the ***isolation*** from the first section.
 
 **Ports and files.** Open files and network sockets belong to the process. Only one process can own a given port at a time:
 
@@ -58,6 +58,9 @@ Web server failed to start. Port 8080 was already in use.
 That message means another process (often an old instance of your own app) is still holding 8080. To find it, use `lsof -i :8080` on Linux/macOS or `netstat -ano | findstr 8080` on Windows. Then kill the owner or change your port.
 
 **A memory budget that is bigger than your heap.** `-Xmx` limits only the Java heap. The JVM process also needs memory for thread stacks, class metadata, JIT-compiled code and native buffers. If a container allows 1 GB, setting `-Xmx1g` will get your process killed. Leave headroom.
+
+
+![[JVM Isolation and Memory Budget Infographic.png]]
 
 ---
 ## Threads: the part that actually runs
@@ -101,11 +104,14 @@ You would expect 200000, but you will usually get less. `count++` is three steps
 
 Compared with processes, then, threads are cheap to create and cheap to communicate between, but they have no isolation. An uncaught `OutOfMemoryError` or a native crash can take down the whole JVM. A badly behaved thread can hurt every other thread in its process.
 
+![[368981e4-63dc-4503-ae32-c290d9edb37f.png]]
+
+---
 ## Who gets the CPU
 
 You may have hundreds of threads and 8 cores. The OS **scheduler** gives each runnable thread a short time slice, then switches to another one. A switch is called a **context switch**: save one thread's state, load another's. It is fast but not free, which is why creating 10,000 ordinary threads is a bad idea. Each one also reserves roughly 1 MB for its stack by default.
 
-Note that the scheduler schedules **threads**, not processes. Processes don't run, threads do.
+***Note that the scheduler schedules threads, not processes. Processes don't run, threads do.***
 
 A thread is always in one of three basic situations:
 
@@ -131,7 +137,7 @@ Embedded Tomcat handles each incoming request on a thread from a pool. The defau
 Two things are worth knowing here:
 
 - **Your database connection pool is usually the real limit.** HikariCP's default is 10 connections. Even with 200 Tomcat threads, only 10 can talk to the database at once, and the other 190 wait for a connection. Raising the Tomcat limit without looking at this achieves nothing.
-- **Virtual threads attack the waiting problem.** They are threads managed by the JVM instead of the OS, so cheap that you can have millions of them. When one waits on I/O, the JVM parks it and reuses the underlying OS thread for other work. In Spring Boot you turn them on with `spring.threads.virtual.enabled=true`, and Tomcat then runs each request on a virtual thread. On JDK 25 this works well with `synchronized` too, since the old problem of virtual threads getting pinned by `synchronized` was fixed in JDK 24. They help when you wait a lot, as with I/O. They do nothing for CPU-heavy work, and they don't enlarge your database connection pool.
+- **Virtual threads attack the waiting problem.** They are threads managed by the JVM instead of the OS, so cheap that you can have millions of them. When one waits on I/O, the JVM parks it and reuses the underlying OS thread for other work. In Spring Boot you turn them on with ***spring.threads.virtual.enabled=true***, and Tomcat then runs each request on a virtual thread. On JDK 25 this works well with `synchronized` too, since the old problem of virtual threads getting pinned by `synchronized` was fixed in JDK 24. They help when you wait a lot, as with I/O. They do nothing for CPU-heavy work, and they don't enlarge your database connection pool.
 
 ---
 ## When a process ends

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/00 - What is a Process? ✧.md",
+                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/01 - Process and Thread.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "00 - What is a Process? ✧"
+              "title": "01 - Process and Thread"
             }
           }
         ]
@@ -172,12 +172,14 @@
       "bases:Create new base": false
     }
   },
-  "active": "3535a2e099904c39",
+  "active": "9f526b27cb82c1d4",
   "lastOpenFiles": [
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/00 - What is a Process? ✧.md",
+    "4 - Images/368981e4-63dc-4503-ae32-c290d9edb37f.png",
+    "4 - Images/JVM Isolation and Memory Budget Infographic.png",
     "4 - Images/df486a32-18f5-4d6f-b85d-972015e8e72e.png",
     "4 - Images/Processes_ Isolation and Fairness.png",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/01 - Process and Thread.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/00 - What is a Process? ✧.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/17 - Layered Architecture in Spring Boot ✧.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 17 (Designing and Creating )/07 - ProblemDetail.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 17 (Designing and Creating )/00 - How to design Entity, DTO, and Mapper ?.md",
@@ -217,9 +219,6 @@
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/14 - Advanced PostgreSQL",
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/13 - Performance & Optimization",
     "4 - Images/Pasted image 20261108122644.png",
-    "Pasted image 20261108122644.png",
-    "4 - Images/spring-security-framework.jpg",
-    "4 - Images/28a39741-1ff7-4b66-a221-4753b869abc0.png",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/G - Real World Applications/Untitled.canvas"
   ]
 }
