@@ -1,6 +1,4 @@
 
-## Core intuition
-
 CRUD (Create, Read, Update, Delete) in Spring Boot is the complete vertical slice through every layer you've learned: an **Entity** (maps to a DB table) → a **Repository** (talks to the DB) → a **Service** (business logic) → a **RestController** (exposes HTTP endpoints). Every piece you already understand — `@Component` family, dependency injection, auto-configuration — comes together here. This is the "hello world" of real Spring Boot apps, and once it clicks, you can build almost any API by repeating this pattern.
 
 Let's build a `Game` CRUD API end to end.

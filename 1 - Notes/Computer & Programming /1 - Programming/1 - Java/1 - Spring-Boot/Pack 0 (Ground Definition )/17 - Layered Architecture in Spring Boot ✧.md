@@ -8,13 +8,11 @@ The code below targets current Spring Boot. Spring Boot 4 is built on Spring Fra
 
 ## The flow, in both directions
 
-```
-HTTP request → Controller → Service → Repository → Database
-HTTP response ← Controller ← Service ← Repository ← Database
-```
+![[HTTP Request and Response Flow.png]]
 
-The rule is that **dependencies point downward only**. A controller may call a service, and a service may call a repository. A repository never calls a service, and a service never knows what HTTP is.
+The rule is that ***dependencies point downward only***. A controller may call a service, and a service may call a repository. A repository never calls a service, and a service never knows what HTTP is.
 
+---
 ## Layer 1: Persistence (repository)
 
 **The problem:** storing and loading objects with raw JDBC means writing lots of repetitive SQL and result-mapping code.
@@ -27,7 +25,7 @@ The rule is that **dependencies point downward only**. A controller may call a s
 
 ```java
 @Entity
-@Table(name = "users")                       // "user" is a reserved word in many databases
+@Table(name = "users")   // "user" is a reserved word in many databases
 public class User {
 
     @Id
@@ -37,7 +35,7 @@ public class User {
     @Column(nullable = false, unique = true) // enforced by the database, not just by your code
     private String name;
 
-    protected User() {}                      // JPA requires a no-arg constructor
+    protected User() {}        // JPA requires a no-arg constructor
 
     public User(String name) { this.name = name; }
 
@@ -45,6 +43,9 @@ public class User {
     public String getName() { return name; }
 }
 
+```
+
+```java
 public interface UserRepository extends JpaRepository<User, Long> {
     Optional<User> findByName(String name);  // query generated from the method name
     boolean existsByName(String name);
@@ -53,6 +54,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
 Two things matter here. The `unique` constraint is what makes `findByName` safe to return an `Optional`. Without it, two users with the same name would make that method throw an exception. You also don't need `@Repository` on a Spring Data interface, because Spring detects it automatically.
 
+---
 ## Layer 2: Service (business logic)
 
 **The problem:** rules like "names must be unique" don't belong in a controller (they'd be duplicated for every entry point) or in a repository (it should only store data).
@@ -87,11 +89,12 @@ public class UserService {
 
 The service throws **meaningful domain exceptions** and knows nothing about HTTP status codes. It also uses **constructor injection**, which Spring prefers because the dependency is explicit, can be `final`, and is easy to pass in during unit tests.
 
+---
 ## Layer 3: Presentation (controller)
 
 **The problem:** the outside world speaks HTTP and JSON, while your inside world speaks entities and exceptions.
 
-**The solution:** the controller translates between the two, and it does nothing else. It uses **DTOs** (Data Transfer Objects) so the API shape is separate from the database shape. Returning an entity directly can leak internal fields, tie your API to your table design, and cause serialization trouble with lazy-loaded relations.
+**The solution:** the controller translates between the two, and it does nothing else. It uses **DTOs** (Data Transfer Objects) so the API shape is separate from the database shape. ***Returning an entity directly can leak internal fields***, tie your API to your table design, and cause serialization trouble with lazy-loaded relations.
 
 ```java
 public record CreateUserRequest(@NotBlank String name) {}
@@ -123,6 +126,7 @@ public class UserController {
 
 `@Valid` triggers the `@NotBlank` check and needs the validation starter on your classpath.
 
+---
 ## Turning exceptions into HTTP responses
 
 Your service throws domain exceptions, so something must map them to status codes. One `@RestControllerAdvice` class does this for the whole app, using `ProblemDetail`, Spring's built-in standard error format.

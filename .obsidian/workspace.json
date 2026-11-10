@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "471195b355bef043",
+        "id": "2463dee5d9112e66",
         "type": "tabs",
         "children": [
           {
-            "id": "7484d7de2a59b876",
+            "id": "9f526b27cb82c1d4",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -168,8 +168,22 @@
       "bases:Create new base": false
     }
   },
-  "active": "7484d7de2a59b876",
+  "active": "9f526b27cb82c1d4",
   "lastOpenFiles": [
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/17 - Layered Architecture in Spring Boot ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 17 (Designing and Creating )/07 - ProblemDetail.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 17 (Designing and Creating )/00 - How to design Entity, DTO, and Mapper ?.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 17 (Designing and Creating )/06 - How to use ResponseStatus.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/44 - Persistance.md",
+    "4 - Images/HTTP Request and Response Flow.png",
+    "HTTP Request and Response Flow (1).png",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/16 - CRUD ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/15 - Stereotype annotations ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/12 - The Three Ways to Inject Dependencies ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/14 - @Autowired ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/42 - Proxies and @Transactional in Spring Boot.md",
+    "1 - Notes/Computer & Programming /1 - Programming/9 - Networking/Pack 3 (History)/00 - World wide web.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/00 - Java & Enterprise ✧.md",
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/01 - SQL Queries & Commands/00 - DDL Command.md",
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/00 - Database Fundamentals/04 - Data Types in PostgreSQL.md",
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/00 - Database Fundamentals/05 - What is a Database ?.md",
@@ -185,18 +199,6 @@
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/06 - CPU Scheduler, Time Sharing, Cores, and Threads.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/05 - Threading.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/04 - Threads (computer science).md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/03 - Thread.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/02 - Process & Multi-Tasking.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/01 - Process and Thread.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/00 - What is a Process?.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/67 - Algos.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/66 - Project Reactor Tutorial ,  From Simple to Advanced.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/65 - Jstack.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/64 - Performance Tuning.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/63 - Multi-Threaded webservers.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/62 - Virtual Threads in Java (Project Loom, Java 21+).md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/61 - Virtual Threads theory.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/60 - Java Concurrent Package.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/reorder-threads.sh",
     "4 - Images/Java Thread Life Cycle Infographic.png",
     "Java Thread Lifecycle Infographic.png",
@@ -214,8 +216,6 @@
     "4 - Images/spring-security-framework.jpg",
     "4 - Images/28a39741-1ff7-4b66-a221-4753b869abc0.png",
     "4 - Images/36432088-8530-4db2-be5d-056669faa834.png",
-    "4 - Images/774eb969-136b-431c-b0cf-df687f29949b.png",
-    "4 - Images/6b9c526f-69b8-4b83-acd1-d6cdfa5e6250.png",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/G - Real World Applications/Untitled.canvas"
   ]
 }

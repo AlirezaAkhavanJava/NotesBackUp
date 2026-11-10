@@ -1,6 +1,8 @@
 
 
-Java Enterprise means using Java to build the big, serious systems that businesses run on, like banking platforms, online stores and booking systems. These systems have needs that a small program doesn't: many users at once, safe database transactions, security, and the ability to keep running and grow over time. In the early days, Java EE (now called Jakarta EE) was the official answer. It was a set of standards for things like web requests (Servlets), database access (JPA) and transactions, and it ran on heavy application servers. It worked, but it was verbose and hard to configure and test, so developers spent more time wiring things together than writing business logic. That's why you need the Spring ecosystem.
+Java Enterprise means using Java to build the big, serious systems that businesses run on, like banking platforms, online stores and booking systems.
+
+These systems have needs that a small program doesn't: many users at once, safe database transactions, security, and the ability to keep running and grow over time. In the early days, Java EE (now called Jakarta EE) was the official answer. It was a set of standards for things like web requests (Servlets), database access (JPA) and transactions, and it ran on heavy application servers. It worked, but it was verbose and hard to configure and test, so developers spent more time wiring things together than writing business logic. That's why you need the Spring ecosystem.
 
 Spring lets you write plain Java classes and handles the wiring for you. Its container creates your objects, connects them to each other (dependency injection) and manages things like transactions and security around them. 
 

@@ -2,8 +2,6 @@
 
 A **stereotype annotation** is a label you put on a class to tell Spring two things: "create an object of this class and manage it" (make it a bean), and "this is the role it plays in the app." Spring ships a family of them: `@Component` is the generic one, and `@Service`, `@Repository`, `@Controller` and `@RestController` are specialized versions for the business, data and web layers.
 
-You had five notes on this one idea because each annotation is usually taught on its own. This note puts them together: how the family is built, how Spring finds them, what each member adds, and how they fit together into controller → service → repository. It builds on your `@Configuration`, `@ComponentScan`, `@Autowired` and AOP notes, and it points to your MVC and data access notes for the details that belong there.
-
 ---
 
 ## 1. The family: one base annotation, four flavors
@@ -27,7 +25,7 @@ Spring's scan doesn't look for `@Component` literally. It looks for anything tha
 
 The label still matters even where there is no extra behavior. It tells every reader what a class is for, and tools (AOP pointcuts, IDE navigation, architecture-test rules) can target "all services." Swapping `@Service` for `@Component` would run, but it throws that information away.
 
-Your `@Configuration` note showed that `@Configuration` is a `@Component` too. The difference is who builds the object: with a stereotype, **Spring** calls the constructor, and with a `@Bean` method, **you** do.
+ `@Configuration` is a `@Component` too. The difference is who builds the object: with a stereotype, **Spring** calls the constructor, and with a `@Bean` method, **you** do.
 
 ---
 
@@ -180,8 +178,6 @@ Key facts:
 - `redirect:` is a `@Controller`-only instruction. It underlies the **Post-Redirect-Get** pattern, so refreshing after a form submit doesn't resubmit it.
 - For a Spring Boot API with an Angular front end, you'll use `@RestController` almost always. `@Controller` with Thymeleaf suits server-rendered sites such as admin tools and SEO-heavy pages.
 
-Your MVC note covers the full request flow (`DispatcherServlet`, view resolution) and the REST notes cover status codes, validation and error handling, so this section only keeps what distinguishes the two annotations.
-
 ---
 
 ## 6. `@Repository` and Spring Data
@@ -286,7 +282,7 @@ model/  dto/  exception/           order/ OrderController, OrderService, OrderRe
 |Several differently configured instances, or conditional creation|`@Bean`|
 |A Boot starter or shared library|`@Configuration` + `@Bean` + `@ConditionalOnMissingBean`|
 
-One trap: a `@Bean` method inside a plain `@Component` runs in **lite mode**, so calling `a()` from another `@Bean` method creates a **second, unmanaged** `A`. Use a `@Configuration` class for `@Bean` methods (your `@Configuration` note explains why).
+One trap: a `@Bean` method inside a plain `@Component` runs in **lite mode**, so calling `a()` from another `@Bean` method creates a **second, unmanaged** `A`. Use a `@Configuration` class for `@Bean` methods.
 
 ---
 
@@ -297,8 +293,7 @@ Annotations such as `@Transactional`, `@Async`, `@Cacheable` and `@PreAuthorize`
 ```java
 @Service
 public class OrderService {
-    public void outer() { inner(); }          // calls this.inner(): skips the proxy
-
+    public void outer() { inner(); }    // calls this.inner(): skips the proxy
     @Transactional
     public void inner() { ... }               // NO transaction starts
 }
