@@ -1,5 +1,5 @@
 
-Perfect — that’s a **basic bisect script** for Git. Let me break it down for you 🐐:
+That’s a **basic bisect script** for Git. Let me break it down for you :
 
 ```bash
 if grep -q "SCANNING" "scripts/scan.sh"; then

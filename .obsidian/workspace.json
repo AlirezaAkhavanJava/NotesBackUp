@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "4e4750dc6840c2a8",
+        "id": "6b5d0d3b05aa693f",
         "type": "tabs",
         "children": [
           {
-            "id": "aed926cb186f4c45",
+            "id": "ebd0f65b179ec1b1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 2/4 - How a Commit is Made.md",
+                "file": "1 - Notes/Computer & Programming /1 - Programming/3 - Git/14 - Scripting & Automation/01 - Script.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "4 - How a Commit is Made"
+              "title": "01 - Script"
             }
           }
         ]
@@ -80,8 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 388.3753852844238,
-    "collapsed": true
+    "width": 388.3753852844238
   },
   "right": {
     "id": "318802b81bf4bc9f",
@@ -173,36 +172,45 @@
       "bases:Create new base": false
     }
   },
-  "active": "aed926cb186f4c45",
+  "active": "ebd0f65b179ec1b1",
   "lastOpenFiles": [
-    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 2/3 - Git Repository Internals ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 2/2 - Git Repository ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 2/1 - Need for a VCS ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 2/0 - Git commands list ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/01 - SQL Queries & Commands/00 - DDL commands in PostgreSQL ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/00 - Database Fundamentals/07 - PostgreSQL enums and @Enumerated.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/01 - SQL Queries & Commands/16 - TCL in PostgreSQL.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/71 - Designing threads, PostgreSQL and Redis for a scalable Spring Boot app.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/01 - Process and Thread.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/00 - What is a Process? ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/70 - Database connection pools.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/69 - Tomcat's threading model.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/68 - Tomcat's request thread pool.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/14 - Scripting & Automation/00 - bisect run.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/01 - Git Configuration/05 - Set and Unset.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/01 - Git Configuration/04 - Retrieving Configurations.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/01 - Git Configuration/03 - Git config pull rebase.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/01 - Git Configuration/02 - Git Config , Sections and Keys.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/01 - Git Configuration/01 - Git Config.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/01 - Git Configuration/00 - Configuration.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/00 - Git Fundamentals/14 - Working Tree.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/00 - Git Fundamentals/13 - Using Porcelain and Plumbing.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/00 - Git Fundamentals/12 - The Index File.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/00 - Git Fundamentals/11 - Porcelain and Plumbing.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/00 - Git Fundamentals/10 - Need for a VCS ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/00 - Git Fundamentals/09 - Monorepos.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/00 - Git Fundamentals/08 - How to Connect Your Local Git Repository to GitHub.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/00 - Git Fundamentals/07 - Git States Management Using Commands.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/00 - Git Fundamentals/06 - Git States.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/00 - Git Fundamentals/05 - Git Repository ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/00 - Git Fundamentals/04 - Git Repository Internals ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/00 - Git Fundamentals/03 - Git Repository.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/00 - Git Fundamentals/02 - Git Files.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/00 - Git Fundamentals/01 - Git files.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/00 - Git Fundamentals/00 - Git.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/Pack 2/4 - How a Commit is Made.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/99 - Review Manually/08 - The Style, Formalized.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/99 - Review Manually/07 - Remote delete.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/99 - Review Manually/06 - Pick and s.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/99 - Review Manually",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/14 - Scripting & Automation",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/13 - Recovery & Troubleshooting",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/12 - GitHub & Forks",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/11 - Tags & Versioning",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/10 - Worktrees",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/09 - Git Ignore Rules",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/08 - Stashing",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/07 - Undoing & Comparing Changes",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/06 - Remotes & Collaboration",
     "4 - Images/OS Scheduler State Transitions.png",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/02 - Process & Multi-Tasking.md",
-    "Read Every Day.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/61 - Virtual Threads theory.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/42 - Thread Pools.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/43 - Thread Pools Guide.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/26 - Concurrency Issues.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/25 - Race Conditions.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/24 - Definitions of Key Concepts.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/18 - Working with Threads.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/17 - Runnable.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/12 - Types of Threads ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/11 - Multithreading & Resources.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/09 - Parallelism.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 21 (Spring Data auditing)",
     "4 - Images/Spring_JPA Loading and Transactions Infographic.png",
     "4 - Images/368981e4-63dc-4503-ae32-c290d9edb37f.png",
     "4 - Images/JVM Isolation and Memory Budget Infographic.png",
@@ -211,16 +219,7 @@
     "4 - Images/HTTP Request and Response Flow.png",
     "HTTP Request and Response Flow (1).png",
     "4 - Images/730617d7-7a22-4f45-881e-efa9343aa5e6.png",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/reorder-threads.sh",
     "4 - Images/Java Thread Life Cycle Infographic.png",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/1 - Confusion",
-    "1 - Notes/Computer & Programming /1 - Programming/10 - Programming in action/8 - Patient-Managment",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/19 - Definitions",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/18 - PostgreSQL Specials",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/17 - CLI Commands",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/16 - Review Manually",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/15 - Data Architecture & Engineering",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/14 - Advanced PostgreSQL",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/G - Real World Applications/Untitled.canvas"
   ]
 }
