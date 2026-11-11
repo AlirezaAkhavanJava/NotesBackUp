@@ -2,6 +2,11 @@
 
 Every Java program you run, including a Spring Boot app, lives inside an operating-system **process**. The process owns the memory, the open files, and the network ports. **Threads**, the things that do the work and cause your concurrency bugs, live inside it.
 
+- Memory 
+- Open files
+- Ports
+- Threads
+
 We'll go in order: why processes exist, what they own, how threads fit inside, who gets the CPU, and how this shows up in a Spring Boot app. By the end, errors like "Port 8080 was already in use" and "thread pool exhausted" should read as plain cause and effect.
 
 ---
@@ -10,16 +15,19 @@ We'll go in order: why processes exist, what they own, how threads fit inside, w
 
 Picture a machine running your IDE, PostgreSQL, your app and a browser at the same time. With no structure, three things break:
 
-- One program writes into memory another one is using, and corrupts it.
-- One crashing program takes everything down with it.
-- One infinite loop eats the CPU and nothing else runs.
+- One program writes into memory another one is using, and corrupts it(***Memory corruption***).
+- One crashing program takes everything down with it(***Crash Cascade***).
+- One infinite loop eats the CPU and nothing else runs(***CPU Starvation***).
 
-So the OS wraps each running program in a **process**: a protected box with its own memory, its own resources, and a fair share of CPU time.
+So the OS wraps each running program in a **process**: ***a protected box with its own memory, its own resources, and a fair share of CPU time.***
+
+> A process doesn't necessarily own a physical amount of RAM. It owns a virtual address space, and the OS manages its mapping to physical memory.
+Also, CPU scheduling doesn't guarantee absolute fairness. The scheduler uses policies and priorities to distribute CPU time.
 
 ![[Processes_ Isolation and Fairness.png]]
 ## Program vs. process
 
-A **program** is just bytes on disk. ***A process is that program while it is running, plus everything the OS tracks about it.*** Run the same program twice and you get two independent processes, each with its own **PID**.
+A **program** is just bytes on disk. ***A process is that program while it is running, plus everything the OS tracks about it.*** Run the same program twice and you get two independent processes, each with its own **PID**. (A process is a running program, together with everything the operating system gives it to run in.)
 
 Here is the part that matters for Java:
 
@@ -47,9 +55,9 @@ Run it twice and you get two different PIDs, because each run is a new process.
 ---
 ## What a process owns
 
-**Private memory.** Each process gets its own virtual address space. The OS maps those addresses to real RAM behind the scenes, so one process has no way to even name another process's memory. That is the ***isolation*** from the first section.
+**Private memory.** Each process gets ***its own virtual address space.*** The OS maps those addresses to real RAM behind the scenes, so one process has no way to even name another process's memory. That is the ***isolation*** from the first section.
 
-**Ports and files.** Open files and network sockets belong to the process. Only one process can own a given port at a time:
+**Ports and files.** Open files and network sockets belong to the process. ***Only one process can own a given port at a time***:
 
 ```text
 Web server failed to start. Port 8080 was already in use.
@@ -57,7 +65,7 @@ Web server failed to start. Port 8080 was already in use.
 
 That message means another process (often an old instance of your own app) is still holding 8080. To find it, use `lsof -i :8080` on Linux/macOS or `netstat -ano | findstr 8080` on Windows. Then kill the owner or change your port.
 
-**A memory budget that is bigger than your heap.** `-Xmx` limits only the Java heap. The JVM process also needs memory for thread stacks, class metadata, JIT-compiled code and native buffers. If a container allows 1 GB, setting `-Xmx1g` will get your process killed. Leave headroom.
+**A memory budget that is bigger than your heap.** [^1]`-Xmx` limits only the Java heap. The JVM process also needs memory for thread stacks, class metadata, JIT-compiled code and native buffers. If a container allows 1 GB, setting `-Xmx1g` will get your process killed. Leave headroom.
 
 
 ![[JVM Isolation and Memory Budget Infographic.png]]
@@ -115,22 +123,14 @@ You may have hundreds of threads and 8 cores. The OS **scheduler** gives each ru
 
 A thread is always in one of three basic situations:
 
-```text
-          scheduler picks it
-   Ready ───────────────────→ Running
-     ↑ ←─────────────────────── │
-     │     time slice ends      │ waits for I/O, a lock, a sleep...
-     │                          ↓
-     └──────────────────────  Waiting
-          what it waited for happened
-```
+![[OS Scheduler State Transitions.png]]
 
 A waiting thread uses no CPU, and the OS hands the CPU to someone else. What it does consume is a thread, which is a limited resource.
 
 One detail that trips people up when reading thread dumps: Java has its own state names (`RUNNABLE`, `BLOCKED`, `WAITING`, `TIMED_WAITING`). `BLOCKED` in Java means specifically "waiting to enter a `synchronized` block." A thread stuck waiting for a database reply on a socket usually shows as `RUNNABLE`, even though it is doing nothing. You can take a thread dump of a running app with `jcmd <pid> Thread.print`.
 
 ---
-## How this plays out in Spring Boot
+# How this plays out in Spring Boot
 
 Embedded Tomcat handles each incoming request on a thread from a pool. The default maximum is 200. Suppose every request calls a slow database. Threads spend most of their time waiting, so 200 concurrent slow requests occupy all 200 threads, and request 201 sits in a queue while your CPU is almost idle. That is the "thread pool exhausted" situation. The machine isn't busy. It just ran out of threads.
 
@@ -153,3 +153,5 @@ Because of isolation, two processes can't just share objects. They exchange byte
 
 
 [[Threads]]
+
+[^1]: `-Xmx` is a JVM startup option that sets the maximum heap memory the JVM is allowed to use. For example, `java -Xmx2g MyApp` limits the Java heap to a maximum of 2 GB. The heap is where Java stores objects created at runtime. If your application needs more heap memory than this limit allows and the JVM cannot free enough space through garbage collection, it may throw an `OutOfMemoryError`. Remember: `-Xmx` limits the heap, not the entire JVM process memory; the JVM also needs memory for thread stacks, metaspace, native allocations, and other internal structures.

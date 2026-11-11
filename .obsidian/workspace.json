@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/00 - What is a Process? ✧.md",
+                "file": "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/01 - SQL Queries & Commands/00 - DDL Command.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "00 - What is a Process? ✧"
+              "title": "00 - DDL Command"
             }
           }
         ]
@@ -80,8 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 378.2874641418457,
-    "collapsed": true
+    "width": 378.2874641418457
   },
   "right": {
     "id": "318802b81bf4bc9f",
@@ -176,6 +175,12 @@
   "active": "d76b36cbf38f9cc4",
   "lastOpenFiles": [
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/01 - Process and Thread.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/00 - What is a Process? ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/70 - Database connection pools.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/69 - Tomcat's threading model.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/68 - Tomcat's request thread pool.md",
+    "4 - Images/OS Scheduler State Transitions.png",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/02 - Process & Multi-Tasking.md",
     "Read Every Day.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/61 - Virtual Threads theory.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/42 - Thread Pools.md",
@@ -193,14 +198,9 @@
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/05 - Threading.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/04 - Threads (computer science).md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/03 - Thread.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/02 - Process & Multi-Tasking.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 5 (Design and implemention)/00 - Designing and Building the Security Part.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 5 (Design and implemention)/05 - Configuration.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 4 (security)/00 - The Spring Security Filter Chain in Depth.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 2 (Concepts)/05 - Spring Security’s PasswordEncoder ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 2 (Concepts)/04 - Four Rules for Storing Passwords ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 2 (Concepts)/03 - Passwords and Hashing ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 17 (Designing and Creating )/12 - Password ecosystem.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 21 (Spring Data auditing)",
     "4 - Images/Spring_JPA Loading and Transactions Infographic.png",
     "4 - Images/368981e4-63dc-4503-ae32-c290d9edb37f.png",
@@ -212,7 +212,6 @@
     "4 - Images/730617d7-7a22-4f45-881e-efa9343aa5e6.png",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/reorder-threads.sh",
     "4 - Images/Java Thread Life Cycle Infographic.png",
-    "Java Thread Lifecycle Infographic.png",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/1 - Confusion",
     "1 - Notes/Computer & Programming /1 - Programming/10 - Programming in action/8 - Patient-Managment",
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/19 - Definitions",
