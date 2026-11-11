@@ -1,4 +1,4 @@
-A **DTO (Data Transfer Object)** is a simple object used to **carry data between different parts of an application**, especially between the client and the backend. Instead of sending the actual Entity with all its database-related fields, we create a DTO containing **only the data we want to receive or send**, which gives us better control over the API and prevents exposing unnecessary or sensitive information.
+A **DTO (Data Transfer Object)** is a simple object used to ***carry data between different parts of an application***, especially between the client and the backend. Instead of sending the actual Entity with all its database-related fields, we create a DTO containing **only the data we want to receive or send**, which gives us better control over the API and prevents exposing unnecessary or sensitive information.
 
 
 
@@ -127,6 +127,7 @@ The JSON is:
 
 There is no recursion, no hidden fields, and **no Jackson annotations anywhere**.
 
+---
 ## Request DTOs vs response DTOs
 
 DTOs work in both directions, and they are usually **different classes**:

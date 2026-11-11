@@ -1,6 +1,7 @@
 
 
-An **entity** is a plain Java class that represents a row in a database table. Each instance of the class is one row, each field is a column, and the class itself maps to the table. In Spring Boot you mark the class with `@Entity` (from JPA, the Jakarta Persistence API), and the framework, usually Hibernate underneath, takes care of translating between your objects and SQL.
+An **entity** is a plain Java class that represents a row in a database table. Each instance of the class is one row, each field is a column, and the class itself maps to the table.
+In Spring Boot you mark the class with `@Entity` (from JPA, the Jakarta Persistence API), and the framework, usually Hibernate underneath, takes care of translating between your objects and SQL. Hibernate uses the SQL dialect to generate SQL compatible with your database.`spring.jpa.hibernate.ddl-auto` tells Hibernate what to do with the database schema when the application starts.
 
 Think of it as a contract: "this object's state is something I want to persist." Once a class is an entity, you can save, load, update, and delete it by working with objects, and you rarely write `INSERT` or `UPDATE` statements yourself.
 
@@ -50,9 +51,9 @@ public class User {
 
 - **`@Entity`** tells JPA to manage this class.
 - **`@Table`** is optional. Without it, the table name defaults to the class name.
-- **`@Id`** marks the primary key. Every entity must have one.
+- **`@Id`** marks the primary key. ***Every entity must have one.***
 - **`@GeneratedValue`** lets the database (or a sequence) produce the key. `IDENTITY` uses auto-increment, while `SEQUENCE` is usually preferred on PostgreSQL and Oracle because it allows batch inserts.
-- **`@Column`** customizes the column. Fields without it still map, using the field name.
+- **`@Column`** lets you define mapping rules and constraints for an entity field. Hibernate, as the ORM provider, can translate those rules into SQL schema definitions.
 - **The no-arg constructor** is mandatory. Hibernate creates instances reflectively and then fills in the fields. `protected` is enough and stops other code from creating a half-empty object.
 
 With Spring Data you then get a repository almost for free:
@@ -63,6 +64,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 }
 ```
 
+---
 ## The idea that explains most surprises: the persistence context
 
 This is the concept people skip and then get confused by later. When you load an entity inside a transaction, Hibernate keeps it in a **persistence context** (the `EntityManager`'s first-level cache) and _watches it_. An entity is always in one of these states:
@@ -75,12 +77,14 @@ This is the concept people skip and then get confused by later. When you load an
 ```java
 @Transactional
 public void rename(Long id, String newName) {
-    User user = userRepository.findById(id).orElseThrow();
+    User user = userRepository.findById(id).orElseThrow(); //Loading
     user.setName(newName);   // no save() call, and the UPDATE still happens
 }
 ```
 
 That works because of **dirty checking**: at commit, Hibernate compares the managed entity with its original snapshot and issues an `UPDATE` if anything changed. Once you know this, many "magic" behaviors, and many bugs, stop being mysterious. This is also why `@Transactional` matters so much with entities.
+
+![[Spring_JPA Loading and Transactions Infographic.png]]
 
 ## Relationships
 

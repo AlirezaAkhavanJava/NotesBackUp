@@ -19,7 +19,7 @@ Anyone who can read this table can log in as anyone. That includes a thief with 
 
 The damage spreads beyond your app. People reuse passwords. Alice's `sunflower42` probably also opens her email. Your leak becomes her problem everywhere.
 
-So the rule is simple. Your database should never contain something that _is_ a password. The next rule shows what to store instead.
+So the rule is simple. ***Your database should never contain something that is a password***. The next rule shows what to store instead.
 
 ---
 ## Rule 2: Hashing is one-way
@@ -61,6 +61,7 @@ This is the part people miss. An attacker can't _reverse_ a hash, but they can _
 
 So "one-way" stops a thief from reading passwords directly, but it doesn't stop them from guessing. Rules 3 and 4 deal with guessing.
 
+---
 ## Rule 3: Salt every password
 
 **The benefit:** attackers can't crack many accounts at once, and they can't use precomputed lookup tables.
@@ -104,6 +105,7 @@ System.out.println(encoder.matches("password123", b));    // true
 
 The same password produced two different hashes, and both still verify. That's because each hash carries its own salt inside it. This is also why you must call `matches` and never compare hashes with `equals`.
 
+---
 ## Rule 4: Use slow, purpose-built algorithms
 
 **The benefit:** every guess an attacker makes becomes expensive, so cracking takes years instead of minutes.

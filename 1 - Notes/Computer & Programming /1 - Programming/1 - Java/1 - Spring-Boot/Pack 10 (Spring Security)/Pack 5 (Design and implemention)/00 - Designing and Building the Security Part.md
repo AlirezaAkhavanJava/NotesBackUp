@@ -2,7 +2,7 @@
 
 Knowing Spring Security's pieces (filters, `Authentication`, `AuthenticationManager`, JWT) is like knowing the parts of an engine. Building a real app means deciding how those parts fit together, and in which order you build them. Most people get stuck because they start coding the filter first. The right start is a few design decisions made on paper, then a fixed build order.
 
-In this lesson you get one design pattern to follow: **a self-contained security layer with a fixed build order**. You decide five things first, put all security code in its own package, and build it step by step, testing each step before the next. Every later question you ask can be answered by asking "which step does this belong to?"
+In this lesson you get one design pattern to follow: **a self-contained security layer with a fixed build order**. You decide five things first, put all security code in its own package, and build it step by step, testing each step before the next.
 
 ## Part 1: Five decisions before any code
 
