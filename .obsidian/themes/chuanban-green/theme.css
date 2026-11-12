@@ -1,0 +1,2062 @@
+/* ==============================================================================
+   chuanban-green (松绿记事本) — Botanical Editorial Neo-Brutalism Theme for Obsidian
+   Author: chuanban (https://github.com/Anarcadia)
+   Version: 1.0.5
+   License: MIT
+   Description: 「松绿记事本」暖调纸媒新粗野主义 (Warm Editorial Neo-Brutalism) 独立主题。
+                复刻「直角高对比 1px 外露黑框网格 + 三阶灰调印刷纸张底色 + 黑粗体排版 +
+                工具区极客等宽字体 + 温和耐看的浓绿/淡绿强调色与粗犷亮色硬边阴影」。
+   ============================================================================== */
+
+/* @settings
+name: chuanban-green (松绿记事本)
+id: chuanban-green
+settings:
+    - id: mp-tab-style
+      title: 顶部激活标签页风格 (Active Tab Style)
+      description: 切换顶部激活 Tab 是「竹青浓绿底+炭黑粗体字（复刻原图撞色感）」还是「深松墨绿底+象牙白字」
+      type: class-select
+      allowEmpty: false
+      default: mp-tab-sage-bold
+      options:
+          - label: "竹青浓绿底 + 炭黑粗体字 (默认 · 复刻原图粗野主义撞色块)"
+            value: mp-tab-sage-bold
+          - label: "深松墨绿底 + 象牙米白字 (沉稳古典图书馆风格)"
+            value: mp-tab-forest-dark
+    - id: mp-typography-preset
+      title: 正文字体预设 (Body Typography Preset)
+      description: 默认采用复刻原图的「现代印刷黑粗体 (Gothic Medium)」，亦可切换打字机体或书卷宋体
+      type: class-select
+      allowEmpty: false
+      default: mp-font-gothic
+      options:
+          - label: "现代印刷黑粗体 (默认 · 思源黑体/苹方/Inter · 扎实油墨感)"
+            value: mp-font-gothic
+          - label: "更纱打字机体 (Sarasa Mono Slab SC · 复古活字机械感)"
+            value: mp-font-typewriter
+          - label: "经典书卷宋体 (西文无衬线 + 宋体-简 · 传统学术期刊感)"
+            value: mp-font-songti
+    - id: mp-hard-shadow-size
+      title: 粗犷亮色硬阴影偏移量 (Hard Shadow Offset)
+      description: 调整提问框、引用块、弹窗与悬浮按钮右下角淡绿硬阴影的粗犷程度 (默认 3px)
+      type: variable-text
+      default: 3px
+    - id: line-height-normal
+      title: 正文行高 (Body Line Height)
+      description: 调整正文标准阅读行高 (默认 1.72)
+      type: variable-number-slider
+      default: 1.72
+      min: 1.40
+      max: 2.20
+      step: 0.02
+*/
+
+/* ==============================================================================
+   1. 字体声明 (@font-face)
+   - 满血档：自动探测并接管用户已安装的 Sarasa Mono Slab SC / vivo Sans / OPPO Sans 4.0 / 思源黑体
+   - 零预装裸机兜底档（无需安装任何第三方字体，开箱即实现双模式中英文字体分离）：
+     * 阅读模式 (.markdown-rendered)：macOS 自动落入「冬青黑体 Hiragino Sans GB (W3/W6 锐利喇叭口印刷黑体)」，
+       Windows 自动落入「微软雅黑 Microsoft YaHei (400/700 现代厚重黑体)」；
+     * 编辑/源码模式 (.markdown-source-view.mod-cm6)：西文/数字/Markdown符号自动落入「SF Mono / Menlo / Cascadia Mono / Consolas」，
+       中文自动落入「思源黑体 Source Han Sans SC」、macOS「PingFang SC (平头几何黑体) / Heiti SC」与 Windows「Microsoft YaHei (微软雅黑，锐利扎实不发虚)」。
+   ============================================================================== */
+@font-face {
+  font-family: 'Sarasa Mono Slab SC';
+  src: local('Sarasa-Mono-Slab-SC-Regular'), local('Sarasa Mono Slab SC'), local('等距更纱黑体 Slab SC'),
+       local('Sarasa-Mono-SC-Regular'), local('Sarasa Mono SC'), local('等距更纱黑体 SC');
+  font-weight: 300 550;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sarasa Mono Slab SC';
+  src: local('Sarasa-Mono-Slab-SC-Bold'), local('Sarasa Mono Slab SC Bold'), local('等距更纱黑体 Slab SC Bold'),
+       local('Sarasa-Mono-SC-Bold'), local('Sarasa Mono SC Bold'), local('等距更纱黑体 SC Bold');
+  font-weight: 551 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 编辑模式专属中英混排栈：无 Sarasa 时，西文走 SF Mono/Consolas 等宽，中文走思源黑体 / 苹方(macOS) / 微软雅黑(Windows) */
+@font-face {
+  font-family: 'MP Editorial Typewriter Fallback';
+  src: local('Source Han Sans SC Regular'), local('Noto Sans CJK SC Regular'),
+       local('PingFangSC-Regular'), local('PingFang SC'), local('STHeitiSC-Medium'), local('Heiti SC'),
+       local('Microsoft YaHei UI'), local('Microsoft YaHei'), local('SimHei');
+  font-weight: 300 550;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'MP Editorial Typewriter Fallback';
+  src: local('Source Han Sans SC Bold'), local('Noto Sans CJK SC Bold'),
+       local('PingFangSC-Semibold'), local('PingFangSC-Medium'), local('STHeitiSC-Medium'),
+       local('Microsoft YaHei UI Bold'), local('Microsoft YaHei Bold'), local('SimHei');
+  font-weight: 551 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 阅读模式专属现代锐利印刷黑体：优先 vivo Sans / OPPO Sans / 更纱 / 思源；
+   零预装裸机下：macOS 走冬青黑体 (Hiragino Sans GB W3/W6，带锐利印刷喇叭口)，Windows 走微软雅黑 (Microsoft YaHei) */
+@font-face {
+  font-family: 'MP Editorial Gothic';
+  src: local('vivoSans-Regular'), local('vivo Sans'), local('OPPOSans40'), local('OPPO Sans 4.0'),
+       local('Sarasa-Gothic-SC-Regular'), local('Sarasa Gothic SC'),
+       local('Source Han Sans SC Regular'), local('Noto Sans CJK SC Regular'),
+       local('HiraginoSansGB-W3'), local('Hiragino Sans GB'),
+       local('Microsoft YaHei UI'), local('Microsoft YaHei'), local('PingFangSC-Regular');
+  font-weight: 300 450;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'MP Editorial Gothic';
+  src: local('vivoSans-Medium'), local('vivoSans-Demibold'), local('OPPOSans40'), local('OPPO Sans 4.0'),
+       local('Sarasa-Gothic-SC-Regular'), local('Source Han Sans SC Medium'),
+       local('HiraginoSansGB-W3'), local('Microsoft YaHei UI'), local('Microsoft YaHei'), local('PingFangSC-Medium');
+  font-weight: 451 580;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'MP Editorial Gothic';
+  src: local('vivoSans-Extrabold'), local('vivoSans-Bold'),
+       local('Sarasa-Gothic-SC-Bold'), local('Source Han Sans SC Bold'), local('Noto Sans CJK SC Bold'),
+       local('HiraginoSansGB-W6'), local('Hiragino Sans GB W6'),
+       local('Microsoft YaHei UI Bold'), local('Microsoft YaHei Bold'), local('PingFangSC-Semibold');
+  font-weight: 581 780;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'MP Editorial Gothic';
+  src: local('vivoSans-Heavy'), local('vivoSans-Extrabold'),
+       local('Sarasa-Gothic-SC-Bold'), local('Source Han Sans SC Heavy'), local('Noto Sans CJK SC Black'),
+       local('HiraginoSansGB-W6'), local('Hiragino Sans GB W6'),
+       local('Microsoft YaHei UI Bold'), local('Microsoft YaHei Bold'), local('PingFangSC-Semibold');
+  font-weight: 781 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'MP Western Sans';
+  src: local('Inter'), local('SF Pro Text'), local('.AppleSystemUIFont'), local('Segoe UI'), local('Helvetica Neue'), local('Arial');
+  unicode-range: U+0000-024F, U+0250-02AF, U+1E00-1EFF, U+2000-206F, U+2070-209F, U+20A0-20CF, U+2100-214F;
+  font-weight: 300 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'MP Western Sans';
+  src: local('Inter Bold'), local('SF Pro Text Bold'), local('Segoe UI Bold'), local('Helvetica Neue Bold'), local('Arial Bold');
+  unicode-range: U+0000-024F, U+0250-02AF, U+1E00-1EFF, U+2000-206F, U+2070-209F, U+20A0-20CF, U+2100-214F;
+  font-weight: 600 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ==============================================================================
+   2. 全局变量：直角网格、灰调印刷纸色、浓绿/淡绿体系与硬边亮色阴影
+   ============================================================================== */
+body {
+  /* 字体体系：
+     - 阅读模式 (--mp-font-gothic-stack)：现代锐利印刷黑体（裸机 macOS 自动走冬青黑体 Hiragino Sans GB，Windows 走微软雅黑）
+     - 编辑模式 (--mp-font-typewriter-stack)：等距打字机黑体（裸机自动走 SF Mono/Cascadia Mono/Consolas + 思源黑体/苹方/微软雅黑）
+     - 完美接入 Obsidian 原生「设置 → 外观 → 字体」覆盖钩子 (--font-*-override) */
+  --mp-font-gothic-stack: 'Inter', 'SF Pro Display', 'SF Pro Text', 'Segoe UI', 'MP Editorial Gothic', 'vivo Sans', 'OPPO Sans 4.0', 'Sarasa Gothic SC', 'Source Han Sans SC', 'Noto Sans CJK SC', 'Hiragino Sans GB', 'Microsoft YaHei UI', 'Microsoft YaHei', 'PingFang SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  --mp-font-typewriter-stack: 'Sarasa Mono Slab SC', '等距更纱黑体 Slab SC', 'Sarasa Mono SC', '等距更纱黑体 SC', 'JetBrains Mono', 'SF Mono', 'SFMono-Regular', 'Cascadia Mono', 'Consolas', 'Menlo', 'MP Editorial Typewriter Fallback', 'Source Han Sans SC', 'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei UI', 'Microsoft YaHei', ui-monospace, monospace;
+  --mp-font-songti-stack: 'MP Western Sans', 'Songti SC', 'Songti TC', 'STSong', 'SimSun', 'NSimSun', 'Source Serif 4', Georgia, serif;
+  --mp-font-mono-stack: 'Sarasa Mono Slab SC', '等距更纱黑体 Slab SC', 'JetBrains Mono', 'IBM Plex Mono', 'SF Mono', 'SFMono-Regular', 'Cascadia Mono', 'Consolas', 'Sarasa Mono SC', '等距更纱黑体 SC', Menlo, Monaco, 'MP Editorial Typewriter Fallback', 'Source Han Sans SC', 'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei UI', 'Microsoft YaHei', ui-monospace, monospace;
+
+  --font-interface-theme: var(--mp-font-gothic-stack);
+  --font-text-theme: var(--mp-font-gothic-stack);
+  --font-monospace-theme: var(--mp-font-mono-stack);
+
+  --font-text-size: 17px;
+  --font-interface: var(--font-interface-override), var(--font-interface-theme);
+  --font-text: var(--font-text-override), var(--font-text-theme);
+  --font-monospace: var(--font-monospace-override), var(--font-monospace-theme);
+
+  /* 顶部导航栏与标签栏全局基准高度锁定（消除原生 40px 与 36px 错位） */
+  --header-height: 36px !important;
+
+  /* 全域零圆角 (0px Sharp Brutalist Grid) + 开关/滑块微倒角 */
+  --radius-s: 0px !important;
+  --radius-m: 0px !important;
+  --radius-l: 0px !important;
+  --radius-xl: 0px !important;
+  --button-radius: 0px !important;
+  --input-radius: 0px !important;
+  --tab-curve: 0px !important;
+  --tab-radius: 0px !important;
+  --tab-radius-active: 0px !important;
+  --checkbox-radius: 1.5px !important;
+  --toggle-radius: 2px !important;
+  --toggle-thumb-radius: 1.5px !important;
+  --slider-thumb-radius: 1.5px !important;
+  --callout-radius: 0px !important;
+  --embed-border-radius: 0px !important;
+
+  /* 彻底覆写 Obsidian 原生 Properties (YAML 属性面板) 圆角与内嵌阴影变量 */
+  --metadata-border-radius: 0px !important;
+  --metadata-property-radius: 0px !important;
+  --metadata-property-radius-hover: 0px !important;
+  --metadata-property-radius-focus: 0px !important;
+  --metadata-property-box-shadow: none !important;
+  --metadata-property-box-shadow-hover: none !important;
+  --metadata-property-box-shadow-focus: inset 3px 0 0 var(--mp-green-deep) !important;
+  --metadata-property-background-hover: rgba(194, 219, 200, 0.35) !important;
+  --metadata-property-background-active: var(--mp-green-tint) !important;
+  --metadata-divider-color: transparent !important;
+  --metadata-divider-color-hover: transparent !important;
+  --metadata-divider-color-focus: transparent !important;
+  --metadata-divider-width: 0px !important;
+  --metadata-label-width: 148px;
+
+  /* 排版节奏 */
+  --line-height-normal: 1.72;
+  --line-height-tight: 1.35;
+  --p-spacing: 0.92em;
+
+  /* 粗犷亮色硬边阴影参数 (零模糊、纯色硬偏移) */
+  --mp-hard-shadow-size: 3px;
+  --mp-hard-shadow-sm: 2px;
+
+  /* 彻底取消现代毛玻璃发散阴影，改用硬朗黑框+亮绿硬阴影 */
+  --shadow-s: 2px 2px 0px var(--mp-green-shadow) !important;
+  --shadow-l: 4px 4px 0px var(--mp-green-shadow) !important;
+
+  /* 悬浮预览卡原生尺寸锁定 */
+  --popover-width: 440px;
+  --popover-height: 360px;
+  --popover-font-size: 13px;
+}
+
+/* --- 浅色主题：三阶暖灰印刷纸 + 铅字炭黑网格 + 松石浓绿/鼠尾草淡绿 --- */
+.theme-light {
+  /* 1. 三阶灰调印刷纸张底色 (Warm Newsprint Grays) */
+  --background-primary: #ECEAE2;                  /* 中央主阅读区：道林印刷浅灰米纸 */
+  --background-primary-alt: #F4F2EC;              /* 提问框/浮动高亮卡：象牙浅纸卡 */
+  --background-secondary: #E2DFD5;                /* 左侧栏/Claudian/顶栏/底栏：旧报刊中暖灰 */
+  --background-secondary-alt: #D6D2C6;            /* 右侧大纲/次级深层底板：亚麻深暖灰 */
+  --background-modifier-hover: #D4E4D8;           /* 悬停：清透淡抹茶绿 */
+  --background-modifier-active-hover: #C2DBC8;
+
+  /* 2. 高对比铅字炭黑实线边框 (Exposed 1px Hairline Grid) */
+  --mp-ink-border: #181B18;                       /* 核心 1px 炭黑实线 */
+  --mp-ink-border-soft: rgba(24, 27, 24, 0.24);   /* 表格与属性内部分割细线 */
+  --background-modifier-border: #181B18;
+  --background-modifier-border-hover: #181B18;
+  --background-modifier-border-focus: #26593F;
+  --divider-color: #181B18;
+  --divider-color-hover: #26593F;
+  --divider-width: 1px;
+  --divider-width-hover: 2px;
+  --border-width: 1px;
+
+  /* 3. 浓绿与淡绿双层强调色体系 (Forest & Sage Accents) */
+  --mp-green-deep: #26593F;                       /* 深松浓绿：双链底线、重点徽章、主强调色 */
+  --mp-green-deep-hover: #1B432E;                 /* 墨松暗绿 */
+  --mp-green-tab: #78AB88;                        /* 竹青中浓绿：顶部激活 Tab 纯色块填充 */
+  --mp-green-shadow: #A3C9AE;                     /* 淡竹叶亮绿：粗犷硬边偏移阴影 (3px 3px 0) */
+  --mp-green-soft: #C2DBC8;                       /* 鼠尾草淡绿：大纲当前章节高亮条、列表选中 */
+  --mp-green-tint: #DCEADF;                       /* 极浅薄荷纸底：引用块与代码块浅绿微底 */
+
+  /* 4. 笔墨文字层次（含暗色自适应语义变量与粗体强化色） */
+  --text-normal: #141715;                         /* 铅字浓黑正文 */
+  --mp-text-strong: #0D0F0E;                      /* 标题浓墨黑 */
+  --mp-strong-color: #0D2E1D;                     /* 粗体专属：深墨松浓绿黑 */
+  --mp-strong-bg: rgba(194, 219, 200, 0.50);      /* 粗体专属：温润鼠尾草淡绿微底衬 */
+  --mp-strong-border: rgba(38, 89, 63, 0.42);     /* 粗体专属：底部 1px 松绿细压线 */
+  --mp-text-on-soft: #101210;                     /* 淡绿选中条上的高对比深墨字 */
+  --text-muted: #525752;                          /* 次要元信息与时间戳 */
+  --text-faint: #767B75;                          /* 占位符与弱化符号 */
+  --text-accent: #26593F;                         /* 深松浓绿 */
+  --text-accent-hover: #1B432E;
+  --text-on-accent: #F4F2EC;
+  --text-selection: rgba(120, 171, 136, 0.42);    /* 淡绿实感划词选中 */
+  --text-selection-match: rgba(120, 171, 136, 0.24);
+  --text-highlight-bg: #C5E0CC;                   /* ==高亮==：温和抹茶绿荧光笔 */
+
+  /* 5. 交互与按钮 */
+  --interactive-normal: #F4F2EC;
+  --interactive-hover: #DCEADF;
+  --interactive-accent: #26593F;
+  --interactive-accent-hover: #1B432E;
+  --interactive-accent-rgb: 38, 89, 63;
+
+  /* 6. 顶栏、状态栏与标签栏 */
+  --titlebar-background: #E2DFD5;
+  --titlebar-background-focused: #E2DFD5;
+  --titlebar-border-color: #181B18;
+  --status-bar-background: #E2DFD5;
+  --status-bar-border-color: #181B18;
+  --status-bar-text-color: #141715;
+  --tab-container-background: #E2DFD5;
+  --tab-background-active: var(--mp-green-tab);
+  --tab-text-color: #4A4E49;
+  --tab-text-color-active: #121412;
+  --tab-text-color-focused-active: #121412;
+  --tab-text-color-focused-active-current: #121412;
+  --tab-outline-color: #181B18;
+  --tab-divider-color: #181B18;
+
+  /* 7. 引用与代码块 */
+  --blockquote-border-thickness: 4px;
+  --blockquote-border-color: #26593F;
+  --blockquote-background-color: #E6ECE6;
+  --code-background: #E5E3DA;
+  --code-normal: #141715;
+  --code-comment: #666B65;
+  --code-string: #26593F;
+  --code-keyword: #1D4D4F;
+  --code-function: #3B6E52;
+
+  /* 8. 表格与 Bases 网格 */
+  --table-border-width: 1px;
+  --table-border-color: #181B18;
+  --table-header-background: #D6D2C6;
+  --table-header-font: var(--font-monospace);
+  --table-header-weight: 600;
+  --table-row-alt-background: rgba(24, 27, 24, 0.03);
+  --table-row-background-hover: #D4E4D8;
+
+  /* 9. Notebook Navigator 插件变量同步 */
+  --nn-theme-nav-bg: #E2DFD5;
+  --nn-theme-list-bg: #E2DFD5;
+  --nn-theme-foreground: #141715;
+  --nn-theme-foreground-muted: #525752;
+  --nn-theme-foreground-faint: #767B75;
+  --nn-theme-file-border-radius: 0px;
+  --nn-theme-file-name-color: #141715;
+  --nn-theme-file-name-font-weight: 600;
+  --nn-theme-file-preview-color: #525752;
+  --nn-theme-file-date-color: #666B65;
+  --nn-theme-file-selected-bg: #C2DBC8;
+  --nn-theme-file-selected-name-color: #101210;
+  --nn-theme-file-selected-border-color: #181B18;
+  --nn-theme-divider-border-color: #181B18;
+  --nn-theme-file-tag-bg: #DCEADF;
+  --nn-theme-file-tag-color: #1B432E;
+  --nn-theme-file-tag-border-color: #181B18;
+  --nn-theme-file-tag-border-radius: 0px;
+  --nn-theme-navitem-hover-bg: #D4E4D8;
+  --nn-theme-navitem-selected-bg: #C2DBC8;
+  --nn-theme-navitem-border-radius: 0px;
+}
+
+/* --- 深色主题：深林墨黑纸本 (Dark Moss Edition) --- */
+.theme-dark {
+  --background-primary: #181B19;
+  --background-primary-alt: #202522;
+  --background-secondary: #141715;
+  --background-secondary-alt: #101210;
+  --background-modifier-hover: #24332A;
+  --background-modifier-active-hover: #2D4235;
+
+  --mp-ink-border: #434D46;
+  --mp-ink-border-soft: rgba(255, 255, 255, 0.18);
+  --background-modifier-border: #434D46;
+  --background-modifier-border-hover: #689F7A;
+  --background-modifier-border-focus: #689F7A;
+  --divider-color: #434D46;
+
+  --mp-green-deep: #689F7A;
+  --mp-green-deep-hover: #82B893;
+  --mp-green-tab: #2E5A42;
+  --mp-green-shadow: #294D39;
+  --mp-green-soft: #264031;
+  --mp-green-tint: #1E2B23;
+
+  --text-normal: #E6E4DC;
+  --mp-text-strong: #F4F2EC;
+  --mp-strong-color: #B6E3C6;
+  --mp-strong-bg: rgba(46, 90, 66, 0.48);
+  --mp-strong-border: rgba(120, 171, 136, 0.55);
+  --mp-text-on-soft: #F4F2EC;
+  --text-muted: #9BA19B;
+  --text-faint: #686E68;
+  --text-accent: #78AB88;
+  --text-accent-hover: #96C4A4;
+  --text-on-accent: #F4F2EC;
+  --text-selection: rgba(104, 159, 122, 0.35);
+  --text-selection-match: rgba(104, 159, 122, 0.20);
+  --text-highlight-bg: rgba(104, 159, 122, 0.35);
+
+  --interactive-normal: #202522;
+  --interactive-hover: #28362D;
+  --interactive-accent: #3A6B4C;
+  --interactive-accent-hover: #49825E;
+
+  --titlebar-background: #141715;
+  --titlebar-background-focused: #141715;
+  --titlebar-border-color: #434D46;
+  --status-bar-background: #141715;
+  --status-bar-border-color: #434D46;
+  --status-bar-text-color: #E6E4DC;
+  --tab-container-background: #141715;
+  --tab-background-active: #2E5A42;
+  --tab-text-color: #9BA19B;
+  --tab-text-color-active: #F4F2EC;
+  --tab-text-color-focused-active: #F4F2EC;
+  --tab-text-color-focused-active-current: #F4F2EC;
+  --tab-outline-color: #434D46;
+  --tab-divider-color: #434D46;
+
+  --code-background: #1E221F;
+  --code-normal: #E6E4DC;
+  --table-border-color: #434D46;
+  --table-header-background: #202522;
+
+  /* Notebook Navigator 深色模式变量同步 */
+  --nn-theme-nav-bg: #141715;
+  --nn-theme-list-bg: #141715;
+  --nn-theme-foreground: #E6E4DC;
+  --nn-theme-foreground-muted: #9BA19B;
+  --nn-theme-foreground-faint: #686E68;
+  --nn-theme-file-border-radius: 0px;
+  --nn-theme-file-name-color: #E6E4DC;
+  --nn-theme-file-name-font-weight: 600;
+  --nn-theme-file-preview-color: #9BA19B;
+  --nn-theme-file-date-color: #9BA19B;
+  --nn-theme-file-selected-bg: #264031;
+  --nn-theme-file-selected-name-color: #F4F2EC;
+  --nn-theme-file-selected-border-color: #434D46;
+  --nn-theme-divider-border-color: #434D46;
+  --nn-theme-file-tag-bg: #1E2B23;
+  --nn-theme-file-tag-color: #96C4A4;
+  --nn-theme-file-tag-border-color: #434D46;
+  --nn-theme-file-tag-border-radius: 0px;
+  --nn-theme-navitem-hover-bg: #24332A;
+  --nn-theme-navitem-selected-bg: #264031;
+  --nn-theme-navitem-border-radius: 0px;
+}
+
+/* ==============================================================================
+   3. 外露 1px 瑞士网格框架与顶部标签栏 (Exposed Grid & Neo-Brutalist Tabs)
+   ============================================================================== */
+body {
+  font-family: var(--font-interface);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* 顶部窗口栏与左侧 Ribbon 窄边栏：严格 1px 炭黑实线切分（兼容 Windows/Linux/macOS 隐藏标题栏模式） */
+body:not(.is-hidden-frameless) .titlebar,
+body.is-hidden-frameless.starter .titlebar,
+body.is-hidden-frameless.is-popout-modal .titlebar {
+  background-color: var(--titlebar-background) !important;
+  border-bottom: 1px solid var(--mp-ink-border) !important;
+  height: 36px;
+}
+
+/* Windows / Linux 隐藏标题栏模式 (.is-hidden-frameless) 下 .titlebar 为全宽置顶浮层，必须保持透明不遮挡底下顶栏图标 */
+body.is-hidden-frameless:not(.starter, .is-popout-modal) .titlebar {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  height: calc(var(--header-height) - 1px) !important;
+  pointer-events: none !important;
+}
+
+body.is-hidden-frameless:not(.starter, .is-popout-modal) .titlebar-button-container {
+  pointer-events: auto !important;
+  height: calc(var(--header-height) - 1px) !important;
+}
+
+body.is-hidden-frameless:not(.is-fullscreen) .titlebar-button-container.mod-right {
+  background-color: var(--titlebar-background) !important;
+}
+
+.workspace-ribbon,
+.workspace-ribbon.mod-left,
+.workspace-ribbon.mod-primary {
+  background-color: var(--background-secondary) !important;
+  border-right: 1px solid var(--mp-ink-border) !important;
+  margin-top: 36px !important;
+}
+
+.workspace-ribbon::before {
+  background-color: var(--background-secondary) !important;
+  border-bottom: 1px solid var(--mp-ink-border) !important;
+  height: 36px !important;
+  box-sizing: border-box !important;
+}
+
+.workspace-ribbon-collapse-btn,
+.sidebar-toggle-button {
+  border-radius: 0px !important;
+}
+
+.sidebar-toggle-button {
+  height: calc(var(--header-height) - 1px) !important;
+  min-height: calc(var(--header-height) - 1px) !important;
+  max-height: calc(var(--header-height) - 1px) !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  border: none !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* 左上角侧栏展开/收起按钮：复刻原图带 1px 实线小方框造型 */
+.sidebar-toggle-button .clickable-icon {
+  border: 1px solid var(--mp-ink-border) !important;
+  border-radius: 0px !important;
+  background-color: var(--background-primary-alt) !important;
+  width: 24px !important;
+  height: 24px !important;
+  padding: 0 !important;
+  color: var(--text-normal) !important;
+}
+.sidebar-toggle-button .clickable-icon:hover {
+  background-color: var(--mp-green-soft) !important;
+  box-shadow: 2px 2px 0px var(--mp-green-deep) !important;
+}
+
+/* 分栏边界：严格区分左右垂直分栏 (mod-vertical) 与上下水平分栏 (mod-horizontal) */
+.workspace-split.mod-left-split,
+.workspace-sidedock.mod-left-split {
+  border-right: 1px solid var(--mp-ink-border) !important;
+}
+.workspace-split.mod-right-split,
+.workspace-sidedock.mod-right-split {
+  border-left: 1px solid var(--mp-ink-border) !important;
+}
+.workspace-split-gutter {
+  background-color: var(--mp-ink-border) !important;
+  border-color: var(--mp-ink-border) !important;
+  width: 1px !important;
+  opacity: 1 !important;
+}
+.workspace-leaf-resize-handle {
+  background-color: transparent !important;
+  border-color: var(--mp-ink-border) !important;
+  opacity: 1 !important;
+}
+.workspace-split.mod-vertical > * > .workspace-leaf-resize-handle {
+  border-right: 1px solid var(--mp-ink-border) !important;
+}
+.workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle,
+.workspace-split.mod-left-split .workspace-leaf-resize-handle,
+.workspace-split.mod-right-split .workspace-leaf-resize-handle {
+  border-bottom: 1px solid var(--mp-ink-border) !important;
+}
+
+/* --- 3.1 顶部标签栏：纯直角高对比色块 Tab (彻底移除 Chrome 圆弧脚与双线叠边) --- */
+.workspace-tab-header-container {
+  background-color: var(--tab-container-background) !important;
+  border-bottom: 1px solid var(--mp-ink-border) !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  padding-left: 0;
+  padding-right: 0;
+  height: 36px !important;
+  min-height: 36px !important;
+  box-sizing: border-box !important;
+  gap: 0 !important;
+}
+
+/* 保留 Windows / Linux / macOS 隐藏标题栏模式下左上角（红绿灯/图标）与右上角（- □ × 窗口按钮）安全预留区 */
+.is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
+  padding-left: calc(8px + var(--frame-left-space, 0px)) !important;
+}
+
+.is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-right-space .workspace-tab-header-container {
+  padding-right: calc(8px + var(--frame-right-space, 0px)) !important;
+}
+
+.mod-macos.is-hidden-frameless:not(.is-popout-window, .is-mobile):not(.mod-rtl) .workspace .workspace-tabs.mod-top-right-space .workspace-tab-header-container {
+  padding-right: calc(38px + var(--frame-right-space, 0px)) !important;
+}
+
+.mod-macos.is-hidden-frameless:not(.is-popout-window, .is-mobile).mod-rtl .workspace .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
+  padding-left: calc(38px + var(--frame-left-space, 0px)) !important;
+}
+
+/* 消除 Obsidian 原生 .workspace-tab-header-container-inner 的 5px 顶部偏移与 1px 内边距，防止激活 Tab 向下溢出压线 */
+.mod-root .workspace-tab-header-container-inner {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 100% !important;
+  align-items: stretch !important;
+}
+
+.workspace-sidedock .workspace-tab-header-container-inner,
+.mod-left-split .workspace-tab-header-container-inner,
+.mod-right-split .workspace-tab-header-container-inner {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 100% !important;
+  align-items: center !important;
+}
+
+/* 彻底抹除 Obsidian 默认标签页两侧的圆弧伪元素（保留 .workspace-tab-header-container 的拖拽防遮挡伪元素） */
+.workspace-tab-header::before,
+.workspace-tab-header::after,
+.workspace-tab-header-inner::before,
+.workspace-tab-header-inner::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* 主工作区文本型 Tab 标签：右侧单边 1px 分割，避免相邻 Tab 叠成 2px 粗线 */
+.mod-root .workspace-tab-header {
+  border-radius: 0px !important;
+  margin: 0 !important;
+  padding: 0 12px !important;
+  height: 100% !important;
+  box-sizing: border-box !important;
+  border-right: 1px solid var(--mp-ink-border) !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-bottom: none !important;
+  background-color: var(--background-secondary) !important;
+  color: var(--text-muted) !important;
+  font-family: var(--font-interface) !important;
+  font-size: 12.5px !important;
+  font-weight: 500 !important;
+  box-shadow: none !important;
+  transition: background-color 0.1s ease !important;
+}
+
+.mod-root .workspace-tab-header-inner {
+  padding: 0 !important;
+  border-radius: 0px !important;
+  background: transparent !important;
+  gap: 6px !important;
+}
+
+.mod-root .workspace-tab-header:hover {
+  background-color: var(--mp-green-soft) !important;
+  color: var(--mp-text-on-soft) !important;
+}
+
+/* 激活态 Tab：复刻原图「纯色浓绿块 + 炭黑粗体字 + 1px 黑框」 */
+.mod-root .workspace-tab-header.is-active {
+  background-color: var(--mp-green-tab) !important;
+  color: var(--tab-text-color-active) !important;
+  font-weight: 700 !important;
+  border-right: 1px solid var(--mp-ink-border) !important;
+  border-left: none !important;
+  border-bottom: none !important;
+  margin-bottom: 0 !important;
+  box-shadow: none !important;
+}
+
+.mod-root .workspace-tab-header.is-active .workspace-tab-header-inner-title,
+.mod-root .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
+.mod-root .workspace-tab-header.is-active .workspace-tab-header-inner-close-button {
+  color: var(--tab-text-color-active) !important;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+}
+
+/* --- 3.2 侧边栏图标切换栏 (复刻原图右上角「黑实线方框 + 硬阴影」图标按钮) --- */
+.workspace-sidedock .workspace-tab-header-container,
+.mod-left-split .workspace-tab-header-container,
+.mod-right-split .workspace-tab-header-container {
+  background-color: var(--background-secondary) !important;
+  border-bottom: 1px solid var(--mp-ink-border) !important;
+  height: 36px !important;
+  min-height: 36px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  padding-left: 8px;
+  padding-right: 8px;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.workspace-sidedock .workspace-tab-header-tab-list,
+.mod-left-split .workspace-tab-header-tab-list,
+.mod-right-split .workspace-tab-header-tab-list {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+/* 侧栏纯图标 Tab 按钮（与左上角侧栏收起按钮统一锁定 24x24px，确保底边与硬阴影呼吸感对齐） */
+.mod-left-split .workspace-tab-header,
+.mod-right-split .workspace-tab-header {
+  width: 24px !important;
+  height: 24px !important;
+  min-width: 24px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border-radius: 0px !important;
+  border: 1px solid transparent !important;
+  background: transparent !important;
+  color: var(--text-normal) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+}
+
+/* 清空侧栏小图标内部 .workspace-tab-header-inner 默认 padding: 0 6px，彻底消除图标被横向挤压裁切 */
+.workspace-sidedock .workspace-tab-header-inner,
+.mod-left-split .workspace-tab-header-inner,
+.mod-right-split .workspace-tab-header-inner {
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border: none !important;
+  border-radius: 0px !important;
+  background: transparent !important;
+  overflow: visible !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.workspace-sidedock .workspace-tab-header-inner-icon,
+.mod-left-split .workspace-tab-header-inner-icon,
+.mod-right-split .workspace-tab-header-inner-icon {
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.mod-left-split .workspace-tab-header:hover,
+.mod-right-split .workspace-tab-header:hover {
+  background-color: var(--mp-green-soft) !important;
+  border: 1px solid var(--mp-ink-border) !important;
+}
+
+/* 侧栏激活图标：复刻原图右上角 1.5px 炭黑正方形线框 + 淡绿硬阴影 */
+.mod-left-split .workspace-tab-header.is-active,
+.mod-right-split .workspace-tab-header.is-active {
+  background-color: var(--background-primary-alt) !important;
+  color: var(--mp-text-strong) !important;
+  border: 1.5px solid var(--mp-ink-border) !important;
+  border-radius: 0px !important;
+  box-shadow: 2px 2px 0px var(--mp-green-shadow) !important;
+}
+
+/* 可选预设：深松墨绿底 + 象牙米白字 */
+body.mp-tab-forest-dark .mod-root .workspace-tab-header.is-active {
+  background-color: var(--mp-green-deep) !important;
+  color: #F4F2EC !important;
+}
+body.mp-tab-forest-dark .mod-root .workspace-tab-header.is-active .workspace-tab-header-inner-title,
+body.mp-tab-forest-dark .mod-root .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
+body.mp-tab-forest-dark .mod-root .workspace-tab-header.is-active .workspace-tab-header-inner-close-button {
+  color: #F4F2EC !important;
+}
+
+/* 面包屑与视图顶栏 (.view-header)：复刻原图细黑线分割条 */
+.view-header {
+  background-color: var(--background-primary) !important;
+  border-bottom: 1px solid var(--mp-ink-border) !important;
+  height: 34px !important;
+  padding: 0 12px !important;
+}
+.mod-left-split .view-header,
+.mod-right-split .view-header {
+  background-color: var(--background-secondary) !important;
+}
+.view-header-title-container,
+.view-header-breadcrumb,
+.view-header-title {
+  font-family: var(--font-interface) !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  color: var(--text-muted) !important;
+}
+
+/* ==============================================================================
+   4. Claudian (AI 侧边栏) 1:1 像素级复刻
+   - 顶部提问框：通栏对齐 + 1.5px 炭黑实线框 + 3px 淡绿粗犷硬边阴影
+   - Worked for 00:42 / 工作了 00:23：极客等宽字体 + 舒展内边距
+   - 底部 Prompt 输入框：直角黑框 + 等宽字体 + 绿色模型徽章
+   ============================================================================== */
+.claudian-container,
+.claudian-settings,
+.claudian-inline-input-container,
+.claudian-inline-menu-layer {
+  --claudian-brand: var(--mp-green-deep) !important;
+  --claudian-brand-rgb: 38, 89, 63 !important;
+  --claudian-brand-claude: var(--mp-green-deep) !important;
+  --claudian-brand-claude-rgb: 38, 89, 63 !important;
+  --claudian-side-chat: var(--mp-green-deep) !important;
+  background-color: var(--background-secondary) !important;
+}
+
+/* 顶部用户提问卡片 (复刻原图左上角通栏黑框+硬边阴影盒，解除原生 flex-end 右偏) */
+.claudian-message-user {
+  width: 100% !important;
+  max-width: 100% !important;
+  align-self: stretch !important;
+  align-items: stretch !important;
+  margin: 8px 0 12px 0 !important;
+}
+
+.claudian-message-user > .claudian-message-content {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  background-color: var(--background-primary-alt) !important;
+  color: var(--text-normal) !important;
+  border: 1.5px solid var(--mp-ink-border) !important;
+  border-radius: 0px !important;
+  padding: 12px 18px !important;
+  font-family: var(--font-text) !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  line-height: 1.55 !important;
+  box-shadow: var(--mp-hard-shadow-size) var(--mp-hard-shadow-size) 0px var(--mp-green-shadow) !important;
+}
+
+/* Worked for 00:42 / 工作了 00:23 思考状态栏：等宽字体 + 解除固定高度压缩 + 舒适呼吸感 */
+.claudian-thinking-header,
+.claudian-thinking-label,
+.claudian-thinking-hint,
+.claudian-tool-header,
+.claudian-subagent-header,
+button.claudian-work-header {
+  font-family: var(--font-monospace) !important;
+  font-size: 12.5px !important;
+  color: var(--text-muted) !important;
+  border-radius: 0px !important;
+}
+
+button.claudian-work-header,
+button.claudian-work-header:hover,
+button.claudian-work-header:focus-visible,
+button.claudian-work-header:active {
+  width: auto !important;
+  height: auto !important;
+  min-height: 26px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 4px 10px !important;
+  margin: 4px 0 !important;
+  border: 1px solid var(--mp-ink-border) !important;
+  border-radius: 0px !important;
+  background-color: var(--background-primary-alt) !important;
+  box-shadow: 2px 2px 0px var(--mp-green-shadow) !important;
+  gap: 6px !important;
+  line-height: 1.35 !important;
+}
+button.claudian-work-header:hover {
+  background-color: var(--mp-green-soft) !important;
+  color: var(--mp-text-on-soft) !important;
+}
+
+/* Claudian 右侧快速跳转上下悬浮按钮 (.claudian-nav-btn)：由圆形改为直角方框 */
+.claudian-nav-sidebar button.claudian-nav-btn {
+  border-radius: 0px !important;
+  border: 1px solid var(--mp-ink-border) !important;
+  background-color: var(--background-primary-alt) !important;
+  color: var(--text-normal) !important;
+  box-shadow: 2px 2px 0px var(--mp-green-shadow) !important;
+}
+.claudian-nav-sidebar button.claudian-nav-btn:hover {
+  background-color: var(--mp-green-soft) !important;
+  color: var(--mp-text-on-soft) !important;
+}
+
+/* Claudian 右侧历史会话栏轻量按钮与底部关联文件栏：解除 20px 锁死高度，保持清爽无框或舒展微框 */
+.claudian-history-section-toggle,
+button.claudian-history-section-toggle,
+button.claudian-session-header-btn,
+button.claudian-session-group-toggle,
+button.claudian-session-group-menu-action,
+button.claudian-session-group-new-action,
+button.claudian-action-btn,
+button.claudian-session-recency-divider-action {
+  border-radius: 0px !important;
+  border: 1px solid transparent !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+.claudian-history-section-toggle,
+button.claudian-history-section-toggle {
+  padding: 4px 8px !important;
+  height: auto !important;
+  min-height: 24px !important;
+}
+.claudian-history-section-toggle:hover,
+button.claudian-session-header-btn:hover,
+button.claudian-session-group-toggle:hover {
+  background-color: var(--mp-green-tint) !important;
+  border-color: var(--mp-ink-border) !important;
+}
+
+/* 底部当前关联笔记指示行 (📄 文件名)：解除 20px 高度锁死，复刻原图清爽无框底栏印字 */
+.claudian-input-info-row {
+  height: auto !important;
+  min-height: 24px !important;
+  padding: 2px 4px !important;
+  align-items: center !important;
+}
+.claudian-input-info-linked {
+  height: auto !important;
+  min-height: 24px !important;
+  padding: 0 !important;
+  gap: 4px !important;
+  border-radius: 0px !important;
+  align-items: center !important;
+}
+.claudian-input-info-linked > button.claudian-input-info-linked-main {
+  height: auto !important;
+  min-height: 24px !important;
+  padding: 3px 8px !important;
+  gap: 6px !important;
+  border-radius: 0px !important;
+  border: 1px solid var(--mp-ink-border-soft) !important;
+  background-color: var(--background-primary-alt) !important;
+  box-shadow: none !important;
+  line-height: 1.35 !important;
+}
+.claudian-input-info-linked > button.claudian-input-info-linked-main:hover {
+  background-color: var(--mp-green-tint) !important;
+  border-color: var(--mp-ink-border) !important;
+}
+.claudian-input-info-linked > button.claudian-input-info-linked-remove {
+  height: auto !important;
+  min-height: 22px !important;
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  padding: 2px 6px !important;
+}
+
+/* AI 回答正文：紧凑高可读性黑粗体排版 */
+.claudian-message-assistant .claudian-message-content {
+  font-family: var(--font-text) !important;
+  font-size: 13.5px !important;
+  line-height: 1.65 !important;
+  color: var(--text-normal) !important;
+  font-weight: 450 !important;
+}
+.claudian-message-assistant .claudian-message-content strong {
+  font-weight: 700 !important;
+  color: var(--mp-text-strong) !important;
+}
+
+/* 底部 Prompt 输入框容器：复刻原图直角黑框 + 等宽输入区 */
+.claudian-input-composer {
+  background-color: var(--background-secondary) !important;
+  border-radius: 0px !important;
+  box-shadow: none !important;
+}
+
+.claudian-input-wrapper {
+  --claudian-input-wrapper-radius: 0px !important;
+  --claudian-input-wrapper-border-color: var(--mp-ink-border) !important;
+  background-color: var(--background-primary) !important;
+  border: 1.5px solid var(--mp-ink-border) !important;
+  border-radius: 0px !important;
+  box-shadow: var(--mp-hard-shadow-sm) var(--mp-hard-shadow-sm) 0px var(--mp-green-shadow) !important;
+}
+
+.claudian-input-wrapper:focus-within {
+  border-color: var(--mp-ink-border) !important;
+  box-shadow: var(--mp-hard-shadow-size) var(--mp-hard-shadow-size) 0px var(--mp-green-tab) !important;
+}
+
+.claudian-input-wrapper .claudian-composer-editor {
+  font-family: var(--font-monospace) !important;
+  font-size: 12.5px !important;
+  line-height: 1.5 !important;
+  color: var(--text-normal) !important;
+}
+
+.claudian-input-toolbar,
+.claudian-input-toolbar button.claudian-toolbar-chip,
+.claudian-input-info-row,
+.claudian-context-chip {
+  font-family: var(--font-monospace) !important;
+  font-size: 11.5px !important;
+  border-radius: 0px !important;
+}
+
+.claudian-context-chip {
+  height: auto !important;
+  min-height: 24px !important;
+  padding: 3px 8px !important;
+  border-radius: 0px !important;
+  border: 1px solid var(--mp-ink-border-soft) !important;
+  background-color: var(--background-primary-alt) !important;
+}
+
+/* Claudian 内部弹出菜单、下拉面板统一 0px 直角与硬边阴影 */
+.claudian-mention-dropdown,
+.claudian-slash-dropdown,
+.claudian-instruction-modal,
+.claudian-InlineEditModal,
+.claudian-toolbar-popover,
+.claudian-session-TargetPopover,
+.claudian-session-filter-popover,
+.claudian-session-context-menu,
+.claudian-status-panel,
+.claudian-ContextMenu,
+.claudian-ask-list,
+.claudian-plan-approval-inline {
+  border-radius: 0px !important;
+  border: 1.5px solid var(--mp-ink-border) !important;
+  box-shadow: 3px 3px 0px var(--mp-green-shadow) !important;
+}
+
+/* ==============================================================================
+   5. 中央正文排版：黑粗体标题、印刷感正文、浓绿粗下划线双链、粗犷亮绿阴影块
+   ============================================================================== */
+.view-content,
+.markdown-source-view.mod-cm6,
+.markdown-reading-view,
+.markdown-rendered {
+  background-color: var(--background-primary) !important;
+}
+
+/* 正文基础排版（方案 B 模式分离）：
+   - 阅读模式 (.markdown-rendered)：采用现代锐利印刷黑体 (--font-text, 400 Regular)，呈现杂志成品印张质感；
+   - 编辑模式 (.markdown-source-view.mod-cm6，含实时预览与源码模式)：采用等距更纱打字机黑体 (--mp-font-typewriter-stack, 400 Regular)，呈现极客手稿台秩序感。 */
+.markdown-rendered {
+  font-family: var(--font-text) !important;
+  font-size: var(--font-text-size, 17px) !important;
+  line-height: var(--line-height-normal) !important;
+  color: var(--text-normal) !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.005em !important;
+}
+
+.markdown-source-view.mod-cm6 .cm-content,
+.markdown-source-view.mod-cm6 .cm-line {
+  font-family: var(--font-text-override), var(--mp-font-typewriter-stack) !important;
+  font-size: var(--font-text-size, 17px) !important;
+  line-height: var(--line-height-normal) !important;
+  color: var(--text-normal) !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.01em !important;
+}
+
+.markdown-rendered p,
+.markdown-rendered li {
+  line-height: var(--line-height-normal) !important;
+  margin-block: 0 var(--p-spacing, 0.92em) !important;
+  font-weight: 400 !important;
+}
+
+.cm-line {
+  line-height: var(--line-height-normal) !important;
+  padding-bottom: 0.36em !important;
+}
+.cm-line.HyperMD-codeblock,
+.cm-line:has(.cm-table-widget),
+.cm-line:empty {
+  padding-bottom: 0 !important;
+}
+
+/* 编辑态光标当前行手稿标尺指示（一眼区分编辑手稿态与阅读成品态） */
+.markdown-source-view.mod-cm6 .cm-activeLine {
+  background-color: rgba(194, 219, 200, 0.22) !important;
+  box-shadow: inset 3px 0 0 var(--mp-green-deep) !important;
+}
+.theme-dark .markdown-source-view.mod-cm6 .cm-activeLine {
+  background-color: rgba(46, 90, 66, 0.25) !important;
+  box-shadow: inset 3px 0 0 var(--mp-green-deep) !important;
+}
+
+/* 粗体字三重强化（750 ExtraBold 字重跃迁 + 深墨松绿黑字色 + 鼠尾草微底衬 + 1.5px 松绿细底线） */
+.markdown-rendered strong,
+.claudian-message-content strong,
+.markdown-source-view.mod-cm6 .cm-strong {
+  font-weight: 750 !important;
+  color: var(--mp-strong-color) !important;
+  background-color: var(--mp-strong-bg) !important;
+  border-bottom: 1.5px solid var(--mp-strong-border) !important;
+  padding: 0 2px !important;
+  margin: 0 !important;
+  border-radius: 0px !important;
+  -webkit-text-stroke: 0.2px currentColor;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* 普通 Markdown 语法控制符 (.cm-formatting)：不加方块边框，仅保留柔和淡绿背景色与深松绿字色 */
+.markdown-source-view.mod-cm6 .cm-formatting-strong,
+.markdown-source-view.mod-cm6 .cm-formatting-em,
+.markdown-source-view.mod-cm6 .cm-formatting-strikethrough,
+.markdown-source-view.mod-cm6 .cm-formatting-highlight,
+.markdown-source-view.mod-cm6 .cm-formatting-header,
+.markdown-source-view.mod-cm6 .cm-formatting-list {
+  font-family: var(--font-monospace) !important;
+  font-weight: 700 !important;
+  color: var(--mp-green-deep) !important;
+  background-color: rgba(120, 171, 136, 0.22) !important;
+  border: none !important;
+  border-radius: 0px !important;
+  padding: 0 2px !important;
+  margin: 0 !important;
+  -webkit-text-stroke: 0px transparent !important;
+}
+
+/* 编辑模式下引用符号 > (.cm-formatting-quote)：深松浓绿背景 + 象牙白反色符号（无边框，与普通标记鲜明区分） */
+.markdown-source-view.mod-cm6 .cm-formatting-quote,
+.markdown-source-view.mod-cm6 .HyperMD-quote .cm-formatting-quote,
+.markdown-source-view.mod-cm6 span.cm-formatting-quote,
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote span.cm-formatting-quote.cm-quote {
+  font-family: var(--font-monospace) !important;
+  font-weight: 700 !important;
+  background-color: #26593F !important;
+  color: #F4F2EC !important;
+  border: none !important;
+  border-radius: 0px !important;
+  padding: 0 4px !important;
+  margin: 0 3px 0 0 !important;
+  -webkit-text-stroke: 0px transparent !important;
+}
+
+.markdown-source-view.mod-cm6 .cm-hr {
+  font-family: var(--font-monospace) !important;
+  font-weight: 700 !important;
+  color: var(--mp-green-deep) !important;
+  background-color: rgba(120, 171, 136, 0.20) !important;
+  padding: 0 4px !important;
+}
+
+.markdown-source-view.mod-cm6 .cm-formatting-link,
+.markdown-source-view.mod-cm6 .cm-formatting-link-string,
+.markdown-source-view.mod-cm6 .cm-url,
+.markdown-source-view.mod-cm6 .cm-string.cm-url {
+  font-family: var(--font-monospace) !important;
+  font-size: 0.85em !important;
+  font-weight: 400 !important;
+  color: var(--text-muted) !important;
+  background-color: transparent !important;
+  border-bottom: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  -webkit-text-stroke: 0px transparent !important;
+}
+
+/* --- 5.1 标题体系：复刻原图极具冲击力的重黑粗体 (Heavy Gothic 750~800) --- */
+.inline-title,
+.markdown-rendered h1, .cm-header-1,
+.markdown-rendered h2, .cm-header-2,
+.markdown-rendered h3, .cm-header-3,
+.markdown-rendered h4, .cm-header-4,
+.markdown-rendered h5, .cm-header-5,
+.markdown-rendered h6, .cm-header-6,
+.cm-line.HyperMD-header,
+.claudian-message-content h1,
+.claudian-message-content h2,
+.claudian-message-content h3,
+.claudian-message-content h4 {
+  font-family: var(--font-text) !important;
+  color: var(--mp-text-strong) !important;
+  font-weight: 750 !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1.3 !important;
+}
+
+.inline-title,
+.markdown-rendered h1,
+.cm-header-1 {
+  font-size: 1.75rem !important;
+  font-weight: 800 !important;
+  margin-top: 1.2em !important;
+  margin-bottom: 0.7em !important;
+  border-bottom: none !important;
+}
+
+.markdown-rendered h2,
+.cm-header-2 {
+  font-size: 1.35rem !important;
+  font-weight: 750 !important;
+  margin-top: 1.35em !important;
+  margin-bottom: 0.5em !important;
+  border-bottom: none !important;
+}
+
+.markdown-rendered h3,
+.cm-header-3 {
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+  margin-top: 1.2em !important;
+  margin-bottom: 0.45em !important;
+}
+
+/* --- 5.2 双链与外链：复刻原图「炭黑粗字 + 2px 浓绿实线底边」，悬停铺满淡绿块 --- */
+.cm-underline,
+.cm-link .cm-underline,
+.cm-hmd-internal-link .cm-underline {
+  text-decoration: none !important;
+}
+
+.external-link::after {
+  display: none !important;
+}
+
+.markdown-rendered .internal-link,
+.markdown-source-view.mod-cm6 .cm-hmd-internal-link,
+.markdown-rendered .external-link,
+.markdown-source-view.mod-cm6 .cm-link,
+.claudian-message-content a,
+.claudian-file-link,
+.claudian-composer-wikilink {
+  color: var(--text-normal) !important;
+  font-weight: 600 !important;
+  text-decoration: underline !important;
+  text-decoration-style: solid !important;
+  text-decoration-color: var(--mp-green-deep) !important;
+  text-decoration-thickness: 2px !important;
+  text-underline-offset: 3px !important;
+  border-radius: 0px !important;
+  padding: 0 2px !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  transition: background-color 0.1s ease, color 0.1s ease !important;
+}
+
+.markdown-rendered .internal-link:hover,
+.markdown-rendered .external-link:hover,
+.claudian-message-content a:hover,
+.claudian-file-link:hover {
+  background-color: var(--mp-green-soft) !important;
+  color: var(--mp-text-on-soft) !important;
+  text-decoration-color: var(--mp-ink-border) !important;
+  box-shadow: 2px 2px 0px var(--mp-green-deep) !important;
+}
+
+/* CM6 实时编辑中的双链/外链可能被拆为多个 span，悬停仅鋪底色避免每段出现断裂硬阴影 */
+.markdown-source-view.mod-cm6 .cm-hmd-internal-link:hover,
+.markdown-source-view.mod-cm6 .cm-link:hover {
+  background-color: var(--mp-green-soft) !important;
+  color: var(--mp-text-on-soft) !important;
+  text-decoration-color: var(--mp-ink-border) !important;
+}
+
+/* 标签 (#tag) 与属性多选胶囊：直角黑框 + 淡绿底色 + 饱满内边距与行列呼吸感 */
+a.tag,
+.cm-hashtag,
+.metadata-property-value .multi-select-pill {
+  font-family: var(--font-monospace) !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  color: var(--mp-green-deep) !important;
+  background-color: var(--mp-green-tint) !important;
+  border: 1px solid var(--mp-ink-border) !important;
+  border-radius: 0px !important;
+  padding: 3px 9px !important;
+  line-height: 1.35 !important;
+  text-decoration: none !important;
+  box-shadow: 2px 2px 0px var(--mp-green-shadow) !important;
+}
+.metadata-property-value .multi-select-container {
+  gap: 7px 8px !important;
+  padding: 4px 0 !important;
+}
+.metadata-property-value .multi-select-pill {
+  margin: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+}
+.metadata-property-value .multi-select-pill-remove-button {
+  margin-left: 2px !important;
+  opacity: 0.75 !important;
+}
+
+/* CM6 拆分渲染的 #tag 首尾无缝拼接，避免半截阴影断裂 */
+.cm-hashtag-begin {
+  border-right: none !important;
+  box-shadow: 0 2px 0px var(--mp-green-shadow) !important;
+  padding-right: 0 !important;
+}
+.cm-hashtag:not(.cm-hashtag-begin):not(.cm-hashtag-end) {
+  border-left: none !important;
+  border-right: none !important;
+  box-shadow: 0 2px 0px var(--mp-green-shadow) !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.cm-hashtag-end {
+  border-left: none !important;
+  box-shadow: 2px 2px 0px var(--mp-green-shadow) !important;
+  padding-left: 0 !important;
+}
+
+/* --- 5.3 引用块与 Callout：直角黑框 + 浓绿左竖条 + 粗犷淡绿硬边阴影 --- */
+.markdown-rendered blockquote,
+.claudian-message-content blockquote {
+  background-color: var(--background-primary-alt) !important;
+  border: 1.5px solid var(--mp-ink-border) !important;
+  border-left: 5px solid var(--mp-green-deep) !important;
+  border-radius: 0px !important;
+  padding: 12px 16px !important;
+  margin: 1.1em 0 !important;
+  color: var(--text-normal) !important;
+  box-shadow: var(--mp-hard-shadow-size) var(--mp-hard-shadow-size) 0px var(--mp-green-shadow) !important;
+}
+
+/* CM6 实时编辑引用块（含多级嵌套引用）：保留原生光标对齐，左侧 4px 浓绿实线 */
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
+  background-color: var(--mp-green-tint) !important;
+  color: var(--text-normal) !important;
+  padding-top: 3px !important;
+  padding-bottom: 3px !important;
+  padding-inline-start: 16px !important;
+  text-indent: 0 !important;
+}
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote.HyperMD-quote-2 {
+  padding-inline-start: 32px !important;
+}
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote.HyperMD-quote-3 {
+  padding-inline-start: 48px !important;
+}
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote:before,
+.markdown-source-view.mod-cm6 .cm-blockquote-border:before {
+  border-left: 4px solid var(--mp-green-deep) !important;
+  border-inline-start: 4px solid var(--mp-green-deep) !important;
+  inset-inline-start: 0 !important;
+}
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote span.cm-quote:not(.cm-formatting):not(.cm-strong):not(.cm-inline-code) {
+  color: var(--text-normal) !important;
+  font-style: normal !important;
+}
+
+/* Callout 卡片（含船板专属四大写作分区与 writing-zones.css 权重兼容） */
+.callout {
+  background-color: var(--background-primary-alt) !important;
+  border: 1.5px solid var(--mp-ink-border) !important;
+  border-left: 5px solid rgb(var(--callout-color, 38, 89, 63)) !important;
+  border-radius: 0px !important;
+  padding: 12px 16px !important;
+  margin: 1.25em 0 !important;
+  box-shadow: var(--mp-hard-shadow-size) var(--mp-hard-shadow-size) 0px var(--mp-green-shadow) !important;
+}
+.callout-title {
+  font-family: var(--font-text) !important;
+  font-weight: 750 !important;
+  color: var(--mp-text-strong) !important;
+  border-bottom: 1px solid var(--mp-ink-border-soft) !important;
+  padding-bottom: 6px !important;
+  margin-bottom: 6px !important;
+}
+.callout-title-inner {
+  font-weight: 750 !important;
+  color: var(--mp-text-strong) !important;
+}
+.callout[data-callout="想法"], .callout[data-callout="idea"] {
+  --callout-color: 184, 134, 45 !important;
+  --callout-icon: lucide-lightbulb !important;
+}
+.callout[data-callout="草稿"], .callout[data-callout="draft"] {
+  --callout-color: 38, 89, 63 !important;
+  --callout-icon: lucide-pen-tool !important;
+}
+.callout[data-callout="正文"], .callout[data-callout="main"] {
+  --callout-color: 43, 108, 110 !important;
+  --callout-icon: lucide-book-open !important;
+}
+.callout[data-callout="预告"], .callout[data-callout="next"] {
+  --callout-color: 95, 102, 95 !important;
+  --callout-icon: lucide-Compass !important;
+}
+
+/* --- 5.4 代码块与行内代码（覆盖正文与 Claudian 气泡）：直角黑线框 + 硬朗等宽 --- */
+.cm-line:not(.HyperMD-codeblock) .cm-inline-code,
+.markdown-rendered code:not(pre code),
+.claudian-message-content code:not(pre code) {
+  font-family: var(--font-monospace) !important;
+  font-size: 0.86em !important;
+  font-weight: 600 !important;
+  background-color: var(--mp-green-tint) !important;
+  color: var(--mp-green-deep) !important;
+  border: 1px solid var(--mp-ink-border) !important;
+  border-radius: 0px !important;
+  padding: 1px 5px !important;
+  margin: 0 !important;
+}
+
+/* 编辑/源码模式下：将行内代码前后的反引号 (`) 与代码正文无缝拼合为同一个完整方框，消除内部割裂竖线 */
+.markdown-source-view.mod-cm6 .cm-line:not(.HyperMD-codeblock) .cm-formatting-code.cm-inline-code {
+  border-top: 1px solid var(--mp-ink-border) !important;
+  border-bottom: 1px solid var(--mp-ink-border) !important;
+  border-left: 1px solid var(--mp-ink-border) !important;
+  border-right: none !important;
+  padding: 1px 0 1px 4px !important;
+  margin: 0 !important;
+  color: var(--mp-green-deep) !important;
+  background-color: var(--mp-green-tint) !important;
+}
+.markdown-source-view.mod-cm6 .cm-line:not(.HyperMD-codeblock) .cm-formatting-code.cm-inline-code ~ .cm-inline-code:not(.cm-formatting-code):has(+ .cm-inline-code),
+.markdown-source-view.mod-cm6 .cm-line:not(.HyperMD-codeblock) .cm-formatting-code.cm-inline-code + .cm-inline-code:not(.cm-formatting-code) {
+  border-top: 1px solid var(--mp-ink-border) !important;
+  border-bottom: 1px solid var(--mp-ink-border) !important;
+  border-left: none !important;
+  border-right: none !important;
+  padding: 1px 0 !important;
+  margin: 0 !important;
+}
+.markdown-source-view.mod-cm6 .cm-line:not(.HyperMD-codeblock) .cm-inline-code:not(.cm-formatting-code) + .cm-formatting-code.cm-inline-code {
+  border-top: 1px solid var(--mp-ink-border) !important;
+  border-bottom: 1px solid var(--mp-ink-border) !important;
+  border-left: none !important;
+  border-right: 1px solid var(--mp-ink-border) !important;
+  padding: 1px 4px 1px 0 !important;
+  margin: 0 !important;
+}
+
+.markdown-rendered pre,
+.claudian-message-content pre {
+  background-color: var(--code-background) !important;
+  border: 1.5px solid var(--mp-ink-border) !important;
+  border-radius: 0px !important;
+  padding: 12px 16px !important;
+  box-shadow: var(--mp-hard-shadow-size) var(--mp-hard-shadow-size) 0px var(--mp-green-shadow) !important;
+}
+
+/* 编辑/源码模式多行代码块：消除每行独立的上下黑框，将首行、中间行、末行合并为一个连续完整的直角框体 + 右下硬边阴影 */
+.markdown-source-view.mod-cm6 div.HyperMD-codeblock-bg {
+  background-color: var(--code-background) !important;
+  border-left: 1.5px solid var(--mp-ink-border) !important;
+  border-right: 1.5px solid var(--mp-ink-border) !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  border-radius: 0px !important;
+  box-shadow: var(--mp-hard-shadow-size) 0px 0px var(--mp-green-shadow) !important;
+}
+.markdown-source-view.mod-cm6 div.HyperMD-codeblock-begin-bg,
+.markdown-source-view.mod-cm6 div.HyperMD-codeblock-bg.HyperMD-codeblock-begin {
+  border-top: 1.5px solid var(--mp-ink-border) !important;
+  padding-top: 6px !important;
+  box-shadow: var(--mp-hard-shadow-size) var(--mp-hard-shadow-size) 0px var(--mp-green-shadow) !important;
+}
+.markdown-source-view.mod-cm6 div.HyperMD-codeblock-end-bg,
+.markdown-source-view.mod-cm6 div.HyperMD-codeblock-bg.HyperMD-codeblock-end {
+  border-bottom: 1.5px solid var(--mp-ink-border) !important;
+  padding-bottom: 6px !important;
+  box-shadow: var(--mp-hard-shadow-size) 0px 0px var(--mp-green-shadow), var(--mp-hard-shadow-size) var(--mp-hard-shadow-size) 0px var(--mp-green-shadow) !important;
+}
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+  line-height: 1.45 !important;
+}
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock.cm-activeLine {
+  background-color: rgba(194, 219, 200, 0.30) !important;
+  box-shadow: inset 3px 0 0 var(--mp-green-deep), var(--mp-hard-shadow-size) 0px 0px var(--mp-green-shadow) !important;
+}
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock.HyperMD-codeblock-end.cm-activeLine {
+  box-shadow: inset 3px 0 0 var(--mp-green-deep), var(--mp-hard-shadow-size) 0px 0px var(--mp-green-shadow), var(--mp-hard-shadow-size) var(--mp-hard-shadow-size) 0px var(--mp-green-shadow) !important;
+}
+
+/* ==============================================================================
+   6. 右侧大纲 (Outline) 与 Bases 数据库表格 (1:1 复刻原图右侧上下分栏)
+   ============================================================================== */
+
+/* --- 6.1 右上角：大纲面板 (深一度的亚麻暖灰底色 + 鼠尾草淡绿直角条高亮) --- */
+.workspace-leaf-content[data-type='outline'],
+.workspace-leaf-content[data-type='outline'] .view-content {
+  background-color: var(--background-secondary-alt) !important;
+  padding: 8px 10px !important;
+}
+
+.workspace-leaf-content[data-type='outline'] .tree-item-self {
+  border-radius: 0px !important;
+  padding: 5px 8px 5px 22px !important;
+  margin-bottom: 2px !important;
+  font-family: var(--font-interface) !important;
+  font-size: 12.5px !important;
+  font-weight: 500 !important;
+  color: var(--text-muted) !important;
+  border: 1px solid transparent !important;
+  position: relative !important;
+}
+.workspace-leaf-content[data-type='outline'] .tree-item-self.mod-collapsible {
+  padding-inline-start: 22px !important;
+}
+
+.workspace-leaf-content[data-type='outline'] .tree-item-self .tree-item-icon {
+  position: absolute !important;
+  left: 3px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  width: 16px !important;
+  height: 16px !important;
+  margin: 0 !important;
+}
+
+.workspace-leaf-content[data-type='outline'] .tree-item-self:hover {
+  background-color: var(--mp-green-tint) !important;
+  color: var(--text-normal) !important;
+  border-color: var(--mp-ink-border) !important;
+}
+
+/* 当前所处章节高亮：复刻原图「整行纯直角淡绿条 (#C2DBC8) + 炭黑粗体字 + 零位移内嵌竖线」 */
+.workspace-leaf-content[data-type='outline'] .tree-item-self.is-active {
+  background-color: var(--mp-green-soft) !important;
+  color: var(--mp-text-on-soft) !important;
+  font-weight: 700 !important;
+  border-radius: 0px !important;
+  box-shadow: inset 3px 0 0 var(--mp-green-deep) !important;
+}
+.workspace-leaf-content[data-type='outline'] .tree-item-self.is-active .tree-item-inner {
+  color: var(--mp-text-on-soft) !important;
+  font-weight: 700 !important;
+}
+
+/* 大纲与文件树层级缩进竖线导引 */
+.nav-folder-children,
+.workspace-leaf-content[data-type='outline'] .tree-item-children {
+  margin-inline-start: 12px !important;
+  padding-inline-start: 4px !important;
+  border-inline-start: 1px solid var(--mp-ink-border-soft) !important;
+}
+
+/* --- 6.2 右下角：Obsidian Bases 数据库表格、正文表格与 Claudian 表格 --- */
+.workspace-leaf-content[data-type='bases'],
+.workspace-leaf-content[data-type='bases'] .view-content,
+.bases-view {
+  background-color: var(--background-secondary) !important;
+  font-family: var(--font-interface) !important;
+}
+
+.bases-header,
+.bases-toolbar {
+  background-color: var(--background-secondary) !important;
+  border-bottom: 1px solid var(--mp-ink-border) !important;
+  font-family: var(--font-monospace) !important;
+  font-size: 12px !important;
+}
+
+/* 正文与 Claudian 表格：完整 1.5px 炭黑外框 + 1px 单元格网格线 */
+.markdown-rendered table,
+.claudian-message-content table {
+  border-collapse: collapse !important;
+  border: 1.5px solid var(--mp-ink-border) !important;
+  border-radius: 0px !important;
+  width: 100% !important;
+  margin: 10px 0 14px 0 !important;
+  box-shadow: 2px 2px 0px var(--mp-green-shadow) !important;
+}
+
+.markdown-rendered th,
+.claudian-message-content th {
+  background-color: var(--background-secondary-alt) !important;
+  font-family: var(--font-monospace) !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  color: var(--mp-text-strong) !important;
+  border: 1px solid var(--mp-ink-border) !important;
+  border-bottom: 1.5px solid var(--mp-ink-border) !important;
+  padding: 7px 12px !important;
+  text-align: left !important;
+}
+
+.markdown-rendered td,
+.claudian-message-content td {
+  font-size: 12.5px !important;
+  border: 1px solid var(--mp-ink-border-soft) !important;
+  padding: 7px 12px !important;
+  background-color: var(--background-primary-alt) !important;
+}
+
+/* Bases 数据库表格：复刻原图右下角纯横向细线分割，无竖向边框 */
+.bases-table,
+.bases-thead,
+.bases-tbody,
+.bases-tr {
+  border-color: var(--mp-ink-border) !important;
+  border-radius: 0px !important;
+}
+.bases-th {
+  background-color: var(--background-secondary-alt) !important;
+  font-family: var(--font-monospace) !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  color: var(--mp-text-strong) !important;
+  border-bottom: 1.5px solid var(--mp-ink-border) !important;
+  border-left: none !important;
+  border-right: none !important;
+  padding: 7px 12px !important;
+}
+.bases-td {
+  font-size: 12.5px !important;
+  border-bottom: 1px solid var(--mp-ink-border-soft) !important;
+  border-left: none !important;
+  border-right: none !important;
+  padding: 7px 12px !important;
+}
+
+/* Bases 文件名链接：复刻原图右下角浓绿粗底线样式 */
+.bases-td a,
+.bases-file-link,
+.bases-table .internal-link {
+  color: var(--text-normal) !important;
+  font-weight: 600 !important;
+  text-decoration: underline !important;
+  text-decoration-color: var(--mp-green-deep) !important;
+  text-decoration-thickness: 2px !important;
+  text-underline-offset: 2px !important;
+}
+
+/* Bases 时间与数字列：强制等宽对齐 */
+.bases-td:not(:first-child) {
+  font-family: var(--font-monospace) !important;
+  font-size: 11.5px !important;
+  color: var(--text-muted) !important;
+  font-variant-numeric: tabular-nums !important;
+}
+
+/* ==============================================================================
+   7. 原生文件树、Notebook Navigator、属性面板、按钮与弹窗
+   ============================================================================== */
+.nav-files-container,
+.workspace-sidedock,
+.nn-list-pane,
+.nn-nav-pane,
+.nn-view {
+  background-color: var(--background-secondary) !important;
+}
+
+.nav-folder-title,
+.nav-file-title,
+.nn-file,
+.nn-file-content,
+.nn-file-tag,
+.nn-file-thumbnail {
+  border-radius: 0px !important;
+  font-family: var(--font-interface) !important;
+  font-weight: 500 !important;
+}
+
+.nav-file-title:hover,
+.nav-folder-title:hover,
+.nn-file:hover:not(.nn-selected) {
+  background-color: var(--mp-green-tint) !important;
+}
+
+.nav-file-title.is-active,
+.nn-file.nn-selected,
+.nn-file.nn-selected .nn-file-content {
+  background-color: var(--mp-green-soft) !important;
+  color: var(--mp-text-on-soft) !important;
+  font-weight: 700 !important;
+  border-radius: 0px !important;
+  box-shadow: inset 3px 0 0 var(--mp-green-deep) !important;
+}
+
+/* 笔记顶部 YAML 属性区 (Properties)：清爽印刷登记表结构，消除内部框中框与贴边截断 */
+.metadata-container {
+  --metadata-label-width: 148px;
+  background-color: var(--background-primary-alt) !important;
+  border: 1.5px solid var(--mp-ink-border) !important;
+  border-radius: 0px !important;
+  padding: 14px 18px !important;
+  margin: 14px 0 22px 0 !important;
+  box-shadow: var(--mp-hard-shadow-size) var(--mp-hard-shadow-size) 0px var(--mp-green-shadow) !important;
+}
+
+/* 当笔记属性折叠收起时 (.is-collapsed)：隐藏标题下分割线并收拢上下内边距 */
+.metadata-container.is-collapsed {
+  padding: 10px 18px !important;
+}
+.metadata-properties-heading {
+  padding: 0 0 8px 0 !important;
+  margin-bottom: 6px !important;
+  border-bottom: 1.5px solid var(--mp-ink-border) !important;
+}
+.metadata-container.is-collapsed .metadata-properties-heading {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+  border-bottom: none !important;
+}
+
+.metadata-property {
+  border-radius: 0px !important;
+  border: none !important;
+  border-bottom: 1px solid var(--mp-ink-border-soft) !important;
+  padding: 4px 6px !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+  outline: none !important;
+  transition: background-color 0.1s ease !important;
+}
+
+.metadata-property:hover {
+  background-color: rgba(194, 219, 200, 0.35) !important;
+}
+
+/* 属性行聚焦态：整行直角淡绿铺底 + 左侧 3px 深松绿竖标，消除原生圆角绿框叠框 */
+.metadata-property:focus-within,
+.metadata-property.is-selected {
+  background-color: var(--mp-green-tint) !important;
+  border-radius: 0px !important;
+  outline: none !important;
+  box-shadow: inset 3px 0 0 var(--mp-green-deep) !important;
+}
+
+.metadata-property-key,
+.metadata-property-value {
+  border-bottom: none !important;
+}
+
+.metadata-property-key {
+  font-family: var(--font-monospace) !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  padding: 2px 10px 2px 4px !important;
+  gap: 6px !important;
+  align-items: center !important;
+}
+
+/* 彻底剥离属性名与属性值内部 input 的多余黑框与阴影，让文字自然舒展 */
+.metadata-container input.metadata-property-key-input,
+.metadata-container .metadata-property-value .metadata-input,
+.metadata-container .metadata-property-value .metadata-input-text,
+.metadata-container .metadata-property-value .metadata-input-longtext,
+.metadata-container .metadata-property-value .multi-select-input,
+.metadata-container .metadata-property-value input[type='text'],
+.metadata-container .metadata-property-value input[type='number'] {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  padding: 3px 6px !important;
+  border-radius: 0px !important;
+  outline: none !important;
+}
+
+/* 日期与日期时间属性：保留左侧 26px 内边距给原生日历图标 (📅)，防止数字与图标重叠 */
+.metadata-container .metadata-property-value input[type='date'],
+.metadata-container .metadata-property-value input[type='datetime-local'],
+.metadata-container .metadata-property-value input.mod-date {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  padding: 3px 6px 3px 26px !important;
+  border-radius: 0px !important;
+  outline: none !important;
+  font-family: var(--font-monospace) !important;
+  font-size: 12.5px !important;
+}
+
+.metadata-add-button {
+  margin-top: 8px !important;
+  padding: 5px 10px !important;
+  border: 1px dashed var(--mp-ink-border) !important;
+  border-radius: 0px !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+/* 全局独立按钮与表单输入框：排除纯图标按钮 (.clickable-icon)，保证充足内边距 */
+.setting-item-control button:not(.clickable-icon),
+.modal-button-container button:not(.clickable-icon),
+button.mod-cta,
+button.mod-warning,
+.view-action.mod-cta {
+  border-radius: 0px !important;
+  border: 1.5px solid var(--mp-ink-border) !important;
+  padding: 5px 14px !important;
+  height: auto !important;
+  min-height: 30px !important;
+  font-family: var(--font-interface) !important;
+  font-weight: 600 !important;
+  box-shadow: 2px 2px 0px var(--mp-green-shadow) !important;
+  transition: transform 0.08s ease, box-shadow 0.08s ease !important;
+}
+
+.setting-item-control input[type='text'],
+.setting-item-control input[type='number'],
+.modal input[type='text'],
+.modal textarea {
+  border-radius: 0px !important;
+  border: 1.5px solid var(--mp-ink-border) !important;
+  padding: 5px 10px !important;
+  font-family: var(--font-interface) !important;
+  font-weight: 500 !important;
+  box-shadow: 2px 2px 0px var(--mp-green-shadow) !important;
+}
+
+/* 搜索框预留左侧放大镜 (32px) 与右侧清空按钮 (28px) 空间，杜绝文字压图标 */
+.setting-item-control input[type='search'],
+.search-input-container input {
+  border-radius: 0px !important;
+  border: 1.5px solid var(--mp-ink-border) !important;
+  padding: 5px 28px 5px 32px !important;
+  font-family: var(--font-interface) !important;
+  font-weight: 500 !important;
+  box-shadow: 2px 2px 0px var(--mp-green-shadow) !important;
+}
+
+/* 下拉选择框 (.dropdown) 预留右侧展开箭头 (28px) 空间，杜绝长选项撞箭头 */
+select.dropdown,
+.dropdown {
+  border-radius: 0px !important;
+  border: 1.5px solid var(--mp-ink-border) !important;
+  padding: 5px 28px 5px 10px !important;
+  font-family: var(--font-interface) !important;
+  font-weight: 500 !important;
+  box-shadow: 2px 2px 0px var(--mp-green-shadow) !important;
+}
+
+button.mod-cta {
+  background-color: var(--mp-green-deep) !important;
+  color: #F4F2EC !important;
+}
+
+.setting-item-control button:not(.clickable-icon):hover,
+.modal-button-container button:not(.clickable-icon):hover,
+button.mod-cta:hover {
+  background-color: var(--mp-green-soft) !important;
+  color: var(--mp-text-on-soft) !important;
+  transform: translate(-1px, -1px) !important;
+  box-shadow: 3px 3px 0px var(--mp-green-deep) !important;
+}
+
+.setting-item-control button:not(.clickable-icon):active,
+.modal-button-container button:not(.clickable-icon):active,
+button.mod-cta:active {
+  transform: translate(1px, 1px) !important;
+  box-shadow: 0px 0px 0px transparent !important;
+}
+
+/* --- 7.2 开关按钮 (Toggle Switch) 与拖动条滑块 (Range Slider)：全整数像素微倒角矩形拨片 --- */
+.checkbox-container {
+  width: 42px !important;
+  height: 22px !important;
+  border-radius: 2px !important;
+  border: 2px solid var(--mp-ink-border) !important;
+  background-color: var(--background-secondary-alt) !important;
+  box-shadow: 2px 2px 0px rgba(24, 27, 24, 0.16) !important;
+  position: relative !important;
+  cursor: pointer !important;
+  box-sizing: border-box !important;
+  transition: background-color 0.12s ease, box-shadow 0.12s ease !important;
+}
+
+.checkbox-container::before {
+  display: none !important;
+}
+
+/* 开关内部滑块：全整数坐标 (top: 2px, left: 2px, 16x14) 杜绝亚像素模糊 */
+.checkbox-container::after {
+  width: 16px !important;
+  height: 14px !important;
+  border-radius: 1.5px !important;
+  background-color: var(--background-primary-alt) !important;
+  border: 1.5px solid var(--mp-ink-border) !important;
+  box-shadow: none !important;
+  top: 2px !important;
+  left: 2px !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+  transform: translate3d(0, 0, 0) !important;
+  transition: transform 0.12s cubic-bezier(0.2, 0.85, 0.32, 1.2), background-color 0.12s ease !important;
+}
+
+.checkbox-container.is-enabled {
+  background-color: var(--mp-green-deep) !important;
+  border-color: var(--mp-ink-border) !important;
+  box-shadow: 2px 2px 0px var(--mp-green-shadow) !important;
+}
+
+.checkbox-container.is-enabled::after {
+  background-color: #F4F2EC !important;
+  border-color: var(--mp-ink-border) !important;
+  transform: translate3d(18px, 0, 0) !important;
+}
+
+.checkbox-container:hover::after {
+  background-color: #FFFFFF !important;
+}
+
+/* 复选框 (Task Checkbox) 同样保持 1.5px 微圆角硬朗方框 */
+input[type="checkbox"],
+.task-list-item-checkbox {
+  border-radius: 1.5px !important;
+  border: 1.5px solid var(--mp-ink-border) !important;
+}
+input[type="checkbox"]:checked,
+.task-list-item-checkbox:checked {
+  background-color: var(--mp-green-deep) !important;
+  border-color: var(--mp-ink-border) !important;
+}
+
+/* 数值拖动条滑块 (Range Slider)：矩形导轨 + 竖向微圆角机械推子 */
+input[type="range"] {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  height: 6px !important;
+  background-color: var(--background-secondary-alt) !important;
+  border: 1.5px solid var(--mp-ink-border) !important;
+  border-radius: 1.5px !important;
+  outline: none !important;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  width: 12px !important;
+  height: 18px !important;
+  border-radius: 1.5px !important;
+  background-color: var(--background-primary-alt) !important;
+  border: 1.5px solid var(--mp-ink-border) !important;
+  box-shadow: 2px 2px 0px var(--mp-green-deep) !important;
+  cursor: pointer !important;
+  margin-top: -7px !important;
+  transition: background-color 0.1s ease, transform 0.1s ease !important;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover,
+input[type="range"]::-webkit-slider-thumb:active {
+  background-color: var(--mp-green-tab) !important;
+  transform: translate(-1px, -1px) !important;
+}
+
+/* 弹窗、命令面板、自动补全下拉浮窗、右键菜单与悬浮预览卡：直角粗黑框 + 硬边亮绿阴影 + 舒适内边距 */
+.modal,
+.prompt,
+.menu,
+.suggestion-container,
+body .popover.hover-popover {
+  background-color: var(--background-primary) !important;
+  border: 1.5px solid var(--mp-ink-border) !important;
+  border-radius: 0px !important;
+  box-shadow: 4px 4px 0px var(--mp-green-shadow) !important;
+}
+
+.menu,
+.suggestion-container {
+  padding: 6px !important;
+}
+
+.suggestion {
+  padding: 2px !important;
+}
+
+.suggestion-item,
+.menu-item {
+  border-radius: 0px !important;
+  padding: 6px 12px !important;
+  margin-bottom: 2px !important;
+  line-height: 1.4 !important;
+}
+.suggestion-item.is-selected,
+.menu-item:hover,
+.menu-item.is-selected {
+  background-color: var(--mp-green-soft) !important;
+  color: var(--mp-text-on-soft) !important;
+  font-weight: 600 !important;
+  box-shadow: inset 3px 0 0 var(--mp-green-deep) !important;
+}
+
+.suggestion-container .prompt-instructions {
+  padding: 6px 10px 4px 10px !important;
+  border-top: 1px solid var(--mp-ink-border-soft) !important;
+}
+
+/* 底部状态栏：直角网格顶边 + 等宽数字 + 舒展内边距 */
+.status-bar {
+  background-color: var(--status-bar-background) !important;
+  border-top: 1px solid var(--mp-ink-border) !important;
+  border-left: 1px solid var(--mp-ink-border) !important;
+  border-radius: 0px !important;
+  font-family: var(--font-monospace) !important;
+  font-size: 11.5px !important;
+  font-weight: 500 !important;
+  padding: 4px 12px !important;
+  gap: 10px !important;
+}
+
+/* ==============================================================================
+   8. 字体预设扩展（含 chuanban-preset-switcher 联动）与悬浮预览卡高密度锁定
+   ============================================================================== */
+body.mp-font-typewriter,
+body.preset-notion-serif,
+.preset-notion-serif {
+  --font-text-theme: var(--mp-font-typewriter-stack);
+  --font-text: var(--font-text-override), var(--mp-font-typewriter-stack);
+}
+body.mp-font-typewriter .markdown-rendered,
+body.mp-font-typewriter .markdown-source-view.mod-cm6 .cm-content,
+body.mp-font-typewriter .markdown-source-view.mod-cm6 .cm-line,
+body.preset-notion-serif .markdown-rendered,
+body.preset-notion-serif .markdown-source-view.mod-cm6 .cm-content,
+body.preset-notion-serif .markdown-source-view.mod-cm6 .cm-line {
+  font-family: var(--font-text-override), var(--mp-font-typewriter-stack) !important;
+}
+
+body.mp-font-songti,
+body.preset-songti-serif,
+.preset-songti-serif {
+  --font-text-theme: var(--mp-font-songti-stack);
+  --font-text: var(--font-text-override), var(--mp-font-songti-stack);
+  --line-height-normal: 1.68;
+}
+body.mp-font-songti .markdown-rendered,
+body.mp-font-songti .markdown-source-view.mod-cm6 .cm-content,
+body.mp-font-songti .markdown-source-view.mod-cm6 .cm-line,
+body.preset-songti-serif .markdown-rendered,
+body.preset-songti-serif .markdown-source-view.mod-cm6 .cm-content,
+body.preset-songti-serif .markdown-source-view.mod-cm6 .cm-line {
+  font-family: var(--font-text-override), var(--mp-font-songti-stack) !important;
+}
+
+/* 悬浮预览卡 (Hover Popover)：完整微缩比例排版，避免预览卡内大标题与内边距撑满窗口 */
+body .popover.hover-popover {
+  --popover-width: 440px !important;
+  --popover-height: 360px !important;
+  --popover-font-size: 13px !important;
+  --font-text-size: 13px !important;
+  --line-height-normal: 1.52 !important;
+  --p-spacing: 0.55em !important;
+  max-width: 440px !important;
+  max-height: 360px !important;
+}
+body .popover.hover-popover .markdown-embed,
+body .popover.hover-popover .markdown-embed-content {
+  height: 100% !important;
+  max-height: 360px !important;
+}
+body .popover.hover-popover .markdown-embed .markdown-preview-view,
+body .popover.hover-popover .markdown-rendered,
+body .popover.hover-popover .markdown-source-view.mod-cm6 .cm-scroller {
+  padding: 12px 16px !important;
+  font-size: 13px !important;
+  line-height: 1.52 !important;
+}
+body .popover.hover-popover .metadata-container {
+  display: none !important;
+}
+body .popover.hover-popover .markdown-rendered p,
+body .popover.hover-popover .markdown-rendered li,
+body .popover.hover-popover .markdown-source-view.mod-cm6 .cm-content,
+body .popover.hover-popover .markdown-source-view.mod-cm6 .cm-line {
+  font-size: 13px !important;
+  line-height: 1.52 !important;
+  margin-block: 0 0.55em !important;
+}
+body .popover.hover-popover .inline-title,
+body .popover.hover-popover .markdown-rendered h1 {
+  font-size: 16px !important;
+  margin: 0.2em 0 0.45em 0 !important;
+}
+body .popover.hover-popover .markdown-rendered h2 {
+  font-size: 14.5px !important;
+  margin: 0.6em 0 0.35em 0 !important;
+}
+body .popover.hover-popover .markdown-rendered h3,
+body .popover.hover-popover .markdown-rendered h4 {
+  font-size: 13.5px !important;
+  margin: 0.5em 0 0.3em 0 !important;
+}
+body .popover.hover-popover .markdown-rendered blockquote,
+body .popover.hover-popover .callout {
+  padding: 8px 12px !important;
+  margin: 0.6em 0 !important;
+  font-size: 12.5px !important;
+}

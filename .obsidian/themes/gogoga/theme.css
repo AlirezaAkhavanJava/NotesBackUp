@@ -1,0 +1,1753 @@
+/* ============================================================
+   gogoga — an Obsidian theme replicating the design language of
+   Tolaria (https://github.com/refactoringhq/tolaria, AGPL-3.0)
+
+   Design tokens ported from Tolaria's src/index.css + src/theme.json:
+   Notion-flavored light palette, warm dark palette, #155DFF accent,
+   Inter typography, 15px/1.5 editor scale, blue list markers.
+   ============================================================ */
+
+/* Options for the Style Settings plugin. Every toggle below is opt-IN,
+   so the theme keeps its intended defaults when the plugin is absent. */
+
+/* @settings
+
+name: gogoga
+id: gogoga
+settings:
+    -
+        id: gg-colors
+        title: Colors
+        title.zh: 配色
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: gg-accent
+        title: Accent color
+        title.zh: 强调色
+        description: Used by links, list markers, checkboxes, blockquote bars and more. Without a value here it follows Settings → Appearance → Accent color
+        description.zh: 链接、列表符号、复选框、引用块边栏等都跟随这个颜色。这里不设时跟随「设置 → 外观 → 强调色」
+        type: variable-themed-color
+        format: hex
+        opacity: false
+        default-light: '#155DFF'
+        default-dark: '#78A4FF'
+    -
+        id: gg-accent-hover
+        title: Accent color (hover)
+        title.zh: 强调色（悬停态）
+        description: Links, buttons and tags while the mouse is over them. The hover line highlight has its own color under Features
+        description.zh: 鼠标停在链接、按钮、标签上时的颜色。悬停行强调的底色在「特性开关」里单独设置
+        type: variable-themed-color
+        format: hex
+        opacity: false
+        default-light: '#0D4AD6'
+        default-dark: '#9BBEFF'
+    -
+        id: code-normal
+        title: Inline code text color
+        title.zh: 行内代码文字颜色
+        type: variable-themed-color
+        format: hex
+        opacity: false
+        default-light: '#8E2726'
+        default-dark: '#FFA6A3'
+    -
+        id: gg-heading-text-color
+        title: Heading color
+        title.zh: 标题颜色
+        description: Applies to H1–H6
+        description.zh: 对一到六级标题都生效
+        type: variable-themed-color
+        format: hex
+        opacity: false
+        default-light: '#37352F'
+        default-dark: '#F1ECE3'
+    -
+        id: gg-italic-color
+        title: Italic text color
+        title.zh: 斜体颜色
+        type: variable-themed-color
+        format: hex
+        opacity: false
+        default-light: '#37352F'
+        default-dark: '#E6E1D8'
+    -
+        id: gg-typography
+        title: Typography
+        title.zh: 排版
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: gg-font-text
+        title: Body font
+        title.zh: 正文字体
+        description: Leave empty to use Inter. The system font stack is always added as a fallback.
+        description.zh: 留空则使用 Inter。系统字体栈会自动作为后备，无需填写。
+        type: variable-text
+        default: Inter
+        quotes: true
+    -
+        id: gg-text-weight
+        title: Body text weight
+        title.zh: 正文字重
+        description: 400 is regular. Raise it if the text looks too thin; bold text stays heavier than body text
+        description.zh: 400 为常规。觉得字太细可以调高，粗体会始终比正文粗一档
+        type: variable-number-slider
+        default: 400
+        min: 300
+        max: 600
+        step: 50
+    -
+        id: gogoga-bold-style
+        title: Bold text style
+        title.zh: 加粗样式
+        description: Classic keeps bold the same color as body text. Accent color tints it, highlighter adds a light marker stroke under it
+        description.zh: 「经典」是默认样子，加粗和正文同色；「强调色」给加粗上强调色；「荧光笔」在加粗文字下半部分加一道淡色底
+        type: class-select
+        allowEmpty: false
+        default: gogoga-bold-classic
+        options:
+            -
+                label: Classic
+                value: gogoga-bold-classic
+            -
+                label: Accent color
+                value: gogoga-bold-accent
+            -
+                label: Highlighter
+                value: gogoga-bold-marker
+    -
+        id: gg-bold-color
+        title: Bold text color
+        title.zh: 加粗颜色
+        description: Leave unset to follow the style above. Takes priority over it once set
+        description.zh: 不设时跟随上面的加粗样式；设了以后优先用这个颜色
+        type: variable-themed-color
+        format: hex
+        opacity: false
+        default-light: '#37352F'
+        default-dark: '#F1ECE3'
+    -
+        id: bold-modifier
+        title: How much heavier bold is
+        title.zh: 加粗比正文粗多少
+        description: Added to the body text weight; 200 turns 400 into 600. Chinese fonts on macOS (PingFang) stop at 600, so higher values only make Latin letters heavier; use the stroke below to thicken Chinese
+        description.zh: 在正文字重上加多少，200 就是 400 → 600。macOS 的中文字体（苹方）最粗只到 600，调得更高只有英文会变粗；中文想更粗请用下面的笔画加粗
+        type: variable-number-slider
+        default: 200
+        min: 100
+        max: 500
+        step: 100
+    -
+        id: gg-bold-stroke
+        title: Thicken bold strokes
+        title.zh: 加粗笔画加粗
+        description: Adds a hairline outline in the text color to bold text, which makes Chinese heavier too. 0 turns it off; 0.15–0.3 is usually enough
+        description.zh: 给加粗文字描一圈同色细边，中文也会跟着变粗。0 为关闭，一般 0.15–0.3 就够
+        type: variable-number-slider
+        default: 0
+        min: 0
+        max: 0.6
+        step: 0.05
+        format: px
+    -
+        id: file-line-width
+        title: Line width
+        title.zh: 正文行宽
+        description: Tolaria's editor measure is 740px
+        description.zh: Tolaria 的编辑区测量宽度是 740px
+        type: variable-number
+        default: 740
+        format: px
+    -
+        id: table-column-min-width
+        title: Minimum table column width
+        title.zh: 表格最小列宽
+        description: Raise it to give sparse tables more room; lower it so long content fills the line sooner
+        description.zh: 调大让稀疏表格更舒展，调小让长内容更早占满行宽
+        type: variable-number
+        default: 100
+        format: px
+    -
+        id: gg-features
+        title: Features
+        title.zh: 特性开关
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: gogoga-hide-h1-divider
+        title: Hide the divider under H1
+        title.zh: 隐藏一级标题下方的分隔线
+        description: Tolaria draws a divider under every H1 and treats it as the note title
+        description.zh: Tolaria 在每个 H1 下画一条分隔线，把它当作笔记标题
+        type: class-toggle
+        default: false
+    -
+        id: gogoga-uniform-bullets
+        title: Same bullet at every level
+        title.zh: 统一嵌套列表符号
+        description: By default nested levels use Tolaria's dot / circle / square; turn on to use dots everywhere
+        description.zh: 默认按 Tolaria 的实心点 / 空心圆 / 方块区分层级，开启后全部使用实心点
+        type: class-toggle
+        default: false
+    -
+        id: gogoga-hover-highlight
+        title: Highlight the line under the mouse
+        title.zh: 悬停行强调
+        description: A light accent-tinted background on the line or paragraph under the mouse, in both editing and reading views
+        description.zh: 鼠标所在的行（段落）带一层淡淡的强调色底，编辑和阅读视图都生效
+        type: class-toggle
+        default: false
+    -
+        id: gg-line-hover
+        title: Hover highlight color
+        title.zh: 悬停行强调的底色
+        description: Leave unset to use a light tint of the accent color. Keep the opacity low so text stays readable
+        description.zh: 不设时用强调色的淡色。建议透明度调低一些，免得盖住文字
+        type: variable-themed-color
+        format: hex
+        opacity: true
+        default-light: '#155DFF12'
+        default-dark: '#78A4FF1F'
+    -
+        id: gogoga-heading-level
+        title: Heading level markers
+        title.zh: 标题等级标记
+        description: A small H1–H6 label in the margin left of each heading
+        description.zh: 在每个标题左侧的空白处显示一个小小的 H1–H6 标记
+        type: class-toggle
+        default: false
+    -
+        id: gogoga-focus-mode
+        title: Focus mode
+        title.zh: 聚焦模式
+        description: While typing, everything except the current line (paragraph) fades out; in reading view the block under the mouse stays bright
+        description.zh: 写作时只有光标所在的行（段落）保持清晰，其余内容变淡；阅读视图里跟随鼠标所在的段落
+        type: class-toggle
+        default: false
+    -
+        id: gogoga-subpixel-text
+        title: Use the system's font rendering
+        title.zh: 使用系统字体渲染
+        description: By default text uses grayscale antialiasing (as in Tolaria, which looks lighter); turn on to use the system's subpixel rendering. macOS only — on Windows use Body text weight instead
+        description.zh: 默认使用灰度抗锯齿（与 Tolaria 一致，字重看起来更细），开启后回到系统默认的次像素渲染。仅 macOS 有效，Windows 上请用「正文字重」调粗
+        type: class-toggle
+        default: false
+    -
+        id: gg-marker-style
+        title: Highlighter notes
+        title.zh: 荧光笔记
+        description: Headings and key points look like they were marked with a highlighter. Every item is off by default
+        description.zh: 标题和重点像用荧光笔划过。每一项默认都关着
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: gg-marker
+        title: Highlighter color
+        title.zh: 荧光笔颜色
+        description: Used by every item below
+        description.zh: 下面几项都用这个颜色
+        type: variable-themed-color
+        format: hex
+        opacity: false
+        default-light: '#FFD60A'
+        default-dark: '#F5C800'
+    -
+        id: gogoga-marker-h1
+        title: H1 on a marker block
+        title.zh: 一级标题马克笔色块
+        description: The note title and H1 sit on a solid block of the highlighter color, as if colored in with a thick marker. Replaces the divider under H1
+        description.zh: 笔记标题和一级标题压在一块实心色块上，像用粗马克笔涂过。打开后不再显示一级标题下方的分隔线
+        type: class-toggle
+        default: false
+    -
+        id: gogoga-marker-headings
+        title: Highlighter stroke on H2 and H3
+        title.zh: 二三级标题荧光笔
+        description: A highlighter stroke across the lower half of H2 and H3
+        description.zh: 二、三级标题的下半截刷一道荧光笔
+        type: class-toggle
+        default: false
+    -
+        id: gogoga-marker-highlight
+        title: Highlights drawn with a highlighter
+        title.zh: 高亮像荧光笔划过
+        description: ==Highlights== get slanted ends like a real highlighter stroke. Colored highlights keep their own colors
+        description.zh: ==高亮== 两头斜着收尾，像真的荧光笔划出来。带颜色的高亮保持原来的颜色
+        type: class-toggle
+        default: false
+    -
+        id: gogoga-marker-underline
+        title: Marker underline
+        title.zh: 下划线像记号笔
+        description: <u>Underlined</u> text gets a thick highlighter line across its lower part instead of a thin line
+        description.zh: <u>下划线</u> 换成压在文字下半部的一道粗记号笔线
+        type: class-toggle
+        default: false
+    -
+        id: gogoga-marker-strike
+        title: Red strikethrough
+        title.zh: 删除线红色划掉
+        description: Struck-through text turns gray with a red line through it
+        description.zh: 删除线的文字变灰，用一道红线划掉
+        type: class-toggle
+        default: false
+*/
+
+/* ------------------------------------------------------------
+   Shared (non-color) variables — typography, sizing, spacing
+   ------------------------------------------------------------ */
+body {
+  /* Tolaria renders text with grayscale antialiasing (index.css :root),
+     which reads noticeably lighter on macOS than the subpixel default
+     Obsidian ships with — this is what makes identical font weights
+     look thinner in Tolaria */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+
+  /* Fonts */
+  --font-interface-theme: "Inter", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  /* Style Settings can override the first family; the fallback stack
+     survives either way */
+  --font-text-theme: var(--gg-font-text, "Inter"), -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    sans-serif;
+  --font-monospace-theme: "SF Mono", ui-monospace, "IBM Plex Mono",
+    "Fira Code", "JetBrains Mono", Menlo, monospace;
+
+  /* Editor scale — Tolaria: 15px base / 1.5 line-height / 740px measure */
+  --line-height-normal: 1.5;
+  --file-line-width: 740px;
+  --p-spacing: 8px;
+
+  /* Headings — Tolaria px sizes expressed relative to a 15px base:
+     h1 32 / h2 27 / h3 20 / h4 17 */
+  --heading-spacing: 24px;
+  --h1-size: 2.1333em;
+  --h1-weight: 700;
+  --h1-line-height: 1.2;
+  --h2-size: 1.8em;
+  --h2-weight: 600;
+  --h2-line-height: 1.4;
+  --h3-size: 1.3333em;
+  --h3-weight: 600;
+  --h3-line-height: 1.4;
+  --h4-size: 1.1333em;
+  --h4-weight: 600;
+  --h4-line-height: 1.4;
+  --h5-size: 1em;
+  --h5-weight: 600;
+  --h5-line-height: 1.4;
+  --h6-size: 0.9333em;
+  --h6-weight: 600;
+  --h6-line-height: 1.4;
+
+  /* Inline title = Tolaria's note "Title" (H1 with divider underneath) */
+  --inline-title-size: 2.1333em;
+  --inline-title-weight: 700;
+  --inline-title-line-height: 1.2;
+  --inline-title-margin-bottom: 12px;
+
+  /* Emphasis */
+  /* 600, not Tolaria's 700: CJK faces (PingFang) top out at Semibold,
+     so 700 makes Latin heavier than the Chinese beside it */
+  --bold-weight: 600;
+
+  /* Lists — indent 24px @15px base, blue markers */
+  --list-indent: 1.6em;
+  --list-spacing: 4px;
+
+  /* Tolaria hides the vertical nesting guide lines in lists */
+  --indentation-guide-color: transparent;
+  --indentation-guide-color-active: transparent;
+
+  /* Checkboxes — 18px, 3px radius */
+  --checkbox-size: 18px;
+  --checkbox-radius: 3px;
+
+  /* Inline code — 14px @15px base, 3px radius */
+  --code-size: 0.9333em;
+  --code-radius: 3px;
+
+  /* Tables — column width floor: sparse tables stay airy, but kept
+     modest so a long-content column can still claim most of the
+     measure before wrapping (Tolaria's fixed columns always wrap;
+     this is a softer compromise) */
+  --table-column-min-width: 100px;
+
+  /* Blockquote — 3px accent rail */
+  --blockquote-border-thickness: 3px;
+
+  /* HR */
+  --hr-thickness: 1px;
+
+  /* Tags — rounded chips, medium weight */
+  --tag-size: 0.8667em;
+  --tag-weight: 500;
+  --tag-radius: 4px;
+  --tag-padding-x: 6px;
+  --tag-padding-y: 2px;
+  --tag-decoration: none;
+  --tag-decoration-hover: none;
+
+  /* Links — internal links use a dotted rail instead (see below) */
+  --link-decoration: none;
+  --link-decoration-hover: none;
+  --link-external-decoration: underline;
+
+  /* Sidebar / nav — 13px medium rows */
+  --nav-item-size: 13px;
+  --nav-item-weight: 500;
+  --nav-item-weight-hover: 500;
+  --nav-item-weight-active: 500;
+  --nav-item-padding: 6px 8px 6px 12px;
+
+  /* Tabs */
+  --tab-font-size: 13px;
+  --tab-font-weight: 500;
+
+  /* Status bar — 12px medium */
+  --status-bar-font-size: 12px;
+
+  /* Properties panel — Tolaria: 12px labels/values, compact rows */
+  --metadata-label-font-size: 12px;
+  --metadata-label-font-weight: 400;
+  --metadata-input-font-size: 12px;
+  --metadata-property-radius: 4px;
+  --metadata-property-padding: 2px 6px;
+  --metadata-input-height: 24px;
+  --metadata-gap: 2px;
+
+  /* Property chips — Tolaria: 24px tall, r6, 12px medium */
+  --pill-radius: 6px;
+  --pill-padding-x: 8px;
+  --pill-padding-y: 4px;
+  --pill-weight: 500;
+  --pill-border-width: 0px;
+  --pill-decoration: none;
+  --pill-decoration-hover: none;
+
+  /* Radii — Tolaria --radius: 0.5rem */
+  --radius-s: 4px;
+  --radius-m: 8px;
+  --radius-l: 10px;
+
+  /* Vault name / titlebar */
+  --vault-name-font-size: 13px;
+  --vault-name-font-weight: 500;
+
+  /* Icons — Tolaria uses Phosphor (16px, fine strokes); thin Obsidian's
+     Lucide set to 1.5px strokes for a similarly refined look */
+  --icon-xs: 14px;
+  --icon-s: 16px;
+  --icon-m: 16px;
+  --icon-l: 16px;
+  --icon-xs-stroke-width: 1.5px;
+  --icon-s-stroke-width: 1.5px;
+  --icon-m-stroke-width: 1.5px;
+  --icon-l-stroke-width: 1.5px;
+  --icon-xl-stroke-width: 1.25px;
+}
+
+/* ------------------------------------------------------------
+   Light palette — Tolaria light tokens
+   ------------------------------------------------------------ */
+.theme-light {
+  color-scheme: light;
+
+  /* Accent: #155DFF. Obsidian writes the user's Settings → Appearance → Accent
+     color onto <body> as --accent-h/s/l, which beats these defaults, so the
+     theme follows that setting. Style Settings can still override --gg-accent. */
+  --accent-h: 222;
+  --accent-s: 100%;
+  --accent-l: 54%;
+
+  /* gogoga tokens */
+  --gg-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --gg-accent-hover: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 9%));
+  --gg-heading-color: #37352F;
+  --gg-code-block-bg: #F7F6F3;
+  --gg-code-block-border: #E9E9E7;
+  --gg-code-block-text: #37352F;
+  --gg-code-block-lang: #787774;
+  --gg-popover-bg: #FFFFFF;
+  --gg-popover-border: #E9E9E7;
+  --gg-dialog-bg: #FFFFFF;
+  --gg-dialog-shadow: rgba(0, 0, 0, 0.15);
+  --gg-accent-tint: color-mix(in srgb, var(--gg-accent) 8%, transparent);
+
+  /* Surfaces */
+  --background-primary: #FCFCFB;
+  --background-primary-alt: #F9F8F6;
+  --background-secondary: #F9F8F6;
+  --background-secondary-alt: #F0F0EF;
+  --background-modifier-hover: #EBEBEA;
+  --background-modifier-active-hover: #E8F4FE;
+  --background-modifier-border: #E9E9E7;
+  --background-modifier-border-hover: #D9D9D6;
+  --background-modifier-border-focus: var(--gg-accent);
+  --background-modifier-form-field: #FFFFFF;
+  --background-modifier-error: #E53E3E;
+  --background-modifier-error-hover: #C53030;
+  --background-modifier-error-rgb: 229, 62, 62;
+  --background-modifier-success: rgba(56, 161, 105, 0.1);
+  --background-modifier-cover: rgba(0, 0, 0, 0.3);
+
+  /* Text */
+  --text-normal: #37352F;
+  --text-muted: #787774;
+  --text-faint: #B4B4B4;
+  --text-on-accent: #FFFFFF;
+  --text-accent: var(--gg-accent);
+  --text-accent-hover: var(--gg-accent-hover);
+  --text-selection: #B1D4FB;
+  --text-highlight-bg: #FEF3C7;
+  --text-error: #E53E3E;
+  --text-success: #38A169;
+  --text-warning: #92400E;
+
+  /* Interactive */
+  --interactive-normal: #EBEBEA;
+  --interactive-hover: #E2E2E0;
+  --interactive-accent: var(--gg-accent);
+  --interactive-accent-hover: var(--gg-accent-hover);
+
+  /* Dividers / icons */
+  --divider-color: #E9E9E7;
+  --icon-color: #787774;
+  --icon-color-hover: #37352F;
+  --icon-color-active: #37352F;
+  --icon-color-focused: #37352F;
+
+  /* Emphasis colors */
+  --bold-color: var(--gg-bold-color, var(--gg-heading-color));
+  --italic-color: var(--gg-italic-color, #37352F);
+
+  /* Code — inline: dark red text on the subtle hover surface */
+  --code-normal: #8E2726;
+  --code-background: #F0F0EF;
+  --code-comment: #6A737D;
+  --code-keyword: #D73A49;
+  --code-tag: #D73A49;
+  --code-string: #032F62;
+  --code-value: #005CC5;
+  --code-property: #005CC5;
+  --code-function: #6F42C1;
+  --code-important: #E36209;
+  --code-punctuation: #636C76;
+
+  /* Links */
+  --link-color: var(--gg-accent);
+  --link-color-hover: var(--gg-accent-hover);
+  --link-external-color: var(--gg-accent);
+  --link-external-color-hover: var(--gg-accent-hover);
+  --link-unresolved-color: #787774;
+  --link-unresolved-opacity: 0.8;
+
+  /* Lists / checkboxes */
+  --list-marker-color: var(--gg-accent);
+  --checkbox-color: var(--gg-accent);
+  --checkbox-color-hover: var(--gg-accent-hover);
+  --checkbox-border-color: #B4B4B4;
+  --checkbox-border-color-hover: #787774;
+  --checkbox-marker-color: #FFFFFF;
+
+  /* Blockquote */
+  --blockquote-border-color: var(--gg-accent);
+
+  /* Tables — white header on light, per theme.json */
+  --table-border-color: #E9E9E7;
+  --table-header-background: #FFFFFF;
+  --table-header-background-hover: #F7F6F3;
+  --table-header-weight: 600;
+  --table-row-background-hover: #F0F0EF;
+  --table-row-alt-background: transparent;
+
+  /* HR / embeds */
+  --hr-color: #E9E9E7;
+  --embed-border-left: 2px solid var(--gg-accent);
+
+  /* Tags — blue chip on blue-tinted bg */
+  --tag-color: var(--gg-accent);
+  --tag-color-hover: var(--gg-accent-hover);
+  --tag-background: color-mix(in srgb, var(--gg-accent) 8%, transparent);
+  --tag-background-hover: color-mix(in srgb, var(--gg-accent) 14%, transparent);
+
+  /* Nav (file explorer) */
+  --nav-item-color: #37352F;
+  --nav-item-color-hover: #37352F;
+  --nav-item-color-active: #37352F;
+  --nav-item-background-hover: #EBEBEA;
+  --nav-item-background-active: #EBEBEA;
+  --nav-collapse-icon-color: #B4B4B4;
+  --nav-collapse-icon-color-collapsed: #B4B4B4;
+  --nav-indentation-guide-color: #E9E9E7;
+
+  /* Tabs */
+  --tab-background-active: #FCFCFB;
+  --tab-text-color: #787774;
+  --tab-text-color-active: #787774;
+  --tab-text-color-focused: #787774;
+  --tab-text-color-focused-active: #37352F;
+  --tab-text-color-focused-active-current: #37352F;
+  --tab-text-color-focused-highlighted: #37352F;
+  --tab-divider-color: #E9E9E7;
+  --tab-outline-color: transparent;
+  --tab-curve: 0px;
+
+  /* Titlebar / ribbon / status bar */
+  --titlebar-background: #F9F8F6;
+  --titlebar-background-focused: #F9F8F6;
+  --titlebar-text-color: #787774;
+  --titlebar-text-color-focused: #37352F;
+  --ribbon-background: #F9F8F6;
+  --ribbon-background-collapsed: #F9F8F6;
+  --status-bar-background: #FCFCFB;
+  --status-bar-border-color: #E9E9E7;
+  --status-bar-border-width: 1px 0 0 0;
+  --status-bar-text-color: #787774;
+
+  /* Modals / prompts */
+  --modal-border-color: #E9E9E7;
+  --prompt-border-color: #E9E9E7;
+
+  /* Scrollbars */
+  --scrollbar-bg: transparent;
+  --scrollbar-thumb-bg: rgba(0, 0, 0, 0.12);
+  --scrollbar-active-thumb-bg: rgba(0, 0, 0, 0.22);
+
+  /* Shadows — Tolaria dialog shadow */
+  --shadow-s: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-l: 0 8px 24px rgba(0, 0, 0, 0.15);
+
+  /* Properties */
+  --metadata-label-text-color: #787774;
+  --metadata-label-text-color-hover: #787774;
+  --metadata-input-text-color: #37352F;
+  --metadata-property-background: transparent;
+  --metadata-property-background-hover: #F0F0EF;
+  --metadata-property-background-active: #EBEBEA;
+  --metadata-label-background-hover: transparent;
+  --metadata-label-background-active: transparent;
+  --metadata-input-background: transparent;
+  --metadata-input-background-hover: transparent;
+  --metadata-input-background-active: #F0F0EF;
+  --pill-color: #37352F;
+  --pill-color-hover: #37352F;
+  --pill-color-remove: #787774;
+  --pill-background: #F0F0EF;
+  --pill-background-hover: #EBEBEA;
+  --pill-border-color: transparent;
+  --pill-border-color-hover: transparent;
+}
+
+/* ------------------------------------------------------------
+   Dark palette — Tolaria dark tokens (warm charcoal)
+   ------------------------------------------------------------ */
+.theme-dark {
+  color-scheme: dark;
+
+  /* Accent: #78A4FF. A user accent applies to both modes; on the dark
+     background it is lifted to at least 68% lightness so dark picks stay readable. */
+  --accent-h: 220;
+  --accent-s: 100%;
+  --accent-l: 74%;
+
+  /* gogoga tokens */
+  --gg-accent: hsl(var(--accent-h), var(--accent-s), max(var(--accent-l), 68%));
+  --gg-accent-hover: hsl(var(--accent-h), var(--accent-s), calc(max(var(--accent-l), 68%) + 8%));
+  --gg-heading-color: #F1ECE3;
+  --gg-code-block-bg: #161616;
+  --gg-code-block-border: transparent;
+  --gg-code-block-text: #FFFFFF;
+  --gg-code-block-lang: rgba(255, 255, 255, 0.7);
+  --gg-popover-bg: #292823;
+  --gg-popover-border: #3A3832;
+  --gg-dialog-bg: #272622;
+  --gg-dialog-shadow: rgba(0, 0, 0, 0.42);
+  --gg-accent-tint: color-mix(in srgb, var(--gg-accent) 16%, transparent);
+
+  /* Surfaces */
+  --background-primary: #1F1E1B;
+  --background-primary-alt: #23221F;
+  --background-secondary: #191814;
+  --background-secondary-alt: #262520;
+  --background-modifier-hover: #2D2B27;
+  --background-modifier-active-hover: #1E344C;
+  --background-modifier-border: #34322D;
+  --background-modifier-border-hover: #46433B;
+  --background-modifier-border-focus: var(--gg-accent);
+  --background-modifier-form-field: #1F1E1B;
+  --background-modifier-error: #E53E3E;
+  --background-modifier-error-hover: #C53030;
+  --background-modifier-error-rgb: 255, 138, 134;
+  --background-modifier-success: rgba(121, 216, 157, 0.16);
+  --background-modifier-cover: rgba(8, 8, 7, 0.58);
+
+  /* Text */
+  --text-normal: #E6E1D8;
+  --text-muted: #B8B1A6;
+  --text-faint: #7F776D;
+  --text-on-accent: #151411;
+  --text-accent: var(--gg-accent);
+  --text-accent-hover: var(--gg-accent-hover);
+  --text-selection: #1E344C;
+  --text-highlight-bg: rgba(245, 195, 107, 0.16);
+  --text-error: #FF8A86;
+  --text-success: #79D89D;
+  --text-warning: #F5C36B;
+
+  /* Interactive */
+  --interactive-normal: #34322D;
+  --interactive-hover: #3D3B35;
+  --interactive-accent: var(--gg-accent);
+  --interactive-accent-hover: var(--gg-accent-hover);
+
+  /* Dividers / icons */
+  --divider-color: #34322D;
+  --icon-color: #B8B1A6;
+  --icon-color-hover: #E6E1D8;
+  --icon-color-active: #E6E1D8;
+  --icon-color-focused: #E6E1D8;
+
+  /* Emphasis colors */
+  --bold-color: var(--gg-bold-color, var(--gg-heading-color));
+  --italic-color: var(--gg-italic-color, #E6E1D8);
+
+  /* Code — inline: Tolaria's dark monospace red on the subtle surface */
+  --code-normal: #FFA6A3;
+  --code-background: #262520;
+  --code-comment: #8E877D;
+  --code-keyword: #FF9BA0;
+  --code-tag: #FF9BA0;
+  --code-string: #A9D6FF;
+  --code-value: #8BB7FF;
+  --code-property: #8BB7FF;
+  --code-function: #C2AAFF;
+  --code-important: #F3B175;
+  --code-punctuation: #9C9488;
+
+  /* Links */
+  --link-color: var(--gg-accent);
+  --link-color-hover: var(--gg-accent-hover);
+  --link-external-color: var(--gg-accent);
+  --link-external-color-hover: var(--gg-accent-hover);
+  --link-unresolved-color: #B8B1A6;
+  --link-unresolved-opacity: 0.8;
+
+  /* Lists / checkboxes */
+  --list-marker-color: var(--gg-accent);
+  --checkbox-color: var(--gg-accent);
+  --checkbox-color-hover: var(--gg-accent-hover);
+  --checkbox-border-color: #7F776D;
+  --checkbox-border-color-hover: #9C9488;
+  --checkbox-marker-color: #151411;
+
+  /* Blockquote */
+  --blockquote-border-color: var(--gg-accent);
+
+  /* Tables */
+  --table-border-color: #34322D;
+  --table-header-background: #23221F;
+  --table-header-background-hover: #2D2B27;
+  --table-header-weight: 600;
+  --table-row-background-hover: #262520;
+  --table-row-alt-background: transparent;
+
+  /* HR / embeds */
+  --hr-color: #34322D;
+  --embed-border-left: 2px solid var(--gg-accent);
+
+  /* Tags */
+  --tag-color: var(--gg-accent);
+  --tag-color-hover: var(--gg-accent-hover);
+  --tag-background: color-mix(in srgb, var(--gg-accent) 16%, transparent);
+  --tag-background-hover: color-mix(in srgb, var(--gg-accent) 24%, transparent);
+
+  /* Nav (file explorer) */
+  --nav-item-color: #E6E1D8;
+  --nav-item-color-hover: #E6E1D8;
+  --nav-item-color-active: #E6E1D8;
+  --nav-item-background-hover: #2D2B27;
+  --nav-item-background-active: #2D2B27;
+  --nav-collapse-icon-color: #7F776D;
+  --nav-collapse-icon-color-collapsed: #7F776D;
+  --nav-indentation-guide-color: #2A2925;
+
+  /* Tabs */
+  --tab-background-active: #1F1E1B;
+  --tab-text-color: #B8B1A6;
+  --tab-text-color-active: #B8B1A6;
+  --tab-text-color-focused: #B8B1A6;
+  --tab-text-color-focused-active: #E6E1D8;
+  --tab-text-color-focused-active-current: #E6E1D8;
+  --tab-text-color-focused-highlighted: #E6E1D8;
+  --tab-divider-color: #34322D;
+  --tab-outline-color: transparent;
+  --tab-curve: 0px;
+
+  /* Titlebar / ribbon / status bar */
+  --titlebar-background: #191814;
+  --titlebar-background-focused: #191814;
+  --titlebar-text-color: #B8B1A6;
+  --titlebar-text-color-focused: #E6E1D8;
+  --ribbon-background: #191814;
+  --ribbon-background-collapsed: #191814;
+  --status-bar-background: #1F1E1B;
+  --status-bar-border-color: #34322D;
+  --status-bar-border-width: 1px 0 0 0;
+  --status-bar-text-color: #B8B1A6;
+
+  /* Modals / prompts */
+  --modal-border-color: #3A3832;
+  --prompt-border-color: #3A3832;
+
+  /* Scrollbars */
+  --scrollbar-bg: transparent;
+  --scrollbar-thumb-bg: rgba(255, 255, 255, 0.1);
+  --scrollbar-active-thumb-bg: rgba(255, 255, 255, 0.2);
+
+  /* Shadows */
+  --shadow-s: 0 1px 4px rgba(0, 0, 0, 0.22);
+  --shadow-l: 0 12px 26px rgba(0, 0, 0, 0.3);
+
+  /* Properties */
+  --metadata-label-text-color: #B8B1A6;
+  --metadata-label-text-color-hover: #B8B1A6;
+  --metadata-input-text-color: #E6E1D8;
+  --metadata-property-background: transparent;
+  --metadata-property-background-hover: #262520;
+  --metadata-property-background-active: #2D2B27;
+  --metadata-label-background-hover: transparent;
+  --metadata-label-background-active: transparent;
+  --metadata-input-background: transparent;
+  --metadata-input-background-hover: transparent;
+  --metadata-input-background-active: #262520;
+  --pill-color: #E6E1D8;
+  --pill-color-hover: #E6E1D8;
+  --pill-color-remove: #7F776D;
+  --pill-background: #2D2B27;
+  --pill-background-hover: #34322D;
+  --pill-border-color: transparent;
+  --pill-border-color-hover: transparent;
+}
+
+/* ------------------------------------------------------------
+   Headings — Tolaria margins, letter-spacing, and the H1 divider
+   ------------------------------------------------------------ */
+.markdown-rendered h1,
+.markdown-rendered h2,
+.markdown-rendered h3,
+.markdown-rendered h4,
+.markdown-rendered h5,
+.markdown-rendered h6,
+.markdown-source-view.mod-cm6 .cm-line[class*="HyperMD-header"] {
+  color: var(--gg-heading-text-color, var(--gg-heading-color));
+}
+
+.markdown-rendered h1,
+.markdown-source-view.mod-cm6 .HyperMD-header-1,
+.inline-title {
+  letter-spacing: -0.5px;
+}
+.markdown-rendered h2,
+.markdown-rendered h3,
+.markdown-source-view.mod-cm6 .HyperMD-header-2,
+.markdown-source-view.mod-cm6 .HyperMD-header-3 {
+  letter-spacing: -0.5px;
+}
+
+/* Reading mode margins: h1 32/12, h2 28/10, h3 24/8, h4 20/6 */
+.markdown-rendered h1 { margin-top: 24px; margin-bottom: 12px; }
+.markdown-rendered h2 { margin-top: 28px; margin-bottom: 10px; }
+.markdown-rendered h3 { margin-top: 24px; margin-bottom: 8px; }
+.markdown-rendered h4 { margin-top: 20px; margin-bottom: 6px; }
+.markdown-rendered h5,
+.markdown-rendered h6 { margin-top: 20px; margin-bottom: 6px; }
+
+/* Live Preview: approximate block spacing with line padding.
+   Unlike reading mode, LP renders the blank source line above a
+   heading as a real ~22px line — so these values are Tolaria's
+   margins minus one blank line, keeping the VISUAL gap equal to
+   reading mode (32/28/24/20). */
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-header-1 { --gg-heading-pad-top: 2px; }
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-header-2 { --gg-heading-pad-top: 6px; }
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-header-3 { --gg-heading-pad-top: 2px; }
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-header-4,
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-header-5,
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-header-6 { --gg-heading-pad-top: 0px; }
+.markdown-source-view.mod-cm6 .cm-line[class*="HyperMD-header-"] { padding-top: var(--gg-heading-pad-top); }
+
+/* An H1 at the very top of the note (right below the properties panel /
+   inline title) drops its block spacing — Tolaria's Title sits flush */
+.markdown-source-view.mod-cm6 .cm-content > .cm-line.HyperMD-header-1:first-child {
+  --gg-heading-pad-top: 0px;
+}
+.markdown-preview-section > .mod-header + div h1,
+.markdown-preview-section > .metadata-container + div h1 {
+  margin-top: 0;
+}
+
+/* Tolaria draws a divider under every H1 block (its "Title" treatment) */
+.inline-title,
+.markdown-rendered h1,
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-header-1 {
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--divider-color);
+}
+
+/* The first H1 is the note's Title — it hugs the top of the note
+   (or the properties block) instead of carrying the 32px gap that
+   body H1s get. */
+/* :nth-child(1 of .cm-line) = the first rendered line, regardless of
+   the properties widget and the .cm-widgetBuffer elements CodeMirror
+   inserts around it (those broke a plain adjacent-sibling selector) */
+.markdown-source-view.mod-cm6 .cm-content > .cm-line.HyperMD-header-1:nth-child(1 of .cm-line) {
+  --gg-heading-pad-top: 4px;
+}
+.markdown-reading-view .markdown-preview-sizer > div:first-child > h1,
+.markdown-reading-view .markdown-preview-sizer > .metadata-container + div > h1,
+.markdown-reading-view .markdown-preview-sizer > .mod-header + div > h1 {
+  margin-top: 4px;
+}
+
+/* Properties block sits close to the content below it */
+.markdown-source-view.mod-cm6 .cm-content > .metadata-container,
+.markdown-rendered .metadata-container {
+  margin-bottom: 4px;
+}
+
+/* ------------------------------------------------------------
+   Lists — Obsidian already renders Live Preview bullets and
+   numbers with --list-marker-color; no extra drawing needed.
+
+   Nested marker shapes follow Tolaria's sequence: filled dot,
+   hollow circle, filled square (then square for deeper levels).
+   Obsidian draws every bullet as .list-bullet::after in BOTH
+   modes; depth comes from HyperMD-list-line-N classes in Live
+   Preview and <ul> nesting in reading mode.
+   ------------------------------------------------------------ */
+/* Level 2: hollow circle */
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-list-line-2 .list-bullet::after,
+.markdown-rendered ul ul > li > .list-bullet::after {
+  background-color: transparent;
+  border: 1.5px solid var(--list-marker-color);
+}
+/* Level 3 and deeper: filled square */
+.markdown-source-view.mod-cm6 :is(.HyperMD-list-line-3, .HyperMD-list-line-4,
+    .HyperMD-list-line-5, .HyperMD-list-line-6) .list-bullet::after,
+.markdown-rendered ul ul ul > li > .list-bullet::after {
+  background-color: var(--list-marker-color);
+  border: none;
+  border-radius: 0;
+}
+
+/* ------------------------------------------------------------
+   Inline code + code blocks
+   Tolaria: inline = subtle gray chip; block = sidebar-tinted panel
+   (light) / near-black #161616 panel (dark)
+   ------------------------------------------------------------ */
+.markdown-rendered :not(pre) > code,
+.cm-s-obsidian span.cm-inline-code {
+  color: var(--code-normal);
+  background-color: var(--code-background);
+  border-radius: var(--code-radius);
+  padding: 1px 4px;
+}
+
+.markdown-rendered pre {
+  background-color: var(--gg-code-block-bg);
+  border: 1px solid var(--gg-code-block-border);
+  border-radius: 6px;
+}
+.markdown-rendered pre code {
+  color: var(--gg-code-block-text);
+}
+.markdown-rendered .copy-code-button {
+  background-color: transparent;
+  color: var(--gg-code-block-lang);
+  box-shadow: none;
+}
+.markdown-rendered .copy-code-button:hover {
+  background-color: transparent;
+  color: var(--gg-code-block-text);
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
+  background-color: var(--gg-code-block-bg);
+  color: var(--gg-code-block-text);
+  border-left: 1px solid var(--gg-code-block-border);
+  border-right: 1px solid var(--gg-code-block-border);
+}
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock-begin {
+  border-top: 1px solid var(--gg-code-block-border);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock-end {
+  border-bottom: 1px solid var(--gg-code-block-border);
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.markdown-source-view.mod-cm6 .code-block-flair {
+  color: var(--gg-code-block-lang);
+}
+
+/* ------------------------------------------------------------
+   Links — external underlined, wikilinks with a dotted rail
+   ------------------------------------------------------------ */
+.markdown-rendered a.external-link,
+.cm-s-obsidian .cm-link .cm-underline {
+  text-decoration: underline;
+}
+
+.markdown-rendered a.internal-link,
+.markdown-source-view.mod-cm6 .cm-hmd-internal-link {
+  color: var(--link-color);
+  text-decoration: none;
+  border-bottom: 1px dotted currentColor;
+}
+.markdown-source-view.mod-cm6 .cm-hmd-internal-link .cm-underline {
+  text-decoration: none;
+}
+.markdown-rendered a.internal-link.is-unresolved,
+.markdown-source-view.mod-cm6 .cm-hmd-internal-link.is-unresolved {
+  color: var(--link-unresolved-color);
+  border-bottom-color: currentColor;
+}
+
+/* ------------------------------------------------------------
+   Blockquote — 3px accent rail, italic, secondary text
+   ------------------------------------------------------------ */
+.markdown-rendered blockquote {
+  padding-inline-start: 16px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-quote {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ------------------------------------------------------------
+   Strikethrough, highlight, tables, hr
+   ------------------------------------------------------------ */
+.markdown-rendered del,
+.markdown-rendered s,
+.cm-s-obsidian .cm-strikethrough {
+  color: var(--text-muted);
+}
+
+.markdown-rendered mark,
+.cm-s-obsidian .cm-highlight {
+  border-radius: 2px;
+  padding: 0 0.12em;
+}
+
+.markdown-rendered table {
+  font-size: 0.9333em;
+}
+
+/* Tolaria-like adaptive tables: not forced full-width — each column
+   simply gets a generous minimum (BlockNote's default-column-width
+   feel), so sparse tables still breathe. The LP widget already
+   applies --table-column-min-width to its cells; mirror it in
+   reading mode. */
+.markdown-rendered th,
+.markdown-rendered td {
+  min-width: var(--table-column-min-width);
+}
+.markdown-rendered th,
+.markdown-rendered td {
+  padding: 8px 12px;
+}
+
+.markdown-rendered hr {
+  margin: 24px 0;
+}
+
+/* ------------------------------------------------------------
+   Workspace chrome
+   ------------------------------------------------------------ */
+.status-bar {
+  font-weight: 500;
+}
+
+.workspace-tab-header-container {
+  border-bottom: none;
+}
+
+.view-header-title {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Sidebar section headers — Tolaria's 11px medium labels */
+.nav-folder-title.mod-root > .nav-folder-title-content,
+.workspace-leaf-content .tree-item-self.is-clickable.mod-collapsible.is-root {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: none;
+}
+
+/* Rounded nav rows like Tolaria's sidebar items */
+.nav-file-title,
+.nav-folder-title {
+  border-radius: var(--radius-s);
+}
+
+/* ------------------------------------------------------------
+   Menus, popovers, modals, command palette
+   ------------------------------------------------------------ */
+.menu {
+  background-color: var(--gg-popover-bg);
+  border: 1px solid var(--gg-popover-border);
+  border-radius: var(--radius-m);
+  box-shadow: 0 2px 8px var(--gg-dialog-shadow);
+  padding: 4px;
+}
+.menu-item {
+  font-size: 13px;
+  border-radius: var(--radius-s);
+  padding: 6px 10px;
+}
+
+.modal {
+  background-color: var(--gg-dialog-bg);
+  border: 1px solid var(--modal-border-color);
+  border-radius: var(--radius-l);
+  box-shadow: 0 8px 24px var(--gg-dialog-shadow);
+}
+
+.prompt {
+  background-color: var(--gg-dialog-bg);
+  border: 1px solid var(--prompt-border-color);
+  border-radius: var(--radius-l);
+  box-shadow: 0 8px 24px var(--gg-dialog-shadow);
+}
+/* Palette input is borderless with a bottom divider (Tolaria's cmdk
+   style) — the global focus ring would get clipped by the prompt's
+   rounded corners anyway */
+.prompt-input,
+.prompt-input:focus,
+.prompt-input:focus-visible {
+  font-size: 15px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+.prompt-input-container {
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+.suggestion-item {
+  font-size: 13px;
+  border-radius: var(--radius-s);
+}
+.suggestion-item.is-selected {
+  background-color: var(--background-modifier-hover);
+}
+
+/* Hover editor / page preview popover */
+.popover.hover-popover {
+  background-color: var(--gg-popover-bg);
+  border: 1px solid var(--gg-popover-border);
+  border-radius: var(--radius-m);
+  box-shadow: 0 8px 24px var(--gg-dialog-shadow);
+}
+
+/* ------------------------------------------------------------
+   Inputs — white field, #155DFF focus ring
+   ------------------------------------------------------------ */
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea {
+  background-color: var(--background-modifier-form-field);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 6px;
+}
+input[type="text"]:focus,
+input[type="search"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+  border-color: var(--background-modifier-border-focus);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--gg-accent) 15%, transparent);
+}
+
+/* ------------------------------------------------------------
+   Properties (frontmatter) panel — Tolaria property rows:
+   12px muted labels, borderless inputs, quiet row hover,
+   24px chips. See Tolaria's propertyPanelLayout.ts.
+   ------------------------------------------------------------ */
+/* Neutralize the global form-field styling inside the panel —
+   Tolaria's key/value fields are borderless text */
+.metadata-container input:not([type="checkbox"]),
+.metadata-container input:not([type="checkbox"]):focus {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+/* "Properties" heading — Tolaria's 11px medium section label */
+.metadata-properties-heading .metadata-properties-title {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.metadata-property-icon {
+  color: var(--text-muted);
+}
+
+/* Pills get Tolaria's fixed chip height: 24px tall with the 12px
+   text centered — otherwise height collapses to text + padding
+   and chips look squat */
+.multi-select-pill {
+  min-height: 24px;
+  align-items: center;
+}
+
+/* Tags pills in Properties: quiet gray chips (matching the note
+   list) instead of Obsidian's accent-colored tag treatment */
+.metadata-property[data-property-key="tags"] .multi-select-pill {
+  color: var(--text-muted);
+  background-color: var(--background-modifier-hover);
+}
+.metadata-property[data-property-key="tags"] .multi-select-pill:hover {
+  color: var(--text-normal);
+  background-color: var(--background-modifier-border-hover);
+}
+/* The remove "x" gets Obsidian's accent tag color — mute it too */
+.metadata-property[data-property-key="tags"] .multi-select-pill-remove-button {
+  color: var(--text-muted);
+}
+.metadata-property[data-property-key="tags"] .multi-select-pill-remove-button:hover {
+  color: var(--text-normal);
+}
+
+/* Add property — quiet 12px text button */
+.metadata-add-button {
+  font-size: 12px;
+  color: var(--text-muted);
+  background: transparent;
+  box-shadow: none;
+  border-radius: var(--radius-s);
+}
+.metadata-add-button:hover {
+  color: var(--text-normal);
+  background: var(--background-modifier-hover);
+}
+
+/* ------------------------------------------------------------
+   Properties as a side panel — Tolaria keeps a note's properties
+   in a dedicated panel instead of stacking them above the text.
+   Obsidian does the same once Settings -> Editor -> "Properties
+   in document" is set to Hidden and the "File properties" core
+   view is docked in the right sidebar.
+
+   Obsidian's own sidebar defaults square off every row and draw
+   a 1px hairline under each one; Tolaria's panel is a plain list
+   of rows with a quiet hover fill. Undo the hairlines, give the
+   rows their radius and rhythm back.
+   ------------------------------------------------------------ */
+.workspace-leaf-content[data-type="file-properties"] .metadata-container,
+.workspace-leaf-content[data-type="all-properties"] .metadata-container {
+  --metadata-divider-width: 0;
+  --metadata-property-radius: var(--radius-s);
+  --metadata-property-radius-hover: var(--radius-s);
+  --metadata-property-radius-focus: var(--radius-s);
+  --metadata-property-padding: 0 6px;
+  --metadata-label-width: 6.5em;
+  --metadata-input-height: 26px;
+  margin-block-end: 0;
+}
+/* Rows sit shoulder to shoulder in Tolaria; 1px keeps them from
+   touching without reopening Obsidian's default 3px ladder */
+.workspace-leaf-content[data-type="file-properties"] .metadata-properties,
+.workspace-leaf-content[data-type="all-properties"] .metadata-properties {
+  --metadata-gap: 1px;
+}
+/* Panel gutter. Kept tight so that the 6px of row padding above
+   can carry the hover fill a little past the label text, the way
+   Tolaria's does, without pushing the text off the sidebar's
+   own left rhythm */
+.workspace-leaf-content[data-type="file-properties"] .view-content {
+  padding: var(--size-4-1) var(--size-4-2);
+}
+/* The value column is the note's actual content — full-strength
+   text against the muted labels */
+.workspace-leaf-content[data-type="file-properties"] .metadata-property-value {
+  color: var(--text-normal);
+}
+/* "Add property" spans the panel as a quiet full-width row */
+.workspace-leaf-content[data-type="file-properties"] .metadata-add-button {
+  width: 100%;
+  justify-content: flex-start;
+  padding: 0 6px;
+  height: 26px;
+}
+
+/* Frontmatter source colors — Tolaria raw editor */
+.theme-light .cm-s-obsidian .cm-hmd-frontmatter.cm-atom,
+.theme-light .cm-s-obsidian .cm-hmd-frontmatter.cm-meta { color: #C9383E; }
+.theme-light .cm-s-obsidian .cm-hmd-frontmatter.cm-string { color: #2A7E4F; }
+.theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-atom,
+.theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-meta { color: #FFA6A3; }
+.theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-string { color: #8EDFAE; }
+
+/* ------------------------------------------------------------
+   Notebook Navigator adaptation — styles the plugin's note list
+   like Tolaria's middle column (specs from Tolaria NoteItem.tsx):
+   14x16 row padding, square full-width rows, 13px medium titles,
+   12px muted previews, accent-tinted selection with a 3px rail.
+   The plugin defines its --nn-theme-* API on body; the theme
+   loads later, so these overrides win.
+   ------------------------------------------------------------ */
+body {
+  /* Panes: gray folder tree, white note list (Tolaria's 3-column depth) */
+  --nn-theme-nav-bg: var(--background-secondary);
+  --nn-theme-list-bg: var(--background-primary);
+
+  /* Text ramp: solid Tolaria grays instead of alpha mixes */
+  --nn-theme-foreground-muted: var(--text-muted);
+  --nn-theme-foreground-faded: var(--text-faint);
+
+  /* File rows. NOTE: row heights are frozen constants in the plugin's
+     JS (basePadding:16 + section line heights, no gap terms), so CSS
+     can never ADD vertical space — it can only redistribute it. Here:
+     trim padding 8px -> 5px (frees 6px) and spend it as 2px gaps
+     between title/preview/tags/metadata (worst case 3 gaps = 6px). */
+  --nn-file-padding-vertical: 5px;
+  --nn-file-item-padding-horizontal: 16px;
+  --nn-theme-file-border-radius: 0px;
+  --nn-file-name-size: 13px;
+  --nn-file-small-size: 12px;
+  --nn-theme-file-name-font-weight: 500;
+  --nn-theme-file-preview-color: var(--text-muted);
+  --nn-theme-file-date-color: var(--text-muted);
+  --nn-theme-list-separator-color: var(--divider-color);
+
+  /* Selection: Tolaria's default (untyped) note = gray tint + gray rail
+     (typeColors.ts DEFAULT_COLOR/DEFAULT_LIGHT_COLOR); blue is reserved
+     for the nav pane */
+  --nn-theme-file-selected-bg: var(--background-secondary-alt);
+  --nn-theme-file-selected-inactive-bg: var(--background-secondary-alt);
+
+  /* Line rhythm: plugin defaults (20/19/18px) already equal Tolaria's
+     1.5 ratio at 13/12px — and they MUST stay px values, because the
+     plugin computes preview max-height as calc(line-height * rows). */
+
+  /* Tags in rows -> quiet neutral chips (muted text on subtle gray),
+     matching the selected-state tag look instead of accent blue */
+  --nn-theme-file-tag-color: var(--text-muted);
+  --nn-theme-file-tag-bg: var(--background-modifier-hover);
+  --nn-theme-file-selected-tag-color: var(--text-muted);
+  /* One step darker than the selected card bg so chips stay legible —
+     including the inactive (editor-focused) state, whose card bg
+     otherwise equals the chip gray exactly */
+  --nn-theme-file-selected-tag-bg: var(--background-modifier-border-hover);
+  --nn-theme-file-selected-inactive-tag-color: var(--text-muted);
+  --nn-theme-file-selected-inactive-tag-bg: var(--background-modifier-border-hover);
+  --nn-theme-file-tag-border-color: transparent;
+  --nn-theme-file-property-border-color: transparent;
+  --nn-theme-file-tag-border-radius: 6px;
+  --nn-theme-file-tag-font-weight: 500;
+
+  /* Date-group headers -> muted section labels */
+  --nn-theme-list-group-header-color: var(--text-muted);
+  --nn-theme-list-group-header-font-weight: 500;
+
+  /* Folder tree rows: 13px-medium look, muted icons */
+  --nn-theme-navitem-name-font-weight: 500;
+  --nn-theme-navitem-icon-color: var(--text-muted);
+  --nn-theme-navitem-hover-bg: var(--background-modifier-hover);
+  /* Focused selection matches the unfocused gray — no accent tint */
+  --nn-theme-navitem-selected-bg: var(--background-modifier-hover);
+
+  /* List pane header title — Tolaria: 14px semibold */
+  --nn-list-title-font-size: 14px;
+}
+
+/* Selected row: semibold title + 3px accent rail, like Tolaria */
+.nn-file.nn-selected .nn-file-name {
+  font-weight: 600;
+}
+.nn-file.nn-selected .nn-file-content {
+  /* Rail color = Tolaria's default type color (muted-foreground) */
+  box-shadow: inset 3px 0 0 var(--text-muted);
+}
+
+/* Row separators run edge to edge (Tolaria draws a full border-b) */
+.nn-virtual-file-item:not(.nn-last-file)::after {
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+}
+
+/* Date-group headers ("Today", …) as small muted labels */
+.nn-list-group-header {
+  font-size: 12px;
+}
+
+/* Tolaria has no leading icon column in the note list, so the 16px icon
+   slot (+6px gap) the plugin reserves at the start of every row is dropped.
+   Rows that do carry an icon (frontmatter `icon`, folder icons, …) keep it,
+   but it moves to the end of the row: every title then starts at the same
+   left edge, and the icon reads as a trailing badge instead of pushing a
+   handful of rows out of line. */
+.nn-file-icon-slot:empty {
+  display: none;
+}
+
+.nn-file-icon-slot:not(:empty) {
+  order: 9;
+  align-self: flex-start;
+  margin-inline-start: 8px;
+  /* the leading-column gap the plugin budgets for is not wanted here */
+  margin-inline-end: calc(-1 * var(--nn-file-icon-slot-gap, 0px));
+}
+
+/* .nn-quick-actions-panel is absolutely positioned in the same top-right
+   corner, so step out of its way while the row is hovered. */
+.nn-file:hover .nn-file-icon-slot:not(:empty) {
+  opacity: 0;
+}
+
+/* Section gaps inside a row, funded by the padding trim above —
+   see the budget note on --nn-file-padding-vertical. */
+.nn-file-text-content {
+  gap: 2px;
+}
+
+/* Full-bleed rows: remove the 10px white gutter around the list
+   scroller so selection backgrounds and separators reach the pane
+   edges (Tolaria rows are edge to edge). Scoped to the list pane
+   only — the nav pane keeps its default gutter. */
+.nn-list-pane {
+  --nn-scroller-padding: 0px;
+}
+/* ------------------------------------------------------------
+   Style Settings toggles — each rule below only applies when the
+   plugin adds the corresponding opt-in class to <body>, so the
+   theme's defaults hold without the plugin installed.
+   ------------------------------------------------------------ */
+body.gogoga-hide-h1-divider .inline-title,
+body.gogoga-hide-h1-divider .markdown-rendered h1,
+body.gogoga-hide-h1-divider .markdown-source-view.mod-cm6 .cm-line.HyperMD-header-1 {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+body.gogoga-uniform-bullets .markdown-source-view.mod-cm6 .cm-line[class*="HyperMD-list-line"] .list-bullet::after,
+body.gogoga-uniform-bullets .markdown-rendered ul ul > li > .list-bullet::after,
+body.gogoga-uniform-bullets .markdown-rendered ul ul ul > li > .list-bullet::after {
+  background-color: var(--list-marker-color);
+  border: none;
+  border-radius: 50%;
+}
+
+/* Bold text options (Style Settings → Typography). The default is the classic
+   look; a custom bold color wins over the style. The stroke is a hairline in
+   the text color: CJK faces on macOS stop at Semibold, so a bigger
+   --bold-modifier only changes Latin letters, while the stroke thickens both.
+   Headings are bold already and are left alone */
+body.gogoga-bold-accent.theme-light,
+body.gogoga-bold-accent.theme-dark {
+  --bold-color: var(--gg-bold-color, var(--gg-accent));
+}
+body.gogoga-bold-marker :is(.markdown-rendered strong, .markdown-rendered b, .cm-strong) {
+  background: linear-gradient(transparent 62%, color-mix(in srgb, var(--gg-accent) 22%, transparent) 62%);
+}
+:is(.markdown-rendered strong, .markdown-rendered b, .cm-strong) {
+  -webkit-text-stroke: var(--gg-bold-stroke, 0) currentColor;
+}
+:is(.markdown-rendered :is(h1, h2, h3, h4, h5, h6) :is(strong, b), .cm-header.cm-strong) {
+  -webkit-text-stroke: 0;
+}
+
+body.gogoga-subpixel-text {
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+}
+
+/* Hover highlight and focus mode. Three ways to switch each one on,
+   none of which needs a plugin except the first:
+     - Style Settings toggles (body.gogoga-hover-highlight / body.gogoga-focus-mode)
+     - per note via the built-in `cssclasses` property (gogoga-hover / gogoga-focus /
+       gogoga-heading-level)
+     - globally via the CSS snippets in snippets/, which only set the variable
+   All three just set a custom property; the rules live once, behind a
+   container style query on it. */
+body.gogoga-hover-highlight,
+.gogoga-hover {
+  --gogoga-hover-highlight: on;
+}
+body.gogoga-heading-level,
+.gogoga-heading-level {
+  --gogoga-heading-level: on;
+}
+body.gogoga-focus-mode,
+.gogoga-focus {
+  --gogoga-focus-mode: on;
+}
+
+/* Editor rows are CodeMirror lines (a paragraph is one line); reading view
+   uses blocks. Only the innermost list item lights up, otherwise hovering a
+   child would light the whole list */
+@container style(--gogoga-hover-highlight: on) {
+  .cm-content > .cm-line:hover,
+  .markdown-rendered :is(p, h1, h2, h3, h4, h5, h6, tr):hover,
+  .markdown-rendered li:hover:not(:has(li:hover)) {
+    background-color: var(--gg-line-hover, color-mix(in srgb, var(--gg-accent) 7%, transparent));
+    border-radius: var(--radius-s);
+  }
+}
+
+/* While the editor has focus, everything but the cursor's line fades.
+   Reading view has no cursor, so the block under the mouse stays bright */
+@container style(--gogoga-focus-mode: on) {
+  .cm-content > *,
+  .markdown-preview-sizer > div {
+    transition: opacity 0.2s ease;
+  }
+  .cm-editor.cm-focused .cm-content > :not(.cm-active),
+  .markdown-preview-sizer:hover > div:not(:hover) {
+    opacity: 0.3;
+  }
+}
+
+/* Heading level markers (Maple-style): a small H1–H6 tag hanging in the
+   margin left of each heading, in the editor and in reading view.
+   The tag is centred on the heading's first line. `lh` inside the tag would
+   mean the tag's own small line height, so the heading's line height is
+   resolved to px on the heading through a registered <length> property */
+@property --gg-heading-line {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 0px;
+}
+@container style(--gogoga-heading-level: on) {
+  .markdown-source-view.mod-cm6 .cm-line[class*="HyperMD-header-"],
+  .markdown-rendered :is(h1, h2, h3, h4, h5, h6) {
+    position: relative;
+    --gg-heading-line: 1lh;
+  }
+  .markdown-source-view.mod-cm6 .cm-line[class*="HyperMD-header-"]::before,
+  .markdown-rendered :is(h1, h2, h3, h4, h5, h6)::before {
+    position: absolute;
+    /* clear of the heading fold arrow, which also lives in this margin */
+    inset-inline-end: calc(100% + 26px);
+    top: calc(var(--gg-heading-pad-top, 0px) + var(--gg-heading-line) / 2);
+    white-space: nowrap;
+    transform: translateY(-50%);
+    font-family: var(--font-interface);
+    font-size: 10px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: 0;
+    color: var(--text-faint);
+    pointer-events: none;
+  }
+  .markdown-source-view.mod-cm6 .cm-line.HyperMD-header-1::before,
+  .markdown-rendered h1::before { content: "H1"; }
+  .markdown-source-view.mod-cm6 .cm-line.HyperMD-header-2::before,
+  .markdown-rendered h2::before { content: "H2"; }
+  .markdown-source-view.mod-cm6 .cm-line.HyperMD-header-3::before,
+  .markdown-rendered h3::before { content: "H3"; }
+  .markdown-source-view.mod-cm6 .cm-line.HyperMD-header-4::before,
+  .markdown-rendered h4::before { content: "H4"; }
+  .markdown-source-view.mod-cm6 .cm-line.HyperMD-header-5::before,
+  .markdown-rendered h5::before { content: "H5"; }
+  .markdown-source-view.mod-cm6 .cm-line.HyperMD-header-6::before,
+  .markdown-rendered h6::before { content: "H6"; }
+}
+
+/* Body text weight (Style Settings). Body text uses --font-normal, so set
+   the weight on the note content directly. Obsidian computes bold as
+   --font-weight + --bold-modifier and headings set their own --font-weight,
+   so bold follows along and headings are untouched */
+.markdown-source-view.mod-cm6 .cm-content,
+.markdown-rendered {
+  --font-weight: var(--gg-text-weight, var(--font-normal));
+  font-weight: var(--font-weight);
+}
+
+/* ------------------------------------------------------------
+   Built-in file explorer — Tolaria's folder tree (folder-tree/*.tsx):
+   a 17px folder icon instead of a chevron (open folder when expanded),
+   13px medium rows with 6px vertical padding, 25px per level, and a 1px
+   connector under the parent folder's icon. Notebook Navigator users
+   never see this pane, so it only matters without that plugin.
+   ------------------------------------------------------------ */
+.nav-files-container {
+  --gg-folder-icon: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 256 256%22%3E%3Cpath d=%22M216,72H131.31L104,44.69A15.86,15.86,0,0,0,92.69,40H40A16,16,0,0,0,24,56V200.62A15.4,15.4,0,0,0,39.38,216H216.89A15.13,15.13,0,0,0,232,200.89V88A16,16,0,0,0,216,72ZM40,56H92.69l16,16H40ZM216,200H40V88H216Z%22/%3E%3C/svg%3E");
+  --gg-folder-open-icon: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 256 256%22%3E%3Cpath d=%22M245,110.64A16,16,0,0,0,232,104H216V88a16,16,0,0,0-16-16H130.67L102.94,51.2a16.14,16.14,0,0,0-9.6-3.2H40A16,16,0,0,0,24,64V208h0a8,8,0,0,0,8,8H211.1a8,8,0,0,0,7.59-5.47l28.49-85.47A16.05,16.05,0,0,0,245,110.64ZM93.34,64,123.2,86.4A8,8,0,0,0,128,88h72v16H69.77a16,16,0,0,0-15.18,10.94L40,158.7V64Zm112,136H43.1l26.67-80H232Z%22/%3E%3C/svg%3E");
+  /* 12px inset + half the 17px icon puts the guide under the icon's center;
+     margin + 1px guide + padding = Tolaria's 25px per level */
+  --nav-item-children-margin-start: 20px;
+  --nav-item-children-padding-start: 4px;
+}
+/* Obsidian hangs the chevron in the gutter (absolute, negative margin);
+   the folder icon sits in the row instead, before the name */
+.nav-files-container .nav-folder-title .collapse-icon {
+  position: static;
+  flex: none;
+  width: 17px;
+  height: 17px;
+  margin-inline-start: 0;
+  margin-inline-end: 8px;
+  padding: 0;
+  align-self: center;
+  color: inherit;
+}
+.nav-files-container .nav-folder-title .collapse-icon svg {
+  display: none;
+}
+.nav-files-container .nav-folder-title .collapse-icon::before {
+  content: "";
+  display: block;
+  width: 17px;
+  height: 17px;
+  background-color: currentColor;
+  -webkit-mask: var(--gg-folder-icon) center / contain no-repeat;
+  mask: var(--gg-folder-icon) center / contain no-repeat;
+}
+.nav-files-container .nav-folder:not(.is-collapsed) > .nav-folder-title .collapse-icon::before {
+  -webkit-mask-image: var(--gg-folder-open-icon);
+  mask-image: var(--gg-folder-open-icon);
+}
+/* Files line their text up with folder names (icon + gap) */
+.nav-files-container .nav-file-title-content {
+  padding-inline-start: 25px;
+}
+.nav-files-container .nav-file-title.is-active,
+.nav-files-container .nav-folder-title.is-active {
+  background-color: color-mix(in srgb, var(--gg-accent) 10%, transparent);
+  color: var(--gg-accent);
+}
+.nav-files-container .nav-file-title.is-active .nav-file-tag {
+  color: var(--gg-accent);
+}
+
+/* ------------------------------------------------------------
+   荧光笔记 (Highlighter notes) — opt-in through Style Settings:
+   each item is a body class, all off by default. One color
+   (--gg-marker) drives every item; light and dark share the
+   same yellow, only the translucent strokes get lighter in dark.
+   ------------------------------------------------------------ */
+body {
+  --gg-marker: #FFD60A;
+  /* Translucent stroke for headings / underline: lets the text keep its own color */
+  --gg-marker-stroke: color-mix(in srgb, var(--gg-marker) 72%, transparent);
+  /* Text placed on the solid marker (H1 block, highlights) stays dark in both modes */
+  --gg-marker-ink: #1F1E1B;
+  --gg-strike-color: #E5484D;
+}
+.theme-dark {
+  --gg-marker: #F5C800;
+  --gg-marker-stroke: color-mix(in srgb, var(--gg-marker) 42%, transparent);
+}
+
+/* 1. H1 on a marker block — the note title, reading-view h1 and the
+      heading text in Live Preview (the "# " stays plain while editing) */
+body.gogoga-marker-h1 .inline-title,
+body.gogoga-marker-h1 .markdown-rendered h1 {
+  width: fit-content;
+  max-width: 100%;
+  padding: 0.04em 0.28em 0.08em;
+  border-bottom: none;
+  background-color: var(--gg-marker);
+  color: var(--gg-marker-ink);
+  /* Slightly uneven corners read as hand-colored rather than a UI badge */
+  border-radius: 2px 5px 3px 6px / 5px 2px 6px 3px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+body.gogoga-marker-h1 .markdown-rendered h1 { margin-bottom: 16px; }
+body.gogoga-marker-h1 .inline-title { margin-bottom: 20px; }
+body.gogoga-marker-h1 .markdown-source-view.mod-cm6 .cm-line.HyperMD-header-1 {
+  padding-bottom: 8px;
+  border-bottom: none;
+}
+body.gogoga-marker-h1 .markdown-source-view.mod-cm6 .cm-line.HyperMD-header-1 .cm-header-1:not(.cm-formatting) {
+  padding: 0.04em 0.28em 0.08em;
+  background-color: var(--gg-marker);
+  color: var(--gg-marker-ink);
+  border-radius: 2px 5px 3px 6px / 5px 2px 6px 3px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* 2. H2 / H3: a highlighter stroke across the lower half of the text */
+body.gogoga-marker-headings .markdown-rendered h2,
+body.gogoga-marker-headings .markdown-rendered h3 {
+  width: fit-content;
+  max-width: 100%;
+}
+body.gogoga-marker-headings .markdown-rendered h2,
+body.gogoga-marker-headings .markdown-rendered h3,
+body.gogoga-marker-headings .markdown-source-view.mod-cm6 .cm-line.HyperMD-header-2 .cm-header-2:not(.cm-formatting),
+body.gogoga-marker-headings .markdown-source-view.mod-cm6 .cm-line.HyperMD-header-3 .cm-header-3:not(.cm-formatting) {
+  padding: 0 0.18em;
+  margin-left: -0.18em;
+  background-image: linear-gradient(176deg, transparent 52%, var(--gg-marker-stroke) 52%, var(--gg-marker-stroke) 90%, transparent 90%);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+/* Live Preview spans sit next to each other (bold, links inside a heading):
+   only the first one shifts left, or the pieces would overlap */
+body.gogoga-marker-headings .markdown-source-view.mod-cm6 .cm-line[class*="HyperMD-header-"] .cm-header:not(.cm-formatting) + .cm-header:not(.cm-formatting) {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+/* 3. ==Highlight== with slanted ends, like a highlighter stroke.
+      Colored highlights (Obsidian's ==🔴…== / <mark style>) keep their colors.
+      Obsidian 1.15+ puts an empty data-highlight="" on plain highlights too */
+body.gogoga-marker-highlight .markdown-rendered mark:not([style]):is(:not([data-highlight]), [data-highlight=""]),
+body.gogoga-marker-highlight .cm-s-obsidian .cm-highlight {
+  padding: 0.02em 0.3em;
+  border-radius: 0;
+  color: var(--gg-marker-ink);
+  background-color: transparent;
+  background-image: linear-gradient(100deg, transparent 0.12em, var(--gg-marker) 0.28em, var(--gg-marker) calc(100% - 0.28em), transparent calc(100% - 0.12em));
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* 4. <u>Underline</u> as a thick marker line across the lower part */
+body.gogoga-marker-underline .markdown-rendered u,
+body.gogoga-marker-underline .markdown-source-view.mod-cm6 u,
+body.gogoga-marker-underline .markdown-source-view .mm-note-u,
+body.gogoga-marker-underline .mm-label u {
+  text-decoration: none;
+  padding: 0 0.06em;
+  background-image: linear-gradient(transparent 64%, var(--gg-marker-stroke) 64%, var(--gg-marker-stroke) 94%, transparent 94%);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* 5. Strikethrough: gray text, red line */
+body.gogoga-marker-strike .markdown-rendered del,
+body.gogoga-marker-strike .markdown-rendered s,
+body.gogoga-marker-strike .cm-s-obsidian .cm-strikethrough {
+  color: var(--text-muted);
+  text-decoration-line: line-through;
+  text-decoration-color: var(--gg-strike-color);
+  text-decoration-thickness: 2px;
+}

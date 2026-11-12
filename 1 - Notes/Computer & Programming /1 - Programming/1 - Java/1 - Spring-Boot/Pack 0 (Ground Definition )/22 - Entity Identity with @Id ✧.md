@@ -89,7 +89,9 @@ private UUID id;
 
 Hibernate creates a random UUID **in your application**, before the insert. This strategy needs JPA 3.1, which means Spring Boot 3 or newer.
 
-Pros: no database round trip to get the ID, IDs can't be guessed one after another, and IDs are unique across systems. Con: random UUIDs are scattered, so on very large tables the primary-key index can become slower than with sequential numbers. If that matters, Hibernate offers time-ordered UUIDs:
+**Pros**: no database round trip to get the ID, IDs can't be guessed one after another, and IDs are unique across systems. 
+
+**Con**: random UUIDs are scattered, so on very large tables the primary-key index can become slower than with sequential numbers. If that matters, Hibernate offers time-ordered UUIDs:
 
 ```java
 @Id
@@ -135,13 +137,14 @@ Watch out for `allocationSize`. It is how many IDs Hibernate reserves at once, a
 
 ### `GenerationType.AUTO` and `TABLE`
 
-`AUTO` lets Hibernate choose based on the ID type and database. It's convenient, but the result is less obvious, so for real projects choose a strategy explicitly. `TABLE` simulates a sequence with a table. It's slow and almost never the right choice.
+`AUTO` lets Hibernate choose based on the ID type and database. It's convenient, but the result is less obvious, so for real projects choose a strategy explicitly. 
+`TABLE` simulates a sequence with a table. It's slow and almost never the right choice.
 
 ### What is `generator`?
 
 The `generator` parameter connects `@GeneratedValue` to a named configuration such as `@SequenceGenerator`:
 
-```
+```java
 @GeneratedValue(generator = "user_seq")
         |
         v

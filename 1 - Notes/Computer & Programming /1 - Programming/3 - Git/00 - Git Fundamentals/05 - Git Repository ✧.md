@@ -41,4 +41,4 @@ They're not fundamentally different things — a remote repo is just another ful
 
 
 
-[[00 - Git]]
+[[Git & Github]]
