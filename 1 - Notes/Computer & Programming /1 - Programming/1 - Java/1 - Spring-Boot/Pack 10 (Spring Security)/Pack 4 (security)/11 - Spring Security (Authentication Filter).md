@@ -1,6 +1,5 @@
 ![[6a951148-8a50-4482-9587-fa937ff85752.png]]
 
-
 # Understanding Spring Security Authentication Flow
 
 ## First, what is "authentication"?

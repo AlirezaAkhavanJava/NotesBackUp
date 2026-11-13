@@ -1,7 +1,5 @@
 
 
-I'm assuming you meant `@JsonProperty` (from the Jackson library), since `@JaosnProperty` doesn't exist.
-
 ## 1. Core intuition
 
 Spring Boot converts between **JSON** and **Java objects** using a library called **Jackson**. By default, Jackson matches JSON keys to Java property names exactly.

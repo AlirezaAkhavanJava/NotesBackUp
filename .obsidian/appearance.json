@@ -1,7 +1,8 @@
 {
   "accentColor": "",
-  "cssTheme": "Claudian",
+  "cssTheme": "Things",
   "baseFontSize": 16,
   "theme": "system",
-  "interfaceFontFamily": "Arial"
+  "interfaceFontFamily": "Arial",
+  "showRibbon": true
 }

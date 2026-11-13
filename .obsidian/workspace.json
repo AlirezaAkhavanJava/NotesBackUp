@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "d91f30aaa020dd1c",
+        "id": "cc09172aecb89d45",
         "type": "tabs",
         "children": [
           {
-            "id": "c1c5b4da28d270a8",
+            "id": "b150b911012d1308",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Read Every Day.md",
+                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 3 (getting request)/02 - PathVariable.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Read Every Day"
+              "title": "02 - PathVariable"
             }
           }
         ]
@@ -80,7 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 280.17168045043945
+    "width": 415.08757400512695
   },
   "right": {
     "id": "318802b81bf4bc9f",
@@ -172,34 +172,36 @@
       "bases:Create new base": false
     }
   },
-  "active": "c1c5b4da28d270a8",
+  "active": "3535a2e099904c39",
   "lastOpenFiles": [
-    "1 - Notes/Computer & Programming /1 - Programming/10 - Programming in action/1 - Pack 1 (Java)/00 - CRUD , OCR , Auth.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 3 (getting request)/01 - The parameters inside mapping annotations.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 3 (getting request)/00 - Prefix.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 4 (Flow of Spring-boot)/10 - Polymorphism.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 4 (Flow of Spring-boot)/09 - RequestMappingHandlerMapping.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 4 (Flow of Spring-boot)/08 - Endpoint Ambiguity in Spring Boot.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 4 (Flow of Spring-boot)/07 - Dispatcher Servlet Request flow.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 4 (Flow of Spring-boot)/06 - Flow of a request.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 4 (Flow of Spring-boot)/05 - DispatcherServlet.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 4 (Flow of Spring-boot)/04 - Incoming vs. Outgoing.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 4 (Flow of Spring-boot)/03 - @JsonCreator.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 4 (Flow of Spring-boot)/02 - @JsonIgnore, @JsonInclude, @JsonFormat.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 4 (Flow of Spring-boot)/01 - @JasonProperty.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 4 (Flow of Spring-boot)/00 - Serialization and deserialization.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/62 - Why wen need a Filter chain ?.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/Pack 1 (Profile-Configuration)",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/53 - Designing an Entity for Secure forms (Login).md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 4 (security)/11 - Spring Security (Authentication Filter).md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 4 (security)/10 - Request Lifecycle.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 4 (security)/09 - The Front Controller Pattern.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 4 (security)/08 - Building a Spring Security Filter Chain.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 4 (security)/07 - Spring Security Configuration Through application.properties.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 4 (security)/06 - HttpServletRequest in Java & Spring Boot.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 4 (security)/05 - CsrfToken.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 4 (security)/04 - Session IDs in Spring Boot, and Why GET Works but POST Gets 403.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 4 (security)/03 - Authorization in Depth.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 4 (security)/02 - Authentication in Depth.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/23 - What is a Mapper ?.md",
     "Untitled.base",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/9 - Maven/1 - Build Automation Tool ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/00 - Java & Enterprise ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/01 - Spring vs Spring Boot ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 2 (Concepts)/09 - Cookies.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 2 (Concepts)/08 - Servlet vs Reactive in Spring Security.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 2 (Concepts)/07 - TLS-HTTPS.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 2 (Concepts)/06 - Cryptography basics.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 2 (Concepts)/05 - Spring Security’s PasswordEncoder ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 1 (Topics from 2025)/03 - Security Configuration/00 - WebSecurity and EnableWebSecurity.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/50 - What is Flyway.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/49 - ForeignKey in Joincolumn.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/48 - Direction in a JPA relationship.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/22 - Entity Identity with @Id ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/21 - Enumerated Annotation ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/47 - Need for constructors in JPA.md",
-    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/00 - Git Fundamentals/02 - Git Files.md",
-    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/00 - Git Fundamentals/01 - Git files.md",
-    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/00 - Git Fundamentals/00 - Git.md",
-    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/03 - Commits & History/18 - Log.md",
-    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/00 - Git Fundamentals/14 - Working Tree.md",
-    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/00 - Git Fundamentals/13 - Using Porcelain and Plumbing.md",
-    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/00 - Git Fundamentals/12 - The Index File.md",
-    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/00 - Git Fundamentals/11 - Porcelain and Plumbing.md",
-    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/00 - Git Fundamentals/10 - Need for a VCS ✧.md",
     "1 - Notes/Computer & Programming /1 - Programming/3 - Git/99 - Review Manually",
     "1 - Notes/Computer & Programming /1 - Programming/3 - Git/14 - Scripting & Automation",
     "1 - Notes/Computer & Programming /1 - Programming/3 - Git/13 - Recovery & Troubleshooting",
@@ -208,7 +210,6 @@
     "1 - Notes/Computer & Programming /1 - Programming/3 - Git/10 - Worktrees",
     "1 - Notes/Computer & Programming /1 - Programming/3 - Git/09 - Git Ignore Rules",
     "1 - Notes/Computer & Programming /1 - Programming/3 - Git/08 - Stashing",
-    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/07 - Undoing & Comparing Changes",
     "4 - Images/OS Scheduler State Transitions.png",
     "4 - Images/Spring_JPA Loading and Transactions Infographic.png",
     "4 - Images/368981e4-63dc-4503-ae32-c290d9edb37f.png",
