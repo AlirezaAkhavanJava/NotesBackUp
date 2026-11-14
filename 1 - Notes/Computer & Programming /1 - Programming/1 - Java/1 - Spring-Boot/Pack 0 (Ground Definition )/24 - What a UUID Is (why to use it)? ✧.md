@@ -135,7 +135,7 @@ Depending on your DB:
 - **PostgreSQL** has a native `UUID` column type — most efficient
 - **MySQL/MariaDB** has no native UUID type — Hibernate stores it as `BINARY(16)` or `CHAR(36)`, which is why PostgreSQL is usually preferred when UUIDs are central to your design
 
----
+
 
 ## 4. Applying This to Our Library Domain
 

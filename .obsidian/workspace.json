@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "cc09172aecb89d45",
+        "id": "6c31ffc1489b6052",
         "type": "tabs",
         "children": [
           {
-            "id": "b150b911012d1308",
+            "id": "19c225c6803f7b4e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 3 (getting request)/02 - PathVariable.md",
+                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/26 - What is ResponseEntity<T>.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "02 - PathVariable"
+              "title": "26 - What is ResponseEntity<T>"
             }
           }
         ]
@@ -80,7 +80,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 415.08757400512695
+    "width": 415.10539627075195,
+    "collapsed": true
   },
   "right": {
     "id": "318802b81bf4bc9f",
@@ -172,8 +173,22 @@
       "bases:Create new base": false
     }
   },
-  "active": "3535a2e099904c39",
+  "active": "19c225c6803f7b4e",
   "lastOpenFiles": [
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/25 - What is Instant ? ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/24 - What a UUID Is (why to use it)? ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/65 - UUIDv7 (Time-Ordered UUIDs).md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/64 - Dual-Identifier Strategy (Internal ID + Public UUID).md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/23 - What is a Mapper ? ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/53 - Designing an Entity for Secure forms (Login).md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/56 - Designing an Authentication Entity.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/55 - Helper Annotations used inside the Entity.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/54 - Annotations used inside an Entity.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/63 - Spring-Security Tool-Box.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/50 - What is Flyway.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/Pack 3 (Flyway)",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/18 - PostgreSQL Specials/05 - Database migrations in PostgreSQL.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 3 (getting request)/02 - PathVariable.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 3 (getting request)/01 - The parameters inside mapping annotations.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 3 (getting request)/00 - Prefix.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 4 (Flow of Spring-boot)/10 - Polymorphism.md",
@@ -187,20 +202,7 @@
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 4 (Flow of Spring-boot)/02 - @JsonIgnore, @JsonInclude, @JsonFormat.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 4 (Flow of Spring-boot)/01 - @JasonProperty.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 4 (Flow of Spring-boot)/00 - Serialization and deserialization.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/62 - Why wen need a Filter chain ?.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/Pack 1 (Profile-Configuration)",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/53 - Designing an Entity for Secure forms (Login).md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 4 (security)/11 - Spring Security (Authentication Filter).md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 4 (security)/10 - Request Lifecycle.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 4 (security)/09 - The Front Controller Pattern.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 4 (security)/08 - Building a Spring Security Filter Chain.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 4 (security)/07 - Spring Security Configuration Through application.properties.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 4 (security)/06 - HttpServletRequest in Java & Spring Boot.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 4 (security)/05 - CsrfToken.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 4 (security)/04 - Session IDs in Spring Boot, and Why GET Works but POST Gets 403.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 4 (security)/03 - Authorization in Depth.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/Pack 4 (security)/02 - Authentication in Depth.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/23 - What is a Mapper ?.md",
     "Untitled.base",
     "1 - Notes/Computer & Programming /1 - Programming/3 - Git/99 - Review Manually",
     "1 - Notes/Computer & Programming /1 - Programming/3 - Git/14 - Scripting & Automation",
@@ -209,7 +211,6 @@
     "1 - Notes/Computer & Programming /1 - Programming/3 - Git/11 - Tags & Versioning",
     "1 - Notes/Computer & Programming /1 - Programming/3 - Git/10 - Worktrees",
     "1 - Notes/Computer & Programming /1 - Programming/3 - Git/09 - Git Ignore Rules",
-    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/08 - Stashing",
     "4 - Images/OS Scheduler State Transitions.png",
     "4 - Images/Spring_JPA Loading and Transactions Infographic.png",
     "4 - Images/368981e4-63dc-4503-ae32-c290d9edb37f.png",

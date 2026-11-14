@@ -47,7 +47,7 @@ Back to our Library domain: `dueDate` for a `Loan` is a **calendar date**, not a
 |`Loan.dueDate` (the day it must be returned)|`LocalDate`|Calendar concept, no time-of-day meaning|
 |`Loan.createdAt` / `updatedAt` (audit fields)|`Instant`|Always exact machine timestamps|
 
----
+
 
 ## 3. How to Use `Instant` in a Spring Boot / JPA Entity
 
