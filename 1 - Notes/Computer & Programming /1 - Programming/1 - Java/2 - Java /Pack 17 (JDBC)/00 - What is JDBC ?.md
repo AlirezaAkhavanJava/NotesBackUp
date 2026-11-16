@@ -1,5 +1,5 @@
 
-
+![[eccb7164-1a9a-42a9-9e62-c0715c593d49.png]]
 
 ## 1. The Problem JDBC Solves
 
@@ -28,7 +28,7 @@ We need a standard way for Java applications to communicate with relational data
 
 **That's why JDBC exists.**
 
----
+
 
 ## 2. What Is JDBC?
 
@@ -59,7 +59,7 @@ It defines a standard way to work with databases, but the database-specific comm
 
 Let's understand the architecture before writing code.
 
-```
+```js
          Java Application
                 |
                 v
@@ -80,7 +80,7 @@ Your application wants to retrieve information from the database.
 
 For example:
 
-```
+```sql
 SELECT * FROM users;
 ```
 
@@ -114,7 +114,7 @@ Because your Java code can use the same JDBC interfaces regardless of the databa
 
 For example:
 
-```
+```java
 Connection connection;
 PreparedStatement statement;
 ResultSet resultSet;
@@ -124,7 +124,7 @@ These interfaces work with PostgreSQL, MySQL, MariaDB, and other JDBC-compatible
 
 You generally change the driver, connection configuration, and potentially database-specific SQL rather than rewriting the entire database communication layer.
 
----
+
 
 ## 4. JDBC vs JDBC Driver vs SQL Dialect
 
@@ -161,7 +161,7 @@ Let's learn the four you'll encounter most often.
 
 `Connection` represents an active connection to a database.
 
-```
+```java
 Connection connection = DriverManager.getConnection(
     "jdbc:postgresql://localhost:5432/mydb",
     "postgres",
@@ -184,7 +184,7 @@ Once we have a connection, we can execute SQL commands.
 
 `Statement` allows Java to execute SQL commands.
 
-```
+```java
 Statement statement = connection.createStatement();
 
 ResultSet result = statement.executeQuery(
@@ -200,7 +200,7 @@ For SQL containing user-provided values, prefer `PreparedStatement`.
 
 `PreparedStatement` represents a parameterized SQL statement.
 
-```
+```java
 PreparedStatement statement =
     connection.prepareStatement(
         "SELECT * FROM users WHERE username = ?"
@@ -219,7 +219,7 @@ This is particularly important because parameter binding separates user-supplied
 
 `ResultSet` represents the tabular results returned by a SQL query.
 
-```
+```java
 ResultSet result = statement.executeQuery();
 
 while (result.next()) {
@@ -240,7 +240,7 @@ Initially, the cursor is positioned before the first row.
 
 Each call to `next()` advances it. The method returns `false` when there are no more rows.
 
----
+
 
 ## 6. Practical Example: Java + PostgreSQL
 
@@ -248,7 +248,7 @@ Let's write a simple application that retrieves a user from PostgreSQL.
 
 Assume we have this table:
 
-```
+```sql
 CREATE TABLE app_users (
     id BIGSERIAL PRIMARY KEY,
     username VARCHAR(100) NOT NULL UNIQUE
@@ -257,7 +257,7 @@ CREATE TABLE app_users (
 
 Insert some data:
 
-```
+```sql
 INSERT INTO app_users (username)
 VALUES ('alireza'), ('john'), ('sara');
 ```
@@ -266,7 +266,7 @@ VALUES ('alireza'), ('john'), ('sara');
 
 In a Spring Boot Gradle project, add:
 
-```
+```js
 dependencies {
     runtimeOnly 'org.postgresql:postgresql'
 }
@@ -284,7 +284,7 @@ For this example, we'll use environment variables instead of hardcoding database
 
 In Linux:
 
-```
+```properties
 export DB_URL="jdbc:postgresql://localhost:5432/mydb"
 export DB_USER="postgres"
 export DB_PASSWORD="your_password"
@@ -294,7 +294,7 @@ Replace the values with your actual database configuration.
 
 ### Step 3: Write the Java Code
 
-```
+```java
 import java.sql.*;
 
 public class Main {
@@ -342,7 +342,7 @@ Let's follow the execution.
 
 **1. DriverManager establishes a connection**
 
-```
+```java
 DriverManager.getConnection(url, user, password);
 ```
 
@@ -350,7 +350,7 @@ It uses the appropriate JDBC driver to establish a connection with PostgreSQL.
 
 **2. Java creates a PreparedStatement**
 
-```
+```java
 connection.prepareStatement(sql);
 ```
 
@@ -358,7 +358,7 @@ We create a statement representing the SQL command.
 
 **3. Java supplies the SQL parameter**
 
-```
+```java
 statement.setString(1, "alireza");
 ```
 
@@ -366,7 +366,7 @@ We bind the username value to the SQL statement.
 
 **4. The driver executes the query**
 
-```
+```java
 statement.executeQuery();
 ```
 
@@ -374,7 +374,7 @@ The driver communicates with PostgreSQL and obtains the query results.
 
 **5. Java processes the results**
 
-```
+```java
 result.next();
 result.getString("username");
 ```
@@ -403,7 +403,7 @@ JDBC provides different execution methods.
 
 For example:
 
-```
+```java
 String sql =
     "INSERT INTO app_users (username) VALUES (?)";
 
@@ -430,7 +430,7 @@ By default, JDBC connections commonly use **auto-commit mode**, meaning each ind
 
 We can disable auto-commit:
 
-```
+```java
 connection.setAutoCommit(false);
 
 try {
@@ -453,7 +453,7 @@ If one operation fails, the transaction can roll back.
 
 In Spring Boot, we usually prefer Spring's declarative transaction management:
 
-```
+```java
 @Transactional
 public void transferMoney() {
     // Database operations
@@ -470,7 +470,7 @@ Here's where JDBC becomes particularly important for you as a Spring Boot develo
 
 When you write:
 
-```
+```java
 public interface AppUserRepository
         extends JpaRepository<AppUser, Long> {
 }
@@ -482,7 +482,7 @@ However, your application will typically still use JDBC internally when communic
 
 Consider this architecture:
 
-```
+```js
              Controller
                  |
                  v
@@ -550,7 +550,7 @@ Spring simplifies JDBC by managing much of the repetitive work.
 
 Example:
 
-```
+```java
 @Repository
 public class AppUserRepository {
 
@@ -584,7 +584,7 @@ Unlike JPA, `JdbcTemplate` doesn't provide ORM entity lifecycle management.
 
 With Spring Data JPA:
 
-```
+```java
 public interface AppUserRepository
         extends JpaRepository<AppUser, Long> {
 }
@@ -619,7 +619,7 @@ Instead of repeatedly creating physical connections, applications commonly use a
 
 A connection pool maintains a collection of reusable database connections.
 
-```
+```js
               Spring Boot
                   |
                   v

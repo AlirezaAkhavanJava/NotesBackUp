@@ -1,6 +1,8 @@
 
 
-Every Java program you run, including a Spring Boot app, lives inside an operating-system **process**. The process owns the memory, the open files, and the network ports. **Threads**, the things that do the work and cause your concurrency bugs, live inside it.
+Every Java program you run, including a Spring Boot app, lives inside an operating-system **process**.
+
+The process owns the memory, the open files, and the network ports. **Threads**, the things that do the work and cause your concurrency bugs, live inside it.
 
 - Memory 
 - Open files
@@ -9,7 +11,8 @@ Every Java program you run, including a Spring Boot app, lives inside an operati
 
 We'll go in order: why processes exist, what they own, how threads fit inside, who gets the CPU, and how this shows up in a Spring Boot app. By the end, errors like "Port 8080 was already in use" and "thread pool exhausted" should read as plain cause and effect.
 
----
+![[36bdfae6-5ab2-442b-ad10-f5c1a2cac5f4.png]]
+
 
 ## Why processes exist
 
@@ -24,7 +27,6 @@ So the OS wraps each running program in a **process**: ***a protected box with i
 > A process doesn't necessarily own a physical amount of RAM. It owns a virtual address space, and the OS manages its mapping to physical memory.
 Also, CPU scheduling doesn't guarantee absolute fairness. The scheduler uses policies and priorities to distribute CPU time.
 
-![[Processes_ Isolation and Fairness.png]]
 ## Program vs. process
 
 A **program** is just bytes on disk. ***A process is that program while it is running, plus everything the OS tracks about it.*** Run the same program twice and you get two independent processes, each with its own **PID**. (A process is a running program, together with everything the operating system gives it to run in.)
@@ -49,13 +51,13 @@ public class Demo {
 
 Run it twice and you get two different PIDs, because each run is a new process.
 
-
-![[df486a32-18f5-4d6f-b85d-972015e8e72e.png]]
-
----
 ## What a process owns
 
-**Private memory.** Each process gets ***its own virtual address space.*** The OS maps those addresses to real RAM behind the scenes, so one process has no way to even name another process's memory. That is the ***isolation*** from the first section.
+- Private Memory
+- Ports and Files
+
+**Private memory.** Each process gets ***its own virtual address space.*** The OS maps those addresses to real RAM behind the scenes, so one process has no way to even name another process's memory. That is the ***isolation*** from the first section. [What is virtual memory? – Gary explains](https://www.youtube.com/watch?v=2quKyPnUShQ&t=12s)
+
 
 **Ports and files.** Open files and network sockets belong to the process. ***Only one process can own a given port at a time***:
 
@@ -68,9 +70,7 @@ That message means another process (often an old instance of your own app) is st
 **A memory budget that is bigger than your heap.** [^1]`-Xmx` limits only the Java heap. The JVM process also needs memory for thread stacks, class metadata, JIT-compiled code and native buffers. If a container allows 1 GB, setting `-Xmx1g` will get your process killed. Leave headroom.
 
 
-![[JVM Isolation and Memory Budget Infographic.png]]
 
----
 ## Threads: the part that actually runs
 
 A process by itself executes nothing. It is a container. The things that execute code are **threads**:
@@ -112,9 +112,6 @@ You would expect 200000, but you will usually get less. `count++` is three steps
 
 Compared with processes, then, threads are cheap to create and cheap to communicate between, but they have no isolation. An uncaught `OutOfMemoryError` or a native crash can take down the whole JVM. A badly behaved thread can hurt every other thread in its process.
 
-![[368981e4-63dc-4503-ae32-c290d9edb37f.png]]
-
----
 ## Who gets the CPU
 
 You may have hundreds of threads and 8 cores. The OS **scheduler** gives each runnable thread a short time slice, then switches to another one. A switch is called a **context switch**: save one thread's state, load another's. It is fast but not free, which is why creating 10,000 ordinary threads is a bad idea. Each one also reserves roughly 1 MB for its stack by default.
@@ -122,8 +119,6 @@ You may have hundreds of threads and 8 cores. The OS **scheduler** gives each ru
 ***Note that the scheduler schedules threads, not processes. Processes don't run, threads do.***
 
 A thread is always in one of three basic situations:
-
-![[OS Scheduler State Transitions.png]]
 
 A waiting thread uses no CPU, and the OS hands the CPU to someone else. What it does consume is a thread, which is a limited resource.
 

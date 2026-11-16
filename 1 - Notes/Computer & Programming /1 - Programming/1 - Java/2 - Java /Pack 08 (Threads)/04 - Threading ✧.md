@@ -41,7 +41,7 @@ Process ├─ Thread 2 → Task B
 - **Parallelism** → multiple tasks are **literally executing at the same time**, typically on different CPU cores.
     
 
-For example, on your 4-core CPU, four threads can potentially execute in parallel:
+For example, on a 4-core CPU, four threads can potentially execute in parallel:
 
 ```text
 Core 1 → Thread A
@@ -74,7 +74,7 @@ thread.start();
 
 Modern Java also provides higher-level concurrency APIs such as:
 
-```text
+```js
 Thread
    ↓
 ExecutorService

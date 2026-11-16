@@ -3,7 +3,7 @@
 
 This steps back from Java specifically into the underlying **operating system / hardware concepts** that make everything you've learned about threads, concurrency, and parallelism actually work under the hood.
 
----
+
 
 ## 1. Cores — the physical hardware
 
@@ -26,7 +26,7 @@ int cores = Runtime.getRuntime().availableProcessors();
 
 That line, used throughout the last two tutorials, is asking the OS/JVM exactly this: "how many physical execution units do I actually have to work with?"
 
----
+![[66ea8029-9b6c-4b0f-8d7e-4bfdf086cbbd.png]]
 
 ## 2. Threads (the OS-level meaning — distinct from Java's `Thread` class)
 

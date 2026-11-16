@@ -18,7 +18,7 @@
 └─────────────────────────────────────┘
 ```
 
----
+
 
 ## The problem processes solve
 
@@ -30,7 +30,6 @@ Going back to the "inside/outside" idea from earlier: **a process is the boundar
 
 **The cost:** processes are **expensive** to create and switch between. Starting a new process means the OS allocates a whole new memory space, and communicating between two processes (since they can't share memory directly) requires special mechanisms — files, network sockets, pipes — because that data has to cross a real "inside vs outside" boundary, exactly like the I/O you've already learned.
 
----
 
 ## The problem threads solve
 
@@ -44,7 +43,7 @@ If you want a program to do **multiple things at once**, you have two choices: r
 
 **The cost:** because threads **share** memory, they can interfere with each other if not coordinated properly — this is the source of an entire category of bugs (race conditions, deadlocks) that don't exist with fully isolated processes.
 
----
+
 
 ## Side-by-side comparison
 
@@ -56,7 +55,7 @@ If you want a program to do **multiple things at once**, you have two choices: r
 |Isolation|one crashing doesn't affect others|one thread crashing (uncaught exception) can affect the whole process|
 |Example|your JVM itself is one process|multiple threads running inside that one JVM|
 
----
+
 
 ## Threads in Java
 
@@ -95,7 +94,7 @@ task.start();   // RIGHT — creates a NEW thread, and THAT thread calls run()
 
 Calling `.run()` directly doesn't create any new thread at all — it just runs the method like any normal method call, on whichever thread called it. This is a very common beginner mistake.
 
----
+
 
 ## A basic multi-threaded example
 
@@ -119,7 +118,7 @@ public class ThreadDemo {
 
 Output order is **not guaranteed** — the OS/JVM scheduler interleaves the two threads, so you might see `Thread-A: 1`, `Thread-B: 1`, `Thread-A: 2`... in unpredictable order. This unpredictability is fundamental to concurrency, not a bug.
 
----
+
 
 ## The problem shared memory creates: race conditions
 

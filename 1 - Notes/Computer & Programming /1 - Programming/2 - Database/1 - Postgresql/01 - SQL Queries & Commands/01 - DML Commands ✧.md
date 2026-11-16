@@ -1,10 +1,13 @@
 
 
-**DML** stands for **Data Manipulation Language**. It is the group of SQL commands that add, change, and remove the **rows** inside your tables. The core commands are `INSERT`, `UPDATE`, and `DELETE`. PostgreSQL also gives you `MERGE` and the bulk loader `COPY`, plus two very handy extras: `ON CONFLICT` (upsert) and `RETURNING`.
+**DML** stands for **Data Manipulation Language**. It is the group of SQL commands that add, change, and remove the **rows** inside your tables. 
 
-In the DDL lesson we built the building: rooms, walls, doors. DML is everything that happens _inside_ it: people moving in, changing rooms, and leaving. Almost every button in your app ("Sign up", "Save", "Delete account") ends up as one of these commands, so this is the part of SQL you will run the most.
+The core commands are `INSERT`, `UPDATE`, and `DELETE`. PostgreSQL also gives you `MERGE` and the bulk loader `COPY`, plus two very handy extras: `ON CONFLICT` (upsert) and `RETURNING`
 
----
+In the DDL lesson we built the building: rooms, walls, doors. DML is everything that happens _inside_ it: people moving in, changing rooms, and leaving. 
+
+Almost every button in your app ("Sign up", "Save", "Delete account") ends up as one of these commands, so this is the part of SQL you will run the most.
+
 
 ## 1. Where DML fits
 
@@ -17,7 +20,7 @@ In the DDL lesson we built the building: rooms, walls, doors. DML is everything 
 
 Some books count `SELECT` as part of DML. Others give it its own group, DQL (Data Query Language). Here I treat it as DQL, and use it only to check our results.
 
----
+
 
 ## 2. Setup: two tables to practice on
 
@@ -47,7 +50,6 @@ Every error message in this lesson comes from the rules above (`NOT NULL`, `UNIQ
 - Text values go in **single quotes**: `'Ali'`. Double quotes mean a _name_ (a column or table). Writing `VALUES ("Ali")` gives `column "Ali" does not exist`.
 - To put a single quote inside text, double it: `'O''Brien'`.
 
----
 
 ## 3. `INSERT`: adding rows
 
@@ -60,7 +62,7 @@ VALUES ('Ali Khan', 'ali@example.com');
 
 -- Several rows in one command
 INSERT INTO clients (name, email, status) VALUES
-    ('Sara Lee',  'sara@example.com', 'active'),
+    ('Bruce Lee',  'bruce@example.com', 'active'),
     ('Tom Wu',    'tom@example.com',  'inactive'),
     ('Mia Costa', 'mia@example.com',  DEFAULT);
 ```
@@ -133,11 +135,11 @@ Afterwards, the counter doesn't know about id 100, so repair it with the `setval
 |`INSERT has more target columns than expressions`|Column list and values don't match in count|Count both lists|
 |`invalid input syntax for type bigint: "abc"`|Wrong type|Send the right type, or cast with `::`|
 
----
+
 
 ## 4. Upsert: `INSERT ... ON CONFLICT`
 
-**The problem it solves:** "Insert this row, but if it already exists, update it instead." Without it you'd have to check first, then insert or update, and two users doing that at the same time can still collide. `ON CONFLICT` does it in **one atomic step**.
+**The problem it solves:** "*Insert this row, but if it already exists, update it instead.*" Without it you'd have to check first, then insert or update, and two users doing that at the same time can still collide. `ON CONFLICT` does it in **one atomic step**.
 
 ```sql
 INSERT INTO clients (name, email)
@@ -168,7 +170,7 @@ You can add `RETURNING` to either form to see what happened.
 - `ON CONFLICT DO UPDATE command cannot affect row a second time`: your `VALUES` list contains the _same_ key twice. Remove the duplicate.
 - Gaps in ids: a conflicting attempt still uses up an identity number. That is normal.
 
----
+
 
 ## 5. `UPDATE`: changing existing rows
 
@@ -229,7 +231,7 @@ UPDATE clients SET status = 'active' WHERE id = 3 RETURNING id, status;
 - **PostgreSQL never edits a row in place.** An `UPDATE` writes a _new version_ of the row and marks the old one dead. The dead rows are cleaned up later by `VACUUM` (which runs automatically). This design is called MVCC, and it is why readers are never blocked by writers.
 - `UPDATE` fires any `BEFORE/AFTER UPDATE` triggers, such as the `set_updated_at` one from the last lesson.
 
----
+
 
 ## 6. `DELETE`: removing rows
 
@@ -297,7 +299,7 @@ The client still has orders. Your options:
 |Fires row triggers|Yes|No|
 |Resets identity counter|No|With `RESTART IDENTITY`|
 
----
+
 
 ## 7. `MERGE`: one command for insert, update, and delete
 
@@ -361,7 +363,7 @@ The file path is on the **database server's machine**, and the `postgres` OS use
 
 **Errors:** `could not open file ... for reading: Permission denied`, `missing data for column "email"` (a CSV row is too short), `extra data after last expected column` (too long), `invalid input syntax for type ...` (bad value on a specific line, which the message names).
 
----
+
 
 ## 9. Transactions: making DML safe
 

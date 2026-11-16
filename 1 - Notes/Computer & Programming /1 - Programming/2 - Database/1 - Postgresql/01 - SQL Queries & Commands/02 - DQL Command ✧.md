@@ -1,12 +1,10 @@
 
-
-# DQL in PostgreSQL: reading data with `SELECT`
-
 **DQL** stands for **Data Query Language**. In PostgreSQL it is one command, `SELECT`, which reads rows from tables, views, and functions and returns them as a result set. A `SELECT` never changes anything stored in the database. That makes it the safest command to experiment with, and the one you will write more than all the others combined.
 
 The part that surprises most people is that `SELECT` is made of many optional clauses (`WHERE`, `JOIN`, `GROUP BY`, `ORDER BY`, and more), and PostgreSQL does **not** run them in the order you write them. Once you know the real execution order, most of the confusing errors stop being confusing. So this lesson is built around that order: we start with a plain query, then add one clause at a time, in the order PostgreSQL processes them.
 
----
+![[3d817096-1a00-4c5c-96ac-9b49760e287e.png]]
+
 
 ## 1. Sample data
 
@@ -35,7 +33,7 @@ INSERT INTO orders (client_id, total, placed_at) VALUES
 
 `TRUNCATE ... RESTART IDENTITY CASCADE` is DDL from our earlier lesson: it empties both tables and resets the id counters, so the ids in the comments are correct. Notice that Tom (3) and Zoe (6) have no orders. That is on purpose, because it makes joins interesting.
 
----
+
 
 ## 2. Written order vs execution order
 
