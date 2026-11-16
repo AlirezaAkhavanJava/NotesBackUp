@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "6c31ffc1489b6052",
+        "id": "10847beb8aa523ee",
         "type": "tabs",
         "children": [
           {
-            "id": "19c225c6803f7b4e",
+            "id": "27b899c24ad6046d",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -80,7 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 415.10539627075195,
+    "width": 382.42033767700195,
     "collapsed": true
   },
   "right": {
@@ -173,8 +173,21 @@
       "bases:Create new base": false
     }
   },
-  "active": "19c225c6803f7b4e",
+  "active": "27b899c24ad6046d",
   "lastOpenFiles": [
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/69 - Cross-Site Scripting (XSS).md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/02 - Library , Framework and API ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/68 - Where Spring Boot fits into that response card.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 3 (getting request)/03 - @RequestParam.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 3 (getting request)/04 - @PathVariable vs @RequestParam.md",
+    "HTTPREQUSTandHTTPRespons.png",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/67 - From text on a screen to voltage on a wire.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/26 - What is ResponseEntity<T>.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/66 - The HTTP request.md",
+    "4 - Images/4b877983-0a31-4666-a0b3-6be7bdb26c29.png",
+    "4 - Images/e8a7c378-f1e1-4a4d-bc2b-5fa4746b2ce8.png",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/27 - ErrorDto.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/Pack 1 (Profile-Configuration)/01 - SpringApplication.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/25 - What is Instant ? ✧.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/24 - What a UUID Is (why to use it)? ✧.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/65 - UUIDv7 (Time-Ordered UUIDs).md",
@@ -192,16 +205,6 @@
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 3 (getting request)/01 - The parameters inside mapping annotations.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 3 (getting request)/00 - Prefix.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 4 (Flow of Spring-boot)/10 - Polymorphism.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 4 (Flow of Spring-boot)/09 - RequestMappingHandlerMapping.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 4 (Flow of Spring-boot)/08 - Endpoint Ambiguity in Spring Boot.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 4 (Flow of Spring-boot)/07 - Dispatcher Servlet Request flow.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 4 (Flow of Spring-boot)/06 - Flow of a request.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 4 (Flow of Spring-boot)/05 - DispatcherServlet.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 4 (Flow of Spring-boot)/04 - Incoming vs. Outgoing.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 4 (Flow of Spring-boot)/03 - @JsonCreator.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 4 (Flow of Spring-boot)/02 - @JsonIgnore, @JsonInclude, @JsonFormat.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 4 (Flow of Spring-boot)/01 - @JasonProperty.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 4 (Flow of Spring-boot)/00 - Serialization and deserialization.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/Pack 1 (Profile-Configuration)",
     "Untitled.base",
     "1 - Notes/Computer & Programming /1 - Programming/3 - Git/99 - Review Manually",
@@ -218,9 +221,6 @@
     "4 - Images/df486a32-18f5-4d6f-b85d-972015e8e72e.png",
     "4 - Images/Processes_ Isolation and Fairness.png",
     "4 - Images/HTTP Request and Response Flow.png",
-    "HTTP Request and Response Flow (1).png",
-    "4 - Images/730617d7-7a22-4f45-881e-efa9343aa5e6.png",
-    "4 - Images/Java Thread Life Cycle Infographic.png",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/G - Real World Applications/Untitled.canvas"
   ]
 }
