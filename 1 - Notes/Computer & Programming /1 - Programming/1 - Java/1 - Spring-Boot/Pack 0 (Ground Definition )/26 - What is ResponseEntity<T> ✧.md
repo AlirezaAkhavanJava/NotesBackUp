@@ -83,7 +83,7 @@ public UserResponse create(@Valid @RequestBody CreateUserRequest request) {
 }
 ```
 
-This is clean, but it cannot add a `Location` header or vary the status per call. The rule of thumb: use `ResponseEntity` when the status or headers depend on runtime logic, and the simpler forms when they do not.
+This is clean, but it cannot add a `Location` header or vary the status per call. The rule of thumb: use `ResponseEntity` ***when the status or headers depend on runtime logic, and the simpler forms when they do not***.
 
 ## Errors: do not return them from every method
 

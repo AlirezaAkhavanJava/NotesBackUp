@@ -10,13 +10,15 @@ Once you understand these two ideas, you can reason clearly about almost every s
 
 Think of checking into a hotel.
 
+![[6ef73718-d2ea-45b9-a92a-05e06f5bd41b 1.png]]
+
 At the front desk, you show your passport. The clerk checks that you really are the person who booked the room. That's **authentication**.
 
 The clerk then gives you a key card. It opens your room and the gym, but not the staff office or someone else's room. That's **authorization**.
 
 > ***Notice the order. The hotel can't decide what you may open until it knows who you are. Authentication always comes first, and authorization builds on it.***
 
----
+
 ## Authentication: proving who you are
 
 Authentication is the process of verifying an identity. You make a claim ("I'm alice"), and the system asks for proof. Proof usually comes from one or more of these _factors_:
@@ -29,7 +31,7 @@ Using two or more factors together is called **multi-factor authentication (MFA)
 
 When authentication succeeds, the system knows who you are. This verified identity is often called the **principal**.
 
----
+
 ## Authorization: deciding what you may do
 
 Authorization happens _after_ the system knows who you are. It checks your permissions against the thing you're trying to do.
@@ -42,7 +44,7 @@ Common ways to express permissions:
 
 A normal user might view their own orders. An admin might view everyone's orders and delete accounts. ***Both are authenticated, but they're authorized differently.***
 
----
+
 ## A quick example
 
 You log in to an online shop.
@@ -53,7 +55,7 @@ You log in to an online shop.
 
 At step 3 the system still knew exactly who you were. It just decided you weren't permitted to go there.
 
----
+
 ## 401 vs 403
 
 HTTP has two status codes that map to these ideas, and they're easy to mix up because of historical naming:
@@ -65,7 +67,7 @@ HTTP has two status codes that map to these ideas, and they're easy to mix up be
 
 Despite its name, 401 is really about _authentication_. If you remember that, you'll debug access problems much faster.
 
----
+
 ## How this looks in Spring Security
 
 Since you work with Spring Boot, it helps to see where each idea lives.

@@ -5,7 +5,7 @@ An `ErrorDto` is the **standard response body** your API returns whenever someth
 
 It is not an exception, not a Spring type, not a framework class. It is **your** class, and it is part of your public API contract. Clients parse it. You must treat it like any other versioned API surface.
 
----
+
 
 ## 1. Why it exists
 

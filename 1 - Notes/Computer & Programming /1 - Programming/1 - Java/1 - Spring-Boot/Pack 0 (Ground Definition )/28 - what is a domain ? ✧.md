@@ -1,5 +1,5 @@
 
-In Spring Boot (and Java/OOP generally), a **domain** refers to the core business objects your application is modeling — the real-world "things" your app cares about, independent of frameworks, databases, or web stuff.
+In Spring Boot (and Java/OOP generally), a **domain** refers to the core *business objects your application is modeling* — the real-world "things" your app cares about, independent of frameworks, databases, or web stuff.
 
 ## The idea
 

@@ -2,7 +2,7 @@
 
 Before you touch Spring Boot, you need a clear picture of _what_ you're building and _why_. This is the step most self-taught devs skip — and it's exactly why apps end up with tangled logic and constant rewrites. Let's do it properly, using a small **Library Management System** as our running example (simple enough to grasp, complex enough to be realistic).
 
----
+
 
 ## 1. What Requirements Engineering Actually Is
 
@@ -14,14 +14,14 @@ It's the process of figuring out, before coding:
 
 Four phases, in order:
 
-```
+```js
 Elicitation → Analysis → Specification → Modeling
    (gather)     (refine)    (document)    (diagram)
 ```
 
 We'll walk through each one.
 
----
+
 
 ## 2. Elicitation — Gathering Requirements
 
@@ -38,7 +38,7 @@ This is where you figure out what the stakeholders actually need. In a real job,
 
 Nothing formal yet — just capturing intent.
 
----
+
 
 ## 3. Analysis — Turning Notes into Requirements
 
@@ -73,7 +73,7 @@ Notice the pattern: **"The system shall [do X] when [condition]."** This phrasin
 
 NFRs matter because they influence _architecture decisions_ — e.g., "must be configurable" tells you to use `application.properties` instead of a magic number in code.
 
----
+
 
 ## 4. Specification — Use Cases & User Stories
 
@@ -117,7 +117,7 @@ public Loan borrowBook(Long memberId, Long bookId) {
 
 That's the whole point of doing this first — **the use case becomes your method's logic outline**, before you've written any Spring code.
 
----
+
 
 ## 5. Modeling — The Domain Model
 
@@ -161,7 +161,7 @@ Scan FR1–FR6 above: _member, book, catalog, loan, librarian, due date, copy...
 
 This diagram is the direct blueprint for your `@Entity` classes and their `@OneToMany` / `@ManyToOne` annotations later.
 
----
+
 
 ## 6. Putting It All Together — The Full Pipeline
 
@@ -185,7 +185,7 @@ Notice this matches the clean architecture from the last tutorial:
 - **Use case steps** → `service/` package logic
 - **FR/NFR constraints** (e.g., "max 3 loans", "14-day due date") → constants or config, not hardcoded magic numbers scattered in code
 
----
+
 
 ## 7. A Template You Can Reuse for Any Project
 
@@ -198,7 +198,7 @@ When you start a new app, work through these in order:
 5. **Draw relationships** — even a rough box-and-arrow sketch is enough
 6. **Only then** — open your IDE
 
----
+
 
 
 

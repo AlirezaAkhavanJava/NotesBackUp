@@ -71,7 +71,7 @@ com.example.bookstore
 
 _Start with package-by-layer while learning — it maps directly to concepts you're studying. Switch to package-by-feature once your app grows past ~5 entities._
 
----
+
 
 ## 3. Constructor Injection Only (never field injection)
 
@@ -116,7 +116,7 @@ public class BookService {
 }
 ```
 
----
+
 
 ## 4. Keep Controllers Thin
 
@@ -156,7 +156,7 @@ public class BookController {
 
 All the discount logic belongs in `BookService`, not the controller.
 
----
+
 
 ## 5. Use DTOs — Don't Expose Entities Directly
 
@@ -178,7 +178,7 @@ public record BookDto(Long id, String title) {}
 
 Use a mapper (manual, or a library like MapStruct) to convert between them in the service layer.
 
----
+
 
 ## 6. Prefer `Optional` Over Null Returns (in the right places)
 
@@ -196,7 +196,7 @@ public BookDto findById(Long id) {
 
 Don't overuse `Optional` for fields or method parameters — it's meant for return types that might be absent.
 
----
+
 
 ## 7. Custom Exceptions + Global Exception Handling
 
@@ -220,7 +220,6 @@ public class GlobalExceptionHandler {
 
 This keeps controllers and services clean of error-formatting logic.
 
----
 
 ## 8. Formatting Rules (the mechanical stuff)
 
@@ -238,7 +237,7 @@ Most teams don't enforce this by hand — they use a formatter:
 mvn spotless:apply
 ```
 
----
+
 
 ## Quick summary you can apply immediately
 
