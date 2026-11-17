@@ -262,4 +262,4 @@ Shows commit graph like:
 
 
 
-[[00 - Git]]
+[[00 - What is Git ? ✧]]

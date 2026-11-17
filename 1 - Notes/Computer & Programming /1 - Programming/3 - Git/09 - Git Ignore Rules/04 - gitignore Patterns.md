@@ -206,4 +206,4 @@ Now you can:
 
 ---
 
-##### Tags : [[00 - Git]]
+##### Tags : [[00 - What is Git ? ✧]]

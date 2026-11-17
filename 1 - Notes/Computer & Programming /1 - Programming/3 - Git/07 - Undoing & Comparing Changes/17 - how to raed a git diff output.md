@@ -260,4 +260,4 @@ git commit -m "message"
 That little cycle is basically Git's heartbeat. Once you understand the diff output, Git stops looking like a cursed terminal ritual and starts behaving like a very picky but useful filing cabinet.
 
 
-[[00 - Git]]
+[[00 - What is Git ? ✧]]

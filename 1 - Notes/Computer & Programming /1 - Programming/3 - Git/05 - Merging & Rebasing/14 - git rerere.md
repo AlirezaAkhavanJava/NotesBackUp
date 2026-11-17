@@ -150,4 +150,4 @@ Since `webflyx` is currently solo work, `rerere` won't do much for you _yet_ —
 
 
 
-[[00 - Git]]
+[[00 - What is Git ? ✧]]

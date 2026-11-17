@@ -210,4 +210,4 @@ Note this only works because the pattern is `folder/*` (contents), not `folder/`
 
 
 
-[[00 - Git]]
+[[00 - What is Git ? ✧]]

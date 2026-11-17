@@ -212,4 +212,4 @@ Remember that Git log is extremely flexible - experiment with different combinat
 
 
 
-##### *Tags : [[00 - Git]]
+##### *Tags : [[00 - What is Git ? ✧]]

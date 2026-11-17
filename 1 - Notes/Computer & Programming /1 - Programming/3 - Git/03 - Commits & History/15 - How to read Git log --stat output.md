@@ -198,4 +198,4 @@ You get:
 
 Clean and useful. Unlike the average Git output, which sometimes looks like a medieval scroll written by a terminal goblin.
 
-[[00 - Git]]
+[[00 - What is Git ? ✧]]

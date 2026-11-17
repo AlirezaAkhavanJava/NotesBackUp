@@ -131,4 +131,4 @@ And the final result is:
 
 There were **no conflicts**, which is the bit humans usually care about most. Git did the annoying part for you.
 
-[[00 - Git]]
+[[00 - What is Git ? ✧]]

@@ -89,4 +89,4 @@ Resolved 'src/Service.java' using previous resolution.
 Boom. No manual conflict fixing.
 
 
-##### Tags : [[00 - Git]]
+##### Tags : [[00 - What is Git ? ✧]]

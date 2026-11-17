@@ -128,4 +128,4 @@ scratch echo "foo"        # writes to .scratch/1696185032.out automatically
 
 
 
-[[00 - Git]]
+[[00 - What is Git ? ✧]]

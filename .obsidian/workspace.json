@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "0ec50a7c900dddf1",
+        "id": "3283b88f49375f0b",
         "type": "tabs",
         "children": [
           {
-            "id": "6130c3e33c4a851c",
+            "id": "ec2ffada40ba1e17",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Notes/Computer & Programming /1 - Programming/3 - Git/00 - Git Fundamentals/00 - Git.md",
+                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/30 - Requirements Engineering & Analysis ✧.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "00 - Git"
+              "title": "30 - Requirements Engineering & Analysis ✧"
             }
           }
         ]
@@ -80,7 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 382.42033767700195
+    "width": 402.9848823547363
   },
   "right": {
     "id": "318802b81bf4bc9f",
@@ -172,8 +172,30 @@
       "bases:Create new base": false
     }
   },
-  "active": "6130c3e33c4a851c",
+  "active": "ec2ffada40ba1e17",
   "lastOpenFiles": [
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/29 - Clean Java & Spring Boot Coding Style ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/30 - Requirements Engineering & Analysis ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/32 - Architecture.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/31 - Domain Overview.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Data JPA & Hibernate)/01 - JPA Fundamentals and Entity Mapping/00 - Persistence.md",
+    "1 - Notes/Computer & Programming /1 - Programming/18 - CI-CD/Jenkins/05 - Personalizing your Jenkins setup.md",
+    "1 - Notes/Computer & Programming /1 - Programming/18 - CI-CD/Jenkins/00 - What is CI CD ?.md",
+    "1 - Notes/Computer & Programming /1 - Programming/18 - CI-CD/Jenkins/01 - What is Jenkins ?.md",
+    "1 - Notes/Computer & Programming /1 - Programming/18 - CI-CD/Jenkins",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/00 - Git Fundamentals/01 - Git Files.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/00 - Git Fundamentals/06 - Working Tree.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/00 - Git Fundamentals/12 - The Index File.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/00 - Git Fundamentals/11 - Porcelain and Plumbing.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/00 - Git Fundamentals/10 - Need for a VCS ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/00 - Git Fundamentals/07 - Git States Management Using Commands.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/00 - Git Fundamentals/05 - Git States.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/00 - Git Fundamentals/04 - Git Repository ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/00 - Git Fundamentals/03- Git Repository Internals ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/00 - Git Fundamentals/02 - Git Repository.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/00 - Git Fundamentals/02 - Git Files.md",
+    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/00 - Git Fundamentals/00 - What is Git ? ✧.md",
+    "4 - Images/d9092e9b-e220-4cd7-9899-fba61518fad6.png",
     "4 - Images/eccb7164-1a9a-42a9-9e62-c0715c593d49.png",
     "4 - Images/3d817096-1a00-4c5c-96ac-9b49760e287e.png",
     "1 - Notes/Computer & Programming /1 - Programming/3 - Git/03 - Commits & History/00 - Does the reflog track uncommitted work?.md",
@@ -183,33 +205,12 @@
     "3d817096-1a00-4c5c-96ac-9b49760e287e.png",
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/01 - SQL Queries & Commands/17 - setval trick in pgadmin.md",
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/01 - SQL Queries & Commands/00 - DDL commands in PostgreSQL ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/05 - Functions & Expressions/01 - Nested Functions.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 17 (JDBC)/00 - What is JDBC ?.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 17 (JDBC)/10 - Designing a Production-Ready JDBC API.md",
     "eccb7164-1a9a-42a9-9e62-c0715c593d49.png",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 17 (JDBC)/09 -  Dynamic Column Names in a PreparedStatement.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/00 - What is a Process? ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/01 - Process and Thread ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/02 - Process & Multi-Tasking.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/03 - Thread.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/04 - CPU Scheduler on Threads ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/22 - Thread Priority and Sleep in Java.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/37 - Java Locks and Conditions.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/25 - Race Conditions.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/24 - Definitions of Key Concepts.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/23 - Thread Management.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/21 - Thread State in Java.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/20 - Java Thread Lifecycle.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/11 - Multithreading & Resources.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/10 - Concurrency and Parallelism ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/09 - Parallelism.md",
     "4 - Images/66ea8029-9b6c-4b0f-8d7e-4bfdf086cbbd.png",
     "4 - Images/36bdfae6-5ab2-442b-ad10-f5c1a2cac5f4.png",
     "d039fa8f-2d0f-4a3f-9b94-6bf17df835ad.png",
     "4 - Images/bf22ecf6-d4d1-4a53-afa4-63d2150e8cc5.png",
     "6ef73718-d2ea-45b9-a92a-05e06f5bd41b.png",
-    "4 - Images/6ef73718-d2ea-45b9-a92a-05e06f5bd41b 1.png",
-    "4 - Images/HTTPREQUSTandHTTPRespons.png",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/Pack 3 (Flyway)",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 1 (Configuration and Profile )/Pack 1 (Profile-Configuration)",
     "Untitled.base",
@@ -219,7 +220,6 @@
     "1 - Notes/Computer & Programming /1 - Programming/3 - Git/12 - GitHub & Forks",
     "1 - Notes/Computer & Programming /1 - Programming/3 - Git/11 - Tags & Versioning",
     "1 - Notes/Computer & Programming /1 - Programming/3 - Git/10 - Worktrees",
-    "1 - Notes/Computer & Programming /1 - Programming/3 - Git/09 - Git Ignore Rules",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/G - Real World Applications/Untitled.canvas"
   ]
 }

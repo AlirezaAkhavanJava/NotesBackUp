@@ -365,4 +365,4 @@ git log --name-status                 # File status
 
 These log flags give you powerful tools to explore, analyze, and understand your repository's history from every angle.
 
-### Tags : [[00 - Git]]
+### Tags : [[00 - What is Git ? ✧]]

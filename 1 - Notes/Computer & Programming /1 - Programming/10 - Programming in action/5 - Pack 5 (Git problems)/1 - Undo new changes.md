@@ -648,4 +648,4 @@ This gives you a simple rule:
 > **Commit it, delete it, or stash it before changing context.**
 
 
-[[00 - Git]]
+[[00 - What is Git ? ✧]]

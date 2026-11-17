@@ -1,6 +1,10 @@
 
 
-Before you touch Spring Boot, you need a clear picture of _what_ you're building and _why_. This is the step most self-taught devs skip — and it's exactly why apps end up with tangled logic and constant rewrites. Let's do it properly, using a small **Library Management System** as our running example (simple enough to grasp, complex enough to be realistic).
+Before you touch Spring Boot, you need a clear picture of _what_ you're building and _why_.
+
+This is the step most self-taught devs skip — and it's exactly why apps end up with tangled logic and constant rewrites. 
+
+Let's do it properly, using a small **Library Management System** as our running example (simple enough to grasp, complex enough to be realistic).
 
 
 
@@ -25,7 +29,9 @@ We'll walk through each one.
 
 ## 2. Elicitation — Gathering Requirements
 
-This is where you figure out what the stakeholders actually need. In a real job, this means interviews, surveys, watching users work. When you're the one building a personal/learning project, you do this by **writing down user goals in plain language**.
+This is where you figure out what the stakeholders actually need. In a real job, this means interviews, surveys, watching users work. 
+
+When you're the one building a personal/learning project, you do this by **writing down user goals in plain language**.
 
 **Example — Library Management System, raw notes:**
 
@@ -44,9 +50,13 @@ Nothing formal yet — just capturing intent.
 
 Now we classify and refine. This is where ambiguity gets squeezed out.
 
+1. What a System does
+2. How well the system does that 
+
 ### a) Functional Requirements (FR)
 
-What the system **does**. Write them as clear, testable statements, usually numbered:
+What the system **does**. 
+Write them as clear, testable statements, usually numbered:
 
 |ID|Requirement|
 |---|---|
@@ -57,7 +67,8 @@ What the system **does**. Write them as clear, testable statements, usually numb
 |FR5|The system shall mark a loan as "overdue" if the current date exceeds the due date|
 |FR6|The system shall prevent borrowing a book with zero available copies|
 
-Notice the pattern: **"The system shall [do X] when [condition]."** This phrasing forces you to be precise — vague requirements produce vague code.
+Notice the pattern: **"The system shall [do X] when [condition]."** 
+This phrasing forces you to be precise — vague requirements produce vague code.
 
 ### b) Non-Functional Requirements (NFR)
 

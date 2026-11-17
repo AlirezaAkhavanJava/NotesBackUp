@@ -162,4 +162,4 @@ Putting together everything covered across both topics, here's the complete pict
 
 
 
-[[00 - Git]]
+[[00 - What is Git ? ✧]]

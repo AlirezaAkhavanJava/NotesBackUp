@@ -28,7 +28,7 @@ Each time you push, the CI server does roughly this:
 2. Compiles it.
 3. Runs the automated tests (unit tests, sometimes integration tests).
 4. Runs checks such as code style and security scanning.
-5. Reports **pass ✅ or fail ❌** back on your commit or pull request.
+5. Reports **pass  or fail ** back on your commit or pull request.
 
 If it fails, fixing it becomes the team's top priority. A broken main branch blocks everyone, so teams keep it green.
 

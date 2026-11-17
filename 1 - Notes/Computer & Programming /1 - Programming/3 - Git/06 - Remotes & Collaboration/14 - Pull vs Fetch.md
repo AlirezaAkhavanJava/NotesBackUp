@@ -35,4 +35,4 @@ pull  = check the mailbox AND open + act on every letter immediately
 
 
 
-[[00 - Git]]
+[[00 - What is Git ? ✧]]

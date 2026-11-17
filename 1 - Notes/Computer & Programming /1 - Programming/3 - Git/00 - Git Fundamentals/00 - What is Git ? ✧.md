@@ -1,13 +1,14 @@
 
-## What is Git?
+
 
 Git is a **distributed version control system (VCS)** — a tool that tracks changes to files over time, so you can see history, revert mistakes, work on parallel versions of a project, and merge changes back together.
 
-"Distributed" is the key word: every person who clones a repository gets the **entire history** on their own machine — not just the current files. There's no single central server required for it to function; everyone has a full, independent copy of the project's history.
+"**Distributed**" is the key word: every person who clones a repository gets the **entire history** on their own machine — not just the current files. There's no single central server required for it to function; everyone has a full, independent copy of the project's history.
 
 Git was created by **Linus Torvalds in 2005** to manage development of the Linux kernel.
 
----
+
+![[d9092e9b-e220-4cd7-9899-fba61518fad6.png]]
 
 ## The Problem Git Solved
 
@@ -27,15 +28,15 @@ Before Git, most teams used **centralized version control systems** (like CVS or
 2. **Fast operations** — commits, diffs, branch switches all happen locally, instantly, no network needed.
 3. **Cheap, fast branching & merging** — branches are just lightweight pointers to commits, not full copies. This made branching a _core habit_ instead of a rare event.
 4. **Content-addressable storage** — Git identifies data by the SHA-1 hash of its content, not by filename/location, which makes integrity checking and deduplication natural.
-5. **Decentralized collaboration model** — anyone can clone, work independently, and propose changes back (via patches or pull requests) without needing write access to a "central" repo — perfect for open-source projects like Linux with a massive, distributed contributor base.
+5. **Decentralized collaboration model** — anyone can clone, work independently, and propose changes back (via patches or pull requests) without needing write access to a "central" repository — perfect for open-source projects like Linux with a massive, distributed contributor base.
 
 In short: **Git solved the problem of collaborating on code at scale — reliably, offline-capable, and without a fragile central bottleneck.**
 
----
+
 
 ## Key Features
 
-- **Branching and Merging**: Create isolated branches for features or fixes, then merge them back into the main codebase.
+- **Branching and Merging**: Create isolated branches for features or fixes, then merge them back into the main code-base.
 - **Commit History**: Tracks changes with detailed logs, allowing users to revert to previous versions.
 - **Distributed Workflow**: Each developer has a full repository copy, reducing reliance on a central server.
 - **Collaboration Tools**: Supports conflict resolution and team workflows through pull requests or merge requests.

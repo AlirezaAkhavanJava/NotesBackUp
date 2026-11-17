@@ -88,4 +88,4 @@ gh repo list AlirezaAkhavanJava \
 
 That's the useful bit to learn here: **`gh` gets the GitHub data, `jq` transforms it**. Two small tools doing their jobs instead of one bloated GUI trying to be your entire fucking operating system.
 
-[[00 - Git]]
+[[00 - What is Git ? ✧]]

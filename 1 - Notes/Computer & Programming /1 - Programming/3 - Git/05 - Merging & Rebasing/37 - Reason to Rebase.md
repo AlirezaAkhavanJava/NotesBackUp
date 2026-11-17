@@ -251,4 +251,4 @@ And that's the real moment when a developer thinks:
 
 
 
-[[00 - Git]]
+[[00 - What is Git ? ✧]]
