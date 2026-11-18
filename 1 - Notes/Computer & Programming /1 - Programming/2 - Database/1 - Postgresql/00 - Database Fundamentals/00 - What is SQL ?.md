@@ -7,12 +7,6 @@ It enables users to perform CRUD operations (Create, Read, Update, Delete) on da
 SQL is widely supported by DMS (database management systems) such as MySQL, PostgreSQL, SQLite, Oracle, and Microsoft SQL Server.
 
 
-> The language 
-
-![[Pasted image 20251210135501.png]]
-
-
-
 ## Key Functions of SQL
 
 - **Querying Data**: Retrieve specific data using `SELECT` statements.
@@ -41,4 +35,3 @@ This query retrieves the first and last names of employees in the Engineering de
 - Microsoft SQL Server
 
 [[PostgreSQL]]
-[[Data-base]]

@@ -4,9 +4,10 @@ Before you touch Spring Boot, you need a clear picture of _what_ you're building
 
 This is the step most self-taught devs skip — and it's exactly why apps end up with tangled logic and constant rewrites. 
 
+There are 6 steps you must follow to understand them.
 Let's do it properly, using a small **Library Management System** as our running example (simple enough to grasp, complex enough to be realistic).
 
-
+![[3f3b4bb6-aa8e-4a43-8132-1168d22e8599.png]]
 
 ## 1. What Requirements Engineering Actually Is
 

@@ -2,7 +2,7 @@
 
 We've covered requirements, domain modeling, and a few implementation details (`UUID`, `Instant`). Now let's zoom out to the big picture: **how do you organize all the pieces into a coherent, maintainable project?** This is the architecture layer — the "shape" your codebase takes before you write a single class.
 
----
+
 
 ## 1. The Core Idea — Separation of Concerns
 
@@ -10,7 +10,7 @@ Every layered architecture exists to answer one question: **when something chang
 
 If your database schema changes and your REST API code breaks too, your architecture has a problem — those two things should be independent. Good architecture draws boundaries so that changes in one area (UI, business rules, persistence) don't ripple everywhere else.
 
----
+
 
 ## 2. The Standard Spring Boot Layering (start here)
 
@@ -86,7 +86,7 @@ public interface LoanRepository extends JpaRepository<Loan, UUID> {
 
 **Domain/Entity** — the business objects, as we covered in the Domain Overview tutorial.
 
----
+
 
 ## 3. Package Structure — Putting Layers Into Folders
 
@@ -145,7 +145,7 @@ com.example.library
 
 **Practical rule of thumb:** start package-by-layer while you're learning — it's easier to reason about and matches how tutorials teach concepts. Migrate to package-by-feature once you have 5+ entities or multiple people working on the codebase simultaneously (fewer merge conflicts, clearer ownership).
 
----
+
 
 ## 4. A Layer We Haven't Covered Yet: The Mapper
 
@@ -169,7 +169,7 @@ Or, once you're comfortable, use **MapStruct** to generate this code for you at 
 
 Where it lives: `mapper/` package, or inside each feature folder if using package-by-feature.
 
----
+
 
 ## 5. Configuration Layer
 
@@ -185,7 +185,7 @@ com.example.library
 
 These are `@Configuration` classes — infrastructure concerns, not business logic, so they get their own space rather than living inside a feature folder.
 
----
+
 
 ## 6. A Step Beyond: Hexagonal / Clean Architecture (know it exists)
 
@@ -193,19 +193,7 @@ The layered architecture above is simple, but it has a subtle flaw: your **domai
 
 **Hexagonal Architecture** (a.k.a. Ports & Adapters) fixes this by inverting the dependency:
 
-```
-                 ┌─────────────────────────┐
-                 │      Domain / Core       │   ← no framework dependencies at all
-                 │  (business logic, rules) │
-                 └───────────┬─────────────┘
-                              │ defines interfaces ("ports")
-              ┌───────────────┴───────────────┐
-              ▼                                ▼
-    ┌───────────────────┐          ┌──────────────────────┐
-    │  REST Controller    │          │   JPA Repository       │
-    │   (adapter, "in")    │          │   (adapter, "out")      │
-    └───────────────────┘          └──────────────────────┘
-```
+![[508ca019-21e3-4314-9269-5c96c951eeaa.png]]
 
 The domain defines an interface (`LoanRepositoryPort`), and the **infrastructure layer implements it** using Spring Data JPA. The domain never imports `jakarta.persistence` or Spring at all — meaning you could swap the database technology entirely without touching business logic.
 
@@ -225,7 +213,7 @@ public interface LoanJpaRepository extends JpaRepository<LoanEntity, UUID>, Loan
 
 **Should you use this now?** Honestly — no, not yet. It adds real complexity (more interfaces, more mapping, more files) that pays off mainly in large, long-lived, team-maintained systems. Learn the standard layered architecture solidly first. I'm flagging hexagonal architecture so you recognize the term and the problem it solves when you encounter it later — not as something to apply to a learning project today.
 
----
+
 
 ## 7. Putting It All Together — Full Project Tree
 
@@ -262,7 +250,7 @@ com.example.library
     └── application.properties
 ```
 
----
+
 
 ## Quick summary
 
@@ -272,9 +260,7 @@ com.example.library
 4. Cross-cutting setup (`@Configuration`, exception handling) lives in a `shared/` or `config/` package
 5. **Hexagonal architecture** exists for decoupling domain from framework — good to know, overkill for now
 
----
 
-Want to actually scaffold this full project structure as real files — a working Spring Boot Maven/Gradle project with the Library domain wired up end-to-end, ready to run on your Debian machine?
 
 
 

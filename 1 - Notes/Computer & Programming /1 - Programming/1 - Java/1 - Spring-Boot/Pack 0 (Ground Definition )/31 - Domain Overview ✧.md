@@ -2,6 +2,8 @@
 
 ## 1. What a Domain Overview Is
 
+
+
 A **Domain Overview** is a short, prose-based section — usually the _first_ thing you write in a requirements or design document — that describes:
 
 - **What problem space the system operates in** (the business/subject-matter context)
@@ -20,7 +22,7 @@ It's **not** the same as the Domain Model (the entities/attributes/relationships
 
 In Domain-Driven Design (DDD) terms, the Domain Overview is where you establish the **Ubiquitous Language** — the exact words the team and the business agree to use consistently, in conversation _and_ in code. This matters more than it sounds: if the business says "member" but your code says "customer," every conversation and every code review carries translation overhead and bugs slip through the cracks.
 
----
+
 
 ## 2. Why It Matters (and why skipping it hurts later)
 
@@ -32,11 +34,13 @@ If you jump straight from raw notes to entity diagrams, you tend to:
 
 A Domain Overview forces you to nail down language and scope **before** anyone writes an `@Entity`.
 
----
+
 
 ## 3. What a Domain Overview Contains
 
 A good Domain Overview has four parts. Let's build each one using our **Library Management System** example.
+
+![[c2f2550b-4105-4f2c-9526-2d34a96dfbb3.png]]
 
 ### a) Domain Purpose (1–2 sentences)
 

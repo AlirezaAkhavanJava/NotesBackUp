@@ -1,6 +1,8 @@
 
 
-Validation is the act of checking that incoming data obeys a set of rules before your application acts on it. In Spring Boot you describe those rules declaratively, as annotations such as `@NotBlank` or `@Size` on the fields of a request DTO, and the framework enforces them for you at the controller boundary. The key idea to hold onto is that **there are three different kinds of validation, each answering a different question**: "is this input well-formed?", "is this operation allowed by our business rules?", and "will this data satisfy the database's integrity rules?". Most validation confusion comes from mixing these up, so we'll build each one and then see how they fit together.
+Validation is the act of checking that incoming data obeys a set of rules before your application acts on it. In Spring Boot you describe those rules declaratively, as annotations such as `@NotBlank` or `@Size` on the fields of a request DTO, and the framework enforces them for you at the controller boundary. 
+
+The key idea to hold onto is that **there are three different kinds of validation, each answering a different question**: "is this input well-formed?", "is this operation allowed by our business rules?", and "will this data satisfy the database's integrity rules?". Most validation confusion comes from mixing these up, so we'll build each one and then see how they fit together.
 
 ## The problem: bad input should never reach your logic
 

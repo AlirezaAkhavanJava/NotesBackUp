@@ -1,6 +1,8 @@
 
 
-`LIMIT` is a clause at the end of a `SELECT` that tells PostgreSQL: "stop after this many rows." Instead of returning the whole result, you get only the first N rows. It is also the base of **pagination**, which means showing data page by page, together with its partner `OFFSET`, which skips rows before counting.
+`LIMIT` is a clause at the end of a `SELECT` that tells PostgreSQL: "stop after this many rows." Instead of returning the whole result, you get only the first N rows. 
+
+It is also the base of **pagination**, which means showing data page by page, together with its partner `OFFSET`, which skips rows before counting.
 
 In the DQL lesson we saw that `LIMIT` runs **last**, after `WHERE`, `GROUP BY`, `HAVING`, `SELECT` and `ORDER BY`. That one fact explains almost everything about how `LIMIT` behaves. Let's go through it with the same `employees` table.
 
