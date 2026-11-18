@@ -2,11 +2,13 @@
 
 ## Definition
 
-A **data structure** is a specific way of organizing, storing, and accessing data in memory so that certain operations (adding, removing, searching, sorting) can be done efficiently for a given use case. It's not about _what_ data you store — it's about _how_ it's arranged, and that arrangement determines how fast (or slow) different operations on it are.
+A **data structure** is a specific way of organizing, storing, and accessing data in memory so that certain operations (adding, removing, searching, sorting) can be done efficiently for a given use case. 
 
-This is a **computer science concept**, not a Java-specific one — every language has some version of this. In Java, most common data structures are provided ready-made through the **Collections Framework** you just learned (`ArrayList`, `HashMap`, `LinkedList`, etc.) — those classes are _implementations_ of well-known data structures.
+It's not about _what_ data you store , it's about _how_ it's arranged, and that arrangement determines how fast (or slow) different operations on it are.
 
----
+This is a **computer science concept**, not a Java-specific one — every language has some version of this. 
+
+In Java, most common data structures are provided ready-made through the **Collections Framework** you just learned (`ArrayList`, `HashMap`, `LinkedList`, etc.) — those classes are _implementations_ of well-known data structures.
 
 ## Why data structures matter — the core problem they solve
 
@@ -28,9 +30,7 @@ Using a hash-based structure → checking existence = ~1 comparison (fast)
 
 Same data, same fundamental task — wildly different performance, purely because of the _structure_ chosen to hold it.
 
----
-
-## The two things every data structure is evaluated on
+## The two things every data structure is **checked** on
 
 ### 1. What operations it supports well
 
@@ -54,7 +54,7 @@ This is the standard way to describe data structure performance, in terms of how
 
 You'll see this notation constantly in data structure discussions — it's the standard vocabulary for comparing "how good" a structure is at a given operation, independent of any specific hardware.
 
----
+![[f24eb39a-4951-4ce7-916b-d7c4782033e0.png]]
 
 ## Categories of data structures
 
@@ -92,7 +92,6 @@ You'll see this notation constantly in data structure discussions — it's the s
 |---|---|---|
 |**Graph**|nodes connected by edges, any pattern|modeling networks, relationships, routes|
 
----
 
 ## How this maps to Java's Collections Framework
 
