@@ -27,6 +27,8 @@ Four parts, always in this order:
 
 When your Java code finishes, this is the literal thing that gets generated and sent. The "convention" for each operation is really a convention about what status code, which headers, and what body shape are expected for that kind of request.
 
+![[b1c08dbe-218e-45f7-a514-66d3df020d3b.png]]
+
 ### Convention per operation (HTTP method)
 
 **GET (read)**
