@@ -331,4 +331,4 @@ assertThat(captor.getValue())
 |**BDD**|Same matchers apply to `given()` and `then()`|
 
 
-##### Tags : [[1 - Junit 5 🥭]]
+##### Tags : [[Junit6]]

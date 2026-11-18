@@ -51,7 +51,7 @@ In summary, the back-end is the backbone of an application, ensuring data manage
 [[1 - DSA 🥭]]
 [[Spring Framework]]
 [[1 - Spring Security 🍌]]
-[[1 - Junit 5 🥭]]
+[[Junit6]]
 [[1 - Stream api]]
 [[00 - What is Git ? ✧]]
 [[1 - ORM]]

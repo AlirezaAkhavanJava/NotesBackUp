@@ -217,4 +217,4 @@ verify(service).process(argThat(list -> list.size() == 3));
 
 
 
-##### Tags : [[1 - Junit 5 🥭]]
+##### Tags : [[Junit6]]

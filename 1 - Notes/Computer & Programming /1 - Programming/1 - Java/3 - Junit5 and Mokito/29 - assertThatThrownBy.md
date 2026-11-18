@@ -70,4 +70,4 @@ void shouldThrow() {
 |**JUnit 5**|`assertThrows(Exception.class, () -> ...)`|Built-in JUnit way to test exceptions|
 
 
-##### Tags : [[1 - Junit 5 🥭]]
+##### Tags : [[Junit6]]

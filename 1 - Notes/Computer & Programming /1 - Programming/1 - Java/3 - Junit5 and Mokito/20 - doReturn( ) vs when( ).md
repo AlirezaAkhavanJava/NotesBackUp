@@ -130,4 +130,4 @@ doReturn("overridden").when(mock).getData();
 ```
 
 The choice depends on your specific use case, but `when()` should be your default choice for most scenarios.
-##### Tags : [[1 - Junit 5 🥭]]
+##### Tags : [[Junit6]]

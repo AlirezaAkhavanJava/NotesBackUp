@@ -522,4 +522,4 @@ This comprehensive tutorial should help you successfully migrate from JUnit 4's 
 
 
 
-##### Tags  : [[1 - Junit 5 🥭]]
+##### Tags  : [[Junit6]]

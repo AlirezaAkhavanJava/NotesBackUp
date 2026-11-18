@@ -130,4 +130,4 @@ doThrow(new RuntimeException("Boom!")).when(service).clearCache();
 `doThrow()` = “When this void method is called, pretend something went wrong and throw this exception.”
 
 
-#### Tags : [[1 - Junit 5 🥭]]
+#### Tags : [[Junit6]]

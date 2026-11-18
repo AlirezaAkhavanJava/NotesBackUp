@@ -35,4 +35,4 @@ assertNotSame(a, c); // ❌ different objects, even if content is equal
 ✅ Use `assertSame` when you expect both variables to **literally be the same object in memory**, not just have the same data.
 
 
-##### Tags : [[1 - Junit 5 🥭]]
+##### Tags : [[Junit6]]

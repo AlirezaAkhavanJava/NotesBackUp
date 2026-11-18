@@ -66,4 +66,4 @@ In practice:
 - Use **`@Spy`** when you want **partial mocking**.
     
 - Use **`@InjectMocks`** when you want to **test a class with mocked dependencies** automatically injected.
-##### Tags : [[1 - Junit 5 🥭]]
+##### Tags : [[Junit6]]

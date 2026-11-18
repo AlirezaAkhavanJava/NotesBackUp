@@ -1,4 +1,3 @@
-
  The important thing is to separate **`equals()` itself** from **how `HashMap`/`HashSet` use `equals()` and `hashCode()`**.
 
 ## 1. `equals()` internally

@@ -130,4 +130,4 @@ You don’t call `begin()` or `commit()` — Spring handles transactions automat
 |`flush()`|Force save|
 |Managed by Spring|If `@Transactional` is used|
 
-##### Tags : [[1 - Junit 5 🥭]]
+##### Tags : [[Junit6]]

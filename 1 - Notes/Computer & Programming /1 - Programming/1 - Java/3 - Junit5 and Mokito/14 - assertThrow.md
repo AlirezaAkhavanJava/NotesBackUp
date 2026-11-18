@@ -201,4 +201,4 @@ class UserServiceTest {
 |No `@Test(expected=...)`|JUnit 5 style|
 
 
-##### Tags : [[1 - Junit 5 🥭]]
+##### Tags : [[Junit6]]

@@ -529,5 +529,5 @@ No standard annotations; use JUnit's.
 
 [[Java]]
 [[Spring Framework]]
-[[1 - Junit 5 🥭]]
+[[Junit6]]
 [[2 - Mokito 🍫]]

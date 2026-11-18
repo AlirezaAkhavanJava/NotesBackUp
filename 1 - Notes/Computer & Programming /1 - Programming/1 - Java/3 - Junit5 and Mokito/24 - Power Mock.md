@@ -175,4 +175,4 @@ assertEquals(12, calc.add(3, 2)); // 3+2+7
 
 
 
-##### Tags : [[1 - Junit 5 🥭]]
+##### Tags : [[Junit6]]

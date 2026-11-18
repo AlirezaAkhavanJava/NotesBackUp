@@ -218,4 +218,4 @@ With `@Spy` you now have:
     
 
 
-##### Tags : [[1 - Junit 5 🥭]]
+##### Tags : [[Junit6]]

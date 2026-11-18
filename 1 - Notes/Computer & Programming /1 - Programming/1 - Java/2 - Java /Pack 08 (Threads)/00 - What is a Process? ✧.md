@@ -1,7 +1,4 @@
 A Java program runs inside an operating-system **process**, which owns the memory, files, and network ports it uses. Inside that process, **threads** do the actual work. Most Spring Boot problems, such as "port already in use" or "thread pool exhausted," come down to these two ideas.
-
-![[36bdfae6-5ab2-442b-ad10-f5c1a2cac5f4.png]]
-
 ## Process vs. program
 
 A program is a file on disk. A process is that program while it runs, plus everything the OS tracks about it, including a unique **PID**. When you run `java -jar app.jar`, the process is the `java` executable (the JVM), and your jar is data it loads. So "my Spring Boot app" is really "a JVM process running my code."

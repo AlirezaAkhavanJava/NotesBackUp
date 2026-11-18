@@ -1,7 +1,7 @@
 
 ### What is Spring Security?
 
-**Spring Security** is a powerful, highly customizable **authentication and authorization (access-control) framework** for Java applications, especially those built with the **Spring Framework** (like Spring Boot).
+**Spring Security** is a powerful, highly customizable access-control framework for Java applications, especially those built with the **Spring Framework** (like Spring Boot).
 
 It is the de-facto standard for securing Spring-based applications in the real world — used by thousands of companies, banks, governments, and startups.
 
