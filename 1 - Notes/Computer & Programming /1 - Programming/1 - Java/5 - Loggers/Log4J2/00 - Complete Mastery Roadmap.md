@@ -5,7 +5,7 @@ Since you already know Java and Spring Boot, you can skip the basics of logging 
 
 One note first: this roadmap is about **Log4j 2**. Log4j 1.x is end-of-life and should never be used in new work.
 
----
+
 
 ## Phase 1: Foundations (Week 1)
 
@@ -22,7 +22,7 @@ Goal: understand why logging frameworks exist and how Log4j 2 is built.
 
 **Practice:** Build a small console app that logs at every level and watch what changes as you adjust the root level.
 
----
+
 
 ## Phase 2: Configuration (Weeks 2 to 3)
 

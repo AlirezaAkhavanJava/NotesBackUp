@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/5 - Loggers/Log4J2/Phase 1/00 - Complete Mastery Roadmap.md",
+                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/5 - Loggers/Log4J2/09 - The best engine + config for spring boot application.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "00 - Complete Mastery Roadmap"
+              "title": "09 - The best engine + config for spring boot application"
             }
           }
         ]
@@ -80,8 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 431.5584602355957,
-    "collapsed": true
+    "width": 431.5584602355957
   },
   "right": {
     "id": "318802b81bf4bc9f",
@@ -175,6 +174,17 @@
   },
   "active": "d17faf0c2d5ede98",
   "lastOpenFiles": [
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/5 - Loggers/Log4J2/08 - YML and Properties configuration.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/5 - Loggers/Log4J2/09 - The best engine + config for spring boot application.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/5 - Loggers/Log4J2/07 - Logging configuration (XML , JSON).md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/5 - Loggers/Log4J2/00 - Complete Mastery Roadmap.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/5 - Loggers/Log4J2/06 - Are logging messages kept ?.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/5 - Loggers/Log4J2/05 - Why We Need Loggers at All ?.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/5 - Loggers/Log4J2/04 - Java Logging tools (logging engines).md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/5 - Loggers/Log4J2/03 - Spring boot startup logs.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/5 - Loggers/Log4J2/02 - Why It's Called a \"Log\".md",
+    "2797e797-2e86-43fe-b16a-c05f2f052d71.png",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/5 - Loggers/Log4J2/01 - What println Actually Is.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 17 (JDBC)/17 - Difference Between DriverManager and HikariCP.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 17 (JDBC)/16 - The Connection Interface.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 17 (JDBC)/15 - Using HikariCP in Java.md",
@@ -194,19 +204,9 @@
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/00 - Ordered/12 - Concurrency and Parallelism ✧.md",
     "Single Core vs. Parallel Cores.png",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/00 - Ordered/07 - What are Supplier , Function and Consumer.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/00 - Ordered/06 - Context Switching ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/00 - Ordered/05 - where parallelism actually happens ✧.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/00 - Ordered",
     "4 - Images/c6d5c5f4-4777-425e-9ed2-7ac3174da2db.png",
     "4 - Images/fab933c7-c333-4681-a7d8-2dead4edf93e.png",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/00 - Ordered/02 - Multithreading & Multiprocessing  & Multi-Tasking ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/00 - Ordered/01 - Two ways to create a thread ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/00 - Ordered/00 - What is a Process? ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 10 (Hashing)/08 - Internals.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/17 - CLI Commands/00 - CLI commands.md",
-    "2 - Tags/Concepts/Junit6.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 10 (Hashing)/00 - Hashing.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/00 - Overview and Fundamentals/03 - The History of Web Security.md",
     "4 - Images/f084035a-a191-41d4-95a7-0566a6e049de.png",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/13 - Security in Action",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Spring Security)/12 - Supporting Concepts",
@@ -220,7 +220,6 @@
     "4 - Images/b1c08dbe-218e-45f7-a514-66d3df020d3b.png",
     "b1c08dbe-218e-45f7-a514-66d3df020d3b.png",
     "4 - Images/b37946d0-f6ab-4b49-9a46-92283794ed15 1.png",
-    "b37946d0-f6ab-4b49-9a46-92283794ed15.png",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/G - Real World Applications/Untitled.canvas"
   ]
 }
