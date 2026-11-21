@@ -1,0 +1,3 @@
+# CGLIB Proxies
+
+[[Spring Framework]]
