@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "5331289b71e1df9a",
+        "id": "5f5e37041b477081",
         "type": "tabs",
         "children": [
           {
-            "id": "d17faf0c2d5ede98",
+            "id": "1850a0c1a382e7ca",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/5 - Loggers/Log4J2/09 - The best engine + config for spring boot application.md",
+                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/44 - What does Persistance mean ?.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "09 - The best engine + config for spring boot application"
+              "title": "44 - What does Persistance mean ?"
             }
           }
         ]
@@ -80,7 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 431.5584602355957
+    "width": 390.8715400695801
   },
   "right": {
     "id": "318802b81bf4bc9f",
@@ -172,38 +172,38 @@
       "bases:Create new base": false
     }
   },
-  "active": "d17faf0c2d5ede98",
+  "active": "1850a0c1a382e7ca",
   "lastOpenFiles": [
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/5 - Loggers/Log4J2/08 - YML and Properties configuration.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/5 - Loggers/Log4J2/09 - The best engine + config for spring boot application.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/5 - Loggers/Log4J2/07 - Logging configuration (XML , JSON).md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/5 - Loggers/Log4J2/00 - Complete Mastery Roadmap.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/5 - Loggers/Log4J2/06 - Are logging messages kept ?.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/5 - Loggers/Log4J2/05 - Why We Need Loggers at All ?.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/5 - Loggers/Log4J2/04 - Java Logging tools (logging engines).md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/5 - Loggers/Log4J2/03 - Spring boot startup logs.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/5 - Loggers/Log4J2/02 - Why It's Called a \"Log\".md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 14 (servlet )/00 - Servlet.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 4 (Flow of Spring-boot)/00 - Serialization and deserialization.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/37 - What Methods are inside an entity ?.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/35 - Methods in ResponseEntity.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 0 (Ground Definition )/36 - What is a POJO ?.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Data JPA & Hibernate)/17 - Monitoring and Management/03 - JMX.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Data JPA & Hibernate)/17 - Monitoring and Management/02 - Spring Boot Actuator.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Data JPA & Hibernate)/17 - Monitoring and Management/01 - custom actuator endpoints.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Data JPA & Hibernate)/17 - Monitoring and Management/00 - Actuator annotations.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Data JPA & Hibernate)/15 - Spring Boot Configuration and Profiles/04 - Profiles.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Data JPA & Hibernate)/15 - Spring Boot Configuration and Profiles/03 - Profiles.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Data JPA & Hibernate)/15 - Spring Boot Configuration and Profiles/02 - application.yml.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Data JPA & Hibernate)/15 - Spring Boot Configuration and Profiles/01 - @Value.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Data JPA & Hibernate)/15 - Spring Boot Configuration and Profiles/00 - @Value.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 8 (Exception)/14 - @ResponseStatus Annotation.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 8 (Exception)/13 - ControllerAdvice Annotation.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 8 (Exception)/07 - ControllerAdvice Annotation.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 8 (Exception)/12 - MethodArgumentNotValidException.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 8 (Exception)/09 - UderStanding problem details properties.md",
+    "2 - Tags/Pro/Java/Spring Framework.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 8 (Exception)/08 - What does ProblemDetail class do ?.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 8 (Exception)/11 - @ExceptionHandler Annotation.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 8 (Exception)/02 - Exception Handling Reference (Annotations and Exceptions).md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 8 (Exception)/01 - Exception Handler method.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 8 (Exception)/10 - ResponseEntityExceptionHandler.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 12 (Spring Data JPA & Hibernate)/02 - DTOs and Object Mapping/01 - DTO pattern.md",
     "2797e797-2e86-43fe-b16a-c05f2f052d71.png",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/5 - Loggers/Log4J2/01 - What println Actually Is.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 17 (JDBC)/17 - Difference Between DriverManager and HikariCP.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 17 (JDBC)/16 - The Connection Interface.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 17 (JDBC)/15 - Using HikariCP in Java.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 17 (JDBC)/14 - Connection Pooling in Plain Java (No Spring).md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 17 (JDBC)/13 - What a Connection Pool Is.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 06 (Colllection)/01 - Big O.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 06 (Colllection)/00 - Data Structures ✧.md",
     "4 - Images/f24eb39a-4951-4ce7-916b-d7c4782033e0.png",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 06 (Colllection)/02 - Generics in Java.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/12 - Types of Threads ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/00 - Ordered/13 - Multithreading & Resources.md",
     "677747a4-907b-46f0-866c-dd577eed9ef1.png",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/00 - Ordered/10 - Concurrency and Concurrent Package ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/00 - Ordered/09 - What is CompletableFuture ?.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/00 - Ordered/08 - What are Callable and Future.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/00 - Ordered/11 - Parallelism ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/00 - Ordered/12 - Concurrency and Parallelism ✧.md",
     "Single Core vs. Parallel Cores.png",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/00 - Ordered/07 - What are Supplier , Function and Consumer.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/00 - Ordered",
     "4 - Images/c6d5c5f4-4777-425e-9ed2-7ac3174da2db.png",
     "4 - Images/fab933c7-c333-4681-a7d8-2dead4edf93e.png",

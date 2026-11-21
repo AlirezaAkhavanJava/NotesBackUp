@@ -1,6 +1,5 @@
 
 
-# Exception Handling Reference: Annotations and Exceptions
 
 **Definition:** Two lists: the annotations that _declare, scope, or influence_ how exceptions turn into HTTP responses, and the exceptions you will meet in a Spring Boot web app, grouped by where they come from.
 

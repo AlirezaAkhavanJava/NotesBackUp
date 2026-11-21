@@ -1,6 +1,10 @@
 
 
-Exception handling in Spring Boot is the practice of deciding, in one organized place, what your API tells the client when something goes wrong. Services and repositories throw exceptions (user not found, validation failed, unique constraint violated, a bug), and the framework's job is to translate each of them into a proper HTTP response with the right status code and a consistent body. The core idea is **separation of concerns**: your business code *throws* meaningful exceptions without knowing anything about HTTP, and a central handler *translates* them into responses. This is the "throw, don't return errors" approach we kept pointing toward in the DTO, validation and `ResponseEntity` tutorials, and now we build it fully.
+Exception handling in Spring Boot is the practice of deciding, in one organized place, **what your API tells the client when something goes wrong**. 
+
+Services and repositories throw exceptions (user not found, validation failed, unique constraint violated, a bug), and the framework's job is to translate each of them into a proper HTTP response with the right status code and a consistent body. 
+
+The core idea is **separation of concerns**: your business code *throws* meaningful exceptions without knowing anything about HTTP, and a central handler *translates* them into responses. This is the "throw, don't return errors" approach we kept pointing toward in the DTO, validation and `ResponseEntity` tutorials, and now we build it fully.
 
 ## The problem: errors without a strategy
 

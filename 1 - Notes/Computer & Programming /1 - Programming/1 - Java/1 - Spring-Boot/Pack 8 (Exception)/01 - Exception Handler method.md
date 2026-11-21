@@ -1,4 +1,4 @@
-# Building Your First Exception Handler, One Step at a Time
+
 
 **Definition:** An exception handler is a method that Spring calls when an exception escapes your controller. The method receives the exception and returns what the client should see: an HTTP status and a body.
 
