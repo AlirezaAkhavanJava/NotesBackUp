@@ -46,7 +46,7 @@ is the **prefix/base path**.
 
 So Spring combines it with the method mappings:
 
-```text
+```java
 @RequestMapping("/api/v1/users")
              +
 @GetMapping

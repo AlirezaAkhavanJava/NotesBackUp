@@ -10,7 +10,7 @@ An entity object is like a **person known to a registry**. Two questions come up
 
 The difficulty is that an entity lives in two worlds at once (Java memory and the database row), so the default Java behavior for each of these is wrong or dangerous for entities.
 
----
+
 
 # 1. Constructors
 
@@ -94,7 +94,7 @@ private List<Item> items = new ArrayList<>();   // builder leaves this null!
 
 Fix with `@Builder.Default`, or initialize inside the constructor.
 
----
+
 
 # 2. Getters and setters
 
@@ -133,7 +133,7 @@ public class Product {
 
 Class-level `@Setter` generates a setter for **every** field, including `id` and `version`. Prefer field-level `@Setter`.
 
----
+
 
 # 3. `equals()` and `hashCode()`
 
@@ -261,7 +261,7 @@ public class Product {
 
 **Never** use a bare `@EqualsAndHashCode` or `@Data` on an entity: they include _all_ fields, including lazy collections (hidden queries, infinite loops through bidirectional relationships) and the generated id (the hash that changes after `save`).
 
----
+
 
 # 4. `toString()`
 
@@ -326,7 +326,7 @@ public class Order {
 
 The allow-list is safer: when someone adds a new relationship later, it isn't printed by accident.
 
----
+
 
 # 5. The Lombok shortcut table
 
@@ -399,7 +399,7 @@ public class Product {
 
 Spring Boot manages the version, and Spring Initializr adds the lombok exclusion to the build plugin for you. Lombok is a **compile-time annotation processor**: it rewrites your class during compilation, so the generated methods exist in the `.class` file but not in your source. Your IDE needs Lombok support (IntelliJ includes it, and Eclipse/VS Code need the plugin or extension), otherwise it shows false "method not found" errors even though Maven builds fine.
 
----
+
 
 # Nuances and gotchas
 
