@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "b2159983622a1c0e",
+        "id": "1c5a223e47762c33",
         "type": "tabs",
         "children": [
           {
-            "id": "754771bf205a21dd",
+            "id": "9021e4e4dec39168",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 18 (Monitoring and Actuator)/25 - JMX Monitoring.md",
-                "mode": "source",
+                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/00 - Java & Enterprise ✧.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "25 - JMX Monitoring"
+              "title": "00 - Java & Enterprise ✧"
             }
           }
         ]
@@ -80,7 +80,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 395.3039436340332
+    "width": 394.3482856750488,
+    "collapsed": true
   },
   "right": {
     "id": "318802b81bf4bc9f",
@@ -172,34 +173,34 @@
       "bases:Create new base": false
     }
   },
-  "active": "754771bf205a21dd",
+  "active": "9021e4e4dec39168",
   "lastOpenFiles": [
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 15 (Spring AOP)/20 - Advice Ordering with @Order.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/29 - What are MVP and MVVM ?.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 99 (Needs Review)/00 - Unclassified - Manual Review/47 - XSI.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 99 (Needs Review)/00 - Unclassified - Manual Review/46 - xmlns in Spring XML.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 99 (Needs Review)/00 - Unclassified - Manual Review/45 - What is a Table ?.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 99 (Needs Review)/00 - Unclassified - Manual Review/44 - What is a Spring Profile ?.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 99 (Needs Review)/00 - Unclassified - Manual Review/43 - What goes in Git.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 99 (Needs Review)/00 - Unclassified - Manual Review/42 - What does Persistance mean ?.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 99 (Needs Review)/00 - Unclassified - Manual Review/41 - Ways to activate a profile.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 99 (Needs Review)/00 - Unclassified - Manual Review/40 - Unidirectional vs. Bidirectional Relationships.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 99 (Needs Review)/00 - Unclassified - Manual Review/39 - Thymeleaf.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 99 (Needs Review)/00 - Unclassified - Manual Review/38 - Think like this and that.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 99 (Needs Review)/00 - Unclassified - Manual Review/37 - The Three Ways to Inject Dependencies ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 99 (Needs Review)/00 - Unclassified - Manual Review/36 - The HTTP request.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 99 (Needs Review)/00 - Unclassified - Manual Review/35 - The hooks, one by one ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 99 (Needs Review)/00 - Unclassified - Manual Review/34 - Spring’s XML Schemas.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 99 (Needs Review)/00 - Unclassified - Manual Review/33 - Spring Batch for Data Processing.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 99 (Needs Review)/00 - Unclassified - Manual Review/32 - Spring.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 99 (Needs Review)/00 - Unclassified - Manual Review/31 - Serializable.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 99 (Needs Review)/00 - Unclassified - Manual Review/30 - RoadMap.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 99 (Needs Review)/00 - Unclassified - Manual Review/29 - RequestStatus ?!.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 99 (Needs Review)/00 - Unclassified - Manual Review/28 - Request vs response.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 99 (Needs Review)/00 - Unclassified - Manual Review/27 - Ready to Use and Destruction.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 99 (Needs Review)/00 - Unclassified - Manual Review/26 - Prefix.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 99 (Needs Review)/00 - Unclassified - Manual Review/25 - Practical example.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 99 (Needs Review)/00 - Unclassified - Manual Review/24 - Page.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 13 (Flyway and Database Migrations)/04 - Repeatable Migrations.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 15 (Spring AOP)/13 - Enabling and Configuring Spring AOP.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 15 (Spring AOP)/17 - Proxy Invocation Lifecycle.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 15 (Spring AOP)/03 - Spring AOP Annotations.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 15 (Spring AOP)/00 - What is AOP?.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 14 (Transactions)/01 - ACID Properties.md",
+    "2 - Tags/Pro/Java/Spring Framework.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 14 (Transactions)/00 - What Is a Database Transaction.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 14 (Transactions)/02 - Transaction Boundaries in Spring.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 14 (Transactions)/03 - PlatformTransactionManager.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Validation)/07 - Validation API and Jakarta Bean Validation.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Validation)/06 - Validating Usernames and Stopping SQL Injection.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Validation)/05 - Validating incoming data ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Validation)/04 - Validation.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Validation)/03 - Validating Path Variable (method parameter validation) ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Validation)/02 - The Validation Annotation Catalog.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Validation)/01 - Spring Validation annotations.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 02 (Spring Core)/42 - BFPP.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 02 (Spring Core)/21 - XML configuration ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/10 - POJO , DTO , Entity.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/14 - what is a domain ? ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/13 - Domain Overview ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/17 - Layered Architecture in Spring Boot ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/16 - Spring Boot application Architecture ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/07 - Spring-Boot API's ☆.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/06 - REST API Endpoint Rules.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 99 (Needs Review)/00 - Unclassified - Manual Review",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 99 (Needs Review)",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 22 (Advanced Spring Engineering)/12 - Reactive Programming",

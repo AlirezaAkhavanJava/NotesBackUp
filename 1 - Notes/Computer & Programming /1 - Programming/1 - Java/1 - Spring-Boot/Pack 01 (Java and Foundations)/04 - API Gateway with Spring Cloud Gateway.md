@@ -1,142 +1,11 @@
-# API Gateway with Spring Cloud Gateway
 
-## Overview
+An **API Gateway** is a single entry point that sits in front of a set of microservices. Instead of a client calling `todo-service` directly and `user-service` directly and `order-service` directly — each with its own host, port and security logic — the client calls one address, and the gateway decides where each request actually goes. On top of that routing job, the gateway is also the natural place to put things every request needs anyway: checking a JWT, adding a tracking header, limiting how many requests per second a client can make, logging what came through. Doing that once at the gateway means none of your individual services have to repeat that logic themselves.
 
-**Spring Cloud Gateway** is a powerful, flexible API gateway built on Spring Boot and Spring WebFlux, designed to route requests, apply filters, and handle cross-cutting concerns like authentication, rate-limiting, and logging in microservices architectures. It acts as a single entry point for client requests, directing them to appropriate microservices while providing additional features like security and monitoring.
+**Spring Cloud Gateway** is Spring's implementation of this idea. It's built on Spring WebFlux, meaning it's reactive and non-blocking by design — a gateway sits in the path of _every_ request in your system, so it needs to handle a lot of concurrent traffic without tying up a thread per request the way a traditional blocking servlet would.
 
-**Why Use Spring Cloud Gateway?**
+## Routes: the core building block
 
-- **Centralized Routing**: Simplifies client interaction by routing requests to multiple microservices.
-- **Cross-Cutting Concerns**: Handles authentication, rate-limiting, and logging in one place.
-- **Scalability**: Supports reactive, non-blocking request handling.
-- **Integration**: Works seamlessly with Spring Cloud tools like Eureka for service discovery.
-
-**How It Works**:
-
-- Add `spring-cloud-starter-gateway` to your project.
-- Configure routes to map incoming requests to microservices.
-- Apply filters for tasks like authentication (e.g., JWT validation) or logging.
-- Integrate with Eureka for dynamic service discovery.
-
-**Resources**:
-
-- [Spring Cloud Gateway Documentation](https://docs.spring.io/spring-cloud-gateway/docs/current/reference/html/)
-- [Baeldung: Spring Cloud Gateway](https://www.baeldung.com/spring-cloud-gateway)
-- _Spring Microservices in Action_ by John Carnell (Chapter 6)
-
-**Prerequisites**:
-
-- Familiarity with Spring Boot, Spring Cloud, and microservices concepts.
-- Existing microservices (e.g., Todo Service and User Service from previous steps).
-- Basic understanding of JWT (JSON Web Tokens) for authentication.
-
-**Practice Goal**: Set up a Spring Cloud Gateway to route requests to the Todo Service and User Service, integrating with Eureka for service discovery. Add a custom JWT validation filter to secure endpoints.
-
----
-
-## Setting Up Spring Cloud Gateway
-
-### Project Structure
-
-Extend the microservices architecture from the previous step by adding a gateway service:
-
-```
-todo-microservices/
-├── config-server/
-├── eureka-server/
-├── todo-service/
-├── user-service/
-├── gateway-service/
-│   ├── src/main/java/com/example/gateway/
-│   ├── src/main/resources/bootstrap.yml
-│   ├── pom.xml
-├── config-repo/
-│   ├── todo-service.yml
-│   ├── user-service.yml
-│   ├── gateway-service.yml
-```
-
-### 1. Gateway Service Setup
-
-#### `gateway-service/pom.xml`
-
-```xml
-<project>
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>com.example</groupId>
-    <artifactId>gateway-service</artifactId>
-    <version>1.0-SNAPSHOT</version>
-
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.3.4</version>
-    </parent>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-gateway</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-config</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.jsonwebtoken</groupId>
-            <artifactId>jjwt</artifactId>
-            <version>0.12.6</version>
-        </dependency>
-    </dependencies>
-
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>2023.0.3</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
-</project>
-```
-
-**Notes**:
-
-- `spring-cloud-starter-gateway`: Provides gateway functionality.
-- `spring-cloud-starter-netflix-eureka-client`: Enables service discovery with Eureka.
-- `spring-cloud-starter-config`: Fetches configuration from Config Server.
-- `jjwt`: Handles JWT validation.
-
-#### `gateway-service/src/main/resources/bootstrap.yml`
-
-```yaml
-spring:
-  application:
-    name: gateway-service
-  cloud:
-    config:
-      uri: http://localhost:8888
-```
-
-#### `config-repo/gateway-service.yml`
-
-Add to the `config-repo` directory:
+Everything in Spring Cloud Gateway revolves around a **route**. A route is just: "if a request matches this condition, send it here, and optionally do these things to it along the way." You define routes in YAML:
 
 ```yaml
 spring:
@@ -149,57 +18,21 @@ spring:
             - Path=/api/todos/**
           filters:
             - AddRequestHeader=X-Request-Source, Gateway
-        - id: user-service
-          uri: lb://user-service
-          predicates:
-            - Path=/api/users/**
-          filters:
-            - AddRequestHeader=X-Request-Source, Gateway
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
 ```
 
-**Notes**:
+Each route has three parts:
 
-- `lb://todo-service`: Uses Eureka to resolve the `todo-service` instance.
-- `Path=/api/todos/**`: Routes requests matching this path to Todo Service.
-- `AddRequestHeader`: Adds a header to track requests passing through the gateway.
+- **`id`** — just a name for the route, for your own reference.
+- **`predicates`** — the condition that decides whether this route applies. `Path=/api/todos/**` means "any request whose path starts with `/api/todos/`."
+- **`filters`** — things done to the request (or response) as it passes through. `AddRequestHeader` tags the outgoing request with a header, which is useful downstream for knowing "this came through the gateway, not directly."
 
-#### `gateway-service/src/main/java/com/example/gateway/GatewayApplication.java`
+`uri: lb://todo-service` is where service discovery comes in: `lb://` tells the gateway "don't resolve this as a literal address — ask the load balancer (backed by Eureka) for a live instance of `todo-service`." This is why the gateway doesn't need to know IPs or ports; Eureka is already tracking where each service instance actually lives.
 
-```java
-package com.example.gateway;
+## Writing a custom filter: JWT validation
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-@SpringBootApplication
-public class GatewayApplication {
-    public static void main(String[] args) {
-        SpringApplication.run(GatewayApplication.class, args);
-    }
-}
-```
-
-### 2. JWT Validation Filter
-
-Create a custom filter to validate JWT tokens for secured endpoints.
-
-#### `gateway-service/src/main/java/com/example/gateway/filter/JwtFilter.java`
+Built-in filters like `AddRequestHeader` only go so far. For something like validating a JWT on every incoming request, you write a custom `GatewayFilterFactory`:
 
 ```java
-package com.example.gateway.filter;
-
-import io.jsonwebtoken.JwtException;
-import io.jsonwebtoken.Jwts;
-import org.springframework.cloud.gateway.filter.GatewayFilter;
-import org.springframework.cloud.gateway.filter.factory.AbstractGatewayFilterFactory;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
-import org.springframework.stereotype.Component;
-
 @Component
 public class JwtFilter extends AbstractGatewayFilterFactory<JwtFilter.Config> {
     public JwtFilter() {
@@ -217,10 +50,7 @@ public class JwtFilter extends AbstractGatewayFilterFactory<JwtFilter.Config> {
 
             String token = authHeader.substring(7);
             try {
-                Jwts.parser()
-                        .setSigningKey("secret-key".getBytes()) // Replace with secure key in production
-                        .build()
-                        .parseClaimsJws(token);
+                Jwts.parser().setSigningKey("secret-key".getBytes()).build().parseClaimsJws(token);
                 return chain.filter(exchange);
             } catch (JwtException e) {
                 exchange.getResponse().setStatusCode(HttpStatus.UNAUTHORIZED);
@@ -229,348 +59,64 @@ public class JwtFilter extends AbstractGatewayFilterFactory<JwtFilter.Config> {
         };
     }
 
-    public static class Config {
-        // Configuration properties if needed
-    }
+    public static class Config {}
 }
 ```
 
-**Notes**:
+A few things here are specific to writing gateway filters, as opposed to ordinary Spring code:
 
-- Checks for a `Bearer` token in the `Authorization` header.
-- Validates the JWT using a secret key (hardcoded here for simplicity; use a secure key in production).
-- Returns HTTP 401 if the token is missing or invalid.
+- **`exchange`** is a `ServerWebExchange` — in reactive WebFlux, this one object bundles both the request and the response together (instead of separate `HttpServletRequest`/`HttpServletResponse` objects like in blocking Spring MVC).
+- **`chain.filter(exchange)`** is how you say "this request passed my check, let it continue to the next filter (or to the actual service)." If you don't call it, the request stops here — which is exactly what happens in both branches above when the token is missing or invalid: the response is completed immediately, and `chain.filter` is never reached.
+- **The inner `Config` class** exists because `AbstractGatewayFilterFactory` is a generic factory — it lets you pass configuration arguments to the filter from YAML (e.g. `- JwtFilter: someArg`). Here it's empty because this filter doesn't need any config, but the factory pattern still requires the class to exist.
 
-#### Update `config-repo/gateway-service.yml`
-
-Apply the JWT filter to secured routes:
+Once registered as a bean, you reference it by name in YAML, right alongside the built-in filters:
 
 ```yaml
-spring:
-  cloud:
-    gateway:
-      routes:
-        - id: todo-service
-          uri: lb://todo-service
-          predicates:
-            - Path=/api/todos/**
-          filters:
-            - AddRequestHeader=X-Request-Source, Gateway
-            - JwtFilter
-        - id: user-service
-          uri: lb://user-service
-          predicates:
-            - Path=/api/users/**
-          filters:
-            - AddRequestHeader=X-Request-Source, Gateway
-            - JwtFilter
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
+filters:
+  - AddRequestHeader=X-Request-Source, Gateway
+  - JwtFilter
 ```
 
-### 3. Update Existing Services
+## Rate limiting and circuit breakers
 
-Ensure `todo-service` and `user-service` are configured as in the previous microservices setup:
+Two more filters are common enough to be worth knowing by name:
 
-- Both use `spring-cloud-starter-netflix-eureka-client` and `spring-cloud-starter-config`.
-- Both register with Eureka and fetch configs from Config Server.
-- Update `todo-service.yml` and `user-service.yml` in `config-repo` if needed.
+**`RequestRateLimiter`** caps how many requests a client can send per second, backed by Redis:
 
----
-
-## Running and Testing the Application
-
-### 1. Setup Config Repository
-
-- Ensure `config-repo` contains `todo-service.yml`, `user-service.yml`, and `gateway-service.yml`.
-- Initialize as a Git repository (if not already done):
-    
-    ```bash
-    cd ~/config-repo
-    git add .
-    git commit -m "Add gateway config"
-    ```
-    
-
-### 2. Start Services
-
-Run each service in a separate terminal:
-
-1. **Config Server**:
-    
-    ```bash
-    cd config-server
-    mvn spring-boot:run
-    ```
-    
-    - Access: `http://localhost:8888/gateway-service/default`
-2. **Eureka Server**:
-    
-    ```bash
-    cd eureka-server
-    mvn spring-boot:run
-    ```
-    
-    - Access: `http://localhost:8761`
-3. **User Service**:
-    
-    ```bash
-    cd user-service
-    mvn spring-boot:run
-    ```
-    
-4. **Todo Service**:
-    
-    ```bash
-    cd todo-service
-    mvn spring-boot:run
-    ```
-    
-5. **Gateway Service**:
-    
-    ```bash
-    cd gateway-service
-    mvn spring-boot:run
-    ```
-    
-
-### 3. Generate a JWT Token
-
-For testing, generate a JWT token using a tool like [jwt.io](https://jwt.io/) or a simple Java program:
-
-```java
-import io.jsonwebtoken.Jwts;
-
-public class JwtGenerator {
-    public static void main(String[] args) {
-        String token = Jwts.builder()
-                .setSubject("user1")
-                .signWith(io.jsonwebtoken.SignatureAlgorithm.HS256, "secret-key".getBytes())
-                .compact();
-        System.out.println("JWT: " + token);
-    }
-}
+```yaml
+filters:
+  - name: RequestRateLimiter
+    args:
+      redis-rate-limiter.replenishRate: 10
+      redis-rate-limiter.burstCapacity: 20
 ```
 
-Run this to get a token (e.g., `eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMSJ9...`).
+`replenishRate` is the steady allowed rate (10/sec here); `burstCapacity` is how far above that a client can briefly spike before being throttled.
 
-### 4. Test with Postman
+**`CircuitBreaker`** protects the gateway from a downstream service that's failing or slow, by routing to a fallback instead of waiting or erroring out:
 
-1. **Create a User (via Gateway)**:
-    
-    ```bash
-    curl -X POST http://localhost:8080/api/users \
-    -H "Content-Type: application/json" \
-    -H "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMSJ9..." \
-    -d '{"username":"john"}'
-    ```
-    
-    **Response** (HTTP 201):
-    
-    ```json
-    {
-        "id": 1,
-        "username": "john"
-    }
-    ```
-    
-2. **Create a Todo (via Gateway)**:
-    
-    ```bash
-    curl -X POST http://localhost:8080/api/todos \
-    -H "Content-Type: application/json" \
-    -H "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMSJ9..." \
-    -d '{"title":"Learn Gateway","completed":false,"userId":1}'
-    ```
-    
-    **Response** (HTTP 201):
-    
-    ```json
-    {
-        "id": 1,
-        "title": "Learn Gateway",
-        "completed": false,
-        "userId": 1
-    }
-    ```
-    
-3. **Test Invalid JWT**:
-    
-    ```bash
-    curl -X POST http://localhost:8080/api/todos \
-    -H "Content-Type: application/json" \
-    -H "Authorization: Bearer invalid-token" \
-    -d '{"title":"Test","completed":false,"userId":1}'
-    ```
-    
-    **Response**: HTTP 401 Unauthorized
-    
-4. **Verify in Eureka**:
-    
-    - Access `http://localhost:8761` to confirm `gateway-service`, `todo-service`, and `user-service` are registered.
+```yaml
+filters:
+  - name: CircuitBreaker
+    args:
+      name: todoService
+      fallbackUri: forward:/fallback
+```
 
----
+If calls to `todo-service` start failing past a threshold, the circuit "opens" and requests get redirected to `/fallback` instead of hitting the struggling service — this is the same circuit breaker pattern used generally in distributed systems (Resilience4j implements it here), not something gateway-specific.
 
-## How It Works
+## Putting the flow together
 
-1. **Spring Cloud Gateway**:
-    
-    - Routes requests based on predicates (e.g., `Path=/api/todos/**`).
-    - Uses `lb://` URIs to resolve services via Eureka.
-    - Applies filters like `AddRequestHeader` and `JwtFilter`.
-2. **JWT Filter**:
-    
-    - Intercepts requests to check for a valid `Authorization` header.
-    - Validates the JWT using the `jjwt` library.
-    - Allows or blocks requests based on token validity.
-3. **Eureka Integration**:
-    
-    - Gateway discovers `todo-service` and `user-service` via Eureka.
-    - `lb://todo-service` resolves to the actual host/port of the service.
-4. **Config Server**:
-    
-    - Provides `gateway-service.yml` for route configuration.
-    - Centralizes configuration for all services.
+With routing, Eureka, and the JWT filter in place, a request's journey looks like this:
 
-**Flow**:
+1. Client sends `POST /api/todos` to the gateway's address.
+2. The gateway matches the path against its routes and finds the `todo-service` route.
+3. The `JwtFilter` checks the `Authorization` header before anything else proceeds.
+4. If valid, `lb://todo-service` is resolved via Eureka to an actual running instance.
+5. The request is forwarded there, and the response flows back through the same filter chain to the client.
 
-- Client sends request to `http://localhost:8080/api/todos`.
-- Gateway validates JWT via `JwtFilter`.
-- Gateway routes request to `todo-service` using Eureka.
-- Todo Service processes the request and queries `user-service` if needed.
+This is the same pattern you've already seen with Config Server and Eureka individually — the gateway is just another Spring Boot application that happens to register with Eureka _and_ consume it, while sitting in front of everything else.
 
----
 
-## Advanced Features
-
-1. **Rate Limiting**:  
-    Add rate-limiting with Redis:
-    
-    ```xml
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-data-redis-reactive</artifactId>
-    </dependency>
-    ```
-    
-    Update `gateway-service.yml`:
-    
-    ```yaml
-    spring:
-      cloud:
-        gateway:
-          routes:
-            - id: todo-service
-              uri: lb://todo-service
-              predicates:
-                - Path=/api/todos/**
-              filters:
-                - name: RequestRateLimiter
-                  args:
-                    redis-rate-limiter.replenishRate: 10
-                    redis-rate-limiter.burstCapacity: 20
-    spring.redis.host: localhost
-    spring.redis.port: 6379
-    ```
-    
-2. **Logging Filter**:  
-    Add a custom logging filter:
-    
-    ```java
-    @Component
-    public class LoggingFilter extends AbstractGatewayFilterFactory<LoggingFilter.Config> {
-        public LoggingFilter() {
-            super(Config.class);
-        }
-    
-        @Override
-        public GatewayFilter apply(Config config) {
-            return (exchange, chain) -> {
-                System.out.println("Request: " + exchange.getRequest().getURI());
-                return chain.filter(exchange).doOnSuccess(v -> {
-                    System.out.println("Response: " + exchange.getResponse().getStatusCode());
-                });
-            };
-        }
-    
-        public static class Config {}
-    }
-    ```
-    
-    Update `gateway-service.yml`:
-    
-    ```yaml
-    filters:
-      - LoggingFilter
-    ```
-    
-3. **Circuit Breaker**:  
-    Add Resilience4j for fallback routes:
-    
-    ```xml
-    <dependency>
-        <groupId>org.springframework.cloud</groupId>
-        <artifactId>spring-cloud-starter-circuitbreaker-reactor-resilience4j</artifactId>
-    </dependency>
-    ```
-    
-    Update `gateway-service.yml`:
-    
-    ```yaml
-    filters:
-      - name: CircuitBreaker
-        args:
-          name: todoService
-          fallbackUri: forward:/fallback
-    ```
-    
-    Add fallback endpoint:
-    
-    ```java
-    @RestController
-    public class FallbackController {
-        @GetMapping("/fallback")
-        public Mono<String> fallback() {
-            return Mono.just("Service unavailable");
-        }
-    }
-    ```
-    
-
----
-
-## Best Practices
-
-- **Secure Endpoints**: Use JWT or OAuth2 for authentication.
-- **Monitor Gateway**: Integrate with Spring Boot Actuator for metrics.
-- **Centralize Configuration**: Use Config Server for consistent route management.
-- **Test Routes**:
-    
-    ```java
-    @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-    class GatewayTest {
-        @Autowired
-        private TestRestTemplate restTemplate;
-    
-        @Test
-        void testTodoRoute() {
-            ResponseEntity<String> response = restTemplate.exchange(
-                    "/api/todos", HttpMethod.POST,
-                    new HttpEntity<>(new Todo("Test", false, 1L),
-                    new HttpHeaders() {{ set("Authorization", "Bearer valid-token"); }}),
-                    String.class);
-            assertEquals(HttpStatus.CREATED, response.getStatusCode());
-        }
-    }
-    ```
-    
-
----
-
-## Conclusion
-
-Spring Cloud Gateway provides a robust solution for routing and filtering requests in a microservices architecture. The practice application sets up a gateway to route requests to Todo Service and User Service, integrating with Eureka for service discovery and applying a JWT validation filter for security. Advanced features like rate-limiting and circuit breakers enhance resilience and scalability. Explore Spring Cloud Gateway’s documentation for further customization and integration options.
 
 [[Spring Framework]]
