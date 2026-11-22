@@ -213,3 +213,4 @@ That’s exactly how Linux finds commands system-wide.
 
 
 ##### Tags : [[2 - Tags/Pro/CS/Linux|Linux]]
+[[Linux]]

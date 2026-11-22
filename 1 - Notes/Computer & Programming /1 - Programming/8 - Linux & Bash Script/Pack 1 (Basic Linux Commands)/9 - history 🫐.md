@@ -60,3 +60,4 @@ Erases your shell history.
 
 
 ##### Tag : [[2 - Tags/Pro/CS/Linux|Linux]]
+[[Linux]]

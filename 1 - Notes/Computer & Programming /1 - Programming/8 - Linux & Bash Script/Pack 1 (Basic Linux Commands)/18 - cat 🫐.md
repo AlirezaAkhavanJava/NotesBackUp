@@ -74,3 +74,4 @@ cat file1.txt file2.txt > combined.txt
 ---
 
 ##### Tags : [[2 - Tags/Pro/CS/Linux|Linux]]
+[[Linux]]

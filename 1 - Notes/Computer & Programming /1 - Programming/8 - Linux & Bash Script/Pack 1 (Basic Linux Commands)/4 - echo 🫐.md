@@ -77,3 +77,4 @@ Hello World
 
 
 ##### Tags : [[00 - What is SQL ?]]
+[[Linux]]

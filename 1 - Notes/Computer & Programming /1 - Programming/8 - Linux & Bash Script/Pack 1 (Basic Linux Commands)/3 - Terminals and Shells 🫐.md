@@ -57,3 +57,4 @@ So, when you open a terminal:
 
 
 ##### Tags : [[00 - What is SQL ?]]
+[[Linux]]

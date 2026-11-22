@@ -78,3 +78,4 @@ tail -f logfile.log
 
 
 ##### Tags : [[2 - Tags/Pro/CS/Linux|Linux]]
+[[Linux]]

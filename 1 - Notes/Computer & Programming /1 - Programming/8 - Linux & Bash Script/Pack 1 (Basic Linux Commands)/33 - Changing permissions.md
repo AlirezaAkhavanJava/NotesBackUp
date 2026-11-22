@@ -144,3 +144,4 @@ chmod +t /shared/directory
 
 This covers the essentials of file permissions using `chmod` and `ls -l`!
 ##### Tags : [[2 - Tags/Pro/CS/Linux|Linux]]
+[[Linux]]

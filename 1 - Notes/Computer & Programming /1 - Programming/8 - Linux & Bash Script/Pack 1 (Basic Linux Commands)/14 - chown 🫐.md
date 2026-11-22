@@ -64,3 +64,4 @@ chown -R ethan:developers /home/ethan/projects
 
 
 ##### Tags : [[2 - Tags/Pro/CS/Linux|Linux]]
+[[Linux]]

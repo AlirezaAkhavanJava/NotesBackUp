@@ -50,3 +50,4 @@ CLI is like **talking directly to your computer in its language**. GUI is more l
 
 
 ##### Tags : [[00 - What is SQL ?]]
+[[Linux]]

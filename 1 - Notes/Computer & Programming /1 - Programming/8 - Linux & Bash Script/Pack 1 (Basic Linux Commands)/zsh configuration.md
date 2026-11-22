@@ -50,3 +50,4 @@ export PROMPT="%n@%m:%d%# "
 ---
 
 [[2 - Tags/Pro/CS/Linux|Linux]]
+[[Linux]]

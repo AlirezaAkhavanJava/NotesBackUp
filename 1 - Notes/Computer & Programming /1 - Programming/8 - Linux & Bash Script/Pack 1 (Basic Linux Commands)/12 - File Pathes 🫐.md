@@ -73,3 +73,4 @@ cd ./Documents  # go to Documents from current directory
 
 
 ##### Tags : [[2 - Tags/Pro/CS/Linux|Linux]]
+[[Linux]]

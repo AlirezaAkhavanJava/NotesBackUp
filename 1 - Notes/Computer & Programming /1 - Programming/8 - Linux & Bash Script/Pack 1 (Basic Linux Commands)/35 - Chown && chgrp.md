@@ -75,3 +75,4 @@ sudo chgrp devs file.txt         # changes only group
 
 
 ##### Tags : [[2 - Tags/Pro/CS/Linux|Linux]]
+[[Linux]]

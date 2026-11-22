@@ -89,3 +89,4 @@ source ~/.bashrc
 
 
 ##### Tags : [[2 - Tags/Pro/CS/Linux|Linux]]
+[[Linux]]

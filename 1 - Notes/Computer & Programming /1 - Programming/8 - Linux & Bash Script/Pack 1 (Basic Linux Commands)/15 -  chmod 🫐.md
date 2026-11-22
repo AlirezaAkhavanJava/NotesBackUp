@@ -186,3 +186,4 @@ Think of the **mode** as the **lock settings of a file**: it determines who can 
 
 
 ##### Tags : [[2 - Tags/Pro/CS/Linux|Linux]]
+[[Linux]]

@@ -68,3 +68,4 @@ less -N 2023.csv  #Shows the number of 2023.csv file lines
 
 
 ##### Tags : [[2 - Tags/Pro/CS/Linux|Linux]]
+[[Linux]]

@@ -159,3 +159,4 @@ comm -12 <(sort file1.txt) <(sort file2.txt)
 
 
 ##### Tags : [[2 - Tags/Pro/CS/Linux|Linux]]
+[[Linux]]
