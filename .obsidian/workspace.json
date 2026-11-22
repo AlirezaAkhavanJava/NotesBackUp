@@ -4,39 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "12e0d0388ad6d21b",
+        "id": "d71aab049324ae53",
         "type": "tabs",
         "children": [
           {
-            "id": "a1382843e42db8df",
+            "id": "e03a5502c47157b0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 7 (JSON and Data Serialization)/01 - JSON Data Types.md",
+                "file": "2 - Tags/Pro/Data-base/MongoDB.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01 - JSON Data Types"
-            }
-          },
-          {
-            "id": "2e736ed6b857262a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "JavaScript.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "JavaScript"
+              "title": "MongoDB"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -95,7 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 425.4465217590332
+    "width": 403.65886306762695
   },
   "right": {
     "id": "318802b81bf4bc9f",
@@ -187,44 +172,44 @@
       "bases:Create new base": false
     }
   },
-  "active": "2e736ed6b857262a",
+  "active": "e03a5502c47157b0",
   "lastOpenFiles": [
-    "JavaScript.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 7 (JSON and Data Serialization)/01 - JSON Data Types.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 13 (Production and Deployment)/19 - Production Debugging and Monitoring.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 13 (Production and Deployment)/18 - Frontend Deployment with Docker.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 13 (Production and Deployment)/17 - Dockerized Frontend and Spring Boot Integration.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 13 (Production and Deployment)/16 - Production API URL Configuration.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 13 (Production and Deployment)/15 - HTTPS and TLS Fundamentals.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 13 (Production and Deployment)/14 - Nginx Reverse Proxy for Spring Boot.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 13 (Production and Deployment)/13 - Nginx Static Frontend Hosting.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 13 (Production and Deployment)/12 - Reverse Proxy and Frontend Backend Communication.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 13 (Production and Deployment)/11 - HTTP Cache Headers.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 13 (Production and Deployment)/10 - Browser Caching.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 13 (Production and Deployment)/09 - Code Splitting.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 13 (Production and Deployment)/08 - Lazy Loading.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 13 (Production and Deployment)/07 - JavaScript Performance Optimization.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 13 (Production and Deployment)/06 - Source Maps.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 13 (Production and Deployment)/05 - Minification and Bundling.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 13 (Production and Deployment)/04 - Static Asset Optimization.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 13 (Production and Deployment)/03 - Production Build Process.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 13 (Production and Deployment)/02 - Vite Environment Modes.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 13 (Production and Deployment)/01 - Environment Configuration.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 13 (Production and Deployment)/00 - JavaScript Development and Production Environments.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 13 (Production and Deployment)",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 12 (JavaScript Tooling and Testing)/24 - Frontend and Backend Integration Testing.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 12 (JavaScript Tooling and Testing)/23 - API Integration Testing.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 12 (JavaScript Tooling and Testing)/22 - Testing Asynchronous Code.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 12 (JavaScript Tooling and Testing)/21 - Mocking API Requests.md",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 12 (JavaScript Tooling and Testing)",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 11 (Authentication and Security)",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 10 (Spring Boot API Integration)",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 9 (HTTP and REST API Communication)",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 8 (Browser Fundamentals)",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 7 (JSON and Data Serialization)",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 6 (Asynchronous JavaScript)",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 5 (Advanced JavaScript)",
-    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 4 (Modern JavaScript and ES Modules)",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/2 - MongoDB/8 - Types of Commands in MongoDB 🍂.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/2 - MongoDB/6 - Creating a Collection in MongoDB 🍂.md",
+    "1 - Notes/Computer & Programming /1 - Programming/Untitled",
+    "1 - Notes/Computer & Programming /1 - Programming/16 - Intellij (Ultimate)/Pack 15 - Debian 13 Integration/29 - IntelliJ Backup and Recovery on Linux.md",
+    "1 - Notes/Computer & Programming /1 - Programming/16 - Intellij (Ultimate)/Pack 15 - Debian 13 Integration/28 - Debian Application Troubleshooting.md",
+    "1 - Notes/Computer & Programming /1 - Programming/16 - Intellij (Ultimate)/Pack 15 - Debian 13 Integration/27 - Linux Terminal Integration.md",
+    "1 - Notes/Computer & Programming /1 - Programming/16 - Intellij (Ultimate)/Pack 15 - Debian 13 Integration/26 - HiDPI and Display Scaling.md",
+    "1 - Notes/Computer & Programming /1 - Programming/16 - Intellij (Ultimate)/Pack 15 - Debian 13 Integration/25 - GNOME Fonts and Rendering.md",
+    "1 - Notes/Computer & Programming /1 - Programming/16 - Intellij (Ultimate)/Pack 15 - Debian 13 Integration/24 - Linux Clipboard Integration.md",
+    "1 - Notes/Computer & Programming /1 - Programming/16 - Intellij (Ultimate)/Pack 15 - Debian 13 Integration/23 - Moving IDE Data to Another Disk.md",
+    "1 - Notes/Computer & Programming /1 - Programming/16 - Intellij (Ultimate)/Pack 15 - Debian 13 Integration/22 - IntelliJ Plugin Directory.md",
+    "1 - Notes/Computer & Programming /1 - Programming/16 - Intellij (Ultimate)/Pack 15 - Debian 13 Integration/21 - IntelliJ Configuration Directory.md",
+    "1 - Notes/Computer & Programming /1 - Programming/16 - Intellij (Ultimate)/Pack 15 - Debian 13 Integration/20 - IntelliJ System Directory Configuration.md",
+    "1 - Notes/Computer & Programming /1 - Programming/16 - Intellij (Ultimate)/Pack 15 - Debian 13 Integration/19 - Working with Applications on HDD.md",
+    "1 - Notes/Computer & Programming /1 - Programming/16 - Intellij (Ultimate)/Pack 15 - Debian 13 Integration/18 - Filesystem Performance.md",
+    "1 - Notes/Computer & Programming /1 - Programming/16 - Intellij (Ultimate)/Pack 15 - Debian 13 Integration/17 - File Permissions and Ownership.md",
+    "1 - Notes/Computer & Programming /1 - Programming/16 - Intellij (Ultimate)/Pack 15 - Debian 13 Integration/16 - Docker Integration on Debian.md",
+    "1 - Notes/Computer & Programming /1 - Programming/16 - Intellij (Ultimate)/Pack 15 - Debian 13 Integration/15 - PostgreSQL Integration on Debian.md",
+    "1 - Notes/Computer & Programming /1 - Programming/16 - Intellij (Ultimate)/Pack 15 - Debian 13 Integration/14 - Git Installation and Configuration.md",
+    "1 - Notes/Computer & Programming /1 - Programming/16 - Intellij (Ultimate)/Pack 15 - Debian 13 Integration/13 - Gradle Installation on Debian.md",
+    "1 - Notes/Computer & Programming /1 - Programming/16 - Intellij (Ultimate)/Pack 15 - Debian 13 Integration/12 - Maven Installation on Debian.md",
+    "1 - Notes/Computer & Programming /1 - Programming/16 - Intellij (Ultimate)/Pack 15 - Debian 13 Integration/11 - Environment Variables.md",
+    "1 - Notes/Computer & Programming /1 - Programming/16 - Intellij (Ultimate)/Pack 15 - Debian 13 Integration/10 - PATH Configuration.md",
+    "1 - Notes/Computer & Programming /1 - Programming/16 - Intellij (Ultimate)/Pack 15 - Debian 13 Integration/09 - JAVA_HOME Configuration.md",
+    "1 - Notes/Computer & Programming /1 - Programming/16 - Intellij (Ultimate)/Pack 15 - Debian 13 Integration/08 - Multiple Java Versions on Debian.md",
+    "1 - Notes/Computer & Programming /1 - Programming/16 - Intellij (Ultimate)/Pack 15 - Debian 13 Integration/07 - JDK Installation on Debian 13.md",
+    "1 - Notes/Computer & Programming /1 - Programming/16 - Intellij (Ultimate)/Pack 15 - Debian 13 Integration/06 - Application Launcher Configuration.md",
+    "1 - Notes/Computer & Programming /1 - Programming/16 - Intellij (Ultimate)/Pack 15 - Debian 13 Integration",
+    "1 - Notes/Computer & Programming /1 - Programming/16 - Intellij (Ultimate)/Pack 14 - Problems, Fixes and Recovery",
+    "1 - Notes/Computer & Programming /1 - Programming/16 - Intellij (Ultimate)/Pack 13 - Advanced IntelliJ Features",
+    "1 - Notes/Computer & Programming /1 - Programming/16 - Intellij (Ultimate)/Pack 12 - Personalization and Productivity",
+    "1 - Notes/Computer & Programming /1 - Programming/16 - Intellij (Ultimate)/Pack 11 - Docker and Infrastructure",
+    "1 - Notes/Computer & Programming /1 - Programming/16 - Intellij (Ultimate)/Pack 10 - Frontend and Related Languages",
+    "1 - Notes/Computer & Programming /1 - Programming/16 - Intellij (Ultimate)/Pack 9 - Git and Version Control",
+    "1 - Notes/Computer & Programming /1 - Programming/16 - Intellij (Ultimate)/Pack 8 - Testing",
+    "1 - Notes/Computer & Programming /1 - Programming/16 - Intellij (Ultimate)/Pack 7 - Debugging and Troubleshooting",
     "4 - Images/61f02502-5aed-4d1a-b8de-22421e1661f0.png",
     "2797e797-2e86-43fe-b16a-c05f2f052d71.png",
     "4 - Images/f24eb39a-4951-4ce7-916b-d7c4782033e0.png",
