@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "aaca638bdf692f8e",
+        "id": "add491048b80c123",
         "type": "tabs",
         "children": [
           {
-            "id": "532fa892d479b2c9",
+            "id": "c2cb3f869b124b6b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 - Tags/Concepts/DSA.md",
-                "mode": "preview",
+                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/5 - Loggers/Log4J2/01 - What println Actually Is.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "DSA"
+              "title": "01 - What println Actually Is"
             }
           }
         ]
@@ -80,7 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 429.2798652648926
+    "width": 428.0032539367676
   },
   "right": {
     "id": "318802b81bf4bc9f",
@@ -172,34 +172,35 @@
       "bases:Create new base": false
     }
   },
-  "active": "532fa892d479b2c9",
+  "active": "c2cb3f869b124b6b",
   "lastOpenFiles": [
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/8 - DSA/05 - Insertion Sort.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/7 - System Design/A - لاگ ها.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/8 - DSA/118 - Topological Sorting.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/8 - DSA/09 - Stack.md",
     "2 - Tags/Concepts/DSA.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/11 - JUnit 6 Changes and Migration/08 - FastCSV and CSV Parameter Sources.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/11 - JUnit 6 Changes and Migration/09 - CSV commentCharacter Attribute.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/11 - JUnit 6 Changes and Migration/04 - Unified Versioning - Platform Jupiter Vintage.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/11 - JUnit 6 Changes and Migration/00 - Migrating from @Rule to Extensions.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/11 - JUnit 6 Changes and Migration/01 - JUnit 6 Overview.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/01 - Mokito.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/11 - JUnit 6 Changes and Migration/25 - JUnit 6 Release Notes and Version History.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/11 - JUnit 6 Changes and Migration/24 - JUnit 6.1 Constants API.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/11 - JUnit 6 Changes and Migration/23 - JUnit 6.1 Memory Cleanup Mode.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/11 - JUnit 6 Changes and Migration/22 - JUnit 6.1 Parallel Test Executor.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/11 - JUnit 6 Changes and Migration/21 - JUnit 6.1 Execution Modes.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/11 - JUnit 6 Changes and Migration/20 - JUnit 6.1 TempDir Cleanup Strategies.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/11 - JUnit 6 Changes and Migration/19 - JUnit 6.1 System Property Extensions.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/11 - JUnit 6 Changes and Migration/18 - JUnit 6.1 Default Time Zone Extension.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/11 - JUnit 6 Changes and Migration/17 - JUnit 6.1 Default Locale Extension.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/11 - JUnit 6 Changes and Migration/16 - Kotlin Suspend Test Methods.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/11 - JUnit 6 Changes and Migration/15 - CancellationToken and Test Cancellation.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/11 - JUnit 6 Changes and Migration/14 - Fail Fast Test Execution.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/11 - JUnit 6 Changes and Migration/13 - ConsoleLauncher Changes.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/11 - JUnit 6 Changes and Migration/12 - JFR Integration in JUnit Platform Launcher.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/11 - JUnit 6 Changes and Migration/11 - JUnit Platform JFR Module Removal.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/11 - JUnit 6 Changes and Migration/10 - JUnit Platform Runner Removal.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/11 - JUnit 6 Changes and Migration/07 - Nested Test Method Order Inheritance.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/11 - JUnit 6 Changes and Migration/06 - Deterministic Ordering of Nested Test Classes.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/8 - DSA/238 - DSA Interview Patterns.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/8 - DSA/237 - Common Algorithmic Pitfalls.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/8 - DSA/236 - DSA Testing and Verification.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/8 - DSA/235 - Edge Cases in Algorithms.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/8 - DSA/234 - DSA Problem Solving Methodology.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/8 - DSA/233 - Choosing the Right Algorithm.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/8 - DSA/232 - Choosing the Right Data Structure.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/8 - DSA/231 - Algorithm Complexity Comparison.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/8 - DSA/230 - Data Structure Complexity Comparison.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/8 - DSA/229 - Search and Indexing Systems.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/8 - DSA/228 - Priority Queues in Task Processing.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/8 - DSA/227 - Graph Applications in Backend Systems.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/8 - DSA/226 - Scheduling Algorithms.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/8 - DSA/225 - Leaky Bucket Algorithm.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/8 - DSA/224 - Token Bucket Algorithm.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/8 - DSA/223 - Rate Limiting Algorithms.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/8 - DSA/222 - Cache Eviction Policies.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/8 - DSA/221 - LFU Cache.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/8 - DSA/220 - LRU Cache.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/8 - DSA/219 - Database Query Complexity.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/8 - DSA/218 - PostgreSQL Hash Index.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/8 - DSA/217 - PostgreSQL B Tree Index.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/8 - DSA/complete-dsa.sh",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/11 - JUnit 6 Changes and Migration",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/10 - Testing Strategy and Best Practices",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/09 - Spring and Persistence Testing",
@@ -209,7 +210,6 @@
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/05 - Mockito Fundamentals",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/04 - Assertions and AssertJ",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/03 - Parameterized and Dynamic Testing",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/02 - JUnit 6 Core and Lifecycle",
     "4 - Images/61f02502-5aed-4d1a-b8de-22421e1661f0.png",
     "2797e797-2e86-43fe-b16a-c05f2f052d71.png",
     "4 - Images/f24eb39a-4951-4ce7-916b-d7c4782033e0.png",
