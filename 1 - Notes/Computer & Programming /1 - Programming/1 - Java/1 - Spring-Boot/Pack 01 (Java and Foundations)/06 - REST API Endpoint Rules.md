@@ -2,9 +2,9 @@
 
 A REST endpoint is a URL plus an HTTP method. The URL says **which resource** you mean (a task, a user, an order), and the method says **what to do** with it (read, create, replace, delete). If you design every endpoint around that split, your API stays small, predictable and easy for other developers to guess.
 
-This note is the hands-on companion to Part 1 of your REST API design note. That note explained the ideas. This one gives you the rules for naming and structuring endpoints, with your `DoItLater` tasks API as the running example. The 20 rules in the original are grouped here into nine, so you can learn them in order without drowning.
+This note is the hands-on companion to Part 1 of your REST API design note. That note explained the ideas. This one gives you the rules for naming and structuring endpoints. The 20 rules in the original are grouped here into nine, so you can learn them in order without drowning.
 
----
+
 
 ## The one idea behind every rule
 
@@ -15,7 +15,7 @@ URL          =  what you want to do it to
 
 `DELETE /tasks/42` already reads as "delete task 42." You don't need `POST /deleteTask/42`, because the verb is in the method. Keep this sentence in mind and most of the rules below follow from it.
 
----
+
 
 ## 1. Name resources with plural nouns
 
@@ -55,7 +55,7 @@ The Java method name is an implementation detail. A controller method called `co
 
 For "mark a task done," PATCH is usually the better fit.
 
----
+
 
 ## 3. Path says _which one_; query says _which ones, and how_
 
@@ -79,7 +79,7 @@ Two practical notes:
 - **Don't put a state in the path.** `/tasks/completed` and `/tasks/pending` are filters, so write `?status=COMPLETED`.
 - **Match Spring's conventions.** Spring Data reads `page`, `size` and `sort=field,direction` automatically (see the pagination part of your REST API note). Inventing `sort=-dueDate` means writing the parsing yourself.
 
----
+
 
 ## 4. Show relationships by nesting, but keep it shallow
 
@@ -92,7 +92,7 @@ GET /posts/55/comments
 
 Nest when the child belongs to the parent. But deep chains such as `/users/42/orders/123/items/7/reviews/2` are painful to use. A good rule is **one or two levels of nesting**. If a resource has its own unique ID, give it a top-level URL as well, so `GET /reviews/2` is enough.
 
----
+
 
 ## 5. For actions that aren't plain CRUD
 
@@ -112,7 +112,7 @@ POST /orders/123/cancel
 
 Don't force everything into CRUD, but don't reach for action endpoints first. Try PATCH, and pick one style and stay consistent.
 
----
+
 
 ## 6. Let the status code say what happened
 
@@ -138,7 +138,7 @@ An operation is **idempotent** if doing it ten times leaves the same _state_ as 
 - `PATCH` depends on what it does. Setting a status is idempotent, and "add 1 to a counter" isn't.
 - `POST /orders` is not idempotent, because each call can create another order. That is why the REST API note introduced the `Idempotency-Key` header.
 
----
+
 
 ## 7. Keep your API independent of your internals
 
@@ -151,7 +151,7 @@ API resources:     /users, /users/42, /users/42/tasks
 
 If your table names change, the API doesn't have to. This is exactly why Spring Boot apps return DTOs instead of entities, as your Entity/DTO/mapper note explained.
 
----
+
 
 ## 8. Version on breaking changes only
 
@@ -161,11 +161,11 @@ If your table names change, the API doesn't have to. This is exactly why Spring 
 
 Adding an optional field to a response is **not** a breaking change, so it doesn't need a `v2`. Renaming or removing a field, or changing its meaning, is.
 
----
+
 
 ## 9. Think about who is asking (a rule the original missed)
 
-This one matters for your `DoItLater` app, where every task belongs to a user.
+
 
 If you expose `GET /users/{userId}/tasks`, then any logged-in user could change the number in the URL and read someone else's tasks. This flaw is common, and it has a name: _broken access control_. Two safe designs:
 
@@ -174,7 +174,7 @@ If you expose `GET /users/{userId}/tasks`, then any logged-in user could change 
 
 Some APIs also add a shortcut such as `GET /users/me`. It reads naturally and never takes a user ID from the client.
 
----
+
 
 ## Putting it together: the `DoItLater` tasks API
 
@@ -219,7 +219,7 @@ public class TaskController {
 
 Each annotation maps one row of the table above to one method. That is the whole connection between the design rules and your Spring Web controllers.
 
----
+
 
 ## A way to design any endpoint: ask in order
 

@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "1c5a223e47762c33",
+        "id": "0a9ca68c0debcaa9",
         "type": "tabs",
         "children": [
           {
-            "id": "9021e4e4dec39168",
+            "id": "503b901983bc35fd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/00 - Java & Enterprise ✧.md",
-                "mode": "preview",
+                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 22 (Advanced Spring Engineering)/01 - Advanced Spring Data and Hibernate/03 - N+1 Query Problem.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "00 - Java & Enterprise ✧"
+              "title": "03 - N+1 Query Problem"
             }
           }
         ]
@@ -80,8 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 394.3482856750488,
-    "collapsed": true
+    "width": 429.2798652648926
   },
   "right": {
     "id": "318802b81bf4bc9f",
@@ -173,34 +172,36 @@
       "bases:Create new base": false
     }
   },
-  "active": "9021e4e4dec39168",
+  "active": "503b901983bc35fd",
   "lastOpenFiles": [
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 13 (Flyway and Database Migrations)/04 - Repeatable Migrations.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 15 (Spring AOP)/13 - Enabling and Configuring Spring AOP.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 15 (Spring AOP)/17 - Proxy Invocation Lifecycle.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 15 (Spring AOP)/03 - Spring AOP Annotations.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 15 (Spring AOP)/00 - What is AOP?.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 14 (Transactions)/01 - ACID Properties.md",
-    "2 - Tags/Pro/Java/Spring Framework.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 14 (Transactions)/00 - What Is a Database Transaction.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 14 (Transactions)/02 - Transaction Boundaries in Spring.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 14 (Transactions)/03 - PlatformTransactionManager.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Validation)/07 - Validation API and Jakarta Bean Validation.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Validation)/06 - Validating Usernames and Stopping SQL Injection.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Validation)/05 - Validating incoming data ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Validation)/04 - Validation.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Validation)/03 - Validating Path Variable (method parameter validation) ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Validation)/02 - The Validation Annotation Catalog.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Validation)/01 - Spring Validation annotations.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 02 (Spring Core)/42 - BFPP.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 02 (Spring Core)/21 - XML configuration ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/10 - POJO , DTO , Entity.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/14 - what is a domain ? ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/13 - Domain Overview ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/17 - Layered Architecture in Spring Boot ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/16 - Spring Boot application Architecture ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 22 (Advanced Spring Engineering)/01 - Advanced Spring Data and Hibernate/02 - First-Level and Second-Level Cache.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 22 (Advanced Spring Engineering)/01 - Advanced Spring Data and Hibernate/01 - Hibernate Dirty Checking.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 22 (Advanced Spring Engineering)/01 - Advanced Spring Data and Hibernate/00 - JPA Entity Lifecycle.md",
+    "4 - Images/61f02502-5aed-4d1a-b8de-22421e1661f0.png",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 22 (Advanced Spring Engineering)/00 - Spring Boot Internals/07 - Spring Boot Failure Analysis.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 22 (Advanced Spring Engineering)/00 - Spring Boot Internals/06 - Creating Custom Spring Boot Starters.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 22 (Advanced Spring Engineering)/00 - Spring Boot Internals/05 - Custom Auto-Configuration.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 22 (Advanced Spring Engineering)/00 - Spring Boot Internals/04 - Bean Registration Internals.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 22 (Advanced Spring Engineering)/00 - Spring Boot Internals/03 - Configuration Class Processing.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 22 (Advanced Spring Engineering)/00 - Spring Boot Internals/02 - Spring Boot Startup Lifecycle.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 22 (Advanced Spring Engineering)/00 - Spring Boot Internals/01 - Conditional Annotations.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 22 (Advanced Spring Engineering)/00 - Spring Boot Internals/00 - Auto-Configuration Internals.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Spring Security)/00 - Overview and Fundamentals/00 - Spring Security Complete Guide ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Spring Security)/00 - Overview and Fundamentals/01 - Understanding Data Leaks ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Spring Security)/00 - Spring Security/00 - Password ecosystem.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/6 - Hibernate/26 - Cascade Types.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/6 - Hibernate/27 - Orphan Removal.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/6 - Hibernate/28 - JPQL.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/6 - Hibernate/29 - HQL.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/23 - JavaFaker.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/08 - What is \"REST-API\".md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/09 - What Is an API?.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/07 - Spring-Boot API's ☆.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/06 - REST API Endpoint Rules.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/05 - Designing  RESTful APIs in Spring Boot.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/04 - API Gateway with Spring Cloud Gateway.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/03 - What Is a Dependency ? ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/6 - Hibernate/extend_hibernate_jdbc_notes.py",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 99 (Needs Review)/00 - Unclassified - Manual Review",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 99 (Needs Review)",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 22 (Advanced Spring Engineering)/12 - Reactive Programming",
@@ -210,7 +211,6 @@
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 22 (Advanced Spring Engineering)/08 - Messaging and Event-Driven Systems",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 22 (Advanced Spring Engineering)/07 - Asynchronous Processing and Scheduling",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 22 (Advanced Spring Engineering)/06 - Caching and Performance",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 22 (Advanced Spring Engineering)/05 - Advanced AOP and Proxies",
     "2797e797-2e86-43fe-b16a-c05f2f052d71.png",
     "4 - Images/f24eb39a-4951-4ce7-916b-d7c4782033e0.png",
     "677747a4-907b-46f0-866c-dd577eed9ef1.png",
@@ -220,7 +220,6 @@
     "4 - Images/f084035a-a191-41d4-95a7-0566a6e049de.png",
     "4 - Images/b1c08dbe-218e-45f7-a514-66d3df020d3b.png",
     "b1c08dbe-218e-45f7-a514-66d3df020d3b.png",
-    "4 - Images/b37946d0-f6ab-4b49-9a46-92283794ed15 1.png",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/G - Real World Applications/Untitled.canvas"
   ]
 }

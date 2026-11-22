@@ -8,7 +8,6 @@ Spring lets you write plain Java classes and handles the wiring for you. Its con
 
 Spring Boot then removes most of the setup, with sensible defaults and an embedded server, so a working app starts in minutes. The result is the same enterprise power with far less boilerplate and much easier testing. This is also why Spring grew into a full ecosystem, with Spring Data for databases, Spring Security for protection, Spring Cloud for microservices and more, all built on the same simple idea.
 
----
 
 A plain Java app is just your code plus the JVM. You:
 

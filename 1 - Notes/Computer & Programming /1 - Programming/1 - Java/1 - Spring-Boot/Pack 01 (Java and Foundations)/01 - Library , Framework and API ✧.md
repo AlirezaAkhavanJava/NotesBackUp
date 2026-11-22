@@ -6,7 +6,7 @@ A **library** is a _collection of code_ you call when you need it.
 A **framework** is a _skeleton_ that calls **your** code at the right moments.
 These three words live at different levels, which is why they overlap so often. A library or framework always _has_ an API, but an API isn't code you add to your project, it's the rules for using it.
 
----
+
 
 ## The three, side by side
 
@@ -17,7 +17,7 @@ These three words live at different levels, which is why they overlap so often. 
 |Size of commitment|None; it's just rules|Small; use what you want|Large; shapes your whole app|
 |Example|`List.add(x)`, a REST endpoint|Jackson, Apache Commons, Log4j|Spring Boot, Hibernate|
 
----
+
 
 ## The key idea: who is in control?
 
@@ -43,13 +43,13 @@ You never write the code that listens for HTTP requests. Spring Boot does that. 
 
 **API: just the contract.** `list.add(x)` is the API of the `List` interface. A REST URL like `GET /users` is an API too. An API doesn't tell you _how_ it works inside, only what to call and what you'll get.
 
----
+
 
 ## So why is Spring Boot a "framework"?
 
 Because it holds the control. Spring starts the app, creates your objects (beans), wires them together, receives requests, and calls your controllers, services, and filters at the right time. Your code is a set of pieces that Spring assembles and runs. If you removed Spring, your classes would have nothing to start them.
 
----
+
 
 ## Then why is the "Collections Framework" called a framework?
 
@@ -64,7 +64,7 @@ So the word has two meanings in practice:
 - **Strict meaning (Spring):** it controls the flow and calls your code.
 - **Loose meaning (Collections):** a coherent family of interfaces and classes designed to work together.
 
----
+
 
 ## Where it gets blurry
 
@@ -72,7 +72,7 @@ So the word has two meanings in practice:
 - Every library and framework exposes an API, so "the Spring API" and "the Jackson API" are both correct phrases.
 - Some projects are called "frameworks" mostly for marketing. The control test is the reliable one.
 
----
+
 
 ## Quick test you can use anywhere
 

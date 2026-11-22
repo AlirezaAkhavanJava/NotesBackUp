@@ -4,7 +4,7 @@ A REST API exposes your application's data as **resources**, such as orders, use
 
 This note covers the design rules (what the URLs, verbs and status codes should look like) and the Spring Boot code that implements them, from a first controller to the things a production API needs: validation, error format, versioning, pagination, retries and security. It builds on your Spring Web note (controllers and `DispatcherServlet`), your Entity/DTO/mapper and MapStruct notes, and your Spring Security and JWT notes, and it points back to them where they apply.
 
----
+
 
 ## Part 1: Model resources, not actions
 
@@ -58,7 +58,7 @@ Never return your JPA entities directly. They carry persistence details (lazy pr
 public record UserResponse(Long id, String username, String email) {}
 ```
 
----
+
 
 ## Part 2: A first controller
 

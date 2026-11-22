@@ -13,7 +13,7 @@
 <dependency>
     <groupId>net.datafaker</groupId>
     <artifactId>datafaker</artifactId>
-    <version>2.3.1</version>  <!-- check latest version -->
+    <version>2.7.0</version>  <!-- check latest version -->
 </dependency>
 ```
 
@@ -117,5 +117,6 @@ new Faker(new Locale("zh", "CN")); // Chinese
 ### Recommendation
 **Use `net.datafaker:datafaker`** (the modern maintained fork) instead of the older `com.github.javafaker:javafaker` which is no longer actively developed.
 
-That's the quick-start guide to **JavaFaker**!
-###### Tags : [[Spring Framework]]
+
+
+[[Spring Framework]]
