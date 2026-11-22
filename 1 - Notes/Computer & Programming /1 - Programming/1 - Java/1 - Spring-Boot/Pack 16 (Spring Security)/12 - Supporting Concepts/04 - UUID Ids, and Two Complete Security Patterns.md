@@ -677,3 +677,4 @@ My recommendation: finish your app with Pattern A, then move to Pattern B before
 
 
 [[Spring Framework]]
+[[Spring Security]]

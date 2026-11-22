@@ -166,3 +166,4 @@ jjwt uses this pattern in several places. A method like `.claims()`, `.header()`
 
 
 [[Spring Framework]]
+[[Spring Security]]

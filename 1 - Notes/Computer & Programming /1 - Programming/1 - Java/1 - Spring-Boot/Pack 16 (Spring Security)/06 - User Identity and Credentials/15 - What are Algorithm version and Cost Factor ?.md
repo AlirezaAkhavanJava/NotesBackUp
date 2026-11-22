@@ -185,3 +185,4 @@ The version is a label for which bcrypt specification produced the hash, because
 
 
 [[Spring Framework]]
+[[Spring Security]]
