@@ -4,20 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "7963a82900c3fc88",
+        "id": "12e0d0388ad6d21b",
         "type": "tabs",
         "children": [
           {
-            "id": "bf9c8c7bcaf66a40",
+            "id": "a1382843e42db8df",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 7 (JSON and Data Serialization)/01 - JSON Data Types.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "01 - JSON Data Types"
+            }
+          },
+          {
+            "id": "2e736ed6b857262a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "JavaScript.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "JavaScript"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -168,44 +187,44 @@
       "bases:Create new base": false
     }
   },
-  "active": "3535a2e099904c39",
+  "active": "2e736ed6b857262a",
   "lastOpenFiles": [
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/complete-pack-15.sh",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 7 (Docker Networking)/01 - Docker Network Drivers.md",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 15 (CI-CD and Production Operations)",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 14 (Orchestration and Deployment)/24 - Production Container Deployment.md",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 14 (Orchestration and Deployment)/23 - Docker and TLS Termination.md",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 14 (Orchestration and Deployment)/22 - Docker Behind Nginx Reverse Proxy.md",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 14 (Orchestration and Deployment)/21 - Container Deployment on Linux Servers.md",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 14 (Orchestration and Deployment)/20 - Canary Deployments.md",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 14 (Orchestration and Deployment)/19 - Blue-Green Deployments.md",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 14 (Orchestration and Deployment)/00 - Container Orchestration Fundamentals.md",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 14 (Orchestration and Deployment)/18 - Rolling Deployment Strategies.md",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 14 (Orchestration and Deployment)/17 - Container Health and Self-Healing.md",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 14 (Orchestration and Deployment)/16 - Container Scheduling Fundamentals.md",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 14 (Orchestration and Deployment)/15 - Docker and Kubernetes Relationship.md",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 14 (Orchestration and Deployment)/14 - Kubernetes vs Docker Swarm.md",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 14 (Orchestration and Deployment)/13 - Docker Compose vs Docker Swarm.md",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 14 (Orchestration and Deployment)/12 - Swarm Stack Deployment.md",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 14 (Orchestration and Deployment)/11 - Swarm Scaling and Replicas.md",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 14 (Orchestration and Deployment)/10 - Swarm Rolling Updates.md",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 14 (Orchestration and Deployment)/09 - Swarm Configs.md",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 14 (Orchestration and Deployment)/08 - Swarm Secrets.md",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 14 (Orchestration and Deployment)/07 - Swarm Overlay Networks.md",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 14 (Orchestration and Deployment)/06 - Swarm Tasks.md",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 14 (Orchestration and Deployment)/05 - Swarm Services.md",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 14 (Orchestration and Deployment)/04 - Swarm Nodes and Roles.md",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 14 (Orchestration and Deployment)/03 - Docker Swarm Architecture.md",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 14 (Orchestration and Deployment)/02 - Docker Swarm Overview.md",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 14 (Orchestration and Deployment)",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 13 (Monitoring and Troubleshooting)",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 12 (Docker and Java - Spring Boot)",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 11 (Docker and Linux)",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 10 (Docker Security)",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 9 (Registries and Image Distribution)",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 8 (Docker Compose)",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 7 (Docker Networking)",
-    "1 - Notes/Computer & Programming /1 - Programming/4 - Docker/Pack 6 (Volumes and Storage)",
+    "JavaScript.md",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 7 (JSON and Data Serialization)/01 - JSON Data Types.md",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 13 (Production and Deployment)/19 - Production Debugging and Monitoring.md",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 13 (Production and Deployment)/18 - Frontend Deployment with Docker.md",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 13 (Production and Deployment)/17 - Dockerized Frontend and Spring Boot Integration.md",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 13 (Production and Deployment)/16 - Production API URL Configuration.md",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 13 (Production and Deployment)/15 - HTTPS and TLS Fundamentals.md",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 13 (Production and Deployment)/14 - Nginx Reverse Proxy for Spring Boot.md",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 13 (Production and Deployment)/13 - Nginx Static Frontend Hosting.md",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 13 (Production and Deployment)/12 - Reverse Proxy and Frontend Backend Communication.md",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 13 (Production and Deployment)/11 - HTTP Cache Headers.md",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 13 (Production and Deployment)/10 - Browser Caching.md",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 13 (Production and Deployment)/09 - Code Splitting.md",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 13 (Production and Deployment)/08 - Lazy Loading.md",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 13 (Production and Deployment)/07 - JavaScript Performance Optimization.md",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 13 (Production and Deployment)/06 - Source Maps.md",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 13 (Production and Deployment)/05 - Minification and Bundling.md",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 13 (Production and Deployment)/04 - Static Asset Optimization.md",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 13 (Production and Deployment)/03 - Production Build Process.md",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 13 (Production and Deployment)/02 - Vite Environment Modes.md",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 13 (Production and Deployment)/01 - Environment Configuration.md",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 13 (Production and Deployment)/00 - JavaScript Development and Production Environments.md",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 13 (Production and Deployment)",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 12 (JavaScript Tooling and Testing)/24 - Frontend and Backend Integration Testing.md",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 12 (JavaScript Tooling and Testing)/23 - API Integration Testing.md",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 12 (JavaScript Tooling and Testing)/22 - Testing Asynchronous Code.md",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 12 (JavaScript Tooling and Testing)/21 - Mocking API Requests.md",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 12 (JavaScript Tooling and Testing)",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 11 (Authentication and Security)",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 10 (Spring Boot API Integration)",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 9 (HTTP and REST API Communication)",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 8 (Browser Fundamentals)",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 7 (JSON and Data Serialization)",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 6 (Asynchronous JavaScript)",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 5 (Advanced JavaScript)",
+    "1 - Notes/Computer & Programming /1 - Programming/14 - JavaScript/Pack 4 (Modern JavaScript and ES Modules)",
     "4 - Images/61f02502-5aed-4d1a-b8de-22421e1661f0.png",
     "2797e797-2e86-43fe-b16a-c05f2f052d71.png",
     "4 - Images/f24eb39a-4951-4ce7-916b-d7c4782033e0.png",
