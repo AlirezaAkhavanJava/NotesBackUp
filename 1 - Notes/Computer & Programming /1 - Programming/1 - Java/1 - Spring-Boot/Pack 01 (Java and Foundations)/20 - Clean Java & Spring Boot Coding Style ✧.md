@@ -4,7 +4,6 @@ I'll teach you the style most professional Spring Boot codebases converge on: a 
 
 Let's build it up piece by piece.
 
----
 
 ## 1. Naming Conventions
 
@@ -36,7 +35,7 @@ public class BookService {
 }
 ```
 
----
+
 
 ## 2. Package-by-Feature, Not Package-by-Layer
 

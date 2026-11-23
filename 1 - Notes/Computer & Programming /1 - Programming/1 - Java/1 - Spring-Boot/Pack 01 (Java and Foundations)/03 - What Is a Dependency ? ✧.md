@@ -27,7 +27,7 @@ public class OrderService {
 
 ## Why dependencies become a problem
 
-Dependencies themselves are normal and healthy, since splitting work into small classes is good design. The trouble starts with **how** a class gets hold of them. If `OrderService` creates its own dependencies with `new`, it becomes tightly coupled to them: hard to test, hard to change, and hard to reuse. And when dependencies have their own dependencies, you end up building a whole tree of objects by hand.
+Dependencies themselves are normal and healthy, since splitting work into small classes is good design. **The trouble starts with how a class gets hold of them**. If `OrderService` creates its own dependencies with `new`, it becomes tightly coupled to them: hard to test, hard to change, and hard to reuse. And when dependencies have their own dependencies, you end up building a whole tree of objects by hand.
 
 ## How Spring helps
 
@@ -46,7 +46,7 @@ In Spring Boot projects, you'll also hear "dependency" used for libraries your p
 </dependency>
 ```
 
-Same core idea, different level: your project needs that library to work, so it's a dependency of your project. Context usually tells you which meaning is intended.
+*Same core idea, different level*: your project needs that library to work, so it's a dependency of your project. Context usually tells you which meaning is intended.
 
 ## Key takeaways
 

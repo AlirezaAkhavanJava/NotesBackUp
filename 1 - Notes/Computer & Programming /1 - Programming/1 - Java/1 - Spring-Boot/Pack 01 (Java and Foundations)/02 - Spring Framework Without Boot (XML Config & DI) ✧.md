@@ -1,5 +1,5 @@
 
-Spring works just fine without Spring Boot — Boot is really just a "convenience layer" that auto-configures things for you. Strip that away, and you're back to classic Spring, where you wire your beans yourself using an XML file. That's what's happening in this note: you define your objects (beans) in XML, tell Spring how they depend on each other, and Spring builds and connects them for you at startup.
+Spring works just fine without Spring Boot — Boot is really just a "convenience layer" that **auto-configures things for you**. Strip that away, and you're back to classic Spring, where you wire your beans yourself using an XML file. That's what's happening in this note: you define your objects (beans) in XML, tell Spring how they depend on each other, and Spring builds and connects them for you at startup.
 
 ## 1. Dependencies (no Boot starter)
 
@@ -58,7 +58,7 @@ public class MessagePrinter {
 }
 ```
 
-Constructor injection forces the dependency to exist before the object does — good for required dependencies. Setter injection allows the dependency to be set (or changed) after construction — more flexible, but the object can briefly exist in a half-wired state.
+**Constructor injection forces the dependency to exist before the object does** — good for required dependencies. Setter injection allows the dependency to be set (or changed) after construction — more flexible, but the object can briefly exist in a half-wired state.
 
 ## 4. Autowiring
 

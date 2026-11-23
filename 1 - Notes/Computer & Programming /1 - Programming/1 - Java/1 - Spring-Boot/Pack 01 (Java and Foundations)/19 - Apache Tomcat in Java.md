@@ -1,72 +1,20 @@
-**Date**: 2025-08-24  
-**Tags**: [[Spring Framework]]
 
-## What is Apache Tomcat?
 
-Apache Tomcat is an open-source **web server** and **servlet container** that runs Java-based web applications. It handles HTTP requests, executes Java **servlets**, and supports technologies like **JavaServer Pages (JSP)** and **WebSockets**. Tomcat is lightweight, easy to use, and widely used for deploying Java web apps, especially with frameworks like Spring Boot.
+Tomcat is a servlet container: a Java program that knows how to take an incoming HTTP request, find the right Java class to handle it, run that class, and send the response back. It is not a full Java EE application server — it implements just the web layer of that spec (servlets, JSP, WebSockets), which is exactly why it's lightweight enough to embed inside a Spring Boot app rather than run as a separate heavyweight process. You've already worked through the question of whether it counts as a "web server" in the HTTP sense, so this goes past that into how it's actually built and how a request moves through it.
 
-## Key Concepts
+## The components that make up Tomcat
 
-- **Web Server**: Responds to HTTP requests (e.g., from browsers) with content like HTML or JSON.
-- **Servlet Container**: Manages Java servlets, which process HTTP requests and generate responses.
-- **Servlet**: A Java class that handles HTTP requests (e.g., GET, POST).
-- **JSP**: JavaServer Pages, which mix Java code with HTML for dynamic web pages.
-- **WAR File**: A Web Application Archive, a packaged Java web app deployed to Tomcat.
-- **Context**: A deployed web application in Tomcat, mapped to a URL path.
+Tomcat isn't one monolithic piece of software — it's several subsystems, each responsible for one part of the job:
 
-## Why Use Tomcat?
+- **Coyote** is the connector layer. It's the part that actually listens on a port, speaks HTTP/1.1 or HTTP/2, and hands the parsed request upward. This is the piece `server.tomcat.threads.max` and `server.port` configure.
+- **Catalina** is the servlet container itself — it owns the lifecycle of your servlets, decides which one a given URL maps to, and manages the `Context` (a deployed app) that servlet belongs to.
+- **Jasper** only matters if you use JSP. It compiles `.jsp` files into servlet classes the first time they're requested, then runs the compiled class on every request after that.
 
-- Runs Java web apps (servlets, JSPs, Spring MVC).
-- Lightweight and easy to set up compared to full Java EE servers.
-- Supports Spring Boot’s embedded mode or standalone deployment.
-- Handles HTTP, HTTPS, and WebSocket connections.
-- Free, open-source, and widely supported.
+These three talk to each other in a pipeline: Coyote accepts the connection and parses the HTTP request, Catalina routes it to the correct servlet based on URL mapping, and if that servlet happens to be a JSP, Jasper's compiled output is what actually executes.
 
-## How Tomcat Works
-
-1. **Start Tomcat**: Runs as a standalone server or embedded in an app (e.g., Spring Boot).
-2. **Receive Requests**: Listens for HTTP requests (default port: 8080).
-3. **Route to Servlet**: Matches the request URL to a servlet or JSP in a deployed app.
-4. **Process**: Servlet or JSP generates a response (e.g., HTML, JSON).
-5. **Send Response**: Tomcat sends the response back to the client.
-
-## Main Components
-
-- **Catalina**: The servlet container that manages servlets and JSPs.
-- **Coyote**: Handles HTTP connections (e.g., HTTP/1.1, HTTP/2).
-- **Jasper**: Compiles JSPs into servlets for execution.
-- **Connector**: Configures how Tomcat listens for requests (e.g., HTTP, HTTPS).
-- **Context**: Represents a single web app, defined in `web.xml` or annotations.
-
-## Common Issues
-
-- **Port Conflicts**: Tomcat fails to start if port 8080 is in use.
-    - **Fix**: Change the port in `conf/server.xml` (e.g., to 8081).
-- **Missing WAR File**: Deployed app not found.
-    - **Fix**: Place the WAR file in the `webapps` folder or use the Tomcat Manager.
-- **OutOfMemoryError**: Large apps exhaust memory.
-    - **Fix**: Increase memory in `bin/setenv.sh` (e.g., `-Xmx1024m`).
-- **Slow Startup**: Large apps or many dependencies slow Tomcat.
-    - **Fix**: Optimize app size or use embedded Tomcat in Spring Boot.
-
-## Best Practices
-
-1. Use **Spring Boot** with embedded Tomcat for easier setup.
-2. Deploy WAR files to the `webapps` folder for standalone Tomcat.
-3. Secure Tomcat with HTTPS and user authentication (configure in `server.xml`).
-4. Monitor performance using tools like VisualVM or Tomcat Manager.
-5. Keep Tomcat updated to the latest version (e.g., 10.x for Jakarta EE 9+).
-6. Test apps locally before deploying to production.
-
-## Example Code
-
-### Simple Servlet
+## What a request's path through Tomcat looks like
 
 ```java
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.*;
-import java.io.IOException;
-
 @WebServlet("/hello")
 public class HelloServlet extends HttpServlet {
     @Override
@@ -77,53 +25,25 @@ public class HelloServlet extends HttpServlet {
 }
 ```
 
-### Spring Boot with Embedded Tomcat
+A request to `/hello` arrives at Coyote, which hands it to Catalina. Catalina looks at the registered mappings for the current `Context`, finds that `/hello` is bound to `HelloServlet`, and invokes `doGet` on it (Tomcat picks `doGet` vs `doPost` etc. based on the HTTP method — it never calls your servlet's methods directly by name, it dispatches through the `HttpServlet` base class). Your code writes to the `HttpServletResponse`, and Tomcat flushes that back out through Coyote to the client.
 
-```java
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+This is also why a plain servlet, unlike a Spring Boot `@RestController`, needs to be packaged as a WAR and dropped into Tomcat's `webapps/` folder — there's no embedded server bootstrapping it, Tomcat has to be running standalone and told where to find it.
 
-@SpringBootApplication
-@RestController
-public class App {
-    public static void main(String[] args) {
-        SpringApplication.run(App.class, args);
-    }
+## `Context`: what makes an "app" a thing Tomcat knows about
 
-    @GetMapping("/hello")
-    public String hello() {
-        return "Hello from Spring Boot with Tomcat!";
-    }
-}
-```
+A `Context` is Tomcat's unit of deployment — one running web application, bound to a URL path, with its own servlet mappings, class loader, and session storage, isolated from any other app running in the same Tomcat instance. Historically this was declared in `web.xml`; with Jakarta EE and annotations like `@WebServlet`, you can skip that file entirely and let Tomcat discover the mapping from the annotation at startup.
 
-**Note**:
+When Spring Boot runs with embedded Tomcat, your whole application effectively _is_ one `Context`, created and configured programmatically rather than hand-written in XML — which is part of why `spring-boot-starter-web` can boot a working server with zero Tomcat-specific configuration from you.
 
-- For the servlet, package it in a WAR file and deploy to Tomcat’s `webapps` folder.
-- For Spring Boot, add `spring-boot-starter-web` (includes embedded Tomcat) and run the app.
-- Access at `http://localhost:8080/hello` (adjust port if needed).
-- For standalone Tomcat, download from `tomcat.apache.org` and configure `server.xml` if necessary.
+## Jakarta EE and the `javax` → `jakarta` switch
 
-## Advanced Notes
+Tomcat 10 and later implement Jakarta EE 9+, which means the package namespace changed from `javax.servlet` to `jakarta.servlet`. This isn't cosmetic — code written against `javax.servlet.*` will not run on Tomcat 10+ without migration, because the class names themselves changed package. If you're ever maintaining or reading older servlet code, that's the first thing to check when something that should work doesn't compile.
 
-- **Jakarta EE Support**: Tomcat 10.x supports Jakarta EE 9+, using `jakarta.servlet` instead of `javax.servlet`.
-- **Embedded Tomcat**: Spring Boot uses embedded Tomcat by default, configurable via `application.properties`:
+## Clustering and session replication
 
-```properties
-server.port=8081
-server.tomcat.threads.max=200
-```
+A single Tomcat instance keeps HTTP sessions in memory. The moment you run more than one instance behind a load balancer for availability, a user's session data only existing on one node becomes a problem if their next request lands on a different node. Tomcat's clustering support addresses this with session replication — session state gets copied across the cluster members, so any node can serve a request for any user's session. This matters less once you're using stateless authentication (which your JWT work already sidesteps this problem for), but it's the reason session replication exists as a Tomcat feature at all: classic session-based apps need it the moment they scale horizontally.
 
-- **Clustering**: Tomcat supports session replication for high availability in clustered setups.
-- **Tomcat Manager**: A web app (`/manager`) for deploying, monitoring, and managing apps.
-- **Custom Configuration**: Edit `conf/server.xml` for connectors, ports, or SSL:
-   
- ```xml
-    <Connector port="8443" protocol="HTTP/1.1" SSLEnabled="true" ... />
-    ```
+**Related, briefly:** the Tomcat Manager (`/manager`) is a bundled web app for deploying and monitoring other apps on the same instance — useful for standalone Tomcat, but irrelevant once you're on embedded Tomcat in Spring Boot, since there's no separate server process to manage through a UI.
 
-## Summary
 
-Apache Tomcat is a lightweight web server and servlet container for running Java web apps, including servlets, JSPs, and Spring Boot applications. It processes HTTP requests, manages servlets, and supports easy deployment via WAR files or embedded mode. Use annotations like `@WebServlet` or Spring Boot for simplicity, secure with HTTPS, and monitor performance. Tomcat is beginner-friendly for small apps and powerful for enterprise deployments.
+[[Spring Framework]]

@@ -1,11 +1,10 @@
 
 
 
-# **SQL to Java Data Types – Complete Guide**
 
 This is a cheat sheet for Java backend development using SQL databases (PostgreSQL, MySQL, etc.). It includes types, mapping, examples, and tips for real projects.
 
----
+
 
 ## **1. Numeric Types**
 
@@ -34,7 +33,7 @@ int age = 25;
 Integer nullableAge = null; // maps to SQL INT nullable column
 ```
 
----
+
 
 ## **2. String / Text Types**
 
@@ -53,7 +52,7 @@ String bio = "I am a backend programmer learning SQL & Java.";
 
 **Tip:** Always prefer `VARCHAR` over `CHAR` unless you have strict fixed-length requirements.
 
----
+
 
 ## **3. Date and Time Types**
 
@@ -77,7 +76,7 @@ Date date = new GregorianCalendar(2025, Calendar.JULY, 12).getTime();
 
 **Tip:** Always prefer `java.time` (Java 8+) for cleaner, safer code. Convert to `java.util.Date` only if the library requires it.
 
----
+
 
 ## **4. Boolean Types**
 
@@ -87,7 +86,7 @@ Date date = new GregorianCalendar(2025, Calendar.JULY, 12).getTime();
 
 **Tip:** Use `Boolean` if column is nullable.
 
----
+
 
 ## **5. Binary / Blob Types**
 
@@ -101,7 +100,7 @@ Date date = new GregorianCalendar(2025, Calendar.JULY, 12).getTime();
 byte[] fileData = Files.readAllBytes(Paths.get("image.png"));
 ```
 
----
+
 
 ## **6. JSON / UUID**
 
@@ -117,7 +116,7 @@ UUID userId = UUID.randomUUID();
 String jsonData = "{\"name\":\"John\",\"age\":20}";
 ```
 
----
+
 
 ## **7. How to Use in a JPA Entity**
 
@@ -170,9 +169,9 @@ Students student = Students.builder()
         .build();
 ```
 
----
 
-## **8. Quick Mapping Summary (For Your Brain 🧠)**
+
+## **8. Quick Mapping Summary **
 
 - **Numbers:** INT → int/Integer, BIGINT → long/Long, DECIMAL → BigDecimal
     
@@ -187,9 +186,8 @@ Students student = Students.builder()
 - **Special:** UUID → UUID, JSON → String / Object
     
 
----
 
 
 
 
-### Tags : [[Spring Framework]]
+ [[Spring Framework]]

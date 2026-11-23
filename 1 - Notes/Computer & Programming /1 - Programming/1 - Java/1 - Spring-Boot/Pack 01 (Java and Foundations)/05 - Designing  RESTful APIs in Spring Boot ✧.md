@@ -50,9 +50,9 @@ For an action that isn't plain CRUD, such as cancelling an order, treat the acti
 
 ### Representation: what travels, and why DTOs
 
-The resource is the concept, and the **representation** is the JSON you send for it. Spring Boot produces JSON with Jackson by default.
+The resource is the concept, and the **representation** is the JSON you send for it. *Spring Boot produces JSON with Jackson by default.*
 
-Never return your JPA entities directly. They carry persistence details (lazy proxies, two-way relationships, a `password` field) that don't belong in a public contract. Return a **DTO** instead. A record is ideal: short, immutable and with `equals` and `toString` for free (see your Entity/DTO/mapper note).
+Never return your JPA entities directly. **They carry persistence details** (lazy proxies, two-way relationships, a `password` field) **that don't belong in a public contract**. Return a **DTO** instead. A record is ideal: short, immutable and with `equals` and `toString` for free (see your Entity/DTO/mapper note).
 
 ```java
 public record UserResponse(Long id, String username, String email) {}
@@ -65,39 +65,34 @@ public record UserResponse(Long id, String username, String email) {}
 ```java
 @RestController
 @RequestMapping("/api/v1/orders")
+@RequiredArgsConstructor // constructor injection
 public class OrderController {
 
     private final OrderService orderService;
 
-    public OrderController(OrderService orderService) {   // constructor injection
-        this.orderService = orderService;
-    }
-
     @GetMapping("/{id}")
     public OrderResponse getOrder(@PathVariable Long id) {
-        return orderService.findById(id);   // throws OrderNotFoundException → 404 (Part 4)
+        return orderService.findById(id);   
+        // throws OrderNotFoundException → 404 (Part 4)
     }
 
     @PostMapping
     public ResponseEntity<OrderResponse> createOrder(
-            @Valid @RequestBody CreateOrderRequest request,
+            @Valid 
+            @RequestBody 
+            CreateOrderRequest request,
             UriComponentsBuilder uriBuilder) {
 
         OrderResponse created = orderService.create(request);
         URI location = uriBuilder.path("/api/v1/orders/{id}")
                 .buildAndExpand(created.id()).toUri();
-        return ResponseEntity.created(location).body(created);   // 201 + Location header
+        return ResponseEntity.created(location).body(created);   
+        // 201 + Location header
     }
 }
 ```
 
-Line by line:
 
-- `@RestController` is `@Controller` plus `@ResponseBody`. The return value is written straight to the response body with Jackson, and no view resolver is involved.
-- `@RequestMapping` at class level sets a base path. `@GetMapping`, `@PostMapping`, `@PutMapping`, `@PatchMapping` and `@DeleteMapping` set the verb.
-- The constructor makes the dependency explicit, lets the field be `final`, and needs no `@Autowired` when there is only one constructor (see your `@Autowired` note).
-- The service returns a **DTO**, not an entity. Part 7 explains why.
-- `201 Created` with a `Location` header tells the client where the new resource lives.
 
 ### Where input comes from
 
@@ -130,7 +125,7 @@ The status code is the main answer to "what happened?" Use the precise one.
 
 Spring already returns 405 (wrong verb), 406 (can't produce the requested type) and 415 (unsupported body type) for you. The rule that matters most: **never return 200 with an error in the body.** It breaks client error handling and monitoring.
 
----
+
 
 ## Part 3: Validation
 
@@ -167,7 +162,7 @@ When validation fails, the exception depends on where the constraint is:
 
 Handle both in one place, as the next part shows.
 
----
+
 
 ## Part 4: One format for every error
 
@@ -207,7 +202,7 @@ spring.mvc.problemdetails.enabled=true
 
 On stack traces: Boot's default error body doesn't include them (`server.error.include-stacktrace=never`), so the real problem is _inconsistent_ errors, not leaked traces. Keep it that way in production.
 
----
+
 
 ## Part 5: Changing the API without breaking clients
 
@@ -239,7 +234,7 @@ public EntityModel<OrderResponse> getOrder(@PathVariable Long id) {
 
 (It needs `spring-boot-starter-hateoas`.)
 
----
+
 
 ## Part 6: Production concerns
 

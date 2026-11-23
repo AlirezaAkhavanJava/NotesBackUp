@@ -4,6 +4,8 @@
 An **API** is a _contract_: a description of what you can call and what you get back.
 A **library** is a _collection of code_ you call when you need it.
 A **framework** is a _skeleton_ that calls **your** code at the right moments.
+
+
 These three words live at different levels, which is why they overlap so often. A library or framework always _has_ an API, but an API isn't code you add to your project, it's the rules for using it.
 
 
@@ -55,7 +57,7 @@ Because it holds the control. Spring starts the app, creates your objects (beans
 
 This one is a naming quirk, and it's a fair thing to question. The Java Collections Framework is built in, you call it directly, and you stay in control: you decide when to `add`, `sort`, or `remove`. By the control test above, it behaves more like a **library**.
 
-It earned the word "framework" for a different reason: it is a **unified architecture**. It gives you a shared set of interfaces (`Collection`, `List`, `Set`, `Map`), several implementations (`ArrayList`, `HashSet`, `HashMap`), and common algorithms (`Collections.sort`), all designed to fit together. You can swap `ArrayList` for `LinkedList` without changing the rest of your code, because everything follows the same contract. People used "framework" there to mean "a well-organized, extensible design," not "the thing that calls your code."
+It earned the word "framework" for a different reason: it is a **unified architecture**. It gives you a shared set of interfaces (`Collection`, `List`, `Set`, `Map`), several implementations (`ArrayList`, `HashSet`, `HashMap`), and common algorithms (`Collections.sort`), all designed to fit together. You can swap `ArrayList` for `LinkedList` without changing the rest of your code, because everything follows the same contract. People used "framework" there to mean "***a well-organized, extensible design***," not "the thing that calls your code."
 
 There is a small real overlap, though. When you implement `Comparable` or pass a `Comparator`, `Collections.sort` calls **your** method. That is a tiny taste of inversion of control, just far smaller than Spring's.
 
