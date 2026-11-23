@@ -11,7 +11,7 @@ HTTP, the protocol browsers use to talk to servers, sent everything as **plain t
 
 ## 2. Encryption arrives (1994-1999)
 
-Netscape fixed the plain-text problem by inventing **SSL** (Secure Sockets Layer), which encrypts traffic between browser and server. It also solved a second problem: how do you know you're talking to the real bank? Servers present a **certificate**, which is a digital ID card vouched for by a trusted authority.
+Netscape fixed the plain-text problem by inventing **SSL** (Secure Sockets Layer), which **encrypts traffic between browser and server**. It also solved a second problem: how do you know you're talking to the real bank? Servers present a **certificate**, which is a digital ID card vouched for by a trusted authority.
 
 SSL 2.0 (1995) had serious flaws, so SSL 3.0 followed in 1996. In 1999 the standard was renamed **TLS** (Transport Layer Security), the name still used today. When people say "SSL," they almost always mean TLS.
 

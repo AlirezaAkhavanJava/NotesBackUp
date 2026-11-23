@@ -114,7 +114,10 @@ public class SecurityConfig {
     }
 
     @Bean
-    public DaoAuthenticationProvider authProvider(UserDetailsService uds, PasswordEncoder pe) {
+    public DaoAuthenticationProvider authProvider(
+	    UserDetailsService uds, 
+	    PasswordEncoder pe
+	    ) {
         DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
         provider.setUserDetailsService(uds);
         provider.setPasswordEncoder(pe);
@@ -122,7 +125,10 @@ public class SecurityConfig {
     }
 
     @Bean
-    public SecurityFilterChain filterChain(HttpSecurity http, DaoAuthenticationProvider provider) throws Exception {
+    public SecurityFilterChain filterChain(
+		    HttpSecurity http, 
+		    DaoAuthenticationProvider provider
+	    ) throws Exception {
         http.authenticationProvider(provider)
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(auth -> auth

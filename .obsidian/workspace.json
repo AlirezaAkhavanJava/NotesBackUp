@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "f13a051480760f09",
+        "id": "ff2e952a8ca96e30",
         "type": "tabs",
         "children": [
           {
-            "id": "7affaaebad768fac",
+            "id": "e29c5f50d547717d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/06 - REST API Endpoint Rules.md",
+                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/15 - Thread Class — Methods Reference (with Examples).md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "06 - REST API Endpoint Rules"
+              "title": "15 - Thread Class — Methods Reference (with Examples)"
             }
           }
         ]
@@ -172,10 +172,27 @@
       "bases:Create new base": false
     }
   },
-  "active": "7affaaebad768fac",
+  "active": "e29c5f50d547717d",
   "lastOpenFiles": [
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/07 - Spring-Boot API's.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/00 - Ordered/14 - The Thread Class ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/00 - Ordered/04 - Types of Threads (Kernel & Platform & Virtual).md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 12 (Modular)/01 - Java Modules 2.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 15  (Java In Action)/4 - All String related classes p2.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/00 - Ordered/13 - Multithreading & Resources.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/13 - Platform threads ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/00 - Ordered/04 - Threading ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/00 - Ordered/03 - What is a Thread ? ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 05 (IO Operations)/Part 00 (Core)/18 - Synchronization (IO).md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Spring Security)/00 - Overview and Fundamentals/04 - Spring Security Features ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/17 - Python",
+    "Spring Boot.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Spring Security)/00 - Overview and Fundamentals/03 - The History of Web Security ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Spring Security)/00 - Overview and Fundamentals/02 - What Is Spring Security ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Spring Security)/00 - Overview and Fundamentals/01 - Understanding Data Leaks ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Spring Security)/00 - Overview and Fundamentals/00 - Spring Security Complete Guide ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Spring Security)/00 - Overview and Fundamentals/20 - Principle of Least Privilege.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/06 - REST API Endpoint Rules.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/07 - Spring-Boot API's.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/05 - Designing  RESTful APIs in Spring Boot ✧.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/04 - The Hollywood Principle \"Don't call us, we'll call you\" ✧.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/31 - What is @RequestHeader.md",
@@ -184,22 +201,6 @@
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/29 - What are MVP and MVVM ?.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/04 - API Gateway with Spring Cloud Gateway ✧.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/02 - Spring Framework Without Boot (XML Config & DI) ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/01 - Library , Framework and API ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/00 - Java & Enterprise ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/09 - What is \"REST-API\".md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/08 - What Is an API?.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 10 (Validation)/21 - Validation in the Service Layer.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/34 - Exception Handling Tutorial.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/33 - Learning Exception Handling in Spring Boot.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/11 - @ExceptionHandler Annotation.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 13 (Flyway and Database Migrations)/16 - Zero-Downtime Database Migrations.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 20 (Microservices)/11 - Microservice Boundaries and Service Decomposition.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 20 (Microservices)/09 - Eureka Server Configuration.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 20 (Microservices)/07 - What is Eureka ?.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 20 (Microservices)/06 - What is service registry ?.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 20 (Microservices)/04 - What is Zipkin ?.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 20 (Microservices)/02 - What is Service Registry ?.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 20 (Microservices)/00 - What is Microservices ?.md",
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/2 - MongoDB/sed0vgu3U",
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/2 - MongoDB/Pack 14 - MongoDB Production",
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/2 - MongoDB/Pack 13 - Testing Spring Data MongoDB",
@@ -209,7 +210,6 @@
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/2 - MongoDB/rebuild_mongodb_curriculum.py",
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/2 - MongoDB/Pack 9 - Sorting Pagination and Projections",
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/2 - MongoDB/Pack 8 - Updates and Atomic Operations",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/2 - MongoDB/Pack 7 - Spring Data MongoDB Queries",
     "4 - Images/61f02502-5aed-4d1a-b8de-22421e1661f0.png",
     "2797e797-2e86-43fe-b16a-c05f2f052d71.png",
     "4 - Images/f24eb39a-4951-4ce7-916b-d7c4782033e0.png",

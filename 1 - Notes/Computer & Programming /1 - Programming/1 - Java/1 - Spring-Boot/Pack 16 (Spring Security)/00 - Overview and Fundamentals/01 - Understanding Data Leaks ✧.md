@@ -1,6 +1,4 @@
-![[Pasted image 20251203101729.png]]
 
-A data leak *happens when an internal party or source exposes sensitive data, usually unintentionally or by accident*. The results of a data leak can range from loss of information to malicious exploitation. Often, data leaks lead to data breaches.
 
 In Spring Security, a "leak" almost always refers to the **security context leaking across threads or requests** — authentication data escaping the request it belongs to and showing up somewhere it shouldn't. It's not a memory leak in the GC sense; it's a correctness and security bug caused by how Spring stores the current user's identity.
 
