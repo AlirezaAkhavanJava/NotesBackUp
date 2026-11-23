@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "5ccd34ada98644df",
+        "id": "5eacc2aeba5ecc5e",
         "type": "tabs",
         "children": [
           {
-            "id": "f102f8e1475a9d2d",
+            "id": "d24342c08ab40f97",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/Accepted/02 - Types of Threads (Kernel & Platform & Virtual).md",
+                "mode": "preview",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "02 - Types of Threads (Kernel & Platform & Virtual)"
             }
           }
         ]
@@ -76,7 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 372.3930244445801
+    "width": 404.5110969543457
   },
   "right": {
     "id": "318802b81bf4bc9f",
@@ -168,8 +172,27 @@
       "bases:Create new base": false
     }
   },
-  "active": "3535a2e099904c39",
+  "active": "d24342c08ab40f97",
   "lastOpenFiles": [
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/Accepted/01 - What is a Thread ?.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/Accepted/02 - Types of Threads (Kernel & Platform & Virtual).md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/Accepted/00 - What is a Process?.md",
+    "ec5ed336-b78c-48d7-8fb4-0acc374a5ac8.png",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/Accepted/03 - Two ways to create a thread ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/05 - where parallelism actually happens ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/Accepted/04 - Multithreading & Multiprocessing  & Multi-Tasking ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/Accepted",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/Accepted",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/100 - Reactor Mono and Flux Internals.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/71 - Designing threads, PostgreSQL and Redis for a scalable Spring Boot app.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/49 - CompletableFuture.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/41 - Java Thread-Safe Data Structures.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/16 - Creation of Threads ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/14 - The Thread Class ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/15 - Thread Class — Methods Reference (with Examples).md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 02 (OOP Concepts)/08 - Types of Interfaces in Java.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 15  (Java In Action)/2 - ParseInt.md",
+    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/02 - Filtering & Sorting/07 - Conditions in PostgreSQL.md",
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/15 - Data Architecture & Engineering/01 - Data Wherehouse.md",
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/10 - Indexes/06 - Clustered Index.md",
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/10 - Indexes/02 - Types of indexes.md",
@@ -180,23 +203,6 @@
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 03 (Exception)/25 - Exception Handling Performance.md",
     "1 - Notes/Computer & Programming /1 - Programming/16 - Intellij (Ultimate)/Pack 15 - Debian 13 Integration/10 - PATH Configuration.md",
     "1 - Notes/Computer & Programming /1 - Programming/16 - Intellij (Ultimate)/Pack 2 - Project and Build Management/24 - Gradle Sync and Refresh.md",
-    "1 - Notes/Computer & Programming /1 - Programming/16 - Intellij (Ultimate)/Pack 14 - Problems, Fixes and Recovery/12 - Incorrect Project SDK.md",
-    "1 - Notes/Computer & Programming /1 - Programming/16 - Intellij (Ultimate)/Pack 10 - Frontend and Related Languages/11 - Angular Integration.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/101 - Reactor Error Handling and Retry.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/15 - Thread Class — Methods Reference (with Examples).md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 18 (Senario)/26 - Production Incident Investigation and Root Cause Analysis.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 18 (Senario)/25 - Backend Scalability and Capacity Planning.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 18 (Senario)/24 - Designing a Production-Ready Spring Boot Backend.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 18 (Senario)/23 - Tracing a JPA Save Operation from Java to PostgreSQL.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 18 (Senario)/22 - Tracing a Request Through Spring Security and MVC.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 18 (Senario)/21 - Tracing an HTTP Request from Tomcat to PostgreSQL.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 18 (Senario)/20 - What Happens When a Spring Boot Application Shuts Down.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 18 (Senario)/19 - What Happens When a Database Migration Fails.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 18 (Senario)/18 - What Happens When Two Transactions Modify the Same Entity.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 18 (Senario)/17 - What Happens When a REST API Receives Invalid JSON.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 18 (Senario)/16 - What Happens When Garbage Collection Pauses the Application.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 18 (Senario)/15 - What Happens During a JVM OutOfMemoryError.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 18 (Senario)/14 - What Happens When a Virtual Thread Performs Blocking IO.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /complete-java-curriculum.sh",
     "1 - Notes/Computer & Programming /1 - Programming/17 - Python",
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/2 - MongoDB/sed0vgu3U",
@@ -204,8 +210,6 @@
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/2 - MongoDB/Pack 13 - Testing Spring Data MongoDB",
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/2 - MongoDB/Pack 12 - Transactions and Validation",
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/2 - MongoDB/Pack 11 - Indexes and Performance",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/2 - MongoDB/Pack 10 - Aggregation Pipeline",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/2 - MongoDB/rebuild_mongodb_curriculum.py",
     "4 - Images/61f02502-5aed-4d1a-b8de-22421e1661f0.png",
     "2797e797-2e86-43fe-b16a-c05f2f052d71.png",
     "4 - Images/f24eb39a-4951-4ce7-916b-d7c4782033e0.png",
@@ -215,7 +219,6 @@
     "4 - Images/fab933c7-c333-4681-a7d8-2dead4edf93e.png",
     "4 - Images/f084035a-a191-41d4-95a7-0566a6e049de.png",
     "4 - Images/b1c08dbe-218e-45f7-a514-66d3df020d3b.png",
-    "b1c08dbe-218e-45f7-a514-66d3df020d3b.png",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/G - Real World Applications/Untitled.canvas"
   ]
 }

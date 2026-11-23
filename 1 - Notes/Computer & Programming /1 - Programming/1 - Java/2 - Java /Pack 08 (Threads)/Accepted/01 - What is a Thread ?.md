@@ -1,10 +1,10 @@
 
 
-A thread is one path of execution inside a process, and it's the unit the OS schedules onto a CPU core. Every line of Java you write runs on some thread, and the `Thread` class is how you create threads and inspect them. This lesson covers what a thread keeps track of, what the `Thread` object actually is, the six states Java reports, and the difference between platform and virtual threads.
+**A thread is a single path of execution within a process**, and it's the unit the OS scheduler assigns to a CPU core. Every line of Java code you write executes on some thread, and the `Thread` class is how you create threads and inspect their state. This lesson covers what information a thread maintains, what a `Thread` object actually represents, the six states Java reports for it, and the distinction between platform and virtual threads.
 
 ## What a thread keeps track of
 
-When the OS pauses a thread mid-method and resumes it later, the thread must pick up exactly where it stopped. To make that possible, each thread keeps three things private:
+When the **OS pauses a thread mid-method and resumes it later**, the thread must pick up exactly where it stopped. To make that possible, each thread keeps three things private:
 
 - **Program counter:** the address of the next instruction to run.
 - **CPU registers:** the values the CPU was working with.
@@ -12,7 +12,7 @@ When the OS pauses a thread mid-method and resumes it later, the thread must pic
 
 A **context switch** is the OS saving these three for one thread and loading them for another.
 
-The stack is the part you control directly. Each method call pushes a frame, and returning pops it. Local variables live in that frame, so another thread can't see them:
+The stack is the part you control directly. Each method call pushes a frame, and[^1] returning pops it. Local variables live in that frame, so another thread can't see them:
 
 ```java
 void work(List<String> shared) {
@@ -60,20 +60,20 @@ Two rules follow from this:
 
 `getState()` returns one of these values:
 
-|State|Meaning|
-|---|---|
-|`NEW`|Created, `start()` not yet called|
-|`RUNNABLE`|Running, or ready and waiting for a core|
-|`BLOCKED`|Waiting to enter a `synchronized` block that another thread holds|
-|`WAITING`|Waiting with no deadline, for example in `join()` or `Object.wait()`|
-|`TIMED_WAITING`|Waiting with a deadline, for example in `sleep` or `join(ms)`|
-|`TERMINATED`|The task finished or threw an exception|
+| State           | Meaning                                                                  |
+| --------------- | ------------------------------------------------------------------------ |
+| `NEW`           | Created, `start()` not yet called                                        |
+| `RUNNABLE`      | Running, or ready and waiting for a core                                 |
+| `BLOCKED`       | Waiting to **enter** a `synchronized` block that another thread holds    |
+| `WAITING`       | **Waiting** with no deadline, for example in `join()` or `Object.wait()` |
+| `TIMED_WAITING` | **Waiting** with a deadline, for example in `sleep` or `join(ms)`        |
+| `TERMINATED`    | The task **finished** or threw an **exception**                          |
 
 A thread normally goes `NEW → RUNNABLE`, moves between `RUNNABLE` and the waiting states as it works, and ends at `TERMINATED`. In a thread dump, these labels show what each thread is stuck on.
 
 ## Platform threads vs. virtual threads
 
-**Platform threads** map one-to-one to OS threads. The OS creates and schedules them, and each reserves its own stack. They are expensive, so you can realistically run thousands, not millions.
+**Platform threads** map one-to-one to OS threads. The **OS creates and schedules them**, and each reserves its own stack. They are expensive, so you can realistically run thousands, not millions.
 
 ```java
 Thread.ofPlatform().name("worker-1").start(() ->
@@ -129,3 +129,5 @@ Some rules for virtual threads:
 - **Shared-memory rules still apply.** Virtual threads share the heap like any other thread, so they need the same synchronization.
 
 [[Threads]]
+
+[^1]: In Java, `return;` in a `void` method terminates the current method execution without returning any value to the caller. When the JVM executes this instruction, it completes the current method invocation, removes its stack frame from the thread's JVM stack, and resumes execution in the calling method. If you don't explicitly write `return;`, the Java compiler automatically generates the corresponding JVM `return` instruction at the end of the method. Unlike methods that return values (such as `int` or `String`), a `void` method returns no data; it simply signals that its execution has finished.
