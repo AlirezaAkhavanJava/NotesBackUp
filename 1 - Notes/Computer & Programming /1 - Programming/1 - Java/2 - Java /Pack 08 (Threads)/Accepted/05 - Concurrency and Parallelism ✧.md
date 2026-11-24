@@ -2,7 +2,9 @@
 
 **Concurrency** is about _dealing with many things at the same time_. It's a way of structuring your program so several tasks can be "in progress" together, even if only one of them is physically running at any given instant. Think of one cook who starts the rice, then chops vegetables while the rice cooks, then stirs the sauce. One person, many tasks moving forward.
 
-**Parallelism** is about _doing many things at the same time, literally_. Two or more tasks are running at the exact same instant, on different hardware. That's two cooks, each chopping their own vegetables. Concurrency is about **structure** (how you organize work), and parallelism is about **execution** (how work physically runs). You can have one without the other, and the best programs often use both.
+**Parallelism** is about _doing many things at the same time, literally_. Two or more tasks are running at the exact same instant, on different hardware. That's two cooks, each chopping their own vegetables. 
+
+Concurrency is about **structure** (how you organize work), and parallelism is about **execution** (how work physically runs). You can have one without the other, and the best programs often use both.
 
 To really understand why we need them, we start with the machine.
 
@@ -48,6 +50,7 @@ The CPU is extremely fast. Memory is much slower. So the hardware has layers:
 |Network call|about 1,000,000+ ns (1 ms and up)|everyone|
 
 These numbers are rough, but the shape is what matters. A CPU cycle is about 0.3 ns. A network call that takes 1 ms is about **3 million cycles** of waiting.
+
 
 ---
 ### Two very important consequences

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/Accepted/04 - where parallelism actually happens ✧.md",
+                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/18 - Working with Threads.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "04 - where parallelism actually happens ✧"
+              "title": "18 - Working with Threads"
             }
           }
         ]
@@ -174,6 +174,28 @@
   },
   "active": "b6d1a2e62024905e",
   "lastOpenFiles": [
+    "4 - Images/Pasted image 20261124173005.png",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/18 - Working with Threads.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/Accepted/11 - Thread Life-cycle ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/Accepted/10 - Thread State in Java.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/101 - Reactor Error Handling and Retry.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/39 - Advanced Synchronization in Java.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/22 - Thread Priority and Sleep in Java.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/15 - Thread Class — Methods Reference (with Examples).md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/20 - Java Thread Lifecycle.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/Accepted/07 - Runnable.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/Accepted/09 - Creation of Threads ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/Accepted/08 - The Thread Class ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/13 - Multithreading & Resources.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/09 - What is CompletableFuture ?.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/08 - What are Callable and Future.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/11 - Parallelism ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/Accepted/06 - Concurrency and Concurrent Package ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/Accepted/05 - Concurrency and Parallelism ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/59 - Collections.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/Accepted/04 - where parallelism actually happens ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/07 - What are Supplier , Function and Consumer.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/Accepted/05 - What is Context Switching ? ✧.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Spring Security)/00 - Overview and Fundamentals/05 - Universal Basics (Networking and Tokens).md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Spring Security)/00 - Overview and Fundamentals/07 - Spring-security.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Spring Security)/00 - Overview and Fundamentals/06 - How Spring-Security works ?.md",
@@ -182,28 +204,6 @@
     "4 - Images/90239bf9-a126-41fe-9e89-101766461f63.png",
     "4 - Images/a0c067d5-f3e1-4a90-a5cf-2a54647dfd1c.png",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Spring Security)/10 - OAuth 2.0/09 - OAuth 2.0 Redirect URI Validation.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Spring Security)/00 - Overview and Fundamentals/03 - The History of Web Security ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 20 (Microservices)/34 - Microservices Security Boundaries.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 13 (Flyway and Database Migrations)/21 - Handling Failed Migrations.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 13 (Flyway and Database Migrations)/17 - Backward-Compatible Schema Changes.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 14 (Transactions)/29 - Distributed Transactions and Two-Phase Commit.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/34 - Exception Handling Tutorial.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/75 - Common Exception Handling Design Mistakes.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/74 - Testing ProblemDetail Responses.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/73 - Testing Global Exception Handlers.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/72 - Exception Handling in Scheduled Tasks.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/71 - Exception Handling in CompletableFuture.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/70 - Exception Handling in Asynchronous Methods.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/69 - RollbackFor and NoRollbackFor.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/68 - Exception Handling and Transaction Rollback.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/67 - Logging Exceptions Without Exposing Sensitive Data.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/66 - Consistent API Error Response Design.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/65 - Error Handling in REST APIs.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/64 - ErrorPageRegistrar and ErrorPage.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/63 - BasicErrorController Internals.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/62 - Spring Boot ErrorController.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/61 - Customizing Error Attributes.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/60 - Custom ErrorResponse Implementations.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/create-pack-11-notes.sh",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 06 (Servlet)/create-pack-06-notes.sh",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/create-pack-09-notes.sh",
@@ -219,7 +219,6 @@
     "2797e797-2e86-43fe-b16a-c05f2f052d71.png",
     "4 - Images/f24eb39a-4951-4ce7-916b-d7c4782033e0.png",
     "677747a4-907b-46f0-866c-dd577eed9ef1.png",
-    "Single Core vs. Parallel Cores.png",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/G - Real World Applications/Untitled.canvas"
   ]
 }

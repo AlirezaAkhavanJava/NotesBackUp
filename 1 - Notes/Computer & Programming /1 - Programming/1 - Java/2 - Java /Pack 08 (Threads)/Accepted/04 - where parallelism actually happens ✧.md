@@ -79,4 +79,3 @@ Core:             executes the thread's instructions during its slice
 - **Virtual threads** avoid tying up OS threads while they wait, leaving the real scheduler to handle only threads that have work to do.
 
 [[Threads]]
-
