@@ -1,21 +1,19 @@
 
 
-I'll teach you the style most professional Spring Boot codebases converge on: a mix of **Google's Java Style Guide** conventions (formatting) + **idiomatic Spring Boot** patterns (architecture) + a few **Effective Java** principles (object design). This is what you'll see in most real-world repos and what recruiters/reviewers expect.
-
-Let's build it up piece by piece.
+The style we'll build here isn't an invention — it's the convention most professional Spring Boot codebases quietly converge on: **Google's Java Style Guide** for formatting, **idiomatic Spring Boot patterns** for architecture, and a handful of **Effective Java principles** for how objects are designed. Walk into most real-world repositories and this is what you'll find; it's also the baseline reviewers and interviewers tend to measure against. We'll build it up piece by piece.
 
 
 ## 1. Naming Conventions
 
 The foundation of readable code. Get this right and half your battle is won.
 
-|Element|Convention|Example|
-|---|---|---|
-|Class / Interface|`PascalCase`, noun|`BookService`, `Repository`|
-|Method / variable|`camelCase`, verb for methods|`findById()`, `totalPrice`|
-|Constant|`UPPER_SNAKE_CASE`|`MAX_RETRY_COUNT`|
-|Package|all lowercase, no underscores|`com.example.bookstore.service`|
-|Boolean variable/method|reads like a question|`isActive`, `hasPermission()`|
+| Element                 | Convention                      | Example                         |
+| ----------------------- | ------------------------------- | ------------------------------- |
+| Class / Interface       | `PascalCase`, *noun*            | `BookService`, `Repository`     |
+| Method / variable       | `camelCase`, *verb* for methods | `findById()`, `totalPrice`      |
+| Constant                | `UPPER_SNAKE_CASE`              | `MAX_RETRY_COUNT`               |
+| Package                 | all lowercase, no underscores   | `com.example.bookstore.service` |
+| Boolean variable/method | reads like *a question*         | `isActive`, `hasPermission()`   |
 
 **Bad:**
 
@@ -227,7 +225,7 @@ This keeps controllers and services clean of error-formatting logic.
 - One statement per line
 - Max line length ~100–120 chars
 - Blank line between logical blocks inside a method
-- Import order: no wildcard imports (`import java.util.*;` ❌)
+- Import order: no wildcard imports (`import java.util.*;` )
 
 Most teams don't enforce this by hand — they use a formatter:
 
@@ -238,15 +236,7 @@ mvn spotless:apply
 
 
 
-## Quick summary you can apply immediately
 
-1. Constructor injection, `final` fields
-2. Thin controllers, logic lives in services
-3. DTOs at the API boundary, entities stay internal
-4. Package-by-feature once the project grows
-5. Custom exceptions + `@RestControllerAdvice`
-6. Consistent naming (`PascalCase`/`camelCase`/`UPPER_SNAKE_CASE`)
-7. Auto-format with a tool, don't debate spacing manually
 
 
 

@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "5eacc2aeba5ecc5e",
+        "id": "d19db9f13783b7df",
         "type": "tabs",
         "children": [
           {
-            "id": "d24342c08ab40f97",
+            "id": "4f26c79bc9b076f6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/Accepted/02 - Types of Threads (Kernel & Platform & Virtual).md",
+                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/26 - Spring Framework and Jakarta EE.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "02 - Types of Threads (Kernel & Platform & Virtual)"
+              "title": "26 - Spring Framework and Jakarta EE"
             }
           }
         ]
@@ -80,7 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 404.5110969543457
+    "width": 465.2990303039551
   },
   "right": {
     "id": "318802b81bf4bc9f",
@@ -172,44 +172,45 @@
       "bases:Create new base": false
     }
   },
-  "active": "d24342c08ab40f97",
+  "active": "4f26c79bc9b076f6",
   "lastOpenFiles": [
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/Accepted/01 - What is a Thread ?.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/Accepted/02 - Types of Threads (Kernel & Platform & Virtual).md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/Accepted/00 - What is a Process?.md",
-    "ec5ed336-b78c-48d7-8fb4-0acc374a5ac8.png",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/Accepted/03 - Two ways to create a thread ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/05 - where parallelism actually happens ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/Accepted/04 - Multithreading & Multiprocessing  & Multi-Tasking ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/24 - Polymorphic JSON and Custom Serializers in Jackson.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/44 - @JsonEnumDefaultValue.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/51 - @JsonSubTypes.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/92 - Why Entities Should Not Be API Response Objects.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/93 - Handling Mapping Errors and Validation.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/91 - Where Mapping Belongs in a Spring Boot Application.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/90 - Mapping Boundaries and Separation of Concerns.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/89 - MapStruct Testing Strategies.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/88 - MapStruct with Spring Dependency Injection.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/87 - MapStruct Generated Code Internals.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/86 - MapStruct Update Mapping.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/85 - MapStruct Nested Mapping.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/84 - MapStruct Collection Mapping.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/83 - MapStruct Null Value Strategies.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/82 - MapStruct @Named and @Qualifier.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/81 - MapStruct @InheritInverseConfiguration.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/80 - MapStruct @InheritConfiguration.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/79 - MapStruct @MappingTarget.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/78 - MapStruct Expressions and Qualified Methods.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/77 - Mapping Bidirectional Relationships.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/76 - Mapping Collections and Lists.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/75 - Mapping Nested Objects.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/74 - DTO to Entity Mapping.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/73 - Entity to DTO Mapping.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/72 - Jackson Handling of Generics.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/71 - Jackson Handling of Records.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/create-pack-09-notes.sh",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 00 (Fundamental or Related)",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/accept",
+    "4 - Images/ec5ed336-b78c-48d7-8fb4-0acc374a5ac8.png",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/Accepted",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/Accepted",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/100 - Reactor Mono and Flux Internals.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/71 - Designing threads, PostgreSQL and Redis for a scalable Spring Boot app.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/49 - CompletableFuture.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/41 - Java Thread-Safe Data Structures.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/16 - Creation of Threads ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/14 - The Thread Class ✧.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/15 - Thread Class — Methods Reference (with Examples).md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 02 (OOP Concepts)/08 - Types of Interfaces in Java.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 15  (Java In Action)/2 - ParseInt.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/02 - Filtering & Sorting/07 - Conditions in PostgreSQL.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/15 - Data Architecture & Engineering/01 - Data Wherehouse.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/10 - Indexes/06 - Clustered Index.md",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/1 - Postgresql/10 - Indexes/02 - Types of indexes.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 01 (JVM & Java Internals)/01 - Virtual Address Space.md",
     "1 - Notes/Computer & Programming /1 - Programming/16 - Intellij (Ultimate)/fix-intellij-tags.py",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 00 (Simple concepts)/50 - Debugging Java Applications.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 01 (JVM & Java Internals)/46 - ZGC and Low-Latency Garbage Collection.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 03 (Exception)/25 - Exception Handling Performance.md",
-    "1 - Notes/Computer & Programming /1 - Programming/16 - Intellij (Ultimate)/Pack 15 - Debian 13 Integration/10 - PATH Configuration.md",
-    "1 - Notes/Computer & Programming /1 - Programming/16 - Intellij (Ultimate)/Pack 2 - Project and Build Management/24 - Gradle Sync and Refresh.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /complete-java-curriculum.sh",
     "1 - Notes/Computer & Programming /1 - Programming/17 - Python",
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/2 - MongoDB/sed0vgu3U",
     "1 - Notes/Computer & Programming /1 - Programming/2 - Database/2 - MongoDB/Pack 14 - MongoDB Production",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/2 - MongoDB/Pack 13 - Testing Spring Data MongoDB",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/2 - MongoDB/Pack 12 - Transactions and Validation",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/2 - MongoDB/Pack 11 - Indexes and Performance",
     "4 - Images/61f02502-5aed-4d1a-b8de-22421e1661f0.png",
     "2797e797-2e86-43fe-b16a-c05f2f052d71.png",
     "4 - Images/f24eb39a-4951-4ce7-916b-d7c4782033e0.png",
