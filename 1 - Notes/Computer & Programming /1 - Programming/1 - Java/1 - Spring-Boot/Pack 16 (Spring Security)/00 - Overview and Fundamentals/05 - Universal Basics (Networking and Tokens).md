@@ -88,6 +88,9 @@ Here's the single most important thing to internalize: **HTTP has no memory.** T
 
 This one small difference — "sent automatically" vs. "sent on purpose" — is the root cause of basically the entire session-vs-token debate and the entire reason CSRF protection exists. Keep this distinction in your head; it explains a lot of what's coming.
 
+![[13a2e454-c5b1-42f4-be5e-2b6cfa070ca3.png]]
+
+
 ## Part 2 — Tokens
 
 ### Two different questions
