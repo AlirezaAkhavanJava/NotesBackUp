@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "d19db9f13783b7df",
+        "id": "d29f3386ba3ca401",
         "type": "tabs",
         "children": [
           {
-            "id": "4f26c79bc9b076f6",
+            "id": "ff670d925a53172b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/26 - Spring Framework and Jakarta EE.md",
-                "mode": "preview",
+                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Spring Security)/00 - Overview and Fundamentals/05 - Universal Basics (Networking and Tokens).md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "26 - Spring Framework and Jakarta EE"
+              "title": "05 - Universal Basics (Networking and Tokens)"
             }
           }
         ]
@@ -80,7 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 465.2990303039551
+    "width": 450.3293647766113
   },
   "right": {
     "id": "318802b81bf4bc9f",
@@ -172,34 +172,36 @@
       "bases:Create new base": false
     }
   },
-  "active": "4f26c79bc9b076f6",
+  "active": "ff670d925a53172b",
   "lastOpenFiles": [
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/24 - Polymorphic JSON and Custom Serializers in Jackson.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/44 - @JsonEnumDefaultValue.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/51 - @JsonSubTypes.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/92 - Why Entities Should Not Be API Response Objects.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/93 - Handling Mapping Errors and Validation.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/91 - Where Mapping Belongs in a Spring Boot Application.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/90 - Mapping Boundaries and Separation of Concerns.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/89 - MapStruct Testing Strategies.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/88 - MapStruct with Spring Dependency Injection.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/87 - MapStruct Generated Code Internals.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/86 - MapStruct Update Mapping.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/85 - MapStruct Nested Mapping.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/84 - MapStruct Collection Mapping.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/83 - MapStruct Null Value Strategies.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/82 - MapStruct @Named and @Qualifier.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/81 - MapStruct @InheritInverseConfiguration.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/80 - MapStruct @InheritConfiguration.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/79 - MapStruct @MappingTarget.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/78 - MapStruct Expressions and Qualified Methods.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/77 - Mapping Bidirectional Relationships.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/76 - Mapping Collections and Lists.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/75 - Mapping Nested Objects.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/74 - DTO to Entity Mapping.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/73 - Entity to DTO Mapping.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/72 - Jackson Handling of Generics.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/71 - Jackson Handling of Records.md",
+    "4 - Images/a0c067d5-f3e1-4a90-a5cf-2a54647dfd1c.png",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Spring Security)/10 - OAuth 2.0/09 - OAuth 2.0 Redirect URI Validation.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Spring Security)/00 - Overview and Fundamentals/05 - Universal Basics (Networking and Tokens).md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Spring Security)/00 - Overview and Fundamentals/03 - The History of Web Security ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 20 (Microservices)/34 - Microservices Security Boundaries.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 13 (Flyway and Database Migrations)/21 - Handling Failed Migrations.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 13 (Flyway and Database Migrations)/17 - Backward-Compatible Schema Changes.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 14 (Transactions)/29 - Distributed Transactions and Two-Phase Commit.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/34 - Exception Handling Tutorial.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/75 - Common Exception Handling Design Mistakes.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/74 - Testing ProblemDetail Responses.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/73 - Testing Global Exception Handlers.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/72 - Exception Handling in Scheduled Tasks.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/71 - Exception Handling in CompletableFuture.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/70 - Exception Handling in Asynchronous Methods.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/69 - RollbackFor and NoRollbackFor.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/68 - Exception Handling and Transaction Rollback.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/67 - Logging Exceptions Without Exposing Sensitive Data.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/66 - Consistent API Error Response Design.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/65 - Error Handling in REST APIs.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/64 - ErrorPageRegistrar and ErrorPage.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/63 - BasicErrorController Internals.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/62 - Spring Boot ErrorController.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/61 - Customizing Error Attributes.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/60 - Custom ErrorResponse Implementations.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/59 - ErrorResponseException.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/create-pack-11-notes.sh",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 06 (Servlet)/create-pack-06-notes.sh",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/create-pack-09-notes.sh",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 00 (Fundamental or Related)",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/accept",
@@ -209,8 +211,6 @@
     "1 - Notes/Computer & Programming /1 - Programming/16 - Intellij (Ultimate)/fix-intellij-tags.py",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /complete-java-curriculum.sh",
     "1 - Notes/Computer & Programming /1 - Programming/17 - Python",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/2 - MongoDB/sed0vgu3U",
-    "1 - Notes/Computer & Programming /1 - Programming/2 - Database/2 - MongoDB/Pack 14 - MongoDB Production",
     "4 - Images/61f02502-5aed-4d1a-b8de-22421e1661f0.png",
     "2797e797-2e86-43fe-b16a-c05f2f052d71.png",
     "4 - Images/f24eb39a-4951-4ce7-916b-d7c4782033e0.png",
