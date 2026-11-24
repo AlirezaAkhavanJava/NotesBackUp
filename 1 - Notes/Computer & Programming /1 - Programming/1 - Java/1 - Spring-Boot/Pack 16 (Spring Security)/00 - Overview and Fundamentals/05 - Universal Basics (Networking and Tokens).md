@@ -33,19 +33,23 @@ Every machine on the internet has an **IP address** — a unique number that ide
 
 Nobody types IP addresses into a browser — you type `example.com`. Something has to translate that name into the actual IP address, and that something is **DNS**. The lookup happens in stages: your browser checks its own cache first, then your OS, then your ISP's resolver, and if none of those know the answer, it works its way up through root servers and `.com` servers until it finds the one server that actually knows. You can watch this happen yourself with `dig example.com +short` in a terminal.
 
-Here's why this matters for security: if someone can trick DNS into giving a _wrong_ IP address, they can silently redirect you to a fake server pretending to be the real one. This is exactly the problem TLS (next section) is designed to catch — even if DNS lies to you and sends you to the wrong machine, that attacker still can't produce a valid certificate for the real domain name, so your browser will refuse the connection.
+Here's why this matters for security: if someone can trick DNS into giving a _wrong_ IP address, they can silently redirect you to a fake server pretending to be the real one. This is exactly the problem [^1]TLS (next section) is designed to catch — even if DNS lies to you and sends you to the wrong machine, that attacker still can't produce a valid certificate for the real domain name, so your browser will refuse the connection.
 
 ![[90239bf9-a126-41fe-9e89-101766461f63.png]]
 
 
 ## TCP: making delivery reliable
 
-Raw IP packets aren't guaranteed to arrive, and they aren't guaranteed to arrive _in order_. **TCP** sits on top of IP and fixes both problems — it guarantees your data arrives complete and in the right sequence, starting every connection with a small "handshake" where both sides confirm they're ready: `SYN` → `SYN-ACK` → `ACK`. **UDP** is the alternative that skips all that reliability machinery for speed — used where losing a little data is fine but delay isn't, like video calls, games, DNS lookups, and the newer HTTP/3 (built on something called QUIC).
+Raw IP packets aren't guaranteed to arrive, and they aren't guaranteed to arrive _in order_. 
+
+**TCP** sits on top of IP and fixes both problems — it guarantees your data arrives complete and in the right sequence, *starting every connection with a small "handshake"* where both sides confirm they're ready: `SYN` → `SYN-ACK` → `ACK`. 
+
+**UDP** is the alternative that skips all that reliability machinery for speed — used where losing a little data is fine but delay isn't, like video calls, games, DNS lookups, and the newer HTTP/3 (built on something called QUIC).
 
 
 ![[64167033-0f0d-441f-bcda-ccf61b5c87c6.png]]
 
-### TLS: making the connection private and genuine
+## TLS: making the connection private and genuine
 
 **TLS** sits on top of TCP and solves three things at once: nobody eavesdropping can read your data, nobody can quietly modify it in transit, and you can be sure you're actually talking to the real server and not an impostor. It pulls this off by combining two different kinds of cryptography:
 
@@ -173,3 +177,7 @@ Once you get into Spring Security itself, you'll recognize all of this under new
 
 
 [[Spring Security]]
+
+[^1]: **TLS** stands for **Transport Layer Security**.
+	
+	It is a cryptographic protocol that secures communication between two endpoints, most commonly a client (browser) and a server.

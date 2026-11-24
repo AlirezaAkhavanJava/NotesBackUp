@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "d29f3386ba3ca401",
+        "id": "30b9d214825421e0",
         "type": "tabs",
         "children": [
           {
-            "id": "ff670d925a53172b",
+            "id": "b6d1a2e62024905e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Spring Security)/00 - Overview and Fundamentals/05 - Universal Basics (Networking and Tokens).md",
+                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/Accepted/04 - where parallelism actually happens ✧.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "05 - Universal Basics (Networking and Tokens)"
+              "title": "04 - where parallelism actually happens ✧"
             }
           }
         ]
@@ -172,14 +172,16 @@
       "bases:Create new base": false
     }
   },
-  "active": "ff670d925a53172b",
+  "active": "b6d1a2e62024905e",
   "lastOpenFiles": [
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Spring Security)/00 - Overview and Fundamentals/05 - Universal Basics (Networking and Tokens).md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Spring Security)/00 - Overview and Fundamentals/07 - Spring-security.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Spring Security)/00 - Overview and Fundamentals/06 - How Spring-Security works ?.md",
     "4 - Images/13a2e454-c5b1-42f4-be5e-2b6cfa070ca3.png",
     "4 - Images/64167033-0f0d-441f-bcda-ccf61b5c87c6.png",
     "4 - Images/90239bf9-a126-41fe-9e89-101766461f63.png",
     "4 - Images/a0c067d5-f3e1-4a90-a5cf-2a54647dfd1c.png",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Spring Security)/10 - OAuth 2.0/09 - OAuth 2.0 Redirect URI Validation.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Spring Security)/00 - Overview and Fundamentals/05 - Universal Basics (Networking and Tokens).md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 16 (Spring Security)/00 - Overview and Fundamentals/03 - The History of Web Security ✧.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 20 (Microservices)/34 - Microservices Security Boundaries.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 13 (Flyway and Database Migrations)/21 - Handling Failed Migrations.md",
@@ -202,7 +204,6 @@
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/62 - Spring Boot ErrorController.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/61 - Customizing Error Attributes.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/60 - Custom ErrorResponse Implementations.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/59 - ErrorResponseException.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 11 (Exception Handling)/create-pack-11-notes.sh",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 06 (Servlet)/create-pack-06-notes.sh",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 09 (Jackson and Mappings)/create-pack-09-notes.sh",
@@ -219,7 +220,6 @@
     "4 - Images/f24eb39a-4951-4ce7-916b-d7c4782033e0.png",
     "677747a4-907b-46f0-866c-dd577eed9ef1.png",
     "Single Core vs. Parallel Cores.png",
-    "4 - Images/c6d5c5f4-4777-425e-9ed2-7ac3174da2db.png",
     "1 - Notes/Computer & Programming & Networking & CyberSecurity/G - Real World Applications/Untitled.canvas"
   ]
 }
