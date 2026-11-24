@@ -35,7 +35,10 @@ Nobody types IP addresses into a browser — you type `example.com`. Something h
 
 Here's why this matters for security: if someone can trick DNS into giving a _wrong_ IP address, they can silently redirect you to a fake server pretending to be the real one. This is exactly the problem TLS (next section) is designed to catch — even if DNS lies to you and sends you to the wrong machine, that attacker still can't produce a valid certificate for the real domain name, so your browser will refuse the connection.
 
-### TCP: making delivery reliable
+![[90239bf9-a126-41fe-9e89-101766461f63.png]]
+
+
+## TCP: making delivery reliable
 
 Raw IP packets aren't guaranteed to arrive, and they aren't guaranteed to arrive _in order_. **TCP** sits on top of IP and fixes both problems — it guarantees your data arrives complete and in the right sequence, starting every connection with a small "handshake" where both sides confirm they're ready: `SYN` → `SYN-ACK` → `ACK`. **UDP** is the alternative that skips all that reliability machinery for speed — used where losing a little data is fine but delay isn't, like video calls, games, DNS lookups, and the newer HTTP/3 (built on something called QUIC).
 
