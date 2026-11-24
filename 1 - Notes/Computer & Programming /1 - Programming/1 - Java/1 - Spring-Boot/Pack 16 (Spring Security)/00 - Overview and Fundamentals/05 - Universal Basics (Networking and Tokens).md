@@ -42,6 +42,9 @@ Here's why this matters for security: if someone can trick DNS into giving a _wr
 
 Raw IP packets aren't guaranteed to arrive, and they aren't guaranteed to arrive _in order_. **TCP** sits on top of IP and fixes both problems — it guarantees your data arrives complete and in the right sequence, starting every connection with a small "handshake" where both sides confirm they're ready: `SYN` → `SYN-ACK` → `ACK`. **UDP** is the alternative that skips all that reliability machinery for speed — used where losing a little data is fine but delay isn't, like video calls, games, DNS lookups, and the newer HTTP/3 (built on something called QUIC).
 
+
+![[64167033-0f0d-441f-bcda-ccf61b5c87c6.png]]
+
 ### TLS: making the connection private and genuine
 
 **TLS** sits on top of TCP and solves three things at once: nobody eavesdropping can read your data, nobody can quietly modify it in transit, and you can be sure you're actually talking to the real server and not an impostor. It pulls this off by combining two different kinds of cryptography:
