@@ -1,220 +1,92 @@
 
 
-**MVP (Model-View-Presenter)** and **MVVM (Model-View-ViewModel)** are two architecture patterns for apps that have a user interface, such as desktop apps, mobile apps and browser front ends. Both are cousins of the MVC you studied in your MVC note. They keep the same goal, separating _what is shown_ from _what the app knows and decides_, but they change who sits in the middle and how the screen gets updated.
+When people say "Spring's layered architecture," they usually mean **Controller → Service → Repository**: the Controller receives an HTTP request, the Service holds business logic, and the Repository talks to the database. That's not MVC. That's just a layering convention for organizing backend code into responsibilities.
 
-In both patterns, the screen (the **View**) is kept as dumb as possible, so that the real logic can live in a plain class you can test without opening any window. MVP does that with a **Presenter** that tells the View what to show. MVVM does it with a **ViewModel** that the View watches and binds to automatically. This note teaches each one, then compares them.
+**MVC (Model-View-Controller)** is a different, older pattern about _how a request turns into a response the user can look at_. It only has three pieces, and none of them is "the database layer" or "the business logic layer":
 
----
+- **Model** — the data for this particular request. Not your whole database — just the plain data object being handed to the page. In Spring, this is usually a `Map` or a Java object you stuff values into before handing control to a template.
+- **View** — the thing that turns that data into something visible: HTML, in most Spring MVC apps (a Thymeleaf template, a JSP). The View's only job is rendering — it shouldn't contain business logic.
+- **Controller** — the referee. It receives the HTTP request, decides what data is needed (often by calling a Service), puts that data into the Model, and picks which View should render it.
 
-## First, the problem they solve
-
-In a UI app, the easy mistake is to put logic directly in the screen code: validation, formatting, loading data, deciding which button is enabled. Then:
-
-- You can't test that logic without launching the UI.
-- The screen class grows huge and tangled.
-- Changing the data layer breaks the screen.
-
-MVC helps in a server app, where a controller handles a request and returns a response (as in your Spring MVC note). But in a UI app that stays open and keeps reacting to the user, the View and the logic still tend to get mixed together. MVP and MVVM are two fixes for that.
-
----
-
-## MVP: the Presenter tells the View what to show
-
-### The roles
-
-|Part|Job|
-|---|---|
-|**Model**|The data and business rules (the same as in MVC)|
-|**View**|A **passive** screen. It shows what it's told and forwards user actions. It contains no logic|
-|**Presenter**|All the UI logic. It reads from the Model and **commands** the View|
-
-The View hides behind an **interface**, and the Presenter talks only to that interface. This is the key idea of MVP.
-
-### The flow
-
-```text
-User clicks "Load"
-      │
-      ▼
-   View ── forwards the event ──►  Presenter ── asks ──►  Model
-                                        │                    │
-   View ◄── view.showName("Ali") ───────┘◄──── data ─────────┘
-```
-
-The View never talks to the Model directly. Everything goes through the Presenter, and the Presenter updates the View **by calling its methods**.
-
-### In Java
+Here's what that actually looks like in a Spring Boot app using server-rendered HTML (as opposed to a `@RestController` returning JSON):
 
 ```java
-public interface UserView {                 // what the Presenter is allowed to ask of a screen
-    void showName(String name);
-    void showError(String message);
+@Controller
+public class UserPageController {
+
+    private final UserService userService; // business logic lives here, not in the Controller
+
+    public UserPageController(UserService userService) {
+        this.userService = userService;
+    }
+
+    @GetMapping("/users/{id}")
+    public String showUser(@PathVariable Long id, Model model) {
+        User user = userService.findById(id);   // ask the Service for data
+        model.addAttribute("user", user);        // put it in the Model
+        return "user-details";                   // name of the View (user-details.html template)
+    }
+}
+```
+
+`Model model` here is literally Spring's name for the M in MVC — a small bag of attributes for this one request. `"user-details"` is the name of a Thymeleaf template file; Spring resolves it and renders it as HTML using the data you put in the Model. The `Controller` never generates HTML itself — it just decides _what_ data and _which_ template.
+
+So to place it precisely: the Controller → Service → Repository layering is about organizing your _backend logic_. MVC is specifically about the last step — how a Controller hands data to a View to produce output. A `@RestController` returning JSON (which is what most of your other notes have been about) skips the View step entirely — there's no HTML template, no rendering, just data serialized straight to JSON. That's still "the Controller" from MVC's perspective, but there's no View in the picture at all, which is part of why it's easy to lose track of what View even means in a typical Spring Boot REST API project — you may simply never have written one.
+
+Now, MVP and MVVM only make sense once that's clear, because they're not alternate backend architectures — they're alternate answers to one specific question: _"when the Controller/middleman has new data, how does the View find out about it?"_ All three patterns share the same Model and View concepts above; they differ only in the middle piece.
+
+**MVC's answer:** the Controller picks a View and hands it data once, up front, before rendering starts. There's no back-and-forth — the Controller renders the page and is done.
+
+**MVP's answer:** the middleman (now called a _Presenter_) keeps a reference to the View and calls methods on it directly, whenever something changes — not just once at the start.
+
+```java
+interface UserView {
+    void showUserName(String name);
 }
 
-public class UserPresenter {
+class UserPresenter {
     private final UserView view;
-    private final UserRepository model;
+    private final UserService userService;
 
-    public UserPresenter(UserView view, UserRepository model) {
+    UserPresenter(UserView view, UserService userService) {
         this.view = view;
-        this.model = model;
+        this.userService = userService;
     }
 
-    public void onLoadClicked(long id) {
-        try {
-            view.showName(model.findById(id).getName());
-        } catch (UserNotFoundException e) {
-            view.showError("User not found");
-        }
+    void loadUser(Long id) {
+        User user = userService.findById(id);
+        view.showUserName(user.getName()); // Presenter explicitly pushes data to the View
     }
 }
 ```
 
-Line by line:
+Notice `UserPresenter` depends on an interface, `UserView` — not a concrete UI class. That's the one new thing MVP adds beyond MVC: the View is now something the middleman holds a reference to and can call at any time, not just a destination picked once per request.
 
-- `UserView` is the only thing the Presenter knows about the screen. Any screen (a window, a web page, a test fake) can implement it.
-- The Presenter holds the logic: what to do on a click, and what to show on an error.
-- The real screen class just implements `showName` and `showError` and calls `presenter.onLoadClicked(id)` when the button is pressed.
-
-**Testing needs no UI.** You pass a fake view:
+**MVVM's answer:** the middleman (now called a _ViewModel_) doesn't call the View at all. It just exposes its data as an observable property, and the View watches that property and updates itself automatically when it changes.
 
 ```java
-class FakeView implements UserView {
-    String shownName; String shownError;
-    public void showName(String n) { shownName = n; }
-    public void showError(String m) { shownError = m; }
-}
-```
+class UserViewModel {
+    private final ObservableValue<String> userName = new ObservableValue<>("");
+    private final UserService userService;
 
-Then you call `presenter.onLoadClicked(1)` and assert that `shownName` is `"Ali"`. That is the main payoff.
+    UserViewModel(UserService userService) {
+        this.userService = userService;
+    }
 
-### Strengths and costs
+    ObservableValue<String> userNameProperty() {
+        return userName;
+    }
 
-- Strong: very testable, and the View is trivially simple.
-- Cost: an interface per screen and a lot of "tell the view to do X" calls. A Presenter can also swell into a "fat presenter" that does too much.
-- A common variant, the **Supervising Controller**, lets the View handle simple bindings itself. The strict version above is the **Passive View**.
-
----
-
-## MVVM: the View binds to a ViewModel
-
-### The roles
-
-|Part|Job|
-|---|---|
-|**Model**|The data and business rules|
-|**View**|The screen. It **binds** to values and commands exposed by the ViewModel|
-|**ViewModel**|Holds the screen's **state** as observable values, plus the actions the user can trigger. It knows **nothing** about the View|
-
-The difference from MVP is the direction of knowledge. In MVP, the Presenter holds the View (through an interface) and commands it. In MVVM, the ViewModel has **no reference** to the View at all. Instead, the View watches the ViewModel, and a **data binding** mechanism keeps the two in sync.
-
-### The flow
-
-```text
-User clicks "Load"
-      │
-      ▼
-   View ── runs a command ──►  ViewModel ── asks ──►  Model
-                                    │                    │
-                       sets observable state  ◄──── data ┘
-                                    │
-   View ◄──── binding updates the screen automatically
-```
-
-You never write "now update the label." You change the state, and the binding updates the screen.
-
-### In Java (JavaFX has binding built in)
-
-```java
-public class UserViewModel {
-    private final StringProperty name  = new SimpleStringProperty("");
-    private final StringProperty error = new SimpleStringProperty("");
-    private final UserRepository model;
-
-    public UserViewModel(UserRepository model) { this.model = model; }
-
-    public StringProperty nameProperty()  { return name; }
-    public StringProperty errorProperty() { return error; }
-
-    public void load(long id) {
-        try {
-            name.set(model.findById(id).getName());
-            error.set("");
-        } catch (UserNotFoundException e) {
-            error.set("User not found");
-        }
+    void loadUser(Long id) {
+        User user = userService.findById(id);
+        userName.set(user.getName()); // ViewModel only updates its own state
     }
 }
 ```
 
-```java
-// In the View (the screen code):
-nameLabel.textProperty().bind(viewModel.nameProperty());     // label follows the state
-errorLabel.textProperty().bind(viewModel.errorProperty());
-loadButton.setOnAction(e -> viewModel.load(id));
-```
+The new thing here: `UserViewModel` never references a View type at all — not even an interface. It just mutates `userName`, and whatever is subscribed to that property (the View) reacts on its own.
 
-Line by line:
-
-- Each `StringProperty` is an **observable** value: it tells anyone watching when it changes.
-- `bind(...)` connects a label to a property. After that, `name.set("Ali")` changes the screen with no further code.
-- The ViewModel imports nothing about labels or buttons, so you test it by calling `load(1)` and checking `nameProperty().get()`.
-
-MVVM is the pattern behind WPF/XAML (where it began), Android's `ViewModel` with `LiveData` or `StateFlow`, SwiftUI, and Vue and Angular on the web. (React is a related idea, but it isn't classic MVVM.)
-
-### Strengths and costs
-
-- Strong: very little glue code, testable, and several views can share one ViewModel.
-- Cost: data binding feels like magic, and it's harder to debug ("why did this label change?"). Overused two-way bindings can create tangled update chains.
-
----
-
-## Side by side
-
-||MVC|MVP|MVVM|
-|---|---|---|---|
-|Middle part|Controller|Presenter|ViewModel|
-|Does the middle part know the View?|Loosely|**Yes**, through an interface|**No**|
-|How the View updates|The View reads the Model, or the controller picks a view|The Presenter **calls** View methods|**Binding** updates it automatically|
-|Does the View talk to the Model?|Often|Never|Never|
-|Testing|Good|Very good (fake view)|Very good (just state)|
-|Glue code|Low|Higher|Lowest, if you have binding|
-|Typical home|Server-side web|Older Android, WinForms|WPF, modern Android, Vue/Angular, SwiftUI|
-
-A quick way to remember: **MVP pushes** updates into the View by command, and **MVVM lets the View pull** updates through binding.
-
----
-
-## Where these fit with Spring Boot
-
-Spring MVC is the **server-side** MVC: a request arrives, a controller returns a page or JSON, and the response ends the story. MVP and MVVM are mostly about **the client UI** that stays open. If you build a Spring Boot REST API with a separate front end, as in your REST API notes, the Spring side stays "controller → service → repository", and the JSON it returns is the **Model** the front end consumes. The front end, whether Angular, Vue or an Android app, is where MVVM (or MVP) applies.
-
----
-
-## Mistakes to avoid
-
-- **Letting the ViewModel hold a reference to the View** (a label, a screen, an Android `Context`). That breaks the whole point and can leak memory.
-- **A fat Presenter.** If it has hundreds of lines, split it into smaller ones or move the rules into the Model.
-- **Business rules in the ViewModel or Presenter.** They handle _UI logic_ (what to show). Real business rules belong in the Model.
-- **Using a pattern where none is needed.** A tiny screen doesn't need a Presenter or ViewModel.
-
----
-
-## Which one to choose
-
-|Situation|Choose|
-|---|---|
-|Your framework has data binding (JavaFX, WPF, Android, Vue, Angular, SwiftUI)|**MVVM**|
-|No binding, or you want to control every UI update explicitly|**MVP**|
-|A server-rendered web app (Spring MVC with Thymeleaf)|**MVC**|
-
----
-
-## Related concept in short
-
-**The Observer pattern** is what makes MVVM's binding work. An object (the _subject_, here a property) keeps a list of watchers and notifies them whenever it changes. JavaFX properties, `LiveData` and Vue's reactivity are all observers with convenient wrappers.
-
-
+One important fact to hold onto: MVP and MVVM are UI-side patterns — they show up in Android apps, JavaFX/Swing desktop apps, and modern JS frontends (React, Vue). They are _not_ things you'll find built into Spring Boot's web layer, because a typical Spring Boot app either renders a full page once (classic MVC with Thymeleaf) or returns raw JSON (`@RestController`, no View at all). You'd only reach for MVP or MVVM if you were writing the _client_ that consumes your Spring Boot API — say, an Android app or a JavaFX desktop client — where the UI needs to update repeatedly in response to changing data, not just render once per request.
 
 
 [[Spring Framework]]

@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "8bd966ef471d0fa2",
+        "id": "8afb0700f50e2081",
         "type": "tabs",
         "children": [
           {
-            "id": "798240a547cfb196",
+            "id": "730f3f47cce29e6a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/03 - Executors & Thread Pools/11 - What are Locks ?.md",
-                "mode": "preview",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "11 - What are Locks ?"
+              "title": "New tab"
             }
           }
         ]
@@ -80,7 +76,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 450.3293647766113
+    "width": 441.6285591125488
   },
   "right": {
     "id": "318802b81bf4bc9f",
@@ -172,35 +168,35 @@
       "bases:Create new base": false
     }
   },
-  "active": "798240a547cfb196",
+  "active": "3535a2e099904c39",
   "lastOpenFiles": [
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/29 - What are MVP and MVVM ?.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/30 - SLF4J, Logback, and Logging in Spring Boot.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 07 (Spring Web and MVC)/33 - What is HATEOAS ?.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 07 (Spring Web and MVC)/32 - What is @RequestHeader.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 07 (Spring Web and MVC)/31 - UriComponentsBuilder and the Location URI in ResponseEntity.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/28 - Tight Coupling and Loose Coupling ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/27 - SQL to Java Data Types ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/26 - Spring Framework and Jakarta EE ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/25 - Jackson & DTO combo ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/1 - Spring-Boot/Pack 01 (Java and Foundations)/24 - Polymorphic JSON and Custom Serializers in Jackson ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/00 - Overview and Fundamentals/00 -  What JUnit is ?.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/00 - Overview and Fundamentals/06 - What Jupiter is ?.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/00 - Overview and Fundamentals/05 - JUnit and Mockito - Different Responsibilities.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/00 - Overview and Fundamentals/04 - JUnit 5 vs JUnit 6 - The Big Picture.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/00 - Overview and Fundamentals/03 - Unit Testing vs Integration Testing.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/00 - Overview and Fundamentals/02 - What Is Automated Testing.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/3 - Junit5 and Mokito/00 - Overview and Fundamentals/01 - What is Mockito ?.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/00 - Basics/07 - What is Runnable ?.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/00 - Basics/00 - What is a Process?.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/00 - Basics/03 - Two ways to create a thread ✧.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/00 - Basics/02 - Types of Threads (Kernel & Platform & Virtual).md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/00 - Basics/01 - What is a Thread ?.md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/00 - Basics/10 - Thread State in Java (Life-cycle).md",
+    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/03 - Executors & Thread Pools/11 - What are Locks ?.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/03 - Executors & Thread Pools/01 - Thread Pools.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/03 - Executors & Thread Pools/02 - Thread Pools Guide.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/03 - Executors & Thread Pools/00 - Thread Management.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/00 - Basics/10 - Thread State in Java.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/03 - Executors & Thread Pools/17 - Structured Concurrency in Java.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/00 - Basics/13 - Thread Priority inheritance.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/07 - Reactive Programming/06 - Reactive Programming vs Thread-Based Concurrency.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/03 - Executors & Thread Pools/16 - ThreadPoolExecutor.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/03 - Executors & Thread Pools/15 - Java Thread-Safe Data Structures.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/03 - Executors & Thread Pools/14 - ThreadLocal and InheritableThreadLocal in Java.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/03 - Executors & Thread Pools/13 - Semaphore.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/03 - Executors & Thread Pools/12 - Java Atomic Package.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/03 - Executors & Thread Pools/11 - What are Locks ?.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/00 - Basics/11 - Thread Life-cycle Control.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/87 - ScheduledExecutorService.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/09 - Diagnostics & Performance/05 - Java Concurrency Performance Testing.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/09 - Diagnostics & Performance/04 - JFR Concurrency Diagnostics.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/09 - Diagnostics & Performance/03 - Thread Dumps and Deadlock Analysis.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/09 - Diagnostics & Performance/02 - Algos.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/09 - Diagnostics & Performance/01 - Jstack.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/09 - Diagnostics & Performance/00 - Performance Tuning.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/09 - Diagnostics & Performance",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/08 - Server & Database Concurrency/05 - Tomcat Connector and Request Processing.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/08 - Server & Database Concurrency/04 - Spring Web MVC Threading Model.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/08 - Server & Database Concurrency/03 - Designing threads, PostgreSQL and Redis for a scalable Spring Boot app.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/08 - Server & Database Concurrency/02 - Database connection pools.md",
-    "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/08 - Server & Database Concurrency/01 - Tomcat's threading model.md",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/08 - Server & Database Concurrency",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/07 - Reactive Programming",
     "1 - Notes/Computer & Programming /1 - Programming/1 - Java/2 - Java /Pack 08 (Threads)/06 - Virtual Threads",

@@ -1,5 +1,5 @@
 
-Runnable is one of Java's functional interfaces — it represents a single unit of work (a "task") without any opinion on how that work actually gets run on a thread. That separation is the whole point: `Runnable` is just _what_ to do, and `Thread`, `ExecutorService`, or anything else that accepts one is _how_ it gets executed. Understanding it well means understanding both the interface itself and the different "references" to it — the different ways code can hand a `Runnable` to something that will run it.
+Runnable is one of Java's functional interfaces — **it represents a single unit of work** (a "task") without any opinion on how that work actually gets run on a thread. That separation is the whole point: `Runnable` is just _what_ to do, and `Thread`, `ExecutorService`, or anything else that accepts one is _how_ it gets executed. Understanding it well means understanding both the interface itself and the different "references" to it — the different ways code can hand a `Runnable` to something that will run it.
 
 ## The interface itself
 

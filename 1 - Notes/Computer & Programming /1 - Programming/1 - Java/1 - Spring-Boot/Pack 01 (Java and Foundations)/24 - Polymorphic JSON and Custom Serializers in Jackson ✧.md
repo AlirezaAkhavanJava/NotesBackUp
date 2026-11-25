@@ -1,8 +1,10 @@
 
 
+[Jackson](https://www.youtube.com/watch?v=4cvP_qroLH4)
+
 ### What is JSON, and why does Java need help with it?
 
-When your Spring Boot app sends a response to a browser or another service, it can't send a Java object directly — a `User` object living in the JVM's memory means nothing outside the JVM. It has to be converted into plain text that any program, in any language, can read. 
+When your Spring Boot app **sends a response to a browser** or another service, it can't send a Java object directly — a `User` object living in the JVM's memory means nothing outside the JVM. It has to be converted into plain text that any program, in any language, can read. 
 That plain text format is **JSON** (JavaScript Object Notation) — just a text structure made of keys and values:
 
 ```json

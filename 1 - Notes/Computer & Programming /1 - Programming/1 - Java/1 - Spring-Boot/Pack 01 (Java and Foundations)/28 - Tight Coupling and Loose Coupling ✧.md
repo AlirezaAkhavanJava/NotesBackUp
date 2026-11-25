@@ -1,5 +1,5 @@
 
-Coupling describes how much one class knows about and depends on another. In **tight coupling**, a class creates its own dependencies and is locked to one concrete implementation. In **loose coupling**, a class only knows an interface and receives the implementation from outside, so you can swap it without touching the class.
+Coupling describes how much one class knows about and depends on another. In **tight coupling**, a class creates its own dependencies and is locked to one concrete implementation. In **loose coupling**, a class *only knows an interface* and receives the implementation from outside, so you can swap it without touching the class.
 
 Spring Boot is built around the second style. Its IoC container creates the objects and injects them, so your classes never have to build their dependencies themselves.
 

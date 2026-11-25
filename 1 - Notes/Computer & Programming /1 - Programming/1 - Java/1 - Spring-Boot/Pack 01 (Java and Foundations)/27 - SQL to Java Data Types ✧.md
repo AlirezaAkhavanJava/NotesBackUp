@@ -8,15 +8,15 @@ This is a cheat sheet for Java backend development using SQL databases (PostgreS
 
 ## **1. Numeric Types**
 
-|SQL Type|Java Type|Example & Usage|
-|---|---|---|
-|`INT` / `INTEGER`|`int` / `Integer`|`Integer id = 101;``int id = 101;`|
-|`BIGINT`|`long` / `Long`|`Long userId = 1000000000L;`|
-|`SMALLINT`|`short` / `Short`|`Short level = 5;`|
-|`TINYINT`|`byte` / `Byte`|`Byte flag = 1; // for boolean 0/1`|
-|`DECIMAL(p,s)` / `NUMERIC(p,s)`|`BigDecimal`|`BigDecimal price = new BigDecimal("99.99");`✅ Use for money calculations.|
-|`FLOAT` / `REAL`|`float` / `Float`|`Float f = 3.14f;`|
-|`DOUBLE` / `DOUBLE PRECISION`|`double` / `Double`|`Double d = 3.14159265359;`|
+| SQL Type                        | Java Type           | Example & Usage                               |
+| ------------------------------- | ------------------- | --------------------------------------------- |
+| `INT` / `INTEGER`               | `int` / `Integer`   | `Integer id = 101;``int id = 101;`            |
+| `BIGINT`                        | `long` / `Long`     | `Long userId = 1000000000L;`                  |
+| `SMALLINT`                      | `short` / `Short`   | `Short level = 5;`                            |
+| `TINYINT`                       | `byte` / `Byte`     | `Byte flag = 1; // for boolean 0/1`           |
+| `DECIMAL(p,s)` / `NUMERIC(p,s)` | `BigDecimal`        | `BigDecimal price = new BigDecimal("99.99");` |
+| `FLOAT` / `REAL`                | `float` / `Float`   | `Float f = 3.14f;`                            |
+| `DOUBLE` / `DOUBLE PRECISION`   | `double` / `Double` | `Double d = 3.14159265359;`                   |
 
 **Tips:**
 

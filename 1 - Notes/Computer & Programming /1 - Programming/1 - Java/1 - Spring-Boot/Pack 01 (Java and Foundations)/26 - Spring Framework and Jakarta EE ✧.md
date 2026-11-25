@@ -4,7 +4,7 @@
 
 **Spring Framework**, on the other hand, is a framework that provides its own tools and approach for building enterprise Java applications. It handles things like creating and managing objects (IoC), building web applications (Spring MVC), working with databases, and securing applications (Spring Security).
 
-So, **Spring is not an implementation of Jakarta EE**. They are separate technologies, but they can work together. Spring even uses several Jakarta EE standards under the hood instead of reinventing everything. In simple terms, Jakarta EE defines standards, while Spring provides its own programming model and tools to build applications. They sometimes solve the same problems, but they can also complement each other.
+So, **Spring is not an implementation of Jakarta EE**. They are separate technologies, but they can work together. Spring even uses several Jakarta EE standards under the hood instead of reinventing everything. In simple terms, **Jakarta EE defines standards, while Spring provides its own programming model and tools to build applications**. They sometimes solve the same problems, but they can also complement each other.
 
 ---
 
@@ -23,7 +23,7 @@ Spring uses some Jakarta EE APIs directly, ignores others, and replaces some wit
 
 The pattern is that Spring happily uses Jakarta EE for the low-level plumbing (servlets, JPA, validation) but keeps its own programming model for the parts developers touch most (DI and web controllers).
 
----
+
 
 ## A bit of history: from J2EE to Spring to Jakarta
 
@@ -64,7 +64,7 @@ Note that not everything under `javax` moved. Packages that belong to the JDK it
 
 If you've worked with a JWT filter in Spring Boot 3, the `HttpServletRequest` and `FilterChain` you import are `jakarta.servlet` types. That's Jakarta EE inside Spring.
 
----
+
 
 ## Which Spring version goes with which Jakarta EE?
 
@@ -76,7 +76,7 @@ If you've worked with a JWT filter in Spring Boot 3, the `HttpServletRequest` an
 
 Check the exact baseline versions in the official release notes when you start a project, since they move with each release.
 
----
+
 
 ## Spring vs. Jakarta EE as a whole platform
 
@@ -84,11 +84,11 @@ Here is the biggest difference in _how you run_ things:
 
 **Traditional Jakarta EE:** you write your app and deploy it to an **application server** (WildFly, Payara, Open Liberty, GlassFish). The server provides the implementations of the specs.
 
-**Spring Boot:** you create a self-contained JAR with an **embedded servlet container** (Tomcat by default, or Jetty/Undertow). Tomcat only implements the Servlet part of Jakarta EE (plus a couple of related specs such as WebSocket), not the full platform. Spring then brings everything else on its own, and you pull in Hibernate (for JPA) and Hibernate Validator (for Bean Validation) as libraries.
+**Spring Boot:** you create a self-contained JAR with an **embedded servlet container** (Tomcat by default, or Jetty/Undertow). **Tomcat only implements the Servlet part of Jakarta EE** (plus a couple of related specs such as WebSocket), not the full platform. Spring then brings everything else on its own, and you pull in Hibernate (for JPA) and Hibernate Validator (for Bean Validation) as libraries.
 
 So a Spring Boot app is a bit like building your own small Jakarta EE stack from the parts you need, instead of renting a whole one.
 
----
+
 
 ## Can they be mixed?
 
@@ -98,7 +98,7 @@ Yes, and it's common:
 - Spring understands `@Inject` and `@Named` (Jakarta Inject), so code written for CDI-style injection can often run in Spring.
 - Spring can run **inside** a Jakarta EE application server as a WAR file, which is how many older enterprise apps were deployed.
 
----
+
 
 ## Quick summary of a related concept: CDI
 
@@ -108,7 +108,7 @@ Yes, and it's common:
 
 **MicroProfile** is a set of lightweight specs for microservices (config, health checks, metrics) that sits next to Jakarta EE. **Quarkus** and **Helidon** are frameworks that build on Jakarta EE and MicroProfile standards, and they are the closest "standards-based" competitors to Spring Boot.
 
----
+
 
 ## Takeaways
 
